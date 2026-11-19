@@ -9,6 +9,7 @@ from decimal import Decimal, ROUND_HALF_EVEN
 
 TYPES = ('duplicate_invoice', 'payment_allocation', 'fx_conversion', 'accounting_period')
 EXPONENTS = {'KZT': 2, 'USD': 2, 'EUR': 2, 'JPY': 0}
+GENERATOR_VERSION = '1.1.1'
 
 
 def converted(amount, source, target, rate):
@@ -88,7 +89,7 @@ def generate(seed, config=None):
             extra = dict(allocation_source_minor=source, fx_rate=rate, fx_date=date)
             entry('payable', amount, True, paid_at, inv, pay['payment_id'], **extra)
             entry('cash', amount, False, paid_at, inv, pay['payment_id'], **extra)
-    public = dict(manifest=dict(schema_version='1.0', generator_version='1.1.0', config_version='1.1', episode_id=eid, company=rng.choice(['Aral Logistics', 'Saryarka Systems', 'Turan Supply', 'Nomad Materials']) + ' ' + str(rng.randrange(100, 999)), base_currency='KZT', period_start=start.isoformat(), period_end=end.isoformat(), timezone=tz, currency_exponents=dict(EXPONENTS), rounding='ROUND_HALF_EVEN', records=0, documents=len(invoices)+len(payments)), policy=dict(fx_date='payment local date in manifest timezone', period='[period_start, period_end)', invoice_recognition='issued_at', rounding='ROUND_HALF_EVEN', amount_tolerance_minor=0, allocation='invoice_refs amounts in payment currency; refunds signed'), ledger=ledger, invoices=invoices, payments=payments, fx=fx)
+    public = dict(manifest=dict(schema_version='1.0', generator_version=GENERATOR_VERSION, config_version='1.1', episode_id=eid, company=rng.choice(['Aral Logistics', 'Saryarka Systems', 'Turan Supply', 'Nomad Materials']) + ' ' + str(rng.randrange(100, 999)), base_currency='KZT', period_start=start.isoformat(), period_end=end.isoformat(), timezone=tz, currency_exponents=dict(EXPONENTS), rounding='ROUND_HALF_EVEN', records=0, documents=len(invoices)+len(payments)), policy=dict(fx_date='payment local date in manifest timezone', period='[period_start, period_end)', invoice_recognition='issued_at', rounding='ROUND_HALF_EVEN', amount_tolerance_minor=0, allocation='invoice_refs amounts in payment currency; refunds signed'), ledger=ledger, invoices=invoices, payments=payments, fx=fx)
     pristine = copy.deepcopy(public)
     truth, provenance = [], []
     def change(kind, rows, before, evidence, amount, causal_rows=None):
@@ -126,12 +127,17 @@ def generate(seed, config=None):
                 before = copy.deepcopy(rows)
                 original_source = rows[0]['allocation_source_minor']
                 source = original_source // 2
-                delta = converted(original_source - source, pay['currency'], 'KZT', rows[0]['fx_rate'])
                 for r in rows:
                     r['allocation_source_minor'] = source
                     field = 'debit_minor' if r['account'] == 'payable' else 'credit_minor'
                     r[field] = converted(source, pay['currency'], 'KZT', r['fx_rate'])
-                change(kind, [rows[0]], before, [pay['doc_id'], inv['doc_id'], rows[0]['row_id']], delta, rows)
+                # Measure the actual journal change after rounding both postings.
+                delta = before[0]['debit_minor'] - rows[0]['debit_minor']
+                evidence = [pay['doc_id'], inv['doc_id'], rows[0]['row_id']]
+                if pay['currency'] != 'KZT':
+                    fxrow = next(f for f in fx if f['date'] == before[0]['fx_date'] and f['source_currency'] == pay['currency'])
+                    evidence.append(fxrow['row_id'])
+                change(kind, [rows[0]], before, evidence, delta, rows)
             elif kind == 'fx_conversion':
                 # Choose foreign settlement; native settlements have no FX error to inject.
                 if pay['currency'] == 'KZT':

@@ -1,0 +1,1224 @@
+{
+  "version": "1.1.1",
+  "scope": "Additional local fresh-seed sweep, not organizer grading",
+  "passed": 64,
+  "elapsed_seconds": 7.187177200001315,
+  "cases": [
+    {
+      "seed": 1536197907,
+      "config": {
+        "invoices": 40,
+        "clean": true,
+        "interaction": 0,
+        "counts": {
+          "duplicate_invoice": 0,
+          "payment_allocation": 1,
+          "fx_conversion": 2,
+          "accounting_period": 3
+        },
+        "timezone": "+05:00"
+      },
+      "episode_id": "ep-5b90dc37f68ca4c8",
+      "issues": 0,
+      "valid": true,
+      "replay_and_renaming": true
+    },
+    {
+      "seed": 2562521582,
+      "config": {
+        "invoices": 41,
+        "clean": false,
+        "interaction": 1,
+        "counts": {
+          "duplicate_invoice": 1,
+          "payment_allocation": 2,
+          "fx_conversion": 3,
+          "accounting_period": 0
+        },
+        "timezone": "-00:30"
+      },
+      "episode_id": "ep-8e5738e4ecc04bd2",
+      "issues": 6,
+      "valid": true,
+      "replay_and_renaming": true
+    },
+    {
+      "seed": 2533979618,
+      "config": {
+        "invoices": 50,
+        "clean": false,
+        "interaction": 2,
+        "counts": {
+          "duplicate_invoice": 2,
+          "payment_allocation": 3,
+          "fx_conversion": 0,
+          "accounting_period": 1
+        },
+        "timezone": "+09:30"
+      },
+      "episode_id": "ep-c8a82fe689feed08",
+      "issues": 6,
+      "valid": true,
+      "replay_and_renaming": true
+    },
+    {
+      "seed": 1460365723,
+      "config": {
+        "invoices": 84,
+        "clean": false,
+        "interaction": 0,
+        "counts": {
+          "duplicate_invoice": 3,
+          "payment_allocation": 0,
+          "fx_conversion": 1,
+          "accounting_period": 2
+        },
+        "timezone": "-04:00"
+      },
+      "episode_id": "ep-3b7b58d508cf61dd",
+      "issues": 6,
+      "valid": true,
+      "replay_and_renaming": true
+    },
+    {
+      "seed": 1453602158,
+      "config": {
+        "invoices": 100,
+        "clean": false,
+        "interaction": 1,
+        "counts": {
+          "duplicate_invoice": 0,
+          "payment_allocation": 1,
+          "fx_conversion": 2,
+          "accounting_period": 3
+        },
+        "timezone": "+05:00"
+      },
+      "episode_id": "ep-02a97b4a6a14693d",
+      "issues": 6,
+      "valid": true,
+      "replay_and_renaming": true
+    },
+    {
+      "seed": 3887344137,
+      "config": {
+        "invoices": 200,
+        "clean": false,
+        "interaction": 2,
+        "counts": {
+          "duplicate_invoice": 1,
+          "payment_allocation": 2,
+          "fx_conversion": 3,
+          "accounting_period": 0
+        },
+        "timezone": "-00:30"
+      },
+      "episode_id": "ep-6697db53529d07bd",
+      "issues": 6,
+      "valid": true,
+      "replay_and_renaming": true
+    },
+    {
+      "seed": 1399588362,
+      "config": {
+        "invoices": 40,
+        "clean": false,
+        "interaction": 0,
+        "counts": {
+          "duplicate_invoice": 2,
+          "payment_allocation": 3,
+          "fx_conversion": 0,
+          "accounting_period": 1
+        },
+        "timezone": "+09:30"
+      },
+      "episode_id": "ep-d4193e279a9d47eb",
+      "issues": 6,
+      "valid": true,
+      "replay_and_renaming": true
+    },
+    {
+      "seed": 3789609671,
+      "config": {
+        "invoices": 41,
+        "clean": false,
+        "interaction": 1,
+        "counts": {
+          "duplicate_invoice": 3,
+          "payment_allocation": 0,
+          "fx_conversion": 1,
+          "accounting_period": 2
+        },
+        "timezone": "-04:00"
+      },
+      "episode_id": "ep-306a96310aabc8a1",
+      "issues": 6,
+      "valid": true,
+      "replay_and_renaming": true
+    },
+    {
+      "seed": 1400259730,
+      "config": {
+        "invoices": 50,
+        "clean": true,
+        "interaction": 2,
+        "counts": {
+          "duplicate_invoice": 0,
+          "payment_allocation": 1,
+          "fx_conversion": 2,
+          "accounting_period": 3
+        },
+        "timezone": "+05:00"
+      },
+      "episode_id": "ep-1550866a5466230a",
+      "issues": 0,
+      "valid": true,
+      "replay_and_renaming": true
+    },
+    {
+      "seed": 3498184580,
+      "config": {
+        "invoices": 84,
+        "clean": false,
+        "interaction": 0,
+        "counts": {
+          "duplicate_invoice": 1,
+          "payment_allocation": 2,
+          "fx_conversion": 3,
+          "accounting_period": 0
+        },
+        "timezone": "-00:30"
+      },
+      "episode_id": "ep-38b6e7967a2fd239",
+      "issues": 6,
+      "valid": true,
+      "replay_and_renaming": true
+    },
+    {
+      "seed": 3260520498,
+      "config": {
+        "invoices": 100,
+        "clean": false,
+        "interaction": 1,
+        "counts": {
+          "duplicate_invoice": 2,
+          "payment_allocation": 3,
+          "fx_conversion": 0,
+          "accounting_period": 1
+        },
+        "timezone": "+09:30"
+      },
+      "episode_id": "ep-8d8e93b95b7b8ed8",
+      "issues": 6,
+      "valid": true,
+      "replay_and_renaming": true
+    },
+    {
+      "seed": 522568725,
+      "config": {
+        "invoices": 200,
+        "clean": false,
+        "interaction": 2,
+        "counts": {
+          "duplicate_invoice": 3,
+          "payment_allocation": 0,
+          "fx_conversion": 1,
+          "accounting_period": 2
+        },
+        "timezone": "-04:00"
+      },
+      "episode_id": "ep-77cdd23eb39ad247",
+      "issues": 6,
+      "valid": true,
+      "replay_and_renaming": true
+    },
+    {
+      "seed": 1933331294,
+      "config": {
+        "invoices": 40,
+        "clean": false,
+        "interaction": 0,
+        "counts": {
+          "duplicate_invoice": 0,
+          "payment_allocation": 1,
+          "fx_conversion": 2,
+          "accounting_period": 3
+        },
+        "timezone": "+05:00"
+      },
+      "episode_id": "ep-2a679b35ca0f3074",
+      "issues": 6,
+      "valid": true,
+      "replay_and_renaming": true
+    },
+    {
+      "seed": 2426144372,
+      "config": {
+        "invoices": 41,
+        "clean": false,
+        "interaction": 1,
+        "counts": {
+          "duplicate_invoice": 1,
+          "payment_allocation": 2,
+          "fx_conversion": 3,
+          "accounting_period": 0
+        },
+        "timezone": "-00:30"
+      },
+      "episode_id": "ep-8522493d250d4d3d",
+      "issues": 6,
+      "valid": true,
+      "replay_and_renaming": true
+    },
+    {
+      "seed": 381829385,
+      "config": {
+        "invoices": 50,
+        "clean": false,
+        "interaction": 2,
+        "counts": {
+          "duplicate_invoice": 2,
+          "payment_allocation": 3,
+          "fx_conversion": 0,
+          "accounting_period": 1
+        },
+        "timezone": "+09:30"
+      },
+      "episode_id": "ep-cec39b72b1cd8d40",
+      "issues": 6,
+      "valid": true,
+      "replay_and_renaming": true
+    },
+    {
+      "seed": 1813290031,
+      "config": {
+        "invoices": 84,
+        "clean": false,
+        "interaction": 0,
+        "counts": {
+          "duplicate_invoice": 3,
+          "payment_allocation": 0,
+          "fx_conversion": 1,
+          "accounting_period": 2
+        },
+        "timezone": "-04:00"
+      },
+      "episode_id": "ep-054b24cf97c42fa1",
+      "issues": 6,
+      "valid": true,
+      "replay_and_renaming": true
+    },
+    {
+      "seed": 2603802939,
+      "config": {
+        "invoices": 100,
+        "clean": true,
+        "interaction": 1,
+        "counts": {
+          "duplicate_invoice": 0,
+          "payment_allocation": 1,
+          "fx_conversion": 2,
+          "accounting_period": 3
+        },
+        "timezone": "+05:00"
+      },
+      "episode_id": "ep-899fe08a3ee3db67",
+      "issues": 0,
+      "valid": true,
+      "replay_and_renaming": true
+    },
+    {
+      "seed": 2334337999,
+      "config": {
+        "invoices": 200,
+        "clean": false,
+        "interaction": 2,
+        "counts": {
+          "duplicate_invoice": 1,
+          "payment_allocation": 2,
+          "fx_conversion": 3,
+          "accounting_period": 0
+        },
+        "timezone": "-00:30"
+      },
+      "episode_id": "ep-f6921e4639b180bb",
+      "issues": 6,
+      "valid": true,
+      "replay_and_renaming": true
+    },
+    {
+      "seed": 146874133,
+      "config": {
+        "invoices": 40,
+        "clean": false,
+        "interaction": 0,
+        "counts": {
+          "duplicate_invoice": 2,
+          "payment_allocation": 3,
+          "fx_conversion": 0,
+          "accounting_period": 1
+        },
+        "timezone": "+09:30"
+      },
+      "episode_id": "ep-b78f6ed7cec834ab",
+      "issues": 6,
+      "valid": true,
+      "replay_and_renaming": true
+    },
+    {
+      "seed": 391880713,
+      "config": {
+        "invoices": 41,
+        "clean": false,
+        "interaction": 1,
+        "counts": {
+          "duplicate_invoice": 3,
+          "payment_allocation": 0,
+          "fx_conversion": 1,
+          "accounting_period": 2
+        },
+        "timezone": "-04:00"
+      },
+      "episode_id": "ep-55535c50e917c346",
+      "issues": 6,
+      "valid": true,
+      "replay_and_renaming": true
+    },
+    {
+      "seed": 3766100267,
+      "config": {
+        "invoices": 50,
+        "clean": false,
+        "interaction": 2,
+        "counts": {
+          "duplicate_invoice": 0,
+          "payment_allocation": 1,
+          "fx_conversion": 2,
+          "accounting_period": 3
+        },
+        "timezone": "+05:00"
+      },
+      "episode_id": "ep-e5e5c6830e4c2f14",
+      "issues": 6,
+      "valid": true,
+      "replay_and_renaming": true
+    },
+    {
+      "seed": 1174277186,
+      "config": {
+        "invoices": 84,
+        "clean": false,
+        "interaction": 0,
+        "counts": {
+          "duplicate_invoice": 1,
+          "payment_allocation": 2,
+          "fx_conversion": 3,
+          "accounting_period": 0
+        },
+        "timezone": "-00:30"
+      },
+      "episode_id": "ep-174b1080ea4007ef",
+      "issues": 6,
+      "valid": true,
+      "replay_and_renaming": true
+    },
+    {
+      "seed": 670656512,
+      "config": {
+        "invoices": 100,
+        "clean": false,
+        "interaction": 1,
+        "counts": {
+          "duplicate_invoice": 2,
+          "payment_allocation": 3,
+          "fx_conversion": 0,
+          "accounting_period": 1
+        },
+        "timezone": "+09:30"
+      },
+      "episode_id": "ep-3d53742fb31ea1ac",
+      "issues": 6,
+      "valid": true,
+      "replay_and_renaming": true
+    },
+    {
+      "seed": 1844827226,
+      "config": {
+        "invoices": 200,
+        "clean": false,
+        "interaction": 2,
+        "counts": {
+          "duplicate_invoice": 3,
+          "payment_allocation": 0,
+          "fx_conversion": 1,
+          "accounting_period": 2
+        },
+        "timezone": "-04:00"
+      },
+      "episode_id": "ep-13bbbf856beac5e0",
+      "issues": 6,
+      "valid": true,
+      "replay_and_renaming": true
+    },
+    {
+      "seed": 254543409,
+      "config": {
+        "invoices": 40,
+        "clean": true,
+        "interaction": 0,
+        "counts": {
+          "duplicate_invoice": 0,
+          "payment_allocation": 1,
+          "fx_conversion": 2,
+          "accounting_period": 3
+        },
+        "timezone": "+05:00"
+      },
+      "episode_id": "ep-265cadfdfd433b93",
+      "issues": 0,
+      "valid": true,
+      "replay_and_renaming": true
+    },
+    {
+      "seed": 1367267814,
+      "config": {
+        "invoices": 41,
+        "clean": false,
+        "interaction": 1,
+        "counts": {
+          "duplicate_invoice": 1,
+          "payment_allocation": 2,
+          "fx_conversion": 3,
+          "accounting_period": 0
+        },
+        "timezone": "-00:30"
+      },
+      "episode_id": "ep-a5b4d0d49e756299",
+      "issues": 6,
+      "valid": true,
+      "replay_and_renaming": true
+    },
+    {
+      "seed": 380189312,
+      "config": {
+        "invoices": 50,
+        "clean": false,
+        "interaction": 2,
+        "counts": {
+          "duplicate_invoice": 2,
+          "payment_allocation": 3,
+          "fx_conversion": 0,
+          "accounting_period": 1
+        },
+        "timezone": "+09:30"
+      },
+      "episode_id": "ep-8dd3f76521ae53f1",
+      "issues": 6,
+      "valid": true,
+      "replay_and_renaming": true
+    },
+    {
+      "seed": 288311168,
+      "config": {
+        "invoices": 84,
+        "clean": false,
+        "interaction": 0,
+        "counts": {
+          "duplicate_invoice": 3,
+          "payment_allocation": 0,
+          "fx_conversion": 1,
+          "accounting_period": 2
+        },
+        "timezone": "-04:00"
+      },
+      "episode_id": "ep-0784b38256fdfc39",
+      "issues": 6,
+      "valid": true,
+      "replay_and_renaming": true
+    },
+    {
+      "seed": 519377405,
+      "config": {
+        "invoices": 100,
+        "clean": false,
+        "interaction": 1,
+        "counts": {
+          "duplicate_invoice": 0,
+          "payment_allocation": 1,
+          "fx_conversion": 2,
+          "accounting_period": 3
+        },
+        "timezone": "+05:00"
+      },
+      "episode_id": "ep-7f4572ea1782ff5c",
+      "issues": 6,
+      "valid": true,
+      "replay_and_renaming": true
+    },
+    {
+      "seed": 3910876487,
+      "config": {
+        "invoices": 200,
+        "clean": false,
+        "interaction": 2,
+        "counts": {
+          "duplicate_invoice": 1,
+          "payment_allocation": 2,
+          "fx_conversion": 3,
+          "accounting_period": 0
+        },
+        "timezone": "-00:30"
+      },
+      "episode_id": "ep-7167c340f98f5d34",
+      "issues": 6,
+      "valid": true,
+      "replay_and_renaming": true
+    },
+    {
+      "seed": 3319025112,
+      "config": {
+        "invoices": 40,
+        "clean": false,
+        "interaction": 0,
+        "counts": {
+          "duplicate_invoice": 2,
+          "payment_allocation": 3,
+          "fx_conversion": 0,
+          "accounting_period": 1
+        },
+        "timezone": "+09:30"
+      },
+      "episode_id": "ep-e803774910e716e6",
+      "issues": 6,
+      "valid": true,
+      "replay_and_renaming": true
+    },
+    {
+      "seed": 3369393589,
+      "config": {
+        "invoices": 41,
+        "clean": false,
+        "interaction": 1,
+        "counts": {
+          "duplicate_invoice": 3,
+          "payment_allocation": 0,
+          "fx_conversion": 1,
+          "accounting_period": 2
+        },
+        "timezone": "-04:00"
+      },
+      "episode_id": "ep-881af99d09d8c943",
+      "issues": 6,
+      "valid": true,
+      "replay_and_renaming": true
+    },
+    {
+      "seed": 3276187567,
+      "config": {
+        "invoices": 50,
+        "clean": true,
+        "interaction": 2,
+        "counts": {
+          "duplicate_invoice": 0,
+          "payment_allocation": 1,
+          "fx_conversion": 2,
+          "accounting_period": 3
+        },
+        "timezone": "+05:00"
+      },
+      "episode_id": "ep-2ed4f5691412a30a",
+      "issues": 0,
+      "valid": true,
+      "replay_and_renaming": true
+    },
+    {
+      "seed": 2684302593,
+      "config": {
+        "invoices": 84,
+        "clean": false,
+        "interaction": 0,
+        "counts": {
+          "duplicate_invoice": 1,
+          "payment_allocation": 2,
+          "fx_conversion": 3,
+          "accounting_period": 0
+        },
+        "timezone": "-00:30"
+      },
+      "episode_id": "ep-6265ecea9483e6db",
+      "issues": 6,
+      "valid": true,
+      "replay_and_renaming": true
+    },
+    {
+      "seed": 3407046995,
+      "config": {
+        "invoices": 100,
+        "clean": false,
+        "interaction": 1,
+        "counts": {
+          "duplicate_invoice": 2,
+          "payment_allocation": 3,
+          "fx_conversion": 0,
+          "accounting_period": 1
+        },
+        "timezone": "+09:30"
+      },
+      "episode_id": "ep-3ae798d2a891192a",
+      "issues": 6,
+      "valid": true,
+      "replay_and_renaming": true
+    },
+    {
+      "seed": 618164544,
+      "config": {
+        "invoices": 200,
+        "clean": false,
+        "interaction": 2,
+        "counts": {
+          "duplicate_invoice": 3,
+          "payment_allocation": 0,
+          "fx_conversion": 1,
+          "accounting_period": 2
+        },
+        "timezone": "-04:00"
+      },
+      "episode_id": "ep-9331220343a2bced",
+      "issues": 6,
+      "valid": true,
+      "replay_and_renaming": true
+    },
+    {
+      "seed": 300646891,
+      "config": {
+        "invoices": 40,
+        "clean": false,
+        "interaction": 0,
+        "counts": {
+          "duplicate_invoice": 0,
+          "payment_allocation": 1,
+          "fx_conversion": 2,
+          "accounting_period": 3
+        },
+        "timezone": "+05:00"
+      },
+      "episode_id": "ep-2060de84edfe58e1",
+      "issues": 6,
+      "valid": true,
+      "replay_and_renaming": true
+    },
+    {
+      "seed": 1241102400,
+      "config": {
+        "invoices": 41,
+        "clean": false,
+        "interaction": 1,
+        "counts": {
+          "duplicate_invoice": 1,
+          "payment_allocation": 2,
+          "fx_conversion": 3,
+          "accounting_period": 0
+        },
+        "timezone": "-00:30"
+      },
+      "episode_id": "ep-7127894af5047862",
+      "issues": 6,
+      "valid": true,
+      "replay_and_renaming": true
+    },
+    {
+      "seed": 3819326080,
+      "config": {
+        "invoices": 50,
+        "clean": false,
+        "interaction": 2,
+        "counts": {
+          "duplicate_invoice": 2,
+          "payment_allocation": 3,
+          "fx_conversion": 0,
+          "accounting_period": 1
+        },
+        "timezone": "+09:30"
+      },
+      "episode_id": "ep-9defcf4f949e71a4",
+      "issues": 6,
+      "valid": true,
+      "replay_and_renaming": true
+    },
+    {
+      "seed": 2260024827,
+      "config": {
+        "invoices": 84,
+        "clean": false,
+        "interaction": 0,
+        "counts": {
+          "duplicate_invoice": 3,
+          "payment_allocation": 0,
+          "fx_conversion": 1,
+          "accounting_period": 2
+        },
+        "timezone": "-04:00"
+      },
+      "episode_id": "ep-e4ff0968a486f2b5",
+      "issues": 6,
+      "valid": true,
+      "replay_and_renaming": true
+    },
+    {
+      "seed": 4049792975,
+      "config": {
+        "invoices": 100,
+        "clean": true,
+        "interaction": 1,
+        "counts": {
+          "duplicate_invoice": 0,
+          "payment_allocation": 1,
+          "fx_conversion": 2,
+          "accounting_period": 3
+        },
+        "timezone": "+05:00"
+      },
+      "episode_id": "ep-032e67110a399b5a",
+      "issues": 0,
+      "valid": true,
+      "replay_and_renaming": true
+    },
+    {
+      "seed": 1229073023,
+      "config": {
+        "invoices": 200,
+        "clean": false,
+        "interaction": 2,
+        "counts": {
+          "duplicate_invoice": 1,
+          "payment_allocation": 2,
+          "fx_conversion": 3,
+          "accounting_period": 0
+        },
+        "timezone": "-00:30"
+      },
+      "episode_id": "ep-038229b2c4a03d8d",
+      "issues": 6,
+      "valid": true,
+      "replay_and_renaming": true
+    },
+    {
+      "seed": 1991921559,
+      "config": {
+        "invoices": 40,
+        "clean": false,
+        "interaction": 0,
+        "counts": {
+          "duplicate_invoice": 2,
+          "payment_allocation": 3,
+          "fx_conversion": 0,
+          "accounting_period": 1
+        },
+        "timezone": "+09:30"
+      },
+      "episode_id": "ep-d1c9bc02ee0302db",
+      "issues": 6,
+      "valid": true,
+      "replay_and_renaming": true
+    },
+    {
+      "seed": 869174098,
+      "config": {
+        "invoices": 41,
+        "clean": false,
+        "interaction": 1,
+        "counts": {
+          "duplicate_invoice": 3,
+          "payment_allocation": 0,
+          "fx_conversion": 1,
+          "accounting_period": 2
+        },
+        "timezone": "-04:00"
+      },
+      "episode_id": "ep-6446c14b493fe7cb",
+      "issues": 6,
+      "valid": true,
+      "replay_and_renaming": true
+    },
+    {
+      "seed": 2959556578,
+      "config": {
+        "invoices": 50,
+        "clean": false,
+        "interaction": 2,
+        "counts": {
+          "duplicate_invoice": 0,
+          "payment_allocation": 1,
+          "fx_conversion": 2,
+          "accounting_period": 3
+        },
+        "timezone": "+05:00"
+      },
+      "episode_id": "ep-26291617427899eb",
+      "issues": 6,
+      "valid": true,
+      "replay_and_renaming": true
+    },
+    {
+      "seed": 3427792341,
+      "config": {
+        "invoices": 84,
+        "clean": false,
+        "interaction": 0,
+        "counts": {
+          "duplicate_invoice": 1,
+          "payment_allocation": 2,
+          "fx_conversion": 3,
+          "accounting_period": 0
+        },
+        "timezone": "-00:30"
+      },
+      "episode_id": "ep-a17a03bad7823d3d",
+      "issues": 6,
+      "valid": true,
+      "replay_and_renaming": true
+    },
+    {
+      "seed": 3465128603,
+      "config": {
+        "invoices": 100,
+        "clean": false,
+        "interaction": 1,
+        "counts": {
+          "duplicate_invoice": 2,
+          "payment_allocation": 3,
+          "fx_conversion": 0,
+          "accounting_period": 1
+        },
+        "timezone": "+09:30"
+      },
+      "episode_id": "ep-7fc842319874d902",
+      "issues": 6,
+      "valid": true,
+      "replay_and_renaming": true
+    },
+    {
+      "seed": 3951549902,
+      "config": {
+        "invoices": 200,
+        "clean": false,
+        "interaction": 2,
+        "counts": {
+          "duplicate_invoice": 3,
+          "payment_allocation": 0,
+          "fx_conversion": 1,
+          "accounting_period": 2
+        },
+        "timezone": "-04:00"
+      },
+      "episode_id": "ep-2ea5152428fbaa9e",
+      "issues": 6,
+      "valid": true,
+      "replay_and_renaming": true
+    },
+    {
+      "seed": 3329342411,
+      "config": {
+        "invoices": 40,
+        "clean": true,
+        "interaction": 0,
+        "counts": {
+          "duplicate_invoice": 0,
+          "payment_allocation": 1,
+          "fx_conversion": 2,
+          "accounting_period": 3
+        },
+        "timezone": "+05:00"
+      },
+      "episode_id": "ep-a85d8b362767f8fc",
+      "issues": 0,
+      "valid": true,
+      "replay_and_renaming": true
+    },
+    {
+      "seed": 3918989761,
+      "config": {
+        "invoices": 41,
+        "clean": false,
+        "interaction": 1,
+        "counts": {
+          "duplicate_invoice": 1,
+          "payment_allocation": 2,
+          "fx_conversion": 3,
+          "accounting_period": 0
+        },
+        "timezone": "-00:30"
+      },
+      "episode_id": "ep-3c2ce1a8ce698847",
+      "issues": 6,
+      "valid": true,
+      "replay_and_renaming": true
+    },
+    {
+      "seed": 4106857478,
+      "config": {
+        "invoices": 50,
+        "clean": false,
+        "interaction": 2,
+        "counts": {
+          "duplicate_invoice": 2,
+          "payment_allocation": 3,
+          "fx_conversion": 0,
+          "accounting_period": 1
+        },
+        "timezone": "+09:30"
+      },
+      "episode_id": "ep-722e94d6ce0a902c",
+      "issues": 6,
+      "valid": true,
+      "replay_and_renaming": true
+    },
+    {
+      "seed": 354111496,
+      "config": {
+        "invoices": 84,
+        "clean": false,
+        "interaction": 0,
+        "counts": {
+          "duplicate_invoice": 3,
+          "payment_allocation": 0,
+          "fx_conversion": 1,
+          "accounting_period": 2
+        },
+        "timezone": "-04:00"
+      },
+      "episode_id": "ep-e007ad272752a1cb",
+      "issues": 6,
+      "valid": true,
+      "replay_and_renaming": true
+    },
+    {
+      "seed": 67127326,
+      "config": {
+        "invoices": 100,
+        "clean": false,
+        "interaction": 1,
+        "counts": {
+          "duplicate_invoice": 0,
+          "payment_allocation": 1,
+          "fx_conversion": 2,
+          "accounting_period": 3
+        },
+        "timezone": "+05:00"
+      },
+      "episode_id": "ep-60592983dec83759",
+      "issues": 6,
+      "valid": true,
+      "replay_and_renaming": true
+    },
+    {
+      "seed": 1277393193,
+      "config": {
+        "invoices": 200,
+        "clean": false,
+        "interaction": 2,
+        "counts": {
+          "duplicate_invoice": 1,
+          "payment_allocation": 2,
+          "fx_conversion": 3,
+          "accounting_period": 0
+        },
+        "timezone": "-00:30"
+      },
+      "episode_id": "ep-8cfde1b72994624d",
+      "issues": 6,
+      "valid": true,
+      "replay_and_renaming": true
+    },
+    {
+      "seed": 1371747016,
+      "config": {
+        "invoices": 40,
+        "clean": false,
+        "interaction": 0,
+        "counts": {
+          "duplicate_invoice": 2,
+          "payment_allocation": 3,
+          "fx_conversion": 0,
+          "accounting_period": 1
+        },
+        "timezone": "+09:30"
+      },
+      "episode_id": "ep-e139c76c1283c6c9",
+      "issues": 6,
+      "valid": true,
+      "replay_and_renaming": true
+    },
+    {
+      "seed": 4192719780,
+      "config": {
+        "invoices": 41,
+        "clean": false,
+        "interaction": 1,
+        "counts": {
+          "duplicate_invoice": 3,
+          "payment_allocation": 0,
+          "fx_conversion": 1,
+          "accounting_period": 2
+        },
+        "timezone": "-04:00"
+      },
+      "episode_id": "ep-227b4b139a783d04",
+      "issues": 6,
+      "valid": true,
+      "replay_and_renaming": true
+    },
+    {
+      "seed": 1662478801,
+      "config": {
+        "invoices": 50,
+        "clean": true,
+        "interaction": 2,
+        "counts": {
+          "duplicate_invoice": 0,
+          "payment_allocation": 1,
+          "fx_conversion": 2,
+          "accounting_period": 3
+        },
+        "timezone": "+05:00"
+      },
+      "episode_id": "ep-b8305d3e5cbe3d85",
+      "issues": 0,
+      "valid": true,
+      "replay_and_renaming": true
+    },
+    {
+      "seed": 1828459380,
+      "config": {
+        "invoices": 84,
+        "clean": false,
+        "interaction": 0,
+        "counts": {
+          "duplicate_invoice": 1,
+          "payment_allocation": 2,
+          "fx_conversion": 3,
+          "accounting_period": 0
+        },
+        "timezone": "-00:30"
+      },
+      "episode_id": "ep-965e16083b271217",
+      "issues": 6,
+      "valid": true,
+      "replay_and_renaming": true
+    },
+    {
+      "seed": 784830254,
+      "config": {
+        "invoices": 100,
+        "clean": false,
+        "interaction": 1,
+        "counts": {
+          "duplicate_invoice": 2,
+          "payment_allocation": 3,
+          "fx_conversion": 0,
+          "accounting_period": 1
+        },
+        "timezone": "+09:30"
+      },
+      "episode_id": "ep-322b8fc9667e9ee0",
+      "issues": 6,
+      "valid": true,
+      "replay_and_renaming": true
+    },
+    {
+      "seed": 1912011479,
+      "config": {
+        "invoices": 200,
+        "clean": false,
+        "interaction": 2,
+        "counts": {
+          "duplicate_invoice": 3,
+          "payment_allocation": 0,
+          "fx_conversion": 1,
+          "accounting_period": 2
+        },
+        "timezone": "-04:00"
+      },
+      "episode_id": "ep-23bde2fb84fbf97e",
+      "issues": 6,
+      "valid": true,
+      "replay_and_renaming": true
+    },
+    {
+      "seed": 4269857167,
+      "config": {
+        "invoices": 40,
+        "clean": false,
+        "interaction": 0,
+        "counts": {
+          "duplicate_invoice": 0,
+          "payment_allocation": 1,
+          "fx_conversion": 2,
+          "accounting_period": 3
+        },
+        "timezone": "+05:00"
+      },
+      "episode_id": "ep-d87931217bdb8130",
+      "issues": 6,
+      "valid": true,
+      "replay_and_renaming": true
+    },
+    {
+      "seed": 1052951425,
+      "config": {
+        "invoices": 41,
+        "clean": false,
+        "interaction": 1,
+        "counts": {
+          "duplicate_invoice": 1,
+          "payment_allocation": 2,
+          "fx_conversion": 3,
+          "accounting_period": 0
+        },
+        "timezone": "-00:30"
+      },
+      "episode_id": "ep-78eac87d9d99b018",
+      "issues": 6,
+      "valid": true,
+      "replay_and_renaming": true
+    },
+    {
+      "seed": 2574106826,
+      "config": {
+        "invoices": 50,
+        "clean": false,
+        "interaction": 2,
+        "counts": {
+          "duplicate_invoice": 2,
+          "payment_allocation": 3,
+          "fx_conversion": 0,
+          "accounting_period": 1
+        },
+        "timezone": "+09:30"
+      },
+      "episode_id": "ep-1fc14b382fa908de",
+      "issues": 6,
+      "valid": true,
+      "replay_and_renaming": true
+    },
+    {
+      "seed": 1596614829,
+      "config": {
+        "invoices": 84,
+        "clean": false,
+        "interaction": 0,
+        "counts": {
+          "duplicate_invoice": 3,
+          "payment_allocation": 0,
+          "fx_conversion": 1,
+          "accounting_period": 2
+        },
+        "timezone": "-04:00"
+      },
+      "episode_id": "ep-98e5b44009a6f2b2",
+      "issues": 6,
+      "valid": true,
+      "replay_and_renaming": true
+    }
+  ]
+}

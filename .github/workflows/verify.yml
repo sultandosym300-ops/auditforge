@@ -1,0 +1,25 @@
+name: Verify audit environment
+
+on: [push, pull_request, workflow_dispatch]
+
+permissions:
+  contents: read
+
+jobs:
+  offline-and-isolated:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - name: Build evaluator and policy images
+        run: |
+          docker build -t auditforge-evaluator:1.1.1 .
+          docker build -f Dockerfile.policy -t auditforge-policy:1.0 .
+      - name: Verify offline with two CPUs and four GiB
+        run: docker run --rm --network none --cpus 2 --memory 4g auditforge-evaluator:1.1.1
+      - name: Reconcile through the isolated policy broker
+        run: |
+          python3 -m auditforge.agent_runner > broker-result.json
+          python3 -c 'import json; r=json.load(open("broker-result.json")); assert r["containment"] == "docker"; assert r["report"]["f1"] == 1; print(r["report"])'

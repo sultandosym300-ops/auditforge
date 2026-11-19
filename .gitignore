@@ -4,6 +4,8 @@ runtime/
 node_modules/
 dist/
 web/public/python/
+web/public/python-core.json
+/datasets/*/evaluator_private/
 .impeccable/review/
 *.zip
 .env

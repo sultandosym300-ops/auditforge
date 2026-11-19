@@ -40,9 +40,13 @@ def reconcile(public):
         fx = rates.get((date, pay['currency'], 'KZT'))
         rate = fx['rate'] if fx else '1'
         booked_source = row['allocation_source_minor']
-        if source != booked_source:
-            add('payment_allocation', [row['row_id']], convert(source-booked_source, pay['currency'], 'KZT', rate), [row['row_id'], pay['doc_id'], inv['doc_id']])
         expected = convert(booked_source, pay['currency'], 'KZT', rate)
+        if source != booked_source:
+            full_settlement = convert(source, pay['currency'], 'KZT', rate)
+            evidence = [row['row_id'], pay['doc_id'], inv['doc_id']]
+            if fx:
+                evidence.append(fx['row_id'])
+            add('payment_allocation', [row['row_id']], full_settlement-expected, evidence)
         if row['debit_minor'] != expected:
             add('fx_conversion', [row['row_id']], row['debit_minor']-expected, [row['row_id'], pay['doc_id'], fx['row_id']] if fx else [row['row_id'], pay['doc_id']])
     return sorted(findings, key=lambda f: (f['type'], f['affected_ids']))
@@ -115,7 +119,8 @@ def validate(episode):
     assert len(episode['provenance']) == len(episode['truth'])
     assert {p['issue_id'] for p in episode['provenance']} == {t['issue_id'] for t in episode['truth']}
     for mutation in episode['provenance']:
-        assert mutation['operation'] == next(t['type'] for t in episode['truth'] if t['issue_id'] == mutation['issue_id'])
+        issue = next(t for t in episode['truth'] if t['issue_id'] == mutation['issue_id'])
+        assert mutation['operation'] == issue['type']
         assert mutation['before'] != mutation['after']
         for row in mutation['before']:
             assert replay.get(row['row_id']) == row, 'Provenance before-state is not the prior journal'
@@ -137,6 +142,20 @@ def validate(episode):
         assert issue['evidence_sets'], 'No admissible evidence set'
         assert all(set(independent['evidence_ids']) <= set(s) for s in issue['evidence_sets']), 'Evidence set does not substantiate discrepancy'
         causal = next(p for p in episode['provenance'] if p['issue_id'] == issue['issue_id'])
+        # Independently measure affected debit postings across the causal change.
+        # For period errors, only postings within the reporting window count.
+        affected = set(issue['affected_ids'])
+        start = datetime.fromisoformat(public['manifest']['period_start'])
+        end = datetime.fromisoformat(public['manifest']['period_end'])
+        before, after = (
+            sum(row['debit_minor'] for row in causal[state]
+                if row['row_id'] in affected and (
+                    issue['type'] != 'accounting_period'
+                    or start <= datetime.fromisoformat(row['timestamp']) < end
+                ))
+            for state in ('before', 'after')
+        )
+        assert abs(after - before) == issue['expected_amount_minor'], 'Truth differs from actual causal posting change'
         assert causal['before'] != causal['after']
         for row in causal['after']:
             assert row['row_id'] in visible_ids

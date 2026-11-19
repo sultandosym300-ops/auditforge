@@ -1,0 +1,2 @@
+# Core and verification use only the Python 3.11 standard library.
+# No pip installation is required for offline verification.

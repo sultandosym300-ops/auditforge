@@ -1,0 +1,15 @@
+web/node_modules
+web/dist
+dist
+runtime
+.git
+.impeccable
+*.zip
+datasets
+reports
+trajectories
+web
+work
+**/__pycache__
+.env
+.env.*

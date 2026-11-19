@@ -1,0 +1,86 @@
+{
+  "episodes": [
+    {
+      "config": {
+        "clean": true,
+        "interaction": 0
+      },
+      "episode_id": "ep-d2973c5fc6a28b6e",
+      "seed": 0
+    },
+    {
+      "config": {
+        "clean": true,
+        "interaction": 1
+      },
+      "episode_id": "ep-8d6ceec68de83083",
+      "seed": 1
+    },
+    {
+      "config": {
+        "clean": false,
+        "interaction": 2
+      },
+      "episode_id": "ep-f36debda83bfc320",
+      "seed": 2
+    },
+    {
+      "config": {
+        "clean": false,
+        "interaction": 0
+      },
+      "episode_id": "ep-4bf9acf2ad1a9bea",
+      "seed": 3
+    },
+    {
+      "config": {
+        "clean": false,
+        "interaction": 1
+      },
+      "episode_id": "ep-fff2cd3a66f97aca",
+      "seed": 4
+    },
+    {
+      "config": {
+        "clean": false,
+        "interaction": 2
+      },
+      "episode_id": "ep-5c66695fa8c187bb",
+      "seed": 5
+    },
+    {
+      "config": {
+        "clean": false,
+        "interaction": 0
+      },
+      "episode_id": "ep-61a49540fe5abacf",
+      "seed": 6
+    },
+    {
+      "config": {
+        "clean": false,
+        "interaction": 1
+      },
+      "episode_id": "ep-289c4d0ba1526656",
+      "seed": 7
+    },
+    {
+      "config": {
+        "clean": false,
+        "interaction": 2
+      },
+      "episode_id": "ep-db79528611e13ddd",
+      "seed": 8
+    },
+    {
+      "config": {
+        "clean": false,
+        "interaction": 0
+      },
+      "episode_id": "ep-77ac7ac7b53bfe2d",
+      "seed": 9
+    }
+  ],
+  "generator_version": "1.1.1",
+  "version": "1.1"
+}
