@@ -31,12 +31,18 @@ def send_line(process, value, deadline):
         raise error
 
 
+def container_command(container_name):
+    return ['docker', 'run', '--rm', '--name', container_name, '-i',
+            '--network', 'none', '--read-only', '--cap-drop', 'ALL',
+            '--security-opt', 'no-new-privileges', '--memory', '512m',
+            '--cpus', '1', '--pids-limit', '64', '--user', '65534:65534',
+            'auditforge-policy:1.0']
+
+
 def run(seed, isolated=True, config=None):
     container_name = 'auditforge-policy-' + uuid.uuid4().hex
-    if isolated:
-        command=['docker','run','--rm','--name',container_name,'-i','--network','none','--read-only','--cap-drop','ALL','--security-opt','no-new-privileges','--memory','512m','--cpus','1','--pids-limit','64','--user','65534:65534','auditforge-policy:1.0']
-    else:
-        command=[sys.executable,str(Path(__file__).with_name('policy_agent.py'))]
+    command = (container_command(container_name) if isolated
+               else [sys.executable, str(Path(__file__).with_name('policy_agent.py'))])
     with AuditEnv(mode='evaluation') as env, tempfile.TemporaryDirectory() as cwd:
         started=time.monotonic()
         initial,_=env.reset(seed,config)

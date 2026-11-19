@@ -1,7 +1,7 @@
 {
   "benchmark": [
     {
-      "episode_id": "ep-e523e170a594d79c",
+      "episode_id": "ep-a38f66e27e38bd5b",
       "f1": 1,
       "fn": 0,
       "fp": 0,
@@ -9,12 +9,12 @@
       "precision": 0,
       "recall": 0,
       "reward": 0.984,
-      "seconds": 0.12102240000240272,
+      "seconds": 0.12449940000078641,
       "steps": 9,
       "tp": 0
     },
     {
-      "episode_id": "ep-e523e170a594d79c",
+      "episode_id": "ep-a38f66e27e38bd5b",
       "f1": 1,
       "fn": 0,
       "fp": 0,
@@ -22,12 +22,12 @@
       "precision": 0,
       "recall": 0,
       "reward": 0.98,
-      "seconds": 0.11727400000017951,
+      "seconds": 0.13118570000006002,
       "steps": 11,
       "tp": 0
     },
     {
-      "episode_id": "ep-e523e170a594d79c",
+      "episode_id": "ep-a38f66e27e38bd5b",
       "f1": 0.0,
       "fn": 0,
       "fp": 30,
@@ -35,12 +35,12 @@
       "precision": 0.0,
       "recall": 0,
       "reward": -1,
-      "seconds": 0.11951559999943129,
+      "seconds": 0.18172129999948083,
       "steps": 11,
       "tp": 0
     },
     {
-      "episode_id": "ep-e523e170a594d79c",
+      "episode_id": "ep-a38f66e27e38bd5b",
       "f1": 1,
       "fn": 0,
       "fp": 0,
@@ -48,12 +48,12 @@
       "precision": 0,
       "recall": 0,
       "reward": 1,
-      "seconds": 0.10232900000119116,
+      "seconds": 0.12935669999933452,
       "steps": 1,
       "tp": 0
     },
     {
-      "episode_id": "ep-c923c41a55f2f147",
+      "episode_id": "ep-cdfe184812792e50",
       "f1": 1,
       "fn": 0,
       "fp": 0,
@@ -61,12 +61,12 @@
       "precision": 0,
       "recall": 0,
       "reward": 0.984,
-      "seconds": 0.11137200000302983,
+      "seconds": 0.12823470000148518,
       "steps": 9,
       "tp": 0
     },
     {
-      "episode_id": "ep-c923c41a55f2f147",
+      "episode_id": "ep-cdfe184812792e50",
       "f1": 1,
       "fn": 0,
       "fp": 0,
@@ -74,12 +74,12 @@
       "precision": 0,
       "recall": 0,
       "reward": 0.98,
-      "seconds": 0.12372749999849475,
+      "seconds": 0.13421349999771337,
       "steps": 11,
       "tp": 0
     },
     {
-      "episode_id": "ep-c923c41a55f2f147",
+      "episode_id": "ep-cdfe184812792e50",
       "f1": 0.0,
       "fn": 0,
       "fp": 30,
@@ -87,12 +87,12 @@
       "precision": 0.0,
       "recall": 0,
       "reward": -1,
-      "seconds": 0.1223917999996047,
+      "seconds": 0.1299235000005865,
       "steps": 11,
       "tp": 0
     },
     {
-      "episode_id": "ep-c923c41a55f2f147",
+      "episode_id": "ep-cdfe184812792e50",
       "f1": 1,
       "fn": 0,
       "fp": 0,
@@ -100,12 +100,12 @@
       "precision": 0,
       "recall": 0,
       "reward": 1,
-      "seconds": 0.10719460000109393,
+      "seconds": 0.11198679999870365,
       "steps": 1,
       "tp": 0
     },
     {
-      "episode_id": "ep-baf57abff34a5197",
+      "episode_id": "ep-0b7e810c57d1ae27",
       "f1": 1,
       "fn": 0,
       "fp": 0,
@@ -113,12 +113,12 @@
       "precision": 0,
       "recall": 0,
       "reward": 0.984,
-      "seconds": 0.12002620000203024,
+      "seconds": 0.1225717999986955,
       "steps": 9,
       "tp": 0
     },
     {
-      "episode_id": "ep-baf57abff34a5197",
+      "episode_id": "ep-0b7e810c57d1ae27",
       "f1": 1,
       "fn": 0,
       "fp": 0,
@@ -126,12 +126,12 @@
       "precision": 0,
       "recall": 0,
       "reward": 0.98,
-      "seconds": 0.12473569999929168,
+      "seconds": 0.13104930000190507,
       "steps": 11,
       "tp": 0
     },
     {
-      "episode_id": "ep-baf57abff34a5197",
+      "episode_id": "ep-0b7e810c57d1ae27",
       "f1": 0.0,
       "fn": 0,
       "fp": 30,
@@ -139,12 +139,12 @@
       "precision": 0.0,
       "recall": 0,
       "reward": -1,
-      "seconds": 0.12370459999874583,
+      "seconds": 0.1379823999996006,
       "steps": 11,
       "tp": 0
     },
     {
-      "episode_id": "ep-baf57abff34a5197",
+      "episode_id": "ep-0b7e810c57d1ae27",
       "f1": 1,
       "fn": 0,
       "fp": 0,
@@ -152,12 +152,12 @@
       "precision": 0,
       "recall": 0,
       "reward": 1,
-      "seconds": 0.10680969999884837,
+      "seconds": 0.11608650000198395,
       "steps": 1,
       "tp": 0
     },
     {
-      "episode_id": "ep-73f1b6351f811840",
+      "episode_id": "ep-6e4af0bf995fbee5",
       "f1": 1,
       "fn": 0,
       "fp": 0,
@@ -165,12 +165,12 @@
       "precision": 0,
       "recall": 0,
       "reward": 0.984,
-      "seconds": 0.10919970000031753,
+      "seconds": 0.11899970000013127,
       "steps": 9,
       "tp": 0
     },
     {
-      "episode_id": "ep-73f1b6351f811840",
+      "episode_id": "ep-6e4af0bf995fbee5",
       "f1": 1,
       "fn": 0,
       "fp": 0,
@@ -178,12 +178,12 @@
       "precision": 0,
       "recall": 0,
       "reward": 0.98,
-      "seconds": 0.11538719999953173,
+      "seconds": 0.12827000000106636,
       "steps": 11,
       "tp": 0
     },
     {
-      "episode_id": "ep-73f1b6351f811840",
+      "episode_id": "ep-6e4af0bf995fbee5",
       "f1": 0.0,
       "fn": 0,
       "fp": 30,
@@ -191,12 +191,12 @@
       "precision": 0.0,
       "recall": 0,
       "reward": -1,
-      "seconds": 0.12175389999902109,
+      "seconds": 0.12561429999914253,
       "steps": 11,
       "tp": 0
     },
     {
-      "episode_id": "ep-73f1b6351f811840",
+      "episode_id": "ep-6e4af0bf995fbee5",
       "f1": 1,
       "fn": 0,
       "fp": 0,
@@ -204,12 +204,12 @@
       "precision": 0,
       "recall": 0,
       "reward": 1,
-      "seconds": 0.10874340000009397,
+      "seconds": 0.10515700000178185,
       "steps": 1,
       "tp": 0
     },
     {
-      "episode_id": "ep-2d94c9b65cad3231",
+      "episode_id": "ep-e3b0645540091e46",
       "f1": 1,
       "fn": 0,
       "fp": 0,
@@ -217,12 +217,12 @@
       "precision": 0,
       "recall": 0,
       "reward": 0.984,
-      "seconds": 0.12032440000257338,
+      "seconds": 0.11974299999928917,
       "steps": 9,
       "tp": 0
     },
     {
-      "episode_id": "ep-2d94c9b65cad3231",
+      "episode_id": "ep-e3b0645540091e46",
       "f1": 1,
       "fn": 0,
       "fp": 0,
@@ -230,12 +230,12 @@
       "precision": 0,
       "recall": 0,
       "reward": 0.98,
-      "seconds": 0.12414119999812101,
+      "seconds": 0.12755439999818918,
       "steps": 11,
       "tp": 0
     },
     {
-      "episode_id": "ep-2d94c9b65cad3231",
+      "episode_id": "ep-e3b0645540091e46",
       "f1": 0.0,
       "fn": 0,
       "fp": 30,
@@ -243,12 +243,12 @@
       "precision": 0.0,
       "recall": 0,
       "reward": -1,
-      "seconds": 0.12337829999887617,
+      "seconds": 0.13910390000091866,
       "steps": 11,
       "tp": 0
     },
     {
-      "episode_id": "ep-2d94c9b65cad3231",
+      "episode_id": "ep-e3b0645540091e46",
       "f1": 1,
       "fn": 0,
       "fp": 0,
@@ -256,12 +256,12 @@
       "precision": 0,
       "recall": 0,
       "reward": 1,
-      "seconds": 0.10684700000274461,
+      "seconds": 0.12014750000162167,
       "steps": 1,
       "tp": 0
     },
     {
-      "episode_id": "ep-313418d3636f268b",
+      "episode_id": "ep-1dd1b1c62d74f7ff",
       "f1": 0.0,
       "fn": 4,
       "fp": 0,
@@ -269,12 +269,12 @@
       "precision": 0,
       "recall": 0.0,
       "reward": -1,
-      "seconds": 0.11137289999896893,
+      "seconds": 0.1260039999979199,
       "steps": 9,
       "tp": 0
     },
     {
-      "episode_id": "ep-313418d3636f268b",
+      "episode_id": "ep-1dd1b1c62d74f7ff",
       "f1": 1.0,
       "fn": 0,
       "fp": 0,
@@ -282,12 +282,12 @@
       "precision": 1.0,
       "recall": 1.0,
       "reward": 0.98,
-      "seconds": 0.1195235999985016,
+      "seconds": 0.12903369999912684,
       "steps": 11,
       "tp": 4
     },
     {
-      "episode_id": "ep-313418d3636f268b",
+      "episode_id": "ep-1dd1b1c62d74f7ff",
       "f1": 0.0,
       "fn": 4,
       "fp": 30,
@@ -295,12 +295,12 @@
       "precision": 0.0,
       "recall": 0.0,
       "reward": -1,
-      "seconds": 0.12104520000139019,
+      "seconds": 0.12212259999796515,
       "steps": 11,
       "tp": 0
     },
     {
-      "episode_id": "ep-313418d3636f268b",
+      "episode_id": "ep-1dd1b1c62d74f7ff",
       "f1": 1.0,
       "fn": 0,
       "fp": 0,
@@ -308,12 +308,12 @@
       "precision": 1.0,
       "recall": 1.0,
       "reward": 0.976,
-      "seconds": 0.10845409999819822,
+      "seconds": 0.1105548000014096,
       "steps": 13,
       "tp": 4
     },
     {
-      "episode_id": "ep-2ad21d150ff13f92",
+      "episode_id": "ep-25bff0c0ff6a8f89",
       "f1": 0.0,
       "fn": 4,
       "fp": 0,
@@ -321,12 +321,12 @@
       "precision": 0,
       "recall": 0.0,
       "reward": -1,
-      "seconds": 0.12097820000053616,
+      "seconds": 0.11392609999893466,
       "steps": 9,
       "tp": 0
     },
     {
-      "episode_id": "ep-2ad21d150ff13f92",
+      "episode_id": "ep-25bff0c0ff6a8f89",
       "f1": 1.0,
       "fn": 0,
       "fp": 0,
@@ -334,12 +334,12 @@
       "precision": 1.0,
       "recall": 1.0,
       "reward": 0.98,
-      "seconds": 0.1289913999971759,
+      "seconds": 0.12236099999790895,
       "steps": 11,
       "tp": 4
     },
     {
-      "episode_id": "ep-2ad21d150ff13f92",
+      "episode_id": "ep-25bff0c0ff6a8f89",
       "f1": 0.0,
       "fn": 4,
       "fp": 30,
@@ -347,12 +347,12 @@
       "precision": 0.0,
       "recall": 0.0,
       "reward": -1,
-      "seconds": 0.12088539999967907,
+      "seconds": 0.13046549999853596,
       "steps": 11,
       "tp": 0
     },
     {
-      "episode_id": "ep-2ad21d150ff13f92",
+      "episode_id": "ep-25bff0c0ff6a8f89",
       "f1": 1.0,
       "fn": 0,
       "fp": 0,
@@ -360,12 +360,12 @@
       "precision": 1.0,
       "recall": 1.0,
       "reward": 0.976,
-      "seconds": 0.10954940000010538,
+      "seconds": 0.11594590000095195,
       "steps": 13,
       "tp": 4
     },
     {
-      "episode_id": "ep-cd9a203b17b24ff4",
+      "episode_id": "ep-0d0fdcf9fd77e210",
       "f1": 0.0,
       "fn": 4,
       "fp": 0,
@@ -373,12 +373,12 @@
       "precision": 0,
       "recall": 0.0,
       "reward": -1,
-      "seconds": 0.11049350000030245,
+      "seconds": 0.1159918999983347,
       "steps": 9,
       "tp": 0
     },
     {
-      "episode_id": "ep-cd9a203b17b24ff4",
+      "episode_id": "ep-0d0fdcf9fd77e210",
       "f1": 1.0,
       "fn": 0,
       "fp": 0,
@@ -386,12 +386,12 @@
       "precision": 1.0,
       "recall": 1.0,
       "reward": 0.98,
-      "seconds": 0.11414979999972275,
+      "seconds": 0.12048089999734657,
       "steps": 11,
       "tp": 4
     },
     {
-      "episode_id": "ep-cd9a203b17b24ff4",
+      "episode_id": "ep-0d0fdcf9fd77e210",
       "f1": 0.0,
       "fn": 4,
       "fp": 30,
@@ -399,12 +399,12 @@
       "precision": 0.0,
       "recall": 0.0,
       "reward": -1,
-      "seconds": 0.11875140000120155,
+      "seconds": 0.12057749999803491,
       "steps": 11,
       "tp": 0
     },
     {
-      "episode_id": "ep-cd9a203b17b24ff4",
+      "episode_id": "ep-0d0fdcf9fd77e210",
       "f1": 1.0,
       "fn": 0,
       "fp": 0,
@@ -412,12 +412,12 @@
       "precision": 1.0,
       "recall": 1.0,
       "reward": 0.976,
-      "seconds": 0.10402949999843258,
+      "seconds": 0.11058780000166735,
       "steps": 13,
       "tp": 4
     },
     {
-      "episode_id": "ep-568c3b25afc442ea",
+      "episode_id": "ep-62547b9025111aa8",
       "f1": 0.0,
       "fn": 4,
       "fp": 0,
@@ -425,12 +425,12 @@
       "precision": 0,
       "recall": 0.0,
       "reward": -1,
-      "seconds": 0.11108400000011898,
+      "seconds": 0.1204996000014944,
       "steps": 9,
       "tp": 0
     },
     {
-      "episode_id": "ep-568c3b25afc442ea",
+      "episode_id": "ep-62547b9025111aa8",
       "f1": 1.0,
       "fn": 0,
       "fp": 0,
@@ -438,12 +438,12 @@
       "precision": 1.0,
       "recall": 1.0,
       "reward": 0.98,
-      "seconds": 0.11769020000065211,
+      "seconds": 0.1274877000032575,
       "steps": 11,
       "tp": 4
     },
     {
-      "episode_id": "ep-568c3b25afc442ea",
+      "episode_id": "ep-62547b9025111aa8",
       "f1": 0.0,
       "fn": 4,
       "fp": 30,
@@ -451,12 +451,12 @@
       "precision": 0.0,
       "recall": 0.0,
       "reward": -1,
-      "seconds": 0.1159549000003608,
+      "seconds": 0.13167220000104862,
       "steps": 11,
       "tp": 0
     },
     {
-      "episode_id": "ep-568c3b25afc442ea",
+      "episode_id": "ep-62547b9025111aa8",
       "f1": 1.0,
       "fn": 0,
       "fp": 0,
@@ -464,12 +464,12 @@
       "precision": 1.0,
       "recall": 1.0,
       "reward": 0.976,
-      "seconds": 0.10463539999909699,
+      "seconds": 0.11899280000216095,
       "steps": 13,
       "tp": 4
     },
     {
-      "episode_id": "ep-0466606d8a228da4",
+      "episode_id": "ep-4869fd3fe2d27a6c",
       "f1": 0.0,
       "fn": 4,
       "fp": 0,
@@ -477,12 +477,12 @@
       "precision": 0,
       "recall": 0.0,
       "reward": -1,
-      "seconds": 0.11094039999807137,
+      "seconds": 0.11662500000238651,
       "steps": 9,
       "tp": 0
     },
     {
-      "episode_id": "ep-0466606d8a228da4",
+      "episode_id": "ep-4869fd3fe2d27a6c",
       "f1": 1.0,
       "fn": 0,
       "fp": 0,
@@ -490,12 +490,12 @@
       "precision": 1.0,
       "recall": 1.0,
       "reward": 0.98,
-      "seconds": 0.11807129999942845,
+      "seconds": 0.12644410000211792,
       "steps": 11,
       "tp": 4
     },
     {
-      "episode_id": "ep-0466606d8a228da4",
+      "episode_id": "ep-4869fd3fe2d27a6c",
       "f1": 0.0,
       "fn": 4,
       "fp": 30,
@@ -503,12 +503,12 @@
       "precision": 0.0,
       "recall": 0.0,
       "reward": -1,
-      "seconds": 0.11597249999977066,
+      "seconds": 0.12486120000176015,
       "steps": 11,
       "tp": 0
     },
     {
-      "episode_id": "ep-0466606d8a228da4",
+      "episode_id": "ep-4869fd3fe2d27a6c",
       "f1": 1.0,
       "fn": 0,
       "fp": 0,
@@ -516,12 +516,12 @@
       "precision": 1.0,
       "recall": 1.0,
       "reward": 0.976,
-      "seconds": 0.10364199999821722,
+      "seconds": 0.11573370000041905,
       "steps": 13,
       "tp": 4
     },
     {
-      "episode_id": "ep-cb70ad137dbf2e8f",
+      "episode_id": "ep-42f33b6db473c672",
       "f1": 0.0,
       "fn": 8,
       "fp": 0,
@@ -529,12 +529,12 @@
       "precision": 0,
       "recall": 0.0,
       "reward": -1,
-      "seconds": 0.11022529999900144,
+      "seconds": 0.11270299999887357,
       "steps": 9,
       "tp": 0
     },
     {
-      "episode_id": "ep-cb70ad137dbf2e8f",
+      "episode_id": "ep-42f33b6db473c672",
       "f1": 1.0,
       "fn": 0,
       "fp": 0,
@@ -542,12 +542,12 @@
       "precision": 1.0,
       "recall": 1.0,
       "reward": 0.98,
-      "seconds": 0.11375659999976051,
+      "seconds": 0.12158819999967818,
       "steps": 11,
       "tp": 8
     },
     {
-      "episode_id": "ep-cb70ad137dbf2e8f",
+      "episode_id": "ep-42f33b6db473c672",
       "f1": 0.0,
       "fn": 8,
       "fp": 30,
@@ -555,12 +555,12 @@
       "precision": 0.0,
       "recall": 0.0,
       "reward": -1,
-      "seconds": 0.1206160000001546,
+      "seconds": 0.12277419999736594,
       "steps": 11,
       "tp": 0
     },
     {
-      "episode_id": "ep-cb70ad137dbf2e8f",
+      "episode_id": "ep-42f33b6db473c672",
       "f1": 1.0,
       "fn": 0,
       "fp": 0,
@@ -568,12 +568,12 @@
       "precision": 1.0,
       "recall": 1.0,
       "reward": 0.954,
-      "seconds": 0.1138768999990134,
+      "seconds": 0.11284660000092117,
       "steps": 24,
       "tp": 8
     },
     {
-      "episode_id": "ep-4c14495e5826f843",
+      "episode_id": "ep-0da3e5dfe0f667c0",
       "f1": 0.0,
       "fn": 9,
       "fp": 0,
@@ -581,12 +581,12 @@
       "precision": 0,
       "recall": 0.0,
       "reward": -1,
-      "seconds": 0.11081249999915599,
+      "seconds": 0.11831689999962691,
       "steps": 9,
       "tp": 0
     },
     {
-      "episode_id": "ep-4c14495e5826f843",
+      "episode_id": "ep-0da3e5dfe0f667c0",
       "f1": 1.0,
       "fn": 0,
       "fp": 0,
@@ -594,12 +594,12 @@
       "precision": 1.0,
       "recall": 1.0,
       "reward": 0.98,
-      "seconds": 0.12163650000002235,
+      "seconds": 0.12895120000030147,
       "steps": 11,
       "tp": 9
     },
     {
-      "episode_id": "ep-4c14495e5826f843",
+      "episode_id": "ep-0da3e5dfe0f667c0",
       "f1": 0.0,
       "fn": 9,
       "fp": 30,
@@ -607,12 +607,12 @@
       "precision": 0.0,
       "recall": 0.0,
       "reward": -1,
-      "seconds": 0.11878069999875152,
+      "seconds": 0.17237820000082138,
       "steps": 11,
       "tp": 0
     },
     {
-      "episode_id": "ep-4c14495e5826f843",
+      "episode_id": "ep-0da3e5dfe0f667c0",
       "f1": 1.0,
       "fn": 0,
       "fp": 0,
@@ -620,12 +620,12 @@
       "precision": 1.0,
       "recall": 1.0,
       "reward": 0.952,
-      "seconds": 0.10947390000001178,
+      "seconds": 0.11707279999973252,
       "steps": 25,
       "tp": 9
     },
     {
-      "episode_id": "ep-0f85a2f1f1598298",
+      "episode_id": "ep-0737f942bffb2ff6",
       "f1": 0.0,
       "fn": 7,
       "fp": 0,
@@ -633,12 +633,12 @@
       "precision": 0,
       "recall": 0.0,
       "reward": -1,
-      "seconds": 0.1104486000003817,
+      "seconds": 0.11897959999987506,
       "steps": 9,
       "tp": 0
     },
     {
-      "episode_id": "ep-0f85a2f1f1598298",
+      "episode_id": "ep-0737f942bffb2ff6",
       "f1": 1.0,
       "fn": 0,
       "fp": 0,
@@ -646,12 +646,12 @@
       "precision": 1.0,
       "recall": 1.0,
       "reward": 0.98,
-      "seconds": 0.11797010000009323,
+      "seconds": 0.12805410000146367,
       "steps": 11,
       "tp": 7
     },
     {
-      "episode_id": "ep-0f85a2f1f1598298",
+      "episode_id": "ep-0737f942bffb2ff6",
       "f1": 0.0,
       "fn": 7,
       "fp": 30,
@@ -659,12 +659,12 @@
       "precision": 0.0,
       "recall": 0.0,
       "reward": -1,
-      "seconds": 0.11580060000051162,
+      "seconds": 0.13732080000045244,
       "steps": 11,
       "tp": 0
     },
     {
-      "episode_id": "ep-0f85a2f1f1598298",
+      "episode_id": "ep-0737f942bffb2ff6",
       "f1": 1.0,
       "fn": 0,
       "fp": 0,
@@ -672,12 +672,12 @@
       "precision": 1.0,
       "recall": 1.0,
       "reward": 0.96,
-      "seconds": 0.10828860000037821,
+      "seconds": 0.11306450000120094,
       "steps": 21,
       "tp": 7
     },
     {
-      "episode_id": "ep-34fe1a20ecb0ce6d",
+      "episode_id": "ep-c6176fed70cec4d5",
       "f1": 0.0,
       "fn": 8,
       "fp": 0,
@@ -685,12 +685,12 @@
       "precision": 0,
       "recall": 0.0,
       "reward": -1,
-      "seconds": 0.10884660000010626,
+      "seconds": 0.11862869999822578,
       "steps": 9,
       "tp": 0
     },
     {
-      "episode_id": "ep-34fe1a20ecb0ce6d",
+      "episode_id": "ep-c6176fed70cec4d5",
       "f1": 1.0,
       "fn": 0,
       "fp": 0,
@@ -698,12 +698,12 @@
       "precision": 1.0,
       "recall": 1.0,
       "reward": 0.98,
-      "seconds": 0.11977779999870108,
+      "seconds": 0.12893799999801558,
       "steps": 11,
       "tp": 8
     },
     {
-      "episode_id": "ep-34fe1a20ecb0ce6d",
+      "episode_id": "ep-c6176fed70cec4d5",
       "f1": 0.0,
       "fn": 8,
       "fp": 30,
@@ -711,12 +711,12 @@
       "precision": 0.0,
       "recall": 0.0,
       "reward": -1,
-      "seconds": 0.11602620000121533,
+      "seconds": 0.13206239999999525,
       "steps": 11,
       "tp": 0
     },
     {
-      "episode_id": "ep-34fe1a20ecb0ce6d",
+      "episode_id": "ep-c6176fed70cec4d5",
       "f1": 1.0,
       "fn": 0,
       "fp": 0,
@@ -724,12 +724,12 @@
       "precision": 1.0,
       "recall": 1.0,
       "reward": 0.954,
-      "seconds": 0.11004859999957262,
+      "seconds": 0.11772539999947185,
       "steps": 24,
       "tp": 8
     },
     {
-      "episode_id": "ep-49dc7792f574addf",
+      "episode_id": "ep-ba6fdff5658482a7",
       "f1": 0.0,
       "fn": 9,
       "fp": 0,
@@ -737,12 +737,12 @@
       "precision": 0,
       "recall": 0.0,
       "reward": -1,
-      "seconds": 0.10790469999847119,
+      "seconds": 0.1133466999999655,
       "steps": 9,
       "tp": 0
     },
     {
-      "episode_id": "ep-49dc7792f574addf",
+      "episode_id": "ep-ba6fdff5658482a7",
       "f1": 1.0,
       "fn": 0,
       "fp": 0,
@@ -750,12 +750,12 @@
       "precision": 1.0,
       "recall": 1.0,
       "reward": 0.98,
-      "seconds": 0.11552589999701013,
+      "seconds": 0.12037210000198684,
       "steps": 11,
       "tp": 9
     },
     {
-      "episode_id": "ep-49dc7792f574addf",
+      "episode_id": "ep-ba6fdff5658482a7",
       "f1": 0.0,
       "fn": 9,
       "fp": 30,
@@ -763,12 +763,12 @@
       "precision": 0.0,
       "recall": 0.0,
       "reward": -1,
-      "seconds": 0.11904859999776818,
+      "seconds": 0.12214139999923646,
       "steps": 11,
       "tp": 0
     },
     {
-      "episode_id": "ep-49dc7792f574addf",
+      "episode_id": "ep-ba6fdff5658482a7",
       "f1": 1.0,
       "fn": 0,
       "fp": 0,
@@ -776,12 +776,12 @@
       "precision": 1.0,
       "recall": 1.0,
       "reward": 0.952,
-      "seconds": 0.10773920000065118,
+      "seconds": 0.11143969999830006,
       "steps": 25,
       "tp": 9
     },
     {
-      "episode_id": "ep-bcd7854a2db98937",
+      "episode_id": "ep-abc3fc47d7951eb7",
       "f1": 0.0,
       "fn": 7,
       "fp": 0,
@@ -789,12 +789,12 @@
       "precision": 0,
       "recall": 0.0,
       "reward": -1,
-      "seconds": 0.11346989999947255,
+      "seconds": 0.113094699998328,
       "steps": 9,
       "tp": 0
     },
     {
-      "episode_id": "ep-bcd7854a2db98937",
+      "episode_id": "ep-abc3fc47d7951eb7",
       "f1": 1.0,
       "fn": 0,
       "fp": 0,
@@ -802,12 +802,12 @@
       "precision": 1.0,
       "recall": 1.0,
       "reward": 0.98,
-      "seconds": 0.12008290000085253,
+      "seconds": 0.1245582999981707,
       "steps": 11,
       "tp": 7
     },
     {
-      "episode_id": "ep-bcd7854a2db98937",
+      "episode_id": "ep-abc3fc47d7951eb7",
       "f1": 0.0,
       "fn": 7,
       "fp": 30,
@@ -815,12 +815,12 @@
       "precision": 0.0,
       "recall": 0.0,
       "reward": -1,
-      "seconds": 0.12360210000042571,
+      "seconds": 0.11980680000124266,
       "steps": 11,
       "tp": 0
     },
     {
-      "episode_id": "ep-bcd7854a2db98937",
+      "episode_id": "ep-abc3fc47d7951eb7",
       "f1": 1.0,
       "fn": 0,
       "fp": 0,
@@ -828,12 +828,12 @@
       "precision": 1.0,
       "recall": 1.0,
       "reward": 0.96,
-      "seconds": 0.11528420000104234,
+      "seconds": 0.1111918999995396,
       "steps": 21,
       "tp": 7
     },
     {
-      "episode_id": "ep-8a0d0ce8239f777f",
+      "episode_id": "ep-4fc540527f2aa410",
       "f1": 0.0,
       "fn": 8,
       "fp": 0,
@@ -841,12 +841,12 @@
       "precision": 0,
       "recall": 0.0,
       "reward": -1,
-      "seconds": 0.11137850000159233,
+      "seconds": 0.11542629999894416,
       "steps": 9,
       "tp": 0
     },
     {
-      "episode_id": "ep-8a0d0ce8239f777f",
+      "episode_id": "ep-4fc540527f2aa410",
       "f1": 1.0,
       "fn": 0,
       "fp": 0,
@@ -854,12 +854,12 @@
       "precision": 1.0,
       "recall": 1.0,
       "reward": 0.98,
-      "seconds": 0.11968909999995958,
+      "seconds": 0.12223620000077062,
       "steps": 11,
       "tp": 8
     },
     {
-      "episode_id": "ep-8a0d0ce8239f777f",
+      "episode_id": "ep-4fc540527f2aa410",
       "f1": 0.0,
       "fn": 8,
       "fp": 30,
@@ -867,12 +867,12 @@
       "precision": 0.0,
       "recall": 0.0,
       "reward": -1,
-      "seconds": 0.11522660000264295,
+      "seconds": 0.1291744000009203,
       "steps": 11,
       "tp": 0
     },
     {
-      "episode_id": "ep-8a0d0ce8239f777f",
+      "episode_id": "ep-4fc540527f2aa410",
       "f1": 1.0,
       "fn": 0,
       "fp": 0,
@@ -880,12 +880,12 @@
       "precision": 1.0,
       "recall": 1.0,
       "reward": 0.954,
-      "seconds": 0.10666820000187727,
+      "seconds": 0.11394289999952889,
       "steps": 24,
       "tp": 8
     },
     {
-      "episode_id": "ep-d70e4940522c8798",
+      "episode_id": "ep-bd8a3e279f55252f",
       "f1": 0.0,
       "fn": 9,
       "fp": 0,
@@ -893,12 +893,12 @@
       "precision": 0,
       "recall": 0.0,
       "reward": -1,
-      "seconds": 0.11142640000252868,
+      "seconds": 0.11344950000056997,
       "steps": 9,
       "tp": 0
     },
     {
-      "episode_id": "ep-d70e4940522c8798",
+      "episode_id": "ep-bd8a3e279f55252f",
       "f1": 1.0,
       "fn": 0,
       "fp": 0,
@@ -906,12 +906,12 @@
       "precision": 1.0,
       "recall": 1.0,
       "reward": 0.98,
-      "seconds": 0.11656539999967208,
+      "seconds": 0.1244743000024755,
       "steps": 11,
       "tp": 9
     },
     {
-      "episode_id": "ep-d70e4940522c8798",
+      "episode_id": "ep-bd8a3e279f55252f",
       "f1": 0.0,
       "fn": 9,
       "fp": 30,
@@ -919,12 +919,12 @@
       "precision": 0.0,
       "recall": 0.0,
       "reward": -1,
-      "seconds": 0.121470699999918,
+      "seconds": 0.1188538000023982,
       "steps": 11,
       "tp": 0
     },
     {
-      "episode_id": "ep-d70e4940522c8798",
+      "episode_id": "ep-bd8a3e279f55252f",
       "f1": 1.0,
       "fn": 0,
       "fp": 0,
@@ -932,12 +932,12 @@
       "precision": 1.0,
       "recall": 1.0,
       "reward": 0.952,
-      "seconds": 0.14428119999865885,
+      "seconds": 0.11009469999771682,
       "steps": 25,
       "tp": 9
     },
     {
-      "episode_id": "ep-3f27cd0afb583441",
+      "episode_id": "ep-63dd36108b1861f4",
       "f1": 0.0,
       "fn": 7,
       "fp": 0,
@@ -945,12 +945,12 @@
       "precision": 0,
       "recall": 0.0,
       "reward": -1,
-      "seconds": 0.12822980000055395,
+      "seconds": 0.11182000000189873,
       "steps": 9,
       "tp": 0
     },
     {
-      "episode_id": "ep-3f27cd0afb583441",
+      "episode_id": "ep-63dd36108b1861f4",
       "f1": 1.0,
       "fn": 0,
       "fp": 0,
@@ -958,12 +958,12 @@
       "precision": 1.0,
       "recall": 1.0,
       "reward": 0.98,
-      "seconds": 0.11683679999987362,
+      "seconds": 0.12272630000006757,
       "steps": 11,
       "tp": 7
     },
     {
-      "episode_id": "ep-3f27cd0afb583441",
+      "episode_id": "ep-63dd36108b1861f4",
       "f1": 0.0,
       "fn": 7,
       "fp": 30,
@@ -971,12 +971,12 @@
       "precision": 0.0,
       "recall": 0.0,
       "reward": -1,
-      "seconds": 0.12101459999757935,
+      "seconds": 0.1234413999991375,
       "steps": 11,
       "tp": 0
     },
     {
-      "episode_id": "ep-3f27cd0afb583441",
+      "episode_id": "ep-63dd36108b1861f4",
       "f1": 1.0,
       "fn": 0,
       "fp": 0,
@@ -984,12 +984,12 @@
       "precision": 1.0,
       "recall": 1.0,
       "reward": 0.96,
-      "seconds": 0.1049964000012551,
+      "seconds": 0.10880589999942458,
       "steps": 21,
       "tp": 7
     },
     {
-      "episode_id": "ep-55fa1bf58dce9946",
+      "episode_id": "ep-42e855e41a88528e",
       "f1": 0.0,
       "fn": 8,
       "fp": 0,
@@ -997,12 +997,12 @@
       "precision": 0,
       "recall": 0.0,
       "reward": -1,
-      "seconds": 0.10938420000093174,
+      "seconds": 0.12215290000312962,
       "steps": 9,
       "tp": 0
     },
     {
-      "episode_id": "ep-55fa1bf58dce9946",
+      "episode_id": "ep-42e855e41a88528e",
       "f1": 1.0,
       "fn": 0,
       "fp": 0,
@@ -1010,12 +1010,12 @@
       "precision": 1.0,
       "recall": 1.0,
       "reward": 0.98,
-      "seconds": 0.15162659999987227,
+      "seconds": 0.12851459999728831,
       "steps": 11,
       "tp": 8
     },
     {
-      "episode_id": "ep-55fa1bf58dce9946",
+      "episode_id": "ep-42e855e41a88528e",
       "f1": 0.0,
       "fn": 8,
       "fp": 30,
@@ -1023,12 +1023,12 @@
       "precision": 0.0,
       "recall": 0.0,
       "reward": -1,
-      "seconds": 0.11845220000031986,
+      "seconds": 0.12947780000104103,
       "steps": 11,
       "tp": 0
     },
     {
-      "episode_id": "ep-55fa1bf58dce9946",
+      "episode_id": "ep-42e855e41a88528e",
       "f1": 1.0,
       "fn": 0,
       "fp": 0,
@@ -1036,7 +1036,7 @@
       "precision": 1.0,
       "recall": 1.0,
       "reward": 0.954,
-      "seconds": 0.11463739999817335,
+      "seconds": 0.11209100000269245,
       "steps": 24,
       "tp": 8
     }
@@ -1047,5 +1047,5 @@
   "official_result": null,
   "reward_passed": 20,
   "valid_episodes": 20,
-  "wall_seconds": 21.427522099998896
+  "wall_seconds": 25.113406499996927
 }

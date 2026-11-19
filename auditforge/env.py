@@ -48,7 +48,12 @@ class Session:
         self.started = time.monotonic()
         self.seconds = 60
         self.final = []
-        return dict(task='Audit the company for four documented financial issue types; submit evidence-backed findings.', manifest=self.public['manifest'], policy=self.public['policy'], steps_remaining=100), {}
+        return dict(
+            task='Audit the company for four documented financial issue types; submit evidence-backed findings.',
+            manifest=copy.deepcopy(self.public['manifest']),
+            policy=copy.deepcopy(self.public['policy']),
+            steps_remaining=100,
+        ), {}
 
     def step(self, action):
         if self.done:
@@ -93,7 +98,13 @@ class Session:
                     record_id = action.get('id')
                     if not isinstance(record_id, str) or not record_id:
                         raise ValueError('Invalid record ID')
-                    result = next((r for r in records if any(record_id == r.get(key) for key in ('row_id', 'doc_id', 'invoice_id', 'payment_id'))), None)
+                    keys = {
+                        'ledger': ('row_id',),
+                        'fx': ('row_id',),
+                        'invoices': ('doc_id', 'invoice_id'),
+                        'payments': ('doc_id', 'payment_id'),
+                    }[table]
+                    result = next((r for r in records if any(record_id == r[key] for key in keys)), None)
                     if result is None: raise ValueError('Record not found')
             elif tool == 'get_document':
                 result = next((d for table in ('invoices', 'payments') for d in self.public[table] if d['doc_id'] == action.get('doc_id')), None)
@@ -156,7 +167,7 @@ class AuditEnv:
         return response['value']
 
     def reset(self, seed, config=None):
-        return tuple(self._call(dict(command='reset', seed=seed, config=config or {}, mode=self.mode)))
+        return tuple(self._call(dict(command='reset', seed=seed, config=config, mode=self.mode)))
 
     def step(self, action):
         return tuple(self._call(dict(command='step', action=action)))

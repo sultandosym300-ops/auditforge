@@ -12,11 +12,13 @@ python -m auditforge.verify
 
 На Windows используйте `py -3.11 -m auditforge.verify`. Команда запускает тесты, проверяет 20 компаний и 20 пар с изменёнными ID и порядком записей, прогоняет четыре политики и экспортирует материалы сдачи. При ошибке процесс возвращает ненулевой код.
 
+Чтобы проверить собственный набор, передайте любой целочисленный корневой seed, например `python -m auditforge.verify --seed 807102432503`. При одинаковом seed и версии повторяются данные, действия и награды. Замеры времени зависят от машины.
+
 Для запуска с ограничениями из задания:
 
 ```sh
-docker build -t auditforge-evaluator:1.1.1 .
-docker run --rm --network none --cpus 2 --memory 4g auditforge-evaluator:1.1.1
+docker build -t auditforge-evaluator:1.1.2 .
+docker run --rm --network none --cpus 2 --memory 4g auditforge-evaluator:1.1.2
 docker build -f Dockerfile.policy -t auditforge-policy:1.0 .
 python -m auditforge.agent_runner
 ```
@@ -25,9 +27,22 @@ python -m auditforge.agent_runner
 
 Для воспроизведения диагностик используйте `python -m scripts.profile_resources`. Дополнительная проверка `python -m scripts.strict_sweep` запускает 64 новых seed и записывает параметры каждого прогона.
 
+Расширенный аудит из корня репозитория:
+
+```sh
+python -m auditforge.financial_audit --count 1000 --seed 2026112001 --output reports/financial-audit.json
+python -m auditforge.metamorphic --count 100 --seed 917329138
+python -m scripts.mutation_audit
+python -m scripts.verify_container
+```
+
+Результаты и границы проверки собраны в [FINAL_JURY_SIMULATION.md](FINAL_JURY_SIMULATION.md).
+
 ## Устройство среды
 
 Генератор сначала создаёт счета, платежи, курсы и согласованные двойные проводки, затем вносит четыре независимо настраиваемых вида ошибок. Два комбинированных сценария связывают ошибки с одним платежом либо одним обязательством. Сверка вычисляет отклонения из публичных записей. Валидатор отдельно проверяет бухгалтерские равенства и воспроизводит причинные изменения из provenance.
+
+Конфигурация принимает `period_month` в формате `YYYY-MM` и `boundary_payments: true` для законных платежей за секунду до и после закрытия. Часовой пояс задаётся фиксированным UTC-смещением. Правила IANA и переходы на летнее время не моделируются.
 
 Деньги хранятся в целых минимальных единицах. Для валютной конвертации применяется `Decimal` с `ROUND_HALF_EVEN`. Сумма ошибки распределения равна разнице округлённых проводок. При взаимодействии с ошибкой FX обе суммы для расчёта распределения оцениваются по объявленному курсу, чтобы разделить эффекты.
 

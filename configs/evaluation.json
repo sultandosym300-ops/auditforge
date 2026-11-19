@@ -3,7 +3,8 @@
   "mode": "evaluation",
   "max_steps": 100,
   "time_limit_seconds": 60,
-  "holdout_definition": "sha256(auditforge-holdout-v2-<index>) first 64 bits; local-only, not organizer seeds",
+  "holdout_definition": "sha256(auditforge-jury:<root seed>:<index>) first 128 bits; local-only, not organizer seeds",
+  "default_root_seed": 30811471,
   "composition": {
     "clean": 5,
     "interacting": 5,

@@ -1,6 +1,7 @@
 """Offline verification, actual trajectories and diagnostic benchmark. Not official judging."""
 import copy
 import hashlib
+import argparse
 import json
 import platform
 import random
@@ -16,11 +17,12 @@ from .matcher import oracle, evaluate
 from .env import AuditEnv, Session
 from .policies import run_policy
 from .export import export_episode, write_json
+from .financial_audit import audit_episode
 
 ROOT = Path(__file__).resolve().parents[1]
 
 
-def transform(episode, seed):
+def transform(episode, seed, *, return_mapping=False):
     rng = random.Random(seed)
     ids = set()
     def collect(value, key=''):
@@ -41,7 +43,7 @@ def transform(episode, seed):
     for branch in ('public','pristine'):
         transformed[branch]['manifest']['company']='Renamed Fictional Company'
         for table in ('ledger','invoices','payments','fx'): rng.shuffle(transformed[branch][table])
-    return transformed
+    return (transformed, mapping) if return_mapping else transformed
 
 
 def check_transitions(episode, transformed):
@@ -81,8 +83,18 @@ def check_transitions(episode, transformed):
 
 
 def main():
+    if not __debug__:
+        raise RuntimeError('Run verification without Python optimization')
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--seed', type=int, default=30811471,
+                        help='Root seed for the 20 jury-style episodes; examples stay fixed')
+    args = parser.parse_args()
     started=time.perf_counter()
     test_count=unittest.defaultTestLoader.discover(str(ROOT/'tests')).countTestCases()
+    contract_count = unittest.defaultTestLoader.discover(str(ROOT/'tests'), 'test_contract.py').countTestCases()
+    reward_count = unittest.defaultTestLoader.discover(str(ROOT/'tests'), 'test_reward.py').countTestCases()
+    if (contract_count, reward_count) != (20, 20):
+        raise RuntimeError('Expected exactly 20 contract and 20 reward checks')
     tests=subprocess.run([sys.executable,'-m','unittest','discover','-s','tests','-v'],cwd=ROOT)
     if tests.returncode: raise SystemExit(tests.returncode)
     configs=[]
@@ -90,12 +102,17 @@ def main():
         config=dict(clean=i<5,interaction=(1+i%2) if 5<=i<10 else 0)
         if i>=10: config['counts']={t: (i+j)%3+1 for j,t in enumerate(TYPES)}
         configs.append(config)
-    holdout_seeds=[int.from_bytes(hashlib.sha256(('auditforge-holdout-v2-'+str(i)).encode()).digest()[:8],'big') for i in range(20)]
+    holdout_seeds = [
+        int.from_bytes(hashlib.sha256(f'auditforge-jury:{args.seed}:{i}'.encode()).digest()[:16], 'big')
+        for i in range(20)
+    ]
     data=[]; pairs=[]; results=[]; trajectories=[]
     tracemalloc.start()
     for i,(seed,config) in enumerate(zip(holdout_seeds,configs)):
         tick=time.perf_counter()
         e=generate(seed,config); validate(e)
+        independent = audit_episode(e)
+        assert independent['valid'], (seed, config, independent['errors'])
         data.append(dict(episode_id=e['public']['manifest']['episode_id'],clean=config['clean'],interaction=config['interaction'],issues=len(e['truth']),records=len(e['public']['ledger']),valid=True,generation_validation_seconds=time.perf_counter()-tick))
         assert e==generate(seed,config)
         transformed=transform(e,seed+1); validate(transformed)
@@ -147,6 +164,7 @@ def main():
     (ROOT/'trajectories').mkdir(exist_ok=True)
     (ROOT/'trajectories'/'trajectories.jsonl').write_text(''.join(json.dumps(r,sort_keys=True)+'\n' for r in trajectories),encoding='utf-8')
     report=dict(version=GENERATOR_VERSION,tests_passed=test_count,official_result=None,scope='Local approximation of published checks; hidden organizer tests unavailable.',python=platform.python_version(),platform=platform.platform(),contract_checks=20,reward_checks=20,data=data,metamorphic_pairs=pairs,benchmark=results,peak_python_tracemalloc_bytes=memory,wall_seconds=time.perf_counter()-started,limitations=['CPU/RAM isolation requires Docker; tracemalloc is not process RSS.','No model weights trained; no learning improvement claimed.','Oracle is evaluator-only; its inspection strategy is not optimized.'])
+    report['jury_root_seed'] = args.seed
     write_json(ROOT/'reports'/'verification.json',report)
     write_json(ROOT/'web'/'public'/'verification-summary.json',dict(local=True,official_result=None,contract_passed=20,reward_passed=20,valid_episodes=len(data),metamorphic_pairs=len(pairs),wall_seconds=report['wall_seconds'],benchmark=results))
     print(json.dumps(dict(status='PASS',tests=test_count,data_episodes=20,pairs=20,policy_runs=len(results),seconds=report['wall_seconds'],peak_python_bytes=memory,official_result=None)))

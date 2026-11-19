@@ -9,7 +9,7 @@ from decimal import Decimal, ROUND_HALF_EVEN
 
 TYPES = ('duplicate_invoice', 'payment_allocation', 'fx_conversion', 'accounting_period')
 EXPONENTS = {'KZT': 2, 'USD': 2, 'EUR': 2, 'JPY': 0}
-GENERATOR_VERSION = '1.1.1'
+GENERATOR_VERSION = '1.1.2'
 
 
 def converted(amount, source, target, rate):
@@ -22,11 +22,15 @@ def generate(seed, config=None):
     if config is not None and not isinstance(config, dict):
         raise ValueError('config must be an object')
     config = dict(config or {})
-    allowed = {'clean', 'interaction', 'counts', 'invoices', 'timezone', 'shuffle'}
+    allowed = {'clean', 'interaction', 'counts', 'invoices', 'timezone', 'shuffle',
+               'period_month', 'boundary_payments'}
     if set(config) - allowed:
         raise ValueError('Unsupported configuration')
-    if any(key in config and type(config[key]) is not bool for key in ('clean', 'shuffle')):
-        raise ValueError('clean and shuffle must be booleans')
+    if any(key in config and type(config[key]) is not bool for key in ('clean', 'shuffle', 'boundary_payments')):
+        raise ValueError('clean, shuffle and boundary_payments must be booleans')
+    period_month = config.get('period_month', '2026-10')
+    if not isinstance(period_month, str) or not re.fullmatch(r'20[0-9]{2}-(?:0[1-9]|1[0-2])', period_month):
+        raise ValueError('period_month must be YYYY-MM between 2000 and 2099')
     if 'timezone' in config:
         value = config['timezone']
         if not isinstance(value, str) or not re.fullmatch(r'[+-](?:[01][0-9]|2[0-3]):[0-5][0-9]', value):
@@ -44,8 +48,10 @@ def generate(seed, config=None):
     eid = 'ep-' + hashlib.sha256((str(seed) + json.dumps(config, sort_keys=True)).encode()).hexdigest()[:16]
     tz = config.get('timezone', rng.choice(['+05:00', '+06:00', '-04:00']))
     zone = timezone(timedelta(hours=int(tz[:3]), minutes=int(tz[0] + tz[4:])))
-    start = datetime(2026, 10, 1, tzinfo=zone)
-    end = datetime(2026, 11, 1, tzinfo=zone)
+    year, month = map(int, period_month.split('-'))
+    start = datetime(year, month, 1, tzinfo=zone)
+    end = datetime(year + (month == 12), month % 12 + 1, 1, tzinfo=zone)
+    invoice_days = min(29, (end - start).days)
     def ident(prefix):
         return prefix + '-' + format(rng.getrandbits(60), '015x')
     fx = []
@@ -63,7 +69,7 @@ def generate(seed, config=None):
         ledger.append(row)
         return row
     for i in range(n):
-        stamp = (start + timedelta(days=rng.randrange(29), hours=rng.randrange(24))).isoformat()
+        stamp = (start + timedelta(days=rng.randrange(invoice_days), hours=rng.randrange(24))).isoformat()
         total = rng.randrange(10_000, 2_000_000) if i % 6 else 500_000
         inv = dict(doc_id=ident('doc'), invoice_id=ident('inv'), entity_id=ident('entity'), issued_at=stamp, due_at=(datetime.fromisoformat(stamp) + timedelta(days=30)).isoformat(), currency='KZT', total_minor=total, line_items=[dict(description=rng.choice(['Logistics', 'Equipment lease', 'Consulting', 'Cloud infrastructure']), quantity=1, unit_minor=total, amount_minor=total, source_ref=ident('contract'))])
         invoices.append(inv)
@@ -77,6 +83,8 @@ def generate(seed, config=None):
             foreign = i % 3 == 0
             currency = rng.choice(['USD', 'EUR', 'JPY']) if foreign else 'KZT'
             paid_at = stamp
+            if config.get('boundary_payments', False) and i < 2:
+                paid_at = (end + timedelta(seconds=2*i - 1)).isoformat()
             if i == 0 and interaction == 1:
                 paid_at = (end - timedelta(seconds=1)).isoformat()
                 currency = 'USD'

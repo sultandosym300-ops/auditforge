@@ -76,9 +76,18 @@ def validate(episode):
         assert len(payments) == len(books['payments']), 'Duplicate payment ID'
         assert books['manifest']['records'] == len(books['ledger']), 'Incorrect record count'
         assert books['manifest']['documents'] == len(document_ids), 'Incorrect document count'
+        payment_documents = {p['doc_id']: p for p in books['payments']}
         for inv in books['invoices']:
             assert type(inv['total_minor']) is int
+            assert inv['line_items'], 'Invoice has no line items'
+            for item in inv['line_items']:
+                assert all(type(item[field]) is int for field in ('quantity', 'unit_minor', 'amount_minor')), 'Invoice line values must be integers'
+                assert item['quantity'] > 0 and item['quantity'] * item['unit_minor'] == item['amount_minor'], 'Invoice line quantity/unit/amount disagree'
             assert sum(item['amount_minor'] for item in inv['line_items']) == inv['total_minor'], 'Invoice lines differ from total'
+            if inv.get('related_credit_doc_id'):
+                credit = payment_documents.get(inv['related_credit_doc_id'])
+                assert credit is not None and credit.get('kind') == 'refund' and credit.get('amount_minor', 0) < 0, 'Related credit must be a refund document'
+                assert any(ref['invoice_id'] == inv['invoice_id'] for ref in credit['invoice_refs']), 'Related refund belongs to another obligation'
         for pay in books['payments']:
             assert type(pay['amount_minor']) is int
             assert sum(ref['allocated_minor'] for ref in pay['invoice_refs']) == pay['amount_minor'], 'Payment allocations differ from source amount'
