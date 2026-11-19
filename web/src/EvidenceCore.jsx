@@ -9,7 +9,7 @@ export default function EvidenceCore({progressRef,paused=false,lang='ru'}){
     const element=host.current;
     let renderer;
     try{renderer=new THREE.WebGLRenderer({alpha:true,antialias:true,powerPreference:'low-power'});}catch{return;}
-    renderer.setPixelRatio(Math.min(devicePixelRatio,2));
+    renderer.setPixelRatio(Math.min(Math.max(devicePixelRatio,2),3));
     renderer.outputColorSpace=THREE.SRGBColorSpace;
     renderer.toneMapping=THREE.ACESFilmicToneMapping;
     renderer.toneMappingExposure=1.15;
@@ -46,8 +46,8 @@ export default function EvidenceCore({progressRef,paused=false,lang='ru'}){
     const currencies=['USD','KZT / USD','KZT','KZT'];
     const subs=lang==='kk'?['Бастапқы құжат','Ресми ереже','Кітаптағы сома','Дәлелденген айырма']:lang==='en'?['Source document','Declared conversion rule','Recorded book amount','Verified difference']:['Исходный документ','Правило конвертации','Сумма в учётной книге','Доказанное расхождение'];
     function texture(index){
-      const canvas=document.createElement('canvas');canvas.width=900;canvas.height=1280;
-      const c=canvas.getContext('2d');c.fillStyle=index===3?'#17373f':'#11202d';c.fillRect(0,0,900,1280);
+      const canvas=document.createElement('canvas');canvas.width=1800;canvas.height=2560;
+      const c=canvas.getContext('2d');c.scale(2,2);c.fillStyle=index===3?'#17373f':'#11202d';c.fillRect(0,0,900,1280);
       const glow=c.createLinearGradient(0,0,900,1280);glow.addColorStop(0,'#ffffff09');glow.addColorStop(1,'#00000018');c.fillStyle=glow;c.fillRect(0,0,900,1280);
       c.strokeStyle='#67879b55';c.lineWidth=2;c.strokeRect(40,40,820,1200);
       c.fillStyle='#9bb9cb';c.font='500 24px sans-serif';c.fillText('AUDITFORGE',78,103);
@@ -68,7 +68,7 @@ export default function EvidenceCore({progressRef,paused=false,lang='ru'}){
       c.fillStyle='#8dc0c5';for(let i=0;i<66;i++){const w=i%3===0?4:2;c.fillRect(78+i*6,1092,w,49+(i%4)*5);}
       c.font='21px monospace';c.fillStyle='#90afc0';c.fillText('SYNTHETIC / DEMONSTRATION',78,1200);
       if(index===3){c.strokeStyle='#b7ead9';c.lineWidth=5;c.beginPath();c.arc(765,1118,38,0,Math.PI*2);c.stroke();c.beginPath();c.moveTo(745,1119);c.lineTo(760,1133);c.lineTo(787,1103);c.stroke();}
-      const tex=new THREE.CanvasTexture(canvas);tex.colorSpace=THREE.SRGBColorSpace;tex.anisotropy=Math.min(8,renderer.capabilities.getMaxAnisotropy());textures.push(tex);return tex;
+      const tex=new THREE.CanvasTexture(canvas);tex.colorSpace=THREE.SRGBColorSpace;tex.anisotropy=renderer.capabilities.getMaxAnisotropy();textures.push(tex);return tex;
     }
     const layers=[];
     for(let i=0;i<4;i++){
@@ -89,7 +89,7 @@ export default function EvidenceCore({progressRef,paused=false,lang='ru'}){
       const rail=plate(.032,2.7,.022,.015,accent,layer);rail.position.set(-1.325,.05,.035);
       for(let j=0;j<5;j++){const contact=mesh(new THREE.BoxGeometry(.1,.02,.09),metal,layer);contact.position.set(-.4+j*.2,-1.92,-.015);}
     }
-    let visible=true,frame=0,targetX=0,targetY=0,lastP=-1;
+    let visible=true,frame=0,targetX=0,targetY=0,poseX=0,poseY=0,lastP=-1,lastTime=performance.now();
     const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
     function move(e){const b=element.getBoundingClientRect();targetX=(e.clientX-b.left)/b.width-.5;targetY=(e.clientY-b.top)/b.height-.5;}
     element.parentElement.addEventListener('pointermove',move);
@@ -98,10 +98,14 @@ export default function EvidenceCore({progressRef,paused=false,lang='ru'}){
     function render(){
       frame=requestAnimationFrame(render);if(!visible)return;
       const p=Math.max(0,Math.min(1,progressRef.current));
-      group.rotation.set(.08+(reduced||paused?0:-targetY*.06),-.28+(reduced||paused?0:targetX*.09),-.055);
+      const now=performance.now(),dt=Math.min((now-lastTime)/1000,.05);lastTime=now;
+      poseX=THREE.MathUtils.damp(poseX,reduced||paused?0:targetX,8,dt);
+      poseY=THREE.MathUtils.damp(poseY,reduced||paused?0:targetY,8,dt);
+      group.rotation.set(.08-poseY*.06,-.28+poseX*.09,-.055);
       layers.forEach((layer,i)=>{
         const order=i-1.5;
-        layer.position.set(order*(.14+p*1.64),-order*p*.15,order*(-.22+p*.72));
+        // Keep the source in front throughout. Depth never crosses zero or reverses order.
+        layer.position.set(order*(.14+p*1.64),-order*p*.15,-order*(.22+p*.22));
         layer.rotation.y=-.035+order*p*.035;
         layer.rotation.z=order*p*-.025;
         layer.scale.setScalar(1);

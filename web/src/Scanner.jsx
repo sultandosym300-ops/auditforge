@@ -7,7 +7,7 @@ export default function Scanner({paused=false,dark=false,progressRef=null,explod
     const element=host.current;
     let renderer;
     try{renderer=new THREE.WebGLRenderer({alpha:true,antialias:true,powerPreference:'low-power'});}catch{return;}
-    renderer.setPixelRatio(Math.min(devicePixelRatio,1.75));
+    renderer.setPixelRatio(Math.min(Math.max(devicePixelRatio,2),3));
     renderer.outputColorSpace=THREE.SRGBColorSpace;
     renderer.setClearColor(0,0);
     element.appendChild(renderer.domElement);

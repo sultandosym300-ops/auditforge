@@ -54,6 +54,8 @@
 .landing .finale{margin-top:-1px;padding-top:45px}
 .landing .finale-aura{background:radial-gradient(ellipse at 50% 53%,#3e657e3b,transparent 65%),radial-gradient(ellipse at 50% 110%,#5992ae2b,transparent 57%)}
 .landing .finale-proof{margin-top:0}
+.landing .city-media video{filter:saturate(.85) brightness(.86)}
+.landing .interaction-feature video{filter:saturate(.8) brightness(.85)}
 .assembly-model .evidence-core{inset:-3% -6%;width:112%;height:106%}
 @media(max-width:760px){
   .landing .cinema{padding:0}.landing .city-media{border-radius:0}

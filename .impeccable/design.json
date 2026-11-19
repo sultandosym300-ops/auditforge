@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-19T16:23:40.439107+00:00",
+  "generatedAt": "2026-11-19T16:50:28.655754+00:00",
   "title": "Design System: AuditForge",
   "extensions": {
     "colorMeta": {
@@ -339,7 +339,7 @@
       {
         "name": "inspection-scroll",
         "value": "scrub:0.65; p:0..1",
-        "purpose": "Scroll separates payment, rule, journal and verified-finding dossier layers; one mounted explanation."
+        "purpose": "Monotonic layer separation; source remains in front throughout. Depth never crosses zero."
       },
       {
         "name": "work-tab-entry",
@@ -407,6 +407,13 @@
       ],
       "mode": "Extracted final implementation; synthesized tonal ramps are preview metadata only.",
       "limitations": "No whole-surface rendered review verdict or official score asserted."
+    },
+    "rendering": {
+      "pixelRatio": "min 2, max 3",
+      "documentTexture": "1800x2560",
+      "anisotropy": "maximum supported",
+      "nightVideo": "2160x1216 VP9 CRF20",
+      "featureVideo": "1080x1920 VP9 CRF20"
     }
   },
   "components": [

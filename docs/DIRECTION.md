@@ -34,3 +34,7 @@ The final invitation is a full dark graphite scene in which invoice, payment and
 ## Continuity and dossier refinement
 
 The user’s second screenshot review replaces only the sticky scene’s crude optical disassembly, preserving the hero scanner. EvidenceCore is an authored four-layer physical dossier with bevelled metal, inset readable source faces, screws, vents, contacts and reflected studio lighting. The four values match the adjacent illustrative proof. The cinema is now full bleed and dissolves into the finale with a 250px desktop / 180px phone overlap in tone. No white frame, rounded lower edge or visible abrupt background join remains. The video itself gently scales; its container stays fixed.
+
+## Direction and resolution correction
+
+User screenshots showed the depth factor crossing zero and reversing the front layer. The signed depth gap now stays constant in direction for the complete scroll range; only its magnitude grows. Pointer pose is damped. Quality is verified at actual decoded video dimensions (2160×1216 / 1080×1920), 1800×2560 authored faces, and a minimum 2× canvas buffer. Desktop and phone evidence is in the current quality review packet.
