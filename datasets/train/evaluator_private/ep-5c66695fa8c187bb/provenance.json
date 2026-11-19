@@ -1,0 +1,172 @@
+[
+  {
+    "after": [
+      {
+        "account": "expense",
+        "credit_minor": 0,
+        "currency": "KZT",
+        "debit_minor": 500000,
+        "entity_id": "entity-101fa8d4a7c5e06",
+        "invoice_id": "inv-528d36ff499349e",
+        "payment_id": null,
+        "row_id": "row-35296cfe09fbee3",
+        "timestamp": "2026-10-06T09:00:00+05:00"
+      },
+      {
+        "account": "expense",
+        "credit_minor": 0,
+        "currency": "KZT",
+        "debit_minor": 500000,
+        "entity_id": "entity-101fa8d4a7c5e06",
+        "invoice_id": "inv-528d36ff499349e",
+        "payment_id": null,
+        "row_id": "row-88f1262656c33a5",
+        "timestamp": "2026-10-06T09:00:00+05:00"
+      }
+    ],
+    "before": [],
+    "issue_id": "issue-28699eb4dcbce21",
+    "operation": "duplicate_invoice"
+  },
+  {
+    "after": [
+      {
+        "account": "payable",
+        "allocation_source_minor": 62764,
+        "credit_minor": 0,
+        "currency": "KZT",
+        "debit_minor": 62764,
+        "entity_id": "entity-5b349541ef9356d",
+        "fx_date": "2026-10-01",
+        "fx_rate": "1",
+        "invoice_id": "inv-999981401915256",
+        "payment_id": "pay-526d6a155716a2f",
+        "row_id": "row-26bac8a5a0f5cee",
+        "timestamp": "2026-10-01T23:00:00+05:00"
+      }
+    ],
+    "before": [
+      {
+        "account": "payable",
+        "allocation_source_minor": 125528,
+        "credit_minor": 0,
+        "currency": "KZT",
+        "debit_minor": 125528,
+        "entity_id": "entity-5b349541ef9356d",
+        "fx_date": "2026-10-01",
+        "fx_rate": "1",
+        "invoice_id": "inv-999981401915256",
+        "payment_id": "pay-526d6a155716a2f",
+        "row_id": "row-26bac8a5a0f5cee",
+        "timestamp": "2026-10-01T23:00:00+05:00"
+      },
+      {
+        "account": "cash",
+        "allocation_source_minor": 125528,
+        "credit_minor": 125528,
+        "currency": "KZT",
+        "debit_minor": 0,
+        "entity_id": "entity-5b349541ef9356d",
+        "fx_date": "2026-10-01",
+        "fx_rate": "1",
+        "invoice_id": "inv-999981401915256",
+        "payment_id": "pay-526d6a155716a2f",
+        "row_id": "row-b3c699e76c64cff",
+        "timestamp": "2026-10-01T23:00:00+05:00"
+      }
+    ],
+    "issue_id": "issue-063f2cbfffaab77",
+    "operation": "payment_allocation"
+  },
+  {
+    "after": [
+      {
+        "account": "payable",
+        "allocation_source_minor": 471,
+        "credit_minor": 0,
+        "currency": "KZT",
+        "debit_minor": 253162,
+        "entity_id": "entity-48d41a40c2e3c6c",
+        "fx_date": "2026-10-19",
+        "fx_rate": "537.5",
+        "invoice_id": "inv-863d7cd870a50d9",
+        "payment_id": "pay-2b724510655273b",
+        "row_id": "row-6a4d6e7c588bbc6",
+        "timestamp": "2026-10-19T20:00:00+05:00"
+      }
+    ],
+    "before": [
+      {
+        "account": "payable",
+        "allocation_source_minor": 471,
+        "credit_minor": 0,
+        "currency": "KZT",
+        "debit_minor": 249866,
+        "entity_id": "entity-48d41a40c2e3c6c",
+        "fx_date": "2026-10-19",
+        "fx_rate": "530.5",
+        "invoice_id": "inv-863d7cd870a50d9",
+        "payment_id": "pay-2b724510655273b",
+        "row_id": "row-6a4d6e7c588bbc6",
+        "timestamp": "2026-10-19T20:00:00+05:00"
+      },
+      {
+        "account": "cash",
+        "allocation_source_minor": 471,
+        "credit_minor": 249866,
+        "currency": "KZT",
+        "debit_minor": 0,
+        "entity_id": "entity-48d41a40c2e3c6c",
+        "fx_date": "2026-10-19",
+        "fx_rate": "530.5",
+        "invoice_id": "inv-863d7cd870a50d9",
+        "payment_id": "pay-2b724510655273b",
+        "row_id": "row-7cd52f8bb25a823",
+        "timestamp": "2026-10-19T20:00:00+05:00"
+      }
+    ],
+    "issue_id": "issue-0326f2293f06ef5",
+    "operation": "fx_conversion"
+  },
+  {
+    "after": [
+      {
+        "account": "expense",
+        "credit_minor": 0,
+        "currency": "KZT",
+        "debit_minor": 500000,
+        "entity_id": "entity-23225f1083a477a",
+        "invoice_id": "inv-6f49c10ba88b982",
+        "payment_id": null,
+        "row_id": "row-1b0aeed3f8379a1",
+        "timestamp": "2026-11-01T00:00:00+05:00"
+      }
+    ],
+    "before": [
+      {
+        "account": "expense",
+        "credit_minor": 0,
+        "currency": "KZT",
+        "debit_minor": 500000,
+        "entity_id": "entity-23225f1083a477a",
+        "invoice_id": "inv-6f49c10ba88b982",
+        "payment_id": null,
+        "row_id": "row-1b0aeed3f8379a1",
+        "timestamp": "2026-10-18T23:00:00+05:00"
+      },
+      {
+        "account": "payable",
+        "credit_minor": 500000,
+        "currency": "KZT",
+        "debit_minor": 0,
+        "entity_id": "entity-23225f1083a477a",
+        "invoice_id": "inv-6f49c10ba88b982",
+        "payment_id": null,
+        "row_id": "row-7c47f48b1704e0c",
+        "timestamp": "2026-10-18T23:00:00+05:00"
+      }
+    ],
+    "issue_id": "issue-3f06d1369dc0652",
+    "operation": "accounting_period"
+  }
+]

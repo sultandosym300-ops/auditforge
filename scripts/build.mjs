@@ -1,0 +1,10 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {spawnSync} from 'node:child_process';
+const r=spawnSync(process.platform==='win32'?'npm.cmd':'npm',['run','build'],{cwd:'web',stdio:'inherit',shell:process.platform==='win32'});
+if(r.status!==0)process.exit(r.status||1);
+const out=path.resolve('dist');
+if(path.dirname(out)!==process.cwd())throw new Error('Build output must stay inside project');
+fs.rmSync(out,{recursive:true,force:true});
+fs.mkdirSync(out,{recursive:true});
+fs.cpSync('web/dist','dist',{recursive:true});

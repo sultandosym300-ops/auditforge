@@ -1,0 +1,1 @@
+{"version":"1.0","mode":"evaluation","max_steps":100,"time_limit_seconds":60,"holdout_definition":"sha256(auditforge-holdout-v1-<index>) first 32 bits; local-only, not organizer seeds","composition":{"clean":5,"interacting":5,"mixed":10},"policies":["random","reconciliation","mark_all","oracle"]}

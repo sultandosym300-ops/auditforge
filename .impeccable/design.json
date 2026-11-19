@@ -1,0 +1,535 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-19T12:32:02.466786+00:00",
+  "title": "Design System: AuditForge",
+  "extensions": {
+    "colorMeta": {
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "tonalRamp": [
+          "oklch(15% 0.0038 286.10)",
+          "oklch(26.43% 0.0038 286.10)",
+          "oklch(37.86% 0.0038 286.10)",
+          "oklch(49.29% 0.0038 286.10)",
+          "oklch(60.71% 0.0038 286.10)",
+          "oklch(72.14% 0.0038 286.10)",
+          "oklch(83.57% 0.0038 286.10)",
+          "oklch(95% 0.0038 286.10)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Muted",
+        "tonalRamp": [
+          "oklch(15% 0.0109 286.00)",
+          "oklch(26.43% 0.0109 286.00)",
+          "oklch(37.86% 0.0109 286.00)",
+          "oklch(49.29% 0.0109 286.00)",
+          "oklch(60.71% 0.0109 286.00)",
+          "oklch(72.14% 0.0109 286.00)",
+          "oklch(83.57% 0.0109 286.00)",
+          "oklch(95% 0.0109 286.00)"
+        ]
+      },
+      "action-blue": {
+        "role": "primary",
+        "displayName": "Action Blue",
+        "tonalRamp": [
+          "oklch(15% 0.1933 256.16)",
+          "oklch(26.43% 0.1933 256.16)",
+          "oklch(37.86% 0.1933 256.16)",
+          "oklch(49.29% 0.1933 256.16)",
+          "oklch(60.71% 0.1933 256.16)",
+          "oklch(72.14% 0.1933 256.16)",
+          "oklch(83.57% 0.1933 256.16)",
+          "oklch(95% 0.1933 256.16)"
+        ]
+      },
+      "action-blue-hover": {
+        "role": "primary",
+        "displayName": "Action Blue Hover",
+        "tonalRamp": [
+          "oklch(15% 0.1989 255.97)",
+          "oklch(26.43% 0.1989 255.97)",
+          "oklch(37.86% 0.1989 255.97)",
+          "oklch(49.29% 0.1989 255.97)",
+          "oklch(60.71% 0.1989 255.97)",
+          "oklch(72.14% 0.1989 255.97)",
+          "oklch(83.57% 0.1989 255.97)",
+          "oklch(95% 0.1989 255.97)"
+        ]
+      },
+      "cool-white": {
+        "role": "neutral",
+        "displayName": "Cool White",
+        "tonalRamp": [
+          "oklch(15% 0.0027 286.35)",
+          "oklch(26.43% 0.0027 286.35)",
+          "oklch(37.86% 0.0027 286.35)",
+          "oklch(49.29% 0.0027 286.35)",
+          "oklch(60.71% 0.0027 286.35)",
+          "oklch(72.14% 0.0027 286.35)",
+          "oklch(83.57% 0.0027 286.35)",
+          "oklch(95% 0.0027 286.35)"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Surface",
+        "tonalRamp": [
+          "oklch(15% 0.0000 0.00)",
+          "oklch(26.43% 0.0000 0.00)",
+          "oklch(37.86% 0.0000 0.00)",
+          "oklch(49.29% 0.0000 0.00)",
+          "oklch(60.71% 0.0000 0.00)",
+          "oklch(72.14% 0.0000 0.00)",
+          "oklch(83.57% 0.0000 0.00)",
+          "oklch(95% 0.0000 0.00)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Line",
+        "tonalRamp": [
+          "oklch(15% 0.0068 286.26)",
+          "oklch(26.43% 0.0068 286.26)",
+          "oklch(37.86% 0.0068 286.26)",
+          "oklch(49.29% 0.0068 286.26)",
+          "oklch(60.71% 0.0068 286.26)",
+          "oklch(72.14% 0.0068 286.26)",
+          "oklch(83.57% 0.0068 286.26)",
+          "oklch(95% 0.0068 286.26)"
+        ]
+      },
+      "workspace-bg": {
+        "role": "neutral",
+        "displayName": "Workspace Bg",
+        "tonalRamp": [
+          "oklch(15% 0.0029 264.54)",
+          "oklch(26.43% 0.0029 264.54)",
+          "oklch(37.86% 0.0029 264.54)",
+          "oklch(49.29% 0.0029 264.54)",
+          "oklch(60.71% 0.0029 264.54)",
+          "oklch(72.14% 0.0029 264.54)",
+          "oklch(83.57% 0.0029 264.54)",
+          "oklch(95% 0.0029 264.54)"
+        ]
+      },
+      "secondary-bg": {
+        "role": "neutral",
+        "displayName": "Secondary Bg",
+        "tonalRamp": [
+          "oklch(15% 0.0053 286.30)",
+          "oklch(26.43% 0.0053 286.30)",
+          "oklch(37.86% 0.0053 286.30)",
+          "oklch(49.29% 0.0053 286.30)",
+          "oklch(60.71% 0.0053 286.30)",
+          "oklch(72.14% 0.0053 286.30)",
+          "oklch(83.57% 0.0053 286.30)",
+          "oklch(95% 0.0053 286.30)"
+        ]
+      },
+      "secondary-hover": {
+        "role": "neutral",
+        "displayName": "Secondary Hover",
+        "tonalRamp": [
+          "oklch(15% 0.0081 286.24)",
+          "oklch(26.43% 0.0081 286.24)",
+          "oklch(37.86% 0.0081 286.24)",
+          "oklch(49.29% 0.0081 286.24)",
+          "oklch(60.71% 0.0081 286.24)",
+          "oklch(72.14% 0.0081 286.24)",
+          "oklch(83.57% 0.0081 286.24)",
+          "oklch(95% 0.0081 286.24)"
+        ]
+      },
+      "secondary-text": {
+        "role": "neutral",
+        "displayName": "Secondary Text",
+        "tonalRamp": [
+          "oklch(15% 0.0110 285.64)",
+          "oklch(26.43% 0.0110 285.64)",
+          "oklch(37.86% 0.0110 285.64)",
+          "oklch(49.29% 0.0110 285.64)",
+          "oklch(60.71% 0.0110 285.64)",
+          "oklch(72.14% 0.0110 285.64)",
+          "oklch(83.57% 0.0110 285.64)",
+          "oklch(95% 0.0110 285.64)"
+        ]
+      },
+      "steel-surface": {
+        "role": "neutral",
+        "displayName": "Steel Surface",
+        "tonalRamp": [
+          "oklch(15% 0.0086 247.92)",
+          "oklch(26.43% 0.0086 247.92)",
+          "oklch(37.86% 0.0086 247.92)",
+          "oklch(49.29% 0.0086 247.92)",
+          "oklch(60.71% 0.0086 247.92)",
+          "oklch(72.14% 0.0086 247.92)",
+          "oklch(83.57% 0.0086 247.92)",
+          "oklch(95% 0.0086 247.92)"
+        ]
+      },
+      "cinema-black": {
+        "role": "neutral",
+        "displayName": "Cinema Black",
+        "tonalRamp": [
+          "oklch(15% 0.0044 264.46)",
+          "oklch(26.43% 0.0044 264.46)",
+          "oklch(37.86% 0.0044 264.46)",
+          "oklch(49.29% 0.0044 264.46)",
+          "oklch(60.71% 0.0044 264.46)",
+          "oklch(72.14% 0.0044 264.46)",
+          "oklch(83.57% 0.0044 264.46)",
+          "oklch(95% 0.0044 264.46)"
+        ]
+      },
+      "focus-blue": {
+        "role": "semantic",
+        "displayName": "Focus Blue",
+        "tonalRamp": [
+          "oklch(15% 0.1348 250.64)",
+          "oklch(26.43% 0.1348 250.64)",
+          "oklch(37.86% 0.1348 250.64)",
+          "oklch(49.29% 0.1348 250.64)",
+          "oklch(60.71% 0.1348 250.64)",
+          "oklch(72.14% 0.1348 250.64)",
+          "oklch(83.57% 0.1348 250.64)",
+          "oklch(95% 0.1348 250.64)"
+        ]
+      },
+      "tutorial-copy": {
+        "role": "neutral",
+        "displayName": "Tutorial Copy",
+        "tonalRamp": [
+          "oklch(15% 0.0406 255.01)",
+          "oklch(26.43% 0.0406 255.01)",
+          "oklch(37.86% 0.0406 255.01)",
+          "oklch(49.29% 0.0406 255.01)",
+          "oklch(60.71% 0.0406 255.01)",
+          "oklch(72.14% 0.0406 255.01)",
+          "oklch(83.57% 0.0406 255.01)",
+          "oklch(95% 0.0406 255.01)"
+        ]
+      },
+      "note-copy": {
+        "role": "neutral",
+        "displayName": "Note Copy",
+        "tonalRamp": [
+          "oklch(15% 0.0351 254.46)",
+          "oklch(26.43% 0.0351 254.46)",
+          "oklch(37.86% 0.0351 254.46)",
+          "oklch(49.29% 0.0351 254.46)",
+          "oklch(60.71% 0.0351 254.46)",
+          "oklch(72.14% 0.0351 254.46)",
+          "oklch(83.57% 0.0351 254.46)",
+          "oklch(95% 0.0351 254.46)"
+        ]
+      },
+      "success-bg": {
+        "role": "semantic",
+        "displayName": "Success Bg",
+        "tonalRamp": [
+          "oklch(15% 0.0118 170.27)",
+          "oklch(26.43% 0.0118 170.27)",
+          "oklch(37.86% 0.0118 170.27)",
+          "oklch(49.29% 0.0118 170.27)",
+          "oklch(60.71% 0.0118 170.27)",
+          "oklch(72.14% 0.0118 170.27)",
+          "oklch(83.57% 0.0118 170.27)",
+          "oklch(95% 0.0118 170.27)"
+        ]
+      },
+      "success-text": {
+        "role": "semantic",
+        "displayName": "Success Text",
+        "tonalRamp": [
+          "oklch(15% 0.0689 165.92)",
+          "oklch(26.43% 0.0689 165.92)",
+          "oklch(37.86% 0.0689 165.92)",
+          "oklch(49.29% 0.0689 165.92)",
+          "oklch(60.71% 0.0689 165.92)",
+          "oklch(72.14% 0.0689 165.92)",
+          "oklch(83.57% 0.0689 165.92)",
+          "oklch(95% 0.0689 165.92)"
+        ]
+      },
+      "error-text": {
+        "role": "semantic",
+        "displayName": "Error Text",
+        "tonalRamp": [
+          "oklch(15% 0.1628 25.36)",
+          "oklch(26.43% 0.1628 25.36)",
+          "oklch(37.86% 0.1628 25.36)",
+          "oklch(49.29% 0.1628 25.36)",
+          "oklch(60.71% 0.1628 25.36)",
+          "oklch(72.14% 0.1628 25.36)",
+          "oklch(83.57% 0.1628 25.36)",
+          "oklch(95% 0.1628 25.36)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Hero display",
+        "purpose": "Landing hero; preserve responsive final overrides."
+      },
+      "headline": {
+        "displayName": "Section headline",
+        "purpose": "Landing section hierarchy."
+      },
+      "identifier": {
+        "displayName": "Evidence identifier",
+        "purpose": "Record IDs, evidence references and field keys."
+      }
+    },
+    "shadows": [
+      {
+        "name": "paper-fan",
+        "value": "5px 14px 32px #1b27381c",
+        "purpose": "Presentation document fan."
+      },
+      {
+        "name": "dark-evidence",
+        "value": "5px 20px 45px #0008",
+        "purpose": "Dark evidence stack."
+      },
+      {
+        "name": "record-drawer",
+        "value": "-12px 0 50px #152c481a",
+        "purpose": "Focused side tool."
+      },
+      {
+        "name": "finding-dialog",
+        "value": "0 18px 65px #102a4626",
+        "purpose": "Finding editor."
+      },
+      {
+        "name": "tutorial",
+        "value": "0 20px 75px #132b4b3d",
+        "purpose": "Onboarding panel."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease",
+        "value": "cubic-bezier(.16,1,.3,1)",
+        "purpose": "Shared CSS presentation easing."
+      },
+      {
+        "name": "button-transition",
+        "value": "background .22s, transform .3s var(--ease), box-shadow .22s",
+        "purpose": "Enabled hover translateY(-2px); active scale(.98)."
+      },
+      {
+        "name": "drawer-entry",
+        "value": ".45s var(--ease)",
+        "purpose": "Translate from right edge."
+      },
+      {
+        "name": "dialog-entry",
+        "value": ".35s var(--ease)",
+        "purpose": "Opacity and translateY(15px) scale(.97) to rest."
+      },
+      {
+        "name": "marquee",
+        "value": "50s linear infinite",
+        "purpose": "Continuous presentation labels; shared pause state freezes CSS animation."
+      },
+      {
+        "name": "reveal",
+        "value": "1s power3.out; y:35",
+        "purpose": "GSAP at top 88%; no-preference only."
+      },
+      {
+        "name": "hero-parallax",
+        "value": "scrub:1.1; y:95; scale:1.08",
+        "purpose": "Natural-scroll presentation; no-preference only."
+      },
+      {
+        "name": "evidence-stack",
+        "value": "pin:true; end:+=130%; scrub:1",
+        "purpose": "Scroll-linked document stack; no-preference only."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "animation-duration:.01ms; animation-iteration-count:1; transition-duration:.01ms",
+        "purpose": "CSS fallback; GSAP omitted; videos/scanner initially paused; proof layer hidden."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "wide-min",
+        "value": "1600px"
+      },
+      {
+        "name": "medium-max",
+        "value": "1100px"
+      },
+      {
+        "name": "phone-max",
+        "value": "760px"
+      }
+    ],
+    "focus": {
+      "value": "3px solid #67b2ff",
+      "offset": "4px",
+      "targets": [
+        "button",
+        "a",
+        "select",
+        "input",
+        "textarea",
+        "summary"
+      ],
+      "dialogBehavior": [
+        "Initial focus enters first enabled visible control.",
+        "Tab and Shift-Tab cycle within the dialog.",
+        "Escape and backdrop click close.",
+        "Background workspace-header and work-content are inert.",
+        "Focus returns to the invoking element if still connected."
+      ]
+    },
+    "responsive": {
+      "phone": "Single-column sections and episode layout; 18px workspace side padding; 16px input text; scrollable top tabs and tables; auth visual hidden.",
+      "heroPhone": "clamp(34px,7.4vw,54px)",
+      "finalCtaPhone": "clamp(30px,8.8vw,46px)",
+      "mediumHero": "48px between 761px and 1100px",
+      "cascade": "Final readability and responsive blocks override earlier rules."
+    },
+    "presentationBehavior": {
+      "pause": "Shared landing state pauses marquee, all landing videos and Scanner; scroll-linked GSAP remains scroll-driven.",
+      "scanner": "Visibility-gated Three.js drawing; pointer-oriented lens; pale paper, steel, dark rings and cyan scan line.",
+      "fontPolicy": "Installed SF Pro only; self-hosted Manrope Latin/Cyrillic/Cyrillic-ext fallback; no Apple font redistribution."
+    },
+    "provenance": {
+      "files": [
+        "PRODUCT.md",
+        "docs/DIRECTION.md",
+        "web/src/style.css",
+        "web/src/App.jsx",
+        "web/src/Scanner.jsx"
+      ],
+      "mode": "Extracted final implementation; synthesized tonal ramps are preview metadata only.",
+      "limitations": "No whole-surface rendered review verdict or official score asserted."
+    }
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Enabled pill action; disabled, hover, active and visible focus match the shared button.",
+      "html": "<button class=\"ds-button-primary\">Create episode</button>",
+      "css": ".ds-button-primary{font-family:'SF Pro Display', 'SF Pro Text', -apple-system, BlinkMacSystemFont, Manrope, 'Segoe UI', sans-serif;font-size:15px;font-weight:550;line-height:1.25;border:0;border-radius:999px;min-height:49px;padding:14px 24px;display:inline-flex;align-items:center;justify-content:center;gap:9px;cursor:pointer;transition:background .22s,transform .3s var(--ease,cubic-bezier(.16,1,.3,1)),box-shadow .22s;background:var(--blue,#0071e3);color:#fff;} .ds-button-primary:not(:disabled):hover{background:#0077ed;transform:translateY(-2px);} .ds-button-primary:not(:disabled):active{transform:scale(.98);} .ds-button-primary:focus-visible{outline:3px solid #67b2ff;outline-offset:4px;} .ds-button-primary:disabled{opacity:.45;cursor:not-allowed;} @media(prefers-reduced-motion:reduce){.ds-button-primary{transition-duration:.01ms;}}"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Enabled pill action; disabled, hover, active and visible focus match the shared button.",
+      "html": "<button class=\"ds-button-secondary\">Open records</button>",
+      "css": ".ds-button-secondary{font-family:'SF Pro Display', 'SF Pro Text', -apple-system, BlinkMacSystemFont, Manrope, 'Segoe UI', sans-serif;font-size:15px;font-weight:550;line-height:1.25;border:0;border-radius:999px;min-height:49px;padding:14px 24px;display:inline-flex;align-items:center;justify-content:center;gap:9px;cursor:pointer;transition:background .22s,transform .3s var(--ease,cubic-bezier(.16,1,.3,1)),box-shadow .22s;background:#ececf0;color:#26262c;} .ds-button-secondary:not(:disabled):hover{background:#e0e0e6;transform:translateY(-2px);} .ds-button-secondary:not(:disabled):active{transform:scale(.98);} .ds-button-secondary:focus-visible{outline:3px solid #67b2ff;outline-offset:4px;} .ds-button-secondary:disabled{opacity:.45;cursor:not-allowed;} @media(prefers-reduced-motion:reduce){.ds-button-secondary{transition-duration:.01ms;}}"
+    },
+    {
+      "name": "Labeled Input",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Visible label, neutral border and global focus ring. Phone text grows to 16px.",
+      "html": "<label class=\"ds-field\">Seed<input class=\"ds-input\" placeholder=\"2026\" /></label>",
+      "css": ".ds-field{display:flex;flex-direction:column;gap:9px;font-family:'SF Pro Display', 'SF Pro Text', -apple-system, BlinkMacSystemFont, Manrope, 'Segoe UI', sans-serif;font-size:13px;font-weight:600;color:var(--ink,#1d1d1f);} .ds-input{font:inherit;font-size:15px;font-weight:400;width:100%;border:1px solid #d9d9df;background:#fff;color:var(--ink,#1d1d1f);padding:13px 14px;border-radius:9px;min-height:46px;line-height:1.4;caret-color:var(--blue,#0071e3);transition:border-color .2s;} .ds-input:hover{border-color:#a8a8b1;} .ds-input:focus-visible{outline:3px solid #67b2ff;outline-offset:4px;} .ds-input::placeholder{color:#83838d;font-size:14px;} @media(max-width:760px){.ds-input{font-size:16px;}}"
+    },
+    {
+      "name": "Workspace Navigation",
+      "kind": "nav",
+      "refersTo": "workspace-panel",
+      "description": "Scrollable top tabs retain selected text and underline. Use real navigation/state handlers in the application.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Workspace\"><button class=\"ds-tab ds-tab-active\" aria-current=\"page\">Episodes</button><button class=\"ds-tab\">Records</button><button class=\"ds-tab\">Evidence</button></nav>",
+      "css": ".ds-nav{display:flex;gap:30px;overflow-x:auto;background:#fff;font-family:'SF Pro Display', 'SF Pro Text', -apple-system, BlinkMacSystemFont, Manrope, 'Segoe UI', sans-serif;border-bottom:1px solid #e1e4e9;} .ds-tab{position:relative;border:0;background:none;color:#707783;font-size:14px;font-weight:600;padding:14px 0 17px;white-space:nowrap;cursor:pointer;} .ds-tab-active{color:#0066c9;} .ds-tab-active:after{content:\"\";position:absolute;bottom:0;left:0;right:0;height:2px;background:#0071e3;} .ds-tab:focus-visible{outline:3px solid #67b2ff;outline-offset:4px;} @media(max-width:760px){.ds-nav{gap:22px;} .ds-tab{font-size:13px;padding-bottom:14px;}}"
+    },
+    {
+      "name": "Episode State",
+      "kind": "chip",
+      "refersTo": "state-badge",
+      "description": "Static status badge; completion uses its semantic green sibling.",
+      "html": "<span class=\"ds-state\">Training</span><span class=\"ds-state ds-completed\">Completed</span>",
+      "css": ".ds-state{display:inline-block;font-family:'SF Pro Display', 'SF Pro Text', -apple-system, BlinkMacSystemFont, Manrope, 'Segoe UI', sans-serif;padding:6px 10px;border-radius:5px;background:#eaf1fa;color:#48688d;font-size:11px;font-weight:550;text-align:center;max-width:180px;} .ds-completed{background:#e9f3ef;color:#3f7660;}"
+    },
+    {
+      "name": "Evidence Tag",
+      "kind": "chip",
+      "refersTo": "evidence-tag",
+      "description": "Monospaced identifiers wrap in a group; these are reference labels, not action controls.",
+      "html": "<div class=\"ds-tags\"><code class=\"ds-tag\">invoice-042</code><code class=\"ds-tag\">row-017</code></div>",
+      "css": ".ds-tags{display:flex;flex-wrap:wrap;gap:5px;} .ds-tag{font-family:ui-monospace,Consolas,monospace;font-size:11px;background:#eef3f8;color:#536d88;padding:5px 6px;border-radius:4px;} @media(max-width:760px){.ds-tag{font-size:10px;}}"
+    },
+    {
+      "name": "Feature Surface",
+      "kind": "card",
+      "refersTo": "feature-card",
+      "description": "Presentation feature card with generous title and body hierarchy.",
+      "html": "<article class=\"ds-feature\"><h3 class=\"ds-feature-title\">Evidence first.</h3><p class=\"ds-feature-copy\">Inspect records and connect source documents.</p></article>",
+      "css": ".ds-feature{position:relative;overflow:hidden;background:#f5f5f7;color:var(--ink,#1d1d1f);border-radius:var(--radius,16px);min-height:440px;padding:42px;font-family:'SF Pro Display', 'SF Pro Text', -apple-system, BlinkMacSystemFont, Manrope, 'Segoe UI', sans-serif;} .ds-feature-title{font-size:32px;font-weight:650;line-height:1.1;letter-spacing:-.035em;margin:0 0 20px;} .ds-feature-copy{font-size:16px;line-height:1.55;color:var(--muted,#65656c);max-width:340px;margin:0;} @media(max-width:1100px){.ds-feature{padding:30px;} .ds-feature-title{font-size:27px;}} @media(max-width:760px){.ds-feature{min-height:365px;} .ds-feature-title{font-size:28px;} .ds-feature-copy{font-size:15px;}}"
+    },
+    {
+      "name": "Workspace Panel",
+      "kind": "card",
+      "refersTo": "workspace-panel",
+      "description": "Border-led white episode container without cinematic elevation.",
+      "html": "<section class=\"ds-panel\"><h2 class=\"ds-panel-title\">Synthetic company</h2><p class=\"ds-panel-copy\">Inspect records to begin your investigation.</p></section>",
+      "css": ".ds-panel{background:#fff;border:1px solid #e0e4ea;border-radius:12px;padding:30px;font-family:'SF Pro Display', 'SF Pro Text', -apple-system, BlinkMacSystemFont, Manrope, 'Segoe UI', sans-serif;color:var(--ink,#1d1d1f);} .ds-panel-title{font-size:24px;font-weight:650;line-height:1.08;letter-spacing:-.035em;margin:0 0 8px;} .ds-panel-copy{font-size:13px;line-height:1.55;color:#5c697b;max-width:660px;margin:0;} @media(max-width:1100px){.ds-panel{padding:24px;}} @media(max-width:760px){.ds-panel{padding:23px;} .ds-panel-title{font-size:21px;}}"
+    },
+    {
+      "name": "Record Table",
+      "kind": "custom",
+      "refersTo": "workspace-panel",
+      "description": "Internal horizontal scrolling, tabular numbers and explicit keyboard inspect action.",
+      "html": "<div class=\"ds-table-wrap\"><table class=\"ds-table\"><thead><tr><th>Record</th><th>Amount</th><th>Inspect</th></tr></thead><tbody><tr><td>row-017</td><td>52,000.00 KZT</td><td><button class=\"ds-inspect\" aria-label=\"Inspect row-017\"><svg width=\"17\" height=\"17\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"m9 18 6-6-6-6\"/></svg></button></td></tr></tbody></table></div>",
+      "css": ".ds-table-wrap{overflow:auto;background:#fff;border:1px solid #e1e5eb;border-radius:10px;font-family:'SF Pro Display', 'SF Pro Text', -apple-system, BlinkMacSystemFont, Manrope, 'Segoe UI', sans-serif;} .ds-table{width:100%;border-collapse:collapse;white-space:nowrap;font-size:14px;font-variant-numeric:tabular-nums;} .ds-table th{font-size:13px;font-weight:550;color:#5b6c80;text-align:left;padding:17px 20px;border-bottom:1px solid #e1e5eb;background:#fafbfc;} .ds-table td{padding:15px 20px;color:#4a5b70;} .ds-table tbody tr:hover{background:#f6f9fc;} .ds-inspect{border:0;background:transparent;color:#4a5b70;min-width:32px;min-height:32px;cursor:pointer;} .ds-inspect:focus-visible{outline:3px solid #67b2ff;outline-offset:4px;} @media(max-width:760px){.ds-table{font-size:13px;} .ds-table th{font-size:12px;padding:14px;} .ds-table td{font-size:13px;padding:13px 14px;}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Apple-style product demonstration translated to financial evidence",
+    "overview": "The implemented world translates the user’s Apple Vision Pro video reference into financial evidence: generous cool-white space, large typography, physical document scenes and restrained blue actions. Presentation is cinematic; the investigation workspace carries the same type and materials into denser, legible tools.\n\nDepth explains inspection and linked records. A metallic scanner and layered papers carry the visual signature; the working interface uses quiet borders and tonal grouping so records, evidence and remaining steps stay readable. This is the implemented system extracted from code, not a new visual proposal.",
+    "keyCharacteristics": [
+      "Large, tightly tracked system typography.",
+      "Cool neutral surfaces with restrained blue actions.",
+      "Physical document depth in presentation; bounded panels in work.",
+      "Motion with pause and reduced-motion alternatives.",
+      "Russian, Kazakh and English text supported by the shared font stack."
+    ],
+    "rules": [
+      {
+        "name": "The Action Blue Rule",
+        "body": "Use blue for actions, selected navigation and interaction cues; keep document materials predominantly neutral.",
+        "section": "colors"
+      },
+      {
+        "name": "The Local Font Rule",
+        "body": "Use SF Pro only through installed system fonts. Serve the bundled Manrope fallback; do not redistribute Apple fonts.",
+        "section": "typography"
+      },
+      {
+        "name": "The Evidence Depth Rule",
+        "body": "Reserve pronounced perspective and cast shadows for documents and focused overlays. Keep ordinary workspace panels border-led.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do preserve the final CSS cascade when copying typography and responsive rules.",
+      "Do keep visible focus on interactive controls and restore focus when a focused tool closes.",
+      "Do let workspace tabs and data tables scroll within their own containers on small screens.",
+      "Do connect pause controls to the marquee, videos and scanner and honor reduced motion.",
+      "Do use tabular numerals for budgets, amounts and metrics."
+    ],
+    "donts": [
+      "Don't distribute SF Pro font files.",
+      "Don't place essential instructions inside decorative WebGL or video scenes.",
+      "Don't copy oversized desktop headings into mobile layouts without their overrides.",
+      "Don't use cinematic paper shadows as the default treatment for every work panel.",
+      "Don't turn local evaluation results into an official judging claim."
+    ]
+  }
+}
