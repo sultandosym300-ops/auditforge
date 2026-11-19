@@ -1,8 +1,0 @@
-{
-  "allocation": "invoice_refs amounts in payment currency; refunds signed",
-  "amount_tolerance_minor": 0,
-  "fx_date": "payment local date in manifest timezone",
-  "invoice_recognition": "issued_at",
-  "period": "[period_start, period_end)",
-  "rounding": "ROUND_HALF_EVEN"
-}

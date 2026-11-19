@@ -1,7 +1,0 @@
-web/node_modules
-web/dist
-dist
-runtime
-.git
-.impeccable
-*.zip
