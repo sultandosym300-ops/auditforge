@@ -45,6 +45,22 @@
 .finale-horizon{width:130%;height:340px;border:1px solid #7eabc144;box-shadow:0 -7px 80px #6bb7d017;border-radius:50%;position:absolute;bottom:-290px;left:-15%;z-index:-1}
 .landing[data-paused=true] .proof-route-light{animation-play-state:paused}
 
+/* Video and invitation are one continuous night scene, with no framed seam. */
+.landing .cinema{padding:0;background:#0b111b;position:relative;isolation:isolate}
+.landing .city-media{border-radius:0;transform:none;overflow:hidden}
+.landing .cinema:after{content:'';position:absolute;z-index:2;pointer-events:none;left:0;right:0;bottom:-1px;height:250px;background:linear-gradient(0deg,#0b111b 0%,#0b111bf0 12%,#0b111b8a 48%,#0b111b00 100%)}
+.landing .cinema-shade{background:linear-gradient(180deg,#0b111b26,#0b111b59 55%,#0b111b99)}
+.landing .video-motion{bottom:80px;z-index:3}
+.landing .finale{margin-top:-1px;padding-top:45px}
+.landing .finale-aura{background:radial-gradient(ellipse at 50% 53%,#3e657e3b,transparent 65%),radial-gradient(ellipse at 50% 110%,#5992ae2b,transparent 57%)}
+.landing .finale-proof{margin-top:0}
+.assembly-model .evidence-core{inset:-3% -6%;width:112%;height:106%}
+@media(max-width:760px){
+  .landing .cinema{padding:0}.landing .city-media{border-radius:0}
+  .landing .cinema:after{height:180px}.landing .video-motion{bottom:65px;right:22px}
+  .landing .finale{padding-top:25px}.assembly-model .evidence-core{inset:-9% -5%;width:110%;height:118%}
+}
+
 /* The work surface carries the presentation's graphite, steel and precise light. */
 .workspace{background:radial-gradient(ellipse at 80% 0,#233b533d,transparent 47%),#0d131d;color:#e9f0f9;--ink:#e9f0f9;--muted:#a9b8ca;--line:#344153;--surface:#172230;--blue:#228eea;min-height:100svh}
 .workspace-header{background:#101823f5;border-bottom-color:#2e3d50;backdrop-filter:blur(18px)}

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-19T16:08:25.133522+00:00",
+  "generatedAt": "2026-11-19T16:23:40.439107+00:00",
   "title": "Design System: AuditForge",
   "extensions": {
     "colorMeta": {
@@ -339,12 +339,17 @@
       {
         "name": "inspection-scroll",
         "value": "scrub:0.65; p:0..1",
-        "purpose": "Scroll separates source, sensor and optical layers; one mounted explanation."
+        "purpose": "Scroll separates payment, rule, journal and verified-finding dossier layers; one mounted explanation."
       },
       {
         "name": "work-tab-entry",
         "value": "y:10..0; duration:0.24; power2.out",
         "purpose": "Orient the next working surface without opacity hiding."
+      },
+      {
+        "name": "cinema-continuity",
+        "value": "video scale 1.08..1; scrub:1",
+        "purpose": "Move only the video within a borderless frame; dissolve its lower edge into the graphite finale."
       }
     ],
     "breakpoints": [
@@ -483,7 +488,7 @@
     "overview": "The implemented world translates the user’s Apple Vision Pro video reference into financial evidence: generous cool-white space, large typography, physical document scenes and restrained blue actions. Presentation is cinematic; the investigation workspace carries the same type and materials into denser, legible tools.\n\nDepth explains inspection and linked records. A metallic scanner and layered papers carry the visual signature; the working interface uses quiet borders and tonal grouping so records, evidence and remaining steps stay readable. This is the implemented system extracted from code, not a new visual proposal.",
     "keyCharacteristics": [
       "Cinematic white-to-graphite presentation",
-      "Physical scroll disassembly with one active explanation",
+      "Detailed physical evidence dossier with four scroll-separated layers",
       "Graphite top-tab workspace without WebGL",
       "Transparent target tutorial with arrow and real actions",
       "RU, KK and EN with reduced-motion alternatives"

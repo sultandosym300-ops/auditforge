@@ -27,6 +27,10 @@ Stock architecture video establishes financial context but does not depict the a
 
 ## Revision requested from live screenshots
 
-The old overlapping text layers were removed. A native sticky scene now ties scroll progress to actual optical/sensor/document separation in Three.js, with exactly one stage title and one explanatory paragraph mounted at a time. The four phases explain payment source, declared exchange rate, reconciliation and a 4,700 KZT evidence-backed discrepancy; this is explicitly an illustrative conceptual model.
+The old overlapping text layers were removed. A native sticky scene now ties scroll progress to separation of the source, rule, book and verified-finding dossier layers in Three.js, with exactly one stage title and one explanatory paragraph mounted at a time. The four phases explain payment source, declared exchange rate, reconciliation and a 4,700 KZT evidence-backed discrepancy; this is explicitly an illustrative conceptual model.
 
 The final invitation is a full dark graphite scene in which invoice, payment and FX paths converge into a verified finding. The operating surface inherits graphite, steel, blue action and cool typography without any WebGL scene. The five-step tutorial performs real public tool actions, uses a transparent target cut-out and a connecting arrow, and refreshes the episode budget when it finishes. No whole-screen tutorial blur is used. Two distinct sourced clips appear once each.
+
+## Continuity and dossier refinement
+
+The user’s second screenshot review replaces only the sticky scene’s crude optical disassembly, preserving the hero scanner. EvidenceCore is an authored four-layer physical dossier with bevelled metal, inset readable source faces, screws, vents, contacts and reflected studio lighting. The four values match the adjacent illustrative proof. The cinema is now full bleed and dissolves into the finale with a 250px desktop / 180px phone overlap in tone. No white frame, rounded lower edge or visible abrupt background join remains. The video itself gently scales; its container stays fixed.

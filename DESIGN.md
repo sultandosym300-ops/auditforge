@@ -237,9 +237,9 @@ Presentation feature cards use large rounded surfaces and generous padding; the 
 
 The record drawer is at most 480px wide; the finding editor is at most 560px wide. Outside the guided tutorial both use the implemented FocusDialog behavior: move focus inside, cycle Tab/Shift-Tab, close on Escape or backdrop click, make background work content inert, then restore focus to the invoking control when available. Keep dialog names and visible close controls.
 
-### Evidence scanner and presentation motion
+### Evidence dossier, scanner and presentation motion
 
-The scanner uses pale paper, steel metal, dark rings and a restrained cyan scan line; pointer movement gently changes orientation. In the sticky inspection scene, scroll separates the sensor, lens and source layers. Exactly one explanation is mounted; text layers never crossfade over one another. Offscreen rendering work is gated by visibility. The shared landing pause state pauses the marquee, all landing videos and scanner animation. Scroll-linked GSAP sequences remain scroll-driven; the pause control does not claim to disable those sequences.
+The scanner uses pale paper, steel metal, dark rings and a restrained cyan scan line; pointer movement gently changes orientation. The sticky inspection scene uses a different, purpose-built evidence dossier: four rounded metal cassettes with inset authored document faces, bevelled edges, screws, contact details and softly reflected studio light. Scroll opens payment, exchange-rate, journal and verified-finding layers; the source is foremost at the start. The hero scanner remains a separate introductory object. Exactly one explanation is mounted; text layers never crossfade over one another. Offscreen rendering work is gated by visibility. The shared landing pause state pauses the marquee, all landing videos and scanner animation. The video-to-invitation join is borderless and full bleed; a long fade dissolves the city into the exact graphite finale ground. Gentle video zoom moves inside its frame rather than scaling the container and exposing white edges. Scroll-linked GSAP sequences remain scroll-driven; the pause control does not claim to disable those sequences.
 
 The five-step tutorial uses four opaque shade rectangles around a transparent target window, a cyan outline and an arrow. Its target remains readable and helper placement adapts to the actual target rectangle. It performs real actions and refreshes the episode on completion; no whole-screen blur.
 
@@ -263,4 +263,4 @@ Reduced motion omits the GSAP presentation setup, starts videos/scanner paused, 
 - Don't use cinematic paper shadows as the default treatment for every work panel.
 - Don't turn local evaluation results into an official judging claim.
 
-Extraction evidence: `PRODUCT.md`, `docs/DIRECTION.md`, `web/src/style.css`, `web/src/revision.css`, `web/src/App.jsx`, `web/src/Scanner.jsx`, `Disassembly.jsx`, `Finale.jsx` and `Tutorial.jsx`. This document records implementation and does not assert a rendered whole-surface review or an official evaluation score.
+Extraction evidence: `PRODUCT.md`, `docs/DIRECTION.md`, `web/src/style.css`, `web/src/revision.css`, `web/src/App.jsx`, `web/src/Scanner.jsx`, `Disassembly.jsx`, `EvidenceCore.jsx`, `Finale.jsx` and `Tutorial.jsx`. This document records implementation and does not assert a rendered whole-surface review or an official evaluation score.

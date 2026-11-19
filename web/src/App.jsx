@@ -27,7 +27,7 @@ function Landing({t,lang,setLang,onEnter}){
       gsap.from('.hero-model',{y:35,duration:1.5,ease:'power3.out',delay:.1});
       gsap.to('.hero-model',{y:95,scale:1.08,scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:1.1},ease:'none'});
       gsap.utils.toArray('.reveal').forEach(el=>gsap.from(el,{y:35,duration:1,ease:'power3.out',scrollTrigger:{trigger:el,start:'top 88%'}}));
-      gsap.fromTo('.city-media',{scale:.88},{scale:1,ease:'none',scrollTrigger:{trigger:'.cinema',start:'top bottom',end:'center center',scrub:1}});
+      gsap.fromTo('.city-media video',{scale:1.08},{scale:1,ease:'none',scrollTrigger:{trigger:'.cinema',start:'top bottom',end:'bottom top',scrub:1}});
     });
     return()=>mm.revert();
   },{scope,dependencies:[lang]});

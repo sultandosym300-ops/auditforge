@@ -3,7 +3,7 @@ import {useGSAP} from '@gsap/react';
 import gsap from 'gsap';
 import {ScrollTrigger} from 'gsap/ScrollTrigger';
 import {FileText,GitCompareArrows,ScanLine,ShieldCheck,Mouse} from 'lucide-react';
-import Scanner from './Scanner.jsx';
+import EvidenceCore from './EvidenceCore.jsx';
 gsap.registerPlugin(ScrollTrigger,useGSAP);
 
 export default function Disassembly({t,lang,paused}){
@@ -38,7 +38,7 @@ export default function Disassembly({t,lang,paused}){
           <p key={'body'+stage}>{t('assembly'+stage+'Body')}</p>
           <div className="assembly-equation"><span>{t('assembly'+stage+'Label')}</span><strong>{['500.00 USD','500 × 490.60','245 300 KZT','4 700 KZT'][stage]}</strong><span>{t('assembly'+stage+'Note')}</span></div>
         </div>
-        <div className="assembly-model"><Scanner dark exploded progressRef={progress} paused={paused}/><span className="assembly-model-note">{t('conceptModel')}</span></div>
+        <div className="assembly-model"><EvidenceCore progressRef={progress} paused={paused} lang={lang}/><span className="assembly-model-note">{t('conceptModel')}</span></div>
       </div>
       <div className="assembly-controls"><div className="assembly-tabs" role="tablist" aria-label={t('assemblyTitle')}>{icons.map((StepIcon,i)=><button key={i} role="tab" aria-selected={stage===i} className={stage===i?'active':''} onClick={()=>choose(i)}><StepIcon size={17}/><span>{t('assembly'+i)}</span></button>)}</div><div className="assembly-progress"><span className="assembly-progress-fill"/></div><p><Mouse size={14}/>{t('scrollDisassemble')}</p></div>
     </div>
