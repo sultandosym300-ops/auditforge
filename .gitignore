@@ -7,3 +7,5 @@ web/public/python/
 .impeccable/review/
 *.zip
 .env
+.env.*
+/work/
