@@ -1,7 +1,7 @@
 import React,{useEffect,useRef} from 'react';
 import * as THREE from 'three';
 
-export default function Scanner({paused=false,dark=false}){
+export default function Scanner({paused=false,dark=false,progressRef=null,exploded=false}){
   const host=useRef();
   useEffect(()=>{
     const element=host.current;
@@ -12,11 +12,11 @@ export default function Scanner({paused=false,dark=false}){
     renderer.setClearColor(0,0);
     element.appendChild(renderer.domElement);
     const scene=new THREE.Scene();
-    const camera=new THREE.PerspectiveCamera(31,1,.1,100);camera.position.set(0,.2,10.8);
+    const camera=new THREE.PerspectiveCamera(31,1,.1,100);camera.position.set(0,.2,exploded?12.3:10.8);
     scene.add(new THREE.HemisphereLight(0xffffff,0x66717d,3.5));
     const key=new THREE.DirectionalLight(0xffffff,5);key.position.set(-3,5,6);scene.add(key);
     const rim=new THREE.DirectionalLight(0x8cbfd3,4);rim.position.set(4,-1,3);scene.add(rim);
-    const group=new THREE.Group();scene.add(group);group.rotation.set(-.15,-.35,-.13);
+    const group=new THREE.Group();scene.add(group);group.rotation.set(-.15,exploded?-.65:-.35,-.13);
     const textures=[];const geometries=[];const materials=[];
     function material(props){const m=new THREE.MeshStandardMaterial(props);materials.push(m);return m;}
     function mesh(geometry,m,parent=group){geometries.push(geometry);const o=new THREE.Mesh(geometry,m);parent.add(o);return o;}
@@ -25,7 +25,8 @@ export default function Scanner({paused=false,dark=false}){
     const ink=material({color:0x111a24,roughness:.2,metalness:.8});
     const metal=material({color:0x9ba9b6,roughness:.2,metalness:.9});
     const lightMetal=material({color:0xe8edf2,roughness:.16,metalness:.85});
-    for(let i=3;i>=0;i--){const page=mesh(new THREE.BoxGeometry(3.15,4.05,.045),i===0?paper:edge);page.position.set((i-1.5)*.1,-.13*i,-.07*i);page.rotation.z=(i-1.5)*.04;}
+    const pages=[];
+    for(let i=3;i>=0;i--){const page=mesh(new THREE.BoxGeometry(3.15,4.05,.045),i===0?paper:edge);page.position.set((i-1.5)*.1,-.13*i,-.07*i);page.rotation.z=(i-1.5)*.04;pages.push(page);}
     const canvas=document.createElement('canvas');canvas.width=768;canvas.height=1024;
     const c=canvas.getContext('2d');c.fillStyle='#fafafa';c.fillRect(0,0,768,1024);
     c.fillStyle='#17212e';c.font='600 36px sans-serif';c.fillText('AUDITFORGE',65,100);
@@ -47,6 +48,14 @@ export default function Scanner({paused=false,dark=false}){
     const handle=mesh(new THREE.CylinderGeometry(.13,.18,1.42,32),ink,lens);handle.rotation.z=.7;handle.position.set(1.27,-1.34,0);
     const end=mesh(new THREE.CylinderGeometry(.18,.18,.14,32),metal,lens);end.rotation.z=.7;end.position.set(1.73,-1.9,0);
     const scan=mesh(new THREE.PlaneGeometry(1.72,.018),new THREE.MeshBasicMaterial({color:0x27a7b5,transparent:true,opacity:.8}),lens);materials.push(scan.material);scan.position.z=.06;
+    const sensorMaterial=material({color:0x173d4c,metalness:.65,roughness:.25});
+    const sensor=mesh(new THREE.BoxGeometry(1.65,1.65,.055),sensorMaterial,lens);sensor.position.z=-.15;
+    for(let i=0;i<7;i++){const trace=mesh(new THREE.BoxGeometry(1.3,.012,.01),lightMetal,sensor);trace.position.set(0,-.55+i*.18,.035);}
+    const chip=mesh(new THREE.BoxGeometry(.53,.53,.08),ink,sensor);chip.position.z=.05;
+    if(!exploded)sensor.visible=false;
+    const lensParts=[outer,ring,inner,disc,sensor];
+    const bases=lensParts.map(o=>o.position.clone());
+    const pageBases=pages.map(o=>o.position.clone());
     let target={x:0,y:0},visible=true,frame=0;
     const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
     function move(event){const box=element.getBoundingClientRect();target.x=((event.clientX-box.left)/box.width-.5)*.45;target.y=((event.clientY-box.top)/box.height-.5)*.35;}
@@ -54,9 +63,31 @@ export default function Scanner({paused=false,dark=false}){
     const resize=new ResizeObserver(()=>{const {width,height}=element.getBoundingClientRect();renderer.setSize(width,height);camera.aspect=width/height;camera.updateProjectionMatrix();group.scale.setScalar(width<500?.85:1);});resize.observe(element);
     const observer=new IntersectionObserver(([entry])=>visible=entry.isIntersecting);observer.observe(element);
     const start=performance.now();
-    function render(){frame=requestAnimationFrame(render);if(!visible)return;const t=(performance.now()-start)/1000;if(!paused&&!reduced){group.rotation.y+=(target.x-.28-group.rotation.y)*.045;group.rotation.x+=(-target.y-.12-group.rotation.x)*.045;lens.position.x=.48+Math.sin(t*.38)*.11;lens.position.y=.32+Math.cos(t*.45)*.16;scan.position.y=Math.sin(t*1.15)*.65;}renderer.render(scene,camera);}
+    function render(){
+      frame=requestAnimationFrame(render);if(!visible)return;
+      const t=(performance.now()-start)/1000;
+      const p=Math.max(0,Math.min(1,progressRef?.current||0));
+      if(exploded){
+        group.rotation.y=-.4-p*.4+(reduced?0:target.x*.16);
+        group.rotation.x=-.12+(reduced?0:-target.y*.15);
+        group.rotation.z=-.1+p*.12;
+        lens.position.set(.2+p*.2,.24+p*.25,.7+p*.45);
+        lensParts.forEach((o,i)=>{o.position.copy(bases[i]);o.position.z+=(i-2)*p*1.75;o.position.x-=(i-2)*p*.1;});
+        pages.forEach((o,i)=>{o.position.copy(pageBases[i]);o.position.z-=p*(.4+i*.24);o.position.x-=p*(.12+i*.13);});
+        doc.position.z=.026-p*.32;
+        handle.position.set(1.27+p*.1,-1.34,-p*1.75);
+        end.position.set(1.73+p*.1,-1.9,-p*1.75);
+        shaft.material.opacity=.1*(1-p);
+        scan.position.y=.65-p*1.3;scan.position.z=.06+p*1.05;
+      }else if(!paused&&!reduced){
+        group.rotation.y+=(target.x-.28-group.rotation.y)*.045;
+        group.rotation.x+=(-target.y-.12-group.rotation.x)*.045;
+        scan.position.y=Math.sin(t*1.15)*.65;
+      }
+      renderer.render(scene,camera);
+    }
     render();
     return()=>{cancelAnimationFrame(frame);resize.disconnect();observer.disconnect();element.parentElement?.removeEventListener('pointermove',move);textures.forEach(t=>t.dispose());geometries.forEach(g=>g.dispose());materials.forEach(m=>m.dispose());renderer.dispose();renderer.domElement.remove();};
-  },[paused,dark]);
-  return <div className="scanner" ref={host} role="img" aria-label="3D evidence scanner linking financial documents"/>;
+  },[paused,dark,exploded,progressRef]);
+  return <div className={'scanner'+(exploded?' scanner-exploded':'')} ref={host} role="img" aria-label={exploded?'Interactive exploded audit scanner showing source, reconciliation, FX and evidence layers':'3D evidence scanner linking financial documents'}/>;
 }

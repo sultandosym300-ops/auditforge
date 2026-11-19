@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-19T12:32:02.466786+00:00",
+  "generatedAt": "2026-11-19T16:08:25.133522+00:00",
   "title": "Design System: AuditForge",
   "extensions": {
     "colorMeta": {
@@ -104,17 +104,7 @@
       },
       "workspace-bg": {
         "role": "neutral",
-        "displayName": "Workspace Bg",
-        "tonalRamp": [
-          "oklch(15% 0.0029 264.54)",
-          "oklch(26.43% 0.0029 264.54)",
-          "oklch(37.86% 0.0029 264.54)",
-          "oklch(49.29% 0.0029 264.54)",
-          "oklch(60.71% 0.0029 264.54)",
-          "oklch(72.14% 0.0029 264.54)",
-          "oklch(83.57% 0.0029 264.54)",
-          "oklch(95% 0.0029 264.54)"
-        ]
+        "displayName": "Workspace Bg"
       },
       "secondary-bg": {
         "role": "neutral",
@@ -202,59 +192,19 @@
       },
       "tutorial-copy": {
         "role": "neutral",
-        "displayName": "Tutorial Copy",
-        "tonalRamp": [
-          "oklch(15% 0.0406 255.01)",
-          "oklch(26.43% 0.0406 255.01)",
-          "oklch(37.86% 0.0406 255.01)",
-          "oklch(49.29% 0.0406 255.01)",
-          "oklch(60.71% 0.0406 255.01)",
-          "oklch(72.14% 0.0406 255.01)",
-          "oklch(83.57% 0.0406 255.01)",
-          "oklch(95% 0.0406 255.01)"
-        ]
+        "displayName": "Tutorial Copy"
       },
       "note-copy": {
         "role": "neutral",
-        "displayName": "Note Copy",
-        "tonalRamp": [
-          "oklch(15% 0.0351 254.46)",
-          "oklch(26.43% 0.0351 254.46)",
-          "oklch(37.86% 0.0351 254.46)",
-          "oklch(49.29% 0.0351 254.46)",
-          "oklch(60.71% 0.0351 254.46)",
-          "oklch(72.14% 0.0351 254.46)",
-          "oklch(83.57% 0.0351 254.46)",
-          "oklch(95% 0.0351 254.46)"
-        ]
+        "displayName": "Note Copy"
       },
       "success-bg": {
-        "role": "semantic",
-        "displayName": "Success Bg",
-        "tonalRamp": [
-          "oklch(15% 0.0118 170.27)",
-          "oklch(26.43% 0.0118 170.27)",
-          "oklch(37.86% 0.0118 170.27)",
-          "oklch(49.29% 0.0118 170.27)",
-          "oklch(60.71% 0.0118 170.27)",
-          "oklch(72.14% 0.0118 170.27)",
-          "oklch(83.57% 0.0118 170.27)",
-          "oklch(95% 0.0118 170.27)"
-        ]
+        "role": "neutral",
+        "displayName": "Success Bg"
       },
       "success-text": {
-        "role": "semantic",
-        "displayName": "Success Text",
-        "tonalRamp": [
-          "oklch(15% 0.0689 165.92)",
-          "oklch(26.43% 0.0689 165.92)",
-          "oklch(37.86% 0.0689 165.92)",
-          "oklch(49.29% 0.0689 165.92)",
-          "oklch(60.71% 0.0689 165.92)",
-          "oklch(72.14% 0.0689 165.92)",
-          "oklch(83.57% 0.0689 165.92)",
-          "oklch(95% 0.0689 165.92)"
-        ]
+        "role": "neutral",
+        "displayName": "Success Text"
       },
       "error-text": {
         "role": "semantic",
@@ -269,6 +219,34 @@
           "oklch(83.57% 0.1628 25.36)",
           "oklch(95% 0.1628 25.36)"
         ]
+      },
+      "workspace-panel": {
+        "role": "neutral",
+        "displayName": "Workspace Panel"
+      },
+      "workspace-ink": {
+        "role": "neutral",
+        "displayName": "Workspace Ink"
+      },
+      "workspace-muted": {
+        "role": "neutral",
+        "displayName": "Workspace Muted"
+      },
+      "workspace-line": {
+        "role": "neutral",
+        "displayName": "Workspace Line"
+      },
+      "workspace-action": {
+        "role": "primary",
+        "displayName": "Workspace Action"
+      },
+      "workspace-field": {
+        "role": "neutral",
+        "displayName": "Workspace Field"
+      },
+      "evidence-light": {
+        "role": "neutral",
+        "displayName": "Evidence Light"
       }
     },
     "typographyMeta": {
@@ -357,6 +335,16 @@
         "name": "reduced-motion",
         "value": "animation-duration:.01ms; animation-iteration-count:1; transition-duration:.01ms",
         "purpose": "CSS fallback; GSAP omitted; videos/scanner initially paused; proof layer hidden."
+      },
+      {
+        "name": "inspection-scroll",
+        "value": "scrub:0.65; p:0..1",
+        "purpose": "Scroll separates source, sensor and optical layers; one mounted explanation."
+      },
+      {
+        "name": "work-tab-entry",
+        "value": "y:10..0; duration:0.24; power2.out",
+        "purpose": "Orient the next working surface without opacity hiding."
       }
     ],
     "breakpoints": [
@@ -439,7 +427,7 @@
       "refersTo": "input",
       "description": "Visible label, neutral border and global focus ring. Phone text grows to 16px.",
       "html": "<label class=\"ds-field\">Seed<input class=\"ds-input\" placeholder=\"2026\" /></label>",
-      "css": ".ds-field{display:flex;flex-direction:column;gap:9px;font-family:'SF Pro Display', 'SF Pro Text', -apple-system, BlinkMacSystemFont, Manrope, 'Segoe UI', sans-serif;font-size:13px;font-weight:600;color:var(--ink,#1d1d1f);} .ds-input{font:inherit;font-size:15px;font-weight:400;width:100%;border:1px solid #d9d9df;background:#fff;color:var(--ink,#1d1d1f);padding:13px 14px;border-radius:9px;min-height:46px;line-height:1.4;caret-color:var(--blue,#0071e3);transition:border-color .2s;} .ds-input:hover{border-color:#a8a8b1;} .ds-input:focus-visible{outline:3px solid #67b2ff;outline-offset:4px;} .ds-input::placeholder{color:#83838d;font-size:14px;} @media(max-width:760px){.ds-input{font-size:16px;}}"
+      "css": ".ds-field{display:flex;flex-direction:column;gap:9px;font-family:'SF Pro Display', 'SF Pro Text', -apple-system, BlinkMacSystemFont, Manrope, 'Segoe UI', sans-serif;font-size:13px;font-weight:600;color:var(--ink,#1d1d1f);} .ds-input{font:inherit;font-size:15px;font-weight:400;width:100%;border:1px solid #d9d9df;background:#172230;color:var(--ink,#1d1d1f);padding:13px 14px;border-radius:9px;min-height:46px;line-height:1.4;caret-color:var(--blue,#0071e3);transition:border-color .2s;} .ds-input:hover{border-color:#a8a8b1;} .ds-input:focus-visible{outline:3px solid #67b2ff;outline-offset:4px;} .ds-input::placeholder{color:#83838d;font-size:14px;} @media(max-width:760px){.ds-input{font-size:16px;}}"
     },
     {
       "name": "Workspace Navigation",
@@ -447,7 +435,7 @@
       "refersTo": "workspace-panel",
       "description": "Scrollable top tabs retain selected text and underline. Use real navigation/state handlers in the application.",
       "html": "<nav class=\"ds-nav\" aria-label=\"Workspace\"><button class=\"ds-tab ds-tab-active\" aria-current=\"page\">Episodes</button><button class=\"ds-tab\">Records</button><button class=\"ds-tab\">Evidence</button></nav>",
-      "css": ".ds-nav{display:flex;gap:30px;overflow-x:auto;background:#fff;font-family:'SF Pro Display', 'SF Pro Text', -apple-system, BlinkMacSystemFont, Manrope, 'Segoe UI', sans-serif;border-bottom:1px solid #e1e4e9;} .ds-tab{position:relative;border:0;background:none;color:#707783;font-size:14px;font-weight:600;padding:14px 0 17px;white-space:nowrap;cursor:pointer;} .ds-tab-active{color:#0066c9;} .ds-tab-active:after{content:\"\";position:absolute;bottom:0;left:0;right:0;height:2px;background:#0071e3;} .ds-tab:focus-visible{outline:3px solid #67b2ff;outline-offset:4px;} @media(max-width:760px){.ds-nav{gap:22px;} .ds-tab{font-size:13px;padding-bottom:14px;}}"
+      "css": ".ds-nav{display:flex;gap:30px;overflow-x:auto;background:#172230;font-family:'SF Pro Display', 'SF Pro Text', -apple-system, BlinkMacSystemFont, Manrope, 'Segoe UI', sans-serif;border-bottom:1px solid #e1e4e9;} .ds-tab{position:relative;border:0;background:none;color:#707783;font-size:14px;font-weight:600;padding:14px 0 17px;white-space:nowrap;cursor:pointer;} .ds-tab-active{color:#0066c9;} .ds-tab-active:after{content:\"\";position:absolute;bottom:0;left:0;right:0;height:2px;background:#0071e3;} .ds-tab:focus-visible{outline:3px solid #67b2ff;outline-offset:4px;} @media(max-width:760px){.ds-nav{gap:22px;} .ds-tab{font-size:13px;padding-bottom:14px;}}"
     },
     {
       "name": "Episode State",
@@ -479,7 +467,7 @@
       "refersTo": "workspace-panel",
       "description": "Border-led white episode container without cinematic elevation.",
       "html": "<section class=\"ds-panel\"><h2 class=\"ds-panel-title\">Synthetic company</h2><p class=\"ds-panel-copy\">Inspect records to begin your investigation.</p></section>",
-      "css": ".ds-panel{background:#fff;border:1px solid #e0e4ea;border-radius:12px;padding:30px;font-family:'SF Pro Display', 'SF Pro Text', -apple-system, BlinkMacSystemFont, Manrope, 'Segoe UI', sans-serif;color:var(--ink,#1d1d1f);} .ds-panel-title{font-size:24px;font-weight:650;line-height:1.08;letter-spacing:-.035em;margin:0 0 8px;} .ds-panel-copy{font-size:13px;line-height:1.55;color:#5c697b;max-width:660px;margin:0;} @media(max-width:1100px){.ds-panel{padding:24px;}} @media(max-width:760px){.ds-panel{padding:23px;} .ds-panel-title{font-size:21px;}}"
+      "css": ".ds-panel{background:#172230;border:1px solid #e0e4ea;border-radius:12px;padding:30px;font-family:'SF Pro Display', 'SF Pro Text', -apple-system, BlinkMacSystemFont, Manrope, 'Segoe UI', sans-serif;color:var(--ink,#1d1d1f);} .ds-panel-title{font-size:24px;font-weight:650;line-height:1.08;letter-spacing:-.035em;margin:0 0 8px;} .ds-panel-copy{font-size:13px;line-height:1.55;color:#5c697b;max-width:660px;margin:0;} @media(max-width:1100px){.ds-panel{padding:24px;}} @media(max-width:760px){.ds-panel{padding:23px;} .ds-panel-title{font-size:21px;}}"
     },
     {
       "name": "Record Table",
@@ -494,11 +482,11 @@
     "northStar": "Apple-style product demonstration translated to financial evidence",
     "overview": "The implemented world translates the user’s Apple Vision Pro video reference into financial evidence: generous cool-white space, large typography, physical document scenes and restrained blue actions. Presentation is cinematic; the investigation workspace carries the same type and materials into denser, legible tools.\n\nDepth explains inspection and linked records. A metallic scanner and layered papers carry the visual signature; the working interface uses quiet borders and tonal grouping so records, evidence and remaining steps stay readable. This is the implemented system extracted from code, not a new visual proposal.",
     "keyCharacteristics": [
-      "Large, tightly tracked system typography.",
-      "Cool neutral surfaces with restrained blue actions.",
-      "Physical document depth in presentation; bounded panels in work.",
-      "Motion with pause and reduced-motion alternatives.",
-      "Russian, Kazakh and English text supported by the shared font stack."
+      "Cinematic white-to-graphite presentation",
+      "Physical scroll disassembly with one active explanation",
+      "Graphite top-tab workspace without WebGL",
+      "Transparent target tutorial with arrow and real actions",
+      "RU, KK and EN with reduced-motion alternatives"
     ],
     "rules": [
       {

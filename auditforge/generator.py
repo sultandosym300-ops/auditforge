@@ -3,6 +3,7 @@ import copy
 import hashlib
 import json
 import random
+import re
 from datetime import datetime, timedelta, timezone
 from decimal import Decimal, ROUND_HALF_EVEN
 
@@ -15,10 +16,20 @@ def converted(amount, source, target, rate):
 
 
 def generate(seed, config=None):
+    if type(seed) is not int:
+        raise ValueError('seed must be an integer')
+    if config is not None and not isinstance(config, dict):
+        raise ValueError('config must be an object')
     config = dict(config or {})
     allowed = {'clean', 'interaction', 'counts', 'invoices', 'timezone', 'shuffle'}
     if set(config) - allowed:
         raise ValueError('Unsupported configuration')
+    if any(key in config and type(config[key]) is not bool for key in ('clean', 'shuffle')):
+        raise ValueError('clean and shuffle must be booleans')
+    if 'timezone' in config:
+        value = config['timezone']
+        if not isinstance(value, str) or not re.fullmatch(r'[+-](?:[01][0-9]|2[0-3]):[0-5][0-9]', value):
+            raise ValueError('timezone must be an ISO-8601 UTC offset')
     n = config.get('invoices', 50)
     counts = config.get('counts', {t: 1 for t in TYPES})
     if type(n) is not int or not 40 <= n <= 200:
@@ -26,7 +37,7 @@ def generate(seed, config=None):
     if not isinstance(counts, dict) or set(counts) - set(TYPES) or any(type(v) is not int or v < 0 or v > 3 for v in counts.values()):
         raise ValueError('Each issue count must be 0..3')
     interaction = config.get('interaction', 0)
-    if interaction not in (0, 1, 2):
+    if type(interaction) is not int or interaction not in (0, 1, 2):
         raise ValueError('interaction must be 0, 1 or 2')
     rng = random.Random(str(seed) + json.dumps(config, sort_keys=True))
     eid = 'ep-' + hashlib.sha256((str(seed) + json.dumps(config, sort_keys=True)).encode()).hexdigest()[:16]
@@ -77,20 +88,20 @@ def generate(seed, config=None):
             extra = dict(allocation_source_minor=source, fx_rate=rate, fx_date=date)
             entry('payable', amount, True, paid_at, inv, pay['payment_id'], **extra)
             entry('cash', amount, False, paid_at, inv, pay['payment_id'], **extra)
-    public = dict(manifest=dict(schema_version='1.0', generator_version='1.0.0', config_version='1.0', episode_id=eid, company=rng.choice(['Aral Logistics', 'Saryarka Systems', 'Turan Supply', 'Nomad Materials']) + ' ' + str(rng.randrange(100, 999)), base_currency='KZT', period_start=start.isoformat(), period_end=end.isoformat(), timezone=tz, currency_exponents=EXPONENTS, rounding='ROUND_HALF_EVEN', records=0, documents=len(invoices)+len(payments)), policy=dict(fx_date='payment local date in manifest timezone', period='[period_start, period_end)', invoice_recognition='issued_at', rounding='ROUND_HALF_EVEN', amount_tolerance_minor=0, allocation='invoice_refs amounts in payment currency; refunds signed'), ledger=ledger, invoices=invoices, payments=payments, fx=fx)
+    public = dict(manifest=dict(schema_version='1.0', generator_version='1.1.0', config_version='1.1', episode_id=eid, company=rng.choice(['Aral Logistics', 'Saryarka Systems', 'Turan Supply', 'Nomad Materials']) + ' ' + str(rng.randrange(100, 999)), base_currency='KZT', period_start=start.isoformat(), period_end=end.isoformat(), timezone=tz, currency_exponents=dict(EXPONENTS), rounding='ROUND_HALF_EVEN', records=0, documents=len(invoices)+len(payments)), policy=dict(fx_date='payment local date in manifest timezone', period='[period_start, period_end)', invoice_recognition='issued_at', rounding='ROUND_HALF_EVEN', amount_tolerance_minor=0, allocation='invoice_refs amounts in payment currency; refunds signed'), ledger=ledger, invoices=invoices, payments=payments, fx=fx)
     pristine = copy.deepcopy(public)
     truth, provenance = [], []
-    def change(kind, rows, before, evidence, amount):
+    def change(kind, rows, before, evidence, amount, causal_rows=None):
         issue = dict(issue_id=ident('issue'), type=kind, affected_ids=sorted(r['row_id'] for r in rows), expected_amount_minor=abs(amount), currency='KZT', evidence_sets=[sorted(evidence)], tolerance_minor=0)
         truth.append(issue)
-        provenance.append(dict(issue_id=issue['issue_id'], operation=kind, before=before, after=copy.deepcopy(rows)))
+        provenance.append(dict(issue_id=issue['issue_id'], operation=kind, before=before, after=copy.deepcopy(rows if causal_rows is None else causal_rows)))
     active = {} if config.get('clean', False) else dict(counts)
     for k, kind in enumerate(TYPES):
         for j in range(active.get(kind, 0)):
             index = k * 4 + j
             if interaction == 1 and kind in ('payment_allocation', 'fx_conversion', 'accounting_period') and j == 0:
                 index = 0
-            if interaction == 2 and kind == 'duplicate_invoice' and j == 0:
+            if interaction == 2 and kind in ('duplicate_invoice', 'accounting_period') and j == 0:
                 index = 0
             inv = invoices[index]
             invoice_rows = [r for r in ledger if r['invoice_id'] == inv['invoice_id'] and r['payment_id'] is None and r['account'] == 'expense']
@@ -110,7 +121,7 @@ def generate(seed, config=None):
                     inv['related_credit_doc_id'] = refund['doc_id']
                     pristine['invoices'][index]['related_credit_doc_id'] = refund['doc_id']
                     evidence.append(refund['doc_id'])
-                change(kind, [original, clones[0]], [], evidence, inv['total_minor'])
+                change(kind, [original, clones[0]], copy.deepcopy(pair), evidence, inv['total_minor'], pair+clones)
             elif kind == 'payment_allocation':
                 before = copy.deepcopy(rows)
                 original_source = rows[0]['allocation_source_minor']
@@ -120,7 +131,7 @@ def generate(seed, config=None):
                     r['allocation_source_minor'] = source
                     field = 'debit_minor' if r['account'] == 'payable' else 'credit_minor'
                     r[field] = converted(source, pay['currency'], 'KZT', r['fx_rate'])
-                change(kind, [rows[0]], before, [pay['doc_id'], inv['doc_id'], rows[0]['row_id']], delta)
+                change(kind, [rows[0]], before, [pay['doc_id'], inv['doc_id'], rows[0]['row_id']], delta, rows)
             elif kind == 'fx_conversion':
                 # Choose foreign settlement; native settlements have no FX error to inject.
                 if pay['currency'] == 'KZT':
@@ -138,14 +149,14 @@ def generate(seed, config=None):
                     r['fx_rate'] = wrong
                     r['debit_minor' if r['account'] == 'payable' else 'credit_minor'] = actual
                 fxrow = next(f for f in fx if f['date'] == rows[0]['fx_date'] and f['source_currency'] == pay['currency'])
-                change(kind, [rows[0]], before, [pay['doc_id'], rows[0]['row_id'], fxrow['row_id']], actual-expected)
+                change(kind, [rows[0]], before, [pay['doc_id'], rows[0]['row_id'], fxrow['row_id']], actual-expected, rows)
             else:
                 r = invoice_rows[0]
                 paired = next(x for x in ledger if x['invoice_id'] == inv['invoice_id'] and x['payment_id'] is None and x['account'] == 'payable')
                 before = copy.deepcopy([r, paired])
                 r['timestamp'] = end.isoformat()
                 paired['timestamp'] = end.isoformat()
-                change(kind, [r], before, [inv['doc_id'], r['row_id']], inv['total_minor'])
+                change(kind, [r], before, [inv['doc_id'], r['row_id']], inv['total_minor'], [r, paired])
     for table in ('ledger', 'invoices', 'payments', 'fx'):
         if config.get('shuffle', True):
             rng.shuffle(public[table])

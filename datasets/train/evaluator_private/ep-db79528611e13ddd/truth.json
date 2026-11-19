@@ -54,13 +54,13 @@
   },
   {
     "affected_ids": [
-      "row-01be0bd5aead80c"
+      "row-41b0dc544502868"
     ],
     "currency": "KZT",
     "evidence_sets": [
       [
-        "doc-d691a53d54b4427",
-        "row-01be0bd5aead80c"
+        "doc-8588898bd18d6bd",
+        "row-41b0dc544502868"
       ]
     ],
     "expected_amount_minor": 500000,

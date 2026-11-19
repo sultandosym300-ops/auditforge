@@ -1,18 +1,86 @@
 {
-  "config": {
-    "invoices": 50
-  },
-  "seeds": [
-    1000,
-    1001,
-    1002,
-    1003,
-    1004,
-    1005,
-    1006,
-    1007,
-    1008,
-    1009
+  "episodes": [
+    {
+      "config": {
+        "clean": true,
+        "interaction": 0
+      },
+      "episode_id": "ep-47ef05f09c9caa32",
+      "seed": 1000
+    },
+    {
+      "config": {
+        "clean": true,
+        "interaction": 1
+      },
+      "episode_id": "ep-382b0e28092d705c",
+      "seed": 1001
+    },
+    {
+      "config": {
+        "clean": false,
+        "interaction": 2
+      },
+      "episode_id": "ep-b78ebd0a11243c8d",
+      "seed": 1002
+    },
+    {
+      "config": {
+        "clean": false,
+        "interaction": 0
+      },
+      "episode_id": "ep-93242328bac797c4",
+      "seed": 1003
+    },
+    {
+      "config": {
+        "clean": false,
+        "interaction": 1
+      },
+      "episode_id": "ep-0c5d3330577a198a",
+      "seed": 1004
+    },
+    {
+      "config": {
+        "clean": false,
+        "interaction": 2
+      },
+      "episode_id": "ep-ce4bf8085903e9e6",
+      "seed": 1005
+    },
+    {
+      "config": {
+        "clean": false,
+        "interaction": 0
+      },
+      "episode_id": "ep-3cba8e5f0838512d",
+      "seed": 1006
+    },
+    {
+      "config": {
+        "clean": false,
+        "interaction": 1
+      },
+      "episode_id": "ep-94a94dd356546b4f",
+      "seed": 1007
+    },
+    {
+      "config": {
+        "clean": false,
+        "interaction": 2
+      },
+      "episode_id": "ep-3b9758461e46fd3d",
+      "seed": 1008
+    },
+    {
+      "config": {
+        "clean": false,
+        "interaction": 0
+      },
+      "episode_id": "ep-6a33e154711a1041",
+      "seed": 1009
+    }
   ],
-  "version": "1.0"
+  "generator_version": "1.1.0",
+  "version": "1.1"
 }

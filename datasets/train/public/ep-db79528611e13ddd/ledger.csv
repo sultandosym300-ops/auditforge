@@ -82,7 +82,7 @@ row-39608a5846be514,2026-10-08T06:00:00+06:00,payable,0,106233,KZT,entity-b0faf9
 row-b34870e7a746901,2026-10-24T13:00:00+06:00,expense,565822,0,KZT,entity-08bbb513c15cad6,inv-581c85700c1e5b9,null,null,null,null
 row-600d9fc5c29107d,2026-10-18T01:00:00+06:00,payable,0,500000,KZT,entity-f3ace9e13287976,inv-2e49d58e2c3ef45,null,null,null,null
 row-1ec321a2d92dacf,2026-10-21T11:00:00+06:00,payable,0,1329781,KZT,entity-10e1472ab9610db,inv-dc0e2146b9826c6,null,null,null,null
-row-f621af8d4652f36,2026-11-01T00:00:00+06:00,payable,0,500000,KZT,entity-6ed30b109c89541,inv-89f42a3bb8ec638,null,null,null,null
+row-f621af8d4652f36,2026-10-14T15:00:00+06:00,payable,0,500000,KZT,entity-6ed30b109c89541,inv-89f42a3bb8ec638,null,null,null,null
 row-c81af3184606205,2026-10-09T00:00:00+06:00,payable,0,888621,KZT,entity-35581fa1bebdb77,inv-9cf8bb3e0c19d4b,null,null,null,null
 row-11c6edabffe60e1,2026-10-12T09:00:00+06:00,payable,528824,0,KZT,entity-0628787f0d5f3fe,inv-f0c04d17dcf6011,pay-4f303c4608bfc59,528824,1,2026-10-12
 row-0294ce7a6008e5f,2026-10-28T00:00:00+06:00,cash,0,170333,KZT,entity-92af8520d4e9b36,inv-9b4547dfadd7a94,pay-c50a7c027bf6d63,170333,1,2026-10-28
@@ -106,7 +106,7 @@ row-b29f645aa811612,2026-10-12T09:00:00+06:00,expense,528824,0,KZT,entity-062878
 row-19fa9f53def4a4a,2026-10-10T07:00:00+06:00,expense,1496728,0,KZT,entity-4425f4e760d064b,inv-a1c9bd820431d3f,null,null,null,null
 row-a53ffda6eda11cc,2026-10-24T13:00:00+06:00,payable,565806,0,KZT,entity-08bbb513c15cad6,inv-581c85700c1e5b9,pay-c04a31ef014e85b,1154,490.3,2026-10-24
 row-0b8ef7ccda40fa5,2026-10-28T09:00:00+06:00,expense,500000,0,KZT,entity-f35c3e0d4b1a736,inv-445a3f8bd43a58b,null,null,null,null
-row-01be0bd5aead80c,2026-11-01T00:00:00+06:00,expense,500000,0,KZT,entity-6ed30b109c89541,inv-89f42a3bb8ec638,null,null,null,null
+row-01be0bd5aead80c,2026-10-14T15:00:00+06:00,expense,500000,0,KZT,entity-6ed30b109c89541,inv-89f42a3bb8ec638,null,null,null,null
 row-edf5badf0197cc7,2026-10-27T07:00:00+06:00,expense,1182328,0,KZT,entity-4c9977245f6bb40,inv-48fa26b20a04aa1,null,null,null,null
 row-b721612859b6c7f,2026-10-08T20:00:00+06:00,cash,0,249860,KZT,entity-e06f38ce4a83742,inv-276c7595680991e,pay-cd6daa00abfa1bb,806,3.1,2026-10-08
 row-aee752b8b2358d0,2026-10-08T06:00:00+06:00,payable,106020,0,KZT,entity-b0faf9e0ce6a9bb,inv-4b11ba05fb84504,pay-8ed3ef507b7aa03,200,530.1,2026-10-08
@@ -164,7 +164,7 @@ row-c4707a57edb5274,2026-10-27T11:00:00+06:00,payable,61040,0,KZT,entity-7fce550
 row-e0f4df1f34f487a,2026-10-10T00:00:00+06:00,payable,1081505,0,KZT,entity-78f938bd0f65a6a,inv-18b996fc5c8a377,pay-b49851bb644872a,1081505,1,2026-10-10
 row-32830ffcfff296a,2026-10-08T22:00:00+06:00,expense,1109585,0,KZT,entity-7e36f76944a0e02,inv-3d54297ee5ea81e,null,null,null,null
 row-84d8e126d3a80b7,2026-10-10T00:00:00+06:00,expense,1081505,0,KZT,entity-78f938bd0f65a6a,inv-18b996fc5c8a377,null,null,null,null
-row-ba3381895381027,2026-10-12T03:00:00+06:00,payable,0,500000,KZT,entity-668ffd503b9207c,inv-e4a907188cd6585,null,null,null,null
+row-ba3381895381027,2026-11-01T00:00:00+06:00,payable,0,500000,KZT,entity-668ffd503b9207c,inv-e4a907188cd6585,null,null,null,null
 row-0878045961851ab,2026-10-12T03:00:00+06:00,expense,500000,0,KZT,entity-668ffd503b9207c,inv-e4a907188cd6585,null,null,null,null
 row-2cf1b7a5838bdb7,2026-10-14T10:00:00+06:00,expense,154399,0,KZT,entity-dd9149cc47cf7b9,inv-7200e376c923e9e,null,null,null,null
 row-914176825957f31,2026-10-10T07:00:00+06:00,payable,-149545,0,KZT,entity-4425f4e760d064b,inv-a1c9bd820431d3f,pay-9f2142a0945a8b0,-282,530.3,2026-10-10
@@ -229,7 +229,7 @@ row-bc942dffaab684a,2026-10-12T03:00:00+06:00,payable,249866,0,KZT,entity-668ffd
 row-f229e0ecdfb8713,2026-10-13T18:00:00+06:00,expense,1287268,0,KZT,entity-e4abaf4c4e52d17,inv-11faefb7be3fc06,null,null,null,null
 row-cbb99d2beef4f8f,2026-10-21T11:00:00+06:00,cash,0,236803,KZT,entity-c515f04abb12d12,inv-9dba0af8fd817d8,pay-5169fc779bd59c1,236803,1,2026-10-21
 row-3d1320171a4bb2c,2026-10-06T16:00:00+06:00,cash,0,500040,KZT,entity-6141a871048ccea,inv-c494257d9f59157,pay-ff3ebeac677e0d0,1389,3.6,2026-10-06
-row-41b0dc544502868,2026-10-12T03:00:00+06:00,expense,500000,0,KZT,entity-668ffd503b9207c,inv-e4a907188cd6585,null,null,null,null
+row-41b0dc544502868,2026-11-01T00:00:00+06:00,expense,500000,0,KZT,entity-668ffd503b9207c,inv-e4a907188cd6585,null,null,null,null
 row-7217187e5c96d77,2026-10-24T13:00:00+06:00,cash,0,565806,KZT,entity-08bbb513c15cad6,inv-581c85700c1e5b9,pay-c04a31ef014e85b,1154,490.3,2026-10-24
 row-99d693d4b6bf41c,2026-10-23T05:00:00+06:00,payable,0,1257415,KZT,entity-33e4bfe09d3b6ad,inv-66ff1b21c62b4e3,null,null,null,null
 row-1b0c872e0d4442e,2026-10-28T00:00:00+06:00,payable,170333,0,KZT,entity-92af8520d4e9b36,inv-9b4547dfadd7a94,pay-c50a7c027bf6d63,170333,1,2026-10-28

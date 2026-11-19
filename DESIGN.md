@@ -9,18 +9,25 @@ colors:
   cool-white: "#f5f5f7"
   surface: "#fff"
   line: "#dedee3"
-  workspace-bg: "#f7f8fa"
+  workspace-bg: "#0d131d"
   secondary-bg: "#ececf0"
   secondary-hover: "#e0e0e6"
   secondary-text: "#26262c"
   steel-surface: "#e9eef3"
   cinema-black: "#101113"
   focus-blue: "#67b2ff"
-  tutorial-copy: "#596a80"
-  note-copy: "#5e6d80"
-  success-bg: "#e9f3ef"
-  success-text: "#3f7660"
+  tutorial-copy: "#bbcee2"
+  note-copy: "#a2b7cf"
+  success-bg: "#234a43"
+  success-text: "#b4e6d3"
   error-text: "#ac2e2e"
+  workspace-panel: "#172230"
+  workspace-ink: "#e9f0f9"
+  workspace-muted: "#a9b8ca"
+  workspace-line: "#344153"
+  workspace-action: "#2085d6"
+  workspace-field: "#101a27"
+  evidence-light: "#b8e6ea"
 typography:
   display:
     fontFamily: "SF Pro Display, SF Pro Text, -apple-system, BlinkMacSystemFont, Manrope, Segoe UI, sans-serif"
@@ -98,7 +105,7 @@ components:
     rounded: "{rounded.surface}"
     padding: "{spacing.feature-padding}"
   workspace-panel:
-    backgroundColor: "{colors.surface}"
+    backgroundColor: "{colors.workspace-panel}"
     rounded: "{rounded.panel}"
     padding: "{spacing.panel-padding}"
   state-badge:
@@ -122,14 +129,14 @@ components:
 
 **Creative North Star: "Apple-style product demonstration translated to financial evidence"**
 
-The implemented world translates the user’s Apple Vision Pro video reference into financial evidence: generous cool-white space, large typography, physical document scenes and restrained blue actions. Presentation is cinematic; the investigation workspace carries the same type and materials into denser, legible tools.
+The implemented world translates the user’s Apple Vision Pro video reference into financial evidence: generous cool-white introductory space, graphite inspection and finale scenes, large typography, physical document scenes and restrained blue actions. Presentation is cinematic; the investigation workspace carries the same type and materials into denser, legible tools.
 
 Depth explains inspection and linked records. A metallic scanner and layered papers carry the visual signature; the working interface uses quiet borders and tonal grouping so records, evidence and remaining steps stay readable. This is the implemented system extracted from code, not a new visual proposal.
 
 **Key Characteristics:**
 
 - Large, tightly tracked system typography.
-- Cool neutral surfaces with restrained blue actions.
+- Cool-white introductory surfaces and graphite operating surfaces with restrained blue actions.
 - Physical document depth in presentation; bounded panels in work.
 - Motion with pause and reduced-motion alternatives.
 - Russian, Kazakh and English text supported by the shared font stack.
@@ -212,27 +219,29 @@ Confident, quiet pill actions use the normative primary/secondary tokens. The ba
 
 ### Inputs / Fields
 
-White fields use a neutral border, an inset reading area and a 46px minimum height. Hover darkens the border. The global keyboard focus treatment is a 3px Focus Blue outline with 4px offset. Labels remain visible; placeholder text is supplementary. Textareas resize vertically. Error prose uses the semantic error token.
+Workspace fields use a dark inset surface and steel border, an inset reading area and a 46px minimum height. Hover darkens the border. The global keyboard focus treatment is a 3px Focus Blue outline with 4px offset. Labels remain visible; placeholder text is supplementary. Textareas resize vertically. Error prose uses the semantic error token.
 
 ### Navigation
 
-Landing navigation is restrained inline text and is hidden at the phone breakpoint. The workspace keeps six top tabs with icons, selected blue text and a 2px underline. Tabs scroll horizontally on phone rather than wrapping into a sidebar. The language selector remains available across surfaces.
+Landing navigation is restrained inline text and is hidden at the phone breakpoint. The workspace keeps six top tabs with icons, a steel-blue selected surface, pale text and a 2px underline. Tabs scroll horizontally on phone rather than wrapping into a sidebar. The language selector remains available across surfaces.
 
 ### Chips / Tags
 
-State badges use pale blue at rest and pale green on completion. Evidence references are small monospaced tags, with wrapping groups and final contrast-corrected text. These convey state and record identity; they are not generic action buttons.
+Workspace state badges use muted steel blue at rest and dark green with light text on completion. Evidence references are small monospaced tags, with wrapping groups and final contrast-corrected text. These convey state and record identity; they are not generic action buttons.
 
 ### Cards / Containers
 
-Presentation feature cards use large rounded surfaces and generous padding; the three-column grid is filled by alternating wide/narrow spans. Working panels use white, a thin contextual border and tighter internal spacing. Tables keep tabular numerals, quieter header cells and a light row-hover treatment; the explicit inspect control remains keyboard reachable.
+Presentation feature cards use large rounded surfaces and generous padding; the three-column grid is filled by alternating wide/narrow spans. Working panels use graphite and slate, a thin steel border and tighter internal spacing. Tables keep tabular numerals, quieter header cells and a lighter slate row-hover treatment; the explicit inspect control remains keyboard reachable.
 
 ### Focused tools
 
-The record drawer is at most 480px wide; the finding editor is at most 560px wide. Both use the implemented FocusDialog behavior: move focus inside, cycle Tab/Shift-Tab, close on Escape or backdrop click, make background work content inert, then restore focus to the invoking control when available. Keep dialog names and visible close controls.
+The record drawer is at most 480px wide; the finding editor is at most 560px wide. Outside the guided tutorial both use the implemented FocusDialog behavior: move focus inside, cycle Tab/Shift-Tab, close on Escape or backdrop click, make background work content inert, then restore focus to the invoking control when available. Keep dialog names and visible close controls.
 
 ### Evidence scanner and presentation motion
 
-The scanner uses pale paper, steel metal, dark rings and a restrained cyan scan line; pointer movement gently changes orientation. Offscreen rendering work is gated by visibility. The shared landing pause state pauses the marquee, all landing videos and scanner animation. Scroll-linked GSAP sequences remain scroll-driven; the pause control does not claim to disable those sequences.
+The scanner uses pale paper, steel metal, dark rings and a restrained cyan scan line; pointer movement gently changes orientation. In the sticky inspection scene, scroll separates the sensor, lens and source layers. Exactly one explanation is mounted; text layers never crossfade over one another. Offscreen rendering work is gated by visibility. The shared landing pause state pauses the marquee, all landing videos and scanner animation. Scroll-linked GSAP sequences remain scroll-driven; the pause control does not claim to disable those sequences.
+
+The five-step tutorial uses four opaque shade rectangles around a transparent target window, a cyan outline and an arrow. Its target remains readable and helper placement adapts to the actual target rectangle. It performs real actions and refreshes the episode on completion; no whole-screen blur.
 
 Reduced motion omits the GSAP presentation setup, starts videos/scanner paused, removes the animated proof layer and compresses CSS animations/transitions to effectively immediate updates. Presentation easing is `cubic-bezier(.16,1,.3,1)`; reveal motion uses GSAP `power3.out`. Ordinary button transitions take 0.22–0.3s; drawer/editor entry takes 0.45s / 0.35s. Exact motion and responsive metadata is carried in the sidecar.
 
@@ -254,4 +263,4 @@ Reduced motion omits the GSAP presentation setup, starts videos/scanner paused, 
 - Don't use cinematic paper shadows as the default treatment for every work panel.
 - Don't turn local evaluation results into an official judging claim.
 
-Extraction evidence: `PRODUCT.md`, `docs/DIRECTION.md`, `web/src/style.css` (including final overrides), `web/src/App.jsx` and `web/src/Scanner.jsx`. This document records implementation and does not assert a rendered whole-surface review or an official evaluation score.
+Extraction evidence: `PRODUCT.md`, `docs/DIRECTION.md`, `web/src/style.css`, `web/src/revision.css`, `web/src/App.jsx`, `web/src/Scanner.jsx`, `Disassembly.jsx`, `Finale.jsx` and `Tutorial.jsx`. This document records implementation and does not assert a rendered whole-surface review or an official evaluation score.

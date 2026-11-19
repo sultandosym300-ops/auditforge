@@ -90,7 +90,10 @@ class Session:
                         raise ValueError('Invalid cursor')
                     result = dict(records=records[offset:offset+limit], next_cursor=str(offset+limit) if offset+limit < len(records) else None)
                 else:
-                    result = next((r for r in records if action.get('id') == r.get('row_id') or action.get('id') == r.get('doc_id') or action.get('id') == r.get('invoice_id') or action.get('id') == r.get('payment_id')), None)
+                    record_id = action.get('id')
+                    if not isinstance(record_id, str) or not record_id:
+                        raise ValueError('Invalid record ID')
+                    result = next((r for r in records if any(record_id == r.get(key) for key in ('row_id', 'doc_id', 'invoice_id', 'payment_id'))), None)
                     if result is None: raise ValueError('Record not found')
             elif tool == 'get_document':
                 result = next((d for table in ('invoices', 'payments') for d in self.public[table] if d['doc_id'] == action.get('doc_id')), None)

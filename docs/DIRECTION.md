@@ -11,10 +11,10 @@ SF Pro system lettering where installed, self-hosted Manrope fallback with Cyril
 Wide two-line desktop headline beside a large physical document scanner; copy stays clear of the lens. One blue start action and a quieter explore link. The 3D lens tracks the pointer while the scan line moves across source records. This demonstrates the purpose: inspecting records and relating evidence. On phone the headline leads and the scanner follows; no horizontal overflow.
 
 ## VISITOR PATH
-Landing: attention, four feature cells in a fully filled 3-column grid (2+1 then 1+2), scroll-linked evidence stack, three procedural steps, real city video and a final action. Mandatory access choice offers account, sign-in and guest. Operate surface has horizontal top tabs and a visible create-episode action. Four-step tutorial introduces episode, records, evidence and evaluation.
+Landing: attention, four feature cells in a fully filled 3-column grid (2+1 then 1+2), scroll-linked scanner disassembly, three procedural steps, real city video and a final action. Mandatory access choice offers account, sign-in and guest. Operate surface has horizontal top tabs and a visible create-episode action. Five-step tutorial performs episode creation, row inspection, evidence pinning, finding form and submission orientation.
 
 ## SIGNATURE INTERACTION
-Pointer-responsive Three.js metallic scanner; GSAP image scale, pinned evidence stacking and natural-scroll reveals. No scroll hijacking. Pause controls and reduced-motion support. CPU-only audit core remains independent of WebGL presentation.
+Pointer-responsive Three.js metallic scanner; GSAP image scale, native sticky exploded-view inspection and natural-scroll reveals. No scroll hijacking. Pause controls and reduced-motion support. CPU-only audit core remains independent of WebGL presentation.
 
 ## CROSS-SURFACE REACH
 Presentation is spacious and cinematic. Workspace uses the same typography, blue action and surface geometry but prioritizes clear inputs, tables, evidence, remaining budget, terminal results and export.
@@ -24,3 +24,9 @@ Primary reference: C:/Users/Султан/Videos/apple.mp4; extracted stills in t
 
 ## KNOWN RISK
 Stock architecture video establishes financial context but does not depict the audit mechanism; the authored scanner and evidence stack carry that explanation. Browser mode is open training, not an adversarial security boundary. Native closed grading uses the broker and isolated policy container.
+
+## Revision requested from live screenshots
+
+The old overlapping text layers were removed. A native sticky scene now ties scroll progress to actual optical/sensor/document separation in Three.js, with exactly one stage title and one explanatory paragraph mounted at a time. The four phases explain payment source, declared exchange rate, reconciliation and a 4,700 KZT evidence-backed discrepancy; this is explicitly an illustrative conceptual model.
+
+The final invitation is a full dark graphite scene in which invoice, payment and FX paths converge into a verified finding. The operating surface inherits graphite, steel, blue action and cool typography without any WebGL scene. The five-step tutorial performs real public tool actions, uses a transparent target cut-out and a connecting arrow, and refreshes the episode budget when it finishes. No whole-screen tutorial blur is used. Two distinct sourced clips appear once each.

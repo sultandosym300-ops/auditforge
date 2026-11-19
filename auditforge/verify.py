@@ -12,7 +12,7 @@ from pathlib import Path
 from .generator import generate, TYPES
 from .reconcile import validate, reconcile
 from .matcher import oracle, evaluate
-from .env import AuditEnv
+from .env import AuditEnv, Session
 from .policies import run_policy
 from .export import export_episode, write_json
 
@@ -43,6 +43,32 @@ def transform(episode, seed):
     return transformed
 
 
+def check_transitions(episode, transformed):
+    """Exercise tools and terminal scoring, rather than comparing two truth oracles."""
+    def session_for(value):
+        session = Session()
+        initial, _ = session.reset(0, {}, 'evaluation')
+        session.episode = copy.deepcopy(value)
+        session.public = session.episode['public']
+        initial.update(manifest=session.public['manifest'], policy=session.public['policy'])
+        return session, initial
+    session, initial = session_for(episode)
+    log = []
+    run_policy(session, initial, 'reconciliation', log)
+    assert session.report['f1'] == 1
+    repeated, _ = session_for(episode)
+    for row in log:
+        observation, reward, terminated, truncated, _ = repeated.step(row['action'])
+        assert (observation, reward, terminated, truncated) == (row['observation'], row['reward'], row['terminated'], row['truncated'])
+    assert repeated.report == session.report
+    renamed, initial = session_for(transformed)
+    renamed_log = []
+    run_policy(renamed, initial, 'reconciliation', renamed_log)
+    assert renamed.report == session.report
+    assert len(renamed_log) == len(log)
+    return True
+
+
 def main():
     started=time.perf_counter()
     test_count=unittest.defaultTestLoader.discover(str(ROOT/'tests')).countTestCases()
@@ -62,9 +88,7 @@ def main():
         data.append(dict(episode_id=e['public']['manifest']['episode_id'],clean=config['clean'],interaction=config['interaction'],issues=len(e['truth']),records=len(e['public']['ledger']),valid=True,generation_validation_seconds=time.perf_counter()-tick))
         assert e==generate(seed,config)
         transformed=transform(e,seed+1); validate(transformed)
-        a=evaluate(e['public']['manifest']['episode_id'],e['truth'],oracle(e),10)
-        b=evaluate(transformed['public']['manifest']['episode_id'],transformed['truth'],oracle(transformed),10)
-        assert a==b
+        check_transitions(e, transformed)
         pairs.append(dict(episode_id=e['public']['manifest']['episode_id'],repeat_exact=True,renamed_shuffled_equivalent=True))
         for name in ('random','reconciliation','mark_all','oracle'):
             tick=time.perf_counter()
@@ -92,11 +116,16 @@ def main():
             if name!='oracle': trajectories.extend(dict(policy=name,**row) for row in log)
     memory=tracemalloc.get_traced_memory()[1]; tracemalloc.stop()
     for split,offset in [('train',0),('dev',1000)]:
-        write_json(ROOT/'configs'/(split+'.json'),dict(version='1.0',seeds=list(range(offset,offset+10)),config={'invoices':50}))
-        for i in range(10): export_episode(generate(offset+i,dict(clean=i<2,interaction=i%3)),ROOT/'datasets'/split)
+        specifications=[]
+        for i in range(10):
+            configuration=dict(clean=i<2,interaction=i%3)
+            episode=generate(offset+i,configuration)
+            export_episode(episode,ROOT/'datasets'/split)
+            specifications.append(dict(seed=offset+i,config=configuration,episode_id=episode['public']['manifest']['episode_id']))
+        write_json(ROOT/'configs'/(split+'.json'),dict(version='1.1',generator_version='1.1.0',episodes=specifications))
     (ROOT/'trajectories').mkdir(exist_ok=True)
     (ROOT/'trajectories'/'trajectories.jsonl').write_text(''.join(json.dumps(r,sort_keys=True)+'\n' for r in trajectories),encoding='utf-8')
-    report=dict(version='1.0.0',tests_passed=test_count,official_result=None,scope='Local approximation of published checks; hidden organizer tests unavailable.',python=platform.python_version(),platform=platform.platform(),contract_checks=20,reward_checks=20,data=data,metamorphic_pairs=pairs,benchmark=results,peak_python_tracemalloc_bytes=memory,wall_seconds=time.perf_counter()-started,limitations=['CPU/RAM isolation requires Docker; tracemalloc is not process RSS.','No model weights trained; no learning improvement claimed.','Oracle is evaluator-only; its inspection strategy is not optimized.'])
+    report=dict(version='1.1.0',tests_passed=test_count,official_result=None,scope='Local approximation of published checks; hidden organizer tests unavailable.',python=platform.python_version(),platform=platform.platform(),contract_checks=20,reward_checks=20,data=data,metamorphic_pairs=pairs,benchmark=results,peak_python_tracemalloc_bytes=memory,wall_seconds=time.perf_counter()-started,limitations=['CPU/RAM isolation requires Docker; tracemalloc is not process RSS.','No model weights trained; no learning improvement claimed.','Oracle is evaluator-only; its inspection strategy is not optimized.'])
     write_json(ROOT/'reports'/'verification.json',report)
     write_json(ROOT/'web'/'public'/'verification-summary.json',dict(local=True,official_result=None,contract_passed=20,reward_passed=20,valid_episodes=len(data),metamorphic_pairs=len(pairs),wall_seconds=report['wall_seconds'],benchmark=results))
     print(json.dumps(dict(status='PASS',tests=test_count,data_episodes=20,pairs=20,policy_runs=len(results),seconds=report['wall_seconds'],peak_python_bytes=memory,official_result=None)))

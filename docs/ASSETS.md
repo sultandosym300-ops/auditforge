@@ -8,3 +8,7 @@
 - React, GSAP and Vite retain their respective upstream licenses, specified by package-lock.json.
 
 The illustrative document amounts in the presentation are visual examples. Workspace records and reports are generated and evaluated live.
+
+## Revision 1.1 — two distinct video sources
+
+The cinematic closing-media scene now uses [Vibrant Night Skyline of Downtown City](https://www.pexels.com/video/vibrant-night-skyline-of-downtown-city-30747149/), source `https://videos.pexels.com/video-files/30747149/13153068_1440_2560_30fps.mp4`. It is centre-cropped and self-hosted as 1280x800 VP9/WebM; its first frame supplies night-poster.jpg. The earlier blue-building footage appears only in the interaction feature. Each clip appears once; the final CTA uses an authored evidence-path diagram, not repeated stock footage.

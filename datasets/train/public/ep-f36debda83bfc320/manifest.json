@@ -1,7 +1,7 @@
 {
   "base_currency": "KZT",
   "company": "Saryarka Systems 472",
-  "config_version": "1.0",
+  "config_version": "1.1",
   "currency_exponents": {
     "EUR": 2,
     "JPY": 0,
@@ -10,7 +10,7 @@
   },
   "documents": 119,
   "episode_id": "ep-f36debda83bfc320",
-  "generator_version": "1.0.0",
+  "generator_version": "1.1.0",
   "period_end": "2026-11-01T00:00:00+06:00",
   "period_start": "2026-10-01T00:00:00+06:00",
   "records": 240,
