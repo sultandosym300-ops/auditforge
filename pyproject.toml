@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "auditforge"
-version = "1.1.2"
+version = "1.1.3"
 description = "Reproducible, evidence-grounded financial audit RL environments"
 requires-python = ">=3.11"
 dependencies = []

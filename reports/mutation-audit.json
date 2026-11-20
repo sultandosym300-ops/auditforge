@@ -1,6 +1,6 @@
 {
   "scope": "Local business/accounting/contract mutation testing; not official grading.",
-  "created_utc": "2026-11-19T18:35:49.877902+00:00",
+  "created_utc": "2026-11-20T11:27:46.945071+00:00",
   "python": "3.11.1 (tags/v3.11.1:a7a450f, Dec  6 2022, 19:58:39) [MSC v.1934 64 bit (AMD64)]",
   "command": [
     "python",
@@ -12,36 +12,40 @@
     "-v"
   ],
   "source_hashes": {
-    "auditforge\\__init__.py": "fb463779eb63e4bab98eb98479f88dfed38b593d79aa8027efc7867d02b253ca",
+    "auditforge\\__init__.py": "a90fe3b02dec6b1738a6a1940a7c88f34a1972e6c93dcdc106e7ed1a73c7582d",
     "auditforge\\agent_runner.py": "5834f4173895221e42df26b68d5a5a0061c2a1c958509bb0ed3a7beee8e7a3bb",
     "auditforge\\env.py": "f9b7558c9c0256704eebd567ab44020aef7c37b048e6199991c5d5b51785c356",
     "auditforge\\export.py": "2bca64b640ea46ca0278254cb7a338a61a54946fae20d7f8d3e0b5befecc9d4a",
     "auditforge\\financial_audit.py": "5147dcd395d1ce7b8893936396ed09cd3ddcb410f5f4c8b9c6b6eae4fe309dc6",
-    "auditforge\\generator.py": "6e05012b5187f08d45cb6bb55455f9bc665bfc984d3043c6d1ab0635ce5d2ea6",
+    "auditforge\\generator.py": "0ecb841e9ca59a2c5ec700d73afb6c16e4373052195cafb016d7ddfa6a588a29",
     "auditforge\\matcher.py": "cb47b368d267863676dc81b1a10fc0c6b5747828c35bf42dc78d933db6d1c88a",
     "auditforge\\metamorphic.py": "a65b000e8e7a7732c3372eaa6cb49906e9ecc5cd9662057e2e3199e259f35247",
     "auditforge\\policies.py": "2b1f5434e5f3ba3d6c47cc4696c021956794873d2fb9f17e506d06a698d125a1",
     "auditforge\\policy_agent.py": "7cc83158dd1df75499331ac4add57c4af4ec6dcd1226131ee11d225cd1570548",
     "auditforge\\reconcile.py": "bd10833e1723d09552ae7a03cdb7aa4c1d6ac597f43f5a4381686385b72ff1be",
     "auditforge\\server.py": "35a3d9d1415e81b535038ca11d173b3d0b95a9b8cfa6df30396a0301d1145a63",
+    "auditforge\\shortcut.py": "c840208dd2df3d0d88da76ccb552ec9f8a5091d88b6752abb66e9eae4bc47b7b",
     "auditforge\\verify.py": "19b106b90e23258860aae60e507a5cd9eed9093daabd5af277fb4b3a5385fb8d"
   },
   "baseline": {
     "status": "passed",
     "returncode": 0,
-    "tests_run": 81,
+    "tests_run": 84,
     "failing_tests": [],
-    "elapsed_seconds": 3.031
+    "elapsed_seconds": 5.219
   },
   "mutations": [
     {
       "status": "killed",
       "returncode": 1,
-      "tests_run": 81,
+      "tests_run": 84,
       "failing_tests": [
         "test_foreign_allocation_requires_published_fx_evidence (test_allocation_rounding.AllocationRoundingTests.test_foreign_allocation_requires_published_fx_evidence)",
         "test_truth_and_public_recovery_match_posting_delta (test_allocation_rounding.AllocationRoundingTests.test_truth_and_public_recovery_match_posting_delta)",
         "test_validator_rejects_old_amount (test_allocation_rounding.AllocationRoundingTests.test_validator_rejects_old_amount)",
+        "test_clean_boundary_companies_contain_legitimate_refund_links (test_case_improvements.CaseImprovements.test_clean_boundary_companies_contain_legitimate_refund_links)",
+        "test_evidence_ablation_on_asymmetric_interactions (test_case_improvements.CaseImprovements.test_evidence_ablation_on_asymmetric_interactions)",
+        "test_fx_fingerprint_does_not_replace_financial_reconciliation (test_case_improvements.CaseImprovements.test_fx_fingerprint_does_not_replace_financial_reconciliation)",
         "test_clean (test_core.CoreTests.test_clean)",
         "test_deterministic_and_independently_recoverable (test_core.CoreTests.test_deterministic_and_independently_recoverable)",
         "test_both_interactions_and_clean_without_policy_detector (test_financial_audit.FinancialAuditTests.test_both_interactions_and_clean_without_policy_detector)",
@@ -52,7 +56,7 @@
         "test_alternate_configs_and_renamed_evidence (test_strict_audit.StrictAuditTests.test_alternate_configs_and_renamed_evidence)",
         "test_second_interaction_contains_two_error_types_on_same_obligation (test_strict_audit.StrictAuditTests.test_second_interaction_contains_two_error_types_on_same_obligation)"
       ],
-      "elapsed_seconds": 2.172,
+      "elapsed_seconds": 3.015,
       "log": "mutation-audit-logs\\fx_rounding.log",
       "id": "fx_rounding",
       "file": "auditforge/generator.py",
@@ -61,11 +65,11 @@
     {
       "status": "killed",
       "returncode": 1,
-      "tests_run": 81,
+      "tests_run": 84,
       "failing_tests": [
         "test_07_amount (test_reward.RewardTests.test_07_amount)"
       ],
-      "elapsed_seconds": 3.062,
+      "elapsed_seconds": 4.922,
       "log": "mutation-audit-logs\\loose_amount_tolerance.log",
       "id": "loose_amount_tolerance",
       "file": "auditforge/matcher.py",
@@ -74,8 +78,10 @@
     {
       "status": "killed",
       "returncode": 1,
-      "tests_run": 81,
+      "tests_run": 84,
       "failing_tests": [
+        "test_evidence_ablation_on_asymmetric_interactions (test_case_improvements.CaseImprovements.test_evidence_ablation_on_asymmetric_interactions)",
+        "test_fx_fingerprint_does_not_replace_financial_reconciliation (test_case_improvements.CaseImprovements.test_fx_fingerprint_does_not_replace_financial_reconciliation)",
         "test_deterministic_and_independently_recoverable (test_core.CoreTests.test_deterministic_and_independently_recoverable)",
         "test_evidence_and_duplicate_penalty (test_core.CoreTests.test_evidence_and_duplicate_penalty)",
         "test_fuzz_json_types_and_extreme_amounts (test_jury_reward.JuryRewardTests.test_fuzz_json_types_and_extreme_amounts)",
@@ -95,7 +101,7 @@
         "test_05_live_episode (test_server.ServerTests.test_05_live_episode)",
         "test_alternate_configs_and_renamed_evidence (test_strict_audit.StrictAuditTests.test_alternate_configs_and_renamed_evidence)"
       ],
-      "elapsed_seconds": 2.312,
+      "elapsed_seconds": 3.484,
       "log": "mutation-audit-logs\\incorrect_true_positive.log",
       "id": "incorrect_true_positive",
       "file": "auditforge/matcher.py",
@@ -104,13 +110,13 @@
     {
       "status": "killed",
       "returncode": 1,
-      "tests_run": 81,
+      "tests_run": 84,
       "failing_tests": [
         "test_evidence_and_duplicate_penalty (test_core.CoreTests.test_evidence_and_duplicate_penalty)",
         "test_random_small_graphs_match_exhaustive_assignment (test_jury_reward.JuryRewardTests.test_random_small_graphs_match_exhaustive_assignment)",
         "test_05_duplicate (test_reward.RewardTests.test_05_duplicate)"
       ],
-      "elapsed_seconds": 3.031,
+      "elapsed_seconds": 4.844,
       "log": "mutation-audit-logs\\repeated_finding_double_count.log",
       "id": "repeated_finding_double_count",
       "file": "auditforge/matcher.py",
@@ -119,11 +125,11 @@
     {
       "status": "killed",
       "returncode": 1,
-      "tests_run": 81,
+      "tests_run": 84,
       "failing_tests": [
         "test_14_no_leak (test_contract.ContractTests.test_14_no_leak)"
       ],
-      "elapsed_seconds": 3.234,
+      "elapsed_seconds": 4.781,
       "log": "mutation-audit-logs\\truth_in_observation.log",
       "id": "truth_in_observation",
       "file": "auditforge/env.py",
@@ -132,14 +138,15 @@
     {
       "status": "killed",
       "returncode": 1,
-      "tests_run": 81,
+      "tests_run": 84,
       "failing_tests": [
+        "test_evidence_ablation_on_asymmetric_interactions (test_case_improvements.CaseImprovements.test_evidence_ablation_on_asymmetric_interactions)",
         "test_deterministic_and_independently_recoverable (test_core.CoreTests.test_deterministic_and_independently_recoverable)",
         "test_05_live_episode (test_server.ServerTests.test_05_live_episode)",
         "test_alternate_configs_and_renamed_evidence (test_strict_audit.StrictAuditTests.test_alternate_configs_and_renamed_evidence)",
         "test_second_interaction_contains_two_error_types_on_same_obligation (test_strict_audit.StrictAuditTests.test_second_interaction_contains_two_error_types_on_same_obligation)"
       ],
-      "elapsed_seconds": 2.484,
+      "elapsed_seconds": 3.516,
       "log": "mutation-audit-logs\\inclusive_period_end.log",
       "id": "inclusive_period_end",
       "file": "auditforge/reconcile.py",
@@ -148,7 +155,7 @@
     {
       "status": "killed",
       "returncode": 1,
-      "tests_run": 81,
+      "tests_run": 84,
       "failing_tests": [
         "test_foreign_allocation_requires_published_fx_evidence (test_allocation_rounding.AllocationRoundingTests.test_foreign_allocation_requires_published_fx_evidence)",
         "test_truth_and_public_recovery_match_posting_delta (test_allocation_rounding.AllocationRoundingTests.test_truth_and_public_recovery_match_posting_delta)",
@@ -157,7 +164,7 @@
         "test_mass_manifest_is_reproducible (test_financial_audit.FinancialAuditTests.test_mass_manifest_is_reproducible)",
         "test_generation_does_not_share_mutable_exponents (test_strict_audit.StrictAuditTests.test_generation_does_not_share_mutable_exponents)"
       ],
-      "elapsed_seconds": 5.688,
+      "elapsed_seconds": 7.563,
       "log": "mutation-audit-logs\\nondeterministic_generation.log",
       "id": "nondeterministic_generation",
       "file": "auditforge/generator.py",
@@ -166,13 +173,13 @@
     {
       "status": "killed",
       "returncode": 1,
-      "tests_run": 81,
+      "tests_run": 84,
       "failing_tests": [
         "test_18_truncate (test_contract.ContractTests.test_18_truncate)",
         "test_process_contract (test_core.CoreTests.test_process_contract)",
         "test_invalid_last_action_truncates_until_reset (test_jury_boundaries.JuryBoundaries.test_invalid_last_action_truncates_until_reset)"
       ],
-      "elapsed_seconds": 3.11,
+      "elapsed_seconds": 4.734,
       "log": "mutation-audit-logs\\allow_101_steps.log",
       "id": "allow_101_steps",
       "file": "auditforge/env.py",
@@ -181,8 +188,9 @@
     {
       "status": "killed",
       "returncode": 1,
-      "tests_run": 81,
+      "tests_run": 84,
       "failing_tests": [
+        "test_evidence_ablation_on_asymmetric_interactions (test_case_improvements.CaseImprovements.test_evidence_ablation_on_asymmetric_interactions)",
         "test_deterministic_and_independently_recoverable (test_core.CoreTests.test_deterministic_and_independently_recoverable)",
         "test_both_interactions_and_clean_without_policy_detector (test_financial_audit.FinancialAuditTests.test_both_interactions_and_clean_without_policy_detector)",
         "test_mass_manifest_is_reproducible (test_financial_audit.FinancialAuditTests.test_mass_manifest_is_reproducible)",
@@ -190,7 +198,7 @@
         "test_alternate_configs_and_renamed_evidence (test_strict_audit.StrictAuditTests.test_alternate_configs_and_renamed_evidence)",
         "test_second_interaction_contains_two_error_types_on_same_obligation (test_strict_audit.StrictAuditTests.test_second_interaction_contains_two_error_types_on_same_obligation)"
       ],
-      "elapsed_seconds": 2.438,
+      "elapsed_seconds": 3.297,
       "log": "mutation-audit-logs\\wrong_evidence_id.log",
       "id": "wrong_evidence_id",
       "file": "auditforge/generator.py",
@@ -199,14 +207,15 @@
     {
       "status": "killed",
       "returncode": 1,
-      "tests_run": 81,
+      "tests_run": 84,
       "failing_tests": [
         "test_timeout_has_terminal_reward_and_frozen_flags (test_boundaries.BoundaryTests.test_timeout_has_terminal_reward_and_frozen_flags)",
+        "test_clean_boundary_companies_contain_legitimate_refund_links (test_case_improvements.CaseImprovements.test_clean_boundary_companies_contain_legitimate_refund_links)",
         "test_clean (test_core.CoreTests.test_clean)",
         "test_legitimate_payments_either_side_of_close (test_jury_period.JuryPeriodTests.test_legitimate_payments_either_side_of_close) (month='2028-02')",
         "test_legitimate_payments_either_side_of_close (test_jury_period.JuryPeriodTests.test_legitimate_payments_either_side_of_close) (month='2026-12')"
       ],
-      "elapsed_seconds": 3.157,
+      "elapsed_seconds": 4.609,
       "log": "mutation-audit-logs\\incorrect_clean_handling.log",
       "id": "incorrect_clean_handling",
       "file": "auditforge/generator.py",

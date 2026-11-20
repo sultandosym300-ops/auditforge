@@ -1,11 +1,11 @@
 {
-  "version": "1.1.2",
+  "version": "1.1.3",
   "scope": "Additional local fresh-seed sweep, not organizer grading",
   "passed": 64,
-  "elapsed_seconds": 7.680958199998713,
+  "elapsed_seconds": 8.075016099988716,
   "cases": [
     {
-      "seed": 2962781044,
+      "seed": 3564179550,
       "config": {
         "invoices": 40,
         "clean": true,
@@ -18,13 +18,13 @@
         },
         "timezone": "+05:00"
       },
-      "episode_id": "ep-ee19dc8e2ac22827",
+      "episode_id": "ep-b775a04f4cf90f64",
       "issues": 0,
       "valid": true,
       "replay_and_renaming": true
     },
     {
-      "seed": 2965514372,
+      "seed": 4097225624,
       "config": {
         "invoices": 41,
         "clean": false,
@@ -37,13 +37,13 @@
         },
         "timezone": "-00:30"
       },
-      "episode_id": "ep-d5ce5e7bff7f0589",
+      "episode_id": "ep-320dda39969984b0",
       "issues": 6,
       "valid": true,
       "replay_and_renaming": true
     },
     {
-      "seed": 1878079266,
+      "seed": 1550945962,
       "config": {
         "invoices": 50,
         "clean": false,
@@ -56,13 +56,13 @@
         },
         "timezone": "+09:30"
       },
-      "episode_id": "ep-1e866c1957194e9b",
+      "episode_id": "ep-18fe40f4d620e7e5",
       "issues": 6,
       "valid": true,
       "replay_and_renaming": true
     },
     {
-      "seed": 2365770088,
+      "seed": 3040242178,
       "config": {
         "invoices": 84,
         "clean": false,
@@ -75,13 +75,13 @@
         },
         "timezone": "-04:00"
       },
-      "episode_id": "ep-58c67187a5a94b05",
+      "episode_id": "ep-f67414e6ea2be5e3",
       "issues": 6,
       "valid": true,
       "replay_and_renaming": true
     },
     {
-      "seed": 4110093146,
+      "seed": 293754073,
       "config": {
         "invoices": 100,
         "clean": false,
@@ -94,13 +94,13 @@
         },
         "timezone": "+05:00"
       },
-      "episode_id": "ep-e95174d4148f0cd5",
+      "episode_id": "ep-23d331396292540a",
       "issues": 6,
       "valid": true,
       "replay_and_renaming": true
     },
     {
-      "seed": 4181229506,
+      "seed": 2808078705,
       "config": {
         "invoices": 200,
         "clean": false,
@@ -113,13 +113,13 @@
         },
         "timezone": "-00:30"
       },
-      "episode_id": "ep-431900a0d0434fec",
+      "episode_id": "ep-6429776d0e75a47d",
       "issues": 6,
       "valid": true,
       "replay_and_renaming": true
     },
     {
-      "seed": 2269887352,
+      "seed": 1988026585,
       "config": {
         "invoices": 40,
         "clean": false,
@@ -132,13 +132,13 @@
         },
         "timezone": "+09:30"
       },
-      "episode_id": "ep-8d5ad92028ef599e",
+      "episode_id": "ep-e5f529169cbbc644",
       "issues": 6,
       "valid": true,
       "replay_and_renaming": true
     },
     {
-      "seed": 2273894014,
+      "seed": 14363189,
       "config": {
         "invoices": 41,
         "clean": false,
@@ -151,13 +151,13 @@
         },
         "timezone": "-04:00"
       },
-      "episode_id": "ep-297d0ae0035ddc37",
+      "episode_id": "ep-15c0df6adff75cb3",
       "issues": 6,
       "valid": true,
       "replay_and_renaming": true
     },
     {
-      "seed": 786944125,
+      "seed": 2651313120,
       "config": {
         "invoices": 50,
         "clean": true,
@@ -170,13 +170,13 @@
         },
         "timezone": "+05:00"
       },
-      "episode_id": "ep-7f44b18fd5695131",
+      "episode_id": "ep-0cc8a77a6276df8e",
       "issues": 0,
       "valid": true,
       "replay_and_renaming": true
     },
     {
-      "seed": 700538677,
+      "seed": 4241994571,
       "config": {
         "invoices": 84,
         "clean": false,
@@ -189,13 +189,13 @@
         },
         "timezone": "-00:30"
       },
-      "episode_id": "ep-efeda95f97fe1362",
+      "episode_id": "ep-2598668ee1abd8f4",
       "issues": 6,
       "valid": true,
       "replay_and_renaming": true
     },
     {
-      "seed": 548295065,
+      "seed": 2249755005,
       "config": {
         "invoices": 100,
         "clean": false,
@@ -208,13 +208,13 @@
         },
         "timezone": "+09:30"
       },
-      "episode_id": "ep-27507af8893b966d",
+      "episode_id": "ep-6824d84ea025d4b8",
       "issues": 6,
       "valid": true,
       "replay_and_renaming": true
     },
     {
-      "seed": 1689737632,
+      "seed": 2395517561,
       "config": {
         "invoices": 200,
         "clean": false,
@@ -227,13 +227,13 @@
         },
         "timezone": "-04:00"
       },
-      "episode_id": "ep-d7262f613ae96cc0",
+      "episode_id": "ep-537219ba62bea853",
       "issues": 6,
       "valid": true,
       "replay_and_renaming": true
     },
     {
-      "seed": 2851712692,
+      "seed": 1049026555,
       "config": {
         "invoices": 40,
         "clean": false,
@@ -246,13 +246,13 @@
         },
         "timezone": "+05:00"
       },
-      "episode_id": "ep-f292ef20194dcabb",
+      "episode_id": "ep-5d8fea5cb81dc918",
       "issues": 6,
       "valid": true,
       "replay_and_renaming": true
     },
     {
-      "seed": 3225272721,
+      "seed": 3938741485,
       "config": {
         "invoices": 41,
         "clean": false,
@@ -265,13 +265,13 @@
         },
         "timezone": "-00:30"
       },
-      "episode_id": "ep-23647c951f6d8ad8",
+      "episode_id": "ep-36e354f1dc2f2b0c",
       "issues": 6,
       "valid": true,
       "replay_and_renaming": true
     },
     {
-      "seed": 986833269,
+      "seed": 2279492842,
       "config": {
         "invoices": 50,
         "clean": false,
@@ -284,13 +284,13 @@
         },
         "timezone": "+09:30"
       },
-      "episode_id": "ep-7b5bb49a705f5ae3",
+      "episode_id": "ep-c285e93787676099",
       "issues": 6,
       "valid": true,
       "replay_and_renaming": true
     },
     {
-      "seed": 2857982150,
+      "seed": 700783546,
       "config": {
         "invoices": 84,
         "clean": false,
@@ -303,13 +303,13 @@
         },
         "timezone": "-04:00"
       },
-      "episode_id": "ep-2d590183049cebe7",
+      "episode_id": "ep-72a27a239fd6f14c",
       "issues": 6,
       "valid": true,
       "replay_and_renaming": true
     },
     {
-      "seed": 1225032513,
+      "seed": 1532922724,
       "config": {
         "invoices": 100,
         "clean": true,
@@ -322,13 +322,13 @@
         },
         "timezone": "+05:00"
       },
-      "episode_id": "ep-c2287e802ac34451",
+      "episode_id": "ep-d33cb8f1ac9a89eb",
       "issues": 0,
       "valid": true,
       "replay_and_renaming": true
     },
     {
-      "seed": 26893931,
+      "seed": 884923294,
       "config": {
         "invoices": 200,
         "clean": false,
@@ -341,13 +341,13 @@
         },
         "timezone": "-00:30"
       },
-      "episode_id": "ep-9b25b7bae05c9f07",
+      "episode_id": "ep-c1ec2a357452e66f",
       "issues": 6,
       "valid": true,
       "replay_and_renaming": true
     },
     {
-      "seed": 927787713,
+      "seed": 924637605,
       "config": {
         "invoices": 40,
         "clean": false,
@@ -360,13 +360,13 @@
         },
         "timezone": "+09:30"
       },
-      "episode_id": "ep-6cd800a9ad9e0b25",
+      "episode_id": "ep-f256c3db7e6c4ea7",
       "issues": 6,
       "valid": true,
       "replay_and_renaming": true
     },
     {
-      "seed": 1468700481,
+      "seed": 2360668112,
       "config": {
         "invoices": 41,
         "clean": false,
@@ -379,13 +379,13 @@
         },
         "timezone": "-04:00"
       },
-      "episode_id": "ep-05c6b1f898cceb33",
+      "episode_id": "ep-84d9a3556937fa7d",
       "issues": 6,
       "valid": true,
       "replay_and_renaming": true
     },
     {
-      "seed": 1185004604,
+      "seed": 3885920266,
       "config": {
         "invoices": 50,
         "clean": false,
@@ -398,13 +398,13 @@
         },
         "timezone": "+05:00"
       },
-      "episode_id": "ep-d4a92f609e144e61",
+      "episode_id": "ep-a433a412158a8cdc",
       "issues": 6,
       "valid": true,
       "replay_and_renaming": true
     },
     {
-      "seed": 675618888,
+      "seed": 961590287,
       "config": {
         "invoices": 84,
         "clean": false,
@@ -417,13 +417,13 @@
         },
         "timezone": "-00:30"
       },
-      "episode_id": "ep-0a4c76725aa34b25",
+      "episode_id": "ep-9d0bd26989d249a6",
       "issues": 6,
       "valid": true,
       "replay_and_renaming": true
     },
     {
-      "seed": 4178680850,
+      "seed": 2611961266,
       "config": {
         "invoices": 100,
         "clean": false,
@@ -436,13 +436,13 @@
         },
         "timezone": "+09:30"
       },
-      "episode_id": "ep-3a78af6d5f25ec8f",
+      "episode_id": "ep-581b9db9796c3936",
       "issues": 6,
       "valid": true,
       "replay_and_renaming": true
     },
     {
-      "seed": 1695196594,
+      "seed": 2837370713,
       "config": {
         "invoices": 200,
         "clean": false,
@@ -455,13 +455,13 @@
         },
         "timezone": "-04:00"
       },
-      "episode_id": "ep-4220cffb9bb0eb46",
+      "episode_id": "ep-f2042f375409b83a",
       "issues": 6,
       "valid": true,
       "replay_and_renaming": true
     },
     {
-      "seed": 1355787446,
+      "seed": 1675009194,
       "config": {
         "invoices": 40,
         "clean": true,
@@ -474,13 +474,13 @@
         },
         "timezone": "+05:00"
       },
-      "episode_id": "ep-11048ddb13f47445",
+      "episode_id": "ep-69cb9eef9ee675b3",
       "issues": 0,
       "valid": true,
       "replay_and_renaming": true
     },
     {
-      "seed": 1483988747,
+      "seed": 3196732631,
       "config": {
         "invoices": 41,
         "clean": false,
@@ -493,13 +493,13 @@
         },
         "timezone": "-00:30"
       },
-      "episode_id": "ep-46e16716dc411a34",
+      "episode_id": "ep-38c7e9b53d8c35c5",
       "issues": 6,
       "valid": true,
       "replay_and_renaming": true
     },
     {
-      "seed": 534185123,
+      "seed": 2775256085,
       "config": {
         "invoices": 50,
         "clean": false,
@@ -512,13 +512,13 @@
         },
         "timezone": "+09:30"
       },
-      "episode_id": "ep-45259a3074234c6f",
+      "episode_id": "ep-bfa9be494a07a224",
       "issues": 6,
       "valid": true,
       "replay_and_renaming": true
     },
     {
-      "seed": 2179880059,
+      "seed": 2241917390,
       "config": {
         "invoices": 84,
         "clean": false,
@@ -531,13 +531,13 @@
         },
         "timezone": "-04:00"
       },
-      "episode_id": "ep-5e42ede01ca54c6a",
+      "episode_id": "ep-84dcaa146321da8a",
       "issues": 6,
       "valid": true,
       "replay_and_renaming": true
     },
     {
-      "seed": 2901041062,
+      "seed": 3687070454,
       "config": {
         "invoices": 100,
         "clean": false,
@@ -550,13 +550,13 @@
         },
         "timezone": "+05:00"
       },
-      "episode_id": "ep-585a0399c3589d59",
+      "episode_id": "ep-3e3c28924993e07a",
       "issues": 6,
       "valid": true,
       "replay_and_renaming": true
     },
     {
-      "seed": 2116910496,
+      "seed": 1053119878,
       "config": {
         "invoices": 200,
         "clean": false,
@@ -569,13 +569,13 @@
         },
         "timezone": "-00:30"
       },
-      "episode_id": "ep-fe8de023bab5a613",
+      "episode_id": "ep-70ebf0a8cc179c66",
       "issues": 6,
       "valid": true,
       "replay_and_renaming": true
     },
     {
-      "seed": 24417695,
+      "seed": 3611542768,
       "config": {
         "invoices": 40,
         "clean": false,
@@ -588,13 +588,13 @@
         },
         "timezone": "+09:30"
       },
-      "episode_id": "ep-a711240274a3b383",
+      "episode_id": "ep-83e2c25164c2ef9e",
       "issues": 6,
       "valid": true,
       "replay_and_renaming": true
     },
     {
-      "seed": 2107174909,
+      "seed": 1897713212,
       "config": {
         "invoices": 41,
         "clean": false,
@@ -607,13 +607,13 @@
         },
         "timezone": "-04:00"
       },
-      "episode_id": "ep-4694a7ad1cfe5aa2",
+      "episode_id": "ep-e7d0aa24d362ccdb",
       "issues": 6,
       "valid": true,
       "replay_and_renaming": true
     },
     {
-      "seed": 3315303624,
+      "seed": 3508530376,
       "config": {
         "invoices": 50,
         "clean": true,
@@ -626,13 +626,13 @@
         },
         "timezone": "+05:00"
       },
-      "episode_id": "ep-e82f5385643ea3be",
+      "episode_id": "ep-2df641585b6e2c02",
       "issues": 0,
       "valid": true,
       "replay_and_renaming": true
     },
     {
-      "seed": 2446181721,
+      "seed": 1744730651,
       "config": {
         "invoices": 84,
         "clean": false,
@@ -645,13 +645,13 @@
         },
         "timezone": "-00:30"
       },
-      "episode_id": "ep-86a9d45e408d8795",
+      "episode_id": "ep-9cf1b45135d11067",
       "issues": 6,
       "valid": true,
       "replay_and_renaming": true
     },
     {
-      "seed": 2800776684,
+      "seed": 2704491131,
       "config": {
         "invoices": 100,
         "clean": false,
@@ -664,13 +664,13 @@
         },
         "timezone": "+09:30"
       },
-      "episode_id": "ep-789bb2f785e5a4d5",
+      "episode_id": "ep-fd9c0859ebec2a8f",
       "issues": 6,
       "valid": true,
       "replay_and_renaming": true
     },
     {
-      "seed": 1882043201,
+      "seed": 4078806904,
       "config": {
         "invoices": 200,
         "clean": false,
@@ -683,13 +683,13 @@
         },
         "timezone": "-04:00"
       },
-      "episode_id": "ep-2c4fc364406587fa",
+      "episode_id": "ep-1809eaa84a548ff3",
       "issues": 6,
       "valid": true,
       "replay_and_renaming": true
     },
     {
-      "seed": 1504680530,
+      "seed": 2830925414,
       "config": {
         "invoices": 40,
         "clean": false,
@@ -702,13 +702,13 @@
         },
         "timezone": "+05:00"
       },
-      "episode_id": "ep-d035fcbab0b5916e",
+      "episode_id": "ep-c1229a7743b4eef0",
       "issues": 6,
       "valid": true,
       "replay_and_renaming": true
     },
     {
-      "seed": 2775799477,
+      "seed": 3021961298,
       "config": {
         "invoices": 41,
         "clean": false,
@@ -721,13 +721,13 @@
         },
         "timezone": "-00:30"
       },
-      "episode_id": "ep-b54925f607d0cf38",
+      "episode_id": "ep-1c238f55b19643b0",
       "issues": 6,
       "valid": true,
       "replay_and_renaming": true
     },
     {
-      "seed": 218716505,
+      "seed": 1976956014,
       "config": {
         "invoices": 50,
         "clean": false,
@@ -740,13 +740,13 @@
         },
         "timezone": "+09:30"
       },
-      "episode_id": "ep-cc810f7dd054a00a",
+      "episode_id": "ep-5b0d7ae1c325cdf4",
       "issues": 6,
       "valid": true,
       "replay_and_renaming": true
     },
     {
-      "seed": 3023476324,
+      "seed": 238249924,
       "config": {
         "invoices": 84,
         "clean": false,
@@ -759,13 +759,13 @@
         },
         "timezone": "-04:00"
       },
-      "episode_id": "ep-116d265f14241bc5",
+      "episode_id": "ep-77e32a6ae508e6fa",
       "issues": 6,
       "valid": true,
       "replay_and_renaming": true
     },
     {
-      "seed": 2368656590,
+      "seed": 1272622500,
       "config": {
         "invoices": 100,
         "clean": true,
@@ -778,13 +778,13 @@
         },
         "timezone": "+05:00"
       },
-      "episode_id": "ep-7951ecd192fe6fcb",
+      "episode_id": "ep-95e969df89822fc6",
       "issues": 0,
       "valid": true,
       "replay_and_renaming": true
     },
     {
-      "seed": 4180505086,
+      "seed": 2199664714,
       "config": {
         "invoices": 200,
         "clean": false,
@@ -797,13 +797,13 @@
         },
         "timezone": "-00:30"
       },
-      "episode_id": "ep-4fbf92500e4e2097",
+      "episode_id": "ep-a4b6981f1ffe1411",
       "issues": 6,
       "valid": true,
       "replay_and_renaming": true
     },
     {
-      "seed": 3518937743,
+      "seed": 1007933166,
       "config": {
         "invoices": 40,
         "clean": false,
@@ -816,13 +816,13 @@
         },
         "timezone": "+09:30"
       },
-      "episode_id": "ep-6599eb0c48656675",
+      "episode_id": "ep-9d5ee81ccb0880a5",
       "issues": 6,
       "valid": true,
       "replay_and_renaming": true
     },
     {
-      "seed": 1743008350,
+      "seed": 3110254784,
       "config": {
         "invoices": 41,
         "clean": false,
@@ -835,13 +835,13 @@
         },
         "timezone": "-04:00"
       },
-      "episode_id": "ep-38d42504b5fe982c",
+      "episode_id": "ep-ad0ea551fc2b03ac",
       "issues": 6,
       "valid": true,
       "replay_and_renaming": true
     },
     {
-      "seed": 1468397276,
+      "seed": 171861228,
       "config": {
         "invoices": 50,
         "clean": false,
@@ -854,13 +854,13 @@
         },
         "timezone": "+05:00"
       },
-      "episode_id": "ep-e1baf7cad520ae9f",
+      "episode_id": "ep-d30e65002eaccef7",
       "issues": 6,
       "valid": true,
       "replay_and_renaming": true
     },
     {
-      "seed": 2475319323,
+      "seed": 3712140945,
       "config": {
         "invoices": 84,
         "clean": false,
@@ -873,13 +873,13 @@
         },
         "timezone": "-00:30"
       },
-      "episode_id": "ep-730075ea4008a41f",
+      "episode_id": "ep-db9e08cc3106a3f9",
       "issues": 6,
       "valid": true,
       "replay_and_renaming": true
     },
     {
-      "seed": 4180006093,
+      "seed": 2624866237,
       "config": {
         "invoices": 100,
         "clean": false,
@@ -892,13 +892,13 @@
         },
         "timezone": "+09:30"
       },
-      "episode_id": "ep-a90551f5971f5a0c",
+      "episode_id": "ep-c926a6a93cc46f36",
       "issues": 6,
       "valid": true,
       "replay_and_renaming": true
     },
     {
-      "seed": 2702752497,
+      "seed": 3485560695,
       "config": {
         "invoices": 200,
         "clean": false,
@@ -911,13 +911,13 @@
         },
         "timezone": "-04:00"
       },
-      "episode_id": "ep-12cdb8d9eb78c880",
+      "episode_id": "ep-df0009559d27ea08",
       "issues": 6,
       "valid": true,
       "replay_and_renaming": true
     },
     {
-      "seed": 755798100,
+      "seed": 3675856296,
       "config": {
         "invoices": 40,
         "clean": true,
@@ -930,13 +930,13 @@
         },
         "timezone": "+05:00"
       },
-      "episode_id": "ep-18094b561aefa712",
+      "episode_id": "ep-9c9c404add84ca74",
       "issues": 0,
       "valid": true,
       "replay_and_renaming": true
     },
     {
-      "seed": 1754894761,
+      "seed": 2934363969,
       "config": {
         "invoices": 41,
         "clean": false,
@@ -949,13 +949,13 @@
         },
         "timezone": "-00:30"
       },
-      "episode_id": "ep-e91380c97acc5646",
+      "episode_id": "ep-ac397f6257322b94",
       "issues": 6,
       "valid": true,
       "replay_and_renaming": true
     },
     {
-      "seed": 3550538246,
+      "seed": 3164045502,
       "config": {
         "invoices": 50,
         "clean": false,
@@ -968,13 +968,13 @@
         },
         "timezone": "+09:30"
       },
-      "episode_id": "ep-fc5f99ced85b4fe5",
+      "episode_id": "ep-b3a7dc7370d869ca",
       "issues": 6,
       "valid": true,
       "replay_and_renaming": true
     },
     {
-      "seed": 2774038880,
+      "seed": 4272637693,
       "config": {
         "invoices": 84,
         "clean": false,
@@ -987,13 +987,13 @@
         },
         "timezone": "-04:00"
       },
-      "episode_id": "ep-50178edb79ec4da1",
+      "episode_id": "ep-ffc85db94b30f4b6",
       "issues": 6,
       "valid": true,
       "replay_and_renaming": true
     },
     {
-      "seed": 1532006624,
+      "seed": 3171773623,
       "config": {
         "invoices": 100,
         "clean": false,
@@ -1006,13 +1006,13 @@
         },
         "timezone": "+05:00"
       },
-      "episode_id": "ep-af415bb02f43b477",
+      "episode_id": "ep-9eddc3cd4b636771",
       "issues": 6,
       "valid": true,
       "replay_and_renaming": true
     },
     {
-      "seed": 3523184593,
+      "seed": 749158274,
       "config": {
         "invoices": 200,
         "clean": false,
@@ -1025,13 +1025,13 @@
         },
         "timezone": "-00:30"
       },
-      "episode_id": "ep-3bd1d02b0d363741",
+      "episode_id": "ep-c55789a47181bb31",
       "issues": 6,
       "valid": true,
       "replay_and_renaming": true
     },
     {
-      "seed": 2464610703,
+      "seed": 3856441528,
       "config": {
         "invoices": 40,
         "clean": false,
@@ -1044,13 +1044,13 @@
         },
         "timezone": "+09:30"
       },
-      "episode_id": "ep-68fb1260de6363b8",
+      "episode_id": "ep-8fbf6772977fdd91",
       "issues": 6,
       "valid": true,
       "replay_and_renaming": true
     },
     {
-      "seed": 1524257266,
+      "seed": 442833014,
       "config": {
         "invoices": 41,
         "clean": false,
@@ -1063,13 +1063,13 @@
         },
         "timezone": "-04:00"
       },
-      "episode_id": "ep-ca3ddfc8238e6a96",
+      "episode_id": "ep-b579d6a29b804e3d",
       "issues": 6,
       "valid": true,
       "replay_and_renaming": true
     },
     {
-      "seed": 2419406923,
+      "seed": 3876535278,
       "config": {
         "invoices": 50,
         "clean": true,
@@ -1082,13 +1082,13 @@
         },
         "timezone": "+05:00"
       },
-      "episode_id": "ep-2f53b31b78142489",
+      "episode_id": "ep-6b50f2cbe172699f",
       "issues": 0,
       "valid": true,
       "replay_and_renaming": true
     },
     {
-      "seed": 2467817220,
+      "seed": 2279756922,
       "config": {
         "invoices": 84,
         "clean": false,
@@ -1101,13 +1101,13 @@
         },
         "timezone": "-00:30"
       },
-      "episode_id": "ep-4a03f35fef733e04",
+      "episode_id": "ep-6cfe10a086a1f395",
       "issues": 6,
       "valid": true,
       "replay_and_renaming": true
     },
     {
-      "seed": 771538971,
+      "seed": 11346173,
       "config": {
         "invoices": 100,
         "clean": false,
@@ -1120,13 +1120,13 @@
         },
         "timezone": "+09:30"
       },
-      "episode_id": "ep-bd6c73ed09152a85",
+      "episode_id": "ep-3fb2c95517f9d181",
       "issues": 6,
       "valid": true,
       "replay_and_renaming": true
     },
     {
-      "seed": 4150244380,
+      "seed": 999979314,
       "config": {
         "invoices": 200,
         "clean": false,
@@ -1139,13 +1139,13 @@
         },
         "timezone": "-04:00"
       },
-      "episode_id": "ep-cd241bb5b8baee84",
+      "episode_id": "ep-e3a9bbd2f8330fd2",
       "issues": 6,
       "valid": true,
       "replay_and_renaming": true
     },
     {
-      "seed": 2428706964,
+      "seed": 3642413660,
       "config": {
         "invoices": 40,
         "clean": false,
@@ -1158,13 +1158,13 @@
         },
         "timezone": "+05:00"
       },
-      "episode_id": "ep-6528f49b1ddd8a2b",
+      "episode_id": "ep-bff4c2edf5d26d2b",
       "issues": 6,
       "valid": true,
       "replay_and_renaming": true
     },
     {
-      "seed": 4255901052,
+      "seed": 4231377561,
       "config": {
         "invoices": 41,
         "clean": false,
@@ -1177,13 +1177,13 @@
         },
         "timezone": "-00:30"
       },
-      "episode_id": "ep-f5693d11bffd24dc",
+      "episode_id": "ep-c235c6eaeee317fb",
       "issues": 6,
       "valid": true,
       "replay_and_renaming": true
     },
     {
-      "seed": 977487239,
+      "seed": 3880614114,
       "config": {
         "invoices": 50,
         "clean": false,
@@ -1196,13 +1196,13 @@
         },
         "timezone": "+09:30"
       },
-      "episode_id": "ep-51ba03aaa4d2d6ac",
+      "episode_id": "ep-7725f9f667264087",
       "issues": 6,
       "valid": true,
       "replay_and_renaming": true
     },
     {
-      "seed": 2972847599,
+      "seed": 133391826,
       "config": {
         "invoices": 84,
         "clean": false,
@@ -1215,7 +1215,7 @@
         },
         "timezone": "-04:00"
       },
-      "episode_id": "ep-d0a948544adfeae4",
+      "episode_id": "ep-062a968d43f71e1b",
       "issues": 6,
       "valid": true,
       "replay_and_renaming": true

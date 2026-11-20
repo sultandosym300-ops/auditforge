@@ -15,14 +15,14 @@ jobs:
           persist-credentials: false
       - name: Build evaluator and policy images
         run: |
-          docker build -t auditforge-evaluator:1.1.2 .
+          docker build -t auditforge-evaluator:1.1.3 .
           docker build -f Dockerfile.policy -t auditforge-policy:1.0 .
       - name: Verify offline with two CPUs and four GiB
         run: |
-          docker run --rm --network none --cpus 2 --memory 4g auditforge-evaluator:1.1.2 sh -ec '
+          docker run --rm --network none --cpus 2 --memory 4g auditforge-evaluator:1.1.3 sh -ec '
             python -m auditforge.verify
-            python -m auditforge.financial_audit --count 1000 --seed 2026112003
-            python -m auditforge.metamorphic --count 100 --seed 690281
+            python -m auditforge.financial_audit --count 1000 --seed 83800785317120003
+            python -m auditforge.metamorphic --count 100 --seed 91981373007
             cat /sys/fs/cgroup/memory.max /sys/fs/cgroup/memory.peak /sys/fs/cgroup/cpu.max
           '
       - name: Confirm effective policy container boundary

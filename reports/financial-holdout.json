@@ -2,17 +2,17 @@
   "arithmetic": "fractions.Fraction with integer ROUND_HALF_EVEN",
   "auditor_version": "1.0",
   "checked": 128,
-  "clean_episodes": 27,
-  "episode_digest_sha256": "2e0712b18117842a751d08e541908ed2b51645e82a64c8d5e6b8b8f431af269f",
+  "clean_episodes": 26,
+  "episode_digest_sha256": "fe9935c014d8f4857d4e5401b95df1d53bebaebd09009cb50e43881ffcb0f4db",
   "episodes": [
     {
       "config": {
         "boundary_payments": false,
         "clean": true,
         "counts": {
-          "accounting_period": 2,
-          "duplicate_invoice": 0,
-          "fx_conversion": 0,
+          "accounting_period": 3,
+          "duplicate_invoice": 3,
+          "fx_conversion": 2,
           "payment_allocation": 3
         },
         "interaction": 0,
@@ -21,10 +21,32 @@
         "shuffle": false,
         "timezone": "+05:00"
       },
-      "episode_id": "ep-1d8791b272b4ec63",
+      "episode_id": "ep-7fe9c40f3e101e5e",
       "index": 0,
       "issues": 0,
-      "seed": 3105763833708258053,
+      "seed": 10088393693111071303,
+      "valid": true
+    },
+    {
+      "config": {
+        "boundary_payments": false,
+        "clean": false,
+        "counts": {
+          "accounting_period": 3,
+          "duplicate_invoice": 3,
+          "fx_conversion": 1,
+          "payment_allocation": 1
+        },
+        "interaction": 1,
+        "invoices": 41,
+        "period_month": "2026-10",
+        "shuffle": true,
+        "timezone": "+05:00"
+      },
+      "episode_id": "ep-33b74f54f298e9bd",
+      "index": 1,
+      "issues": 8,
+      "seed": 4131008977854815861,
       "valid": true
     },
     {
@@ -34,30 +56,8 @@
         "counts": {
           "accounting_period": 1,
           "duplicate_invoice": 1,
-          "fx_conversion": 1,
-          "payment_allocation": 2
-        },
-        "interaction": 1,
-        "invoices": 41,
-        "period_month": "2026-10",
-        "shuffle": true,
-        "timezone": "+05:00"
-      },
-      "episode_id": "ep-f2faca96e7308cee",
-      "index": 1,
-      "issues": 5,
-      "seed": 4058192427037354386,
-      "valid": true
-    },
-    {
-      "config": {
-        "boundary_payments": false,
-        "clean": false,
-        "counts": {
-          "accounting_period": 1,
-          "duplicate_invoice": 3,
           "fx_conversion": 0,
-          "payment_allocation": 0
+          "payment_allocation": 3
         },
         "interaction": 2,
         "invoices": 50,
@@ -65,10 +65,10 @@
         "shuffle": false,
         "timezone": "+05:00"
       },
-      "episode_id": "ep-4c3d0fc3cf3a7264",
+      "episode_id": "ep-c5b59804f690437b",
       "index": 2,
-      "issues": 4,
-      "seed": 8514155617130716318,
+      "issues": 5,
+      "seed": 13731567141709108744,
       "valid": true
     },
     {
@@ -76,10 +76,10 @@
         "boundary_payments": true,
         "clean": false,
         "counts": {
-          "accounting_period": 1,
-          "duplicate_invoice": 2,
-          "fx_conversion": 2,
-          "payment_allocation": 0
+          "accounting_period": 3,
+          "duplicate_invoice": 1,
+          "fx_conversion": 0,
+          "payment_allocation": 1
         },
         "interaction": 0,
         "invoices": 80,
@@ -87,10 +87,10 @@
         "shuffle": true,
         "timezone": "+05:00"
       },
-      "episode_id": "ep-1ef1caf02c9d9f3a",
+      "episode_id": "ep-076437500d6be1e8",
       "index": 3,
       "issues": 5,
-      "seed": 11286122840033236881,
+      "seed": 1609377337060082045,
       "valid": true
     },
     {
@@ -99,8 +99,8 @@
         "clean": false,
         "counts": {
           "accounting_period": 3,
-          "duplicate_invoice": 1,
-          "fx_conversion": 1,
+          "duplicate_invoice": 3,
+          "fx_conversion": 3,
           "payment_allocation": 1
         },
         "interaction": 1,
@@ -109,10 +109,10 @@
         "shuffle": false,
         "timezone": "+05:00"
       },
-      "episode_id": "ep-ddd64f710754ed94",
+      "episode_id": "ep-c091011d477308da",
       "index": 4,
-      "issues": 6,
-      "seed": 7130663663148745485,
+      "issues": 10,
+      "seed": 812801297167335824,
       "valid": true
     },
     {
@@ -121,8 +121,8 @@
         "clean": true,
         "counts": {
           "accounting_period": 0,
-          "duplicate_invoice": 0,
-          "fx_conversion": 1,
+          "duplicate_invoice": 3,
+          "fx_conversion": 3,
           "payment_allocation": 0
         },
         "interaction": 2,
@@ -131,10 +131,10 @@
         "shuffle": true,
         "timezone": "+05:00"
       },
-      "episode_id": "ep-a89616fc2e19298f",
+      "episode_id": "ep-88c42f43b9cf636b",
       "index": 5,
       "issues": 0,
-      "seed": 9915360817176045732,
+      "seed": 13719885186729838185,
       "valid": true
     },
     {
@@ -142,10 +142,10 @@
         "boundary_payments": false,
         "clean": false,
         "counts": {
-          "accounting_period": 0,
-          "duplicate_invoice": 0,
-          "fx_conversion": 2,
-          "payment_allocation": 2
+          "accounting_period": 3,
+          "duplicate_invoice": 1,
+          "fx_conversion": 0,
+          "payment_allocation": 3
         },
         "interaction": 0,
         "invoices": 40,
@@ -153,10 +153,10 @@
         "shuffle": false,
         "timezone": "-03:30"
       },
-      "episode_id": "ep-907c8597d68a862f",
+      "episode_id": "ep-b7064171cd29d941",
       "index": 6,
-      "issues": 4,
-      "seed": 3011942382343306809,
+      "issues": 7,
+      "seed": 9724431015084005332,
       "valid": true
     },
     {
@@ -164,9 +164,9 @@
         "boundary_payments": false,
         "clean": false,
         "counts": {
-          "accounting_period": 1,
-          "duplicate_invoice": 1,
-          "fx_conversion": 1,
+          "accounting_period": 2,
+          "duplicate_invoice": 3,
+          "fx_conversion": 3,
           "payment_allocation": 1
         },
         "interaction": 1,
@@ -175,10 +175,10 @@
         "shuffle": true,
         "timezone": "-03:30"
       },
-      "episode_id": "ep-9f9c1c2d7f1b9fba",
+      "episode_id": "ep-ce29321f8d4a766b",
       "index": 7,
-      "issues": 4,
-      "seed": 5685650535532991589,
+      "issues": 9,
+      "seed": 14193494094831062151,
       "valid": true
     },
     {
@@ -186,10 +186,10 @@
         "boundary_payments": false,
         "clean": false,
         "counts": {
-          "accounting_period": 1,
-          "duplicate_invoice": 3,
+          "accounting_period": 2,
+          "duplicate_invoice": 1,
           "fx_conversion": 0,
-          "payment_allocation": 0
+          "payment_allocation": 1
         },
         "interaction": 2,
         "invoices": 50,
@@ -197,10 +197,10 @@
         "shuffle": false,
         "timezone": "-03:30"
       },
-      "episode_id": "ep-3137f142f1690251",
+      "episode_id": "ep-997d289014aee37b",
       "index": 8,
       "issues": 4,
-      "seed": 13974188364082646188,
+      "seed": 4772065694766983987,
       "valid": true
     },
     {
@@ -208,10 +208,10 @@
         "boundary_payments": true,
         "clean": false,
         "counts": {
-          "accounting_period": 1,
+          "accounting_period": 0,
           "duplicate_invoice": 1,
-          "fx_conversion": 2,
-          "payment_allocation": 1
+          "fx_conversion": 3,
+          "payment_allocation": 0
         },
         "interaction": 0,
         "invoices": 80,
@@ -219,10 +219,10 @@
         "shuffle": true,
         "timezone": "-03:30"
       },
-      "episode_id": "ep-041592d077826ce8",
+      "episode_id": "ep-b7d70af49f2f1e52",
       "index": 9,
-      "issues": 5,
-      "seed": 925680937501514332,
+      "issues": 4,
+      "seed": 8479744351124811013,
       "valid": true
     },
     {
@@ -230,10 +230,10 @@
         "boundary_payments": true,
         "clean": true,
         "counts": {
-          "accounting_period": 3,
-          "duplicate_invoice": 2,
-          "fx_conversion": 1,
-          "payment_allocation": 1
+          "accounting_period": 2,
+          "duplicate_invoice": 3,
+          "fx_conversion": 0,
+          "payment_allocation": 2
         },
         "interaction": 1,
         "invoices": 120,
@@ -241,10 +241,10 @@
         "shuffle": false,
         "timezone": "-03:30"
       },
-      "episode_id": "ep-2cdb39b6ad07f276",
+      "episode_id": "ep-0c1fea0f64ed1291",
       "index": 10,
       "issues": 0,
-      "seed": 17484117638531823217,
+      "seed": 8224985934133982287,
       "valid": true
     },
     {
@@ -254,7 +254,7 @@
         "counts": {
           "accounting_period": 2,
           "duplicate_invoice": 3,
-          "fx_conversion": 3,
+          "fx_conversion": 0,
           "payment_allocation": 2
         },
         "interaction": 2,
@@ -263,10 +263,10 @@
         "shuffle": true,
         "timezone": "-03:30"
       },
-      "episode_id": "ep-7a61fb86ee2b6399",
+      "episode_id": "ep-00db6f095b2e06e2",
       "index": 11,
-      "issues": 10,
-      "seed": 16345254378372397784,
+      "issues": 7,
+      "seed": 10233024033466892173,
       "valid": true
     },
     {
@@ -274,10 +274,10 @@
         "boundary_payments": false,
         "clean": false,
         "counts": {
-          "accounting_period": 3,
-          "duplicate_invoice": 0,
+          "accounting_period": 0,
+          "duplicate_invoice": 2,
           "fx_conversion": 1,
-          "payment_allocation": 3
+          "payment_allocation": 2
         },
         "interaction": 0,
         "invoices": 40,
@@ -285,10 +285,10 @@
         "shuffle": false,
         "timezone": "+05:45"
       },
-      "episode_id": "ep-71951ddaa3df3773",
+      "episode_id": "ep-e4d3cdfc5c1f3e0f",
       "index": 12,
-      "issues": 7,
-      "seed": 4628513857074169707,
+      "issues": 5,
+      "seed": 11877093525840476751,
       "valid": true
     },
     {
@@ -296,9 +296,9 @@
         "boundary_payments": false,
         "clean": false,
         "counts": {
-          "accounting_period": 3,
-          "duplicate_invoice": 2,
-          "fx_conversion": 2,
+          "accounting_period": 2,
+          "duplicate_invoice": 1,
+          "fx_conversion": 1,
           "payment_allocation": 1
         },
         "interaction": 1,
@@ -307,10 +307,10 @@
         "shuffle": true,
         "timezone": "+05:45"
       },
-      "episode_id": "ep-1f1ee108802ef4e0",
+      "episode_id": "ep-164a33acbcf37a03",
       "index": 13,
-      "issues": 8,
-      "seed": 2227680237601694785,
+      "issues": 5,
+      "seed": 8571172216209322906,
       "valid": true
     },
     {
@@ -319,9 +319,9 @@
         "clean": false,
         "counts": {
           "accounting_period": 1,
-          "duplicate_invoice": 3,
-          "fx_conversion": 0,
-          "payment_allocation": 3
+          "duplicate_invoice": 1,
+          "fx_conversion": 1,
+          "payment_allocation": 1
         },
         "interaction": 2,
         "invoices": 50,
@@ -329,10 +329,10 @@
         "shuffle": false,
         "timezone": "+05:45"
       },
-      "episode_id": "ep-a77539fc59b6d215",
+      "episode_id": "ep-a005d07af5e018a5",
       "index": 14,
-      "issues": 7,
-      "seed": 14866385900436648950,
+      "issues": 4,
+      "seed": 6372450294628215372,
       "valid": true
     },
     {
@@ -340,10 +340,10 @@
         "boundary_payments": true,
         "clean": true,
         "counts": {
-          "accounting_period": 1,
+          "accounting_period": 2,
           "duplicate_invoice": 1,
-          "fx_conversion": 3,
-          "payment_allocation": 3
+          "fx_conversion": 0,
+          "payment_allocation": 1
         },
         "interaction": 0,
         "invoices": 80,
@@ -351,10 +351,10 @@
         "shuffle": true,
         "timezone": "+05:45"
       },
-      "episode_id": "ep-a8ef36d48d155acb",
+      "episode_id": "ep-9ab5679635cf9e8a",
       "index": 15,
       "issues": 0,
-      "seed": 2123028100189640627,
+      "seed": 12634073956633753636,
       "valid": true
     },
     {
@@ -362,9 +362,9 @@
         "boundary_payments": true,
         "clean": false,
         "counts": {
-          "accounting_period": 1,
+          "accounting_period": 3,
           "duplicate_invoice": 3,
-          "fx_conversion": 2,
+          "fx_conversion": 1,
           "payment_allocation": 1
         },
         "interaction": 1,
@@ -373,10 +373,10 @@
         "shuffle": false,
         "timezone": "+05:45"
       },
-      "episode_id": "ep-8a13341ad79c6f70",
+      "episode_id": "ep-0cba108d1c8be58e",
       "index": 16,
-      "issues": 7,
-      "seed": 8117698223580460962,
+      "issues": 8,
+      "seed": 8318272381972196583,
       "valid": true
     },
     {
@@ -384,10 +384,10 @@
         "boundary_payments": true,
         "clean": false,
         "counts": {
-          "accounting_period": 3,
-          "duplicate_invoice": 3,
-          "fx_conversion": 0,
-          "payment_allocation": 2
+          "accounting_period": 1,
+          "duplicate_invoice": 1,
+          "fx_conversion": 2,
+          "payment_allocation": 1
         },
         "interaction": 2,
         "invoices": 200,
@@ -395,32 +395,10 @@
         "shuffle": true,
         "timezone": "+05:45"
       },
-      "episode_id": "ep-07d1cb2b0505001e",
+      "episode_id": "ep-eb328afe039bd12b",
       "index": 17,
-      "issues": 8,
-      "seed": 5454322108822620875,
-      "valid": true
-    },
-    {
-      "config": {
-        "boundary_payments": false,
-        "clean": false,
-        "counts": {
-          "accounting_period": 3,
-          "duplicate_invoice": 1,
-          "fx_conversion": 2,
-          "payment_allocation": 1
-        },
-        "interaction": 0,
-        "invoices": 40,
-        "period_month": "2026-10",
-        "shuffle": false,
-        "timezone": "+00:00"
-      },
-      "episode_id": "ep-adc1e5e3c473b93f",
-      "index": 18,
-      "issues": 7,
-      "seed": 7116124141251352009,
+      "issues": 5,
+      "seed": 13826075852985726093,
       "valid": true
     },
     {
@@ -430,6 +408,28 @@
         "counts": {
           "accounting_period": 1,
           "duplicate_invoice": 1,
+          "fx_conversion": 3,
+          "payment_allocation": 3
+        },
+        "interaction": 0,
+        "invoices": 40,
+        "period_month": "2026-10",
+        "shuffle": false,
+        "timezone": "+00:00"
+      },
+      "episode_id": "ep-3fcb42786b49dec9",
+      "index": 18,
+      "issues": 8,
+      "seed": 15419363109907168833,
+      "valid": true
+    },
+    {
+      "config": {
+        "boundary_payments": false,
+        "clean": false,
+        "counts": {
+          "accounting_period": 2,
+          "duplicate_invoice": 2,
           "fx_conversion": 1,
           "payment_allocation": 1
         },
@@ -439,10 +439,10 @@
         "shuffle": true,
         "timezone": "+00:00"
       },
-      "episode_id": "ep-87d58585b790ef0b",
+      "episode_id": "ep-d8065ec55b5d1cf0",
       "index": 19,
-      "issues": 4,
-      "seed": 13693829001260785895,
+      "issues": 6,
+      "seed": 9472591366275017491,
       "valid": true
     },
     {
@@ -450,10 +450,10 @@
         "boundary_payments": false,
         "clean": true,
         "counts": {
-          "accounting_period": 3,
+          "accounting_period": 1,
           "duplicate_invoice": 2,
-          "fx_conversion": 1,
-          "payment_allocation": 3
+          "fx_conversion": 0,
+          "payment_allocation": 2
         },
         "interaction": 2,
         "invoices": 50,
@@ -461,10 +461,10 @@
         "shuffle": false,
         "timezone": "+00:00"
       },
-      "episode_id": "ep-70a283666715ed5e",
+      "episode_id": "ep-23d8f3091eb1ffbd",
       "index": 20,
       "issues": 0,
-      "seed": 2729272878413525119,
+      "seed": 17300832756655746441,
       "valid": true
     },
     {
@@ -472,8 +472,8 @@
         "boundary_payments": true,
         "clean": false,
         "counts": {
-          "accounting_period": 0,
-          "duplicate_invoice": 0,
+          "accounting_period": 3,
+          "duplicate_invoice": 1,
           "fx_conversion": 1,
           "payment_allocation": 2
         },
@@ -483,10 +483,32 @@
         "shuffle": true,
         "timezone": "+00:00"
       },
-      "episode_id": "ep-f194b0801c6ca1b8",
+      "episode_id": "ep-6b496b42e98a9d47",
       "index": 21,
-      "issues": 3,
-      "seed": 1702604582374502915,
+      "issues": 7,
+      "seed": 11771510742590824006,
+      "valid": true
+    },
+    {
+      "config": {
+        "boundary_payments": true,
+        "clean": false,
+        "counts": {
+          "accounting_period": 1,
+          "duplicate_invoice": 3,
+          "fx_conversion": 2,
+          "payment_allocation": 1
+        },
+        "interaction": 1,
+        "invoices": 120,
+        "period_month": "2026-10",
+        "shuffle": false,
+        "timezone": "+00:00"
+      },
+      "episode_id": "ep-4bdd24883072f3dc",
+      "index": 22,
+      "issues": 7,
+      "seed": 6253009254461536264,
       "valid": true
     },
     {
@@ -496,29 +518,7 @@
         "counts": {
           "accounting_period": 1,
           "duplicate_invoice": 2,
-          "fx_conversion": 1,
-          "payment_allocation": 2
-        },
-        "interaction": 1,
-        "invoices": 120,
-        "period_month": "2026-10",
-        "shuffle": false,
-        "timezone": "+00:00"
-      },
-      "episode_id": "ep-a0a7c0585879fe9a",
-      "index": 22,
-      "issues": 6,
-      "seed": 10299531385031038962,
-      "valid": true
-    },
-    {
-      "config": {
-        "boundary_payments": true,
-        "clean": false,
-        "counts": {
-          "accounting_period": 1,
-          "duplicate_invoice": 1,
-          "fx_conversion": 0,
+          "fx_conversion": 2,
           "payment_allocation": 0
         },
         "interaction": 2,
@@ -527,10 +527,10 @@
         "shuffle": true,
         "timezone": "+00:00"
       },
-      "episode_id": "ep-161973d004e3e90e",
+      "episode_id": "ep-202562c8b4f7468b",
       "index": 23,
-      "issues": 2,
-      "seed": 14014624170214249670,
+      "issues": 5,
+      "seed": 7337308667215990189,
       "valid": true
     },
     {
@@ -538,10 +538,10 @@
         "boundary_payments": false,
         "clean": false,
         "counts": {
-          "accounting_period": 1,
-          "duplicate_invoice": 2,
+          "accounting_period": 2,
+          "duplicate_invoice": 3,
           "fx_conversion": 0,
-          "payment_allocation": 3
+          "payment_allocation": 1
         },
         "interaction": 0,
         "invoices": 40,
@@ -549,10 +549,10 @@
         "shuffle": false,
         "timezone": "-12:00"
       },
-      "episode_id": "ep-3486bc90bfa89ee2",
+      "episode_id": "ep-3bdd0ac15c255a08",
       "index": 24,
       "issues": 6,
-      "seed": 6164995314817208261,
+      "seed": 888634613957242401,
       "valid": true
     },
     {
@@ -560,10 +560,10 @@
         "boundary_payments": false,
         "clean": true,
         "counts": {
-          "accounting_period": 2,
-          "duplicate_invoice": 0,
-          "fx_conversion": 2,
-          "payment_allocation": 1
+          "accounting_period": 0,
+          "duplicate_invoice": 3,
+          "fx_conversion": 1,
+          "payment_allocation": 2
         },
         "interaction": 1,
         "invoices": 41,
@@ -571,10 +571,10 @@
         "shuffle": true,
         "timezone": "-12:00"
       },
-      "episode_id": "ep-0898a6a5bb1d2533",
+      "episode_id": "ep-b56eae03bd9e1705",
       "index": 25,
       "issues": 0,
-      "seed": 17311058859307675227,
+      "seed": 3386089879475859088,
       "valid": true
     },
     {
@@ -582,10 +582,10 @@
         "boundary_payments": false,
         "clean": false,
         "counts": {
-          "accounting_period": 1,
-          "duplicate_invoice": 3,
-          "fx_conversion": 2,
-          "payment_allocation": 1
+          "accounting_period": 2,
+          "duplicate_invoice": 1,
+          "fx_conversion": 3,
+          "payment_allocation": 2
         },
         "interaction": 2,
         "invoices": 50,
@@ -593,10 +593,10 @@
         "shuffle": false,
         "timezone": "-12:00"
       },
-      "episode_id": "ep-647312c1772096e0",
+      "episode_id": "ep-e5516dc5dc20ee70",
       "index": 26,
-      "issues": 7,
-      "seed": 8430777193136387382,
+      "issues": 8,
+      "seed": 10602167758545328097,
       "valid": true
     },
     {
@@ -605,9 +605,9 @@
         "clean": false,
         "counts": {
           "accounting_period": 0,
-          "duplicate_invoice": 0,
-          "fx_conversion": 0,
-          "payment_allocation": 0
+          "duplicate_invoice": 3,
+          "fx_conversion": 3,
+          "payment_allocation": 1
         },
         "interaction": 0,
         "invoices": 80,
@@ -615,10 +615,32 @@
         "shuffle": true,
         "timezone": "-12:00"
       },
-      "episode_id": "ep-4398d9b3b5e7ca7c",
+      "episode_id": "ep-2e4b784886499a34",
       "index": 27,
-      "issues": 0,
-      "seed": 15198422940619094017,
+      "issues": 7,
+      "seed": 891022564000067171,
+      "valid": true
+    },
+    {
+      "config": {
+        "boundary_payments": true,
+        "clean": false,
+        "counts": {
+          "accounting_period": 3,
+          "duplicate_invoice": 3,
+          "fx_conversion": 1,
+          "payment_allocation": 3
+        },
+        "interaction": 1,
+        "invoices": 120,
+        "period_month": "2026-10",
+        "shuffle": false,
+        "timezone": "-12:00"
+      },
+      "episode_id": "ep-09861a4b6123fe29",
+      "index": 28,
+      "issues": 10,
+      "seed": 12943827090672200605,
       "valid": true
     },
     {
@@ -628,30 +650,8 @@
         "counts": {
           "accounting_period": 3,
           "duplicate_invoice": 1,
-          "fx_conversion": 2,
-          "payment_allocation": 1
-        },
-        "interaction": 1,
-        "invoices": 120,
-        "period_month": "2026-10",
-        "shuffle": false,
-        "timezone": "-12:00"
-      },
-      "episode_id": "ep-ca100fc5aa4b0545",
-      "index": 28,
-      "issues": 7,
-      "seed": 15542063464893276339,
-      "valid": true
-    },
-    {
-      "config": {
-        "boundary_payments": true,
-        "clean": false,
-        "counts": {
-          "accounting_period": 1,
-          "duplicate_invoice": 2,
           "fx_conversion": 1,
-          "payment_allocation": 3
+          "payment_allocation": 2
         },
         "interaction": 2,
         "invoices": 200,
@@ -659,10 +659,10 @@
         "shuffle": true,
         "timezone": "-12:00"
       },
-      "episode_id": "ep-16eca13134e53b66",
+      "episode_id": "ep-69ffff15624bb427",
       "index": 29,
       "issues": 7,
-      "seed": 7725991541215291790,
+      "seed": 16467191186506211659,
       "valid": true
     },
     {
@@ -670,9 +670,9 @@
         "boundary_payments": false,
         "clean": true,
         "counts": {
-          "accounting_period": 3,
-          "duplicate_invoice": 0,
-          "fx_conversion": 0,
+          "accounting_period": 1,
+          "duplicate_invoice": 1,
+          "fx_conversion": 2,
           "payment_allocation": 2
         },
         "interaction": 0,
@@ -681,10 +681,10 @@
         "shuffle": false,
         "timezone": "+14:00"
       },
-      "episode_id": "ep-f35077dbd3918c92",
+      "episode_id": "ep-17aa5058031f88ad",
       "index": 30,
       "issues": 0,
-      "seed": 6920990638582504656,
+      "seed": 8442434951939859981,
       "valid": true
     },
     {
@@ -694,8 +694,8 @@
         "counts": {
           "accounting_period": 3,
           "duplicate_invoice": 1,
-          "fx_conversion": 2,
-          "payment_allocation": 1
+          "fx_conversion": 1,
+          "payment_allocation": 2
         },
         "interaction": 1,
         "invoices": 41,
@@ -703,10 +703,10 @@
         "shuffle": true,
         "timezone": "+14:00"
       },
-      "episode_id": "ep-29ef5726a3f0bc01",
+      "episode_id": "ep-35f115403daa6408",
       "index": 31,
       "issues": 7,
-      "seed": 17250014609967643039,
+      "seed": 8152939846416633910,
       "valid": true
     },
     {
@@ -715,9 +715,9 @@
         "clean": false,
         "counts": {
           "accounting_period": 1,
-          "duplicate_invoice": 2,
-          "fx_conversion": 1,
-          "payment_allocation": 1
+          "duplicate_invoice": 3,
+          "fx_conversion": 2,
+          "payment_allocation": 3
         },
         "interaction": 2,
         "invoices": 50,
@@ -725,10 +725,10 @@
         "shuffle": false,
         "timezone": "+14:00"
       },
-      "episode_id": "ep-cb4a6ee9215ccde2",
+      "episode_id": "ep-c0f707c25a1d8e88",
       "index": 32,
-      "issues": 5,
-      "seed": 12007515660251937253,
+      "issues": 9,
+      "seed": 18378375961351083145,
       "valid": true
     },
     {
@@ -736,10 +736,10 @@
         "boundary_payments": true,
         "clean": false,
         "counts": {
-          "accounting_period": 0,
+          "accounting_period": 2,
           "duplicate_invoice": 2,
           "fx_conversion": 1,
-          "payment_allocation": 3
+          "payment_allocation": 2
         },
         "interaction": 0,
         "invoices": 80,
@@ -747,10 +747,10 @@
         "shuffle": true,
         "timezone": "+14:00"
       },
-      "episode_id": "ep-9778724b2ecd088d",
+      "episode_id": "ep-75750bf328f60ae5",
       "index": 33,
-      "issues": 6,
-      "seed": 6046666580198488285,
+      "issues": 7,
+      "seed": 11672502265428044476,
       "valid": true
     },
     {
@@ -760,8 +760,8 @@
         "counts": {
           "accounting_period": 1,
           "duplicate_invoice": 1,
-          "fx_conversion": 2,
-          "payment_allocation": 1
+          "fx_conversion": 3,
+          "payment_allocation": 2
         },
         "interaction": 1,
         "invoices": 120,
@@ -769,10 +769,10 @@
         "shuffle": false,
         "timezone": "+14:00"
       },
-      "episode_id": "ep-10db7ac61f0fb002",
+      "episode_id": "ep-0cb53ef28fbb8b11",
       "index": 34,
-      "issues": 5,
-      "seed": 3381937903502423924,
+      "issues": 7,
+      "seed": 7959665110615971684,
       "valid": true
     },
     {
@@ -780,10 +780,10 @@
         "boundary_payments": true,
         "clean": true,
         "counts": {
-          "accounting_period": 2,
-          "duplicate_invoice": 1,
-          "fx_conversion": 2,
-          "payment_allocation": 1
+          "accounting_period": 0,
+          "duplicate_invoice": 3,
+          "fx_conversion": 0,
+          "payment_allocation": 3
         },
         "interaction": 2,
         "invoices": 200,
@@ -791,32 +791,10 @@
         "shuffle": true,
         "timezone": "+14:00"
       },
-      "episode_id": "ep-7034da50f84bd2b0",
+      "episode_id": "ep-dd11aaef080e2d22",
       "index": 35,
       "issues": 0,
-      "seed": 18025313931015700135,
-      "valid": true
-    },
-    {
-      "config": {
-        "boundary_payments": false,
-        "clean": false,
-        "counts": {
-          "accounting_period": 0,
-          "duplicate_invoice": 1,
-          "fx_conversion": 0,
-          "payment_allocation": 2
-        },
-        "interaction": 0,
-        "invoices": 40,
-        "period_month": "2024-02",
-        "shuffle": false,
-        "timezone": "+05:00"
-      },
-      "episode_id": "ep-05f0ba83589dccd1",
-      "index": 36,
-      "issues": 3,
-      "seed": 11023679711890956666,
+      "seed": 3550823398855015697,
       "valid": true
     },
     {
@@ -825,20 +803,20 @@
         "clean": false,
         "counts": {
           "accounting_period": 1,
-          "duplicate_invoice": 3,
-          "fx_conversion": 2,
+          "duplicate_invoice": 2,
+          "fx_conversion": 3,
           "payment_allocation": 1
         },
-        "interaction": 1,
-        "invoices": 41,
+        "interaction": 0,
+        "invoices": 40,
         "period_month": "2024-02",
-        "shuffle": true,
+        "shuffle": false,
         "timezone": "+05:00"
       },
-      "episode_id": "ep-0f46afcbd801d1f3",
-      "index": 37,
+      "episode_id": "ep-f33305bf70ae9c47",
+      "index": 36,
       "issues": 7,
-      "seed": 10576873695126463529,
+      "seed": 3852432631648841691,
       "valid": true
     },
     {
@@ -847,9 +825,31 @@
         "clean": false,
         "counts": {
           "accounting_period": 2,
-          "duplicate_invoice": 1,
+          "duplicate_invoice": 2,
+          "fx_conversion": 1,
+          "payment_allocation": 1
+        },
+        "interaction": 1,
+        "invoices": 41,
+        "period_month": "2024-02",
+        "shuffle": true,
+        "timezone": "+05:00"
+      },
+      "episode_id": "ep-1bce898f334b77da",
+      "index": 37,
+      "issues": 6,
+      "seed": 1460342723069380896,
+      "valid": true
+    },
+    {
+      "config": {
+        "boundary_payments": false,
+        "clean": false,
+        "counts": {
+          "accounting_period": 2,
+          "duplicate_invoice": 2,
           "fx_conversion": 2,
-          "payment_allocation": 2
+          "payment_allocation": 0
         },
         "interaction": 2,
         "invoices": 50,
@@ -857,10 +857,10 @@
         "shuffle": false,
         "timezone": "+05:00"
       },
-      "episode_id": "ep-b826ec9667ef4fdd",
+      "episode_id": "ep-553d700bde8656bc",
       "index": 38,
-      "issues": 7,
-      "seed": 11353357610508301319,
+      "issues": 6,
+      "seed": 781974600507357180,
       "valid": true
     },
     {
@@ -868,10 +868,10 @@
         "boundary_payments": true,
         "clean": false,
         "counts": {
-          "accounting_period": 0,
+          "accounting_period": 1,
           "duplicate_invoice": 3,
-          "fx_conversion": 3,
-          "payment_allocation": 1
+          "fx_conversion": 2,
+          "payment_allocation": 3
         },
         "interaction": 0,
         "invoices": 80,
@@ -879,10 +879,10 @@
         "shuffle": true,
         "timezone": "+05:00"
       },
-      "episode_id": "ep-82242298078f4658",
+      "episode_id": "ep-d053d0753ccaee36",
       "index": 39,
-      "issues": 7,
-      "seed": 10673878748514229358,
+      "issues": 9,
+      "seed": 5812148541875059765,
       "valid": true
     },
     {
@@ -890,9 +890,9 @@
         "boundary_payments": true,
         "clean": true,
         "counts": {
-          "accounting_period": 3,
-          "duplicate_invoice": 1,
-          "fx_conversion": 1,
+          "accounting_period": 0,
+          "duplicate_invoice": 0,
+          "fx_conversion": 3,
           "payment_allocation": 3
         },
         "interaction": 1,
@@ -901,10 +901,10 @@
         "shuffle": false,
         "timezone": "+05:00"
       },
-      "episode_id": "ep-2b075842e4815a6e",
+      "episode_id": "ep-a5c315af4247239f",
       "index": 40,
       "issues": 0,
-      "seed": 18201916941790465631,
+      "seed": 12492079558586269123,
       "valid": true
     },
     {
@@ -912,9 +912,9 @@
         "boundary_payments": true,
         "clean": false,
         "counts": {
-          "accounting_period": 1,
-          "duplicate_invoice": 3,
-          "fx_conversion": 3,
+          "accounting_period": 3,
+          "duplicate_invoice": 2,
+          "fx_conversion": 0,
           "payment_allocation": 0
         },
         "interaction": 2,
@@ -923,10 +923,10 @@
         "shuffle": true,
         "timezone": "+05:00"
       },
-      "episode_id": "ep-20a883b92566cc35",
+      "episode_id": "ep-3ab89aaa629aebfa",
       "index": 41,
-      "issues": 7,
-      "seed": 17645493689075075005,
+      "issues": 5,
+      "seed": 16740425022186222564,
       "valid": true
     },
     {
@@ -934,10 +934,10 @@
         "boundary_payments": false,
         "clean": false,
         "counts": {
-          "accounting_period": 2,
-          "duplicate_invoice": 3,
-          "fx_conversion": 0,
-          "payment_allocation": 2
+          "accounting_period": 0,
+          "duplicate_invoice": 2,
+          "fx_conversion": 1,
+          "payment_allocation": 0
         },
         "interaction": 0,
         "invoices": 40,
@@ -945,10 +945,10 @@
         "shuffle": false,
         "timezone": "-03:30"
       },
-      "episode_id": "ep-d068ddf61e731923",
+      "episode_id": "ep-8e69f08da7889d52",
       "index": 42,
-      "issues": 7,
-      "seed": 12729823305185409899,
+      "issues": 3,
+      "seed": 11833727714771745671,
       "valid": true
     },
     {
@@ -958,7 +958,7 @@
         "counts": {
           "accounting_period": 1,
           "duplicate_invoice": 1,
-          "fx_conversion": 1,
+          "fx_conversion": 2,
           "payment_allocation": 1
         },
         "interaction": 1,
@@ -967,10 +967,10 @@
         "shuffle": true,
         "timezone": "-03:30"
       },
-      "episode_id": "ep-4f888ed622cfe16f",
+      "episode_id": "ep-0ef2a1c628e899b5",
       "index": 43,
-      "issues": 4,
-      "seed": 1136590979185871927,
+      "issues": 5,
+      "seed": 7935909017624883716,
       "valid": true
     },
     {
@@ -978,10 +978,10 @@
         "boundary_payments": false,
         "clean": false,
         "counts": {
-          "accounting_period": 2,
+          "accounting_period": 3,
           "duplicate_invoice": 3,
           "fx_conversion": 0,
-          "payment_allocation": 3
+          "payment_allocation": 2
         },
         "interaction": 2,
         "invoices": 50,
@@ -989,10 +989,10 @@
         "shuffle": false,
         "timezone": "-03:30"
       },
-      "episode_id": "ep-f50ec87a69aa020f",
+      "episode_id": "ep-1ab3b63f151a2d59",
       "index": 44,
       "issues": 8,
-      "seed": 14858863545067717408,
+      "seed": 17018596430157257069,
       "valid": true
     },
     {
@@ -1001,8 +1001,8 @@
         "clean": true,
         "counts": {
           "accounting_period": 2,
-          "duplicate_invoice": 1,
-          "fx_conversion": 3,
+          "duplicate_invoice": 0,
+          "fx_conversion": 1,
           "payment_allocation": 1
         },
         "interaction": 0,
@@ -1011,10 +1011,10 @@
         "shuffle": true,
         "timezone": "-03:30"
       },
-      "episode_id": "ep-8fbcd16681caf0e7",
+      "episode_id": "ep-4acf4339e3bda7ba",
       "index": 45,
       "issues": 0,
-      "seed": 15029231038630083226,
+      "seed": 8374075486638881614,
       "valid": true
     },
     {
@@ -1022,10 +1022,10 @@
         "boundary_payments": true,
         "clean": false,
         "counts": {
-          "accounting_period": 1,
-          "duplicate_invoice": 1,
-          "fx_conversion": 2,
-          "payment_allocation": 2
+          "accounting_period": 2,
+          "duplicate_invoice": 3,
+          "fx_conversion": 1,
+          "payment_allocation": 3
         },
         "interaction": 1,
         "invoices": 120,
@@ -1033,10 +1033,10 @@
         "shuffle": false,
         "timezone": "-03:30"
       },
-      "episode_id": "ep-275d6a606ee65a88",
+      "episode_id": "ep-d238608dc8147be5",
       "index": 46,
-      "issues": 6,
-      "seed": 6757907664827377043,
+      "issues": 9,
+      "seed": 5280329805570654922,
       "valid": true
     },
     {
@@ -1046,8 +1046,8 @@
         "counts": {
           "accounting_period": 1,
           "duplicate_invoice": 1,
-          "fx_conversion": 2,
-          "payment_allocation": 1
+          "fx_conversion": 0,
+          "payment_allocation": 3
         },
         "interaction": 2,
         "invoices": 200,
@@ -1055,10 +1055,10 @@
         "shuffle": true,
         "timezone": "-03:30"
       },
-      "episode_id": "ep-544070ab0867ee19",
+      "episode_id": "ep-a0e5994034f54478",
       "index": 47,
       "issues": 5,
-      "seed": 14726266012599697821,
+      "seed": 13346479928587151822,
       "valid": true
     },
     {
@@ -1066,10 +1066,10 @@
         "boundary_payments": false,
         "clean": false,
         "counts": {
-          "accounting_period": 0,
-          "duplicate_invoice": 1,
-          "fx_conversion": 2,
-          "payment_allocation": 0
+          "accounting_period": 2,
+          "duplicate_invoice": 0,
+          "fx_conversion": 0,
+          "payment_allocation": 3
         },
         "interaction": 0,
         "invoices": 40,
@@ -1077,10 +1077,10 @@
         "shuffle": false,
         "timezone": "+05:45"
       },
-      "episode_id": "ep-eed5fd55c93fc1ef",
+      "episode_id": "ep-7ff6d1aa8347fcc1",
       "index": 48,
-      "issues": 3,
-      "seed": 12606348571773152173,
+      "issues": 5,
+      "seed": 14224574123247043857,
       "valid": true
     },
     {
@@ -1088,10 +1088,10 @@
         "boundary_payments": false,
         "clean": false,
         "counts": {
-          "accounting_period": 3,
+          "accounting_period": 2,
           "duplicate_invoice": 2,
-          "fx_conversion": 2,
-          "payment_allocation": 1
+          "fx_conversion": 1,
+          "payment_allocation": 2
         },
         "interaction": 1,
         "invoices": 41,
@@ -1099,10 +1099,10 @@
         "shuffle": true,
         "timezone": "+05:45"
       },
-      "episode_id": "ep-28fa3804466a2b85",
+      "episode_id": "ep-cdbf016c0b5f22b1",
       "index": 49,
-      "issues": 8,
-      "seed": 5827796104894271098,
+      "issues": 7,
+      "seed": 4339222601901494612,
       "valid": true
     },
     {
@@ -1110,10 +1110,10 @@
         "boundary_payments": false,
         "clean": true,
         "counts": {
-          "accounting_period": 1,
-          "duplicate_invoice": 2,
-          "fx_conversion": 2,
-          "payment_allocation": 3
+          "accounting_period": 0,
+          "duplicate_invoice": 0,
+          "fx_conversion": 0,
+          "payment_allocation": 2
         },
         "interaction": 2,
         "invoices": 50,
@@ -1121,10 +1121,10 @@
         "shuffle": false,
         "timezone": "+05:45"
       },
-      "episode_id": "ep-9625a4eb67284dab",
+      "episode_id": "ep-2941bb30cf4bc159",
       "index": 50,
       "issues": 0,
-      "seed": 415376062141572917,
+      "seed": 9901787482727434875,
       "valid": true
     },
     {
@@ -1133,9 +1133,9 @@
         "clean": false,
         "counts": {
           "accounting_period": 1,
-          "duplicate_invoice": 0,
-          "fx_conversion": 2,
-          "payment_allocation": 2
+          "duplicate_invoice": 3,
+          "fx_conversion": 3,
+          "payment_allocation": 3
         },
         "interaction": 0,
         "invoices": 80,
@@ -1143,10 +1143,10 @@
         "shuffle": true,
         "timezone": "+05:45"
       },
-      "episode_id": "ep-c4bb478150e3b2c9",
+      "episode_id": "ep-58b28490c135a514",
       "index": 51,
-      "issues": 5,
-      "seed": 806846659740641440,
+      "issues": 10,
+      "seed": 6647079968259484545,
       "valid": true
     },
     {
@@ -1154,10 +1154,10 @@
         "boundary_payments": true,
         "clean": false,
         "counts": {
-          "accounting_period": 2,
-          "duplicate_invoice": 3,
-          "fx_conversion": 1,
-          "payment_allocation": 1
+          "accounting_period": 1,
+          "duplicate_invoice": 1,
+          "fx_conversion": 3,
+          "payment_allocation": 3
         },
         "interaction": 1,
         "invoices": 120,
@@ -1165,10 +1165,10 @@
         "shuffle": false,
         "timezone": "+05:45"
       },
-      "episode_id": "ep-8f4ecc35efd99bb9",
+      "episode_id": "ep-d19dffc20cac306b",
       "index": 52,
-      "issues": 7,
-      "seed": 4597100394407802709,
+      "issues": 8,
+      "seed": 16181583894748666390,
       "valid": true
     },
     {
@@ -1176,10 +1176,10 @@
         "boundary_payments": true,
         "clean": false,
         "counts": {
-          "accounting_period": 2,
-          "duplicate_invoice": 1,
-          "fx_conversion": 2,
-          "payment_allocation": 3
+          "accounting_period": 1,
+          "duplicate_invoice": 3,
+          "fx_conversion": 0,
+          "payment_allocation": 1
         },
         "interaction": 2,
         "invoices": 200,
@@ -1187,10 +1187,10 @@
         "shuffle": true,
         "timezone": "+05:45"
       },
-      "episode_id": "ep-70a7d7eb53c95c85",
+      "episode_id": "ep-b3202cca6fa47959",
       "index": 53,
-      "issues": 8,
-      "seed": 18220600428592537352,
+      "issues": 5,
+      "seed": 3803410706249918895,
       "valid": true
     },
     {
@@ -1199,9 +1199,9 @@
         "clean": false,
         "counts": {
           "accounting_period": 3,
-          "duplicate_invoice": 2,
-          "fx_conversion": 2,
-          "payment_allocation": 0
+          "duplicate_invoice": 0,
+          "fx_conversion": 0,
+          "payment_allocation": 1
         },
         "interaction": 0,
         "invoices": 40,
@@ -1209,10 +1209,10 @@
         "shuffle": false,
         "timezone": "+00:00"
       },
-      "episode_id": "ep-78a0c177394b5f20",
+      "episode_id": "ep-0ed1708e6f71bd66",
       "index": 54,
-      "issues": 7,
-      "seed": 5347375291384310728,
+      "issues": 4,
+      "seed": 14446741398388579974,
       "valid": true
     },
     {
@@ -1222,7 +1222,7 @@
         "counts": {
           "accounting_period": 3,
           "duplicate_invoice": 2,
-          "fx_conversion": 1,
+          "fx_conversion": 2,
           "payment_allocation": 0
         },
         "interaction": 1,
@@ -1231,10 +1231,10 @@
         "shuffle": true,
         "timezone": "+00:00"
       },
-      "episode_id": "ep-43a3c70dacd4519c",
+      "episode_id": "ep-d8cb9fad97c029b7",
       "index": 55,
       "issues": 0,
-      "seed": 7611352350617515283,
+      "seed": 11597934899890058390,
       "valid": true
     },
     {
@@ -1242,8 +1242,8 @@
         "boundary_payments": false,
         "clean": false,
         "counts": {
-          "accounting_period": 3,
-          "duplicate_invoice": 3,
+          "accounting_period": 1,
+          "duplicate_invoice": 2,
           "fx_conversion": 2,
           "payment_allocation": 3
         },
@@ -1253,32 +1253,10 @@
         "shuffle": false,
         "timezone": "+00:00"
       },
-      "episode_id": "ep-8af30fa7e9f79d64",
+      "episode_id": "ep-48766d56098c273a",
       "index": 56,
-      "issues": 11,
-      "seed": 13144401460083018805,
-      "valid": true
-    },
-    {
-      "config": {
-        "boundary_payments": true,
-        "clean": false,
-        "counts": {
-          "accounting_period": 2,
-          "duplicate_invoice": 0,
-          "fx_conversion": 3,
-          "payment_allocation": 0
-        },
-        "interaction": 0,
-        "invoices": 80,
-        "period_month": "2024-02",
-        "shuffle": true,
-        "timezone": "+00:00"
-      },
-      "episode_id": "ep-9dae0f615d7e3acf",
-      "index": 57,
-      "issues": 5,
-      "seed": 13754657349014867280,
+      "issues": 8,
+      "seed": 795326515496918559,
       "valid": true
     },
     {
@@ -1287,7 +1265,29 @@
         "clean": false,
         "counts": {
           "accounting_period": 3,
-          "duplicate_invoice": 2,
+          "duplicate_invoice": 3,
+          "fx_conversion": 3,
+          "payment_allocation": 3
+        },
+        "interaction": 0,
+        "invoices": 80,
+        "period_month": "2024-02",
+        "shuffle": true,
+        "timezone": "+00:00"
+      },
+      "episode_id": "ep-f139b7f9149916b4",
+      "index": 57,
+      "issues": 12,
+      "seed": 5987528115176354461,
+      "valid": true
+    },
+    {
+      "config": {
+        "boundary_payments": true,
+        "clean": false,
+        "counts": {
+          "accounting_period": 3,
+          "duplicate_invoice": 1,
           "fx_conversion": 2,
           "payment_allocation": 1
         },
@@ -1297,10 +1297,10 @@
         "shuffle": false,
         "timezone": "+00:00"
       },
-      "episode_id": "ep-edc884031b438667",
+      "episode_id": "ep-6d666446c5ff1ed1",
       "index": 58,
-      "issues": 8,
-      "seed": 10327695151978157775,
+      "issues": 7,
+      "seed": 404354596559929881,
       "valid": true
     },
     {
@@ -1308,10 +1308,10 @@
         "boundary_payments": true,
         "clean": false,
         "counts": {
-          "accounting_period": 1,
-          "duplicate_invoice": 2,
-          "fx_conversion": 0,
-          "payment_allocation": 3
+          "accounting_period": 3,
+          "duplicate_invoice": 1,
+          "fx_conversion": 2,
+          "payment_allocation": 1
         },
         "interaction": 2,
         "invoices": 200,
@@ -1319,10 +1319,10 @@
         "shuffle": true,
         "timezone": "+00:00"
       },
-      "episode_id": "ep-b6a4e532449a8022",
+      "episode_id": "ep-64f36382d1962402",
       "index": 59,
-      "issues": 6,
-      "seed": 9549349555919650533,
+      "issues": 7,
+      "seed": 4958721450997252999,
       "valid": true
     },
     {
@@ -1330,10 +1330,10 @@
         "boundary_payments": false,
         "clean": true,
         "counts": {
-          "accounting_period": 1,
-          "duplicate_invoice": 0,
-          "fx_conversion": 1,
-          "payment_allocation": 1
+          "accounting_period": 0,
+          "duplicate_invoice": 3,
+          "fx_conversion": 2,
+          "payment_allocation": 2
         },
         "interaction": 0,
         "invoices": 40,
@@ -1341,10 +1341,10 @@
         "shuffle": false,
         "timezone": "-12:00"
       },
-      "episode_id": "ep-bd771be4e84eb69e",
+      "episode_id": "ep-f03525bc9c6f8a6e",
       "index": 60,
       "issues": 0,
-      "seed": 15404406068116507507,
+      "seed": 15909148145585888057,
       "valid": true
     },
     {
@@ -1352,10 +1352,10 @@
         "boundary_payments": false,
         "clean": false,
         "counts": {
-          "accounting_period": 3,
-          "duplicate_invoice": 1,
+          "accounting_period": 2,
+          "duplicate_invoice": 3,
           "fx_conversion": 1,
-          "payment_allocation": 1
+          "payment_allocation": 3
         },
         "interaction": 1,
         "invoices": 41,
@@ -1363,10 +1363,10 @@
         "shuffle": true,
         "timezone": "-12:00"
       },
-      "episode_id": "ep-397f803c0b64f151",
+      "episode_id": "ep-a8b281e3500549b6",
       "index": 61,
-      "issues": 6,
-      "seed": 10256052500137254325,
+      "issues": 9,
+      "seed": 18418204033239629811,
       "valid": true
     },
     {
@@ -1374,10 +1374,10 @@
         "boundary_payments": false,
         "clean": false,
         "counts": {
-          "accounting_period": 1,
-          "duplicate_invoice": 3,
-          "fx_conversion": 3,
-          "payment_allocation": 0
+          "accounting_period": 2,
+          "duplicate_invoice": 1,
+          "fx_conversion": 0,
+          "payment_allocation": 1
         },
         "interaction": 2,
         "invoices": 50,
@@ -1385,10 +1385,10 @@
         "shuffle": false,
         "timezone": "-12:00"
       },
-      "episode_id": "ep-ba1fbf2fc86419c8",
+      "episode_id": "ep-1de42382328ecbda",
       "index": 62,
-      "issues": 7,
-      "seed": 14301153888547757512,
+      "issues": 4,
+      "seed": 933318178342100742,
       "valid": true
     },
     {
@@ -1396,10 +1396,10 @@
         "boundary_payments": true,
         "clean": false,
         "counts": {
-          "accounting_period": 2,
+          "accounting_period": 3,
           "duplicate_invoice": 1,
           "fx_conversion": 3,
-          "payment_allocation": 3
+          "payment_allocation": 2
         },
         "interaction": 0,
         "invoices": 80,
@@ -1407,10 +1407,10 @@
         "shuffle": true,
         "timezone": "-12:00"
       },
-      "episode_id": "ep-ea8624caa05c83c7",
+      "episode_id": "ep-e8fa4bbe05e0d51d",
       "index": 63,
       "issues": 9,
-      "seed": 12146143738341849301,
+      "seed": 5437017176201881249,
       "valid": true
     },
     {
@@ -1419,9 +1419,9 @@
         "clean": false,
         "counts": {
           "accounting_period": 1,
-          "duplicate_invoice": 1,
+          "duplicate_invoice": 3,
           "fx_conversion": 2,
-          "payment_allocation": 3
+          "payment_allocation": 2
         },
         "interaction": 1,
         "invoices": 120,
@@ -1429,10 +1429,10 @@
         "shuffle": false,
         "timezone": "-12:00"
       },
-      "episode_id": "ep-69fa39d8fa067cfd",
+      "episode_id": "ep-c83b5a1ce235d2f5",
       "index": 64,
-      "issues": 7,
-      "seed": 8680442176230453820,
+      "issues": 8,
+      "seed": 10738940311285014197,
       "valid": true
     },
     {
@@ -1440,10 +1440,10 @@
         "boundary_payments": true,
         "clean": true,
         "counts": {
-          "accounting_period": 2,
-          "duplicate_invoice": 1,
-          "fx_conversion": 3,
-          "payment_allocation": 0
+          "accounting_period": 3,
+          "duplicate_invoice": 3,
+          "fx_conversion": 2,
+          "payment_allocation": 3
         },
         "interaction": 2,
         "invoices": 200,
@@ -1451,10 +1451,32 @@
         "shuffle": true,
         "timezone": "-12:00"
       },
-      "episode_id": "ep-755d9e9a72691e71",
+      "episode_id": "ep-4a4c0361c7200dda",
       "index": 65,
       "issues": 0,
-      "seed": 14505721412839921642,
+      "seed": 13208343877897714516,
+      "valid": true
+    },
+    {
+      "config": {
+        "boundary_payments": false,
+        "clean": false,
+        "counts": {
+          "accounting_period": 0,
+          "duplicate_invoice": 2,
+          "fx_conversion": 1,
+          "payment_allocation": 2
+        },
+        "interaction": 0,
+        "invoices": 40,
+        "period_month": "2024-02",
+        "shuffle": false,
+        "timezone": "+14:00"
+      },
+      "episode_id": "ep-27d74f1f822d221a",
+      "index": 66,
+      "issues": 5,
+      "seed": 14184373417763387704,
       "valid": true
     },
     {
@@ -1463,31 +1485,9 @@
         "clean": false,
         "counts": {
           "accounting_period": 1,
-          "duplicate_invoice": 0,
-          "fx_conversion": 0,
-          "payment_allocation": 3
-        },
-        "interaction": 0,
-        "invoices": 40,
-        "period_month": "2024-02",
-        "shuffle": false,
-        "timezone": "+14:00"
-      },
-      "episode_id": "ep-4715a168bcb43db2",
-      "index": 66,
-      "issues": 4,
-      "seed": 4074219596356028186,
-      "valid": true
-    },
-    {
-      "config": {
-        "boundary_payments": false,
-        "clean": false,
-        "counts": {
-          "accounting_period": 3,
-          "duplicate_invoice": 2,
+          "duplicate_invoice": 3,
           "fx_conversion": 2,
-          "payment_allocation": 1
+          "payment_allocation": 3
         },
         "interaction": 1,
         "invoices": 41,
@@ -1495,10 +1495,10 @@
         "shuffle": true,
         "timezone": "+14:00"
       },
-      "episode_id": "ep-c9daa9c9ef6d55e2",
+      "episode_id": "ep-ea0dd987efb3ffad",
       "index": 67,
-      "issues": 8,
-      "seed": 9381035170279488970,
+      "issues": 9,
+      "seed": 4593366212465836361,
       "valid": true
     },
     {
@@ -1506,9 +1506,9 @@
         "boundary_payments": false,
         "clean": false,
         "counts": {
-          "accounting_period": 3,
-          "duplicate_invoice": 2,
-          "fx_conversion": 2,
+          "accounting_period": 2,
+          "duplicate_invoice": 1,
+          "fx_conversion": 3,
           "payment_allocation": 2
         },
         "interaction": 2,
@@ -1517,10 +1517,10 @@
         "shuffle": false,
         "timezone": "+14:00"
       },
-      "episode_id": "ep-4a547d5e62176740",
+      "episode_id": "ep-28da428af98ee76d",
       "index": 68,
-      "issues": 9,
-      "seed": 17003246429249192998,
+      "issues": 8,
+      "seed": 14016875231589767894,
       "valid": true
     },
     {
@@ -1528,10 +1528,10 @@
         "boundary_payments": true,
         "clean": false,
         "counts": {
-          "accounting_period": 2,
-          "duplicate_invoice": 0,
-          "fx_conversion": 2,
-          "payment_allocation": 1
+          "accounting_period": 0,
+          "duplicate_invoice": 2,
+          "fx_conversion": 0,
+          "payment_allocation": 0
         },
         "interaction": 0,
         "invoices": 80,
@@ -1539,10 +1539,10 @@
         "shuffle": true,
         "timezone": "+14:00"
       },
-      "episode_id": "ep-5a1a7d91afe04afb",
+      "episode_id": "ep-61eeccc0aa0858fe",
       "index": 69,
-      "issues": 5,
-      "seed": 354454325072709856,
+      "issues": 2,
+      "seed": 12264339128159384024,
       "valid": true
     },
     {
@@ -1550,10 +1550,10 @@
         "boundary_payments": true,
         "clean": true,
         "counts": {
-          "accounting_period": 0,
+          "accounting_period": 3,
           "duplicate_invoice": 2,
-          "fx_conversion": 3,
-          "payment_allocation": 3
+          "fx_conversion": 1,
+          "payment_allocation": 0
         },
         "interaction": 1,
         "invoices": 120,
@@ -1561,10 +1561,10 @@
         "shuffle": false,
         "timezone": "+14:00"
       },
-      "episode_id": "ep-ae25905a63e9c18a",
+      "episode_id": "ep-3c15e6ab4768102d",
       "index": 70,
       "issues": 0,
-      "seed": 1599753237582190098,
+      "seed": 4002266204822928767,
       "valid": true
     },
     {
@@ -1572,10 +1572,10 @@
         "boundary_payments": true,
         "clean": false,
         "counts": {
-          "accounting_period": 2,
-          "duplicate_invoice": 2,
-          "fx_conversion": 0,
-          "payment_allocation": 2
+          "accounting_period": 1,
+          "duplicate_invoice": 1,
+          "fx_conversion": 3,
+          "payment_allocation": 0
         },
         "interaction": 2,
         "invoices": 200,
@@ -1583,10 +1583,10 @@
         "shuffle": true,
         "timezone": "+14:00"
       },
-      "episode_id": "ep-15593cd27ab7a0a6",
+      "episode_id": "ep-61a291978a5895c8",
       "index": 71,
-      "issues": 6,
-      "seed": 15934840837955979367,
+      "issues": 5,
+      "seed": 7160232478618161932,
       "valid": true
     },
     {
@@ -1594,10 +1594,10 @@
         "boundary_payments": false,
         "clean": false,
         "counts": {
-          "accounting_period": 0,
-          "duplicate_invoice": 0,
-          "fx_conversion": 3,
-          "payment_allocation": 2
+          "accounting_period": 3,
+          "duplicate_invoice": 3,
+          "fx_conversion": 0,
+          "payment_allocation": 1
         },
         "interaction": 0,
         "invoices": 40,
@@ -1605,10 +1605,10 @@
         "shuffle": false,
         "timezone": "+05:00"
       },
-      "episode_id": "ep-b19e9d450a698b9c",
+      "episode_id": "ep-69db2c38150c7ebb",
       "index": 72,
-      "issues": 5,
-      "seed": 4943797763843130208,
+      "issues": 7,
+      "seed": 14732393174120513313,
       "valid": true
     },
     {
@@ -1618,8 +1618,8 @@
         "counts": {
           "accounting_period": 2,
           "duplicate_invoice": 1,
-          "fx_conversion": 2,
-          "payment_allocation": 1
+          "fx_conversion": 3,
+          "payment_allocation": 2
         },
         "interaction": 1,
         "invoices": 41,
@@ -1627,10 +1627,10 @@
         "shuffle": true,
         "timezone": "+05:00"
       },
-      "episode_id": "ep-9fba247c29f41e79",
+      "episode_id": "ep-b690138c145c76fa",
       "index": 73,
-      "issues": 6,
-      "seed": 1763864361357777250,
+      "issues": 8,
+      "seed": 16424866620466159785,
       "valid": true
     },
     {
@@ -1638,10 +1638,10 @@
         "boundary_payments": false,
         "clean": false,
         "counts": {
-          "accounting_period": 1,
-          "duplicate_invoice": 1,
-          "fx_conversion": 3,
-          "payment_allocation": 3
+          "accounting_period": 3,
+          "duplicate_invoice": 2,
+          "fx_conversion": 2,
+          "payment_allocation": 2
         },
         "interaction": 2,
         "invoices": 50,
@@ -1649,10 +1649,10 @@
         "shuffle": false,
         "timezone": "+05:00"
       },
-      "episode_id": "ep-7b4ef3e7d52878bf",
+      "episode_id": "ep-81ed8d47e3674a56",
       "index": 74,
-      "issues": 8,
-      "seed": 15030536148447995890,
+      "issues": 9,
+      "seed": 14947436875555767156,
       "valid": true
     },
     {
@@ -1660,10 +1660,10 @@
         "boundary_payments": true,
         "clean": true,
         "counts": {
-          "accounting_period": 1,
-          "duplicate_invoice": 2,
-          "fx_conversion": 2,
-          "payment_allocation": 1
+          "accounting_period": 2,
+          "duplicate_invoice": 3,
+          "fx_conversion": 3,
+          "payment_allocation": 3
         },
         "interaction": 0,
         "invoices": 80,
@@ -1671,10 +1671,10 @@
         "shuffle": true,
         "timezone": "+05:00"
       },
-      "episode_id": "ep-2e5280d4a87f8fc6",
+      "episode_id": "ep-47397d0f5e3ac12c",
       "index": 75,
       "issues": 0,
-      "seed": 17611981490847294479,
+      "seed": 14047991555047530588,
       "valid": true
     },
     {
@@ -1683,9 +1683,9 @@
         "clean": false,
         "counts": {
           "accounting_period": 1,
-          "duplicate_invoice": 1,
+          "duplicate_invoice": 2,
           "fx_conversion": 1,
-          "payment_allocation": 1
+          "payment_allocation": 2
         },
         "interaction": 1,
         "invoices": 120,
@@ -1693,10 +1693,10 @@
         "shuffle": false,
         "timezone": "+05:00"
       },
-      "episode_id": "ep-7538d7689117f243",
+      "episode_id": "ep-ef66f4df409fe38a",
       "index": 76,
-      "issues": 4,
-      "seed": 17605614286543151889,
+      "issues": 6,
+      "seed": 15529224540832838737,
       "valid": true
     },
     {
@@ -1704,10 +1704,10 @@
         "boundary_payments": true,
         "clean": false,
         "counts": {
-          "accounting_period": 2,
-          "duplicate_invoice": 1,
-          "fx_conversion": 0,
-          "payment_allocation": 2
+          "accounting_period": 1,
+          "duplicate_invoice": 2,
+          "fx_conversion": 2,
+          "payment_allocation": 0
         },
         "interaction": 2,
         "invoices": 200,
@@ -1715,10 +1715,10 @@
         "shuffle": true,
         "timezone": "+05:00"
       },
-      "episode_id": "ep-d3d86012ade25cb8",
+      "episode_id": "ep-f2fab2851fc16c1b",
       "index": 77,
       "issues": 5,
-      "seed": 1223210814002430681,
+      "seed": 13330439931787759540,
       "valid": true
     },
     {
@@ -1726,10 +1726,10 @@
         "boundary_payments": false,
         "clean": false,
         "counts": {
-          "accounting_period": 2,
+          "accounting_period": 3,
           "duplicate_invoice": 1,
-          "fx_conversion": 2,
-          "payment_allocation": 2
+          "fx_conversion": 0,
+          "payment_allocation": 3
         },
         "interaction": 0,
         "invoices": 40,
@@ -1737,10 +1737,10 @@
         "shuffle": false,
         "timezone": "-03:30"
       },
-      "episode_id": "ep-967e02fcc8ab54d6",
+      "episode_id": "ep-325cc945a46e6029",
       "index": 78,
       "issues": 7,
-      "seed": 5957465125656225563,
+      "seed": 15601299015691740040,
       "valid": true
     },
     {
@@ -1748,10 +1748,10 @@
         "boundary_payments": false,
         "clean": false,
         "counts": {
-          "accounting_period": 3,
+          "accounting_period": 1,
           "duplicate_invoice": 1,
-          "fx_conversion": 1,
-          "payment_allocation": 3
+          "fx_conversion": 2,
+          "payment_allocation": 1
         },
         "interaction": 1,
         "invoices": 41,
@@ -1759,10 +1759,10 @@
         "shuffle": true,
         "timezone": "-03:30"
       },
-      "episode_id": "ep-7558c5bf342b4f88",
+      "episode_id": "ep-fd8867398ee864e7",
       "index": 79,
-      "issues": 8,
-      "seed": 6488009688389965889,
+      "issues": 5,
+      "seed": 2209603067463846228,
       "valid": true
     },
     {
@@ -1770,10 +1770,10 @@
         "boundary_payments": false,
         "clean": true,
         "counts": {
-          "accounting_period": 1,
-          "duplicate_invoice": 1,
-          "fx_conversion": 1,
-          "payment_allocation": 2
+          "accounting_period": 3,
+          "duplicate_invoice": 0,
+          "fx_conversion": 3,
+          "payment_allocation": 3
         },
         "interaction": 2,
         "invoices": 50,
@@ -1781,10 +1781,10 @@
         "shuffle": false,
         "timezone": "-03:30"
       },
-      "episode_id": "ep-23ab9e06f1405614",
+      "episode_id": "ep-7c0f5beb182a7cb3",
       "index": 80,
       "issues": 0,
-      "seed": 17170417152221319447,
+      "seed": 8863229846812871564,
       "valid": true
     },
     {
@@ -1792,10 +1792,10 @@
         "boundary_payments": true,
         "clean": false,
         "counts": {
-          "accounting_period": 1,
-          "duplicate_invoice": 0,
+          "accounting_period": 3,
+          "duplicate_invoice": 1,
           "fx_conversion": 3,
-          "payment_allocation": 2
+          "payment_allocation": 3
         },
         "interaction": 0,
         "invoices": 80,
@@ -1803,10 +1803,10 @@
         "shuffle": true,
         "timezone": "-03:30"
       },
-      "episode_id": "ep-39844ac4a29de0b9",
+      "episode_id": "ep-d788ad31c50a9d5d",
       "index": 81,
-      "issues": 6,
-      "seed": 1626478512876540937,
+      "issues": 10,
+      "seed": 6099972303496855970,
       "valid": true
     },
     {
@@ -1815,8 +1815,8 @@
         "clean": false,
         "counts": {
           "accounting_period": 2,
-          "duplicate_invoice": 3,
-          "fx_conversion": 3,
+          "duplicate_invoice": 2,
+          "fx_conversion": 1,
           "payment_allocation": 1
         },
         "interaction": 1,
@@ -1825,10 +1825,10 @@
         "shuffle": false,
         "timezone": "-03:30"
       },
-      "episode_id": "ep-a85210e11a749fc2",
+      "episode_id": "ep-9f7ef29ef5cdc3a8",
       "index": 82,
-      "issues": 9,
-      "seed": 346236520429873696,
+      "issues": 6,
+      "seed": 3366359140716183669,
       "valid": true
     },
     {
@@ -1836,10 +1836,10 @@
         "boundary_payments": true,
         "clean": false,
         "counts": {
-          "accounting_period": 1,
+          "accounting_period": 2,
           "duplicate_invoice": 1,
-          "fx_conversion": 0,
-          "payment_allocation": 3
+          "fx_conversion": 2,
+          "payment_allocation": 0
         },
         "interaction": 2,
         "invoices": 200,
@@ -1847,10 +1847,10 @@
         "shuffle": true,
         "timezone": "-03:30"
       },
-      "episode_id": "ep-16e301f5875ec4cd",
+      "episode_id": "ep-8b26fd7ab7e7e0ae",
       "index": 83,
       "issues": 5,
-      "seed": 12830207642157659199,
+      "seed": 7121388618629114061,
       "valid": true
     },
     {
@@ -1859,7 +1859,7 @@
         "clean": false,
         "counts": {
           "accounting_period": 0,
-          "duplicate_invoice": 1,
+          "duplicate_invoice": 2,
           "fx_conversion": 3,
           "payment_allocation": 2
         },
@@ -1869,10 +1869,10 @@
         "shuffle": false,
         "timezone": "+05:45"
       },
-      "episode_id": "ep-13e786ebb057e3e7",
+      "episode_id": "ep-0a38af37b30fd9f5",
       "index": 84,
-      "issues": 6,
-      "seed": 16478717289382176422,
+      "issues": 7,
+      "seed": 6901944402222403359,
       "valid": true
     },
     {
@@ -1880,9 +1880,9 @@
         "boundary_payments": false,
         "clean": true,
         "counts": {
-          "accounting_period": 3,
+          "accounting_period": 1,
           "duplicate_invoice": 3,
-          "fx_conversion": 3,
+          "fx_conversion": 2,
           "payment_allocation": 3
         },
         "interaction": 1,
@@ -1891,10 +1891,10 @@
         "shuffle": true,
         "timezone": "+05:45"
       },
-      "episode_id": "ep-e628828fdc3b7ae5",
+      "episode_id": "ep-e689b0d64cdcc9ed",
       "index": 85,
       "issues": 0,
-      "seed": 4264870646513643770,
+      "seed": 4179923794847667854,
       "valid": true
     },
     {
@@ -1904,8 +1904,8 @@
         "counts": {
           "accounting_period": 1,
           "duplicate_invoice": 3,
-          "fx_conversion": 3,
-          "payment_allocation": 2
+          "fx_conversion": 2,
+          "payment_allocation": 0
         },
         "interaction": 2,
         "invoices": 50,
@@ -1913,10 +1913,10 @@
         "shuffle": false,
         "timezone": "+05:45"
       },
-      "episode_id": "ep-8e294e03ecec92d7",
+      "episode_id": "ep-a6c0d36a7571d9e4",
       "index": 86,
-      "issues": 9,
-      "seed": 12459827179238217564,
+      "issues": 6,
+      "seed": 702628461726012787,
       "valid": true
     },
     {
@@ -1924,10 +1924,10 @@
         "boundary_payments": true,
         "clean": false,
         "counts": {
-          "accounting_period": 3,
-          "duplicate_invoice": 2,
-          "fx_conversion": 2,
-          "payment_allocation": 2
+          "accounting_period": 0,
+          "duplicate_invoice": 3,
+          "fx_conversion": 1,
+          "payment_allocation": 0
         },
         "interaction": 0,
         "invoices": 80,
@@ -1935,10 +1935,10 @@
         "shuffle": true,
         "timezone": "+05:45"
       },
-      "episode_id": "ep-d297cfdb4ee1688e",
+      "episode_id": "ep-901d12a7ea41c8c5",
       "index": 87,
-      "issues": 9,
-      "seed": 840041616315900277,
+      "issues": 4,
+      "seed": 16164080880372918821,
       "valid": true
     },
     {
@@ -1946,7 +1946,7 @@
         "boundary_payments": true,
         "clean": false,
         "counts": {
-          "accounting_period": 1,
+          "accounting_period": 2,
           "duplicate_invoice": 2,
           "fx_conversion": 1,
           "payment_allocation": 3
@@ -1957,10 +1957,10 @@
         "shuffle": false,
         "timezone": "+05:45"
       },
-      "episode_id": "ep-a78c48dba42e96f0",
+      "episode_id": "ep-90e046c44a29c586",
       "index": 88,
-      "issues": 7,
-      "seed": 10433792658746209465,
+      "issues": 8,
+      "seed": 8607806283849988038,
       "valid": true
     },
     {
@@ -1968,10 +1968,10 @@
         "boundary_payments": true,
         "clean": false,
         "counts": {
-          "accounting_period": 2,
-          "duplicate_invoice": 1,
-          "fx_conversion": 1,
-          "payment_allocation": 0
+          "accounting_period": 1,
+          "duplicate_invoice": 3,
+          "fx_conversion": 2,
+          "payment_allocation": 1
         },
         "interaction": 2,
         "invoices": 200,
@@ -1979,10 +1979,10 @@
         "shuffle": true,
         "timezone": "+05:45"
       },
-      "episode_id": "ep-ee3e8d162796192f",
+      "episode_id": "ep-721fadf00e9135b0",
       "index": 89,
-      "issues": 4,
-      "seed": 5299938800257134295,
+      "issues": 7,
+      "seed": 3614272963319196408,
       "valid": true
     },
     {
@@ -1990,10 +1990,10 @@
         "boundary_payments": false,
         "clean": true,
         "counts": {
-          "accounting_period": 0,
-          "duplicate_invoice": 1,
+          "accounting_period": 2,
+          "duplicate_invoice": 0,
           "fx_conversion": 0,
-          "payment_allocation": 0
+          "payment_allocation": 1
         },
         "interaction": 0,
         "invoices": 40,
@@ -2001,10 +2001,10 @@
         "shuffle": false,
         "timezone": "+00:00"
       },
-      "episode_id": "ep-aced1629db59169c",
+      "episode_id": "ep-6a49c19b7df69b22",
       "index": 90,
       "issues": 0,
-      "seed": 10185567010962734622,
+      "seed": 6193929976377158393,
       "valid": true
     },
     {
@@ -2013,9 +2013,9 @@
         "clean": false,
         "counts": {
           "accounting_period": 2,
-          "duplicate_invoice": 3,
-          "fx_conversion": 2,
-          "payment_allocation": 1
+          "duplicate_invoice": 2,
+          "fx_conversion": 3,
+          "payment_allocation": 2
         },
         "interaction": 1,
         "invoices": 41,
@@ -2023,10 +2023,10 @@
         "shuffle": true,
         "timezone": "+00:00"
       },
-      "episode_id": "ep-84110f84c26671c8",
+      "episode_id": "ep-9c62381bb550f03b",
       "index": 91,
-      "issues": 8,
-      "seed": 15520578977322950355,
+      "issues": 9,
+      "seed": 3721719780510777179,
       "valid": true
     },
     {
@@ -2035,8 +2035,8 @@
         "clean": false,
         "counts": {
           "accounting_period": 1,
-          "duplicate_invoice": 3,
-          "fx_conversion": 2,
+          "duplicate_invoice": 1,
+          "fx_conversion": 1,
           "payment_allocation": 2
         },
         "interaction": 2,
@@ -2045,10 +2045,10 @@
         "shuffle": false,
         "timezone": "+00:00"
       },
-      "episode_id": "ep-1145ef8079d9213e",
+      "episode_id": "ep-cfb758ed9e9b72cb",
       "index": 92,
-      "issues": 8,
-      "seed": 16721525419261501372,
+      "issues": 5,
+      "seed": 1072058366758177258,
       "valid": true
     },
     {
@@ -2056,8 +2056,8 @@
         "boundary_payments": true,
         "clean": false,
         "counts": {
-          "accounting_period": 2,
-          "duplicate_invoice": 1,
+          "accounting_period": 3,
+          "duplicate_invoice": 0,
           "fx_conversion": 1,
           "payment_allocation": 2
         },
@@ -2067,10 +2067,10 @@
         "shuffle": true,
         "timezone": "+00:00"
       },
-      "episode_id": "ep-e2d717a88d258ab7",
+      "episode_id": "ep-7de59c915fbe77d9",
       "index": 93,
       "issues": 6,
-      "seed": 5917417732424670202,
+      "seed": 246167797335602347,
       "valid": true
     },
     {
@@ -2078,10 +2078,10 @@
         "boundary_payments": true,
         "clean": false,
         "counts": {
-          "accounting_period": 2,
+          "accounting_period": 3,
           "duplicate_invoice": 1,
-          "fx_conversion": 2,
-          "payment_allocation": 2
+          "fx_conversion": 1,
+          "payment_allocation": 3
         },
         "interaction": 1,
         "invoices": 120,
@@ -2089,10 +2089,10 @@
         "shuffle": false,
         "timezone": "+00:00"
       },
-      "episode_id": "ep-64661af708e44dc2",
+      "episode_id": "ep-9f33caa84c692cc9",
       "index": 94,
-      "issues": 7,
-      "seed": 12887715925057015788,
+      "issues": 8,
+      "seed": 4029285113560119820,
       "valid": true
     },
     {
@@ -2101,9 +2101,9 @@
         "clean": true,
         "counts": {
           "accounting_period": 1,
-          "duplicate_invoice": 0,
-          "fx_conversion": 2,
-          "payment_allocation": 3
+          "duplicate_invoice": 1,
+          "fx_conversion": 3,
+          "payment_allocation": 2
         },
         "interaction": 2,
         "invoices": 200,
@@ -2111,10 +2111,10 @@
         "shuffle": true,
         "timezone": "+00:00"
       },
-      "episode_id": "ep-c04daadf07cae400",
+      "episode_id": "ep-a2f6c9c14023ba1f",
       "index": 95,
       "issues": 0,
-      "seed": 15165982691767864589,
+      "seed": 1153540688297040338,
       "valid": true
     },
     {
@@ -2122,9 +2122,9 @@
         "boundary_payments": false,
         "clean": false,
         "counts": {
-          "accounting_period": 1,
-          "duplicate_invoice": 3,
-          "fx_conversion": 0,
+          "accounting_period": 3,
+          "duplicate_invoice": 1,
+          "fx_conversion": 2,
           "payment_allocation": 1
         },
         "interaction": 0,
@@ -2133,10 +2133,10 @@
         "shuffle": false,
         "timezone": "-12:00"
       },
-      "episode_id": "ep-50dcba1a67d969aa",
+      "episode_id": "ep-16e5f4507920924f",
       "index": 96,
-      "issues": 5,
-      "seed": 16727483832594802753,
+      "issues": 7,
+      "seed": 14424666575591325618,
       "valid": true
     },
     {
@@ -2144,10 +2144,10 @@
         "boundary_payments": false,
         "clean": false,
         "counts": {
-          "accounting_period": 1,
-          "duplicate_invoice": 3,
-          "fx_conversion": 3,
-          "payment_allocation": 1
+          "accounting_period": 2,
+          "duplicate_invoice": 2,
+          "fx_conversion": 1,
+          "payment_allocation": 2
         },
         "interaction": 1,
         "invoices": 41,
@@ -2155,10 +2155,120 @@
         "shuffle": true,
         "timezone": "-12:00"
       },
-      "episode_id": "ep-c6d80930aba3970c",
+      "episode_id": "ep-2ef96ea08bd71d65",
       "index": 97,
+      "issues": 7,
+      "seed": 14897682498379200957,
+      "valid": true
+    },
+    {
+      "config": {
+        "boundary_payments": false,
+        "clean": false,
+        "counts": {
+          "accounting_period": 2,
+          "duplicate_invoice": 2,
+          "fx_conversion": 3,
+          "payment_allocation": 1
+        },
+        "interaction": 2,
+        "invoices": 50,
+        "period_month": "2025-02",
+        "shuffle": false,
+        "timezone": "-12:00"
+      },
+      "episode_id": "ep-3b77250a13200d4e",
+      "index": 98,
       "issues": 8,
-      "seed": 8088456729740720488,
+      "seed": 9079965860504460716,
+      "valid": true
+    },
+    {
+      "config": {
+        "boundary_payments": true,
+        "clean": false,
+        "counts": {
+          "accounting_period": 1,
+          "duplicate_invoice": 0,
+          "fx_conversion": 1,
+          "payment_allocation": 3
+        },
+        "interaction": 0,
+        "invoices": 80,
+        "period_month": "2025-02",
+        "shuffle": true,
+        "timezone": "-12:00"
+      },
+      "episode_id": "ep-8b15adf30dcd1569",
+      "index": 99,
+      "issues": 5,
+      "seed": 13372107606990104127,
+      "valid": true
+    },
+    {
+      "config": {
+        "boundary_payments": true,
+        "clean": true,
+        "counts": {
+          "accounting_period": 2,
+          "duplicate_invoice": 2,
+          "fx_conversion": 2,
+          "payment_allocation": 3
+        },
+        "interaction": 1,
+        "invoices": 120,
+        "period_month": "2025-02",
+        "shuffle": false,
+        "timezone": "-12:00"
+      },
+      "episode_id": "ep-26b49bb42661ef23",
+      "index": 100,
+      "issues": 0,
+      "seed": 13067968063987126503,
+      "valid": true
+    },
+    {
+      "config": {
+        "boundary_payments": true,
+        "clean": false,
+        "counts": {
+          "accounting_period": 3,
+          "duplicate_invoice": 1,
+          "fx_conversion": 3,
+          "payment_allocation": 3
+        },
+        "interaction": 2,
+        "invoices": 200,
+        "period_month": "2025-02",
+        "shuffle": true,
+        "timezone": "-12:00"
+      },
+      "episode_id": "ep-d9243999b9e8eca7",
+      "index": 101,
+      "issues": 10,
+      "seed": 15108807593976355041,
+      "valid": true
+    },
+    {
+      "config": {
+        "boundary_payments": false,
+        "clean": false,
+        "counts": {
+          "accounting_period": 2,
+          "duplicate_invoice": 3,
+          "fx_conversion": 2,
+          "payment_allocation": 0
+        },
+        "interaction": 0,
+        "invoices": 40,
+        "period_month": "2025-02",
+        "shuffle": false,
+        "timezone": "+14:00"
+      },
+      "episode_id": "ep-b4c916fefbe27b6a",
+      "index": 102,
+      "issues": 7,
+      "seed": 11637123430546864762,
       "valid": true
     },
     {
@@ -2168,415 +2278,173 @@
         "counts": {
           "accounting_period": 1,
           "duplicate_invoice": 3,
+          "fx_conversion": 2,
+          "payment_allocation": 2
+        },
+        "interaction": 1,
+        "invoices": 41,
+        "period_month": "2025-02",
+        "shuffle": true,
+        "timezone": "+14:00"
+      },
+      "episode_id": "ep-c570f0467dd14a98",
+      "index": 103,
+      "issues": 8,
+      "seed": 14975139416418387889,
+      "valid": true
+    },
+    {
+      "config": {
+        "boundary_payments": false,
+        "clean": false,
+        "counts": {
+          "accounting_period": 2,
+          "duplicate_invoice": 1,
+          "fx_conversion": 0,
+          "payment_allocation": 3
+        },
+        "interaction": 2,
+        "invoices": 50,
+        "period_month": "2025-02",
+        "shuffle": false,
+        "timezone": "+14:00"
+      },
+      "episode_id": "ep-b27c8c691df47321",
+      "index": 104,
+      "issues": 6,
+      "seed": 5796275981519961766,
+      "valid": true
+    },
+    {
+      "config": {
+        "boundary_payments": true,
+        "clean": true,
+        "counts": {
+          "accounting_period": 0,
+          "duplicate_invoice": 3,
           "fx_conversion": 3,
+          "payment_allocation": 2
+        },
+        "interaction": 0,
+        "invoices": 80,
+        "period_month": "2025-02",
+        "shuffle": true,
+        "timezone": "+14:00"
+      },
+      "episode_id": "ep-3e3924373835dbdc",
+      "index": 105,
+      "issues": 0,
+      "seed": 5868460422764070540,
+      "valid": true
+    },
+    {
+      "config": {
+        "boundary_payments": true,
+        "clean": false,
+        "counts": {
+          "accounting_period": 3,
+          "duplicate_invoice": 1,
+          "fx_conversion": 3,
+          "payment_allocation": 3
+        },
+        "interaction": 1,
+        "invoices": 120,
+        "period_month": "2025-02",
+        "shuffle": false,
+        "timezone": "+14:00"
+      },
+      "episode_id": "ep-045c6cae0e6779cc",
+      "index": 106,
+      "issues": 10,
+      "seed": 12271343621557522503,
+      "valid": true
+    },
+    {
+      "config": {
+        "boundary_payments": true,
+        "clean": false,
+        "counts": {
+          "accounting_period": 1,
+          "duplicate_invoice": 1,
+          "fx_conversion": 0,
+          "payment_allocation": 1
+        },
+        "interaction": 2,
+        "invoices": 200,
+        "period_month": "2025-02",
+        "shuffle": true,
+        "timezone": "+14:00"
+      },
+      "episode_id": "ep-61dacfd3c08ab8c8",
+      "index": 107,
+      "issues": 3,
+      "seed": 6948072100625249986,
+      "valid": true
+    },
+    {
+      "config": {
+        "boundary_payments": false,
+        "clean": false,
+        "counts": {
+          "accounting_period": 3,
+          "duplicate_invoice": 2,
+          "fx_conversion": 2,
+          "payment_allocation": 2
+        },
+        "interaction": 0,
+        "invoices": 40,
+        "period_month": "2031-12",
+        "shuffle": false,
+        "timezone": "+05:00"
+      },
+      "episode_id": "ep-7f335734a56a9849",
+      "index": 108,
+      "issues": 9,
+      "seed": 917998315890912875,
+      "valid": true
+    },
+    {
+      "config": {
+        "boundary_payments": false,
+        "clean": false,
+        "counts": {
+          "accounting_period": 1,
+          "duplicate_invoice": 1,
+          "fx_conversion": 1,
+          "payment_allocation": 3
+        },
+        "interaction": 1,
+        "invoices": 41,
+        "period_month": "2031-12",
+        "shuffle": true,
+        "timezone": "+05:00"
+      },
+      "episode_id": "ep-62313e4d0dd5ee88",
+      "index": 109,
+      "issues": 6,
+      "seed": 14600372731698773241,
+      "valid": true
+    },
+    {
+      "config": {
+        "boundary_payments": false,
+        "clean": true,
+        "counts": {
+          "accounting_period": 0,
+          "duplicate_invoice": 2,
+          "fx_conversion": 0,
           "payment_allocation": 0
         },
         "interaction": 2,
         "invoices": 50,
-        "period_month": "2025-02",
-        "shuffle": false,
-        "timezone": "-12:00"
-      },
-      "episode_id": "ep-b290f2de117f8484",
-      "index": 98,
-      "issues": 7,
-      "seed": 1451943807643194071,
-      "valid": true
-    },
-    {
-      "config": {
-        "boundary_payments": true,
-        "clean": false,
-        "counts": {
-          "accounting_period": 3,
-          "duplicate_invoice": 0,
-          "fx_conversion": 1,
-          "payment_allocation": 1
-        },
-        "interaction": 0,
-        "invoices": 80,
-        "period_month": "2025-02",
-        "shuffle": true,
-        "timezone": "-12:00"
-      },
-      "episode_id": "ep-d2bcaa9b374bac4a",
-      "index": 99,
-      "issues": 5,
-      "seed": 3487740225223772017,
-      "valid": true
-    },
-    {
-      "config": {
-        "boundary_payments": true,
-        "clean": true,
-        "counts": {
-          "accounting_period": 2,
-          "duplicate_invoice": 3,
-          "fx_conversion": 3,
-          "payment_allocation": 1
-        },
-        "interaction": 1,
-        "invoices": 120,
-        "period_month": "2025-02",
-        "shuffle": false,
-        "timezone": "-12:00"
-      },
-      "episode_id": "ep-df4c4a3d05f938c2",
-      "index": 100,
-      "issues": 0,
-      "seed": 16648683555445452145,
-      "valid": true
-    },
-    {
-      "config": {
-        "boundary_payments": true,
-        "clean": false,
-        "counts": {
-          "accounting_period": 3,
-          "duplicate_invoice": 1,
-          "fx_conversion": 2,
-          "payment_allocation": 1
-        },
-        "interaction": 2,
-        "invoices": 200,
-        "period_month": "2025-02",
-        "shuffle": true,
-        "timezone": "-12:00"
-      },
-      "episode_id": "ep-203efe558226cc21",
-      "index": 101,
-      "issues": 7,
-      "seed": 4455900902187287278,
-      "valid": true
-    },
-    {
-      "config": {
-        "boundary_payments": false,
-        "clean": false,
-        "counts": {
-          "accounting_period": 2,
-          "duplicate_invoice": 3,
-          "fx_conversion": 0,
-          "payment_allocation": 2
-        },
-        "interaction": 0,
-        "invoices": 40,
-        "period_month": "2025-02",
-        "shuffle": false,
-        "timezone": "+14:00"
-      },
-      "episode_id": "ep-20f4db237d055778",
-      "index": 102,
-      "issues": 7,
-      "seed": 15687284119021107542,
-      "valid": true
-    },
-    {
-      "config": {
-        "boundary_payments": false,
-        "clean": false,
-        "counts": {
-          "accounting_period": 1,
-          "duplicate_invoice": 2,
-          "fx_conversion": 2,
-          "payment_allocation": 3
-        },
-        "interaction": 1,
-        "invoices": 41,
-        "period_month": "2025-02",
-        "shuffle": true,
-        "timezone": "+14:00"
-      },
-      "episode_id": "ep-ab32b822c2f8810e",
-      "index": 103,
-      "issues": 8,
-      "seed": 4394471867695867569,
-      "valid": true
-    },
-    {
-      "config": {
-        "boundary_payments": false,
-        "clean": false,
-        "counts": {
-          "accounting_period": 2,
-          "duplicate_invoice": 1,
-          "fx_conversion": 3,
-          "payment_allocation": 3
-        },
-        "interaction": 2,
-        "invoices": 50,
-        "period_month": "2025-02",
-        "shuffle": false,
-        "timezone": "+14:00"
-      },
-      "episode_id": "ep-13a1b29eea8de718",
-      "index": 104,
-      "issues": 9,
-      "seed": 11954758805383514022,
-      "valid": true
-    },
-    {
-      "config": {
-        "boundary_payments": true,
-        "clean": true,
-        "counts": {
-          "accounting_period": 1,
-          "duplicate_invoice": 2,
-          "fx_conversion": 1,
-          "payment_allocation": 1
-        },
-        "interaction": 0,
-        "invoices": 80,
-        "period_month": "2025-02",
-        "shuffle": true,
-        "timezone": "+14:00"
-      },
-      "episode_id": "ep-f38034cc7d7f9224",
-      "index": 105,
-      "issues": 0,
-      "seed": 2919678080961364711,
-      "valid": true
-    },
-    {
-      "config": {
-        "boundary_payments": true,
-        "clean": false,
-        "counts": {
-          "accounting_period": 1,
-          "duplicate_invoice": 1,
-          "fx_conversion": 3,
-          "payment_allocation": 2
-        },
-        "interaction": 1,
-        "invoices": 120,
-        "period_month": "2025-02",
-        "shuffle": false,
-        "timezone": "+14:00"
-      },
-      "episode_id": "ep-c66d582e4184006f",
-      "index": 106,
-      "issues": 7,
-      "seed": 9053440770076018371,
-      "valid": true
-    },
-    {
-      "config": {
-        "boundary_payments": true,
-        "clean": false,
-        "counts": {
-          "accounting_period": 3,
-          "duplicate_invoice": 1,
-          "fx_conversion": 3,
-          "payment_allocation": 2
-        },
-        "interaction": 2,
-        "invoices": 200,
-        "period_month": "2025-02",
-        "shuffle": true,
-        "timezone": "+14:00"
-      },
-      "episode_id": "ep-c3032af1985eb29b",
-      "index": 107,
-      "issues": 9,
-      "seed": 4378388610039004551,
-      "valid": true
-    },
-    {
-      "config": {
-        "boundary_payments": false,
-        "clean": false,
-        "counts": {
-          "accounting_period": 1,
-          "duplicate_invoice": 3,
-          "fx_conversion": 1,
-          "payment_allocation": 2
-        },
-        "interaction": 0,
-        "invoices": 40,
         "period_month": "2031-12",
         "shuffle": false,
         "timezone": "+05:00"
       },
-      "episode_id": "ep-efe0e80d9fe0343b",
-      "index": 108,
-      "issues": 7,
-      "seed": 10930250446816509245,
-      "valid": true
-    },
-    {
-      "config": {
-        "boundary_payments": false,
-        "clean": false,
-        "counts": {
-          "accounting_period": 2,
-          "duplicate_invoice": 1,
-          "fx_conversion": 1,
-          "payment_allocation": 2
-        },
-        "interaction": 1,
-        "invoices": 41,
-        "period_month": "2031-12",
-        "shuffle": true,
-        "timezone": "+05:00"
-      },
-      "episode_id": "ep-8922c7113f4570fc",
-      "index": 109,
-      "issues": 6,
-      "seed": 11357240479190183781,
-      "valid": true
-    },
-    {
-      "config": {
-        "boundary_payments": false,
-        "clean": true,
-        "counts": {
-          "accounting_period": 2,
-          "duplicate_invoice": 0,
-          "fx_conversion": 1,
-          "payment_allocation": 2
-        },
-        "interaction": 2,
-        "invoices": 50,
-        "period_month": "2031-12",
-        "shuffle": false,
-        "timezone": "+05:00"
-      },
-      "episode_id": "ep-be5c20c80c3f41f0",
+      "episode_id": "ep-93c3ef074d8ca529",
       "index": 110,
       "issues": 0,
-      "seed": 8118163553800415076,
-      "valid": true
-    },
-    {
-      "config": {
-        "boundary_payments": true,
-        "clean": false,
-        "counts": {
-          "accounting_period": 1,
-          "duplicate_invoice": 3,
-          "fx_conversion": 1,
-          "payment_allocation": 2
-        },
-        "interaction": 0,
-        "invoices": 80,
-        "period_month": "2031-12",
-        "shuffle": true,
-        "timezone": "+05:00"
-      },
-      "episode_id": "ep-dee20cc9a17db48b",
-      "index": 111,
-      "issues": 7,
-      "seed": 10005046093971013694,
-      "valid": true
-    },
-    {
-      "config": {
-        "boundary_payments": true,
-        "clean": false,
-        "counts": {
-          "accounting_period": 1,
-          "duplicate_invoice": 1,
-          "fx_conversion": 3,
-          "payment_allocation": 1
-        },
-        "interaction": 1,
-        "invoices": 120,
-        "period_month": "2031-12",
-        "shuffle": false,
-        "timezone": "+05:00"
-      },
-      "episode_id": "ep-dea4018ad6105c89",
-      "index": 112,
-      "issues": 6,
-      "seed": 8709017995994211951,
-      "valid": true
-    },
-    {
-      "config": {
-        "boundary_payments": true,
-        "clean": false,
-        "counts": {
-          "accounting_period": 2,
-          "duplicate_invoice": 1,
-          "fx_conversion": 3,
-          "payment_allocation": 2
-        },
-        "interaction": 2,
-        "invoices": 200,
-        "period_month": "2031-12",
-        "shuffle": true,
-        "timezone": "+05:00"
-      },
-      "episode_id": "ep-181ae8766d45ff6c",
-      "index": 113,
-      "issues": 8,
-      "seed": 997928619611659370,
-      "valid": true
-    },
-    {
-      "config": {
-        "boundary_payments": false,
-        "clean": false,
-        "counts": {
-          "accounting_period": 1,
-          "duplicate_invoice": 2,
-          "fx_conversion": 1,
-          "payment_allocation": 1
-        },
-        "interaction": 0,
-        "invoices": 40,
-        "period_month": "2031-12",
-        "shuffle": false,
-        "timezone": "-03:30"
-      },
-      "episode_id": "ep-22a551b2cce20f3f",
-      "index": 114,
-      "issues": 5,
-      "seed": 11679579478422755326,
-      "valid": true
-    },
-    {
-      "config": {
-        "boundary_payments": false,
-        "clean": true,
-        "counts": {
-          "accounting_period": 2,
-          "duplicate_invoice": 0,
-          "fx_conversion": 3,
-          "payment_allocation": 1
-        },
-        "interaction": 1,
-        "invoices": 41,
-        "period_month": "2031-12",
-        "shuffle": true,
-        "timezone": "-03:30"
-      },
-      "episode_id": "ep-ad0a81f4bb73a1f1",
-      "index": 115,
-      "issues": 0,
-      "seed": 13346661485471282868,
-      "valid": true
-    },
-    {
-      "config": {
-        "boundary_payments": false,
-        "clean": false,
-        "counts": {
-          "accounting_period": 2,
-          "duplicate_invoice": 2,
-          "fx_conversion": 0,
-          "payment_allocation": 2
-        },
-        "interaction": 2,
-        "invoices": 50,
-        "period_month": "2031-12",
-        "shuffle": false,
-        "timezone": "-03:30"
-      },
-      "episode_id": "ep-0fc3387b4430918e",
-      "index": 116,
-      "issues": 6,
-      "seed": 11259963727760285326,
+      "seed": 14689682561800196030,
       "valid": true
     },
     {
@@ -2586,19 +2454,19 @@
         "counts": {
           "accounting_period": 0,
           "duplicate_invoice": 3,
-          "fx_conversion": 0,
-          "payment_allocation": 0
+          "fx_conversion": 2,
+          "payment_allocation": 3
         },
         "interaction": 0,
         "invoices": 80,
         "period_month": "2031-12",
         "shuffle": true,
-        "timezone": "-03:30"
+        "timezone": "+05:00"
       },
-      "episode_id": "ep-1670f6088fb2f664",
-      "index": 117,
-      "issues": 3,
-      "seed": 13674088104583417707,
+      "episode_id": "ep-c31b1316d928405c",
+      "index": 111,
+      "issues": 8,
+      "seed": 16685650124224152067,
       "valid": true
     },
     {
@@ -2607,20 +2475,20 @@
         "clean": false,
         "counts": {
           "accounting_period": 3,
-          "duplicate_invoice": 2,
-          "fx_conversion": 2,
+          "duplicate_invoice": 1,
+          "fx_conversion": 3,
           "payment_allocation": 1
         },
         "interaction": 1,
         "invoices": 120,
         "period_month": "2031-12",
         "shuffle": false,
-        "timezone": "-03:30"
+        "timezone": "+05:00"
       },
-      "episode_id": "ep-43f177c7b6a4ac53",
-      "index": 118,
+      "episode_id": "ep-31f0137ad4bd284b",
+      "index": 112,
       "issues": 8,
-      "seed": 11357840974052859613,
+      "seed": 13638286417417056443,
       "valid": true
     },
     {
@@ -2629,20 +2497,42 @@
         "clean": false,
         "counts": {
           "accounting_period": 1,
-          "duplicate_invoice": 2,
-          "fx_conversion": 2,
-          "payment_allocation": 2
+          "duplicate_invoice": 1,
+          "fx_conversion": 3,
+          "payment_allocation": 0
         },
         "interaction": 2,
         "invoices": 200,
         "period_month": "2031-12",
         "shuffle": true,
+        "timezone": "+05:00"
+      },
+      "episode_id": "ep-02f11e57a1273bb7",
+      "index": 113,
+      "issues": 5,
+      "seed": 11134434939754809586,
+      "valid": true
+    },
+    {
+      "config": {
+        "boundary_payments": false,
+        "clean": false,
+        "counts": {
+          "accounting_period": 1,
+          "duplicate_invoice": 1,
+          "fx_conversion": 0,
+          "payment_allocation": 0
+        },
+        "interaction": 0,
+        "invoices": 40,
+        "period_month": "2031-12",
+        "shuffle": false,
         "timezone": "-03:30"
       },
-      "episode_id": "ep-b4d1c263ad5b5258",
-      "index": 119,
-      "issues": 7,
-      "seed": 9736666063889419044,
+      "episode_id": "ep-45a8fa10c42d0313",
+      "index": 114,
+      "issues": 2,
+      "seed": 10947789781751042502,
       "valid": true
     },
     {
@@ -2650,43 +2540,21 @@
         "boundary_payments": false,
         "clean": true,
         "counts": {
-          "accounting_period": 3,
-          "duplicate_invoice": 3,
-          "fx_conversion": 0,
-          "payment_allocation": 2
-        },
-        "interaction": 0,
-        "invoices": 40,
-        "period_month": "2031-12",
-        "shuffle": false,
-        "timezone": "+05:45"
-      },
-      "episode_id": "ep-7d37b050e7eb0850",
-      "index": 120,
-      "issues": 0,
-      "seed": 5255491731226785996,
-      "valid": true
-    },
-    {
-      "config": {
-        "boundary_payments": false,
-        "clean": false,
-        "counts": {
           "accounting_period": 1,
-          "duplicate_invoice": 2,
-          "fx_conversion": 2,
-          "payment_allocation": 1
+          "duplicate_invoice": 3,
+          "fx_conversion": 3,
+          "payment_allocation": 2
         },
         "interaction": 1,
         "invoices": 41,
         "period_month": "2031-12",
         "shuffle": true,
-        "timezone": "+05:45"
+        "timezone": "-03:30"
       },
-      "episode_id": "ep-cfabc871592678ad",
-      "index": 121,
-      "issues": 6,
-      "seed": 11542057167479468846,
+      "episode_id": "ep-da41c10c975f149a",
+      "index": 115,
+      "issues": 0,
+      "seed": 14088421065069333603,
       "valid": true
     },
     {
@@ -2695,20 +2563,20 @@
         "clean": false,
         "counts": {
           "accounting_period": 2,
-          "duplicate_invoice": 1,
-          "fx_conversion": 2,
-          "payment_allocation": 0
+          "duplicate_invoice": 2,
+          "fx_conversion": 0,
+          "payment_allocation": 1
         },
         "interaction": 2,
         "invoices": 50,
         "period_month": "2031-12",
         "shuffle": false,
-        "timezone": "+05:45"
+        "timezone": "-03:30"
       },
-      "episode_id": "ep-257fc9bde9853309",
-      "index": 122,
+      "episode_id": "ep-5a8ea567145a02b7",
+      "index": 116,
       "issues": 5,
-      "seed": 9888314804873651111,
+      "seed": 1867004450370645115,
       "valid": true
     },
     {
@@ -2716,21 +2584,21 @@
         "boundary_payments": true,
         "clean": false,
         "counts": {
-          "accounting_period": 1,
-          "duplicate_invoice": 2,
-          "fx_conversion": 1,
-          "payment_allocation": 1
+          "accounting_period": 2,
+          "duplicate_invoice": 3,
+          "fx_conversion": 2,
+          "payment_allocation": 3
         },
         "interaction": 0,
         "invoices": 80,
         "period_month": "2031-12",
         "shuffle": true,
-        "timezone": "+05:45"
+        "timezone": "-03:30"
       },
-      "episode_id": "ep-e806a8143f33f556",
-      "index": 123,
-      "issues": 5,
-      "seed": 16058696225962308196,
+      "episode_id": "ep-634afcb342bccf5c",
+      "index": 117,
+      "issues": 10,
+      "seed": 8901812555323797867,
       "valid": true
     },
     {
@@ -2740,41 +2608,63 @@
         "counts": {
           "accounting_period": 1,
           "duplicate_invoice": 1,
-          "fx_conversion": 1,
-          "payment_allocation": 1
+          "fx_conversion": 3,
+          "payment_allocation": 3
         },
         "interaction": 1,
         "invoices": 120,
         "period_month": "2031-12",
         "shuffle": false,
-        "timezone": "+05:45"
+        "timezone": "-03:30"
       },
-      "episode_id": "ep-31c43772906381d3",
-      "index": 124,
-      "issues": 4,
-      "seed": 325464616572273098,
+      "episode_id": "ep-556195bb39af471e",
+      "index": 118,
+      "issues": 8,
+      "seed": 8279532969548324574,
       "valid": true
     },
     {
       "config": {
         "boundary_payments": true,
-        "clean": true,
+        "clean": false,
         "counts": {
           "accounting_period": 3,
-          "duplicate_invoice": 2,
-          "fx_conversion": 3,
+          "duplicate_invoice": 3,
+          "fx_conversion": 0,
           "payment_allocation": 3
         },
         "interaction": 2,
         "invoices": 200,
         "period_month": "2031-12",
         "shuffle": true,
+        "timezone": "-03:30"
+      },
+      "episode_id": "ep-4f8bf42a07d44d92",
+      "index": 119,
+      "issues": 9,
+      "seed": 3791832855508112684,
+      "valid": true
+    },
+    {
+      "config": {
+        "boundary_payments": false,
+        "clean": true,
+        "counts": {
+          "accounting_period": 3,
+          "duplicate_invoice": 2,
+          "fx_conversion": 0,
+          "payment_allocation": 1
+        },
+        "interaction": 0,
+        "invoices": 40,
+        "period_month": "2031-12",
+        "shuffle": false,
         "timezone": "+05:45"
       },
-      "episode_id": "ep-16105dee8bb5d841",
-      "index": 125,
+      "episode_id": "ep-e6b06747319745be",
+      "index": 120,
       "issues": 0,
-      "seed": 16718570680109001886,
+      "seed": 4795622748632484553,
       "valid": true
     },
     {
@@ -2784,7 +2674,117 @@
         "counts": {
           "accounting_period": 1,
           "duplicate_invoice": 1,
+          "fx_conversion": 3,
+          "payment_allocation": 1
+        },
+        "interaction": 1,
+        "invoices": 41,
+        "period_month": "2031-12",
+        "shuffle": true,
+        "timezone": "+05:45"
+      },
+      "episode_id": "ep-85b96ac85bbc2236",
+      "index": 121,
+      "issues": 6,
+      "seed": 1135140013977731905,
+      "valid": true
+    },
+    {
+      "config": {
+        "boundary_payments": false,
+        "clean": false,
+        "counts": {
+          "accounting_period": 3,
+          "duplicate_invoice": 2,
+          "fx_conversion": 1,
+          "payment_allocation": 3
+        },
+        "interaction": 2,
+        "invoices": 50,
+        "period_month": "2031-12",
+        "shuffle": false,
+        "timezone": "+05:45"
+      },
+      "episode_id": "ep-3853defb0a68c2f7",
+      "index": 122,
+      "issues": 9,
+      "seed": 4336654193658117254,
+      "valid": true
+    },
+    {
+      "config": {
+        "boundary_payments": true,
+        "clean": false,
+        "counts": {
+          "accounting_period": 0,
+          "duplicate_invoice": 2,
+          "fx_conversion": 3,
+          "payment_allocation": 1
+        },
+        "interaction": 0,
+        "invoices": 80,
+        "period_month": "2031-12",
+        "shuffle": true,
+        "timezone": "+05:45"
+      },
+      "episode_id": "ep-f607d927e7a55409",
+      "index": 123,
+      "issues": 6,
+      "seed": 4697059743512076021,
+      "valid": true
+    },
+    {
+      "config": {
+        "boundary_payments": true,
+        "clean": false,
+        "counts": {
+          "accounting_period": 1,
+          "duplicate_invoice": 1,
+          "fx_conversion": 2,
+          "payment_allocation": 1
+        },
+        "interaction": 1,
+        "invoices": 120,
+        "period_month": "2031-12",
+        "shuffle": false,
+        "timezone": "+05:45"
+      },
+      "episode_id": "ep-97ca6eef4214cc39",
+      "index": 124,
+      "issues": 5,
+      "seed": 4535480717954728885,
+      "valid": true
+    },
+    {
+      "config": {
+        "boundary_payments": true,
+        "clean": true,
+        "counts": {
+          "accounting_period": 3,
+          "duplicate_invoice": 0,
           "fx_conversion": 0,
+          "payment_allocation": 1
+        },
+        "interaction": 2,
+        "invoices": 200,
+        "period_month": "2031-12",
+        "shuffle": true,
+        "timezone": "+05:45"
+      },
+      "episode_id": "ep-6cef8be8ffc134c9",
+      "index": 125,
+      "issues": 0,
+      "seed": 7767629814613151303,
+      "valid": true
+    },
+    {
+      "config": {
+        "boundary_payments": false,
+        "clean": false,
+        "counts": {
+          "accounting_period": 2,
+          "duplicate_invoice": 3,
+          "fx_conversion": 2,
           "payment_allocation": 2
         },
         "interaction": 0,
@@ -2793,10 +2793,10 @@
         "shuffle": false,
         "timezone": "+00:00"
       },
-      "episode_id": "ep-9d28439736af22c9",
+      "episode_id": "ep-ee5cc515a3fc8ac6",
       "index": 126,
-      "issues": 4,
-      "seed": 6334003594095322426,
+      "issues": 9,
+      "seed": 3030655209937552874,
       "valid": true
     },
     {
@@ -2807,7 +2807,7 @@
           "accounting_period": 1,
           "duplicate_invoice": 3,
           "fx_conversion": 3,
-          "payment_allocation": 3
+          "payment_allocation": 1
         },
         "interaction": 1,
         "invoices": 41,
@@ -2815,28 +2815,28 @@
         "shuffle": true,
         "timezone": "+00:00"
       },
-      "episode_id": "ep-7b45278d09078c0f",
+      "episode_id": "ep-114ab7966b84f165",
       "index": 127,
-      "issues": 10,
-      "seed": 1827507087520173004,
+      "issues": 8,
+      "seed": 4261581711501452346,
       "valid": true
     }
   ],
   "failed": 0,
   "failures": [],
-  "generator_version": "1.1.2",
+  "generator_version": "1.1.3",
   "interactions": {
     "0": 43,
     "1": 43,
     "2": 42
   },
   "issues_by_type": {
-    "accounting_period": 156,
-    "duplicate_invoice": 168,
-    "fx_conversion": 159,
-    "payment_allocation": 159
+    "accounting_period": 178,
+    "duplicate_invoice": 184,
+    "fx_conversion": 161,
+    "payment_allocation": 171
   },
-  "master_seed": 392117838129,
+  "master_seed": 182795814220523,
   "passed": 128,
   "scope": "Independent local financial integrity check; no official jury score or difficulty claim."
 }

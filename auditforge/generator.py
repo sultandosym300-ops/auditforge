@@ -9,7 +9,7 @@ from decimal import Decimal, ROUND_HALF_EVEN
 
 TYPES = ('duplicate_invoice', 'payment_allocation', 'fx_conversion', 'accounting_period')
 EXPONENTS = {'KZT': 2, 'USD': 2, 'EUR': 2, 'JPY': 0}
-GENERATOR_VERSION = '1.1.2'
+GENERATOR_VERSION = '1.1.3'
 
 
 def converted(amount, source, target, rate):
@@ -94,6 +94,8 @@ def generate(seed, config=None):
             amount = converted(source, currency, 'KZT', rate)
             pay = dict(doc_id=ident('doc'), payment_id=ident('pay'), timestamp=paid_at, currency=currency, amount_minor=source, invoice_refs=[dict(invoice_id=inv['invoice_id'], allocated_minor=source, currency=currency)], kind='refund' if source < 0 else 'settlement')
             payments.append(pay)
+            if pay['kind'] == 'refund':
+                inv['related_credit_doc_id'] = pay['doc_id']
             extra = dict(allocation_source_minor=source, fx_rate=rate, fx_date=date)
             entry('payable', amount, True, paid_at, inv, pay['payment_id'], **extra)
             entry('cash', amount, False, paid_at, inv, pay['payment_id'], **extra)
@@ -124,12 +126,8 @@ def generate(seed, config=None):
                     r['row_id'] = ident('row')
                 ledger.extend(clones)
                 evidence = [inv['doc_id'], original['row_id'], clones[0]['row_id']]
-                if interaction == 2 and index == 0:
-                    refund = next(p for p in payments if p['invoice_refs'][0]['invoice_id'] == inv['invoice_id'] and p['kind'] == 'refund')
-                    # The source document explicitly relates its credit adjustment to this obligation.
-                    inv['related_credit_doc_id'] = refund['doc_id']
-                    pristine['invoices'][index]['related_credit_doc_id'] = refund['doc_id']
-                    evidence.append(refund['doc_id'])
+                if inv.get('related_credit_doc_id'):
+                    evidence.append(inv['related_credit_doc_id'])
                 change(kind, [original, clones[0]], copy.deepcopy(pair), evidence, inv['total_minor'], pair+clones)
             elif kind == 'payment_allocation':
                 before = copy.deepcopy(rows)
@@ -155,9 +153,16 @@ def generate(seed, config=None):
                     rows = [r for r in ledger if r['payment_id'] == pay['payment_id']]
                 before = copy.deepcopy(rows)
                 true_rate = rates[rows[0]['fx_date'], pay['currency']]
-                wrong = str(Decimal(true_rate) + 7)
                 source = rows[0]['allocation_source_minor']
                 expected = converted(source, pay['currency'], 'KZT', true_rate)
+                # Use a real quote from elsewhere in the schedule. The source date
+                # determines correctness, so membership in the catalog is insufficient.
+                candidates = sorted({
+                    rate for (_, currency), rate in rates.items()
+                    if currency == pay['currency']
+                    and converted(source, currency, 'KZT', rate) != expected
+                })
+                wrong = rng.choice(candidates)
                 actual = converted(source, pay['currency'], 'KZT', wrong)
                 for r in rows:
                     r['fx_rate'] = wrong
