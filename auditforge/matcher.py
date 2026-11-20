@@ -1,10 +1,9 @@
 """Exact amount tolerance; maximum-cardinality deterministic bipartite matching."""
-import copy
 from .generator import TYPES
 
 
 def oracle(episode):
-    return dict(episode_id=episode['public']['manifest']['episode_id'], findings=[dict(type=t['type'], affected_ids=t['affected_ids'], claimed_amount_minor=t['expected_amount_minor'], currency=t['currency'], evidence_ids=t['evidence_sets'][0], explanation='Verified against source documents and posting policy.') for t in episode['truth']])
+    return dict(episode_id=episode['public']['manifest']['episode_id'], findings=[dict(type=t['type'], affected_ids=list(t['affected_ids']), claimed_amount_minor=t['expected_amount_minor'], currency=t['currency'], evidence_ids=list(t['evidence_sets'][0]), explanation='Verified against source documents and posting policy.') for t in episode['truth']])
 
 
 def valid(payload, episode_id):
@@ -26,9 +25,31 @@ def evaluate(episode_id, truth, payload, inspection_steps):
     if not valid(payload, episode_id):
         return dict(tp=0, fp=0, fn=len(truth), precision=0, recall=0, f1=0, reward=-1, error='invalid_submission')
     findings = payload['findings']
-    def match(f, t):
-        return (f['type'] == t['type'] and sorted(f['affected_ids']) == sorted(t['affected_ids']) and f['currency'] == t['currency'] and abs(f['claimed_amount_minor'] - t['expected_amount_minor']) <= t.get('tolerance_minor', 0) and any(set(s) <= set(f['evidence_ids']) for s in t['evidence_sets']))
-    graph = [[j for j, t in enumerate(truth) if match(f, t)] for f in findings]
+    # Rank only the fields that can support a claim. Explanation, ID order and
+    # irrelevant extra documents cannot turn a copied claim into another TP.
+    graph = []
+    eligible = []
+    seen_claims = set()
+    for f in findings:
+        affected = tuple(sorted(f['affected_ids']))
+        evidence = set(f['evidence_ids'])
+        supported = set()
+        edges = []
+        for j, t in enumerate(truth):
+            if not (f['type'] == t['type'] and f['currency'] == t['currency']
+                    and affected == tuple(sorted(t['affected_ids']))
+                    and abs(f['claimed_amount_minor'] - t['expected_amount_minor']) <= t.get('tolerance_minor', 0)):
+                continue
+            complete = [frozenset(ids) for ids in t['evidence_sets'] if evidence.issuperset(ids)]
+            if complete:
+                edges.append(j)
+                supported.update(complete)
+        claim = (f['type'], affected, f['currency'], f['claimed_amount_minor'], frozenset(supported))
+        graph.append(edges)
+        if claim in seen_claims:
+            continue
+        seen_claims.add(claim)
+        eligible.append(len(graph) - 1)
     assigned = {}
     def augment(i, seen):
         for j in graph[i]:
@@ -39,7 +60,7 @@ def evaluate(episode_id, truth, payload, inspection_steps):
                 assigned[j] = i
                 return True
         return False
-    for i in range(len(findings)):
+    for i in eligible:
         augment(i, set())
     tp = len(assigned)
     fp, fn = len(findings) - tp, len(truth) - tp

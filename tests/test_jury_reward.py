@@ -25,6 +25,16 @@ class JuryRewardTests(unittest.TestCase):
             self.assertEqual((score['tp'], score['fp'], score['fn']), (2, 0, 0))
             self.assertAlmostEqual(score['reward'], .994)
 
+    def test_repeated_ambiguous_claim_is_false_positive(self):
+        common = dict(type='payment_allocation', affected_ids=['row-0', 'row-1'], currency='KZT')
+        truths = [dict(common, expected_amount_minor=100, evidence_sets=[[doc]]) for doc in ('A', 'B')]
+        first = dict(common, claimed_amount_minor=100, evidence_ids=['A', 'B'], explanation='')
+        repeat = dict(first, affected_ids=['row-1', 'row-0'], evidence_ids=['B', 'unused', 'A'],
+                      explanation='Different prose')
+        for second in (first, repeat):
+            score = evaluate('ep', truths, dict(episode_id='ep', findings=[first, second]), 0)
+            self.assertEqual((score['tp'], score['fp'], score['fn'], score['reward']), (1, 1, 1, 0))
+
     def test_random_small_graphs_match_exhaustive_assignment(self):
         rng = random.Random(291072)
         for sample in range(1000):
@@ -34,10 +44,11 @@ class JuryRewardTests(unittest.TestCase):
             ]
             truth = [
                 dict(type='payment_allocation', affected_ids=['row-0'], currency='KZT',
-                     expected_amount_minor=100, evidence_sets=[[f'rate-{j}']])
+                     expected_amount_minor=100, tolerance_minor=5, evidence_sets=[[f'rate-{j}']])
                 for j in range(4)
             ]
-            findings = [finding(0, [f'rate-{j}' for j in sorted(edge)]) for edge in edges]
+            findings = [finding(0, [f'rate-{j}' for j in sorted(edge)], amount=100+i)
+                        for i, edge in enumerate(edges)]
             # Exhaustively enumerate each assignment including the unmatched option.
             options = [(-1, *sorted(edge)) for edge in edges]
             best = 0

@@ -24,8 +24,6 @@ def reconcile(public):
         inv = invoices[iid]
         if len(rows) > 1:
             evidence = [inv['doc_id']] + [r['row_id'] for r in rows]
-            if inv.get('related_credit_doc_id'):
-                evidence.append(inv['related_credit_doc_id'])
             add('duplicate_invoice', [r['row_id'] for r in rows], sum(r['debit_minor'] for r in rows)-inv['total_minor'], evidence)
         for row in rows:
             if (start <= datetime.fromisoformat(row['timestamp']) < end) != (start <= datetime.fromisoformat(inv['issued_at']) < end):
@@ -34,7 +32,6 @@ def reconcile(public):
         if row['account'] != 'payable' or row['payment_id'] is None:
             continue
         pay = payments[row['payment_id']]
-        inv = invoices[row['invoice_id']]
         source = sum(ref['allocated_minor'] for ref in pay['invoice_refs'] if ref['invoice_id'] == row['invoice_id'])
         date = datetime.fromisoformat(pay['timestamp']).astimezone(start.tzinfo).date().isoformat()
         fx = rates.get((date, pay['currency'], 'KZT'))
@@ -43,7 +40,7 @@ def reconcile(public):
         expected = convert(booked_source, pay['currency'], 'KZT', rate)
         if source != booked_source:
             full_settlement = convert(source, pay['currency'], 'KZT', rate)
-            evidence = [row['row_id'], pay['doc_id'], inv['doc_id']]
+            evidence = [row['row_id'], pay['doc_id']]
             if fx:
                 evidence.append(fx['row_id'])
             add('payment_allocation', [row['row_id']], full_settlement-expected, evidence)

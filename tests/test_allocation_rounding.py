@@ -6,7 +6,7 @@ from auditforge.reconcile import reconcile, validate
 
 class AllocationRoundingTests(unittest.TestCase):
     def setUp(self):
-        self.episode = generate(21, {'counts': {
+        self.episode = generate(485, {'counts': {
             'duplicate_invoice': 0, 'payment_allocation': 3,
             'fx_conversion': 0, 'accounting_period': 0,
         }})

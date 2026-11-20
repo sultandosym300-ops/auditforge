@@ -9,7 +9,7 @@ from decimal import Decimal, ROUND_HALF_EVEN
 
 TYPES = ('duplicate_invoice', 'payment_allocation', 'fx_conversion', 'accounting_period')
 EXPONENTS = {'KZT': 2, 'USD': 2, 'EUR': 2, 'JPY': 0}
-GENERATOR_VERSION = '1.1.3'
+GENERATOR_VERSION = '1.1.4'
 
 
 def converted(amount, source, target, rate):
@@ -68,8 +68,23 @@ def generate(seed, config=None):
         row.update(extra)
         ledger.append(row)
         return row
+    # Whether an invoice becomes a finding is independent of public file order.
+    assignment = random.Random('assignment:' + str(seed) + json.dumps(config, sort_keys=True))
+    eligibility_stride = {0: 12, 1: 4, 2: 9}[interaction]
+    interaction_index = assignment.choice(range(0, n, eligibility_stride))
+    # Other genuine split foreign settlements share the same cutoff timestamps.
+    close_batch = set(assignment.sample([i for i in range(0, n, 4) if i != interaction_index], 2))
+    if interaction == 1:
+        close_batch.add(interaction_index)
+    boundary_indices = assignment.sample([i for i in range(n) if i != interaction_index], 6)
+    boundary_stamps = dict(zip(boundary_indices, (
+        end, end + timedelta(hours=6), end + timedelta(hours=12),
+        start - timedelta(hours=1), start - timedelta(hours=6), start - timedelta(hours=12),
+    )))
     for i in range(n):
         stamp = (start + timedelta(days=rng.randrange(invoice_days), hours=rng.randrange(24))).isoformat()
+        if i in boundary_stamps:
+            stamp = boundary_stamps[i].isoformat()
         total = rng.randrange(10_000, 2_000_000) if i % 6 else 500_000
         inv = dict(doc_id=ident('doc'), invoice_id=ident('inv'), entity_id=ident('entity'), issued_at=stamp, due_at=(datetime.fromisoformat(stamp) + timedelta(days=30)).isoformat(), currency='KZT', total_minor=total, line_items=[dict(description=rng.choice(['Logistics', 'Equipment lease', 'Consulting', 'Cloud infrastructure']), quantity=1, unit_minor=total, amount_minor=total, source_ref=ident('contract'))])
         invoices.append(inv)
@@ -85,7 +100,7 @@ def generate(seed, config=None):
             paid_at = stamp
             if config.get('boundary_payments', False) and i < 2:
                 paid_at = (end + timedelta(seconds=2*i - 1)).isoformat()
-            if i == 0 and interaction == 1:
+            if i in close_batch:
                 paid_at = (end - timedelta(seconds=1)).isoformat()
                 currency = 'USD'
             date = datetime.fromisoformat(paid_at).astimezone(zone).date().isoformat()
@@ -107,13 +122,21 @@ def generate(seed, config=None):
         truth.append(issue)
         provenance.append(dict(issue_id=issue['issue_id'], operation=kind, before=before, after=copy.deepcopy(rows if causal_rows is None else causal_rows)))
     active = {} if config.get('clean', False) else dict(counts)
-    for k, kind in enumerate(TYPES):
-        for j in range(active.get(kind, 0)):
-            index = k * 4 + j
-            if interaction == 1 and kind in ('payment_allocation', 'fx_conversion', 'accounting_period') and j == 0:
-                index = 0
-            if interaction == 2 and kind in ('duplicate_invoice', 'accounting_period') and j == 0:
-                index = 0
+    shared = {1: {'payment_allocation', 'fx_conversion', 'accounting_period'},
+              2: {'duplicate_invoice', 'accounting_period'}}.get(interaction, set())
+    reserved = {interaction_index} if shared else set()
+    targets = {}
+    # Reserve foreign obligations first, then sample ordinary obligations without replacement.
+    for kind in ('fx_conversion', 'duplicate_invoice', 'payment_allocation', 'accounting_period'):
+        size = active.get(kind, 0)
+        indices = [interaction_index] if kind in shared and size else []
+        choices = [i for i in range(n) if i not in reserved
+                   and (kind != 'fx_conversion' or i % 3 == 0)]
+        indices.extend(assignment.sample(choices, size-len(indices)))
+        targets[kind] = indices
+        reserved.update(indices)
+    for kind in TYPES:
+        for index in targets[kind]:
             inv = invoices[index]
             invoice_rows = [r for r in ledger if r['invoice_id'] == inv['invoice_id'] and r['payment_id'] is None and r['account'] == 'expense']
             pay = next(p for p in payments if p['invoice_refs'][0]['invoice_id'] == inv['invoice_id'] and p['amount_minor'] > 0)
@@ -124,33 +147,32 @@ def generate(seed, config=None):
                 clones = copy.deepcopy(pair)
                 for r in clones:
                     r['row_id'] = ident('row')
-                ledger.extend(clones)
+                insert_at = 2 * assignment.randrange(1 + len(ledger) // 2)
+                ledger[insert_at:insert_at] = clones
                 evidence = [inv['doc_id'], original['row_id'], clones[0]['row_id']]
-                if inv.get('related_credit_doc_id'):
-                    evidence.append(inv['related_credit_doc_id'])
                 change(kind, [original, clones[0]], copy.deepcopy(pair), evidence, inv['total_minor'], pair+clones)
             elif kind == 'payment_allocation':
                 before = copy.deepcopy(rows)
                 original_source = rows[0]['allocation_source_minor']
-                source = original_source // 2
+                # Missing allocations and different partial settlements must be inferred
+                # from the source payment, not a fixed inverse multiplier.
+                source = assignment.choice((0, original_source // 2,
+                                            assignment.randrange(1, original_source)))
+                if interaction == 1 and index == interaction_index:
+                    # A later interacting FX change needs a nonzero monetary effect.
+                    source = max(2, source)
                 for r in rows:
                     r['allocation_source_minor'] = source
                     field = 'debit_minor' if r['account'] == 'payable' else 'credit_minor'
                     r[field] = converted(source, pay['currency'], 'KZT', r['fx_rate'])
                 # Measure the actual journal change after rounding both postings.
                 delta = before[0]['debit_minor'] - rows[0]['debit_minor']
-                evidence = [pay['doc_id'], inv['doc_id'], rows[0]['row_id']]
+                evidence = [pay['doc_id'], rows[0]['row_id']]
                 if pay['currency'] != 'KZT':
                     fxrow = next(f for f in fx if f['date'] == before[0]['fx_date'] and f['source_currency'] == pay['currency'])
                     evidence.append(fxrow['row_id'])
                 change(kind, [rows[0]], before, evidence, delta, rows)
             elif kind == 'fx_conversion':
-                # Choose foreign settlement; native settlements have no FX error to inject.
-                if pay['currency'] == 'KZT':
-                    index = 3 * (k * 4 + j) % n
-                    inv = invoices[index]
-                    pay = next(p for p in payments if p['invoice_refs'][0]['invoice_id'] == inv['invoice_id'] and p['amount_minor'] > 0)
-                    rows = [r for r in ledger if r['payment_id'] == pay['payment_id']]
                 before = copy.deepcopy(rows)
                 true_rate = rates[rows[0]['fx_date'], pay['currency']]
                 source = rows[0]['allocation_source_minor']
@@ -173,8 +195,13 @@ def generate(seed, config=None):
                 r = invoice_rows[0]
                 paired = next(x for x in ledger if x['invoice_id'] == inv['invoice_id'] and x['payment_id'] is None and x['account'] == 'payable')
                 before = copy.deepcopy([r, paired])
-                r['timestamp'] = end.isoformat()
-                paired['timestamp'] = end.isoformat()
+                issued_inside = start <= datetime.fromisoformat(inv['issued_at']) < end
+                if issued_inside:
+                    recorded = assignment.choice(tuple(boundary_stamps.values()))
+                else:
+                    recorded = start + timedelta(days=assignment.randrange(invoice_days),
+                                                 hours=assignment.randrange(24))
+                r['timestamp'] = paired['timestamp'] = recorded.isoformat()
                 change(kind, [r], before, [inv['doc_id'], r['row_id']], inv['total_minor'], [r, paired])
     for table in ('ledger', 'invoices', 'payments', 'fx'):
         if config.get('shuffle', True):

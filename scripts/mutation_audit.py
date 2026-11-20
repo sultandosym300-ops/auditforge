@@ -1,4 +1,4 @@
-"""Run ten deliberately incorrect business/contract variants in disposable copies.
+"""Run deliberately incorrect business/contract variants in disposable copies.
 
 Usage: py -3.11 scripts/mutation_audit.py [--output reports/mutation-audit.json]
 The canonical source is never mutated. Survivors, timeouts and infrastructure
@@ -52,12 +52,49 @@ MUTATIONS = (
          description='Publish an invoice identifier where a document evidence ID is required.',
          before="evidence = [inv['doc_id'], original['row_id'], clones[0]['row_id']]",
          after="evidence = [inv['invoice_id'], original['row_id'], clones[0]['row_id']]"),
+    dict(id='omitted_false_negative', file='auditforge/matcher.py',
+         description='Drop unmatched truth entries from the false-negative count.',
+         before='len(findings) - tp, len(truth) - tp', after='len(findings) - tp, 0'),
+    dict(id='empty_truth_penalty', file='auditforge/matcher.py',
+         description='Give an empty correct submission zero F1 on a clean company.',
+         before='if 2*tp+fp+fn else 1', after='if 2*tp+fp+fn else 0'),
+    dict(id='cursor_skips_record', file='auditforge/env.py',
+         description='Skip one source record between every two consecutive pages.',
+         before='next_cursor=str(offset+limit)', after='next_cursor=str(offset+limit+1)'),
+    dict(id='incomplete_evidence', file='auditforge/matcher.py',
+         description='Accept a single overlapping item from a mandatory evidence set.',
+         before="evidence.issuperset(ids)", after="bool(evidence.intersection(ids))"),
+    dict(id='repeat_submit', file='auditforge/env.py',
+         description='Allow submit after an episode already terminated.',
+         before='if self.done:', after="if self.done and action.get('tool') != 'submit':"),
+    dict(id='unbalanced_clean_entry', file='auditforge/generator.py',
+         description='Understate the invoice liability by one minor unit.',
+         before="entry('payable', total, False, stamp, inv)", after="entry('payable', total-1, False, stamp, inv)"),
     dict(id='incorrect_clean_handling', file='auditforge/generator.py',
          description='Inject discrepancies even when clean generation was requested.',
          before="active = {} if config.get('clean', False) else dict(counts)",
          after='active = dict(counts)'),
 )
 
+
+EXPECTED_DETECTION = {
+    'fx_rounding': 'Independent source-to-ledger conversion disagrees at a fractional minor unit.',
+    'loose_amount_tolerance': 'An amount one minor unit beyond tolerance does not earn a TP.',
+    'incorrect_true_positive': 'The evaluator cannot credit more matches than a complete correct answer contains.',
+    'repeated_finding_double_count': 'Repeating an otherwise correct finding adds a false positive.',
+    'truth_in_observation': 'Initial public observation contains a forbidden evaluator field.',
+    'inclusive_period_end': 'An entry at the exclusive closing boundary is outside the period.',
+    'nondeterministic_generation': 'Identical inputs must yield byte-equivalent financial episodes.',
+    'allow_101_steps': 'The hundredth inspection truncates the episode.',
+    'wrong_evidence_id': 'Every required evidence ID resolves to a sufficient public source.',
+    'omitted_false_negative': 'An omitted true issue contributes exactly one FN.',
+    'empty_truth_penalty': 'A clean company with no submitted findings earns F1=1.',
+    'cursor_skips_record': 'Concatenated pages equal the full ordered source table.',
+    'incomplete_evidence': 'Removing a necessary item from a finding eliminates its TP.',
+    'repeat_submit': 'A second submit cannot produce new terminal reward.',
+    'unbalanced_clean_entry': 'Independent bookkeeping rejects unequal debits and credits in the pristine journal.',
+    'incorrect_clean_handling': 'A clean configuration produces zero discrepancies.',
+}
 
 def digest(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
@@ -128,7 +165,7 @@ def main():
             raise RuntimeError('Mutation sandbox escaped project/work')
         template = sandbox/'template'
         template.mkdir()
-        for directory in ('auditforge', 'tests'):
+        for directory in ('auditforge', 'tests', 'scripts'):
             shutil.copytree(ROOT/directory, template/directory,
                             ignore=shutil.ignore_patterns('__pycache__', '*.pyc'))
         baseline = run_tests(template, args.timeout)
@@ -159,7 +196,7 @@ def main():
                         result['log'] = str(log.relative_to(output.parent))
                         result['status'] = {'failed': 'killed', 'passed': 'survived'}.get(result['status'], result['status'])
                 result.update(id=mutation['id'], file=mutation['file'],
-                              description=mutation['description'])
+                              description=mutation['description'], expected_detection=EXPECTED_DETECTION[mutation['id']])
                 report['mutations'].append(result)
                 print(f"{mutation['id']}: {result['status']}", flush=True)
     report['source_unchanged'] = all(digest(ROOT/path) == value for path, value in originals.items())

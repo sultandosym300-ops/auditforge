@@ -131,8 +131,6 @@ def _inspect_books(books, pristine=False):
         require(all((r['debit_minor'], r['credit_minor']) == (inv['total_minor'], 0) for r in expenses), 'Invoice recognition amount disagrees')
         if len(expenses) > 1:
             ids = [inv['doc_id']] + [r['row_id'] for r in expenses]
-            if inv.get('related_credit_doc_id'):
-                ids.append(inv['related_credit_doc_id'])
             finding('duplicate_invoice', [r['row_id'] for r in expenses], (len(expenses)-1)*inv['total_minor'], ids)
         for row in expenses:
             recorded = start <= timestamp(row['timestamp']) < end
@@ -162,9 +160,8 @@ def _inspect_books(books, pristine=False):
             rate = fx['rate'] if fx else '1'
             expected_booked = converted_minor(booked, pay['currency'], base, rate, exponents)
             full = converted_minor(ref['allocated_minor'], pay['currency'], base, rate, exponents)
-            inv = invoices[ref['invoice_id']]
             if booked != ref['allocated_minor']:
-                ids = [payable['row_id'], pay['doc_id'], inv['doc_id']] + ([fx['row_id']] if fx else [])
+                ids = [payable['row_id'], pay['doc_id']] + ([fx['row_id']] if fx else [])
                 finding('payment_allocation', [payable['row_id']], full-expected_booked, ids)
             if payable['debit_minor'] != expected_booked:
                 ids = [payable['row_id'], pay['doc_id']] + ([fx['row_id']] if fx else [])
@@ -197,9 +194,12 @@ def audit_episode(episode):
         for issue in truth:
             require(type(issue['expected_amount_minor']) is int and issue['expected_amount_minor'] >= 0, 'Invalid truth amount')
             require(issue['evidence_sets'], 'Truth has no evidence set')
+            minimum = set(recovered[_signature(issue)]['evidence_ids'])
+            require(any(set(ids) == minimum for ids in issue['evidence_sets']),
+                    'Every admissible proof requires unrelated records')
             for evidence in issue['evidence_sets']:
                 require(isinstance(evidence, list) and len(evidence) <= 10 and len(evidence) == len(set(evidence)), 'Malformed evidence set')
-                require(set(evidence) <= visible and set(recovered[_signature(issue)]['evidence_ids']) <= set(evidence), 'Truth evidence does not independently establish the discrepancy')
+                require(set(evidence) <= visible and minimum <= set(evidence), 'Truth evidence does not independently establish the discrepancy')
         mutations = indexed(episode['provenance'], 'issue_id')
         require(set(mutations) == set(truth_by_id), 'Truth/provenance issue identities disagree')
         state = {r['row_id']: r for r in episode['pristine']['ledger']}

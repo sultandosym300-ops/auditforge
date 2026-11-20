@@ -88,7 +88,10 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--seed', type=int, default=30811471,
                         help='Root seed for the 20 jury-style episodes; examples stay fixed')
+    parser.add_argument('--output-dir', type=Path, default=ROOT,
+                        help='Destination for generated examples, trajectories and measurements')
     args = parser.parse_args()
+    output = args.output_dir.resolve()
     started=time.perf_counter()
     test_count=unittest.defaultTestLoader.discover(str(ROOT/'tests')).countTestCases()
     contract_count = unittest.defaultTestLoader.discover(str(ROOT/'tests'), 'test_contract.py').countTestCases()
@@ -148,7 +151,7 @@ def main():
             configuration=dict(clean=i<2,interaction=i%3)
             episode=generate(offset+i,configuration)
             validate(episode)
-            export_episode(episode,ROOT/'datasets'/split)
+            export_episode(episode,output/'datasets'/split)
             if split == 'train':
                 for name in ('random', 'reconciliation', 'mark_all'):
                     session = Session()
@@ -160,13 +163,13 @@ def main():
                         assert session.report['f1'] == 1
                     trajectories.extend(dict(policy=name, **row) for row in log)
             specifications.append(dict(seed=offset+i,config=configuration,episode_id=episode['public']['manifest']['episode_id']))
-        write_json(ROOT/'configs'/(split+'.json'),dict(version='1.1',generator_version=GENERATOR_VERSION,episodes=specifications))
-    (ROOT/'trajectories').mkdir(exist_ok=True)
-    (ROOT/'trajectories'/'trajectories.jsonl').write_text(''.join(json.dumps(r,sort_keys=True)+'\n' for r in trajectories),encoding='utf-8')
+        write_json(output/'configs'/(split+'.json'),dict(version='1.1',generator_version=GENERATOR_VERSION,episodes=specifications))
+    (output/'trajectories').mkdir(exist_ok=True)
+    (output/'trajectories'/'trajectories.jsonl').write_text(''.join(json.dumps(r,sort_keys=True)+'\n' for r in trajectories),encoding='utf-8')
     report=dict(version=GENERATOR_VERSION,tests_passed=test_count,official_result=None,scope='Local approximation of published checks; hidden organizer tests unavailable.',python=platform.python_version(),platform=platform.platform(),contract_checks=20,reward_checks=20,data=data,metamorphic_pairs=pairs,benchmark=results,peak_python_tracemalloc_bytes=memory,wall_seconds=time.perf_counter()-started,limitations=['CPU/RAM isolation requires Docker; tracemalloc is not process RSS.','No model weights trained; no learning improvement claimed.','Oracle is evaluator-only; its inspection strategy is not optimized.'])
     report['jury_root_seed'] = args.seed
-    write_json(ROOT/'reports'/'verification.json',report)
-    write_json(ROOT/'web'/'public'/'verification-summary.json',dict(local=True,official_result=None,contract_passed=20,reward_passed=20,valid_episodes=len(data),metamorphic_pairs=len(pairs),wall_seconds=report['wall_seconds'],benchmark=results))
+    write_json(output/'reports'/'verification.json',report)
+    write_json(output/'web'/'public'/'verification-summary.json',dict(local=True,official_result=None,contract_passed=20,reward_passed=20,valid_episodes=len(data),metamorphic_pairs=len(pairs),wall_seconds=report['wall_seconds'],benchmark=results))
     print(json.dumps(dict(status='PASS',tests=test_count,data_episodes=20,pairs=20,policy_runs=len(results),seconds=report['wall_seconds'],peak_python_bytes=memory,official_result=None)))
 
 if __name__=='__main__': main()

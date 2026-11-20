@@ -17,8 +17,8 @@ python -m auditforge.verify
 Для запуска с ограничениями из задания:
 
 ```sh
-docker build -t auditforge-evaluator:1.1.3 .
-docker run --rm --network none --cpus 2 --memory 4g auditforge-evaluator:1.1.3
+docker build -t auditforge-evaluator:1.1.4 .
+docker run --rm --network none --cpus 2 --memory 4g auditforge-evaluator:1.1.4
 docker build -f Dockerfile.policy -t auditforge-policy:1.0 .
 python -m auditforge.agent_runner
 ```
