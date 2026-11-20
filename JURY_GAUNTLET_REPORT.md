@@ -19,9 +19,10 @@ Generator 1.1.4. Root seed `783061141199`. Python 3.11.1.
 | Submission inventory, exact regenerated files and trajectory privacy | 11 | 11 | PASS |
 | Contract fixed checks | 20 | 20 | PASS |
 | Reward fixed checks | 20 | 20 | PASS |
-| 80 complete baseline runs | 80, <=100 steps and <60s each | 80, 24 steps, 0.384s maximum | PASS |
+| 80 complete baseline runs | 80, <=100 steps and <60s each | 80, 24 steps, 0.155s maximum | PASS |
 | Independent exact-rational financial and causal audit | 1000 | 1000 | PASS |
 | Public evidence collected before submit | 50 | 50 | PASS |
+| Individual evidence omissions and complete-proof controls | 0 | 0 | PASS |
 | Sized batch-payment books at both published endpoints | 4 | 4 | PASS |
 | Independent reward and assignment tournament | 20 | 20 | PASS |
 | Byte-identical public transcripts across interpreters | 6 | 6 | PASS |

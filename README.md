@@ -36,7 +36,7 @@ python -m scripts.mutation_audit
 python -m scripts.verify_container
 ```
 
-Текущие результаты и эксперимент с шаблонами генерации описаны в [FINAL_CASE_IMPROVEMENT_REPORT.md](FINAL_CASE_IMPROVEMENT_REPORT.md). [Предыдущая симуляция](FINAL_JURY_SIMULATION.md) относится к версии 1.1.2.
+Полный аудит версии 1.1.4 запускается командой `python -m scripts.jury_gauntlet` из корня полученного архива или репозитория. Для прогона без сети достаточно Python 3.11. [Итог аудита](FINAL_EXTREME_AUDIT.md), [таблицы испытаний](JURY_GAUNTLET_REPORT.md) и [разбор исправлений](BUGS_FOUND_AND_FIXED.md) относятся к текущей версии. [Отчёт версии 1.1.3](FINAL_CASE_IMPROVEMENT_REPORT.md) и [отчёт версии 1.1.2](FINAL_JURY_SIMULATION.md) сохранены для сравнения.
 
 ## Устройство среды
 

@@ -12,7 +12,7 @@ from auditforge.export import write_json
 from auditforge.financial_audit import run_mass_audit
 from auditforge.generator import GENERATOR_VERSION
 from auditforge.metamorphic import run as metamorphic
-from scripts import jury_blind, jury_delivery, jury_replay, jury_reward
+from scripts import jury_blind, jury_delivery, jury_diagnostics, jury_replay, jury_reward
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_SEED = 783061141199
@@ -105,6 +105,10 @@ def main():
         blind = jury_blind.run(root+2, 50)
         record("Public evidence collected before submit", 50, blind["passed"],
                blind["passed"] == 50, "scripts/jury_blind.py", root+2)
+        location = jury_diagnostics.feature_audit(root+7)
+        ablation = jury_diagnostics.ablate(root+9)
+        record("Individual evidence omissions and complete-proof controls", 0,
+               len(ablation["failures"]), not ablation["failures"], "scripts/jury_diagnostics.py", root+9)
         dense = blind["dense"]
         record("Sized batch-payment books at both published endpoints", 4,
                sum(r["passed"] for r in dense), len(dense) == 4 and all(r["passed"] for r in dense),
@@ -147,7 +151,7 @@ def main():
     report = dict(name="AUDITFORGE_JURY_GAUNTLET", version=GENERATOR_VERSION, python=platform.python_version(),
                   seed=root, rubric=rubric, official_score=None, engineering=engineering, checks=checks,
                   contract=contracts, reward=rewards, official_approximation=official, delivery=delivery,
-                  finance=finance, blind=blind, tournament=tournament, replay=replay, pairs=pairs,
+                  finance=finance, blind=blind, feature_probes=location, ablations=ablation, tournament=tournament, replay=replay, pairs=pairs,
                   mutations=mutations, references=references)
     write_json(ROOT/"JURY_GAUNTLET_RESULTS.json", report)
     (ROOT/"JURY_GAUNTLET_REPORT.md").write_text(render(report), encoding="utf8")
