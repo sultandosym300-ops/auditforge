@@ -52,14 +52,21 @@ def family_config(seed):
 def published_generator():
     # Execute the immutable baseline generator only. The evaluator and control
     # policy are held fixed for both arms. No subprocess handles private files.
+    from_git = True
     try:
         data = subprocess.check_output(["git", "show", CONTROL+":auditforge/generator.py"],
                                        cwd=ROOT, stderr=subprocess.DEVNULL)
     except (OSError, subprocess.CalledProcessError):
-        return generate, False
+        from_git = False
+        data = (ROOT/"scripts/controls/generator_114.py").read_bytes().replace(b"
+", b"
+")
+        import hashlib
+        if hashlib.sha256(data).hexdigest() != "69efd8453df2a7e9bf20648df530da0c9e6ffec8ae86b75ed7adf59ffd9132a1":
+            raise RuntimeError("Frozen reference source has changed")
     module = {"__name__": "frozen_auditforge_generator"}
     exec(compile(data, "1.1.4/auditforge/generator.py", "exec"), module)
-    return module["generate"], True
+    return module["generate"], from_git
 
 
 def variants(arm, base):
@@ -302,7 +309,7 @@ def study(root, fit_count, test_count):
     elif not from_git:
         raise RuntimeError("Custom baseline cohorts require the 1.1.4 commit in Git history")
     return dict(root=root, fit_families=fit_count, holdout_families=test_count, control_sha=CONTROL,
-                control_source="git checkpoint" if from_git else "byte-verified compatibility generator",
+                control_source="git checkpoint" if from_git else "frozen source reference with verified SHA256",
                 baseline_all_branches_digest=measured_digest, holdout_digest=digest.hexdigest(),
                 core_source_sha256={p.name:sha256(p.read_bytes().replace(b"\r\n",b"\n")).hexdigest()
                                     for p in (ROOT/"auditforge/generator.py", ROOT/"auditforge/recognition_worlds.py")},

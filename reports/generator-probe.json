@@ -1,0 +1,1244 @@
+{
+  "cases": [
+    {
+      "config": {
+        "clean": true,
+        "interaction": 0,
+        "period_month": "2028-02",
+        "timezone": "+05:45"
+      },
+      "f1": 1,
+      "financial_valid": true,
+      "fn": 0,
+      "fp": 0,
+      "precision": 0,
+      "proper_f1": 1,
+      "recall": 0,
+      "reward": 0.98,
+      "seed": 62372763602674326639912545861166996768,
+      "steps": 11,
+      "tp": 0
+    },
+    {
+      "config": {
+        "clean": false,
+        "interaction": 1,
+        "period_month": "2031-12",
+        "timezone": "-03:30"
+      },
+      "f1": 1.0,
+      "financial_valid": true,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "proper_f1": 1.0,
+      "recall": 1.0,
+      "reward": 0.98,
+      "seed": 26862105363324475973520647331266775022,
+      "steps": 11,
+      "tp": 4
+    },
+    {
+      "config": {
+        "clean": false,
+        "interaction": 2,
+        "period_month": "2028-02",
+        "timezone": "+14:00"
+      },
+      "f1": 1.0,
+      "financial_valid": true,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "proper_f1": 1.0,
+      "recall": 1.0,
+      "reward": 0.98,
+      "seed": 282023522515049966240699817220833578828,
+      "steps": 11,
+      "tp": 4
+    },
+    {
+      "config": {
+        "clean": false,
+        "interaction": 0,
+        "period_month": "2031-12",
+        "timezone": "-12:00"
+      },
+      "f1": 1.0,
+      "financial_valid": true,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "proper_f1": 1.0,
+      "recall": 1.0,
+      "reward": 0.98,
+      "seed": 243316711114410105107700915427655732473,
+      "steps": 11,
+      "tp": 4
+    },
+    {
+      "config": {
+        "clean": true,
+        "interaction": 1,
+        "period_month": "2028-02",
+        "timezone": "+05:45"
+      },
+      "f1": 1,
+      "financial_valid": true,
+      "fn": 0,
+      "fp": 0,
+      "precision": 0,
+      "proper_f1": 1,
+      "recall": 0,
+      "reward": 0.98,
+      "seed": 7223440676747373777071748500175446200,
+      "steps": 11,
+      "tp": 0
+    },
+    {
+      "config": {
+        "clean": false,
+        "interaction": 2,
+        "period_month": "2031-12",
+        "timezone": "-03:30"
+      },
+      "f1": 1.0,
+      "financial_valid": true,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "proper_f1": 1.0,
+      "recall": 1.0,
+      "reward": 0.98,
+      "seed": 124904397367499233265141231800990367096,
+      "steps": 11,
+      "tp": 4
+    },
+    {
+      "config": {
+        "clean": false,
+        "interaction": 0,
+        "period_month": "2028-02",
+        "timezone": "+14:00"
+      },
+      "f1": 1.0,
+      "financial_valid": true,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "proper_f1": 1.0,
+      "recall": 1.0,
+      "reward": 0.98,
+      "seed": 42501876675763900021184070132372637285,
+      "steps": 11,
+      "tp": 4
+    },
+    {
+      "config": {
+        "clean": false,
+        "interaction": 1,
+        "period_month": "2031-12",
+        "timezone": "-12:00"
+      },
+      "f1": 1.0,
+      "financial_valid": true,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "proper_f1": 1.0,
+      "recall": 1.0,
+      "reward": 0.98,
+      "seed": 313943066560162830337191229277402408609,
+      "steps": 11,
+      "tp": 4
+    },
+    {
+      "config": {
+        "clean": true,
+        "interaction": 2,
+        "period_month": "2028-02",
+        "timezone": "+05:45"
+      },
+      "f1": 1,
+      "financial_valid": true,
+      "fn": 0,
+      "fp": 0,
+      "precision": 0,
+      "proper_f1": 1,
+      "recall": 0,
+      "reward": 0.98,
+      "seed": 288534512162149065025649906913113751126,
+      "steps": 11,
+      "tp": 0
+    },
+    {
+      "config": {
+        "clean": false,
+        "interaction": 0,
+        "period_month": "2031-12",
+        "timezone": "-03:30"
+      },
+      "f1": 1.0,
+      "financial_valid": true,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "proper_f1": 1.0,
+      "recall": 1.0,
+      "reward": 0.98,
+      "seed": 124691215757352475653583349578392814690,
+      "steps": 11,
+      "tp": 4
+    },
+    {
+      "config": {
+        "clean": false,
+        "interaction": 1,
+        "period_month": "2028-02",
+        "timezone": "+14:00"
+      },
+      "f1": 1.0,
+      "financial_valid": true,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "proper_f1": 1.0,
+      "recall": 1.0,
+      "reward": 0.98,
+      "seed": 16280722818576585324959167492351373333,
+      "steps": 11,
+      "tp": 4
+    },
+    {
+      "config": {
+        "clean": false,
+        "interaction": 2,
+        "period_month": "2031-12",
+        "timezone": "-12:00"
+      },
+      "f1": 1.0,
+      "financial_valid": true,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "proper_f1": 1.0,
+      "recall": 1.0,
+      "reward": 0.98,
+      "seed": 294079000119843129738949819500764398522,
+      "steps": 11,
+      "tp": 4
+    },
+    {
+      "config": {
+        "clean": true,
+        "interaction": 0,
+        "period_month": "2028-02",
+        "timezone": "+05:45"
+      },
+      "f1": 1,
+      "financial_valid": true,
+      "fn": 0,
+      "fp": 0,
+      "precision": 0,
+      "proper_f1": 1,
+      "recall": 0,
+      "reward": 0.98,
+      "seed": 188922252399567122289075439000836772614,
+      "steps": 11,
+      "tp": 0
+    },
+    {
+      "config": {
+        "clean": false,
+        "interaction": 1,
+        "period_month": "2031-12",
+        "timezone": "-03:30"
+      },
+      "f1": 1.0,
+      "financial_valid": true,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "proper_f1": 1.0,
+      "recall": 1.0,
+      "reward": 0.98,
+      "seed": 253530245747475248579628877360886927655,
+      "steps": 11,
+      "tp": 4
+    },
+    {
+      "config": {
+        "clean": false,
+        "interaction": 2,
+        "period_month": "2028-02",
+        "timezone": "+14:00"
+      },
+      "f1": 1.0,
+      "financial_valid": true,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "proper_f1": 1.0,
+      "recall": 1.0,
+      "reward": 0.98,
+      "seed": 116905088140484745963267932564491442870,
+      "steps": 11,
+      "tp": 4
+    },
+    {
+      "config": {
+        "clean": false,
+        "interaction": 0,
+        "period_month": "2031-12",
+        "timezone": "-12:00"
+      },
+      "f1": 1.0,
+      "financial_valid": true,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "proper_f1": 1.0,
+      "recall": 1.0,
+      "reward": 0.98,
+      "seed": 116645423146665082709202145130514069421,
+      "steps": 11,
+      "tp": 4
+    },
+    {
+      "config": {
+        "clean": true,
+        "interaction": 1,
+        "period_month": "2028-02",
+        "timezone": "+05:45"
+      },
+      "f1": 1,
+      "financial_valid": true,
+      "fn": 0,
+      "fp": 0,
+      "precision": 0,
+      "proper_f1": 1,
+      "recall": 0,
+      "reward": 0.98,
+      "seed": 254405571259346765932667871253155399406,
+      "steps": 11,
+      "tp": 0
+    },
+    {
+      "config": {
+        "clean": false,
+        "interaction": 2,
+        "period_month": "2031-12",
+        "timezone": "-03:30"
+      },
+      "f1": 1.0,
+      "financial_valid": true,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "proper_f1": 1.0,
+      "recall": 1.0,
+      "reward": 0.98,
+      "seed": 191076751871149579050190837077339827919,
+      "steps": 11,
+      "tp": 4
+    },
+    {
+      "config": {
+        "clean": false,
+        "interaction": 0,
+        "period_month": "2028-02",
+        "timezone": "+14:00"
+      },
+      "f1": 1.0,
+      "financial_valid": true,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "proper_f1": 1.0,
+      "recall": 1.0,
+      "reward": 0.98,
+      "seed": 218646900513537630143137145505450744032,
+      "steps": 11,
+      "tp": 4
+    },
+    {
+      "config": {
+        "clean": false,
+        "interaction": 1,
+        "period_month": "2031-12",
+        "timezone": "-12:00"
+      },
+      "f1": 1.0,
+      "financial_valid": true,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "proper_f1": 1.0,
+      "recall": 1.0,
+      "reward": 0.98,
+      "seed": 122407878678928293241691389312183233070,
+      "steps": 11,
+      "tp": 4
+    },
+    {
+      "config": {
+        "clean": true,
+        "interaction": 2,
+        "period_month": "2028-02",
+        "timezone": "+05:45"
+      },
+      "f1": 1,
+      "financial_valid": true,
+      "fn": 0,
+      "fp": 0,
+      "precision": 0,
+      "proper_f1": 1,
+      "recall": 0,
+      "reward": 0.98,
+      "seed": 229458941825806022306865498104833844495,
+      "steps": 11,
+      "tp": 0
+    },
+    {
+      "config": {
+        "clean": false,
+        "interaction": 0,
+        "period_month": "2031-12",
+        "timezone": "-03:30"
+      },
+      "f1": 1.0,
+      "financial_valid": true,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "proper_f1": 1.0,
+      "recall": 1.0,
+      "reward": 0.98,
+      "seed": 300465386211249564463830232707598949579,
+      "steps": 11,
+      "tp": 4
+    },
+    {
+      "config": {
+        "clean": false,
+        "interaction": 1,
+        "period_month": "2028-02",
+        "timezone": "+14:00"
+      },
+      "f1": 1.0,
+      "financial_valid": true,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "proper_f1": 1.0,
+      "recall": 1.0,
+      "reward": 0.98,
+      "seed": 314220150393060060755860501810375702537,
+      "steps": 11,
+      "tp": 4
+    },
+    {
+      "config": {
+        "clean": false,
+        "interaction": 2,
+        "period_month": "2031-12",
+        "timezone": "-12:00"
+      },
+      "f1": 1.0,
+      "financial_valid": true,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "proper_f1": 1.0,
+      "recall": 1.0,
+      "reward": 0.98,
+      "seed": 78181743271349095146563621537264662902,
+      "steps": 11,
+      "tp": 4
+    },
+    {
+      "config": {
+        "clean": true,
+        "interaction": 0,
+        "period_month": "2028-02",
+        "timezone": "+05:45"
+      },
+      "f1": 1,
+      "financial_valid": true,
+      "fn": 0,
+      "fp": 0,
+      "precision": 0,
+      "proper_f1": 1,
+      "recall": 0,
+      "reward": 0.98,
+      "seed": 8391333720331904911221174950972333876,
+      "steps": 11,
+      "tp": 0
+    },
+    {
+      "config": {
+        "clean": false,
+        "interaction": 1,
+        "period_month": "2031-12",
+        "timezone": "-03:30"
+      },
+      "f1": 1.0,
+      "financial_valid": true,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "proper_f1": 1.0,
+      "recall": 1.0,
+      "reward": 0.98,
+      "seed": 324145299542836279621490243608066619875,
+      "steps": 11,
+      "tp": 4
+    },
+    {
+      "config": {
+        "clean": false,
+        "interaction": 2,
+        "period_month": "2028-02",
+        "timezone": "+14:00"
+      },
+      "f1": 1.0,
+      "financial_valid": true,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "proper_f1": 1.0,
+      "recall": 1.0,
+      "reward": 0.98,
+      "seed": 49208099159340006923082843516643528031,
+      "steps": 11,
+      "tp": 4
+    },
+    {
+      "config": {
+        "clean": false,
+        "interaction": 0,
+        "period_month": "2031-12",
+        "timezone": "-12:00"
+      },
+      "f1": 1.0,
+      "financial_valid": true,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "proper_f1": 1.0,
+      "recall": 1.0,
+      "reward": 0.98,
+      "seed": 304898015105334599159238584292956309579,
+      "steps": 11,
+      "tp": 4
+    },
+    {
+      "config": {
+        "clean": true,
+        "interaction": 1,
+        "period_month": "2028-02",
+        "timezone": "+05:45"
+      },
+      "f1": 1,
+      "financial_valid": true,
+      "fn": 0,
+      "fp": 0,
+      "precision": 0,
+      "proper_f1": 1,
+      "recall": 0,
+      "reward": 0.98,
+      "seed": 34193578730595348231569296181736812466,
+      "steps": 11,
+      "tp": 0
+    },
+    {
+      "config": {
+        "clean": false,
+        "interaction": 2,
+        "period_month": "2031-12",
+        "timezone": "-03:30"
+      },
+      "f1": 1.0,
+      "financial_valid": true,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "proper_f1": 1.0,
+      "recall": 1.0,
+      "reward": 0.98,
+      "seed": 56041254744026279824089880108044682263,
+      "steps": 11,
+      "tp": 4
+    },
+    {
+      "config": {
+        "clean": false,
+        "interaction": 0,
+        "period_month": "2028-02",
+        "timezone": "+14:00"
+      },
+      "f1": 1.0,
+      "financial_valid": true,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "proper_f1": 1.0,
+      "recall": 1.0,
+      "reward": 0.98,
+      "seed": 312580834059104759860443128872286964738,
+      "steps": 11,
+      "tp": 4
+    },
+    {
+      "config": {
+        "clean": false,
+        "interaction": 1,
+        "period_month": "2031-12",
+        "timezone": "-12:00"
+      },
+      "f1": 1.0,
+      "financial_valid": true,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "proper_f1": 1.0,
+      "recall": 1.0,
+      "reward": 0.98,
+      "seed": 45025800164974167515856976908541154383,
+      "steps": 11,
+      "tp": 4
+    },
+    {
+      "config": {
+        "clean": true,
+        "interaction": 2,
+        "period_month": "2028-02",
+        "timezone": "+05:45"
+      },
+      "f1": 1,
+      "financial_valid": true,
+      "fn": 0,
+      "fp": 0,
+      "precision": 0,
+      "proper_f1": 1,
+      "recall": 0,
+      "reward": 0.98,
+      "seed": 258703349540154550942373534355923496304,
+      "steps": 11,
+      "tp": 0
+    },
+    {
+      "config": {
+        "clean": false,
+        "interaction": 0,
+        "period_month": "2031-12",
+        "timezone": "-03:30"
+      },
+      "f1": 1.0,
+      "financial_valid": true,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "proper_f1": 1.0,
+      "recall": 1.0,
+      "reward": 0.98,
+      "seed": 127714164778995058198972872580088470564,
+      "steps": 11,
+      "tp": 4
+    },
+    {
+      "config": {
+        "clean": false,
+        "interaction": 1,
+        "period_month": "2028-02",
+        "timezone": "+14:00"
+      },
+      "f1": 1.0,
+      "financial_valid": true,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "proper_f1": 1.0,
+      "recall": 1.0,
+      "reward": 0.98,
+      "seed": 173476192788316627493411949922126809993,
+      "steps": 11,
+      "tp": 4
+    },
+    {
+      "config": {
+        "clean": false,
+        "interaction": 2,
+        "period_month": "2031-12",
+        "timezone": "-12:00"
+      },
+      "f1": 1.0,
+      "financial_valid": true,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "proper_f1": 1.0,
+      "recall": 1.0,
+      "reward": 0.98,
+      "seed": 309471230300603960327973562226200822966,
+      "steps": 11,
+      "tp": 4
+    },
+    {
+      "config": {
+        "clean": true,
+        "interaction": 0,
+        "period_month": "2028-02",
+        "timezone": "+05:45"
+      },
+      "f1": 1,
+      "financial_valid": true,
+      "fn": 0,
+      "fp": 0,
+      "precision": 0,
+      "proper_f1": 1,
+      "recall": 0,
+      "reward": 0.98,
+      "seed": 69778417436822279072849326219255591704,
+      "steps": 11,
+      "tp": 0
+    },
+    {
+      "config": {
+        "clean": false,
+        "interaction": 1,
+        "period_month": "2031-12",
+        "timezone": "-03:30"
+      },
+      "f1": 1.0,
+      "financial_valid": true,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "proper_f1": 1.0,
+      "recall": 1.0,
+      "reward": 0.98,
+      "seed": 266543577772556114659031623592174770863,
+      "steps": 11,
+      "tp": 4
+    },
+    {
+      "config": {
+        "clean": false,
+        "interaction": 2,
+        "period_month": "2028-02",
+        "timezone": "+14:00"
+      },
+      "f1": 1.0,
+      "financial_valid": true,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "proper_f1": 1.0,
+      "recall": 1.0,
+      "reward": 0.98,
+      "seed": 184716977548327093689696444318978057519,
+      "steps": 11,
+      "tp": 4
+    },
+    {
+      "config": {
+        "clean": false,
+        "interaction": 0,
+        "period_month": "2031-12",
+        "timezone": "-12:00"
+      },
+      "f1": 1.0,
+      "financial_valid": true,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "proper_f1": 1.0,
+      "recall": 1.0,
+      "reward": 0.98,
+      "seed": 47407436848695975721530848455992940758,
+      "steps": 11,
+      "tp": 4
+    },
+    {
+      "config": {
+        "clean": true,
+        "interaction": 1,
+        "period_month": "2028-02",
+        "timezone": "+05:45"
+      },
+      "f1": 1,
+      "financial_valid": true,
+      "fn": 0,
+      "fp": 0,
+      "precision": 0,
+      "proper_f1": 1,
+      "recall": 0,
+      "reward": 0.98,
+      "seed": 65259726396180917358527124278453844388,
+      "steps": 11,
+      "tp": 0
+    },
+    {
+      "config": {
+        "clean": false,
+        "interaction": 2,
+        "period_month": "2031-12",
+        "timezone": "-03:30"
+      },
+      "f1": 1.0,
+      "financial_valid": true,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "proper_f1": 1.0,
+      "recall": 1.0,
+      "reward": 0.98,
+      "seed": 270505711457363871397350376968286588853,
+      "steps": 11,
+      "tp": 4
+    },
+    {
+      "config": {
+        "clean": false,
+        "interaction": 0,
+        "period_month": "2028-02",
+        "timezone": "+14:00"
+      },
+      "f1": 1.0,
+      "financial_valid": true,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "proper_f1": 1.0,
+      "recall": 1.0,
+      "reward": 0.98,
+      "seed": 71745834943613734312997086685258893903,
+      "steps": 11,
+      "tp": 4
+    },
+    {
+      "config": {
+        "clean": false,
+        "interaction": 1,
+        "period_month": "2031-12",
+        "timezone": "-12:00"
+      },
+      "f1": 1.0,
+      "financial_valid": true,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "proper_f1": 1.0,
+      "recall": 1.0,
+      "reward": 0.98,
+      "seed": 332124044992390117876524726778168164165,
+      "steps": 11,
+      "tp": 4
+    },
+    {
+      "config": {
+        "clean": true,
+        "interaction": 2,
+        "period_month": "2028-02",
+        "timezone": "+05:45"
+      },
+      "f1": 1,
+      "financial_valid": true,
+      "fn": 0,
+      "fp": 0,
+      "precision": 0,
+      "proper_f1": 1,
+      "recall": 0,
+      "reward": 0.98,
+      "seed": 248710025982702534935589705226846000613,
+      "steps": 11,
+      "tp": 0
+    },
+    {
+      "config": {
+        "clean": false,
+        "interaction": 0,
+        "period_month": "2031-12",
+        "timezone": "-03:30"
+      },
+      "f1": 1.0,
+      "financial_valid": true,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "proper_f1": 1.0,
+      "recall": 1.0,
+      "reward": 0.98,
+      "seed": 108683402889809008359810466551652859075,
+      "steps": 11,
+      "tp": 4
+    },
+    {
+      "config": {
+        "clean": false,
+        "interaction": 1,
+        "period_month": "2028-02",
+        "timezone": "+14:00"
+      },
+      "f1": 1.0,
+      "financial_valid": true,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "proper_f1": 1.0,
+      "recall": 1.0,
+      "reward": 0.98,
+      "seed": 271558020276395321421185718488615881707,
+      "steps": 11,
+      "tp": 4
+    },
+    {
+      "config": {
+        "clean": false,
+        "interaction": 2,
+        "period_month": "2031-12",
+        "timezone": "-12:00"
+      },
+      "f1": 1.0,
+      "financial_valid": true,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "proper_f1": 1.0,
+      "recall": 1.0,
+      "reward": 0.98,
+      "seed": 224220988085198949976447398154941824164,
+      "steps": 11,
+      "tp": 4
+    },
+    {
+      "config": {
+        "clean": true,
+        "interaction": 0,
+        "period_month": "2028-02",
+        "timezone": "+05:45"
+      },
+      "f1": 1,
+      "financial_valid": true,
+      "fn": 0,
+      "fp": 0,
+      "precision": 0,
+      "proper_f1": 1,
+      "recall": 0,
+      "reward": 0.98,
+      "seed": 132911907515911133341506436460961781033,
+      "steps": 11,
+      "tp": 0
+    },
+    {
+      "config": {
+        "clean": false,
+        "interaction": 1,
+        "period_month": "2031-12",
+        "timezone": "-03:30"
+      },
+      "f1": 1.0,
+      "financial_valid": true,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "proper_f1": 1.0,
+      "recall": 1.0,
+      "reward": 0.98,
+      "seed": 34223466452302340046016171948538120950,
+      "steps": 11,
+      "tp": 4
+    },
+    {
+      "config": {
+        "clean": false,
+        "interaction": 2,
+        "period_month": "2028-02",
+        "timezone": "+14:00"
+      },
+      "f1": 1.0,
+      "financial_valid": true,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "proper_f1": 1.0,
+      "recall": 1.0,
+      "reward": 0.98,
+      "seed": 137732942258261014111412431941349789636,
+      "steps": 11,
+      "tp": 4
+    },
+    {
+      "config": {
+        "clean": false,
+        "interaction": 0,
+        "period_month": "2031-12",
+        "timezone": "-12:00"
+      },
+      "f1": 1.0,
+      "financial_valid": true,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "proper_f1": 1.0,
+      "recall": 1.0,
+      "reward": 0.98,
+      "seed": 338684966525868183908344430080505904317,
+      "steps": 11,
+      "tp": 4
+    },
+    {
+      "config": {
+        "clean": true,
+        "interaction": 1,
+        "period_month": "2028-02",
+        "timezone": "+05:45"
+      },
+      "f1": 1,
+      "financial_valid": true,
+      "fn": 0,
+      "fp": 0,
+      "precision": 0,
+      "proper_f1": 1,
+      "recall": 0,
+      "reward": 0.98,
+      "seed": 17656085265538926542567379515238429447,
+      "steps": 11,
+      "tp": 0
+    },
+    {
+      "config": {
+        "clean": false,
+        "interaction": 2,
+        "period_month": "2031-12",
+        "timezone": "-03:30"
+      },
+      "f1": 1.0,
+      "financial_valid": true,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "proper_f1": 1.0,
+      "recall": 1.0,
+      "reward": 0.98,
+      "seed": 69056008788876400799550134448876822764,
+      "steps": 11,
+      "tp": 4
+    },
+    {
+      "config": {
+        "clean": false,
+        "interaction": 0,
+        "period_month": "2028-02",
+        "timezone": "+14:00"
+      },
+      "f1": 1.0,
+      "financial_valid": true,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "proper_f1": 1.0,
+      "recall": 1.0,
+      "reward": 0.98,
+      "seed": 121029741327328354715290025035526530821,
+      "steps": 11,
+      "tp": 4
+    },
+    {
+      "config": {
+        "clean": false,
+        "interaction": 1,
+        "period_month": "2031-12",
+        "timezone": "-12:00"
+      },
+      "f1": 1.0,
+      "financial_valid": true,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "proper_f1": 1.0,
+      "recall": 1.0,
+      "reward": 0.98,
+      "seed": 164244734669972161717616921006648445749,
+      "steps": 11,
+      "tp": 4
+    },
+    {
+      "config": {
+        "clean": true,
+        "interaction": 2,
+        "period_month": "2028-02",
+        "timezone": "+05:45"
+      },
+      "f1": 1,
+      "financial_valid": true,
+      "fn": 0,
+      "fp": 0,
+      "precision": 0,
+      "proper_f1": 1,
+      "recall": 0,
+      "reward": 0.98,
+      "seed": 109370010414608872522931995213650874466,
+      "steps": 11,
+      "tp": 0
+    },
+    {
+      "config": {
+        "clean": false,
+        "interaction": 0,
+        "period_month": "2031-12",
+        "timezone": "-03:30"
+      },
+      "f1": 1.0,
+      "financial_valid": true,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "proper_f1": 1.0,
+      "recall": 1.0,
+      "reward": 0.98,
+      "seed": 28779276788437225494218096958375064295,
+      "steps": 11,
+      "tp": 4
+    },
+    {
+      "config": {
+        "clean": false,
+        "interaction": 1,
+        "period_month": "2028-02",
+        "timezone": "+14:00"
+      },
+      "f1": 1.0,
+      "financial_valid": true,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "proper_f1": 1.0,
+      "recall": 1.0,
+      "reward": 0.98,
+      "seed": 9304103289505155748660436556640022764,
+      "steps": 11,
+      "tp": 4
+    },
+    {
+      "config": {
+        "clean": false,
+        "interaction": 2,
+        "period_month": "2031-12",
+        "timezone": "-12:00"
+      },
+      "f1": 1.0,
+      "financial_valid": true,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "proper_f1": 1.0,
+      "recall": 1.0,
+      "reward": 0.98,
+      "seed": 280433514446024744009592516563237775537,
+      "steps": 11,
+      "tp": 4
+    },
+    {
+      "config": {
+        "clean": true,
+        "interaction": 0,
+        "period_month": "2028-02",
+        "timezone": "+05:45"
+      },
+      "f1": 1,
+      "financial_valid": true,
+      "fn": 0,
+      "fp": 0,
+      "precision": 0,
+      "proper_f1": 1,
+      "recall": 0,
+      "reward": 0.98,
+      "seed": 41413293010419214941129344992935534208,
+      "steps": 11,
+      "tp": 0
+    },
+    {
+      "config": {
+        "clean": false,
+        "interaction": 1,
+        "period_month": "2031-12",
+        "timezone": "-03:30"
+      },
+      "f1": 1.0,
+      "financial_valid": true,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "proper_f1": 1.0,
+      "recall": 1.0,
+      "reward": 0.98,
+      "seed": 51667090318015329382029513421588140321,
+      "steps": 11,
+      "tp": 4
+    },
+    {
+      "config": {
+        "clean": false,
+        "interaction": 2,
+        "period_month": "2028-02",
+        "timezone": "+14:00"
+      },
+      "f1": 1.0,
+      "financial_valid": true,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "proper_f1": 1.0,
+      "recall": 1.0,
+      "reward": 0.98,
+      "seed": 241176237385498144530514831355432179629,
+      "steps": 11,
+      "tp": 4
+    },
+    {
+      "config": {
+        "clean": false,
+        "interaction": 0,
+        "period_month": "2031-12",
+        "timezone": "-12:00"
+      },
+      "f1": 1.0,
+      "financial_valid": true,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "proper_f1": 1.0,
+      "recall": 1.0,
+      "reward": 0.98,
+      "seed": 138294213986400060446899481394790774876,
+      "steps": 11,
+      "tp": 4
+    }
+  ],
+  "dependencies": {
+    "fx": "33 dates starting period_start-1 day; baseline fixed base+date index modulo7/10; revised independent private company quote history with daily increments; ordinary ID RNG -> row_id",
+    "invoice": "index periodicity -> default round totals; RNG -> amount/date/entity/ID/description; due_at=issued_at+30 days; refund payment -> related_credit_doc_id",
+    "ledger": "double-entry projection -> accounts/debits/credits; RNG -> IDs; invoice/payment keys -> links; payment -> allocation_source_minor and published fx_rate/date",
+    "manifest": "seed+canonical config hash -> episode_id; RNG -> company; policy config -> period/timezone; table cardinality -> counts",
+    "mutation": "private domain-separated assignment RNG -> target invoices; changed paired rows -> ledger; explicit causal change -> truth/provenance",
+    "payment": "invoice index modulo4 -> split; modulo9 -> refund; modulo3 -> foreign; source conversion -> source amount; invoice time except closing/boundary cases -> timestamp",
+    "recognition": "family private hash -> nominal/recurring obligations/date selection; source_bit -> issued dates; book_bit -> postings; mismatch -> two offsetting cutoff issues; blind selection -> private hash"
+  },
+  "episodes": 64,
+  "falsifier": {
+    "financial_reconciliation_changes": true,
+    "formula_ignores_changed_quote_values": true,
+    "scope": "Public calculation sensitivity control, not a generated/validated financial episode."
+  },
+  "full_findings_mean_f1": 1.0,
+  "interpretation": "Generator-specific monetary shortcut. All pages including quote IDs are still read. No evidence acquisition saving or isolation breach demonstrated.",
+  "max_steps": 11,
+  "min_steps": 11,
+  "quote_formula": {
+    "correct": 6336,
+    "total": 6336
+  },
+  "root_seed": 584049197113
+}

@@ -15,14 +15,14 @@ jobs:
           persist-credentials: false
       - name: Build evaluator and policy images
         run: |
-          docker build -t auditforge-evaluator:2.0 .
+          docker build -t auditforge-evaluator:2.0.1 .
           docker build -f Dockerfile.policy -t auditforge-policy:1.0 .
           python3 - <<'PY'
           import os, subprocess
           files = subprocess.check_output(['git', 'ls-files', '-z']).split(b'\0')
           tracked = sum(os.stat(f).st_size for f in files if f)
           images = sum(int(subprocess.check_output(['docker', 'image', 'inspect', '--format', '{{.Size}}', tag]))
-                       for tag in ('auditforge-evaluator:2.0', 'auditforge-policy:1.0'))
+                       for tag in ('auditforge-evaluator:2.0.1', 'auditforge-policy:1.0'))
           print(f'Tracked bytes: {tracked}. Image bytes including shared layers twice: {images}.')
           assert tracked + images < 1_000_000_000
           PY
@@ -30,10 +30,13 @@ jobs:
         run: |
           docker run --rm --network none --cpus 2 --memory 4g \
             --mount type=bind,source="$GITHUB_WORKSPACE",target=/submission \
-            -w /submission auditforge-evaluator:2.0 sh -ec '
+            -w /submission auditforge-evaluator:2.0.1 sh -ec '
             python -c "import sys; assert sys.version_info[:2] == (3, 11)"
-            python -m scripts.jury_gauntlet --seed 846650772491 --report-dir work/jury-ci
+            python -m scripts.jury_gauntlet --seed 974103116573 --report-dir work/jury-ci
             python -m scripts.world_comparison --output work/world-comparison.json
+            python -m auditforge.shortcut_hunter --output work/shortcut-hunter.json
+            python -m scripts.adversarial_logic
+            python -m scripts.generator_probe --output work/generator-probe.json
             python -m scripts.recognition_demo
             python -c "from pathlib import Path; p=Path(\"/sys/fs/cgroup\"); print({k:(p/k).read_text().strip() for k in (\"cpu.max\",\"memory.max\",\"memory.peak\")}); assert (p/\"memory.max\").read_text().strip()==str(4*1024**3); q,t=map(int,(p/\"cpu.max\").read_text().split()); assert q==2*t"
           '

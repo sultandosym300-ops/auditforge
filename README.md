@@ -8,7 +8,7 @@
 
 Для просмотра двух сопоставимых книг и проверки доказательств выполните `python -m scripts.recognition_demo`. Для воспроизведения сравнения версий выполните `python -m scripts.world_comparison`. Оба запуска работают локально с Python 3.11. [Измеренные результаты](AUDITFORGE_114_VS_CANDIDATE.md) · [Проверка по регламенту](FINAL_INDEPENDENT_JURY_AUDIT.md).
 
-Версия пакета — 2.0.0. Стандартные конфигурации сохраняют формат и содержимое книг генератора 1.1.4. Для точного повтора нового семейства нужны эта версия пакета, тот же seed и параметры сценария.
+Версия пакета — 2.0.1. Формат конфигураций совместим с предыдущими версиями. История FX теперь задаётся отдельно для каждой компании. Для точного повтора нового семейства нужны эта версия пакета, тот же seed и параметры сценария.
 
 ## Проверка и демо
 
@@ -25,8 +25,8 @@ python -m auditforge.verify
 Для запуска с ограничениями из задания:
 
 ```sh
-docker build -t auditforge-evaluator:2.0 .
-docker run --rm --network none --cpus 2 --memory 4g auditforge-evaluator:2.0
+docker build -t auditforge-evaluator:2.0.1 .
+docker run --rm --network none --cpus 2 --memory 4g auditforge-evaluator:2.0.1
 docker build -f Dockerfile.policy -t auditforge-policy:1.0 .
 python -m auditforge.agent_runner
 ```
@@ -84,3 +84,5 @@ npm run build
 ```
 
 Собранный сайт появится в `web/dist`. Веб-симулятор запускается в Web Worker. После сборки можно также запустить локальный сервер из корня командой `python -m auditforge.server`.
+
+Расширенный поиск закономерностей запускается командой python -m auditforge.shortcut_hunter. Итоги и ограничения — в [SHORTCUT_HUNTER_REPORT.md](SHORTCUT_HUNTER_REPORT.md). Контрольная версия 2.0 сохранена тегом auditforge-2.0-control.

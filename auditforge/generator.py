@@ -9,7 +9,7 @@ from decimal import Decimal, ROUND_HALF_EVEN
 
 TYPES = ('duplicate_invoice', 'payment_allocation', 'fx_conversion', 'accounting_period')
 EXPONENTS = {'KZT': 2, 'USD': 2, 'EUR': 2, 'JPY': 0}
-GENERATOR_VERSION = '1.1.4'
+GENERATOR_VERSION = '2.0.1'
 
 
 def converted(amount, source, target, rate):
@@ -64,10 +64,17 @@ def generate(seed, config=None):
         return prefix + '-' + format(rng.getrandbits(60), '015x')
     fx = []
     rates = {}
+    quote_rng = random.Random('quote-history:' + str(seed) + json.dumps(config, sort_keys=True))
+    # A company's declared quote history is the source of conversion values.
+    # Its independent stream avoids changing identifiers when a quote is sampled.
+    quote_levels = {currency: Decimal(base) * Decimal(quote_rng.randrange(9500, 10501)) / 10000
+                    for currency, base in [('USD', 490), ('EUR', 530), ('JPY', 3)]}
     for d in range(33):
         date = (start + timedelta(days=d - 1)).date().isoformat()
         for currency, base in [('USD', 490), ('EUR', 530), ('JPY', 3)]:
-            rate = str(Decimal(base) + Decimal(d % 7) / 10)
+            movement = Decimal(quote_rng.randrange(-400, 401)) / (100 if currency != 'JPY' else 10000)
+            quote_levels[currency] += movement
+            rate = str(quote_levels[currency].quantize(Decimal('0.0001')))
             rates[date, currency] = rate
             fx.append(dict(row_id=ident('fx'), date=date, source_currency=currency, target_currency='KZT', rate=rate))
     invoices, payments, ledger = [], [], []
