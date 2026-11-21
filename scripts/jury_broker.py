@@ -4,9 +4,11 @@ from auditforge.generator import TYPES
 
 
 def main():
-    for i in range(3):
-        result = run(6087193912+i, config=dict(invoices=200, clean=i==0,
-                     interaction=i, counts=dict.fromkeys(TYPES, 3), boundary_payments=True))
+    scenarios = [dict(invoices=200, clean=i==0, interaction=i, counts=dict.fromkeys(TYPES, 3),
+                      boundary_payments=True) for i in range(3)]
+    scenarios += [dict(recognition_world=i) for i in range(4)]
+    for i, config in enumerate(scenarios):
+        result = run(6087193912+min(i, 3), config=config)
         seen = set()
         for row in result["trajectory"]:
             assert row["reward"] == 0

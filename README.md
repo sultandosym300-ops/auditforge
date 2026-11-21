@@ -2,6 +2,14 @@
 
 Воспроизводимая RL-среда для аудита вымышленных компаний и интерактивное веб-демо. Python-ядро использует стандартную библиотеку, а проверка выполняется на CPU.
 
+## Расследование для защиты
+
+В рабочей части выберите сценарий «По обе стороны закрытия». Сверьте даты выставления счетов с датами расходных проводок. Общая сумма расходов может сходиться даже при двух неверно отражённых обязательствах. Один слепой эпизод запускается через обычный `reset(seed, {"recognition_world": "blind"})`.
+
+Для просмотра двух сопоставимых книг и проверки доказательств выполните `python -m scripts.recognition_demo`. Для воспроизведения сравнения версий выполните `python -m scripts.world_comparison`. Оба запуска работают локально с Python 3.11. [Измеренные результаты](AUDITFORGE_114_VS_CANDIDATE.md) · [Проверка по регламенту](FINAL_INDEPENDENT_JURY_AUDIT.md).
+
+Версия пакета — 2.0.0. Стандартные конфигурации сохраняют формат и содержимое книг генератора 1.1.4. Для точного повтора нового семейства нужны эта версия пакета, тот же seed и параметры сценария.
+
 ## Проверка и демо
 
 Из корня репозитория с Python 3.11:
@@ -17,8 +25,8 @@ python -m auditforge.verify
 Для запуска с ограничениями из задания:
 
 ```sh
-docker build -t auditforge-evaluator:1.1.4 .
-docker run --rm --network none --cpus 2 --memory 4g auditforge-evaluator:1.1.4
+docker build -t auditforge-evaluator:2.0 .
+docker run --rm --network none --cpus 2 --memory 4g auditforge-evaluator:2.0
 docker build -f Dockerfile.policy -t auditforge-policy:1.0 .
 python -m auditforge.agent_runner
 ```

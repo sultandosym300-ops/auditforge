@@ -69,7 +69,11 @@ def render(report):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--seed', type=int, default=DEFAULT_SEED)
+    parser.add_argument('--report-dir', type=Path, default=ROOT,
+                        help='Destination for measured results and Markdown tables')
     args = parser.parse_args()
+    destination = args.report_dir.resolve()
+    destination.mkdir(parents=True, exist_ok=True)
     if not __debug__:
         parser.error("assertions must be enabled")
     root = args.seed
@@ -153,8 +157,8 @@ def main():
                   contract=contracts, reward=rewards, official_approximation=official, delivery=delivery,
                   finance=finance, blind=blind, feature_probes=location, ablations=ablation, tournament=tournament, replay=replay, pairs=pairs,
                   mutations=mutations, references=references)
-    write_json(ROOT/"JURY_GAUNTLET_RESULTS.json", report)
-    (ROOT/"JURY_GAUNTLET_REPORT.md").write_text(render(report), encoding="utf8")
+    write_json(destination/"JURY_GAUNTLET_RESULTS.json", report)
+    (destination/"JURY_GAUNTLET_REPORT.md").write_text(render(report), encoding="utf8")
     print(json.dumps(dict(rubric=rubric, checks=checks), indent=2))
     return int(not all(item["passed"] for item in checks))
 

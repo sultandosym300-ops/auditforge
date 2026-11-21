@@ -1,0 +1,2205 @@
+{
+  "baseline_all_branches_digest": "b733bea2633f945403ce48e9328ff245be1b5476ad53d8052b037eb03d08f2b5",
+  "candidate": {
+    "cohorts": [
+      {
+        "config": {
+          "boundary_payments": false,
+          "invoices": 74,
+          "period_month": "2031-12",
+          "shuffle": true,
+          "timezone": "+05:45"
+        },
+        "episode_ids": [
+          "ep-e3de8f48b6e75e0d",
+          "ep-352d75f062c59e02",
+          "ep-f33965d34ad63f50",
+          "ep-7d11d9069a2e838d"
+        ],
+        "seed": 40487082393209008772509646049108256108
+      },
+      {
+        "config": {
+          "boundary_payments": false,
+          "invoices": 74,
+          "period_month": "2031-12",
+          "shuffle": false,
+          "timezone": "-03:30"
+        },
+        "episode_ids": [
+          "ep-cae4541ff59ce2d5",
+          "ep-d608207e2f37df7f",
+          "ep-4385b72bacbd95c9",
+          "ep-39d00b1c6590c02a"
+        ],
+        "seed": 219750069089690391607112796092900683053
+      },
+      {
+        "config": {
+          "boundary_payments": false,
+          "invoices": 46,
+          "period_month": "2028-02",
+          "shuffle": false,
+          "timezone": "-03:30"
+        },
+        "episode_ids": [
+          "ep-22b04067344388d3",
+          "ep-0c92acae6669f2c0",
+          "ep-0fc2bc7070c8b8d7",
+          "ep-7508589b5dae36a1"
+        ],
+        "seed": 265926180192445818019798745982107823045
+      },
+      {
+        "config": {
+          "boundary_payments": false,
+          "invoices": 46,
+          "period_month": "2031-12",
+          "shuffle": false,
+          "timezone": "-03:30"
+        },
+        "episode_ids": [
+          "ep-e096dec940c0385f",
+          "ep-3f9a6ec7bc2d3486",
+          "ep-d86d5e82332958ba",
+          "ep-b7bb2c8e4cdf7397"
+        ],
+        "seed": 209264793880516150065248728213825858546
+      },
+      {
+        "config": {
+          "boundary_payments": false,
+          "invoices": 57,
+          "period_month": "2028-02",
+          "shuffle": false,
+          "timezone": "-03:30"
+        },
+        "episode_ids": [
+          "ep-5be2a83577e92fd8",
+          "ep-02e47edc4c176f17",
+          "ep-d89b94f7d0216f59",
+          "ep-9f86516010fc8436"
+        ],
+        "seed": 159169140044694987620345181097936847151
+      },
+      {
+        "config": {
+          "boundary_payments": false,
+          "invoices": 57,
+          "period_month": "2031-12",
+          "shuffle": true,
+          "timezone": "+14:00"
+        },
+        "episode_ids": [
+          "ep-b5eb7d872dc4cfbe",
+          "ep-c3f2ec0067fc9778",
+          "ep-c4ad161888facc8d",
+          "ep-eeb9a5a1fda8db38"
+        ],
+        "seed": 98087561597417723604915915093193305715
+      },
+      {
+        "config": {
+          "boundary_payments": true,
+          "invoices": 82,
+          "period_month": "2048-07",
+          "shuffle": false,
+          "timezone": "+14:00"
+        },
+        "episode_ids": [
+          "ep-bd82ce77e2ee1fcb",
+          "ep-ee3a73a3875bc396",
+          "ep-9ebf995a395738e7",
+          "ep-1072159eb1d1948b"
+        ],
+        "seed": 82040713709633161521786876434722737990
+      },
+      {
+        "config": {
+          "boundary_payments": false,
+          "invoices": 74,
+          "period_month": "2048-07",
+          "shuffle": false,
+          "timezone": "-12:00"
+        },
+        "episode_ids": [
+          "ep-2c9987a410ec60d6",
+          "ep-4d3906dc44541e5c",
+          "ep-10dea0dc94a63efc",
+          "ep-6e7fd1df8f3c203c"
+        ],
+        "seed": 297524151565848475825359246623507412673
+      },
+      {
+        "config": {
+          "boundary_payments": false,
+          "invoices": 46,
+          "period_month": "2028-02",
+          "shuffle": false,
+          "timezone": "+14:00"
+        },
+        "episode_ids": [
+          "ep-b72d4e50547bc6c6",
+          "ep-cc96650144abe3cc",
+          "ep-ee882b0ec2aaa8bb",
+          "ep-4976473ff2f3a358"
+        ],
+        "seed": 299159769006383674697856009539957045489
+      },
+      {
+        "config": {
+          "boundary_payments": true,
+          "invoices": 57,
+          "period_month": "2048-07",
+          "shuffle": false,
+          "timezone": "+14:00"
+        },
+        "episode_ids": [
+          "ep-7ea8bf29ac797c39",
+          "ep-d15ed1b324967e71",
+          "ep-d2aa52d27e02729f",
+          "ep-baf1a6f7070b8744"
+        ],
+        "seed": 121848754951322029810613224385030121221
+      },
+      {
+        "config": {
+          "boundary_payments": true,
+          "invoices": 82,
+          "period_month": "2048-07",
+          "shuffle": false,
+          "timezone": "+14:00"
+        },
+        "episode_ids": [
+          "ep-36e2a65e96436d84",
+          "ep-86c8a840f62d5d8d",
+          "ep-5a972fed3b0e08c8",
+          "ep-69096830d6cb4b83"
+        ],
+        "seed": 197724640517789358235239228523462195092
+      },
+      {
+        "config": {
+          "boundary_payments": false,
+          "invoices": 82,
+          "period_month": "2048-07",
+          "shuffle": false,
+          "timezone": "-03:30"
+        },
+        "episode_ids": [
+          "ep-d0f33dfbbe4c01b0",
+          "ep-a04e9faa39a4e6e5",
+          "ep-13b6d4ab1f0e0b9a",
+          "ep-807eeef57390e5ac"
+        ],
+        "seed": 216384327206295918258269146595078227193
+      },
+      {
+        "config": {
+          "boundary_payments": false,
+          "invoices": 40,
+          "period_month": "2028-02",
+          "shuffle": false,
+          "timezone": "-03:30"
+        },
+        "episode_ids": [
+          "ep-a0315710abf4ae14",
+          "ep-9998d452df757563",
+          "ep-3db00a302a872678",
+          "ep-65d2283a176c641e"
+        ],
+        "seed": 322224072225188474218431188581424394783
+      },
+      {
+        "config": {
+          "boundary_payments": false,
+          "invoices": 74,
+          "period_month": "2048-07",
+          "shuffle": true,
+          "timezone": "-12:00"
+        },
+        "episode_ids": [
+          "ep-69c30f876c840aa2",
+          "ep-71394b60c40456dc",
+          "ep-b537b101ac505a8d",
+          "ep-a5e4325ff3e55dd5"
+        ],
+        "seed": 289259508336041005699042694814169619519
+      },
+      {
+        "config": {
+          "boundary_payments": false,
+          "invoices": 46,
+          "period_month": "2031-12",
+          "shuffle": true,
+          "timezone": "-12:00"
+        },
+        "episode_ids": [
+          "ep-d7c5aa63560fd7f8",
+          "ep-ffc09a156ef0b24a",
+          "ep-02f5facbeacecca7",
+          "ep-5e07d428003dc5aa"
+        ],
+        "seed": 227818983202071971100587390505271748328
+      },
+      {
+        "config": {
+          "boundary_payments": false,
+          "invoices": 57,
+          "period_month": "2028-02",
+          "shuffle": false,
+          "timezone": "+14:00"
+        },
+        "episode_ids": [
+          "ep-3ab5d3e506831cbe",
+          "ep-f1de033ccd2c3cac",
+          "ep-16ff5ba87caa194d",
+          "ep-f7fcfe0a0526795d"
+        ],
+        "seed": 220375755277636599923441521502764349087
+      },
+      {
+        "config": {
+          "boundary_payments": false,
+          "invoices": 82,
+          "period_month": "2031-12",
+          "shuffle": false,
+          "timezone": "+14:00"
+        },
+        "episode_ids": [
+          "ep-9246d986db569982",
+          "ep-85ab9621129d6fbc",
+          "ep-dd92228febf55029",
+          "ep-4f2119a6d2d2610a"
+        ],
+        "seed": 122458140990821524745752365579270384565
+      },
+      {
+        "config": {
+          "boundary_payments": false,
+          "invoices": 82,
+          "period_month": "2028-02",
+          "shuffle": true,
+          "timezone": "+14:00"
+        },
+        "episode_ids": [
+          "ep-dbf5d5b9cade0281",
+          "ep-c3566325cdc66bc7",
+          "ep-b2cd974c82a9711c",
+          "ep-9ab77d3c8b6f3986"
+        ],
+        "seed": 336028593470262056960952943726460458157
+      },
+      {
+        "config": {
+          "boundary_payments": true,
+          "invoices": 40,
+          "period_month": "2048-07",
+          "shuffle": false,
+          "timezone": "-03:30"
+        },
+        "episode_ids": [
+          "ep-6843f22bb5da5d2a",
+          "ep-b1924f8dbe4719e4",
+          "ep-6a6f6782c44e3702",
+          "ep-8436afca3c6f5676"
+        ],
+        "seed": 69937272355727242607180951506047939020
+      },
+      {
+        "config": {
+          "boundary_payments": false,
+          "invoices": 40,
+          "period_month": "2031-12",
+          "shuffle": false,
+          "timezone": "-03:30"
+        },
+        "episode_ids": [
+          "ep-cbc01acc7c435c78",
+          "ep-b7375623cbcfd04a",
+          "ep-57c46a0328a72a7b",
+          "ep-c207e9f617ab758e"
+        ],
+        "seed": 236147573353147167182577450495657557456
+      },
+      {
+        "config": {
+          "boundary_payments": false,
+          "invoices": 74,
+          "period_month": "2031-12",
+          "shuffle": true,
+          "timezone": "-03:30"
+        },
+        "episode_ids": [
+          "ep-5134bb3f66e5fd09",
+          "ep-86b4089536900aac",
+          "ep-8b30c77834373dff",
+          "ep-246de53187b654b5"
+        ],
+        "seed": 270360902462766103698150745790381269941
+      },
+      {
+        "config": {
+          "boundary_payments": false,
+          "invoices": 46,
+          "period_month": "2048-07",
+          "shuffle": false,
+          "timezone": "-12:00"
+        },
+        "episode_ids": [
+          "ep-d592d59536050720",
+          "ep-e63fd5b5a991a8db",
+          "ep-50116c54d7475dfa",
+          "ep-33c422f59feb87f2"
+        ],
+        "seed": 90920469765839025128650508728486850638
+      },
+      {
+        "config": {
+          "boundary_payments": false,
+          "invoices": 40,
+          "period_month": "2048-07",
+          "shuffle": true,
+          "timezone": "+05:45"
+        },
+        "episode_ids": [
+          "ep-cd614a4aa71b003f",
+          "ep-b67593ab117a4ece",
+          "ep-a1f0b98ef850ebdf",
+          "ep-40619f02dde84c9c"
+        ],
+        "seed": 319017785002871773706864009562153513183
+      },
+      {
+        "config": {
+          "boundary_payments": false,
+          "invoices": 46,
+          "period_month": "2028-02",
+          "shuffle": false,
+          "timezone": "-12:00"
+        },
+        "episode_ids": [
+          "ep-3fd050648dfe41b0",
+          "ep-5d6070bc58f1375c",
+          "ep-c1ab3d264ccab0bd",
+          "ep-3115db28bf587efa"
+        ],
+        "seed": 284382115749463086835738426180072330357
+      },
+      {
+        "config": {
+          "boundary_payments": false,
+          "invoices": 74,
+          "period_month": "2048-07",
+          "shuffle": false,
+          "timezone": "+14:00"
+        },
+        "episode_ids": [
+          "ep-bba773eae9181d17",
+          "ep-4b73bd7cb8df78e9",
+          "ep-c8efd5bd08071cf8",
+          "ep-6ae927e16185116b"
+        ],
+        "seed": 328389500197212879663353537075448010233
+      },
+      {
+        "config": {
+          "boundary_payments": true,
+          "invoices": 82,
+          "period_month": "2028-02",
+          "shuffle": false,
+          "timezone": "+05:45"
+        },
+        "episode_ids": [
+          "ep-875000c41affe9d2",
+          "ep-f99cf8c40442d3ec",
+          "ep-d1c3674de5824702",
+          "ep-36f3f4f5cd8f2e8f"
+        ],
+        "seed": 179495875486036149243043461678610516827
+      },
+      {
+        "config": {
+          "boundary_payments": false,
+          "invoices": 74,
+          "period_month": "2048-07",
+          "shuffle": false,
+          "timezone": "-12:00"
+        },
+        "episode_ids": [
+          "ep-80fdd5d5dd81ea1c",
+          "ep-d7bc931ad255e8a6",
+          "ep-8f691acbd5481890",
+          "ep-c4252d45be3882a5"
+        ],
+        "seed": 16097821886014748660816569025845423468
+      },
+      {
+        "config": {
+          "boundary_payments": false,
+          "invoices": 82,
+          "period_month": "2048-07",
+          "shuffle": false,
+          "timezone": "+14:00"
+        },
+        "episode_ids": [
+          "ep-c18bda7a3f421551",
+          "ep-9622a691c1cff534",
+          "ep-29b904f1b96d0dc8",
+          "ep-b244417930a0847a"
+        ],
+        "seed": 297083403402335651936493140466251434635
+      },
+      {
+        "config": {
+          "boundary_payments": false,
+          "invoices": 46,
+          "period_month": "2048-07",
+          "shuffle": false,
+          "timezone": "+14:00"
+        },
+        "episode_ids": [
+          "ep-2df8539a90182c3f",
+          "ep-64ecaddbccd15259",
+          "ep-b386ff27d218b11b",
+          "ep-e2dd992ba129726d"
+        ],
+        "seed": 299341521145700357351180095286783066022
+      },
+      {
+        "config": {
+          "boundary_payments": false,
+          "invoices": 74,
+          "period_month": "2031-12",
+          "shuffle": false,
+          "timezone": "-12:00"
+        },
+        "episode_ids": [
+          "ep-5d63462f65dfb31f",
+          "ep-3fa1804d78ae7dfc",
+          "ep-14de76713de8179e",
+          "ep-110e9b2b62ce5128"
+        ],
+        "seed": 225120171624102482634434454972696703926
+      },
+      {
+        "config": {
+          "boundary_payments": false,
+          "invoices": 82,
+          "period_month": "2048-07",
+          "shuffle": true,
+          "timezone": "+14:00"
+        },
+        "episode_ids": [
+          "ep-404d241f1dc2e512",
+          "ep-91ca6f3730e5c5f0",
+          "ep-d2785c4a683007c1",
+          "ep-09d4d3f1efdf0c12"
+        ],
+        "seed": 25744607837351661509024955769662334947
+      },
+      {
+        "config": {
+          "boundary_payments": false,
+          "invoices": 57,
+          "period_month": "2048-07",
+          "shuffle": true,
+          "timezone": "+05:45"
+        },
+        "episode_ids": [
+          "ep-e1845dd24c2d3505",
+          "ep-d5cdc6f1b6ee4cab",
+          "ep-bcbbb7e6491627c3",
+          "ep-0a87e179290a2f34"
+        ],
+        "seed": 308748310292818078820607426040060040030
+      },
+      {
+        "config": {
+          "boundary_payments": false,
+          "invoices": 57,
+          "period_month": "2048-07",
+          "shuffle": false,
+          "timezone": "+05:45"
+        },
+        "episode_ids": [
+          "ep-e54a3fd47d1a85ba",
+          "ep-850ca668b7d425fa",
+          "ep-229b5e5165ebff02",
+          "ep-dc854bf5985c2742"
+        ],
+        "seed": 176790756688092981413637252474938220907
+      },
+      {
+        "config": {
+          "boundary_payments": true,
+          "invoices": 40,
+          "period_month": "2031-12",
+          "shuffle": false,
+          "timezone": "+14:00"
+        },
+        "episode_ids": [
+          "ep-77598470f41eeb9b",
+          "ep-70873ebe8259528d",
+          "ep-4a5e6f771eae8ccf",
+          "ep-5f222cedf5086d73"
+        ],
+        "seed": 195348964664750567358440416843919177962
+      },
+      {
+        "config": {
+          "boundary_payments": false,
+          "invoices": 74,
+          "period_month": "2031-12",
+          "shuffle": true,
+          "timezone": "-03:30"
+        },
+        "episode_ids": [
+          "ep-f5c6f80cafeab223",
+          "ep-c5dd672ab61062ca",
+          "ep-3026814871618076",
+          "ep-0c1693d26bd6a9c0"
+        ],
+        "seed": 72689450939425913021292294981434586055
+      },
+      {
+        "config": {
+          "boundary_payments": true,
+          "invoices": 74,
+          "period_month": "2048-07",
+          "shuffle": false,
+          "timezone": "-12:00"
+        },
+        "episode_ids": [
+          "ep-8fe4bf603b45a76d",
+          "ep-56119834c990d22e",
+          "ep-27d9526458f98839",
+          "ep-16b9fbb58d417399"
+        ],
+        "seed": 39105273308293063295282415229913925841
+      },
+      {
+        "config": {
+          "boundary_payments": true,
+          "invoices": 46,
+          "period_month": "2031-12",
+          "shuffle": true,
+          "timezone": "+05:45"
+        },
+        "episode_ids": [
+          "ep-91487625250564c5",
+          "ep-2521597a2fe5d333",
+          "ep-ba6ed566f5dbd328",
+          "ep-9a07153d410f0815"
+        ],
+        "seed": 206372852535530547374434618167965939179
+      },
+      {
+        "config": {
+          "boundary_payments": true,
+          "invoices": 40,
+          "period_month": "2048-07",
+          "shuffle": true,
+          "timezone": "+14:00"
+        },
+        "episode_ids": [
+          "ep-3e7d2ad9a8c0b7f9",
+          "ep-7273da2f25de8036",
+          "ep-6266df19f294b4c6",
+          "ep-4d70cb5d1510d6ef"
+        ],
+        "seed": 212176627152628571657754030169733592448
+      },
+      {
+        "config": {
+          "boundary_payments": true,
+          "invoices": 40,
+          "period_month": "2048-07",
+          "shuffle": true,
+          "timezone": "-12:00"
+        },
+        "episode_ids": [
+          "ep-3075298df4578a2b",
+          "ep-eb7cb4854a59a620",
+          "ep-bbaf701cba9e757b",
+          "ep-10f96abc4bf21a46"
+        ],
+        "seed": 219047976702068324290098965038471067390
+      },
+      {
+        "config": {
+          "boundary_payments": false,
+          "invoices": 57,
+          "period_month": "2048-07",
+          "shuffle": true,
+          "timezone": "-12:00"
+        },
+        "episode_ids": [
+          "ep-2365ebaae62f1136",
+          "ep-8ea21f9193a67556",
+          "ep-86cc56cc2ac82ae5",
+          "ep-873296fc297c35f1"
+        ],
+        "seed": 202191071413204400833295236878923687784
+      },
+      {
+        "config": {
+          "boundary_payments": false,
+          "invoices": 57,
+          "period_month": "2048-07",
+          "shuffle": false,
+          "timezone": "+05:45"
+        },
+        "episode_ids": [
+          "ep-6abdf2ba40101d39",
+          "ep-c46e9eb996bb34b0",
+          "ep-dc93bf9be80f852f",
+          "ep-37f41704e24c330a"
+        ],
+        "seed": 60678270582450644938304364493628675791
+      },
+      {
+        "config": {
+          "boundary_payments": false,
+          "invoices": 46,
+          "period_month": "2028-02",
+          "shuffle": true,
+          "timezone": "+05:45"
+        },
+        "episode_ids": [
+          "ep-85d2ebe117afce2f",
+          "ep-37d5f7fa7cd07931",
+          "ep-12b4ff357de57fee",
+          "ep-d19cc36daae9b3b3"
+        ],
+        "seed": 8356326194973302783883264751431905975
+      },
+      {
+        "config": {
+          "boundary_payments": true,
+          "invoices": 74,
+          "period_month": "2048-07",
+          "shuffle": false,
+          "timezone": "-12:00"
+        },
+        "episode_ids": [
+          "ep-503d87026706ac89",
+          "ep-f2d386c4d11a9649",
+          "ep-e0104b15e884faa8",
+          "ep-2ed412d0716578f3"
+        ],
+        "seed": 253461524635641656437307210896055532766
+      },
+      {
+        "config": {
+          "boundary_payments": true,
+          "invoices": 40,
+          "period_month": "2031-12",
+          "shuffle": false,
+          "timezone": "-03:30"
+        },
+        "episode_ids": [
+          "ep-6c99040c5320b5b0",
+          "ep-67ece7d43d8c0709",
+          "ep-accc3b407d74fccb",
+          "ep-ce6fcd8cfe7b03db"
+        ],
+        "seed": 192836812296146392413517700181074888866
+      },
+      {
+        "config": {
+          "boundary_payments": false,
+          "invoices": 40,
+          "period_month": "2048-07",
+          "shuffle": true,
+          "timezone": "+05:45"
+        },
+        "episode_ids": [
+          "ep-ae0e9535cf579533",
+          "ep-9770ae01b2ef3f12",
+          "ep-9094cc5db7d91e55",
+          "ep-e06c13deab39b18a"
+        ],
+        "seed": 249557399883597594861626572409631026300
+      },
+      {
+        "config": {
+          "boundary_payments": false,
+          "invoices": 57,
+          "period_month": "2028-02",
+          "shuffle": false,
+          "timezone": "-12:00"
+        },
+        "episode_ids": [
+          "ep-36e3d38790bc8d86",
+          "ep-30c465b28b2561cb",
+          "ep-8fd0e3c6794d1be8",
+          "ep-c8911008d7476745"
+        ],
+        "seed": 129231704280428081241261666642647797190
+      },
+      {
+        "config": {
+          "boundary_payments": true,
+          "invoices": 57,
+          "period_month": "2031-12",
+          "shuffle": true,
+          "timezone": "+14:00"
+        },
+        "episode_ids": [
+          "ep-306c7d1fd07b6151",
+          "ep-b4d40061f0905f80",
+          "ep-58551fa08f44b617",
+          "ep-c1c37d5e37e81fea"
+        ],
+        "seed": 40401366596635799835329082752514804154
+      },
+      {
+        "config": {
+          "boundary_payments": false,
+          "invoices": 46,
+          "period_month": "2048-07",
+          "shuffle": true,
+          "timezone": "+14:00"
+        },
+        "episode_ids": [
+          "ep-a1c9ac79f421f349",
+          "ep-e204b878ec8eda93",
+          "ep-80b339c7529d8533",
+          "ep-8f34bd4b7fd51d46"
+        ],
+        "seed": 124812508339972129306179871749330872659
+      },
+      {
+        "config": {
+          "boundary_payments": false,
+          "invoices": 82,
+          "period_month": "2031-12",
+          "shuffle": true,
+          "timezone": "-03:30"
+        },
+        "episode_ids": [
+          "ep-327062cf20871919",
+          "ep-de9ee27fa487c9d5",
+          "ep-59d9fa6f22b66bbb",
+          "ep-52d6e0f2576ce03e"
+        ],
+        "seed": 107036350754919952082525620912355158215
+      },
+      {
+        "config": {
+          "boundary_payments": true,
+          "invoices": 74,
+          "period_month": "2028-02",
+          "shuffle": false,
+          "timezone": "-12:00"
+        },
+        "episode_ids": [
+          "ep-add9f4cec43ee6bc",
+          "ep-183178805cd74824",
+          "ep-f26d51e74132626a",
+          "ep-66d19d7157aed9d6"
+        ],
+        "seed": 309201051029817991804519236425165696520
+      },
+      {
+        "config": {
+          "boundary_payments": true,
+          "invoices": 74,
+          "period_month": "2031-12",
+          "shuffle": true,
+          "timezone": "-03:30"
+        },
+        "episode_ids": [
+          "ep-0d305a0f083945d0",
+          "ep-72ce2bcaee3a3274",
+          "ep-f2d78139eb5496e2",
+          "ep-a14b3d21756245fa"
+        ],
+        "seed": 77069421325993368840034461520077279242
+      },
+      {
+        "config": {
+          "boundary_payments": true,
+          "invoices": 40,
+          "period_month": "2048-07",
+          "shuffle": true,
+          "timezone": "+14:00"
+        },
+        "episode_ids": [
+          "ep-610be1e064c6bae1",
+          "ep-1c920e6c4956d0a8",
+          "ep-d01fcb9f489caed3",
+          "ep-400817323f1121cd"
+        ],
+        "seed": 195033078103846655094552382330177950644
+      },
+      {
+        "config": {
+          "boundary_payments": true,
+          "invoices": 82,
+          "period_month": "2048-07",
+          "shuffle": false,
+          "timezone": "+14:00"
+        },
+        "episode_ids": [
+          "ep-173b0bfba8c15dfb",
+          "ep-0ec2be087f5dbb69",
+          "ep-c18a9312033421ad",
+          "ep-117ec5686bee0dbc"
+        ],
+        "seed": 313860871126426719370633702226311486240
+      },
+      {
+        "config": {
+          "boundary_payments": false,
+          "invoices": 46,
+          "period_month": "2048-07",
+          "shuffle": false,
+          "timezone": "-12:00"
+        },
+        "episode_ids": [
+          "ep-a2971d22f6dfb968",
+          "ep-bd08aec9920e52ea",
+          "ep-d11500b2a76c3b6a",
+          "ep-ace833fdcd9f0025"
+        ],
+        "seed": 70814910284742948129679260635124621652
+      },
+      {
+        "config": {
+          "boundary_payments": false,
+          "invoices": 74,
+          "period_month": "2031-12",
+          "shuffle": true,
+          "timezone": "-03:30"
+        },
+        "episode_ids": [
+          "ep-ebfe55099074f440",
+          "ep-8e4d745e349a1330",
+          "ep-1000317dfd923e87",
+          "ep-a48d5df32a326ae3"
+        ],
+        "seed": 127905518535846776817153055036807950972
+      },
+      {
+        "config": {
+          "boundary_payments": true,
+          "invoices": 57,
+          "period_month": "2048-07",
+          "shuffle": false,
+          "timezone": "-03:30"
+        },
+        "episode_ids": [
+          "ep-df10cbd53ee12fce",
+          "ep-8f819e4b418a411d",
+          "ep-c5f8188871e822ef",
+          "ep-85ea3a067c8fb666"
+        ],
+        "seed": 307383323101948249954480603423617563800
+      },
+      {
+        "config": {
+          "boundary_payments": true,
+          "invoices": 74,
+          "period_month": "2028-02",
+          "shuffle": true,
+          "timezone": "-03:30"
+        },
+        "episode_ids": [
+          "ep-84603612ca580d9d",
+          "ep-1a082fb425e1f340",
+          "ep-3fab6e156c4fa528",
+          "ep-bde311c1d52bab33"
+        ],
+        "seed": 134134308284549379736343830284853486730
+      },
+      {
+        "config": {
+          "boundary_payments": false,
+          "invoices": 57,
+          "period_month": "2028-02",
+          "shuffle": true,
+          "timezone": "-12:00"
+        },
+        "episode_ids": [
+          "ep-65b40c4bae0343ba",
+          "ep-023b195a40febf4d",
+          "ep-7503216987f2a82b",
+          "ep-ee1bd7355053eaa7"
+        ],
+        "seed": 147844612174530054170534237046904557671
+      },
+      {
+        "config": {
+          "boundary_payments": false,
+          "invoices": 46,
+          "period_month": "2031-12",
+          "shuffle": true,
+          "timezone": "-12:00"
+        },
+        "episode_ids": [
+          "ep-3501a6804b7a4318",
+          "ep-d52f02831cecea3a",
+          "ep-6f6637d3a3fc40a2",
+          "ep-00600cee27e4dc75"
+        ],
+        "seed": 83519372836190927978114139489410579338
+      },
+      {
+        "config": {
+          "boundary_payments": false,
+          "invoices": 74,
+          "period_month": "2048-07",
+          "shuffle": false,
+          "timezone": "-03:30"
+        },
+        "episode_ids": [
+          "ep-b6fc8aeda18148da",
+          "ep-15aa73288c00371b",
+          "ep-ba95f642143a6cbf",
+          "ep-b18a2ff2ec8ecac5"
+        ],
+        "seed": 183556431979039724455828918674421271205
+      },
+      {
+        "config": {
+          "boundary_payments": true,
+          "invoices": 40,
+          "period_month": "2028-02",
+          "shuffle": true,
+          "timezone": "-03:30"
+        },
+        "episode_ids": [
+          "ep-b8630d8886e23dd7",
+          "ep-7f898869609b04f5",
+          "ep-a1bdb767a79074a6",
+          "ep-721971b514bc7aaf"
+        ],
+        "seed": 137713027035033594960077522691829168578
+      },
+      {
+        "config": {
+          "boundary_payments": false,
+          "invoices": 74,
+          "period_month": "2048-07",
+          "shuffle": false,
+          "timezone": "+14:00"
+        },
+        "episode_ids": [
+          "ep-cbfe8819357ff728",
+          "ep-ed04095df299f3a8",
+          "ep-1fc2d220cd88db0b",
+          "ep-dfa81da3a81c06d5"
+        ],
+        "seed": 33514614369425600770366543182465825170
+      },
+      {
+        "config": {
+          "boundary_payments": true,
+          "invoices": 74,
+          "period_month": "2031-12",
+          "shuffle": false,
+          "timezone": "-12:00"
+        },
+        "episode_ids": [
+          "ep-2ef0ec7dcc990643",
+          "ep-bb2f557e0a793411",
+          "ep-5a4368349d024106",
+          "ep-e8096c1f9c956f77"
+        ],
+        "seed": 297037629866183040730812239751503268573
+      },
+      {
+        "config": {
+          "boundary_payments": true,
+          "invoices": 46,
+          "period_month": "2048-07",
+          "shuffle": false,
+          "timezone": "-03:30"
+        },
+        "episode_ids": [
+          "ep-08fe936f9758bd2b",
+          "ep-801055f8e6c2307b",
+          "ep-798040863ce0739a",
+          "ep-ab2e8ce7f172212b"
+        ],
+        "seed": 322125030842946155936036479118320469838
+      }
+    ],
+    "exact_regeneration_pass": 256,
+    "holdout_episodes": 256,
+    "identical_label_marginal_families": {
+      "ledger": 64,
+      "sources": 64
+    },
+    "independent_audit_pass": 256,
+    "median": {
+      "generation_ms": 5.2101,
+      "public_json_bytes": 132115.0,
+      "sample_generation_peak_bytes": 620627.5
+    },
+    "policies": {
+      "aggregate_guess": {
+        "f1": 0.5,
+        "fn": 256,
+        "fp": 0,
+        "max_steps": 11,
+        "reward": -0.008,
+        "solved": 128,
+        "steps": 8.9531,
+        "tp": 0
+      },
+      "cutoff_join": {
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "max_steps": 11,
+        "reward": 0.9841,
+        "solved": 256,
+        "steps": 8.9531,
+        "tp": 256
+      },
+      "full_reconciliation": {
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "max_steps": 16,
+        "reward": 0.9752,
+        "solved": 256,
+        "steps": 13.3906,
+        "tp": 256
+      },
+      "no_inspection": {
+        "f1": 0.5,
+        "fn": 256,
+        "fp": 0,
+        "max_steps": 1,
+        "reward": 0,
+        "solved": 128,
+        "steps": 1,
+        "tp": 0
+      }
+    },
+    "probes": {
+      "combined_no_join_nb": {
+        "accuracy": 0.50390625,
+        "family_bootstrap_95": [
+          0.4453,
+          0.5625
+        ],
+        "fn": 55,
+        "fp": 72,
+        "positive_f1": 0.5347985347985348,
+        "tn": 56,
+        "tp": 73
+      },
+      "count_amount_disagreement": {
+        "accuracy": 0.5,
+        "family_bootstrap_95": [
+          0.5,
+          0.5
+        ],
+        "fn": 128,
+        "positive_f1": 0.0,
+        "tn": 128
+      },
+      "envelope_nb": {
+        "accuracy": 0.50390625,
+        "family_bootstrap_95": [
+          0.4453,
+          0.5625
+        ],
+        "fn": 55,
+        "fp": 72,
+        "positive_f1": 0.5347985347985348,
+        "tn": 56,
+        "tp": 73
+      },
+      "ledger_nb": {
+        "accuracy": 0.5,
+        "family_bootstrap_95": [
+          0.5,
+          0.5
+        ],
+        "fn": 128,
+        "positive_f1": 0.0,
+        "tn": 128
+      },
+      "ledger_out_count": {
+        "accuracy": 0.5,
+        "family_bootstrap_95": [
+          0.5,
+          0.5
+        ],
+        "fn": 128,
+        "positive_f1": 0.0,
+        "tn": 128
+      },
+      "silence": {
+        "accuracy": 0.5,
+        "family_bootstrap_95": [
+          0.5,
+          0.5
+        ],
+        "fn": 128,
+        "positive_f1": 0.0,
+        "tn": 128
+      },
+      "sources_nb": {
+        "accuracy": 0.5,
+        "family_bootstrap_95": [
+          0.5,
+          0.5
+        ],
+        "fn": 128,
+        "positive_f1": 0.0,
+        "tn": 128
+      }
+    }
+  },
+  "control": {
+    "cohorts": [
+      {
+        "config": {
+          "boundary_payments": false,
+          "invoices": 74,
+          "period_month": "2031-12",
+          "shuffle": true,
+          "timezone": "+05:45"
+        },
+        "episode_ids": [
+          "ep-85f1f860ce248b34",
+          "ep-521f97c5d39a91b7"
+        ],
+        "seed": 40487082393209008772509646049108256108
+      },
+      {
+        "config": {
+          "boundary_payments": false,
+          "invoices": 74,
+          "period_month": "2031-12",
+          "shuffle": false,
+          "timezone": "-03:30"
+        },
+        "episode_ids": [
+          "ep-d820bede0902b63a",
+          "ep-a98551bcd77d0e68"
+        ],
+        "seed": 219750069089690391607112796092900683053
+      },
+      {
+        "config": {
+          "boundary_payments": false,
+          "invoices": 46,
+          "period_month": "2028-02",
+          "shuffle": false,
+          "timezone": "-03:30"
+        },
+        "episode_ids": [
+          "ep-6efd641bc1c9c10e",
+          "ep-7030a5faca4fa765"
+        ],
+        "seed": 265926180192445818019798745982107823045
+      },
+      {
+        "config": {
+          "boundary_payments": false,
+          "invoices": 46,
+          "period_month": "2031-12",
+          "shuffle": false,
+          "timezone": "-03:30"
+        },
+        "episode_ids": [
+          "ep-92c24ec5db183ab4",
+          "ep-b05e7e0f8f7c6ab2"
+        ],
+        "seed": 209264793880516150065248728213825858546
+      },
+      {
+        "config": {
+          "boundary_payments": false,
+          "invoices": 57,
+          "period_month": "2028-02",
+          "shuffle": false,
+          "timezone": "-03:30"
+        },
+        "episode_ids": [
+          "ep-eed4d613d29ae9b3",
+          "ep-965e821ede841b35"
+        ],
+        "seed": 159169140044694987620345181097936847151
+      },
+      {
+        "config": {
+          "boundary_payments": false,
+          "invoices": 57,
+          "period_month": "2031-12",
+          "shuffle": true,
+          "timezone": "+14:00"
+        },
+        "episode_ids": [
+          "ep-711d47dc9b2a2c6b",
+          "ep-c300ee2687aeecb3"
+        ],
+        "seed": 98087561597417723604915915093193305715
+      },
+      {
+        "config": {
+          "boundary_payments": true,
+          "invoices": 82,
+          "period_month": "2048-07",
+          "shuffle": false,
+          "timezone": "+14:00"
+        },
+        "episode_ids": [
+          "ep-3674e1f88ac8add3",
+          "ep-9adc49a61fd3288a"
+        ],
+        "seed": 82040713709633161521786876434722737990
+      },
+      {
+        "config": {
+          "boundary_payments": false,
+          "invoices": 74,
+          "period_month": "2048-07",
+          "shuffle": false,
+          "timezone": "-12:00"
+        },
+        "episode_ids": [
+          "ep-89941df83b0bafef",
+          "ep-e702e2c5d8b6fdd8"
+        ],
+        "seed": 297524151565848475825359246623507412673
+      },
+      {
+        "config": {
+          "boundary_payments": false,
+          "invoices": 46,
+          "period_month": "2028-02",
+          "shuffle": false,
+          "timezone": "+14:00"
+        },
+        "episode_ids": [
+          "ep-2c4826a22941ebf9",
+          "ep-a857d0223e31005d"
+        ],
+        "seed": 299159769006383674697856009539957045489
+      },
+      {
+        "config": {
+          "boundary_payments": true,
+          "invoices": 57,
+          "period_month": "2048-07",
+          "shuffle": false,
+          "timezone": "+14:00"
+        },
+        "episode_ids": [
+          "ep-09724f7eb506b614",
+          "ep-1c5d9463f4967657"
+        ],
+        "seed": 121848754951322029810613224385030121221
+      },
+      {
+        "config": {
+          "boundary_payments": true,
+          "invoices": 82,
+          "period_month": "2048-07",
+          "shuffle": false,
+          "timezone": "+14:00"
+        },
+        "episode_ids": [
+          "ep-a015383330f00bd0",
+          "ep-b466f311cf718d19"
+        ],
+        "seed": 197724640517789358235239228523462195092
+      },
+      {
+        "config": {
+          "boundary_payments": false,
+          "invoices": 82,
+          "period_month": "2048-07",
+          "shuffle": false,
+          "timezone": "-03:30"
+        },
+        "episode_ids": [
+          "ep-dac9b918088fbcfb",
+          "ep-a8d6c9484335f3ee"
+        ],
+        "seed": 216384327206295918258269146595078227193
+      },
+      {
+        "config": {
+          "boundary_payments": false,
+          "invoices": 40,
+          "period_month": "2028-02",
+          "shuffle": false,
+          "timezone": "-03:30"
+        },
+        "episode_ids": [
+          "ep-a8b4d52ba9612d56",
+          "ep-ad78f83490534224"
+        ],
+        "seed": 322224072225188474218431188581424394783
+      },
+      {
+        "config": {
+          "boundary_payments": false,
+          "invoices": 74,
+          "period_month": "2048-07",
+          "shuffle": true,
+          "timezone": "-12:00"
+        },
+        "episode_ids": [
+          "ep-ae455df5a699e528",
+          "ep-a58c50e0ce3c5219"
+        ],
+        "seed": 289259508336041005699042694814169619519
+      },
+      {
+        "config": {
+          "boundary_payments": false,
+          "invoices": 46,
+          "period_month": "2031-12",
+          "shuffle": true,
+          "timezone": "-12:00"
+        },
+        "episode_ids": [
+          "ep-6c7df3318d0709a3",
+          "ep-206daa5adf44ebf0"
+        ],
+        "seed": 227818983202071971100587390505271748328
+      },
+      {
+        "config": {
+          "boundary_payments": false,
+          "invoices": 57,
+          "period_month": "2028-02",
+          "shuffle": false,
+          "timezone": "+14:00"
+        },
+        "episode_ids": [
+          "ep-d83565d05ce3b5a2",
+          "ep-a3a468a10d2325b4"
+        ],
+        "seed": 220375755277636599923441521502764349087
+      },
+      {
+        "config": {
+          "boundary_payments": false,
+          "invoices": 82,
+          "period_month": "2031-12",
+          "shuffle": false,
+          "timezone": "+14:00"
+        },
+        "episode_ids": [
+          "ep-4c2824076b8054d5",
+          "ep-4e487f849b018f31"
+        ],
+        "seed": 122458140990821524745752365579270384565
+      },
+      {
+        "config": {
+          "boundary_payments": false,
+          "invoices": 82,
+          "period_month": "2028-02",
+          "shuffle": true,
+          "timezone": "+14:00"
+        },
+        "episode_ids": [
+          "ep-78012653ce4b7eb2",
+          "ep-d8c88e596790f1fb"
+        ],
+        "seed": 336028593470262056960952943726460458157
+      },
+      {
+        "config": {
+          "boundary_payments": true,
+          "invoices": 40,
+          "period_month": "2048-07",
+          "shuffle": false,
+          "timezone": "-03:30"
+        },
+        "episode_ids": [
+          "ep-586a5cff3d7e60d4",
+          "ep-fcbbff66fcfa31d1"
+        ],
+        "seed": 69937272355727242607180951506047939020
+      },
+      {
+        "config": {
+          "boundary_payments": false,
+          "invoices": 40,
+          "period_month": "2031-12",
+          "shuffle": false,
+          "timezone": "-03:30"
+        },
+        "episode_ids": [
+          "ep-926720077585cde3",
+          "ep-8cbd4bcb6c98d316"
+        ],
+        "seed": 236147573353147167182577450495657557456
+      },
+      {
+        "config": {
+          "boundary_payments": false,
+          "invoices": 74,
+          "period_month": "2031-12",
+          "shuffle": true,
+          "timezone": "-03:30"
+        },
+        "episode_ids": [
+          "ep-7de4d47237a45ec1",
+          "ep-4d483cc1955977cf"
+        ],
+        "seed": 270360902462766103698150745790381269941
+      },
+      {
+        "config": {
+          "boundary_payments": false,
+          "invoices": 46,
+          "period_month": "2048-07",
+          "shuffle": false,
+          "timezone": "-12:00"
+        },
+        "episode_ids": [
+          "ep-90a3d7c42e974f8b",
+          "ep-5d2286a859c5a7b3"
+        ],
+        "seed": 90920469765839025128650508728486850638
+      },
+      {
+        "config": {
+          "boundary_payments": false,
+          "invoices": 40,
+          "period_month": "2048-07",
+          "shuffle": true,
+          "timezone": "+05:45"
+        },
+        "episode_ids": [
+          "ep-467ba37d4ce10ef8",
+          "ep-1168272b22948329"
+        ],
+        "seed": 319017785002871773706864009562153513183
+      },
+      {
+        "config": {
+          "boundary_payments": false,
+          "invoices": 46,
+          "period_month": "2028-02",
+          "shuffle": false,
+          "timezone": "-12:00"
+        },
+        "episode_ids": [
+          "ep-6e383dfce93d4e86",
+          "ep-a9334a224615ccfc"
+        ],
+        "seed": 284382115749463086835738426180072330357
+      },
+      {
+        "config": {
+          "boundary_payments": false,
+          "invoices": 74,
+          "period_month": "2048-07",
+          "shuffle": false,
+          "timezone": "+14:00"
+        },
+        "episode_ids": [
+          "ep-eb564110be4361ea",
+          "ep-3ffddd6c69d8a2b1"
+        ],
+        "seed": 328389500197212879663353537075448010233
+      },
+      {
+        "config": {
+          "boundary_payments": true,
+          "invoices": 82,
+          "period_month": "2028-02",
+          "shuffle": false,
+          "timezone": "+05:45"
+        },
+        "episode_ids": [
+          "ep-3b0f143b6acd0b62",
+          "ep-bdc60d5a2d3fc9bf"
+        ],
+        "seed": 179495875486036149243043461678610516827
+      },
+      {
+        "config": {
+          "boundary_payments": false,
+          "invoices": 74,
+          "period_month": "2048-07",
+          "shuffle": false,
+          "timezone": "-12:00"
+        },
+        "episode_ids": [
+          "ep-bd974178350d5dfe",
+          "ep-600ab0ad7bdd98d4"
+        ],
+        "seed": 16097821886014748660816569025845423468
+      },
+      {
+        "config": {
+          "boundary_payments": false,
+          "invoices": 82,
+          "period_month": "2048-07",
+          "shuffle": false,
+          "timezone": "+14:00"
+        },
+        "episode_ids": [
+          "ep-0dd52391fa8935db",
+          "ep-bfb8fed92341110d"
+        ],
+        "seed": 297083403402335651936493140466251434635
+      },
+      {
+        "config": {
+          "boundary_payments": false,
+          "invoices": 46,
+          "period_month": "2048-07",
+          "shuffle": false,
+          "timezone": "+14:00"
+        },
+        "episode_ids": [
+          "ep-45cd3a880d7d12e5",
+          "ep-2242996f3f6d4f90"
+        ],
+        "seed": 299341521145700357351180095286783066022
+      },
+      {
+        "config": {
+          "boundary_payments": false,
+          "invoices": 74,
+          "period_month": "2031-12",
+          "shuffle": false,
+          "timezone": "-12:00"
+        },
+        "episode_ids": [
+          "ep-9793fc1d34dcdbbf",
+          "ep-15d4c093245e5165"
+        ],
+        "seed": 225120171624102482634434454972696703926
+      },
+      {
+        "config": {
+          "boundary_payments": false,
+          "invoices": 82,
+          "period_month": "2048-07",
+          "shuffle": true,
+          "timezone": "+14:00"
+        },
+        "episode_ids": [
+          "ep-617d8815dbbf8475",
+          "ep-bc9dc79051512a14"
+        ],
+        "seed": 25744607837351661509024955769662334947
+      },
+      {
+        "config": {
+          "boundary_payments": false,
+          "invoices": 57,
+          "period_month": "2048-07",
+          "shuffle": true,
+          "timezone": "+05:45"
+        },
+        "episode_ids": [
+          "ep-e2d441aff5159943",
+          "ep-6b4464489cc4e44f"
+        ],
+        "seed": 308748310292818078820607426040060040030
+      },
+      {
+        "config": {
+          "boundary_payments": false,
+          "invoices": 57,
+          "period_month": "2048-07",
+          "shuffle": false,
+          "timezone": "+05:45"
+        },
+        "episode_ids": [
+          "ep-c4d13a758adae878",
+          "ep-14e75dadef4bb119"
+        ],
+        "seed": 176790756688092981413637252474938220907
+      },
+      {
+        "config": {
+          "boundary_payments": true,
+          "invoices": 40,
+          "period_month": "2031-12",
+          "shuffle": false,
+          "timezone": "+14:00"
+        },
+        "episode_ids": [
+          "ep-208103a7f7bb4501",
+          "ep-e5695ce063523993"
+        ],
+        "seed": 195348964664750567358440416843919177962
+      },
+      {
+        "config": {
+          "boundary_payments": false,
+          "invoices": 74,
+          "period_month": "2031-12",
+          "shuffle": true,
+          "timezone": "-03:30"
+        },
+        "episode_ids": [
+          "ep-030f4f59db81d303",
+          "ep-5942b2a9c1ebded7"
+        ],
+        "seed": 72689450939425913021292294981434586055
+      },
+      {
+        "config": {
+          "boundary_payments": true,
+          "invoices": 74,
+          "period_month": "2048-07",
+          "shuffle": false,
+          "timezone": "-12:00"
+        },
+        "episode_ids": [
+          "ep-8f3493bcb74ede7b",
+          "ep-5d75a7a2d4577970"
+        ],
+        "seed": 39105273308293063295282415229913925841
+      },
+      {
+        "config": {
+          "boundary_payments": true,
+          "invoices": 46,
+          "period_month": "2031-12",
+          "shuffle": true,
+          "timezone": "+05:45"
+        },
+        "episode_ids": [
+          "ep-00fa6c1ee6e28d64",
+          "ep-5a82123e6195b800"
+        ],
+        "seed": 206372852535530547374434618167965939179
+      },
+      {
+        "config": {
+          "boundary_payments": true,
+          "invoices": 40,
+          "period_month": "2048-07",
+          "shuffle": true,
+          "timezone": "+14:00"
+        },
+        "episode_ids": [
+          "ep-ce9e2cfbcd614a41",
+          "ep-8d14633d858f7f32"
+        ],
+        "seed": 212176627152628571657754030169733592448
+      },
+      {
+        "config": {
+          "boundary_payments": true,
+          "invoices": 40,
+          "period_month": "2048-07",
+          "shuffle": true,
+          "timezone": "-12:00"
+        },
+        "episode_ids": [
+          "ep-fe24b88214d0582f",
+          "ep-419f295fc85b7e2f"
+        ],
+        "seed": 219047976702068324290098965038471067390
+      },
+      {
+        "config": {
+          "boundary_payments": false,
+          "invoices": 57,
+          "period_month": "2048-07",
+          "shuffle": true,
+          "timezone": "-12:00"
+        },
+        "episode_ids": [
+          "ep-4ee8d256a422d923",
+          "ep-e0a7fa7f67e11693"
+        ],
+        "seed": 202191071413204400833295236878923687784
+      },
+      {
+        "config": {
+          "boundary_payments": false,
+          "invoices": 57,
+          "period_month": "2048-07",
+          "shuffle": false,
+          "timezone": "+05:45"
+        },
+        "episode_ids": [
+          "ep-4cd8facee1ad01e3",
+          "ep-ab32c3b3d58395ea"
+        ],
+        "seed": 60678270582450644938304364493628675791
+      },
+      {
+        "config": {
+          "boundary_payments": false,
+          "invoices": 46,
+          "period_month": "2028-02",
+          "shuffle": true,
+          "timezone": "+05:45"
+        },
+        "episode_ids": [
+          "ep-e34265a2185f916b",
+          "ep-dff1ee37485b53a9"
+        ],
+        "seed": 8356326194973302783883264751431905975
+      },
+      {
+        "config": {
+          "boundary_payments": true,
+          "invoices": 74,
+          "period_month": "2048-07",
+          "shuffle": false,
+          "timezone": "-12:00"
+        },
+        "episode_ids": [
+          "ep-47bd6d4bb34fe2ff",
+          "ep-3f7d370111929929"
+        ],
+        "seed": 253461524635641656437307210896055532766
+      },
+      {
+        "config": {
+          "boundary_payments": true,
+          "invoices": 40,
+          "period_month": "2031-12",
+          "shuffle": false,
+          "timezone": "-03:30"
+        },
+        "episode_ids": [
+          "ep-76d95d15b1cbc1ee",
+          "ep-9dc6c41fd3f2a713"
+        ],
+        "seed": 192836812296146392413517700181074888866
+      },
+      {
+        "config": {
+          "boundary_payments": false,
+          "invoices": 40,
+          "period_month": "2048-07",
+          "shuffle": true,
+          "timezone": "+05:45"
+        },
+        "episode_ids": [
+          "ep-01426087595fc194",
+          "ep-da46c2b48e019363"
+        ],
+        "seed": 249557399883597594861626572409631026300
+      },
+      {
+        "config": {
+          "boundary_payments": false,
+          "invoices": 57,
+          "period_month": "2028-02",
+          "shuffle": false,
+          "timezone": "-12:00"
+        },
+        "episode_ids": [
+          "ep-786fbb0890817061",
+          "ep-d2d7e34fc65a5dd0"
+        ],
+        "seed": 129231704280428081241261666642647797190
+      },
+      {
+        "config": {
+          "boundary_payments": true,
+          "invoices": 57,
+          "period_month": "2031-12",
+          "shuffle": true,
+          "timezone": "+14:00"
+        },
+        "episode_ids": [
+          "ep-a768583880d74e85",
+          "ep-0717277f2a2fbcda"
+        ],
+        "seed": 40401366596635799835329082752514804154
+      },
+      {
+        "config": {
+          "boundary_payments": false,
+          "invoices": 46,
+          "period_month": "2048-07",
+          "shuffle": true,
+          "timezone": "+14:00"
+        },
+        "episode_ids": [
+          "ep-61df9b150b1e7c26",
+          "ep-7dd2b96b52bc01a7"
+        ],
+        "seed": 124812508339972129306179871749330872659
+      },
+      {
+        "config": {
+          "boundary_payments": false,
+          "invoices": 82,
+          "period_month": "2031-12",
+          "shuffle": true,
+          "timezone": "-03:30"
+        },
+        "episode_ids": [
+          "ep-7e31d286b00bf570",
+          "ep-458ab4a09f7e85f1"
+        ],
+        "seed": 107036350754919952082525620912355158215
+      },
+      {
+        "config": {
+          "boundary_payments": true,
+          "invoices": 74,
+          "period_month": "2028-02",
+          "shuffle": false,
+          "timezone": "-12:00"
+        },
+        "episode_ids": [
+          "ep-9a65961f40dc98cf",
+          "ep-5de8e1bd97135f5e"
+        ],
+        "seed": 309201051029817991804519236425165696520
+      },
+      {
+        "config": {
+          "boundary_payments": true,
+          "invoices": 74,
+          "period_month": "2031-12",
+          "shuffle": true,
+          "timezone": "-03:30"
+        },
+        "episode_ids": [
+          "ep-cd9c2037ea254646",
+          "ep-5054ae20c49d928b"
+        ],
+        "seed": 77069421325993368840034461520077279242
+      },
+      {
+        "config": {
+          "boundary_payments": true,
+          "invoices": 40,
+          "period_month": "2048-07",
+          "shuffle": true,
+          "timezone": "+14:00"
+        },
+        "episode_ids": [
+          "ep-fc84cf22c292fee1",
+          "ep-e022f614cf098d8a"
+        ],
+        "seed": 195033078103846655094552382330177950644
+      },
+      {
+        "config": {
+          "boundary_payments": true,
+          "invoices": 82,
+          "period_month": "2048-07",
+          "shuffle": false,
+          "timezone": "+14:00"
+        },
+        "episode_ids": [
+          "ep-b204ff7ea223e805",
+          "ep-a6fc11b9f12202b7"
+        ],
+        "seed": 313860871126426719370633702226311486240
+      },
+      {
+        "config": {
+          "boundary_payments": false,
+          "invoices": 46,
+          "period_month": "2048-07",
+          "shuffle": false,
+          "timezone": "-12:00"
+        },
+        "episode_ids": [
+          "ep-37fe611fdda739c3",
+          "ep-e5692e8bbda88820"
+        ],
+        "seed": 70814910284742948129679260635124621652
+      },
+      {
+        "config": {
+          "boundary_payments": false,
+          "invoices": 74,
+          "period_month": "2031-12",
+          "shuffle": true,
+          "timezone": "-03:30"
+        },
+        "episode_ids": [
+          "ep-e212c8293bdf7fe3",
+          "ep-30a6d1ffa2549480"
+        ],
+        "seed": 127905518535846776817153055036807950972
+      },
+      {
+        "config": {
+          "boundary_payments": true,
+          "invoices": 57,
+          "period_month": "2048-07",
+          "shuffle": false,
+          "timezone": "-03:30"
+        },
+        "episode_ids": [
+          "ep-981164c47fb35a95",
+          "ep-c4a16bd50e81f8da"
+        ],
+        "seed": 307383323101948249954480603423617563800
+      },
+      {
+        "config": {
+          "boundary_payments": true,
+          "invoices": 74,
+          "period_month": "2028-02",
+          "shuffle": true,
+          "timezone": "-03:30"
+        },
+        "episode_ids": [
+          "ep-ae2142255ac1d8c3",
+          "ep-29bf9acc724c7186"
+        ],
+        "seed": 134134308284549379736343830284853486730
+      },
+      {
+        "config": {
+          "boundary_payments": false,
+          "invoices": 57,
+          "period_month": "2028-02",
+          "shuffle": true,
+          "timezone": "-12:00"
+        },
+        "episode_ids": [
+          "ep-0607ed05573cc5ae",
+          "ep-50b714a42aab67c9"
+        ],
+        "seed": 147844612174530054170534237046904557671
+      },
+      {
+        "config": {
+          "boundary_payments": false,
+          "invoices": 46,
+          "period_month": "2031-12",
+          "shuffle": true,
+          "timezone": "-12:00"
+        },
+        "episode_ids": [
+          "ep-a0a26d85ee3a3738",
+          "ep-014bf90a03ab90c6"
+        ],
+        "seed": 83519372836190927978114139489410579338
+      },
+      {
+        "config": {
+          "boundary_payments": false,
+          "invoices": 74,
+          "period_month": "2048-07",
+          "shuffle": false,
+          "timezone": "-03:30"
+        },
+        "episode_ids": [
+          "ep-0d35cc4c3aab771e",
+          "ep-360545d2c7d2a17c"
+        ],
+        "seed": 183556431979039724455828918674421271205
+      },
+      {
+        "config": {
+          "boundary_payments": true,
+          "invoices": 40,
+          "period_month": "2028-02",
+          "shuffle": true,
+          "timezone": "-03:30"
+        },
+        "episode_ids": [
+          "ep-b3904b38547a779a",
+          "ep-4e38ec61e436beab"
+        ],
+        "seed": 137713027035033594960077522691829168578
+      },
+      {
+        "config": {
+          "boundary_payments": false,
+          "invoices": 74,
+          "period_month": "2048-07",
+          "shuffle": false,
+          "timezone": "+14:00"
+        },
+        "episode_ids": [
+          "ep-3119551b4dd06cc1",
+          "ep-557a8b96d918a1df"
+        ],
+        "seed": 33514614369425600770366543182465825170
+      },
+      {
+        "config": {
+          "boundary_payments": true,
+          "invoices": 74,
+          "period_month": "2031-12",
+          "shuffle": false,
+          "timezone": "-12:00"
+        },
+        "episode_ids": [
+          "ep-cbe245350b013e84",
+          "ep-bc8fa51c54341103"
+        ],
+        "seed": 297037629866183040730812239751503268573
+      },
+      {
+        "config": {
+          "boundary_payments": true,
+          "invoices": 46,
+          "period_month": "2048-07",
+          "shuffle": false,
+          "timezone": "-03:30"
+        },
+        "episode_ids": [
+          "ep-17a7f187cdac2921",
+          "ep-829132afb113d72b"
+        ],
+        "seed": 322125030842946155936036479118320469838
+      }
+    ],
+    "exact_regeneration_pass": 128,
+    "holdout_episodes": 128,
+    "identical_label_marginal_families": {
+      "ledger": 0,
+      "sources": 0
+    },
+    "independent_audit_pass": 128,
+    "median": {
+      "generation_ms": 4.9546,
+      "public_json_bytes": 132071.0,
+      "sample_generation_peak_bytes": 620327.5
+    },
+    "policies": {
+      "aggregate_guess": {
+        "f1": 0.5,
+        "fn": 128,
+        "fp": 126,
+        "max_steps": 11,
+        "reward": -0.008,
+        "solved": 64,
+        "steps": 8.9531,
+        "tp": 0
+      },
+      "cutoff_join": {
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "max_steps": 11,
+        "reward": 0.9841,
+        "solved": 128,
+        "steps": 8.9531,
+        "tp": 128
+      },
+      "full_reconciliation": {
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "max_steps": 16,
+        "reward": 0.9752,
+        "solved": 128,
+        "steps": 13.3906,
+        "tp": 128
+      },
+      "no_inspection": {
+        "f1": 0.5,
+        "fn": 128,
+        "fp": 0,
+        "max_steps": 1,
+        "reward": 0,
+        "solved": 64,
+        "steps": 1,
+        "tp": 0
+      }
+    },
+    "probes": {
+      "combined_no_join_nb": {
+        "accuracy": 0.9921875,
+        "family_bootstrap_95": [
+          0.9766,
+          1
+        ],
+        "fn": 1,
+        "positive_f1": 0.9921259842519685,
+        "tn": 64,
+        "tp": 63
+      },
+      "count_amount_disagreement": {
+        "accuracy": 0.9921875,
+        "family_bootstrap_95": [
+          0.9766,
+          1
+        ],
+        "fn": 1,
+        "positive_f1": 0.9921259842519685,
+        "tn": 64,
+        "tp": 63
+      },
+      "envelope_nb": {
+        "accuracy": 0.421875,
+        "family_bootstrap_95": [
+          0.3438,
+          0.5078
+        ],
+        "fn": 41,
+        "fp": 33,
+        "positive_f1": 0.38333333333333336,
+        "tn": 31,
+        "tp": 23
+      },
+      "ledger_nb": {
+        "accuracy": 0.890625,
+        "family_bootstrap_95": [
+          0.8359,
+          0.9375
+        ],
+        "fn": 14,
+        "positive_f1": 0.8771929824561403,
+        "tn": 64,
+        "tp": 50
+      },
+      "ledger_out_count": {
+        "accuracy": 0.890625,
+        "family_bootstrap_95": [
+          0.8359,
+          0.9375
+        ],
+        "fn": 14,
+        "positive_f1": 0.8771929824561403,
+        "tn": 64,
+        "tp": 50
+      },
+      "silence": {
+        "accuracy": 0.5,
+        "family_bootstrap_95": [
+          0.5,
+          0.5
+        ],
+        "fn": 64,
+        "positive_f1": 0.0,
+        "tn": 64
+      },
+      "sources_nb": {
+        "accuracy": 0.5390625,
+        "family_bootstrap_95": [
+          0.4453,
+          0.625
+        ],
+        "fn": 34,
+        "fp": 25,
+        "positive_f1": 0.5042016806722689,
+        "tn": 39,
+        "tp": 30
+      }
+    }
+  },
+  "control_sha": "e722984569a30dfdb69a938a0c35882ca1b886e5",
+  "control_source": "git checkpoint",
+  "core_source_sha256": {
+    "generator.py": "6133c24f864dffa43b6844a01ae3926b5d31c92fc7b12d4db92e7f2e99d87aa3",
+    "recognition_worlds.py": "d2ac068467e826e3d22a61e09ee7e5a50fd91c312818252b8e1d5a3c68b6e074"
+  },
+  "fit_families": 32,
+  "holdout_digest": "6542129b3259caa758e1d3cb0d839c789ecbf320ff0b23e775ce4d90d015be63",
+  "holdout_families": 64,
+  "root": 6982734491033
+}

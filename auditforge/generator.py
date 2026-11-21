@@ -22,6 +22,14 @@ def generate(seed, config=None):
     if config is not None and not isinstance(config, dict):
         raise ValueError('config must be an object')
     config = dict(config or {})
+    recognition_mode = 'recognition_world' in config
+    if recognition_mode:
+        from .recognition_worlds import build_world, recurrence_terms
+        world = config.pop('recognition_world')
+        if world != 'blind' and (type(world) is not int or not 0 <= world <= 3):
+            raise ValueError("recognition_world must be 0..3 or 'blind'")
+        if {'clean', 'counts', 'interaction'}.intersection(config):
+            raise ValueError('recognition_world defines its own clean state and discrepancies')
     allowed = {'clean', 'interaction', 'counts', 'invoices', 'timezone', 'shuffle',
                'period_month', 'boundary_payments'}
     if set(config) - allowed:
@@ -81,11 +89,14 @@ def generate(seed, config=None):
         end, end + timedelta(hours=6), end + timedelta(hours=12),
         start - timedelta(hours=1), start - timedelta(hours=6), start - timedelta(hours=12),
     )))
+    recurring, nominal = range(0, n, 6), 500_000
+    if recognition_mode:
+        recurring, nominal = recurrence_terms(seed, config, n, boundary_indices[:3])
     for i in range(n):
         stamp = (start + timedelta(days=rng.randrange(invoice_days), hours=rng.randrange(24))).isoformat()
         if i in boundary_stamps:
             stamp = boundary_stamps[i].isoformat()
-        total = rng.randrange(10_000, 2_000_000) if i % 6 else 500_000
+        total = rng.randrange(10_000, 2_000_000) if i not in recurring else nominal
         inv = dict(doc_id=ident('doc'), invoice_id=ident('inv'), entity_id=ident('entity'), issued_at=stamp, due_at=(datetime.fromisoformat(stamp) + timedelta(days=30)).isoformat(), currency='KZT', total_minor=total, line_items=[dict(description=rng.choice(['Logistics', 'Equipment lease', 'Consulting', 'Cloud infrastructure']), quantity=1, unit_minor=total, amount_minor=total, source_ref=ident('contract'))])
         invoices.append(inv)
         entry('expense', total, True, stamp, inv)
@@ -121,6 +132,8 @@ def generate(seed, config=None):
         issue = dict(issue_id=ident('issue'), type=kind, affected_ids=sorted(r['row_id'] for r in rows), expected_amount_minor=abs(amount), currency='KZT', evidence_sets=[sorted(evidence)], tolerance_minor=0)
         truth.append(issue)
         provenance.append(dict(issue_id=issue['issue_id'], operation=kind, before=before, after=copy.deepcopy(rows if causal_rows is None else causal_rows)))
+    if recognition_mode:
+        counts = {}
     active = {} if config.get('clean', False) else dict(counts)
     shared = {1: {'payment_allocation', 'fx_conversion', 'accounting_period'},
               2: {'duplicate_invoice', 'accounting_period'}}.get(interaction, set())
@@ -208,4 +221,7 @@ def generate(seed, config=None):
             rng.shuffle(public[table])
     public['manifest']['records'] = len(ledger)
     pristine['manifest']['records'] = len(pristine['ledger'])
+    if recognition_mode:
+        episode = dict(public=public, truth=truth, provenance=provenance, pristine=pristine)
+        return build_world(episode, seed, config, world, nominal)
     return dict(public=public, truth=truth, provenance=provenance, pristine=pristine)
