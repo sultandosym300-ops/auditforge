@@ -1,3 +1,4 @@
+import {cloud,cloudEnabled,cloudUser,cloudSign} from './cloud.js';
 let backend='browser';
 let worker;
 let nextId=0;
@@ -12,6 +13,13 @@ function rpc(path,payload){
 }
 export async function detectBackend(){
   try{const response=await fetch('/api/me');if(response.headers.get('content-type')?.includes('application/json')){const value=await response.json();if(value.backend==='python'){backend='python';return value;}}}catch{}
+  if(cloudEnabled){
+    const signed=await cloudUser();
+    const previous=JSON.parse(sessionStorage.getItem('af-user')||'null');
+    const user=signed||(previous?.guest?previous:null);
+    if(user)sessionStorage.setItem('af-user',JSON.stringify(user));else sessionStorage.removeItem('af-user');
+    return {backend,user};
+  }
   return {backend,user:JSON.parse(sessionStorage.getItem('af-user')||'null')};
 }
 async function digestPassword(password,salt){
@@ -27,6 +35,11 @@ export async function api(path,payload={}){
   }
   if(['guest','login','register'].includes(path)){
     let user={name:'Guest',guest:true};
+    if(path==='guest'&&cloudEnabled){const {error}=await cloud.auth.signOut({scope:'local'});if(error)throw error;}
+    if(path!=='guest'&&cloudEnabled){
+      user=await cloudSign(path,payload);
+      sessionStorage.setItem('af-user',JSON.stringify(user));return {user,backend};
+    }
     if(path!=='guest'){
       const name=payload.name?.trim();const password=payload.password||'';
       if(!name||name.length<3||name.length>40||password.length<8||password.length>128)throw new Error('invalid_credentials_format');
@@ -39,7 +52,7 @@ export async function api(path,payload={}){
     }
     sessionStorage.setItem('af-user',JSON.stringify(user));return {user,backend};
   }
-  if(path==='logout'){sessionStorage.removeItem('af-user');if(worker){worker.terminate();worker=null;}return {ok:true};}
+  if(path==='logout'){if(cloudEnabled){const {error}=await cloud.auth.signOut();if(error)throw error;}sessionStorage.removeItem('af-user');if(worker){worker.terminate();worker=null;}return {ok:true};}
   if(!sessionStorage.getItem('af-user'))throw new Error('sign_in_required');
   return rpc(path,payload);
 }

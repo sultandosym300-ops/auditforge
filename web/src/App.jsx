@@ -8,6 +8,7 @@ import Disassembly from './Disassembly.jsx';
 import Finale from './Finale.jsx';
 import Tutorial from './Tutorial.jsx';
 import TrainingLab from './TrainingLab.jsx';
+import {cloudEnabled} from './cloud.js';
 import {dictionaries,issueTypes} from './i18n.js';
 import {api,detectBackend,getBackend,getTrajectory,download} from './api.js';
 gsap.registerPlugin(ScrollTrigger,useGSAP);
@@ -59,8 +60,8 @@ function Landing({t,lang,setLang,onEnter}){
 
 function Auth({t,lang,setLang,onBack,onSuccess}){
   const [mode,setMode]=useState('register');const [busy,setBusy]=useState(false);const [error,setError]=useState('');
-  async function sign(path,payload){setBusy(true);setError('');try{const result=await api(path,payload);onSuccess(result.user);}catch(e){setError(t(e.message==='name_taken'?'nameTaken':'authError'));}finally{setBusy(false);}}
-  return <main className="auth-page"><header className="site-header"><div className="nav-inner"><Brand onClick={onBack}/><Language lang={lang} setLang={setLang}/></div></header><div className="auth-layout"><div className="auth-visual"><Scanner/><div className="auth-visual-copy"><h2>{br(t('heroA')+'\n'+t('heroB'))}</h2><p>{t('fiction')}</p></div></div><section className="auth-form"><button className="back-link" onClick={onBack}><ChevronLeft size={16}/>{t('back')}</button><h1>{br(t('authTitle'))}</h1><p>{t('authBody')}</p><div className="segmented">{['register','login'].map(m=><button key={m} onClick={()=>{setMode(m);setError('');}} className={mode===m?'active':''}>{t(m)}</button>)}</div><form onSubmit={e=>{e.preventDefault();const f=new FormData(e.currentTarget);sign(mode,{name:f.get('name'),password:f.get('password')});}}><label>{t('username')}<input name="name" autoComplete="username" required minLength={3} maxLength={40} placeholder="researcher"/></label><label>{t('password')}<input name="password" type="password" autoComplete={mode==='register'?'new-password':'current-password'} required minLength={8} maxLength={128} placeholder={t('passwordHint')}/></label>{error&&<p className="error-message" role="alert">{error}</p>}<button className="button primary full" disabled={busy}>{busy?t('loading'):t(mode==='register'?'createAccount':'login')}</button></form><div className="auth-divider"/><button className="button secondary full" disabled={busy} onClick={()=>sign('guest',{})}>{t('guest')}</button><p className="auth-note">{t(getBackend()==='browser'?'localProfile':'localServer')}</p></section></div></main>;
+  async function sign(path,payload){setBusy(true);setError('');try{const result=await api(path,payload);onSuccess(result.user);}catch(e){setError(t(e.message==='email_confirmation_required'?'confirmEmail':e.message==='name_taken'?'nameTaken':'authError'));}finally{setBusy(false);}}
+  return <main className="auth-page"><header className="site-header"><div className="nav-inner"><Brand onClick={onBack}/><Language lang={lang} setLang={setLang}/></div></header><div className="auth-layout"><div className="auth-visual"><Scanner/><div className="auth-visual-copy"><h2>{br(t('heroA')+'\n'+t('heroB'))}</h2><p>{t('fiction')}</p></div></div><section className="auth-form"><button className="back-link" onClick={onBack}><ChevronLeft size={16}/>{t('back')}</button><h1>{br(t('authTitle'))}</h1><p>{t('authBody')}</p><div className="segmented">{['register','login'].map(m=><button key={m} onClick={()=>{setMode(m);setError('');}} className={mode===m?'active':''}>{t(m)}</button>)}</div><form onSubmit={e=>{e.preventDefault();const f=new FormData(e.currentTarget);sign(mode,{name:f.get('name'),password:f.get('password')});}}><label>{cloudEnabled?'Email':t('username')}<input name="name" type={cloudEnabled?'email':'text'} autoComplete="username" required minLength={3} maxLength={254} placeholder={cloudEnabled?'name@example.com':'researcher'}/></label><label>{t('password')}<input name="password" type="password" autoComplete={mode==='register'?'new-password':'current-password'} required minLength={8} maxLength={128} placeholder={t('passwordHint')}/></label>{error&&<p className="error-message" role="alert">{error}</p>}<button className="button primary full" disabled={busy}>{busy?t('loading'):t(mode==='register'?'createAccount':'login')}</button></form><div className="auth-divider"/><button className="button secondary full" disabled={busy} onClick={()=>sign('guest',{})}>{t('guest')}</button><p className="auth-note">{t(cloudEnabled?'cloudProfile':getBackend()==='browser'?'localProfile':'localServer')}</p></section></div></main>;
 }
 
 function FocusDialog({className,onClose,returnFocus,suspended=false,children}){
@@ -169,7 +170,7 @@ export default function App(){
   const t=key=>dictionaries[lang]?.[key]||dictionaries.en[key]||key;
   const setLang=value=>{setLangState(value);localStorage.setItem('af-language',value);};
   useEffect(()=>{document.documentElement.lang=lang;},[lang]);
-  useEffect(()=>{detectBackend().then(value=>setUser(value.user));},[]);
+  useEffect(()=>{detectBackend().then(value=>setUser(value.user)).catch(()=>setUser(null));},[]);
   function enter(){setView(user?'workspace':'auth');window.scrollTo(0,0);}
   function home(){setView('landing');window.scrollTo(0,0);}
   async function logout(){await api('logout');sessionStorage.removeItem('af-tour-session');setUser(null);setView('landing');window.scrollTo(0,0);}
