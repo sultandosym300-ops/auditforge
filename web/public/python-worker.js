@@ -2,7 +2,7 @@ import {loadPyodide} from './python/pyodide.mjs';
 let runtime;
 async function ready(){
   if(!runtime)runtime=(async()=>{
-    const py=await loadPyodide({indexURL:'/python/'});
+    const py=await loadPyodide({indexURL:new URL('./python/',self.location.href).href});
     const files=await (await fetch('/python-core.json')).json();
     py.FS.mkdirTree('/app/auditforge');
     for(const [name,content] of Object.entries(files))py.FS.writeFile('/app/auditforge/'+name,content);
