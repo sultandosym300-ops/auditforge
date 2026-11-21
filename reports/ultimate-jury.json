@@ -287,7 +287,7 @@
         "interaction": 0
       },
       "label": "jury-data",
-      "generation_seconds": 0.0031355000028270297,
+      "generation_seconds": 0.0030637000018032268,
       "episode_id": "ep-81da3db7de5f8f1a",
       "records": 190,
       "documents": 95,
@@ -298,14 +298,14 @@
         "production": {
           "f1": 1,
           "steps": 10,
-          "seconds": 0.0029899000001023524,
+          "seconds": 0.0022706000017933547,
           "evidence_errors": [],
           "passed": true
         },
         "rational_public": {
           "f1": 1,
           "steps": 10,
-          "seconds": 0.004633500000636559,
+          "seconds": 0.004596899998432491,
           "evidence_errors": [],
           "passed": true
         }
@@ -324,7 +324,7 @@
         "interaction": 1
       },
       "label": "jury-data",
-      "generation_seconds": 0.00588199999765493,
+      "generation_seconds": 0.005925400000705849,
       "episode_id": "ep-1d1982e56b584237",
       "records": 398,
       "documents": 199,
@@ -335,14 +335,14 @@
         "production": {
           "f1": 1,
           "steps": 16,
-          "seconds": 0.004498700000112876,
+          "seconds": 0.004329800001869444,
           "evidence_errors": [],
           "passed": true
         },
         "rational_public": {
           "f1": 1,
           "steps": 16,
-          "seconds": 0.00933200000145007,
+          "seconds": 0.008617599996796343,
           "evidence_errors": [],
           "passed": true
         }
@@ -361,7 +361,7 @@
         "interaction": 2
       },
       "label": "jury-data",
-      "generation_seconds": 0.01426789999823086,
+      "generation_seconds": 0.012986100002308376,
       "episode_id": "ep-430740d756fa2c79",
       "records": 946,
       "documents": 473,
@@ -372,14 +372,14 @@
         "production": {
           "f1": 1,
           "steps": 32,
-          "seconds": 0.009355399997730274,
+          "seconds": 0.009783299996342976,
           "evidence_errors": [],
           "passed": true
         },
         "rational_public": {
           "f1": 1,
           "steps": 32,
-          "seconds": 0.01960539999708999,
+          "seconds": 0.01980619999812916,
           "evidence_errors": [],
           "passed": true
         }
@@ -398,7 +398,7 @@
         "interaction": 0
       },
       "label": "jury-data",
-      "generation_seconds": 0.00315250000130618,
+      "generation_seconds": 0.0033393999983672984,
       "episode_id": "ep-8effd163768c2810",
       "records": 190,
       "documents": 95,
@@ -409,14 +409,14 @@
         "production": {
           "f1": 1,
           "steps": 10,
-          "seconds": 0.002564000002166722,
+          "seconds": 0.0022791999945184216,
           "evidence_errors": [],
           "passed": true
         },
         "rational_public": {
           "f1": 1,
           "steps": 10,
-          "seconds": 0.004819200003112201,
+          "seconds": 0.0047594999996363185,
           "evidence_errors": [],
           "passed": true
         }
@@ -435,7 +435,7 @@
         "interaction": 1
       },
       "label": "jury-data",
-      "generation_seconds": 0.005772800002887379,
+      "generation_seconds": 0.006313199999567587,
       "episode_id": "ep-b632048b5daac287",
       "records": 398,
       "documents": 199,
@@ -446,14 +446,14 @@
         "production": {
           "f1": 1,
           "steps": 16,
-          "seconds": 0.004256500003975816,
+          "seconds": 0.006256499997107312,
           "evidence_errors": [],
           "passed": true
         },
         "rational_public": {
           "f1": 1,
           "steps": 16,
-          "seconds": 0.00851840000541415,
+          "seconds": 0.04785219999757828,
           "evidence_errors": [],
           "passed": true
         }
@@ -477,7 +477,7 @@
         "interaction": 2
       },
       "label": "jury-data",
-      "generation_seconds": 0.01401639999676263,
+      "generation_seconds": 0.03417780000017956,
       "episode_id": "ep-1d18229f9e452584",
       "records": 948,
       "documents": 473,
@@ -488,14 +488,14 @@
         "production": {
           "f1": 1.0,
           "steps": 32,
-          "seconds": 0.009636900002078619,
+          "seconds": 0.010161199999856763,
           "evidence_errors": [],
           "passed": true
         },
         "rational_public": {
           "f1": 1.0,
           "steps": 32,
-          "seconds": 0.01948590000392869,
+          "seconds": 0.02231500000198139,
           "evidence_errors": [],
           "passed": true
         }
@@ -519,7 +519,7 @@
         "interaction": 1
       },
       "label": "jury-data",
-      "generation_seconds": 0.0034086000014212914,
+      "generation_seconds": 0.003701000001456123,
       "episode_id": "ep-61407da5332c38b1",
       "records": 192,
       "documents": 95,
@@ -530,14 +530,14 @@
         "production": {
           "f1": 1.0,
           "steps": 10,
-          "seconds": 0.002299499996297527,
+          "seconds": 0.0023548000026494265,
           "evidence_errors": [],
           "passed": true
         },
         "rational_public": {
           "f1": 1.0,
           "steps": 10,
-          "seconds": 0.004832500002521556,
+          "seconds": 0.004774200002430007,
           "evidence_errors": [],
           "passed": true
         }
@@ -561,7 +561,7 @@
         "interaction": 2
       },
       "label": "jury-data",
-      "generation_seconds": 0.007063600001856685,
+      "generation_seconds": 0.006576599997060839,
       "episode_id": "ep-0790e27e5ef48211",
       "records": 400,
       "documents": 199,
@@ -572,14 +572,14 @@
         "production": {
           "f1": 1.0,
           "steps": 16,
-          "seconds": 0.00449260000459617,
+          "seconds": 0.005712600002880208,
           "evidence_errors": [],
           "passed": true
         },
         "rational_public": {
           "f1": 1.0,
           "steps": 16,
-          "seconds": 0.008564499999920372,
+          "seconds": 0.009486200004175771,
           "evidence_errors": [],
           "passed": true
         }
@@ -603,7 +603,7 @@
         "interaction": 1
       },
       "label": "jury-data",
-      "generation_seconds": 0.013267100002849475,
+      "generation_seconds": 0.015984699995897245,
       "episode_id": "ep-ba47d207092ea433",
       "records": 948,
       "documents": 473,
@@ -614,14 +614,14 @@
         "production": {
           "f1": 1.0,
           "steps": 32,
-          "seconds": 0.01071100000262959,
+          "seconds": 0.011604100000113249,
           "evidence_errors": [],
           "passed": true
         },
         "rational_public": {
           "f1": 1.0,
           "steps": 32,
-          "seconds": 0.021142999998119194,
+          "seconds": 0.019535799998266157,
           "evidence_errors": [],
           "passed": true
         }
@@ -645,7 +645,7 @@
         "interaction": 2
       },
       "label": "jury-data",
-      "generation_seconds": 0.003908799997589085,
+      "generation_seconds": 0.0036469999977271073,
       "episode_id": "ep-13521348d97303e0",
       "records": 192,
       "documents": 95,
@@ -656,14 +656,14 @@
         "production": {
           "f1": 1.0,
           "steps": 10,
-          "seconds": 0.0024585000064689666,
+          "seconds": 0.0022222999978112057,
           "evidence_errors": [],
           "passed": true
         },
         "rational_public": {
           "f1": 1.0,
           "steps": 10,
-          "seconds": 0.005151999997906387,
+          "seconds": 0.00460179999936372,
           "evidence_errors": [],
           "passed": true
         }
@@ -683,7 +683,7 @@
         }
       },
       "label": "jury-data",
-      "generation_seconds": 0.006541599999764003,
+      "generation_seconds": 0.006042900000466034,
       "episode_id": "ep-1e306a539dfa02aa",
       "records": 404,
       "documents": 199,
@@ -694,14 +694,14 @@
         "production": {
           "f1": 1.0,
           "steps": 17,
-          "seconds": 0.0049490000019432046,
+          "seconds": 0.0043880000011995435,
           "evidence_errors": [],
           "passed": true
         },
         "rational_public": {
           "f1": 1.0,
           "steps": 17,
-          "seconds": 0.00945490000594873,
+          "seconds": 0.008832999999867752,
           "evidence_errors": [],
           "passed": true
         }
@@ -721,7 +721,7 @@
         }
       },
       "label": "jury-data",
-      "generation_seconds": 0.01643270000204211,
+      "generation_seconds": 0.013903399994887877,
       "episode_id": "ep-7d9b5c253e3a046b",
       "records": 946,
       "documents": 473,
@@ -732,14 +732,14 @@
         "production": {
           "f1": 1.0,
           "steps": 32,
-          "seconds": 0.009971499996026978,
+          "seconds": 0.010184099999605678,
           "evidence_errors": [],
           "passed": true
         },
         "rational_public": {
           "f1": 1.0,
           "steps": 32,
-          "seconds": 0.02073759999620961,
+          "seconds": 0.02045669999642996,
           "evidence_errors": [],
           "passed": true
         }
@@ -759,7 +759,7 @@
         }
       },
       "label": "jury-data",
-      "generation_seconds": 0.003525899999658577,
+      "generation_seconds": 0.003523000006680377,
       "episode_id": "ep-6158a8cc1f992c42",
       "records": 190,
       "documents": 95,
@@ -770,14 +770,14 @@
         "production": {
           "f1": 1.0,
           "steps": 10,
-          "seconds": 0.002253700004075654,
+          "seconds": 0.0022328999984893017,
           "evidence_errors": [],
           "passed": true
         },
         "rational_public": {
           "f1": 1.0,
           "steps": 10,
-          "seconds": 0.005085199998575263,
+          "seconds": 0.004550400000880472,
           "evidence_errors": [],
           "passed": true
         }
@@ -797,7 +797,7 @@
         }
       },
       "label": "jury-data",
-      "generation_seconds": 0.006625599999097176,
+      "generation_seconds": 0.006111099995905533,
       "episode_id": "ep-b875cfb2d6064959",
       "records": 398,
       "documents": 199,
@@ -808,14 +808,14 @@
         "production": {
           "f1": 1.0,
           "steps": 16,
-          "seconds": 0.004368199995951727,
+          "seconds": 0.004327499998908024,
           "evidence_errors": [],
           "passed": true
         },
         "rational_public": {
           "f1": 1.0,
           "steps": 16,
-          "seconds": 0.008687699999427423,
+          "seconds": 0.008703700004843995,
           "evidence_errors": [],
           "passed": true
         }
@@ -833,7 +833,7 @@
         "recognition_world": 1
       },
       "label": "jury-data",
-      "generation_seconds": 0.013459900001180358,
+      "generation_seconds": 0.014631899997766595,
       "episode_id": "ep-9dd481c6ff8f971d",
       "records": 946,
       "documents": 473,
@@ -844,14 +844,14 @@
         "production": {
           "f1": 1.0,
           "steps": 32,
-          "seconds": 0.011698599999363068,
+          "seconds": 0.010041300003649667,
           "evidence_errors": [],
           "passed": true
         },
         "rational_public": {
           "f1": 1.0,
           "steps": 32,
-          "seconds": 0.02051920000667451,
+          "seconds": 0.021000100001401734,
           "evidence_errors": [],
           "passed": true
         }
@@ -869,7 +869,7 @@
         "recognition_world": 2
       },
       "label": "jury-data",
-      "generation_seconds": 0.0036063000006834045,
+      "generation_seconds": 0.0034124000012525357,
       "episode_id": "ep-fde181044b5851fa",
       "records": 190,
       "documents": 95,
@@ -880,14 +880,14 @@
         "production": {
           "f1": 1.0,
           "steps": 10,
-          "seconds": 0.0022826999993412755,
+          "seconds": 0.002134200003638398,
           "evidence_errors": [],
           "passed": true
         },
         "rational_public": {
           "f1": 1.0,
           "steps": 10,
-          "seconds": 0.004497299996728543,
+          "seconds": 0.0043370999992475845,
           "evidence_errors": [],
           "passed": true
         }
@@ -905,7 +905,7 @@
         "recognition_world": 1
       },
       "label": "jury-data",
-      "generation_seconds": 0.0063768999971216545,
+      "generation_seconds": 0.0058429999990039505,
       "episode_id": "ep-f664b8b23b90a9bf",
       "records": 398,
       "documents": 199,
@@ -916,14 +916,14 @@
         "production": {
           "f1": 1.0,
           "steps": 16,
-          "seconds": 0.0045156999985920265,
+          "seconds": 0.00415150000480935,
           "evidence_errors": [],
           "passed": true
         },
         "rational_public": {
           "f1": 1.0,
           "steps": 16,
-          "seconds": 0.008893299993360415,
+          "seconds": 0.008623099995020311,
           "evidence_errors": [],
           "passed": true
         }
@@ -941,7 +941,7 @@
         "recognition_world": 2
       },
       "label": "jury-data",
-      "generation_seconds": 0.014985400004661642,
+      "generation_seconds": 0.013680399999429937,
       "episode_id": "ep-2eafd01d483333ff",
       "records": 946,
       "documents": 473,
@@ -952,14 +952,14 @@
         "production": {
           "f1": 1.0,
           "steps": 32,
-          "seconds": 0.009841999999480322,
+          "seconds": 0.009725799995067064,
           "evidence_errors": [],
           "passed": true
         },
         "rational_public": {
           "f1": 1.0,
           "steps": 32,
-          "seconds": 0.019968799999332987,
+          "seconds": 0.02380059999995865,
           "evidence_errors": [],
           "passed": true
         }
@@ -983,7 +983,7 @@
         "interaction": 0
       },
       "label": "jury-data",
-      "generation_seconds": 0.0038072999959695153,
+      "generation_seconds": 0.004375100004835986,
       "episode_id": "ep-46c77854917d97b6",
       "records": 192,
       "documents": 95,
@@ -994,14 +994,14 @@
         "production": {
           "f1": 1.0,
           "steps": 10,
-          "seconds": 0.0023593999940203503,
+          "seconds": 0.002334500000870321,
           "evidence_errors": [],
           "passed": true
         },
         "rational_public": {
           "f1": 1.0,
           "steps": 10,
-          "seconds": 0.004576199993607588,
+          "seconds": 0.004564300004858524,
           "evidence_errors": [],
           "passed": true
         }
@@ -1025,7 +1025,7 @@
         "interaction": 1
       },
       "label": "jury-data",
-      "generation_seconds": 0.0065235000001848675,
+      "generation_seconds": 0.006586700001207646,
       "episode_id": "ep-2d4ccefa555b2ae8",
       "records": 400,
       "documents": 199,
@@ -1036,14 +1036,14 @@
         "production": {
           "f1": 1.0,
           "steps": 16,
-          "seconds": 0.004581299996061716,
+          "seconds": 0.004450699998415075,
           "evidence_errors": [],
           "passed": true
         },
         "rational_public": {
           "f1": 1.0,
           "steps": 16,
-          "seconds": 0.0087100000018836,
+          "seconds": 0.008733499998925254,
           "evidence_errors": [],
           "passed": true
         }
@@ -1886,7 +1886,7 @@
           "counts": {}
         },
         "label": "covering",
-        "generation_seconds": 0.0033107000053860247,
+        "generation_seconds": 0.0033017999958246946,
         "episode_id": "ep-a4c2675de036fbda",
         "records": 190,
         "documents": 95,
@@ -1897,14 +1897,14 @@
           "production": {
             "f1": 1,
             "steps": 10,
-            "seconds": 0.0022848000007797964,
+            "seconds": 0.0022613000037381425,
             "evidence_errors": [],
             "passed": true
           },
           "rational_public": {
             "f1": 1,
             "steps": 10,
-            "seconds": 0.0047011999995447695,
+            "seconds": 0.004678800003603101,
             "evidence_errors": [],
             "passed": true
           }
@@ -1937,7 +1937,7 @@
           }
         },
         "label": "covering",
-        "generation_seconds": 0.0034123000004910864,
+        "generation_seconds": 0.003290100001322571,
         "episode_id": "ep-d6a89f2efb9b7c37",
         "records": 190,
         "documents": 95,
@@ -1948,14 +1948,14 @@
           "production": {
             "f1": 1,
             "steps": 10,
-            "seconds": 0.002253000006021466,
+            "seconds": 0.002376299999014009,
             "evidence_errors": [],
             "passed": true
           },
           "rational_public": {
             "f1": 1,
             "steps": 10,
-            "seconds": 0.00458000000071479,
+            "seconds": 0.004898400002275594,
             "evidence_errors": [],
             "passed": true
           }
@@ -1988,7 +1988,7 @@
           }
         },
         "label": "covering",
-        "generation_seconds": 0.003328200000396464,
+        "generation_seconds": 0.0032675000038580038,
         "episode_id": "ep-21d998f70b8bb1ab",
         "records": 196,
         "documents": 98,
@@ -1999,14 +1999,14 @@
           "production": {
             "f1": 1,
             "steps": 10,
-            "seconds": 0.0023380999991786666,
+            "seconds": 0.002400800003670156,
             "evidence_errors": [],
             "passed": true
           },
           "rational_public": {
             "f1": 1,
             "steps": 10,
-            "seconds": 0.0060914000059710816,
+            "seconds": 0.004869399999734014,
             "evidence_errors": [],
             "passed": true
           }
@@ -2039,7 +2039,7 @@
           }
         },
         "label": "covering",
-        "generation_seconds": 0.006515100001706742,
+        "generation_seconds": 0.006998199998633936,
         "episode_id": "ep-405622e643b91658",
         "records": 398,
         "documents": 199,
@@ -2050,14 +2050,14 @@
           "production": {
             "f1": 1.0,
             "steps": 16,
-            "seconds": 0.004679899997427128,
+            "seconds": 0.004399999997986015,
             "evidence_errors": [],
             "passed": true
           },
           "rational_public": {
             "f1": 1.0,
             "steps": 16,
-            "seconds": 0.008799399998679291,
+            "seconds": 0.008620200002042111,
             "evidence_errors": [],
             "passed": true
           }
@@ -2090,7 +2090,7 @@
           }
         },
         "label": "covering",
-        "generation_seconds": 0.019912900002964307,
+        "generation_seconds": 0.02050450000388082,
         "episode_id": "ep-74976a16667448ec",
         "records": 946,
         "documents": 473,
@@ -2101,14 +2101,14 @@
           "production": {
             "f1": 1,
             "steps": 32,
-            "seconds": 0.01045460000023013,
+            "seconds": 0.010939400002826005,
             "evidence_errors": [],
             "passed": true
           },
           "rational_public": {
             "f1": 1,
             "steps": 32,
-            "seconds": 0.02549390000058338,
+            "seconds": 0.020878200004517566,
             "evidence_errors": [],
             "passed": true
           }
@@ -2144,7 +2144,7 @@
           }
         },
         "label": "covering",
-        "generation_seconds": 0.014241700002457947,
+        "generation_seconds": 0.014781300000322517,
         "episode_id": "ep-1344b0f0ae7407f4",
         "records": 948,
         "documents": 473,
@@ -2155,14 +2155,14 @@
           "production": {
             "f1": 1.0,
             "steps": 32,
-            "seconds": 0.01009419999900274,
+            "seconds": 0.010175800001889002,
             "evidence_errors": [],
             "passed": true
           },
           "rational_public": {
             "f1": 1.0,
             "steps": 32,
-            "seconds": 0.018896400004450697,
+            "seconds": 0.020046799996634945,
             "evidence_errors": [],
             "passed": true
           }
@@ -2198,7 +2198,7 @@
           }
         },
         "label": "covering",
-        "generation_seconds": 0.004208799997286405,
+        "generation_seconds": 0.004271600002539344,
         "episode_id": "ep-58d9b3d9a738a420",
         "records": 202,
         "documents": 98,
@@ -2209,14 +2209,14 @@
           "production": {
             "f1": 1.0,
             "steps": 11,
-            "seconds": 0.0024179000029107556,
+            "seconds": 0.002569600001152139,
             "evidence_errors": [],
             "passed": true
           },
           "rational_public": {
             "f1": 1.0,
             "steps": 11,
-            "seconds": 0.00494780000008177,
+            "seconds": 0.004989100001694169,
             "evidence_errors": [],
             "passed": true
           }
@@ -2252,7 +2252,7 @@
           }
         },
         "label": "covering",
-        "generation_seconds": 0.00564930000109598,
+        "generation_seconds": 0.006170200002088677,
         "episode_id": "ep-1674b46cbd47e0f5",
         "records": 398,
         "documents": 199,
@@ -2263,14 +2263,14 @@
           "production": {
             "f1": 1,
             "steps": 16,
-            "seconds": 0.004486199999519158,
+            "seconds": 0.004681600003095809,
             "evidence_errors": [],
             "passed": true
           },
           "rational_public": {
             "f1": 1,
             "steps": 16,
-            "seconds": 0.008269799996924121,
+            "seconds": 0.009083799996005837,
             "evidence_errors": [],
             "passed": true
           }
@@ -2306,7 +2306,7 @@
           }
         },
         "label": "covering",
-        "generation_seconds": 0.0030694000015500933,
+        "generation_seconds": 0.003624099997978192,
         "episode_id": "ep-2dccb8bc277faee2",
         "records": 190,
         "documents": 95,
@@ -2317,14 +2317,14 @@
           "production": {
             "f1": 1,
             "steps": 10,
-            "seconds": 0.0022349999999278225,
+            "seconds": 0.002406799998425413,
             "evidence_errors": [],
             "passed": true
           },
           "rational_public": {
             "f1": 1,
             "steps": 10,
-            "seconds": 0.004374600001028739,
+            "seconds": 0.004693399998359382,
             "evidence_errors": [],
             "passed": true
           }
@@ -2360,7 +2360,7 @@
           }
         },
         "label": "covering",
-        "generation_seconds": 0.003540199999406468,
+        "generation_seconds": 0.003923600001144223,
         "episode_id": "ep-850c330bc9a6ffdc",
         "records": 198,
         "documents": 98,
@@ -2371,14 +2371,14 @@
           "production": {
             "f1": 1.0,
             "steps": 10,
-            "seconds": 0.0023154999944381416,
+            "seconds": 0.0024810999966575764,
             "evidence_errors": [],
             "passed": true
           },
           "rational_public": {
             "f1": 1.0,
             "steps": 10,
-            "seconds": 0.004571799996483605,
+            "seconds": 0.005137499996635597,
             "evidence_errors": [],
             "passed": true
           }
@@ -2414,7 +2414,7 @@
           }
         },
         "label": "covering",
-        "generation_seconds": 0.0030351999957929365,
+        "generation_seconds": 0.0036252999998396263,
         "episode_id": "ep-6b2324e32129af4d",
         "records": 190,
         "documents": 95,
@@ -2425,14 +2425,14 @@
           "production": {
             "f1": 1,
             "steps": 10,
-            "seconds": 0.0022422000038204715,
+            "seconds": 0.0023901999957161024,
             "evidence_errors": [],
             "passed": true
           },
           "rational_public": {
             "f1": 1,
             "steps": 10,
-            "seconds": 0.0044024999951943755,
+            "seconds": 0.0050286999976378866,
             "evidence_errors": [],
             "passed": true
           }
@@ -2465,7 +2465,7 @@
           }
         },
         "label": "covering",
-        "generation_seconds": 0.0058102000039070845,
+        "generation_seconds": 0.006713499999023043,
         "episode_id": "ep-475e6b5b4026c1c7",
         "records": 404,
         "documents": 199,
@@ -2476,14 +2476,14 @@
           "production": {
             "f1": 1.0,
             "steps": 17,
-            "seconds": 0.0043261999962851405,
+            "seconds": 0.0045042999990982935,
             "evidence_errors": [],
             "passed": true
           },
           "rational_public": {
             "f1": 1.0,
             "steps": 17,
-            "seconds": 0.008669800001371186,
+            "seconds": 0.010420499995234422,
             "evidence_errors": [],
             "passed": true
           }
@@ -2516,7 +2516,7 @@
           }
         },
         "label": "covering",
-        "generation_seconds": 0.003106399999524001,
+        "generation_seconds": 0.004009099997347221,
         "episode_id": "ep-58de98779dcbed82",
         "records": 196,
         "documents": 98,
@@ -2527,14 +2527,14 @@
           "production": {
             "f1": 1,
             "steps": 10,
-            "seconds": 0.0021427999963634647,
+            "seconds": 0.0032078000003821217,
             "evidence_errors": [],
             "passed": true
           },
           "rational_public": {
             "f1": 1,
             "steps": 10,
-            "seconds": 0.004462200005946215,
+            "seconds": 0.005474300000059884,
             "evidence_errors": [],
             "passed": true
           }
@@ -2565,7 +2565,7 @@
           "counts": {}
         },
         "label": "covering",
-        "generation_seconds": 0.017627699999138713,
+        "generation_seconds": 0.024831300004734658,
         "episode_id": "ep-c04b36fba5e4ed4d",
         "records": 946,
         "documents": 473,
@@ -2576,14 +2576,14 @@
           "production": {
             "f1": 1,
             "steps": 32,
-            "seconds": 0.009427900004084222,
+            "seconds": 0.014248700004827697,
             "evidence_errors": [],
             "passed": true
           },
           "rational_public": {
             "f1": 1,
             "steps": 32,
-            "seconds": 0.018824800004949793,
+            "seconds": 0.024924299999838695,
             "evidence_errors": [],
             "passed": true
           }
@@ -2616,7 +2616,7 @@
           }
         },
         "label": "covering",
-        "generation_seconds": 0.0031952999997884035,
+        "generation_seconds": 0.004754599998705089,
         "episode_id": "ep-698c5e4d65b1cc47",
         "records": 196,
         "documents": 98,
@@ -2627,14 +2627,14 @@
           "production": {
             "f1": 1.0,
             "steps": 10,
-            "seconds": 0.0023312000048463233,
+            "seconds": 0.002809300000080839,
             "evidence_errors": [],
             "passed": true
           },
           "rational_public": {
             "f1": 1.0,
             "steps": 10,
-            "seconds": 0.00452930000028573,
+            "seconds": 0.005348899998352863,
             "evidence_errors": [],
             "passed": true
           }
@@ -2667,7 +2667,7 @@
           }
         },
         "label": "covering",
-        "generation_seconds": 0.006288900003710296,
+        "generation_seconds": 0.00852860000304645,
         "episode_id": "ep-b2749584bcd083b9",
         "records": 398,
         "documents": 199,
@@ -2678,14 +2678,14 @@
           "production": {
             "f1": 1.0,
             "steps": 16,
-            "seconds": 0.004211699997540563,
+            "seconds": 0.004718900003354065,
             "evidence_errors": [],
             "passed": true
           },
           "rational_public": {
             "f1": 1.0,
             "steps": 16,
-            "seconds": 0.008583800001360942,
+            "seconds": 0.008924900001147762,
             "evidence_errors": [],
             "passed": true
           }
@@ -2721,7 +2721,7 @@
           }
         },
         "label": "covering",
-        "generation_seconds": 0.0038439999989350326,
+        "generation_seconds": 0.004058500002429355,
         "episode_id": "ep-dda34a7f7de6f8ce",
         "records": 196,
         "documents": 95,
@@ -2732,14 +2732,14 @@
           "production": {
             "f1": 1.0,
             "steps": 10,
-            "seconds": 0.0022220000028028153,
+            "seconds": 0.0046902999965823255,
             "evidence_errors": [],
             "passed": true
           },
           "rational_public": {
             "f1": 1.0,
             "steps": 10,
-            "seconds": 0.004496000001381617,
+            "seconds": 0.004973399998561945,
             "evidence_errors": [],
             "passed": true
           }
@@ -2772,7 +2772,7 @@
           }
         },
         "label": "covering",
-        "generation_seconds": 0.0129778000045917,
+        "generation_seconds": 0.015084300001035444,
         "episode_id": "ep-20eadc036bc51103",
         "records": 952,
         "documents": 473,
@@ -2783,14 +2783,14 @@
           "production": {
             "f1": 1.0,
             "steps": 33,
-            "seconds": 0.010124299995368347,
+            "seconds": 0.012597699998877943,
             "evidence_errors": [],
             "passed": true
           },
           "rational_public": {
             "f1": 1.0,
             "steps": 33,
-            "seconds": 0.019496699998853728,
+            "seconds": 0.024651399995491374,
             "evidence_errors": [],
             "passed": true
           }
@@ -2823,7 +2823,7 @@
           }
         },
         "label": "covering",
-        "generation_seconds": 0.0032049000001279637,
+        "generation_seconds": 0.0039293000008910894,
         "episode_id": "ep-8b11287fe9381d33",
         "records": 190,
         "documents": 95,
@@ -2834,14 +2834,14 @@
           "production": {
             "f1": 1.0,
             "steps": 10,
-            "seconds": 0.0023431000008713454,
+            "seconds": 0.0027303999959258363,
             "evidence_errors": [],
             "passed": true
           },
           "rational_public": {
             "f1": 1.0,
             "steps": 10,
-            "seconds": 0.004560100001981482,
+            "seconds": 0.005503399996086955,
             "evidence_errors": [],
             "passed": true
           }
@@ -2872,7 +2872,7 @@
           "counts": {}
         },
         "label": "covering",
-        "generation_seconds": 0.0032979000025079586,
+        "generation_seconds": 0.003763199994864408,
         "episode_id": "ep-78503c19bdaaa013",
         "records": 196,
         "documents": 98,
@@ -2883,14 +2883,14 @@
           "production": {
             "f1": 1,
             "steps": 10,
-            "seconds": 0.0021884000016143546,
+            "seconds": 0.0022533000010298565,
             "evidence_errors": [],
             "passed": true
           },
           "rational_public": {
             "f1": 1,
             "steps": 10,
-            "seconds": 0.004437299998244271,
+            "seconds": 0.004961899998306762,
             "evidence_errors": [],
             "passed": true
           }
@@ -2923,7 +2923,7 @@
           }
         },
         "label": "covering",
-        "generation_seconds": 0.005783599997812416,
+        "generation_seconds": 0.007656000001588836,
         "episode_id": "ep-a9a6f37f25fe7b57",
         "records": 398,
         "documents": 199,
@@ -2934,14 +2934,14 @@
           "production": {
             "f1": 1.0,
             "steps": 16,
-            "seconds": 0.004327799993916415,
+            "seconds": 0.004414399998495355,
             "evidence_errors": [],
             "passed": true
           },
           "rational_public": {
             "f1": 1.0,
             "steps": 16,
-            "seconds": 0.008380499995837454,
+            "seconds": 0.008826399993267842,
             "evidence_errors": [],
             "passed": true
           }
@@ -2974,7 +2974,7 @@
           }
         },
         "label": "covering",
-        "generation_seconds": 0.00322510000114562,
+        "generation_seconds": 0.0034559000050649047,
         "episode_id": "ep-610b2d7be055a51a",
         "records": 190,
         "documents": 95,
@@ -2985,14 +2985,14 @@
           "production": {
             "f1": 1.0,
             "steps": 10,
-            "seconds": 0.0022401000023819506,
+            "seconds": 0.002300700005434919,
             "evidence_errors": [],
             "passed": true
           },
           "rational_public": {
             "f1": 1.0,
             "steps": 10,
-            "seconds": 0.004284499998902902,
+            "seconds": 0.00452919999952428,
             "evidence_errors": [],
             "passed": true
           }
@@ -3028,7 +3028,7 @@
           }
         },
         "label": "covering",
-        "generation_seconds": 0.003224299995054025,
+        "generation_seconds": 0.0037621000010403804,
         "episode_id": "ep-9dc0d7b1af0b615b",
         "records": 198,
         "documents": 98,
@@ -3039,14 +3039,14 @@
           "production": {
             "f1": 1.0,
             "steps": 10,
-            "seconds": 0.002535599996917881,
+            "seconds": 0.0023819999987608753,
             "evidence_errors": [],
             "passed": true
           },
           "rational_public": {
             "f1": 1.0,
             "steps": 10,
-            "seconds": 0.0046355000013136305,
+            "seconds": 0.0048900999972829595,
             "evidence_errors": [],
             "passed": true
           }
@@ -3079,7 +3079,7 @@
           }
         },
         "label": "covering",
-        "generation_seconds": 0.0034626999986357987,
+        "generation_seconds": 0.00352030000067316,
         "episode_id": "ep-f617ee6cc006c8c4",
         "records": 202,
         "documents": 98,
@@ -3090,14 +3090,14 @@
           "production": {
             "f1": 1.0,
             "steps": 11,
-            "seconds": 0.002310700001544319,
+            "seconds": 0.0023975000003702007,
             "evidence_errors": [],
             "passed": true
           },
           "rational_public": {
             "f1": 1.0,
             "steps": 11,
-            "seconds": 0.004509099999268074,
+            "seconds": 0.004913500000839122,
             "evidence_errors": [],
             "passed": true
           }
@@ -3133,7 +3133,7 @@
           }
         },
         "label": "covering",
-        "generation_seconds": 0.006317999999737367,
+        "generation_seconds": 0.006634899997152388,
         "episode_id": "ep-95ecde10fbc0993f",
         "records": 400,
         "documents": 199,
@@ -3144,14 +3144,14 @@
           "production": {
             "f1": 1.0,
             "steps": 16,
-            "seconds": 0.004961599996022414,
+            "seconds": 0.00453669999842532,
             "evidence_errors": [],
             "passed": true
           },
           "rational_public": {
             "f1": 1.0,
             "steps": 16,
-            "seconds": 0.008328600000822917,
+            "seconds": 0.008681299994350411,
             "evidence_errors": [],
             "passed": true
           }
@@ -3184,7 +3184,7 @@
           }
         },
         "label": "covering",
-        "generation_seconds": 0.0030651999986730516,
+        "generation_seconds": 0.0033141999956569634,
         "episode_id": "ep-c87cbd4700bfbe29",
         "records": 190,
         "documents": 95,
@@ -3195,14 +3195,14 @@
           "production": {
             "f1": 1.0,
             "steps": 10,
-            "seconds": 0.0021591999975498766,
+            "seconds": 0.0022933000000193715,
             "evidence_errors": [],
             "passed": true
           },
           "rational_public": {
             "f1": 1.0,
             "steps": 10,
-            "seconds": 0.004390300004160963,
+            "seconds": 0.004610099997080397,
             "evidence_errors": [],
             "passed": true
           }
@@ -3233,7 +3233,7 @@
           "counts": {}
         },
         "label": "covering",
-        "generation_seconds": 0.005546099993807729,
+        "generation_seconds": 0.005779300001449883,
         "episode_id": "ep-65f7c6cf7a8836c8",
         "records": 398,
         "documents": 199,
@@ -3244,14 +3244,14 @@
           "production": {
             "f1": 1,
             "steps": 16,
-            "seconds": 0.0040822000009939075,
+            "seconds": 0.004263999995600898,
             "evidence_errors": [],
             "passed": true
           },
           "rational_public": {
             "f1": 1,
             "steps": 16,
-            "seconds": 0.008512899999914225,
+            "seconds": 0.008871799996995833,
             "evidence_errors": [],
             "passed": true
           }
@@ -3287,7 +3287,7 @@
           }
         },
         "label": "covering",
-        "generation_seconds": 0.006895500002428889,
+        "generation_seconds": 0.006764199999452103,
         "episode_id": "ep-5923fbdc23b38783",
         "records": 400,
         "documents": 199,
@@ -3298,14 +3298,14 @@
           "production": {
             "f1": 1.0,
             "steps": 16,
-            "seconds": 0.004594699996232521,
+            "seconds": 0.004636300000129268,
             "evidence_errors": [],
             "passed": true
           },
           "rational_public": {
             "f1": 1.0,
             "steps": 16,
-            "seconds": 0.008765200000198092,
+            "seconds": 0.008583599999838043,
             "evidence_errors": [],
             "passed": true
           }
@@ -3341,7 +3341,7 @@
           }
         },
         "label": "covering",
-        "generation_seconds": 0.015310700000554789,
+        "generation_seconds": 0.014982900000177324,
         "episode_id": "ep-d3cb0820267e098b",
         "records": 952,
         "documents": 473,
@@ -3352,14 +3352,14 @@
           "production": {
             "f1": 1.0,
             "steps": 33,
-            "seconds": 0.009723199997097254,
+            "seconds": 0.011398199996619951,
             "evidence_errors": [],
             "passed": true
           },
           "rational_public": {
             "f1": 1.0,
             "steps": 33,
-            "seconds": 0.019862899993313476,
+            "seconds": 0.020745200003148057,
             "evidence_errors": [],
             "passed": true
           }
@@ -3392,7 +3392,7 @@
           }
         },
         "label": "covering",
-        "generation_seconds": 0.013181199996324722,
+        "generation_seconds": 0.014404100002138875,
         "episode_id": "ep-4c47d7256389c61a",
         "records": 946,
         "documents": 473,
@@ -3403,14 +3403,14 @@
           "production": {
             "f1": 1.0,
             "steps": 32,
-            "seconds": 0.009780799999134615,
+            "seconds": 0.01400419999845326,
             "evidence_errors": [],
             "passed": true
           },
           "rational_public": {
             "f1": 1.0,
             "steps": 32,
-            "seconds": 0.023654199998418335,
+            "seconds": 0.028855100004875567,
             "evidence_errors": [],
             "passed": true
           }
@@ -3443,7 +3443,7 @@
           }
         },
         "label": "covering",
-        "generation_seconds": 0.013041899997915607,
+        "generation_seconds": 0.017253700003493577,
         "episode_id": "ep-8719f46ee7aadcdc",
         "records": 946,
         "documents": 473,
@@ -3454,14 +3454,14 @@
           "production": {
             "f1": 1.0,
             "steps": 32,
-            "seconds": 0.009928200001013465,
+            "seconds": 0.010758899996289983,
             "evidence_errors": [],
             "passed": true
           },
           "rational_public": {
             "f1": 1.0,
             "steps": 32,
-            "seconds": 0.018783399995299987,
+            "seconds": 0.022761100000934675,
             "evidence_errors": [],
             "passed": true
           }
@@ -3497,7 +3497,7 @@
           }
         },
         "label": "covering",
-        "generation_seconds": 0.014193199996952899,
+        "generation_seconds": 0.01589380000223173,
         "episode_id": "ep-5995865bd550934c",
         "records": 948,
         "documents": 473,
@@ -3508,14 +3508,14 @@
           "production": {
             "f1": 1.0,
             "steps": 32,
-            "seconds": 0.009984700001950841,
+            "seconds": 0.010938100000203121,
             "evidence_errors": [],
             "passed": true
           },
           "rational_public": {
             "f1": 1.0,
             "steps": 32,
-            "seconds": 0.01941880000231322,
+            "seconds": 0.021135700000741053,
             "evidence_errors": [],
             "passed": true
           }
@@ -3550,7 +3550,7 @@
           }
         },
         "label": "effective-supplement",
-        "generation_seconds": 0.0031432999967364594,
+        "generation_seconds": 0.0035955000057583675,
         "episode_id": "ep-3efce87a83513763",
         "records": 190,
         "documents": 95,
@@ -3561,14 +3561,14 @@
           "production": {
             "f1": 1.0,
             "steps": 10,
-            "seconds": 0.0022046000012778677,
+            "seconds": 0.002594199999293778,
             "evidence_errors": [],
             "passed": true
           },
           "rational_public": {
             "f1": 1.0,
             "steps": 10,
-            "seconds": 0.004630299998098053,
+            "seconds": 0.004847200005315244,
             "evidence_errors": [],
             "passed": true
           }
@@ -3589,7 +3589,7 @@
           "counts": {}
         },
         "label": "effective-supplement",
-        "generation_seconds": 0.002995299997564871,
+        "generation_seconds": 0.003228300003684126,
         "episode_id": "ep-edcbe231dcfc0dfe",
         "records": 190,
         "documents": 95,
@@ -3600,14 +3600,14 @@
           "production": {
             "f1": 1,
             "steps": 10,
-            "seconds": 0.0021492000014404766,
+            "seconds": 0.002479099995980505,
             "evidence_errors": [],
             "passed": true
           },
           "rational_public": {
             "f1": 1,
             "steps": 10,
-            "seconds": 0.004510300001129508,
+            "seconds": 0.005322199998772703,
             "evidence_errors": [],
             "passed": true
           }
@@ -3633,7 +3633,7 @@
           }
         },
         "label": "effective-supplement",
-        "generation_seconds": 0.0033825999998953193,
+        "generation_seconds": 0.003615200002968777,
         "episode_id": "ep-c17fcb23e1b9a0c0",
         "records": 192,
         "documents": 95,
@@ -3644,14 +3644,14 @@
           "production": {
             "f1": 1.0,
             "steps": 10,
-            "seconds": 0.002201499999500811,
+            "seconds": 0.0024436000021523796,
             "evidence_errors": [],
             "passed": true
           },
           "rational_public": {
             "f1": 1.0,
             "steps": 10,
-            "seconds": 0.004514300002483651,
+            "seconds": 0.004918300001008902,
             "evidence_errors": [],
             "passed": true
           }
@@ -3672,7 +3672,7 @@
           "recognition_world": 0
         },
         "label": "unseen-classes",
-        "generation_seconds": 0.0032733000043663196,
+        "generation_seconds": 0.0035887999983970076,
         "episode_id": "ep-cad9b65d735ee038",
         "records": 190,
         "documents": 95,
@@ -3683,14 +3683,14 @@
           "production": {
             "f1": 1,
             "steps": 10,
-            "seconds": 0.0021820000038133003,
+            "seconds": 0.0023708999942755327,
             "evidence_errors": [],
             "passed": true
           },
           "rational_public": {
             "f1": 1,
             "steps": 10,
-            "seconds": 0.004480900002818089,
+            "seconds": 0.004760800002259202,
             "evidence_errors": [],
             "passed": true
           }
@@ -3708,7 +3708,7 @@
           "recognition_world": 1
         },
         "label": "unseen-classes",
-        "generation_seconds": 0.014332500002637971,
+        "generation_seconds": 0.01524760000029346,
         "episode_id": "ep-7729af13b81918ac",
         "records": 946,
         "documents": 473,
@@ -3719,14 +3719,14 @@
           "production": {
             "f1": 1.0,
             "steps": 32,
-            "seconds": 0.010049200005596504,
+            "seconds": 0.010249800005112775,
             "evidence_errors": [],
             "passed": true
           },
           "rational_public": {
             "f1": 1.0,
             "steps": 32,
-            "seconds": 0.019603799999458715,
+            "seconds": 0.02096979999623727,
             "evidence_errors": [],
             "passed": true
           }
@@ -3744,7 +3744,7 @@
           "recognition_world": 2
         },
         "label": "unseen-classes",
-        "generation_seconds": 0.00321770000300603,
+        "generation_seconds": 0.003658599998743739,
         "episode_id": "ep-c3828e6989239e5d",
         "records": 190,
         "documents": 95,
@@ -3755,14 +3755,14 @@
           "production": {
             "f1": 1.0,
             "steps": 10,
-            "seconds": 0.002151200002117548,
+            "seconds": 0.002322599997569341,
             "evidence_errors": [],
             "passed": true
           },
           "rational_public": {
             "f1": 1.0,
             "steps": 10,
-            "seconds": 0.004503700001805555,
+            "seconds": 0.004786099998455029,
             "evidence_errors": [],
             "passed": true
           }
@@ -3780,7 +3780,7 @@
           "recognition_world": 3
         },
         "label": "unseen-classes",
-        "generation_seconds": 0.013580099999671802,
+        "generation_seconds": 0.014675300000817515,
         "episode_id": "ep-f15a563066845080",
         "records": 946,
         "documents": 473,
@@ -3791,14 +3791,14 @@
           "production": {
             "f1": 1,
             "steps": 32,
-            "seconds": 0.009926300001097843,
+            "seconds": 0.010548099999141414,
             "evidence_errors": [],
             "passed": true
           },
           "rational_public": {
             "f1": 1,
             "steps": 32,
-            "seconds": 0.01923069999611471,
+            "seconds": 0.02134940000541974,
             "evidence_errors": [],
             "passed": true
           }
@@ -3816,7 +3816,7 @@
           "recognition_world": 0
         },
         "label": "unseen-classes",
-        "generation_seconds": 0.0031032999977469444,
+        "generation_seconds": 0.0035172999996575527,
         "episode_id": "ep-2737b082625be924",
         "records": 190,
         "documents": 95,
@@ -3827,14 +3827,14 @@
           "production": {
             "f1": 1,
             "steps": 10,
-            "seconds": 0.0021521000016946346,
+            "seconds": 0.002313299999514129,
             "evidence_errors": [],
             "passed": true
           },
           "rational_public": {
             "f1": 1,
             "steps": 10,
-            "seconds": 0.004353799995442387,
+            "seconds": 0.004826899996260181,
             "evidence_errors": [],
             "passed": true
           }
@@ -3852,7 +3852,7 @@
           "recognition_world": 1
         },
         "label": "unseen-classes",
-        "generation_seconds": 0.013671699998667464,
+        "generation_seconds": 0.014833299996098503,
         "episode_id": "ep-5b1e9d2b362ff83c",
         "records": 946,
         "documents": 473,
@@ -3863,14 +3863,14 @@
           "production": {
             "f1": 1.0,
             "steps": 32,
-            "seconds": 0.009491299999353942,
+            "seconds": 0.01003340000170283,
             "evidence_errors": [],
             "passed": true
           },
           "rational_public": {
             "f1": 1.0,
             "steps": 32,
-            "seconds": 0.01885949999996228,
+            "seconds": 0.026296600000932813,
             "evidence_errors": [],
             "passed": true
           }
@@ -3888,7 +3888,7 @@
           "recognition_world": 2
         },
         "label": "unseen-classes",
-        "generation_seconds": 0.0033430999974370934,
+        "generation_seconds": 0.0034344000014243647,
         "episode_id": "ep-95a428fff3377bd9",
         "records": 190,
         "documents": 95,
@@ -3899,14 +3899,14 @@
           "production": {
             "f1": 1.0,
             "steps": 10,
-            "seconds": 0.002156399998057168,
+            "seconds": 0.002290999997057952,
             "evidence_errors": [],
             "passed": true
           },
           "rational_public": {
             "f1": 1.0,
             "steps": 10,
-            "seconds": 0.00438669999857666,
+            "seconds": 0.0046918999942136,
             "evidence_errors": [],
             "passed": true
           }
@@ -3924,7 +3924,7 @@
           "recognition_world": 3
         },
         "label": "unseen-classes",
-        "generation_seconds": 0.01411710000684252,
+        "generation_seconds": 0.014907000004313886,
         "episode_id": "ep-f1a28e116e798add",
         "records": 946,
         "documents": 473,
@@ -3935,14 +3935,14 @@
           "production": {
             "f1": 1,
             "steps": 32,
-            "seconds": 0.0095735000068089,
+            "seconds": 0.010640100001182873,
             "evidence_errors": [],
             "passed": true
           },
           "rational_public": {
             "f1": 1,
             "steps": 32,
-            "seconds": 0.019964600003731903,
+            "seconds": 0.021300299995345995,
             "evidence_errors": [],
             "passed": true
           }
@@ -3960,7 +3960,7 @@
           "recognition_world": 0
         },
         "label": "unseen-classes",
-        "generation_seconds": 0.003212099996744655,
+        "generation_seconds": 0.003743099994608201,
         "episode_id": "ep-25273f4862b11b80",
         "records": 190,
         "documents": 95,
@@ -3971,14 +3971,14 @@
           "production": {
             "f1": 1,
             "steps": 10,
-            "seconds": 0.0022716000021318905,
+            "seconds": 0.002492899999197107,
             "evidence_errors": [],
             "passed": true
           },
           "rational_public": {
             "f1": 1,
             "steps": 10,
-            "seconds": 0.004498899994359817,
+            "seconds": 0.004890600001090206,
             "evidence_errors": [],
             "passed": true
           }
@@ -3996,7 +3996,7 @@
           "recognition_world": 1
         },
         "label": "unseen-classes",
-        "generation_seconds": 0.014699599996674806,
+        "generation_seconds": 0.01580899999680696,
         "episode_id": "ep-47f46df97737cafb",
         "records": 946,
         "documents": 473,
@@ -4007,14 +4007,14 @@
           "production": {
             "f1": 1.0,
             "steps": 32,
-            "seconds": 0.009933100001944695,
+            "seconds": 0.009927999999490567,
             "evidence_errors": [],
             "passed": true
           },
           "rational_public": {
             "f1": 1.0,
             "steps": 32,
-            "seconds": 0.01932200000010198,
+            "seconds": 0.02139010000246344,
             "evidence_errors": [],
             "passed": true
           }
@@ -4032,7 +4032,7 @@
           "recognition_world": 2
         },
         "label": "unseen-classes",
-        "generation_seconds": 0.0031703999993624166,
+        "generation_seconds": 0.0033841999975265935,
         "episode_id": "ep-ec56722fdd823d43",
         "records": 190,
         "documents": 95,
@@ -4043,14 +4043,14 @@
           "production": {
             "f1": 1.0,
             "steps": 10,
-            "seconds": 0.0021902000007685274,
+            "seconds": 0.002518900000723079,
             "evidence_errors": [],
             "passed": true
           },
           "rational_public": {
             "f1": 1.0,
             "steps": 10,
-            "seconds": 0.0044349000017973594,
+            "seconds": 0.004702599995653145,
             "evidence_errors": [],
             "passed": true
           }
@@ -4068,7 +4068,7 @@
           "recognition_world": 3
         },
         "label": "unseen-classes",
-        "generation_seconds": 0.014266900005168281,
+        "generation_seconds": 0.014856599998893216,
         "episode_id": "ep-4ad9a499a7b2ae46",
         "records": 946,
         "documents": 473,
@@ -4079,14 +4079,14 @@
           "production": {
             "f1": 1,
             "steps": 32,
-            "seconds": 0.009815699995670002,
+            "seconds": 0.011198200001672376,
             "evidence_errors": [],
             "passed": true
           },
           "rational_public": {
             "f1": 1,
             "steps": 32,
-            "seconds": 0.019438899995293468,
+            "seconds": 0.021659600002749357,
             "evidence_errors": [],
             "passed": true
           }
@@ -4104,7 +4104,7 @@
           "recognition_world": 0
         },
         "label": "unseen-classes",
-        "generation_seconds": 0.003209000002243556,
+        "generation_seconds": 0.003643500000180211,
         "episode_id": "ep-e7a5fff8099b0bc7",
         "records": 190,
         "documents": 95,
@@ -4115,14 +4115,14 @@
           "production": {
             "f1": 1,
             "steps": 10,
-            "seconds": 0.002149300002201926,
+            "seconds": 0.0023359999977401458,
             "evidence_errors": [],
             "passed": true
           },
           "rational_public": {
             "f1": 1,
             "steps": 10,
-            "seconds": 0.004467599996132776,
+            "seconds": 0.004887699993560091,
             "evidence_errors": [],
             "passed": true
           }
@@ -4140,7 +4140,7 @@
           "recognition_world": 1
         },
         "label": "unseen-classes",
-        "generation_seconds": 0.013764999996055849,
+        "generation_seconds": 0.015371500005130656,
         "episode_id": "ep-a5b27be4c393f7a9",
         "records": 946,
         "documents": 473,
@@ -4151,14 +4151,14 @@
           "production": {
             "f1": 1.0,
             "steps": 32,
-            "seconds": 0.009707900004286785,
+            "seconds": 0.011085599995567463,
             "evidence_errors": [],
             "passed": true
           },
           "rational_public": {
             "f1": 1.0,
             "steps": 32,
-            "seconds": 0.01946279999538092,
+            "seconds": 0.021409499997389503,
             "evidence_errors": [],
             "passed": true
           }
@@ -4176,7 +4176,7 @@
           "recognition_world": 2
         },
         "label": "unseen-classes",
-        "generation_seconds": 0.003170300005876925,
+        "generation_seconds": 0.0036221999980625696,
         "episode_id": "ep-61a27d573f359757",
         "records": 190,
         "documents": 95,
@@ -4187,14 +4187,14 @@
           "production": {
             "f1": 1.0,
             "steps": 10,
-            "seconds": 0.002164700003049802,
+            "seconds": 0.0024425999945378862,
             "evidence_errors": [],
             "passed": true
           },
           "rational_public": {
             "f1": 1.0,
             "steps": 10,
-            "seconds": 0.0044027999974787235,
+            "seconds": 0.005054900000686757,
             "evidence_errors": [],
             "passed": true
           }
@@ -4212,7 +4212,7 @@
           "recognition_world": 3
         },
         "label": "unseen-classes",
-        "generation_seconds": 0.014240099997550715,
+        "generation_seconds": 0.016139599996677134,
         "episode_id": "ep-aae488cdde36b31f",
         "records": 946,
         "documents": 473,
@@ -4223,14 +4223,14 @@
           "production": {
             "f1": 1,
             "steps": 32,
-            "seconds": 0.010146400003577583,
+            "seconds": 0.010872099999687634,
             "evidence_errors": [],
             "passed": true
           },
           "rational_public": {
             "f1": 1,
             "steps": 32,
-            "seconds": 0.019296699996630196,
+            "seconds": 0.021370599999499973,
             "evidence_errors": [],
             "passed": true
           }
@@ -4255,7 +4255,7 @@
           "clean": true
         },
         "label": "unseen-classes",
-        "generation_seconds": 0.0030493000012938865,
+        "generation_seconds": 0.003322700002172496,
         "episode_id": "ep-ad84cf445a1efea2",
         "records": 190,
         "documents": 95,
@@ -4266,14 +4266,14 @@
           "production": {
             "f1": 1,
             "steps": 10,
-            "seconds": 0.002244099996460136,
+            "seconds": 0.0024081000010482967,
             "evidence_errors": [],
             "passed": true
           },
           "rational_public": {
             "f1": 1,
             "steps": 10,
-            "seconds": 0.004363599997304846,
+            "seconds": 0.004834500003198627,
             "evidence_errors": [],
             "passed": true
           }
@@ -4298,7 +4298,7 @@
           "clean": false
         },
         "label": "unseen-classes",
-        "generation_seconds": 0.015362300000560936,
+        "generation_seconds": 0.0167550999976811,
         "episode_id": "ep-a109d432ad839441",
         "records": 952,
         "documents": 473,
@@ -4309,14 +4309,14 @@
           "production": {
             "f1": 1.0,
             "steps": 33,
-            "seconds": 0.01019859999360051,
+            "seconds": 0.010959100000036415,
             "evidence_errors": [],
             "passed": true
           },
           "rational_public": {
             "f1": 1.0,
             "steps": 33,
-            "seconds": 0.018730000003415626,
+            "seconds": 0.020772399999259505,
             "evidence_errors": [],
             "passed": true
           }
@@ -4341,7 +4341,7 @@
           "clean": false
         },
         "label": "unseen-classes",
-        "generation_seconds": 0.0038373999996110797,
+        "generation_seconds": 0.004178900002443697,
         "episode_id": "ep-cceb3ffae30b1053",
         "records": 196,
         "documents": 95,
@@ -4352,14 +4352,14 @@
           "production": {
             "f1": 1.0,
             "steps": 10,
-            "seconds": 0.0022614999979850836,
+            "seconds": 0.0025377999991178513,
             "evidence_errors": [],
             "passed": true
           },
           "rational_public": {
             "f1": 1.0,
             "steps": 10,
-            "seconds": 0.004411400004755706,
+            "seconds": 0.0048064000002341345,
             "evidence_errors": [],
             "passed": true
           }
@@ -4384,7 +4384,7 @@
           "clean": false
         },
         "label": "unseen-classes",
-        "generation_seconds": 0.015118799994525034,
+        "generation_seconds": 0.01584589999401942,
         "episode_id": "ep-98f8b2790c2e37aa",
         "records": 952,
         "documents": 473,
@@ -4395,14 +4395,14 @@
           "production": {
             "f1": 1.0,
             "steps": 33,
-            "seconds": 0.01043039999785833,
+            "seconds": 0.010314400002243929,
             "evidence_errors": [],
             "passed": true
           },
           "rational_public": {
             "f1": 1.0,
             "steps": 33,
-            "seconds": 0.019052600000577513,
+            "seconds": 0.02158650000637863,
             "evidence_errors": [],
             "passed": true
           }
@@ -4427,7 +4427,7 @@
           "clean": false
         },
         "label": "unseen-classes",
-        "generation_seconds": 0.0037760999985039234,
+        "generation_seconds": 0.004188699997030199,
         "episode_id": "ep-a55aeb3260cee015",
         "records": 196,
         "documents": 95,
@@ -4438,14 +4438,14 @@
           "production": {
             "f1": 1.0,
             "steps": 10,
-            "seconds": 0.0022503000000142492,
+            "seconds": 0.0031256000002031215,
             "evidence_errors": [],
             "passed": true
           },
           "rational_public": {
             "f1": 1.0,
             "steps": 10,
-            "seconds": 0.004641899999114685,
+            "seconds": 0.004773599997861311,
             "evidence_errors": [],
             "passed": true
           }
@@ -4470,7 +4470,7 @@
           "clean": false
         },
         "label": "unseen-classes",
-        "generation_seconds": 0.01487230000202544,
+        "generation_seconds": 0.015775800005940255,
         "episode_id": "ep-6de43e4341e89f31",
         "records": 952,
         "documents": 473,
@@ -4481,14 +4481,14 @@
           "production": {
             "f1": 1.0,
             "steps": 33,
-            "seconds": 0.00964390000444837,
+            "seconds": 0.010303700000804383,
             "evidence_errors": [],
             "passed": true
           },
           "rational_public": {
             "f1": 1.0,
             "steps": 33,
-            "seconds": 0.018894900000304915,
+            "seconds": 0.02126019999559503,
             "evidence_errors": [],
             "passed": true
           }
@@ -4513,7 +4513,7 @@
           "clean": false
         },
         "label": "unseen-classes",
-        "generation_seconds": 0.003839299999526702,
+        "generation_seconds": 0.004101799997442868,
         "episode_id": "ep-317390e36c770e5e",
         "records": 196,
         "documents": 95,
@@ -4524,14 +4524,14 @@
           "production": {
             "f1": 1.0,
             "steps": 10,
-            "seconds": 0.0023702000034973025,
+            "seconds": 0.002288399999088142,
             "evidence_errors": [],
             "passed": true
           },
           "rational_public": {
             "f1": 1.0,
             "steps": 10,
-            "seconds": 0.004415699993842281,
+            "seconds": 0.0046689000009791926,
             "evidence_errors": [],
             "passed": true
           }
@@ -4556,7 +4556,7 @@
           "clean": false
         },
         "label": "unseen-classes",
-        "generation_seconds": 0.014789400003792252,
+        "generation_seconds": 0.015375000002677552,
         "episode_id": "ep-50a7286e261b2931",
         "records": 952,
         "documents": 473,
@@ -4567,14 +4567,14 @@
           "production": {
             "f1": 1.0,
             "steps": 33,
-            "seconds": 0.009964699995180126,
+            "seconds": 0.010914999998931307,
             "evidence_errors": [],
             "passed": true
           },
           "rational_public": {
             "f1": 1.0,
             "steps": 33,
-            "seconds": 0.01970630000141682,
+            "seconds": 0.02023660000122618,
             "evidence_errors": [],
             "passed": true
           }
@@ -4601,14 +4601,14 @@
           "production": {
             "f1": 1,
             "steps": 9,
-            "seconds": 0.002080099999147933,
+            "seconds": 0.0020667999997385778,
             "evidence_errors": [],
             "passed": true
           },
           "rational_public": {
             "f1": 1,
             "steps": 9,
-            "seconds": 0.004618999999365769,
+            "seconds": 0.004666799999540672,
             "evidence_errors": [],
             "passed": true
           }
@@ -4633,14 +4633,14 @@
           "production": {
             "f1": 1.0,
             "steps": 9,
-            "seconds": 0.0020508000015979633,
+            "seconds": 0.00213199999416247,
             "evidence_errors": [],
             "passed": true
           },
           "rational_public": {
             "f1": 1.0,
             "steps": 9,
-            "seconds": 0.0048064000002341345,
+            "seconds": 0.0047272000010707416,
             "evidence_errors": [],
             "passed": true
           }
@@ -4665,14 +4665,14 @@
           "production": {
             "f1": 1,
             "steps": 47,
-            "seconds": 0.01762130000133766,
+            "seconds": 0.018650500001967885,
             "evidence_errors": [],
             "passed": true
           },
           "rational_public": {
             "f1": 1,
             "steps": 47,
-            "seconds": 0.037848899999517016,
+            "seconds": 0.04111380000540521,
             "evidence_errors": [],
             "passed": true
           }
@@ -4697,14 +4697,14 @@
           "production": {
             "f1": 1.0,
             "steps": 47,
-            "seconds": 0.01727789999858942,
+            "seconds": 0.018263100006151944,
             "evidence_errors": [],
             "passed": true
           },
           "rational_public": {
             "f1": 1.0,
             "steps": 47,
-            "seconds": 0.03852729999925941,
+            "seconds": 0.04134329999942565,
             "evidence_errors": [],
             "passed": true
           }
@@ -4725,7 +4725,7 @@
           "interaction": 0
         },
         "label": "jury-data",
-        "generation_seconds": 0.0029415999961202033,
+        "generation_seconds": 0.003095600004598964,
         "episode_id": "ep-a2e41d8504ebaacd",
         "records": 190,
         "documents": 95,
@@ -4736,14 +4736,14 @@
           "production": {
             "f1": 1,
             "steps": 10,
-            "seconds": 0.002180600000428967,
+            "seconds": 0.0022339999995892867,
             "evidence_errors": [],
             "passed": true
           },
           "rational_public": {
             "f1": 1,
             "steps": 10,
-            "seconds": 0.004446099999768194,
+            "seconds": 0.004639099999621976,
             "evidence_errors": [],
             "passed": true
           }
@@ -4762,7 +4762,7 @@
           "interaction": 1
         },
         "label": "jury-data",
-        "generation_seconds": 0.005921699994360097,
+        "generation_seconds": 0.0058858999982476234,
         "episode_id": "ep-682117f6c9d0346d",
         "records": 398,
         "documents": 199,
@@ -4773,14 +4773,14 @@
           "production": {
             "f1": 1,
             "steps": 16,
-            "seconds": 0.004150599997956306,
+            "seconds": 0.004329299998062197,
             "evidence_errors": [],
             "passed": true
           },
           "rational_public": {
             "f1": 1,
             "steps": 16,
-            "seconds": 0.008305299998028204,
+            "seconds": 0.00859120000677649,
             "evidence_errors": [],
             "passed": true
           }
@@ -4799,7 +4799,7 @@
           "interaction": 2
         },
         "label": "jury-data",
-        "generation_seconds": 0.012411100004101172,
+        "generation_seconds": 0.012568400001327973,
         "episode_id": "ep-684b66c962fb7670",
         "records": 946,
         "documents": 473,
@@ -4810,14 +4810,14 @@
           "production": {
             "f1": 1,
             "steps": 32,
-            "seconds": 0.009495399994193576,
+            "seconds": 0.010416800003440585,
             "evidence_errors": [],
             "passed": true
           },
           "rational_public": {
             "f1": 1,
             "steps": 32,
-            "seconds": 0.018965000002935994,
+            "seconds": 0.0215671999976621,
             "evidence_errors": [],
             "passed": true
           }
@@ -4836,7 +4836,7 @@
           "interaction": 0
         },
         "label": "jury-data",
-        "generation_seconds": 0.0030335999981616624,
+        "generation_seconds": 0.003300600001239218,
         "episode_id": "ep-f9f42f2e70d78c6f",
         "records": 190,
         "documents": 95,
@@ -4847,14 +4847,14 @@
           "production": {
             "f1": 1,
             "steps": 10,
-            "seconds": 0.002135199996700976,
+            "seconds": 0.0023849999997764826,
             "evidence_errors": [],
             "passed": true
           },
           "rational_public": {
             "f1": 1,
             "steps": 10,
-            "seconds": 0.0043084999997518025,
+            "seconds": 0.004724799997347873,
             "evidence_errors": [],
             "passed": true
           }
@@ -4873,7 +4873,7 @@
           "interaction": 1
         },
         "label": "jury-data",
-        "generation_seconds": 0.005595099995844066,
+        "generation_seconds": 0.005937800000538118,
         "episode_id": "ep-da1618c69a4d39ec",
         "records": 398,
         "documents": 199,
@@ -4884,14 +4884,14 @@
           "production": {
             "f1": 1,
             "steps": 16,
-            "seconds": 0.004135100003622938,
+            "seconds": 0.004470500003662892,
             "evidence_errors": [],
             "passed": true
           },
           "rational_public": {
             "f1": 1,
             "steps": 16,
-            "seconds": 0.008341900000232272,
+            "seconds": 0.00905810000404017,
             "evidence_errors": [],
             "passed": true
           }
@@ -4915,7 +4915,7 @@
           "interaction": 2
         },
         "label": "jury-data",
-        "generation_seconds": 0.013201900001149625,
+        "generation_seconds": 0.014879100002872292,
         "episode_id": "ep-8573ad456c5893a6",
         "records": 948,
         "documents": 473,
@@ -4926,14 +4926,14 @@
           "production": {
             "f1": 1.0,
             "steps": 32,
-            "seconds": 0.009355599999253172,
+            "seconds": 0.010349600001063664,
             "evidence_errors": [],
             "passed": true
           },
           "rational_public": {
             "f1": 1.0,
             "steps": 32,
-            "seconds": 0.018432199998642318,
+            "seconds": 0.02043930000218097,
             "evidence_errors": [],
             "passed": true
           }
@@ -4957,7 +4957,7 @@
           "interaction": 1
         },
         "label": "jury-data",
-        "generation_seconds": 0.003233900002669543,
+        "generation_seconds": 0.0036043999934918247,
         "episode_id": "ep-08ac5ba7f1c54133",
         "records": 192,
         "documents": 95,
@@ -4968,14 +4968,14 @@
           "production": {
             "f1": 1.0,
             "steps": 10,
-            "seconds": 0.0022349999999278225,
+            "seconds": 0.002409000000625383,
             "evidence_errors": [],
             "passed": true
           },
           "rational_public": {
             "f1": 1.0,
             "steps": 10,
-            "seconds": 0.004250899997714441,
+            "seconds": 0.004723799997009337,
             "evidence_errors": [],
             "passed": true
           }
@@ -4999,7 +4999,7 @@
           "interaction": 2
         },
         "label": "jury-data",
-        "generation_seconds": 0.006034600002749357,
+        "generation_seconds": 0.006706400003167801,
         "episode_id": "ep-446369ba4a4b36a4",
         "records": 400,
         "documents": 199,
@@ -5010,14 +5010,14 @@
           "production": {
             "f1": 1.0,
             "steps": 16,
-            "seconds": 0.004168100000242703,
+            "seconds": 0.0044650999989244156,
             "evidence_errors": [],
             "passed": true
           },
           "rational_public": {
             "f1": 1.0,
             "steps": 16,
-            "seconds": 0.008295500003441703,
+            "seconds": 0.008989200003270525,
             "evidence_errors": [],
             "passed": true
           }
@@ -5041,7 +5041,7 @@
           "interaction": 1
         },
         "label": "jury-data",
-        "generation_seconds": 0.012655099999392405,
+        "generation_seconds": 0.013820500003930647,
         "episode_id": "ep-2b110e2abcf40fff",
         "records": 948,
         "documents": 473,
@@ -5052,14 +5052,14 @@
           "production": {
             "f1": 1.0,
             "steps": 32,
-            "seconds": 0.009909100001095794,
+            "seconds": 0.010473899994394742,
             "evidence_errors": [],
             "passed": true
           },
           "rational_public": {
             "f1": 1.0,
             "steps": 32,
-            "seconds": 0.02016370000637835,
+            "seconds": 0.020891200001642574,
             "evidence_errors": [],
             "passed": true
           }
@@ -5083,7 +5083,7 @@
           "interaction": 2
         },
         "label": "jury-data",
-        "generation_seconds": 0.0033390000025974587,
+        "generation_seconds": 0.0036832999976468273,
         "episode_id": "ep-0839ee744253dfc9",
         "records": 192,
         "documents": 95,
@@ -5094,14 +5094,14 @@
           "production": {
             "f1": 1.0,
             "steps": 10,
-            "seconds": 0.002153800000087358,
+            "seconds": 0.00244649999513058,
             "evidence_errors": [],
             "passed": true
           },
           "rational_public": {
             "f1": 1.0,
             "steps": 10,
-            "seconds": 0.004399199999170378,
+            "seconds": 0.004981699996278621,
             "evidence_errors": [],
             "passed": true
           }
@@ -5121,7 +5121,7 @@
           }
         },
         "label": "jury-data",
-        "generation_seconds": 0.005775999998149928,
+        "generation_seconds": 0.006681699996988755,
         "episode_id": "ep-85ca447c1426bf31",
         "records": 404,
         "documents": 199,
@@ -5132,14 +5132,14 @@
           "production": {
             "f1": 1.0,
             "steps": 17,
-            "seconds": 0.004331600001023617,
+            "seconds": 0.004740300006233156,
             "evidence_errors": [],
             "passed": true
           },
           "rational_public": {
             "f1": 1.0,
             "steps": 17,
-            "seconds": 0.00849970000126632,
+            "seconds": 0.009008900000480935,
             "evidence_errors": [],
             "passed": true
           }
@@ -5159,7 +5159,7 @@
           }
         },
         "label": "jury-data",
-        "generation_seconds": 0.013396100002864841,
+        "generation_seconds": 0.015062800004670862,
         "episode_id": "ep-36e1b21bde168576",
         "records": 946,
         "documents": 473,
@@ -5170,14 +5170,14 @@
           "production": {
             "f1": 1.0,
             "steps": 32,
-            "seconds": 0.010024000002886169,
+            "seconds": 0.010317500004020985,
             "evidence_errors": [],
             "passed": true
           },
           "rational_public": {
             "f1": 1.0,
             "steps": 32,
-            "seconds": 0.018946099997265264,
+            "seconds": 0.02021219999733148,
             "evidence_errors": [],
             "passed": true
           }
@@ -5197,7 +5197,7 @@
           }
         },
         "label": "jury-data",
-        "generation_seconds": 0.003282700003182981,
+        "generation_seconds": 0.0032124000063049607,
         "episode_id": "ep-d4414484821a4231",
         "records": 190,
         "documents": 95,
@@ -5208,14 +5208,14 @@
           "production": {
             "f1": 1.0,
             "steps": 10,
-            "seconds": 0.002167300001019612,
+            "seconds": 0.0023122999991755933,
             "evidence_errors": [],
             "passed": true
           },
           "rational_public": {
             "f1": 1.0,
             "steps": 10,
-            "seconds": 0.0044546000062837265,
+            "seconds": 0.004621899999619927,
             "evidence_errors": [],
             "passed": true
           }
@@ -5235,7 +5235,7 @@
           }
         },
         "label": "jury-data",
-        "generation_seconds": 0.005898299998079892,
+        "generation_seconds": 0.006117400000221096,
         "episode_id": "ep-2e800e1cba0e72a8",
         "records": 398,
         "documents": 199,
@@ -5246,14 +5246,14 @@
           "production": {
             "f1": 1.0,
             "steps": 16,
-            "seconds": 0.004201499999908265,
+            "seconds": 0.0044180000040796585,
             "evidence_errors": [],
             "passed": true
           },
           "rational_public": {
             "f1": 1.0,
             "steps": 16,
-            "seconds": 0.008697600002051331,
+            "seconds": 0.009045799997693393,
             "evidence_errors": [],
             "passed": true
           }
@@ -5271,7 +5271,7 @@
           "recognition_world": 1
         },
         "label": "jury-data",
-        "generation_seconds": 0.018149499999708496,
+        "generation_seconds": 0.019254899998486508,
         "episode_id": "ep-0a5ad76abac985ad",
         "records": 946,
         "documents": 473,
@@ -5282,14 +5282,14 @@
           "production": {
             "f1": 1.0,
             "steps": 32,
-            "seconds": 0.009630500004277565,
+            "seconds": 0.010306100004527252,
             "evidence_errors": [],
             "passed": true
           },
           "rational_public": {
             "f1": 1.0,
             "steps": 32,
-            "seconds": 0.019291000004159287,
+            "seconds": 0.020929999998770654,
             "evidence_errors": [],
             "passed": true
           }
@@ -5307,7 +5307,7 @@
           "recognition_world": 2
         },
         "label": "jury-data",
-        "generation_seconds": 0.003371700004208833,
+        "generation_seconds": 0.003695999999763444,
         "episode_id": "ep-72c36998c7aa3cc4",
         "records": 190,
         "documents": 95,
@@ -5318,14 +5318,14 @@
           "production": {
             "f1": 1.0,
             "steps": 10,
-            "seconds": 0.002206699995440431,
+            "seconds": 0.0023432000016327947,
             "evidence_errors": [],
             "passed": true
           },
           "rational_public": {
             "f1": 1.0,
             "steps": 10,
-            "seconds": 0.00450220000493573,
+            "seconds": 0.00455560000409605,
             "evidence_errors": [],
             "passed": true
           }
@@ -5343,7 +5343,7 @@
           "recognition_world": 1
         },
         "label": "jury-data",
-        "generation_seconds": 0.0060325000013108365,
+        "generation_seconds": 0.006381099999998696,
         "episode_id": "ep-a27551905cc3c9ff",
         "records": 398,
         "documents": 199,
@@ -5354,14 +5354,14 @@
           "production": {
             "f1": 1.0,
             "steps": 16,
-            "seconds": 0.004235000000335276,
+            "seconds": 0.004483199998503551,
             "evidence_errors": [],
             "passed": true
           },
           "rational_public": {
             "f1": 1.0,
             "steps": 16,
-            "seconds": 0.008622499997727573,
+            "seconds": 0.008772299996053334,
             "evidence_errors": [],
             "passed": true
           }
@@ -5379,7 +5379,7 @@
           "recognition_world": 2
         },
         "label": "jury-data",
-        "generation_seconds": 0.014392000004590955,
+        "generation_seconds": 0.01436190000094939,
         "episode_id": "ep-05122cc10b8107fc",
         "records": 946,
         "documents": 473,
@@ -5390,14 +5390,14 @@
           "production": {
             "f1": 1.0,
             "steps": 32,
-            "seconds": 0.010101900006702635,
+            "seconds": 0.01141990000178339,
             "evidence_errors": [],
             "passed": true
           },
           "rational_public": {
             "f1": 1.0,
             "steps": 32,
-            "seconds": 0.019331299998157192,
+            "seconds": 0.021034699995652772,
             "evidence_errors": [],
             "passed": true
           }
@@ -5421,7 +5421,7 @@
           "interaction": 0
         },
         "label": "jury-data",
-        "generation_seconds": 0.003537500000675209,
+        "generation_seconds": 0.003911899999366142,
         "episode_id": "ep-db047bf227a69e7f",
         "records": 192,
         "documents": 95,
@@ -5432,14 +5432,14 @@
           "production": {
             "f1": 1.0,
             "steps": 10,
-            "seconds": 0.002232000006188173,
+            "seconds": 0.002444699995976407,
             "evidence_errors": [],
             "passed": true
           },
           "rational_public": {
             "f1": 1.0,
             "steps": 10,
-            "seconds": 0.004494400003750343,
+            "seconds": 0.004816600005142391,
             "evidence_errors": [],
             "passed": true
           }
@@ -5463,7 +5463,7 @@
           "interaction": 1
         },
         "label": "jury-data",
-        "generation_seconds": 0.006313199999567587,
+        "generation_seconds": 0.007000999998126645,
         "episode_id": "ep-ffe8c8f12671feb7",
         "records": 400,
         "documents": 199,
@@ -5474,14 +5474,14 @@
           "production": {
             "f1": 1.0,
             "steps": 16,
-            "seconds": 0.00443029999587452,
+            "seconds": 0.004796900000656024,
             "evidence_errors": [],
             "passed": true
           },
           "rational_public": {
             "f1": 1.0,
             "steps": 16,
-            "seconds": 0.008377300000574905,
+            "seconds": 0.008834599997499026,
             "evidence_errors": [],
             "passed": true
           }
@@ -29226,6 +29226,6 @@
     "trajectories": true,
     "versioned configurations": true
   },
-  "seconds": 325.01316690000385,
+  "seconds": 443.78728160000173,
   "passed": true
 }
