@@ -1,0 +1,3700 @@
+{
+  "counts": {
+    "covering": 32,
+    "dense": 4,
+    "effective_supplements": 3,
+    "holdout": 24,
+    "jury_data": 20,
+    "total": 83
+  },
+  "covering": [
+    {
+      "algorithms": {
+        "production": {
+          "evidence_errors": [],
+          "f1": 1,
+          "passed": true,
+          "seconds": 0.0022800000006100163,
+          "steps": 10
+        },
+        "rational_public": {
+          "evidence_errors": [],
+          "f1": 1,
+          "passed": true,
+          "seconds": 0.00445919999765465,
+          "steps": 10
+        }
+      },
+      "config": {
+        "boundary_payments": false,
+        "clean": false,
+        "counts": {},
+        "interaction": 0,
+        "invoices": 40,
+        "period_month": "2000-01",
+        "shuffle": false,
+        "timezone": "-12:00"
+      },
+      "counts_pattern": "none",
+      "documents": 95,
+      "episode_id": "ep-56a8e93391263061",
+      "factor_indices": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "financial_errors": [],
+      "financial_valid": true,
+      "generation_seconds": 0.003477099999145139,
+      "issues": 0,
+      "label": "covering",
+      "passed": true,
+      "records": 190,
+      "seed": 153204419284041827017447619339500517645
+    },
+    {
+      "algorithms": {
+        "production": {
+          "evidence_errors": [],
+          "f1": 1,
+          "passed": true,
+          "seconds": 0.0022460999971372075,
+          "steps": 10
+        },
+        "rational_public": {
+          "evidence_errors": [],
+          "f1": 1,
+          "passed": true,
+          "seconds": 0.0045328999985940754,
+          "steps": 10
+        }
+      },
+      "config": {
+        "boundary_payments": true,
+        "clean": true,
+        "counts": {
+          "duplicate_invoice": 3
+        },
+        "interaction": 1,
+        "invoices": 40,
+        "period_month": "2028-02",
+        "shuffle": true,
+        "timezone": "+00:00"
+      },
+      "counts_pattern": "duplicate",
+      "documents": 95,
+      "episode_id": "ep-c56cb7219eac525e",
+      "factor_indices": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "financial_errors": [],
+      "financial_valid": true,
+      "generation_seconds": 0.0029912999998487066,
+      "issues": 0,
+      "label": "covering",
+      "passed": true,
+      "records": 190,
+      "seed": 121569654947898645724902158324537748888
+    },
+    {
+      "algorithms": {
+        "production": {
+          "evidence_errors": [],
+          "f1": 1,
+          "passed": true,
+          "seconds": 0.0022871999972267076,
+          "steps": 10
+        },
+        "rational_public": {
+          "evidence_errors": [],
+          "f1": 1,
+          "passed": true,
+          "seconds": 0.004719100001238985,
+          "steps": 10
+        }
+      },
+      "config": {
+        "boundary_payments": false,
+        "clean": true,
+        "counts": {
+          "payment_allocation": 3
+        },
+        "interaction": 2,
+        "invoices": 41,
+        "period_month": "2029-02",
+        "shuffle": false,
+        "timezone": "+05:45"
+      },
+      "counts_pattern": "allocation",
+      "documents": 98,
+      "episode_id": "ep-4b4d2a0ba613a1ad",
+      "factor_indices": [
+        1,
+        2,
+        2,
+        0,
+        0,
+        2,
+        2,
+        1
+      ],
+      "financial_errors": [],
+      "financial_valid": true,
+      "generation_seconds": 0.003105400002823444,
+      "issues": 0,
+      "label": "covering",
+      "passed": true,
+      "records": 196,
+      "seed": 47452109532553992552829083010338271067
+    },
+    {
+      "algorithms": {
+        "production": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.004537299999356037,
+          "steps": 16
+        },
+        "rational_public": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.008680699997057673,
+          "steps": 16
+        }
+      },
+      "config": {
+        "boundary_payments": true,
+        "clean": false,
+        "counts": {
+          "fx_conversion": 3
+        },
+        "interaction": 2,
+        "invoices": 84,
+        "period_month": "2099-12",
+        "shuffle": true,
+        "timezone": "+14:00"
+      },
+      "counts_pattern": "fx",
+      "documents": 199,
+      "episode_id": "ep-d503fb14f2e7e14b",
+      "factor_indices": [
+        2,
+        3,
+        3,
+        1,
+        1,
+        3,
+        2,
+        0
+      ],
+      "financial_errors": [],
+      "financial_valid": true,
+      "generation_seconds": 0.006132499998784624,
+      "issues": 3,
+      "label": "covering",
+      "passed": true,
+      "records": 398,
+      "seed": 1614381543458681725452871566197752746
+    },
+    {
+      "algorithms": {
+        "production": {
+          "evidence_errors": [],
+          "f1": 1,
+          "passed": true,
+          "seconds": 0.00947249999808264,
+          "steps": 32
+        },
+        "rational_public": {
+          "evidence_errors": [],
+          "f1": 1,
+          "passed": true,
+          "seconds": 0.018635600001289276,
+          "steps": 32
+        }
+      },
+      "config": {
+        "boundary_payments": true,
+        "clean": true,
+        "counts": {
+          "accounting_period": 3
+        },
+        "interaction": 0,
+        "invoices": 200,
+        "period_month": "2029-02",
+        "shuffle": true,
+        "timezone": "-12:00"
+      },
+      "counts_pattern": "period",
+      "documents": 473,
+      "episode_id": "ep-4de6a6464a8eaa9b",
+      "factor_indices": [
+        3,
+        0,
+        2,
+        1,
+        1,
+        4,
+        0,
+        1
+      ],
+      "financial_errors": [],
+      "financial_valid": true,
+      "generation_seconds": 0.012844799999584211,
+      "issues": 0,
+      "label": "covering",
+      "passed": true,
+      "records": 946,
+      "seed": 33520324197714231049352615325260443187
+    },
+    {
+      "algorithms": {
+        "production": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.009029100001498591,
+          "steps": 32
+        },
+        "rational_public": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.018529400000261376,
+          "steps": 32
+        }
+      },
+      "config": {
+        "boundary_payments": false,
+        "clean": false,
+        "counts": {
+          "accounting_period": 1,
+          "duplicate_invoice": 1,
+          "fx_conversion": 1,
+          "payment_allocation": 1
+        },
+        "interaction": 1,
+        "invoices": 200,
+        "period_month": "2099-12",
+        "shuffle": false,
+        "timezone": "+00:00"
+      },
+      "counts_pattern": "one_each",
+      "documents": 473,
+      "episode_id": "ep-2a31392387cf1dea",
+      "factor_indices": [
+        3,
+        1,
+        3,
+        0,
+        0,
+        5,
+        1,
+        0
+      ],
+      "financial_errors": [],
+      "financial_valid": true,
+      "generation_seconds": 0.01253260000157752,
+      "issues": 4,
+      "label": "covering",
+      "passed": true,
+      "records": 948,
+      "seed": 122221553685056627784161682378496146257
+    },
+    {
+      "algorithms": {
+        "production": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.002330300001631258,
+          "steps": 11
+        },
+        "rational_public": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.004567500000121072,
+          "steps": 11
+        }
+      },
+      "config": {
+        "boundary_payments": true,
+        "clean": false,
+        "counts": {
+          "accounting_period": 3,
+          "duplicate_invoice": 3,
+          "fx_conversion": 3,
+          "payment_allocation": 3
+        },
+        "interaction": 1,
+        "invoices": 41,
+        "period_month": "2000-01",
+        "shuffle": true,
+        "timezone": "+05:45"
+      },
+      "counts_pattern": "three_each",
+      "documents": 98,
+      "episode_id": "ep-279d3ff265129efa",
+      "factor_indices": [
+        1,
+        2,
+        0,
+        1,
+        1,
+        6,
+        1,
+        0
+      ],
+      "financial_errors": [],
+      "financial_valid": true,
+      "generation_seconds": 0.003947699999116594,
+      "issues": 12,
+      "label": "covering",
+      "passed": true,
+      "records": 202,
+      "seed": 294981558982148008909620903756028117274
+    },
+    {
+      "algorithms": {
+        "production": {
+          "evidence_errors": [],
+          "f1": 1,
+          "passed": true,
+          "seconds": 0.004492400003073271,
+          "steps": 16
+        },
+        "rational_public": {
+          "evidence_errors": [],
+          "f1": 1,
+          "passed": true,
+          "seconds": 0.00866659999883268,
+          "steps": 16
+        }
+      },
+      "config": {
+        "boundary_payments": false,
+        "clean": true,
+        "counts": {
+          "accounting_period": 3,
+          "duplicate_invoice": 3,
+          "fx_conversion": 3,
+          "payment_allocation": 3
+        },
+        "interaction": 0,
+        "invoices": 84,
+        "period_month": "2028-02",
+        "shuffle": false,
+        "timezone": "+14:00"
+      },
+      "counts_pattern": "three_each",
+      "documents": 199,
+      "episode_id": "ep-56d887e17ec64e98",
+      "factor_indices": [
+        2,
+        3,
+        1,
+        0,
+        0,
+        6,
+        0,
+        1
+      ],
+      "financial_errors": [],
+      "financial_valid": true,
+      "generation_seconds": 0.006143899998278357,
+      "issues": 0,
+      "label": "covering",
+      "passed": true,
+      "records": 398,
+      "seed": 216857614084547552567275567025377217650
+    },
+    {
+      "algorithms": {
+        "production": {
+          "evidence_errors": [],
+          "f1": 1,
+          "passed": true,
+          "seconds": 0.0021842000023752917,
+          "steps": 10
+        },
+        "rational_public": {
+          "evidence_errors": [],
+          "f1": 1,
+          "passed": true,
+          "seconds": 0.005444599999464117,
+          "steps": 10
+        }
+      },
+      "config": {
+        "boundary_payments": false,
+        "clean": true,
+        "counts": {
+          "accounting_period": 1,
+          "duplicate_invoice": 1,
+          "fx_conversion": 3,
+          "payment_allocation": 2
+        },
+        "interaction": 0,
+        "invoices": 40,
+        "period_month": "2099-12",
+        "shuffle": true,
+        "timezone": "+05:45"
+      },
+      "counts_pattern": "asymmetric",
+      "documents": 95,
+      "episode_id": "ep-cdc3c3043a245c85",
+      "factor_indices": [
+        0,
+        2,
+        3,
+        0,
+        1,
+        7,
+        0,
+        1
+      ],
+      "financial_errors": [],
+      "financial_valid": true,
+      "generation_seconds": 0.003144800000882242,
+      "issues": 0,
+      "label": "covering",
+      "passed": true,
+      "records": 190,
+      "seed": 83005768887559334417007708700514491673
+    },
+    {
+      "algorithms": {
+        "production": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.002245800002128817,
+          "steps": 10
+        },
+        "rational_public": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.004481100000703009,
+          "steps": 10
+        }
+      },
+      "config": {
+        "boundary_payments": true,
+        "clean": false,
+        "counts": {
+          "accounting_period": 1,
+          "duplicate_invoice": 1,
+          "fx_conversion": 3,
+          "payment_allocation": 2
+        },
+        "interaction": 2,
+        "invoices": 41,
+        "period_month": "2028-02",
+        "shuffle": false,
+        "timezone": "-12:00"
+      },
+      "counts_pattern": "asymmetric",
+      "documents": 98,
+      "episode_id": "ep-7f79be5b189a1139",
+      "factor_indices": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        7,
+        2,
+        0
+      ],
+      "financial_errors": [],
+      "financial_valid": true,
+      "generation_seconds": 0.0034439000010024756,
+      "issues": 7,
+      "label": "covering",
+      "passed": true,
+      "records": 198,
+      "seed": 336056994111624521120689294624340499034
+    },
+    {
+      "algorithms": {
+        "production": {
+          "evidence_errors": [],
+          "f1": 1,
+          "passed": true,
+          "seconds": 0.0021514999971259385,
+          "steps": 10
+        },
+        "rational_public": {
+          "evidence_errors": [],
+          "f1": 1,
+          "passed": true,
+          "seconds": 0.004280900000594556,
+          "steps": 10
+        }
+      },
+      "config": {
+        "boundary_payments": true,
+        "clean": true,
+        "counts": {
+          "accounting_period": 1,
+          "duplicate_invoice": 1,
+          "fx_conversion": 1,
+          "payment_allocation": 1
+        },
+        "interaction": 2,
+        "invoices": 40,
+        "period_month": "2000-01",
+        "shuffle": true,
+        "timezone": "+14:00"
+      },
+      "counts_pattern": "one_each",
+      "documents": 95,
+      "episode_id": "ep-f0b84177212bdb69",
+      "factor_indices": [
+        0,
+        3,
+        0,
+        1,
+        1,
+        5,
+        2,
+        1
+      ],
+      "financial_errors": [],
+      "financial_valid": true,
+      "generation_seconds": 0.0030055999995965976,
+      "issues": 0,
+      "label": "covering",
+      "passed": true,
+      "records": 190,
+      "seed": 130942239777611322852823378084189331320
+    },
+    {
+      "algorithms": {
+        "production": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.004269699998985743,
+          "steps": 17
+        },
+        "rational_public": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.008524500000930857,
+          "steps": 17
+        }
+      },
+      "config": {
+        "boundary_payments": false,
+        "clean": false,
+        "counts": {
+          "duplicate_invoice": 3
+        },
+        "interaction": 1,
+        "invoices": 84,
+        "period_month": "2029-02",
+        "shuffle": false,
+        "timezone": "-12:00"
+      },
+      "counts_pattern": "duplicate",
+      "documents": 199,
+      "episode_id": "ep-773977e4fe2ae0cd",
+      "factor_indices": [
+        2,
+        0,
+        2,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "financial_errors": [],
+      "financial_valid": true,
+      "generation_seconds": 0.005740900000091642,
+      "issues": 3,
+      "label": "covering",
+      "passed": true,
+      "records": 404,
+      "seed": 51038389521022365906694370245753899000
+    },
+    {
+      "algorithms": {
+        "production": {
+          "evidence_errors": [],
+          "f1": 1,
+          "passed": true,
+          "seconds": 0.0022265000006882474,
+          "steps": 10
+        },
+        "rational_public": {
+          "evidence_errors": [],
+          "f1": 1,
+          "passed": true,
+          "seconds": 0.004507600002398249,
+          "steps": 10
+        }
+      },
+      "config": {
+        "boundary_payments": false,
+        "clean": true,
+        "counts": {
+          "fx_conversion": 3
+        },
+        "interaction": 0,
+        "invoices": 41,
+        "period_month": "2000-01",
+        "shuffle": false,
+        "timezone": "+00:00"
+      },
+      "counts_pattern": "fx",
+      "documents": 98,
+      "episode_id": "ep-9be72f43979c2240",
+      "factor_indices": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        3,
+        0,
+        1
+      ],
+      "financial_errors": [],
+      "financial_valid": true,
+      "generation_seconds": 0.002965200001199264,
+      "issues": 0,
+      "label": "covering",
+      "passed": true,
+      "records": 196,
+      "seed": 215377673189504176131362045933397278498
+    },
+    {
+      "algorithms": {
+        "production": {
+          "evidence_errors": [],
+          "f1": 1,
+          "passed": true,
+          "seconds": 0.010405799999716692,
+          "steps": 32
+        },
+        "rational_public": {
+          "evidence_errors": [],
+          "f1": 1,
+          "passed": true,
+          "seconds": 0.020089900001039496,
+          "steps": 32
+        }
+      },
+      "config": {
+        "boundary_payments": true,
+        "clean": true,
+        "counts": {},
+        "interaction": 2,
+        "invoices": 200,
+        "period_month": "2028-02",
+        "shuffle": true,
+        "timezone": "+05:45"
+      },
+      "counts_pattern": "none",
+      "documents": 473,
+      "episode_id": "ep-44ef97d460668405",
+      "factor_indices": [
+        3,
+        2,
+        1,
+        1,
+        1,
+        0,
+        2,
+        1
+      ],
+      "financial_errors": [],
+      "financial_valid": true,
+      "generation_seconds": 0.012916700001369463,
+      "issues": 0,
+      "label": "covering",
+      "passed": true,
+      "records": 946,
+      "seed": 75217528866096408666881610605215872184
+    },
+    {
+      "algorithms": {
+        "production": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.002331100000446895,
+          "steps": 10
+        },
+        "rational_public": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.004620499999873573,
+          "steps": 10
+        }
+      },
+      "config": {
+        "boundary_payments": false,
+        "clean": false,
+        "counts": {
+          "accounting_period": 3
+        },
+        "interaction": 1,
+        "invoices": 41,
+        "period_month": "2099-12",
+        "shuffle": false,
+        "timezone": "+14:00"
+      },
+      "counts_pattern": "period",
+      "documents": 98,
+      "episode_id": "ep-1fcce82243908646",
+      "factor_indices": [
+        1,
+        3,
+        3,
+        0,
+        0,
+        4,
+        1,
+        0
+      ],
+      "financial_errors": [],
+      "financial_valid": true,
+      "generation_seconds": 0.0033462999999755993,
+      "issues": 3,
+      "label": "covering",
+      "passed": true,
+      "records": 196,
+      "seed": 122542983644646191753042444231025454691
+    },
+    {
+      "algorithms": {
+        "production": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.004269100001693005,
+          "steps": 16
+        },
+        "rational_public": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.008437000000412809,
+          "steps": 16
+        }
+      },
+      "config": {
+        "boundary_payments": true,
+        "clean": false,
+        "counts": {
+          "payment_allocation": 3
+        },
+        "interaction": 0,
+        "invoices": 84,
+        "period_month": "2000-01",
+        "shuffle": true,
+        "timezone": "+00:00"
+      },
+      "counts_pattern": "allocation",
+      "documents": 199,
+      "episode_id": "ep-6515228fbea2beb1",
+      "factor_indices": [
+        2,
+        1,
+        0,
+        1,
+        1,
+        2,
+        0,
+        0
+      ],
+      "financial_errors": [],
+      "financial_valid": true,
+      "generation_seconds": 0.006001300000207266,
+      "issues": 3,
+      "label": "covering",
+      "passed": true,
+      "records": 398,
+      "seed": 124964049923819109346548671954116459507
+    },
+    {
+      "algorithms": {
+        "production": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.0023036000020510983,
+          "steps": 10
+        },
+        "rational_public": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.0042775000001711305,
+          "steps": 10
+        }
+      },
+      "config": {
+        "boundary_payments": false,
+        "clean": false,
+        "counts": {
+          "accounting_period": 3,
+          "duplicate_invoice": 3,
+          "fx_conversion": 3,
+          "payment_allocation": 3
+        },
+        "interaction": 2,
+        "invoices": 40,
+        "period_month": "2029-02",
+        "shuffle": false,
+        "timezone": "+00:00"
+      },
+      "counts_pattern": "three_each",
+      "documents": 95,
+      "episode_id": "ep-40f2f6dfbdc8bcb0",
+      "factor_indices": [
+        0,
+        1,
+        2,
+        0,
+        0,
+        6,
+        2,
+        0
+      ],
+      "financial_errors": [],
+      "financial_valid": true,
+      "generation_seconds": 0.003990500001236796,
+      "issues": 12,
+      "label": "covering",
+      "passed": true,
+      "records": 196,
+      "seed": 234795227827630702925536826829979193382
+    },
+    {
+      "algorithms": {
+        "production": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.010594100000162143,
+          "steps": 33
+        },
+        "rational_public": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.020284099999116734,
+          "steps": 33
+        }
+      },
+      "config": {
+        "boundary_payments": false,
+        "clean": false,
+        "counts": {
+          "duplicate_invoice": 3
+        },
+        "interaction": 0,
+        "invoices": 200,
+        "period_month": "2000-01",
+        "shuffle": false,
+        "timezone": "+14:00"
+      },
+      "counts_pattern": "duplicate",
+      "documents": 473,
+      "episode_id": "ep-1c7c09853f184d64",
+      "factor_indices": [
+        3,
+        3,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "financial_errors": [],
+      "financial_valid": true,
+      "generation_seconds": 0.01414420000219252,
+      "issues": 3,
+      "label": "covering",
+      "passed": true,
+      "records": 952,
+      "seed": 52466023809382257028393809698244661661
+    },
+    {
+      "algorithms": {
+        "production": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.0024251999966509175,
+          "steps": 10
+        },
+        "rational_public": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.004429699998581782,
+          "steps": 10
+        }
+      },
+      "config": {
+        "boundary_payments": false,
+        "clean": false,
+        "counts": {
+          "payment_allocation": 3
+        },
+        "interaction": 1,
+        "invoices": 40,
+        "period_month": "2099-12",
+        "shuffle": false,
+        "timezone": "-12:00"
+      },
+      "counts_pattern": "allocation",
+      "documents": 95,
+      "episode_id": "ep-6a4c6619d652a3f8",
+      "factor_indices": [
+        0,
+        0,
+        3,
+        0,
+        0,
+        2,
+        1,
+        0
+      ],
+      "financial_errors": [],
+      "financial_valid": true,
+      "generation_seconds": 0.003188300001056632,
+      "issues": 3,
+      "label": "covering",
+      "passed": true,
+      "records": 190,
+      "seed": 186505894809310053662180411168852583684
+    },
+    {
+      "algorithms": {
+        "production": {
+          "evidence_errors": [],
+          "f1": 1,
+          "passed": true,
+          "seconds": 0.0022008000014466234,
+          "steps": 10
+        },
+        "rational_public": {
+          "evidence_errors": [],
+          "f1": 1,
+          "passed": true,
+          "seconds": 0.004669199999625562,
+          "steps": 10
+        }
+      },
+      "config": {
+        "boundary_payments": false,
+        "clean": false,
+        "counts": {},
+        "interaction": 1,
+        "invoices": 41,
+        "period_month": "2029-02",
+        "shuffle": false,
+        "timezone": "+14:00"
+      },
+      "counts_pattern": "none",
+      "documents": 98,
+      "episode_id": "ep-58b29271763e761b",
+      "factor_indices": [
+        1,
+        3,
+        2,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "financial_errors": [],
+      "financial_valid": true,
+      "generation_seconds": 0.003114799998002127,
+      "issues": 0,
+      "label": "covering",
+      "passed": true,
+      "records": 196,
+      "seed": 73759948569478354139184385183127403715
+    },
+    {
+      "algorithms": {
+        "production": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.00475670000014361,
+          "steps": 16
+        },
+        "rational_public": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.00832290000107605,
+          "steps": 16
+        }
+      },
+      "config": {
+        "boundary_payments": false,
+        "clean": false,
+        "counts": {
+          "accounting_period": 3
+        },
+        "interaction": 2,
+        "invoices": 84,
+        "period_month": "2000-01",
+        "shuffle": false,
+        "timezone": "+05:45"
+      },
+      "counts_pattern": "period",
+      "documents": 199,
+      "episode_id": "ep-f36ec268ec6e175c",
+      "factor_indices": [
+        2,
+        2,
+        0,
+        0,
+        0,
+        4,
+        2,
+        0
+      ],
+      "financial_errors": [],
+      "financial_valid": true,
+      "generation_seconds": 0.005920600000536069,
+      "issues": 3,
+      "label": "covering",
+      "passed": true,
+      "records": 398,
+      "seed": 164809799614520192572324678773417644945
+    },
+    {
+      "algorithms": {
+        "production": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.0022026999977242667,
+          "steps": 10
+        },
+        "rational_public": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.004389699999592267,
+          "steps": 10
+        }
+      },
+      "config": {
+        "boundary_payments": false,
+        "clean": false,
+        "counts": {
+          "fx_conversion": 3
+        },
+        "interaction": 1,
+        "invoices": 40,
+        "period_month": "2028-02",
+        "shuffle": false,
+        "timezone": "-12:00"
+      },
+      "counts_pattern": "fx",
+      "documents": 95,
+      "episode_id": "ep-2b4a0b2b6ce4b940",
+      "factor_indices": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        3,
+        1,
+        0
+      ],
+      "financial_errors": [],
+      "financial_valid": true,
+      "generation_seconds": 0.0032945999992080033,
+      "issues": 3,
+      "label": "covering",
+      "passed": true,
+      "records": 190,
+      "seed": 47201650418603312418051438598403263333
+    },
+    {
+      "algorithms": {
+        "production": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.002343300002394244,
+          "steps": 10
+        },
+        "rational_public": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.004482799999095732,
+          "steps": 10
+        }
+      },
+      "config": {
+        "boundary_payments": false,
+        "clean": false,
+        "counts": {
+          "accounting_period": 1,
+          "duplicate_invoice": 1,
+          "fx_conversion": 1,
+          "payment_allocation": 1
+        },
+        "interaction": 0,
+        "invoices": 41,
+        "period_month": "2028-02",
+        "shuffle": false,
+        "timezone": "-12:00"
+      },
+      "counts_pattern": "one_each",
+      "documents": 98,
+      "episode_id": "ep-31dad2a4208f297a",
+      "factor_indices": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        5,
+        0,
+        0
+      ],
+      "financial_errors": [],
+      "financial_valid": true,
+      "generation_seconds": 0.0032714000008127186,
+      "issues": 4,
+      "label": "covering",
+      "passed": true,
+      "records": 198,
+      "seed": 202838691575781429140227391520954111819
+    },
+    {
+      "algorithms": {
+        "production": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.0022951999999349937,
+          "steps": 11
+        },
+        "rational_public": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.004530199999862816,
+          "steps": 11
+        }
+      },
+      "config": {
+        "boundary_payments": false,
+        "clean": false,
+        "counts": {
+          "duplicate_invoice": 3
+        },
+        "interaction": 2,
+        "invoices": 41,
+        "period_month": "2099-12",
+        "shuffle": false,
+        "timezone": "+05:45"
+      },
+      "counts_pattern": "duplicate",
+      "documents": 98,
+      "episode_id": "ep-5c1af950c5e42b01",
+      "factor_indices": [
+        1,
+        2,
+        3,
+        0,
+        0,
+        1,
+        2,
+        0
+      ],
+      "financial_errors": [],
+      "financial_valid": true,
+      "generation_seconds": 0.003154400001221802,
+      "issues": 3,
+      "label": "covering",
+      "passed": true,
+      "records": 202,
+      "seed": 203684162141214797367737349783315938294
+    },
+    {
+      "algorithms": {
+        "production": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.004219299997203052,
+          "steps": 16
+        },
+        "rational_public": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.008348199997271877,
+          "steps": 16
+        }
+      },
+      "config": {
+        "boundary_payments": false,
+        "clean": false,
+        "counts": {
+          "accounting_period": 1,
+          "duplicate_invoice": 1,
+          "fx_conversion": 3,
+          "payment_allocation": 2
+        },
+        "interaction": 1,
+        "invoices": 84,
+        "period_month": "2000-01",
+        "shuffle": false,
+        "timezone": "+00:00"
+      },
+      "counts_pattern": "asymmetric",
+      "documents": 199,
+      "episode_id": "ep-9e6a950dd829ee5e",
+      "factor_indices": [
+        2,
+        1,
+        0,
+        0,
+        0,
+        7,
+        1,
+        0
+      ],
+      "financial_errors": [],
+      "financial_valid": true,
+      "generation_seconds": 0.006104600000981009,
+      "issues": 7,
+      "label": "covering",
+      "passed": true,
+      "records": 400,
+      "seed": 154726156694315622667866508473202167373
+    },
+    {
+      "algorithms": {
+        "production": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.002132599998731166,
+          "steps": 10
+        },
+        "rational_public": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.00429690000237315,
+          "steps": 10
+        }
+      },
+      "config": {
+        "boundary_payments": false,
+        "clean": false,
+        "counts": {
+          "accounting_period": 3
+        },
+        "interaction": 0,
+        "invoices": 40,
+        "period_month": "2028-02",
+        "shuffle": false,
+        "timezone": "+00:00"
+      },
+      "counts_pattern": "period",
+      "documents": 95,
+      "episode_id": "ep-19f202ecb9f9bbf0",
+      "factor_indices": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        4,
+        0,
+        0
+      ],
+      "financial_errors": [],
+      "financial_valid": true,
+      "generation_seconds": 0.0030757999993511476,
+      "issues": 3,
+      "label": "covering",
+      "passed": true,
+      "records": 190,
+      "seed": 175047530752499268743976648075224402586
+    },
+    {
+      "algorithms": {
+        "production": {
+          "evidence_errors": [],
+          "f1": 1,
+          "passed": true,
+          "seconds": 0.004147700001340127,
+          "steps": 16
+        },
+        "rational_public": {
+          "evidence_errors": [],
+          "f1": 1,
+          "passed": true,
+          "seconds": 0.008299299999634968,
+          "steps": 16
+        }
+      },
+      "config": {
+        "boundary_payments": false,
+        "clean": false,
+        "counts": {},
+        "interaction": 0,
+        "invoices": 84,
+        "period_month": "2099-12",
+        "shuffle": false,
+        "timezone": "+00:00"
+      },
+      "counts_pattern": "none",
+      "documents": 199,
+      "episode_id": "ep-46fac55d8ed9444d",
+      "factor_indices": [
+        2,
+        1,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "financial_errors": [],
+      "financial_valid": true,
+      "generation_seconds": 0.005337099999451311,
+      "issues": 0,
+      "label": "covering",
+      "passed": true,
+      "records": 398,
+      "seed": 220883199560902857253380867087132056094
+    },
+    {
+      "algorithms": {
+        "production": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.004304999998566927,
+          "steps": 16
+        },
+        "rational_public": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.008257299999968382,
+          "steps": 16
+        }
+      },
+      "config": {
+        "boundary_payments": false,
+        "clean": false,
+        "counts": {
+          "accounting_period": 1,
+          "duplicate_invoice": 1,
+          "fx_conversion": 1,
+          "payment_allocation": 1
+        },
+        "interaction": 0,
+        "invoices": 84,
+        "period_month": "2029-02",
+        "shuffle": false,
+        "timezone": "+05:45"
+      },
+      "counts_pattern": "one_each",
+      "documents": 199,
+      "episode_id": "ep-3e3853ae83c9efa6",
+      "factor_indices": [
+        2,
+        2,
+        2,
+        0,
+        0,
+        5,
+        0,
+        0
+      ],
+      "financial_errors": [],
+      "financial_valid": true,
+      "generation_seconds": 0.005768800001533236,
+      "issues": 4,
+      "label": "covering",
+      "passed": true,
+      "records": 400,
+      "seed": 93061344937996210177870114821972467620
+    },
+    {
+      "algorithms": {
+        "production": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.009870099998806836,
+          "steps": 33
+        },
+        "rational_public": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.0185380000002624,
+          "steps": 33
+        }
+      },
+      "config": {
+        "boundary_payments": false,
+        "clean": false,
+        "counts": {
+          "accounting_period": 3,
+          "duplicate_invoice": 3,
+          "fx_conversion": 3,
+          "payment_allocation": 3
+        },
+        "interaction": 0,
+        "invoices": 200,
+        "period_month": "2099-12",
+        "shuffle": false,
+        "timezone": "-12:00"
+      },
+      "counts_pattern": "three_each",
+      "documents": 473,
+      "episode_id": "ep-e390d34ce7fb5044",
+      "factor_indices": [
+        3,
+        0,
+        3,
+        0,
+        0,
+        6,
+        0,
+        0
+      ],
+      "financial_errors": [],
+      "financial_valid": true,
+      "generation_seconds": 0.014266099999076687,
+      "issues": 12,
+      "label": "covering",
+      "passed": true,
+      "records": 952,
+      "seed": 5882540154287316266979116997534260786
+    },
+    {
+      "algorithms": {
+        "production": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.009938099999999395,
+          "steps": 32
+        },
+        "rational_public": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.01878009999927599,
+          "steps": 32
+        }
+      },
+      "config": {
+        "boundary_payments": false,
+        "clean": false,
+        "counts": {
+          "fx_conversion": 3
+        },
+        "interaction": 0,
+        "invoices": 200,
+        "period_month": "2029-02",
+        "shuffle": false,
+        "timezone": "+05:45"
+      },
+      "counts_pattern": "fx",
+      "documents": 473,
+      "episode_id": "ep-1699239f28cd45db",
+      "factor_indices": [
+        3,
+        2,
+        2,
+        0,
+        0,
+        3,
+        0,
+        0
+      ],
+      "financial_errors": [],
+      "financial_valid": true,
+      "generation_seconds": 0.015364599999884376,
+      "issues": 3,
+      "label": "covering",
+      "passed": true,
+      "records": 946,
+      "seed": 37379158467562831679911273181372567501
+    },
+    {
+      "algorithms": {
+        "production": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.00967310000123689,
+          "steps": 32
+        },
+        "rational_public": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.019534099999873433,
+          "steps": 32
+        }
+      },
+      "config": {
+        "boundary_payments": false,
+        "clean": false,
+        "counts": {
+          "payment_allocation": 3
+        },
+        "interaction": 0,
+        "invoices": 200,
+        "period_month": "2028-02",
+        "shuffle": false,
+        "timezone": "+14:00"
+      },
+      "counts_pattern": "allocation",
+      "documents": 473,
+      "episode_id": "ep-3286638ef9482729",
+      "factor_indices": [
+        3,
+        3,
+        1,
+        0,
+        0,
+        2,
+        0,
+        0
+      ],
+      "financial_errors": [],
+      "financial_valid": true,
+      "generation_seconds": 0.013094400001136819,
+      "issues": 3,
+      "label": "covering",
+      "passed": true,
+      "records": 946,
+      "seed": 201086189085970199920886508643350829515
+    },
+    {
+      "algorithms": {
+        "production": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.009658999999373918,
+          "steps": 32
+        },
+        "rational_public": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.01920109999991837,
+          "steps": 32
+        }
+      },
+      "config": {
+        "boundary_payments": false,
+        "clean": false,
+        "counts": {
+          "accounting_period": 1,
+          "duplicate_invoice": 1,
+          "fx_conversion": 3,
+          "payment_allocation": 2
+        },
+        "interaction": 0,
+        "invoices": 200,
+        "period_month": "2029-02",
+        "shuffle": false,
+        "timezone": "+14:00"
+      },
+      "counts_pattern": "asymmetric",
+      "documents": 473,
+      "episode_id": "ep-1c87418247c24b64",
+      "factor_indices": [
+        3,
+        3,
+        2,
+        0,
+        0,
+        7,
+        0,
+        0
+      ],
+      "financial_errors": [],
+      "financial_valid": true,
+      "generation_seconds": 0.014219600001524668,
+      "issues": 7,
+      "label": "covering",
+      "passed": true,
+      "records": 948,
+      "seed": 65659470461880435987437262703221941531
+    }
+  ],
+  "dense": [
+    {
+      "algorithms": {
+        "production": {
+          "evidence_errors": [],
+          "f1": 1,
+          "passed": true,
+          "seconds": 0.002099199999065604,
+          "steps": 9
+        },
+        "rational_public": {
+          "evidence_errors": [],
+          "f1": 1,
+          "passed": true,
+          "seconds": 0.004571699999360135,
+          "steps": 9
+        }
+      },
+      "config": {
+        "batch_invoices": 10,
+        "cutoff": false
+      },
+      "documents": 20,
+      "episode_id": "batch-baad04feeb1d50a9",
+      "financial_errors": [],
+      "financial_valid": true,
+      "generation_seconds": null,
+      "issues": 0,
+      "label": "dense-batch",
+      "passed": true,
+      "records": 200,
+      "seed": 728149011644
+    },
+    {
+      "algorithms": {
+        "production": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.0019990999971923884,
+          "steps": 9
+        },
+        "rational_public": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.00460670000029495,
+          "steps": 9
+        }
+      },
+      "config": {
+        "batch_invoices": 10,
+        "cutoff": true
+      },
+      "documents": 20,
+      "episode_id": "batch-ec7a79302a483853",
+      "financial_errors": [],
+      "financial_valid": true,
+      "generation_seconds": null,
+      "issues": 1,
+      "label": "dense-batch",
+      "passed": true,
+      "records": 200,
+      "seed": 728149011645
+    },
+    {
+      "algorithms": {
+        "production": {
+          "evidence_errors": [],
+          "f1": 1,
+          "passed": true,
+          "seconds": 0.01835679999931017,
+          "steps": 47
+        },
+        "rational_public": {
+          "evidence_errors": [],
+          "f1": 1,
+          "passed": true,
+          "seconds": 0.03987729999789735,
+          "steps": 47
+        }
+      },
+      "config": {
+        "batch_invoices": 100,
+        "cutoff": false
+      },
+      "documents": 200,
+      "episode_id": "batch-523545e4b1b4868e",
+      "financial_errors": [],
+      "financial_valid": true,
+      "generation_seconds": null,
+      "issues": 0,
+      "label": "dense-batch",
+      "passed": true,
+      "records": 2000,
+      "seed": 728149011734
+    },
+    {
+      "algorithms": {
+        "production": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.02012999999715248,
+          "steps": 47
+        },
+        "rational_public": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.04113869999855524,
+          "steps": 47
+        }
+      },
+      "config": {
+        "batch_invoices": 100,
+        "cutoff": true
+      },
+      "documents": 200,
+      "episode_id": "batch-d43b373e8a413762",
+      "financial_errors": [],
+      "financial_valid": true,
+      "generation_seconds": null,
+      "issues": 1,
+      "label": "dense-batch",
+      "passed": true,
+      "records": 2000,
+      "seed": 728149011735
+    }
+  ],
+  "effective_counts_interaction": {
+    "after": 24,
+    "before": 21,
+    "missing_before": [
+      [
+        "allocation",
+        2
+      ],
+      [
+        "none",
+        2
+      ],
+      [
+        "one_each",
+        2
+      ]
+    ],
+    "required": 24
+  },
+  "effective_supplements": [
+    {
+      "algorithms": {
+        "production": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.002204599997639889,
+          "steps": 10
+        },
+        "rational_public": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.004506500001298264,
+          "steps": 10
+        }
+      },
+      "config": {
+        "boundary_payments": false,
+        "clean": false,
+        "counts": {
+          "payment_allocation": 3
+        },
+        "interaction": 2,
+        "invoices": 40,
+        "period_month": "2000-01",
+        "shuffle": false,
+        "timezone": "-12:00"
+      },
+      "counts_pattern": "allocation",
+      "documents": 95,
+      "episode_id": "ep-abbf05e05f36abfc",
+      "financial_errors": [],
+      "financial_valid": true,
+      "generation_seconds": 0.003150900000036927,
+      "issues": 3,
+      "label": "effective-supplement",
+      "passed": true,
+      "records": 190,
+      "seed": 79620511122102919920566306465001217794
+    },
+    {
+      "algorithms": {
+        "production": {
+          "evidence_errors": [],
+          "f1": 1,
+          "passed": true,
+          "seconds": 0.0021952999995846767,
+          "steps": 10
+        },
+        "rational_public": {
+          "evidence_errors": [],
+          "f1": 1,
+          "passed": true,
+          "seconds": 0.004405200001201592,
+          "steps": 10
+        }
+      },
+      "config": {
+        "boundary_payments": false,
+        "clean": false,
+        "counts": {},
+        "interaction": 2,
+        "invoices": 40,
+        "period_month": "2000-01",
+        "shuffle": false,
+        "timezone": "-12:00"
+      },
+      "counts_pattern": "none",
+      "documents": 95,
+      "episode_id": "ep-a12bc6c21bdc9cc8",
+      "financial_errors": [],
+      "financial_valid": true,
+      "generation_seconds": 0.002968900000269059,
+      "issues": 0,
+      "label": "effective-supplement",
+      "passed": true,
+      "records": 190,
+      "seed": 168849900301000785762509018109541813510
+    },
+    {
+      "algorithms": {
+        "production": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.002273300000524614,
+          "steps": 10
+        },
+        "rational_public": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.00447810000332538,
+          "steps": 10
+        }
+      },
+      "config": {
+        "boundary_payments": false,
+        "clean": false,
+        "counts": {
+          "accounting_period": 1,
+          "duplicate_invoice": 1,
+          "fx_conversion": 1,
+          "payment_allocation": 1
+        },
+        "interaction": 2,
+        "invoices": 40,
+        "period_month": "2000-01",
+        "shuffle": false,
+        "timezone": "-12:00"
+      },
+      "counts_pattern": "one_each",
+      "documents": 95,
+      "episode_id": "ep-24744d84dd390ffd",
+      "financial_errors": [],
+      "financial_valid": true,
+      "generation_seconds": 0.003224100000807084,
+      "issues": 4,
+      "label": "effective-supplement",
+      "passed": true,
+      "records": 192,
+      "seed": 326469946953171933095799025733639681441
+    }
+  ],
+  "factors": {
+    "boundary_payments": [
+      false,
+      true
+    ],
+    "clean": [
+      false,
+      true
+    ],
+    "counts_pattern": [
+      "none",
+      "duplicate",
+      "allocation",
+      "fx",
+      "period",
+      "one_each",
+      "three_each",
+      "asymmetric"
+    ],
+    "interaction": [
+      0,
+      1,
+      2
+    ],
+    "invoices": [
+      40,
+      41,
+      84,
+      200
+    ],
+    "period_month": [
+      "2000-01",
+      "2028-02",
+      "2029-02",
+      "2099-12"
+    ],
+    "shuffle": [
+      false,
+      true
+    ],
+    "timezone": [
+      "-12:00",
+      "+00:00",
+      "+05:45",
+      "+14:00"
+    ]
+  },
+  "failures": [],
+  "holdout": [
+    {
+      "algorithms": {
+        "production": {
+          "evidence_errors": [],
+          "f1": 1,
+          "passed": true,
+          "seconds": 0.0021923999993305188,
+          "steps": 10
+        },
+        "rational_public": {
+          "evidence_errors": [],
+          "f1": 1,
+          "passed": true,
+          "seconds": 0.00452450000011595,
+          "steps": 10
+        }
+      },
+      "config": {
+        "boundary_payments": true,
+        "invoices": 40,
+        "period_month": "2000-02",
+        "recognition_world": 0,
+        "shuffle": false,
+        "timezone": "-00:30"
+      },
+      "documents": 95,
+      "episode_id": "ep-d2460b96d6c615d9",
+      "financial_errors": [],
+      "financial_valid": true,
+      "generation_seconds": 0.0037304999968910124,
+      "issues": 0,
+      "label": "unseen-classes",
+      "passed": true,
+      "records": 190,
+      "seed": 171523957905839993624690726192126219678
+    },
+    {
+      "algorithms": {
+        "production": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.009709000001748791,
+          "steps": 32
+        },
+        "rational_public": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.018684299997403286,
+          "steps": 32
+        }
+      },
+      "config": {
+        "boundary_payments": true,
+        "invoices": 200,
+        "period_month": "2099-01",
+        "recognition_world": 1,
+        "shuffle": true,
+        "timezone": "+13:45"
+      },
+      "documents": 473,
+      "episode_id": "ep-5add622300a8b596",
+      "financial_errors": [],
+      "financial_valid": true,
+      "generation_seconds": 0.013961099997686688,
+      "issues": 2,
+      "label": "unseen-classes",
+      "passed": true,
+      "records": 946,
+      "seed": 276013053297155824678893247344090042423
+    },
+    {
+      "algorithms": {
+        "production": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.0023295999999390915,
+          "steps": 10
+        },
+        "rational_public": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.004480600000533741,
+          "steps": 10
+        }
+      },
+      "config": {
+        "boundary_payments": true,
+        "invoices": 40,
+        "period_month": "2000-02",
+        "recognition_world": 2,
+        "shuffle": false,
+        "timezone": "-09:30"
+      },
+      "documents": 95,
+      "episode_id": "ep-9a9a905ba9d2fb07",
+      "financial_errors": [],
+      "financial_valid": true,
+      "generation_seconds": 0.003298999999969965,
+      "issues": 2,
+      "label": "unseen-classes",
+      "passed": true,
+      "records": 190,
+      "seed": 178576759242442195222895478578951365874
+    },
+    {
+      "algorithms": {
+        "production": {
+          "evidence_errors": [],
+          "f1": 1,
+          "passed": true,
+          "seconds": 0.009759299999132054,
+          "steps": 32
+        },
+        "rational_public": {
+          "evidence_errors": [],
+          "f1": 1,
+          "passed": true,
+          "seconds": 0.023727200001303572,
+          "steps": 32
+        }
+      },
+      "config": {
+        "boundary_payments": true,
+        "invoices": 200,
+        "period_month": "2099-01",
+        "recognition_world": 3,
+        "shuffle": true,
+        "timezone": "-00:30"
+      },
+      "documents": 473,
+      "episode_id": "ep-582003e2c9f778b2",
+      "financial_errors": [],
+      "financial_valid": true,
+      "generation_seconds": 0.014241400000173599,
+      "issues": 0,
+      "label": "unseen-classes",
+      "passed": true,
+      "records": 946,
+      "seed": 26887784824865285307590953194724909575
+    },
+    {
+      "algorithms": {
+        "production": {
+          "evidence_errors": [],
+          "f1": 1,
+          "passed": true,
+          "seconds": 0.002159100000426406,
+          "steps": 10
+        },
+        "rational_public": {
+          "evidence_errors": [],
+          "f1": 1,
+          "passed": true,
+          "seconds": 0.004364699998404831,
+          "steps": 10
+        }
+      },
+      "config": {
+        "boundary_payments": true,
+        "invoices": 40,
+        "period_month": "2000-02",
+        "recognition_world": 0,
+        "shuffle": false,
+        "timezone": "+13:45"
+      },
+      "documents": 95,
+      "episode_id": "ep-43747a0612b92d5a",
+      "financial_errors": [],
+      "financial_valid": true,
+      "generation_seconds": 0.0031531999993603677,
+      "issues": 0,
+      "label": "unseen-classes",
+      "passed": true,
+      "records": 190,
+      "seed": 250223019001460586954108391177646939201
+    },
+    {
+      "algorithms": {
+        "production": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.009906900002533803,
+          "steps": 32
+        },
+        "rational_public": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.01908230000117328,
+          "steps": 32
+        }
+      },
+      "config": {
+        "boundary_payments": true,
+        "invoices": 200,
+        "period_month": "2099-01",
+        "recognition_world": 1,
+        "shuffle": true,
+        "timezone": "-09:30"
+      },
+      "documents": 473,
+      "episode_id": "ep-7f02c0731eae60f2",
+      "financial_errors": [],
+      "financial_valid": true,
+      "generation_seconds": 0.013830400002916576,
+      "issues": 2,
+      "label": "unseen-classes",
+      "passed": true,
+      "records": 946,
+      "seed": 284205147173539849480717032605893534883
+    },
+    {
+      "algorithms": {
+        "production": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.0021885999994992744,
+          "steps": 10
+        },
+        "rational_public": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.004362499999842839,
+          "steps": 10
+        }
+      },
+      "config": {
+        "boundary_payments": true,
+        "invoices": 40,
+        "period_month": "2000-02",
+        "recognition_world": 2,
+        "shuffle": false,
+        "timezone": "-00:30"
+      },
+      "documents": 95,
+      "episode_id": "ep-7007065127bccc07",
+      "financial_errors": [],
+      "financial_valid": true,
+      "generation_seconds": 0.0033438999998907093,
+      "issues": 2,
+      "label": "unseen-classes",
+      "passed": true,
+      "records": 190,
+      "seed": 328273660352857107796002493072310855742
+    },
+    {
+      "algorithms": {
+        "production": {
+          "evidence_errors": [],
+          "f1": 1,
+          "passed": true,
+          "seconds": 0.010100600000441773,
+          "steps": 32
+        },
+        "rational_public": {
+          "evidence_errors": [],
+          "f1": 1,
+          "passed": true,
+          "seconds": 0.019523799997841706,
+          "steps": 32
+        }
+      },
+      "config": {
+        "boundary_payments": true,
+        "invoices": 200,
+        "period_month": "2099-01",
+        "recognition_world": 3,
+        "shuffle": true,
+        "timezone": "+13:45"
+      },
+      "documents": 473,
+      "episode_id": "ep-c062b45d14537496",
+      "financial_errors": [],
+      "financial_valid": true,
+      "generation_seconds": 0.013451899998472072,
+      "issues": 0,
+      "label": "unseen-classes",
+      "passed": true,
+      "records": 946,
+      "seed": 422981777725082060280642651038934342
+    },
+    {
+      "algorithms": {
+        "production": {
+          "evidence_errors": [],
+          "f1": 1,
+          "passed": true,
+          "seconds": 0.0022466000009444542,
+          "steps": 10
+        },
+        "rational_public": {
+          "evidence_errors": [],
+          "f1": 1,
+          "passed": true,
+          "seconds": 0.00447849999909522,
+          "steps": 10
+        }
+      },
+      "config": {
+        "boundary_payments": true,
+        "invoices": 40,
+        "period_month": "2000-02",
+        "recognition_world": 0,
+        "shuffle": false,
+        "timezone": "-09:30"
+      },
+      "documents": 95,
+      "episode_id": "ep-cd13ca5be60d845f",
+      "financial_errors": [],
+      "financial_valid": true,
+      "generation_seconds": 0.003200499999366002,
+      "issues": 0,
+      "label": "unseen-classes",
+      "passed": true,
+      "records": 190,
+      "seed": 38294469098844958752723997733273968704
+    },
+    {
+      "algorithms": {
+        "production": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.009601800000382354,
+          "steps": 32
+        },
+        "rational_public": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.019337499998073326,
+          "steps": 32
+        }
+      },
+      "config": {
+        "boundary_payments": true,
+        "invoices": 200,
+        "period_month": "2099-01",
+        "recognition_world": 1,
+        "shuffle": true,
+        "timezone": "-00:30"
+      },
+      "documents": 473,
+      "episode_id": "ep-d3917551bcc14a1f",
+      "financial_errors": [],
+      "financial_valid": true,
+      "generation_seconds": 0.013658600000781007,
+      "issues": 2,
+      "label": "unseen-classes",
+      "passed": true,
+      "records": 946,
+      "seed": 168729143187338196695095203899309330424
+    },
+    {
+      "algorithms": {
+        "production": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.002292599998327205,
+          "steps": 10
+        },
+        "rational_public": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.004495699999097269,
+          "steps": 10
+        }
+      },
+      "config": {
+        "boundary_payments": true,
+        "invoices": 40,
+        "period_month": "2000-02",
+        "recognition_world": 2,
+        "shuffle": false,
+        "timezone": "+13:45"
+      },
+      "documents": 95,
+      "episode_id": "ep-0217092f3ed31179",
+      "financial_errors": [],
+      "financial_valid": true,
+      "generation_seconds": 0.003151199998683296,
+      "issues": 2,
+      "label": "unseen-classes",
+      "passed": true,
+      "records": 190,
+      "seed": 101486801602142605526959320145120076325
+    },
+    {
+      "algorithms": {
+        "production": {
+          "evidence_errors": [],
+          "f1": 1,
+          "passed": true,
+          "seconds": 0.00976259999879403,
+          "steps": 32
+        },
+        "rational_public": {
+          "evidence_errors": [],
+          "f1": 1,
+          "passed": true,
+          "seconds": 0.01923689999966882,
+          "steps": 32
+        }
+      },
+      "config": {
+        "boundary_payments": true,
+        "invoices": 200,
+        "period_month": "2099-01",
+        "recognition_world": 3,
+        "shuffle": true,
+        "timezone": "-09:30"
+      },
+      "documents": 473,
+      "episode_id": "ep-41f446510a057bde",
+      "financial_errors": [],
+      "financial_valid": true,
+      "generation_seconds": 0.013680399999429937,
+      "issues": 0,
+      "label": "unseen-classes",
+      "passed": true,
+      "records": 946,
+      "seed": 258900098801155109225994970679531627348
+    },
+    {
+      "algorithms": {
+        "production": {
+          "evidence_errors": [],
+          "f1": 1,
+          "passed": true,
+          "seconds": 0.0021385000000009313,
+          "steps": 10
+        },
+        "rational_public": {
+          "evidence_errors": [],
+          "f1": 1,
+          "passed": true,
+          "seconds": 0.004376599998067832,
+          "steps": 10
+        }
+      },
+      "config": {
+        "boundary_payments": true,
+        "invoices": 40,
+        "period_month": "2000-02",
+        "recognition_world": 0,
+        "shuffle": false,
+        "timezone": "-00:30"
+      },
+      "documents": 95,
+      "episode_id": "ep-09baa62a7cb262f7",
+      "financial_errors": [],
+      "financial_valid": true,
+      "generation_seconds": 0.0031339999986812472,
+      "issues": 0,
+      "label": "unseen-classes",
+      "passed": true,
+      "records": 190,
+      "seed": 319012509594247145129278454695289590829
+    },
+    {
+      "algorithms": {
+        "production": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.009991499999159714,
+          "steps": 32
+        },
+        "rational_public": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.019233499999245396,
+          "steps": 32
+        }
+      },
+      "config": {
+        "boundary_payments": true,
+        "invoices": 200,
+        "period_month": "2099-01",
+        "recognition_world": 1,
+        "shuffle": true,
+        "timezone": "+13:45"
+      },
+      "documents": 473,
+      "episode_id": "ep-a10ee4aebe7645b0",
+      "financial_errors": [],
+      "financial_valid": true,
+      "generation_seconds": 0.014297600002464605,
+      "issues": 2,
+      "label": "unseen-classes",
+      "passed": true,
+      "records": 946,
+      "seed": 14079594617733347882325112462750899821
+    },
+    {
+      "algorithms": {
+        "production": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.0021999999989930075,
+          "steps": 10
+        },
+        "rational_public": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.004826399999728892,
+          "steps": 10
+        }
+      },
+      "config": {
+        "boundary_payments": true,
+        "invoices": 40,
+        "period_month": "2000-02",
+        "recognition_world": 2,
+        "shuffle": false,
+        "timezone": "-09:30"
+      },
+      "documents": 95,
+      "episode_id": "ep-61b6bac09458bfb9",
+      "financial_errors": [],
+      "financial_valid": true,
+      "generation_seconds": 0.003179800001817057,
+      "issues": 2,
+      "label": "unseen-classes",
+      "passed": true,
+      "records": 190,
+      "seed": 107972611384507642137852378288073727733
+    },
+    {
+      "algorithms": {
+        "production": {
+          "evidence_errors": [],
+          "f1": 1,
+          "passed": true,
+          "seconds": 0.009718499997688923,
+          "steps": 32
+        },
+        "rational_public": {
+          "evidence_errors": [],
+          "f1": 1,
+          "passed": true,
+          "seconds": 0.01929780000136816,
+          "steps": 32
+        }
+      },
+      "config": {
+        "boundary_payments": true,
+        "invoices": 200,
+        "period_month": "2099-01",
+        "recognition_world": 3,
+        "shuffle": true,
+        "timezone": "-00:30"
+      },
+      "documents": 473,
+      "episode_id": "ep-19b9b8408322f016",
+      "financial_errors": [],
+      "financial_valid": true,
+      "generation_seconds": 0.016264300000329968,
+      "issues": 0,
+      "label": "unseen-classes",
+      "passed": true,
+      "records": 946,
+      "seed": 320154956134940834232307232549984462018
+    },
+    {
+      "algorithms": {
+        "production": {
+          "evidence_errors": [],
+          "f1": 1,
+          "passed": true,
+          "seconds": 0.002160200001526391,
+          "steps": 10
+        },
+        "rational_public": {
+          "evidence_errors": [],
+          "f1": 1,
+          "passed": true,
+          "seconds": 0.004393400002300041,
+          "steps": 10
+        }
+      },
+      "config": {
+        "boundary_payments": true,
+        "clean": true,
+        "counts": {
+          "accounting_period": 3,
+          "duplicate_invoice": 3,
+          "fx_conversion": 3,
+          "payment_allocation": 3
+        },
+        "interaction": 1,
+        "invoices": 40,
+        "period_month": "2000-02",
+        "shuffle": false,
+        "timezone": "+13:45"
+      },
+      "documents": 95,
+      "episode_id": "ep-859ebe04cc7bea7c",
+      "financial_errors": [],
+      "financial_valid": true,
+      "generation_seconds": 0.002891300002374919,
+      "issues": 0,
+      "label": "unseen-classes",
+      "passed": true,
+      "records": 190,
+      "seed": 328227692403015792451574239188658942510
+    },
+    {
+      "algorithms": {
+        "production": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.009918499999912456,
+          "steps": 33
+        },
+        "rational_public": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.019198099998902762,
+          "steps": 33
+        }
+      },
+      "config": {
+        "boundary_payments": true,
+        "clean": false,
+        "counts": {
+          "accounting_period": 3,
+          "duplicate_invoice": 3,
+          "fx_conversion": 3,
+          "payment_allocation": 3
+        },
+        "interaction": 2,
+        "invoices": 200,
+        "period_month": "2099-01",
+        "shuffle": true,
+        "timezone": "-09:30"
+      },
+      "documents": 473,
+      "episode_id": "ep-bef470f341992000",
+      "financial_errors": [],
+      "financial_valid": true,
+      "generation_seconds": 0.01483370000278228,
+      "issues": 12,
+      "label": "unseen-classes",
+      "passed": true,
+      "records": 952,
+      "seed": 110192913316984517328768385217112369125
+    },
+    {
+      "algorithms": {
+        "production": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.0022657000008621253,
+          "steps": 10
+        },
+        "rational_public": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.006911699998454424,
+          "steps": 10
+        }
+      },
+      "config": {
+        "boundary_payments": true,
+        "clean": false,
+        "counts": {
+          "accounting_period": 3,
+          "duplicate_invoice": 3,
+          "fx_conversion": 3,
+          "payment_allocation": 3
+        },
+        "interaction": 0,
+        "invoices": 40,
+        "period_month": "2000-02",
+        "shuffle": false,
+        "timezone": "-00:30"
+      },
+      "documents": 95,
+      "episode_id": "ep-b6462afc8e03aa45",
+      "financial_errors": [],
+      "financial_valid": true,
+      "generation_seconds": 0.0037069999998493586,
+      "issues": 12,
+      "label": "unseen-classes",
+      "passed": true,
+      "records": 196,
+      "seed": 284012686523153962971203863523851565341
+    },
+    {
+      "algorithms": {
+        "production": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.010224599998764461,
+          "steps": 33
+        },
+        "rational_public": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.019248399999924004,
+          "steps": 33
+        }
+      },
+      "config": {
+        "boundary_payments": true,
+        "clean": false,
+        "counts": {
+          "accounting_period": 3,
+          "duplicate_invoice": 3,
+          "fx_conversion": 3,
+          "payment_allocation": 3
+        },
+        "interaction": 1,
+        "invoices": 200,
+        "period_month": "2099-01",
+        "shuffle": true,
+        "timezone": "+13:45"
+      },
+      "documents": 473,
+      "episode_id": "ep-2cdcc488b29ff665",
+      "financial_errors": [],
+      "financial_valid": true,
+      "generation_seconds": 0.015205899999273242,
+      "issues": 12,
+      "label": "unseen-classes",
+      "passed": true,
+      "records": 952,
+      "seed": 264671893014485441000498016426459198038
+    },
+    {
+      "algorithms": {
+        "production": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.0023044000008667354,
+          "steps": 10
+        },
+        "rational_public": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.004477800001041032,
+          "steps": 10
+        }
+      },
+      "config": {
+        "boundary_payments": true,
+        "clean": false,
+        "counts": {
+          "accounting_period": 3,
+          "duplicate_invoice": 3,
+          "fx_conversion": 3,
+          "payment_allocation": 3
+        },
+        "interaction": 2,
+        "invoices": 40,
+        "period_month": "2000-02",
+        "shuffle": false,
+        "timezone": "-09:30"
+      },
+      "documents": 95,
+      "episode_id": "ep-b98367062a2d9293",
+      "financial_errors": [],
+      "financial_valid": true,
+      "generation_seconds": 0.0037184000029810704,
+      "issues": 12,
+      "label": "unseen-classes",
+      "passed": true,
+      "records": 196,
+      "seed": 237050482327044864110841328564144235439
+    },
+    {
+      "algorithms": {
+        "production": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.010045800001535099,
+          "steps": 33
+        },
+        "rational_public": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.01950349999970058,
+          "steps": 33
+        }
+      },
+      "config": {
+        "boundary_payments": true,
+        "clean": false,
+        "counts": {
+          "accounting_period": 3,
+          "duplicate_invoice": 3,
+          "fx_conversion": 3,
+          "payment_allocation": 3
+        },
+        "interaction": 0,
+        "invoices": 200,
+        "period_month": "2099-01",
+        "shuffle": true,
+        "timezone": "-00:30"
+      },
+      "documents": 473,
+      "episode_id": "ep-60b3af085b392cf3",
+      "financial_errors": [],
+      "financial_valid": true,
+      "generation_seconds": 0.014852100001007784,
+      "issues": 12,
+      "label": "unseen-classes",
+      "passed": true,
+      "records": 952,
+      "seed": 76896519578167262714173770998721620810
+    },
+    {
+      "algorithms": {
+        "production": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.002452900000207592,
+          "steps": 10
+        },
+        "rational_public": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.004677999997511506,
+          "steps": 10
+        }
+      },
+      "config": {
+        "boundary_payments": true,
+        "clean": false,
+        "counts": {
+          "accounting_period": 3,
+          "duplicate_invoice": 3,
+          "fx_conversion": 3,
+          "payment_allocation": 3
+        },
+        "interaction": 1,
+        "invoices": 40,
+        "period_month": "2000-02",
+        "shuffle": false,
+        "timezone": "+13:45"
+      },
+      "documents": 95,
+      "episode_id": "ep-a9829862527d312f",
+      "financial_errors": [],
+      "financial_valid": true,
+      "generation_seconds": 0.0038491000013891608,
+      "issues": 12,
+      "label": "unseen-classes",
+      "passed": true,
+      "records": 196,
+      "seed": 143084226882880255639643333695568259277
+    },
+    {
+      "algorithms": {
+        "production": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.010578600002190797,
+          "steps": 33
+        },
+        "rational_public": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.021740899999713292,
+          "steps": 33
+        }
+      },
+      "config": {
+        "boundary_payments": true,
+        "clean": false,
+        "counts": {
+          "accounting_period": 3,
+          "duplicate_invoice": 3,
+          "fx_conversion": 3,
+          "payment_allocation": 3
+        },
+        "interaction": 2,
+        "invoices": 200,
+        "period_month": "2099-01",
+        "shuffle": true,
+        "timezone": "-09:30"
+      },
+      "documents": 473,
+      "episode_id": "ep-c89b28bb09520ef2",
+      "financial_errors": [],
+      "financial_valid": true,
+      "generation_seconds": 0.015193800001725322,
+      "issues": 12,
+      "label": "unseen-classes",
+      "passed": true,
+      "records": 952,
+      "seed": 146693875436458451906473402053589446379
+    }
+  ],
+  "jury_data": [
+    {
+      "algorithms": {
+        "production": {
+          "evidence_errors": [],
+          "f1": 1,
+          "passed": true,
+          "seconds": 0.002514500003599096,
+          "steps": 10
+        },
+        "rational_public": {
+          "evidence_errors": [],
+          "f1": 1,
+          "passed": true,
+          "seconds": 0.004665699998440687,
+          "steps": 10
+        }
+      },
+      "config": {
+        "boundary_payments": true,
+        "clean": true,
+        "interaction": 0,
+        "invoices": 40,
+        "period_month": "2000-02",
+        "shuffle": false,
+        "timezone": "-12:00"
+      },
+      "documents": 95,
+      "episode_id": "ep-2bfa63bb62600a96",
+      "financial_errors": [],
+      "financial_valid": true,
+      "generation_seconds": 0.0030235999984142836,
+      "issues": 0,
+      "label": "jury-data",
+      "passed": true,
+      "records": 190,
+      "seed": 213215673694629100094795313334125828093
+    },
+    {
+      "algorithms": {
+        "production": {
+          "evidence_errors": [],
+          "f1": 1,
+          "passed": true,
+          "seconds": 0.004589100000885082,
+          "steps": 16
+        },
+        "rational_public": {
+          "evidence_errors": [],
+          "f1": 1,
+          "passed": true,
+          "seconds": 0.009717099997942569,
+          "steps": 16
+        }
+      },
+      "config": {
+        "boundary_payments": true,
+        "clean": true,
+        "interaction": 1,
+        "invoices": 84,
+        "period_month": "2099-12",
+        "shuffle": true,
+        "timezone": "+05:45"
+      },
+      "documents": 199,
+      "episode_id": "ep-43ba38d92e2d6e3f",
+      "financial_errors": [],
+      "financial_valid": true,
+      "generation_seconds": 0.006107299999712268,
+      "issues": 0,
+      "label": "jury-data",
+      "passed": true,
+      "records": 398,
+      "seed": 88921776215983253958478084882621274729
+    },
+    {
+      "algorithms": {
+        "production": {
+          "evidence_errors": [],
+          "f1": 1,
+          "passed": true,
+          "seconds": 0.013833799999702023,
+          "steps": 32
+        },
+        "rational_public": {
+          "evidence_errors": [],
+          "f1": 1,
+          "passed": true,
+          "seconds": 0.023220499999297317,
+          "steps": 32
+        }
+      },
+      "config": {
+        "boundary_payments": true,
+        "clean": true,
+        "interaction": 2,
+        "invoices": 200,
+        "period_month": "2029-02",
+        "shuffle": false,
+        "timezone": "+14:00"
+      },
+      "documents": 473,
+      "episode_id": "ep-282d2b4c34a07736",
+      "financial_errors": [],
+      "financial_valid": true,
+      "generation_seconds": 0.013923800001066411,
+      "issues": 0,
+      "label": "jury-data",
+      "passed": true,
+      "records": 946,
+      "seed": 317471486683813095202403158877903483812
+    },
+    {
+      "algorithms": {
+        "production": {
+          "evidence_errors": [],
+          "f1": 1,
+          "passed": true,
+          "seconds": 0.002636799999891082,
+          "steps": 10
+        },
+        "rational_public": {
+          "evidence_errors": [],
+          "f1": 1,
+          "passed": true,
+          "seconds": 0.005402800001320429,
+          "steps": 10
+        }
+      },
+      "config": {
+        "boundary_payments": true,
+        "clean": true,
+        "interaction": 0,
+        "invoices": 40,
+        "period_month": "2000-02",
+        "shuffle": true,
+        "timezone": "-12:00"
+      },
+      "documents": 95,
+      "episode_id": "ep-79e2f4158a0cbe7f",
+      "financial_errors": [],
+      "financial_valid": true,
+      "generation_seconds": 0.003515799999149749,
+      "issues": 0,
+      "label": "jury-data",
+      "passed": true,
+      "records": 190,
+      "seed": 88616791825377987156788152799487717630
+    },
+    {
+      "algorithms": {
+        "production": {
+          "evidence_errors": [],
+          "f1": 1,
+          "passed": true,
+          "seconds": 0.005016500002966495,
+          "steps": 16
+        },
+        "rational_public": {
+          "evidence_errors": [],
+          "f1": 1,
+          "passed": true,
+          "seconds": 0.009659100000135368,
+          "steps": 16
+        }
+      },
+      "config": {
+        "boundary_payments": true,
+        "clean": true,
+        "interaction": 1,
+        "invoices": 84,
+        "period_month": "2099-12",
+        "shuffle": false,
+        "timezone": "+05:45"
+      },
+      "documents": 199,
+      "episode_id": "ep-756f7a5240eeb269",
+      "financial_errors": [],
+      "financial_valid": true,
+      "generation_seconds": 0.006582900001376402,
+      "issues": 0,
+      "label": "jury-data",
+      "passed": true,
+      "records": 398,
+      "seed": 90864924227536020330223727524944576937
+    },
+    {
+      "algorithms": {
+        "production": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.015369599997939076,
+          "steps": 32
+        },
+        "rational_public": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.023170700002083322,
+          "steps": 32
+        }
+      },
+      "config": {
+        "boundary_payments": true,
+        "counts": {
+          "accounting_period": 1,
+          "duplicate_invoice": 1,
+          "fx_conversion": 1,
+          "payment_allocation": 1
+        },
+        "interaction": 2,
+        "invoices": 200,
+        "period_month": "2029-02",
+        "shuffle": true,
+        "timezone": "+14:00"
+      },
+      "documents": 473,
+      "episode_id": "ep-7ae5b4a80c4f0f51",
+      "financial_errors": [],
+      "financial_valid": true,
+      "generation_seconds": 0.015410799998790026,
+      "issues": 4,
+      "label": "jury-data",
+      "passed": true,
+      "records": 948,
+      "seed": 74888944626593735135481365968069031586
+    },
+    {
+      "algorithms": {
+        "production": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.0025481999982730485,
+          "steps": 10
+        },
+        "rational_public": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.005160199998499593,
+          "steps": 10
+        }
+      },
+      "config": {
+        "boundary_payments": true,
+        "counts": {
+          "accounting_period": 1,
+          "duplicate_invoice": 1,
+          "fx_conversion": 1,
+          "payment_allocation": 1
+        },
+        "interaction": 1,
+        "invoices": 40,
+        "period_month": "2000-02",
+        "shuffle": false,
+        "timezone": "-12:00"
+      },
+      "documents": 95,
+      "episode_id": "ep-bcf49289136758d1",
+      "financial_errors": [],
+      "financial_valid": true,
+      "generation_seconds": 0.0039806999993743375,
+      "issues": 4,
+      "label": "jury-data",
+      "passed": true,
+      "records": 192,
+      "seed": 24635136051297658243016902082437329404
+    },
+    {
+      "algorithms": {
+        "production": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.005007399999158224,
+          "steps": 16
+        },
+        "rational_public": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.009018799999466864,
+          "steps": 16
+        }
+      },
+      "config": {
+        "boundary_payments": true,
+        "counts": {
+          "accounting_period": 1,
+          "duplicate_invoice": 1,
+          "fx_conversion": 1,
+          "payment_allocation": 1
+        },
+        "interaction": 2,
+        "invoices": 84,
+        "period_month": "2099-12",
+        "shuffle": true,
+        "timezone": "+05:45"
+      },
+      "documents": 199,
+      "episode_id": "ep-bd74752b3f6a87ee",
+      "financial_errors": [],
+      "financial_valid": true,
+      "generation_seconds": 0.006734099999448517,
+      "issues": 4,
+      "label": "jury-data",
+      "passed": true,
+      "records": 400,
+      "seed": 166211692046177860641564852390233885797
+    },
+    {
+      "algorithms": {
+        "production": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.012491199999203673,
+          "steps": 32
+        },
+        "rational_public": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.02228550000290852,
+          "steps": 32
+        }
+      },
+      "config": {
+        "boundary_payments": true,
+        "counts": {
+          "accounting_period": 1,
+          "duplicate_invoice": 1,
+          "fx_conversion": 1,
+          "payment_allocation": 1
+        },
+        "interaction": 1,
+        "invoices": 200,
+        "period_month": "2029-02",
+        "shuffle": false,
+        "timezone": "+14:00"
+      },
+      "documents": 473,
+      "episode_id": "ep-5ca13dc9c8a49d97",
+      "financial_errors": [],
+      "financial_valid": true,
+      "generation_seconds": 0.015032899998914218,
+      "issues": 4,
+      "label": "jury-data",
+      "passed": true,
+      "records": 948,
+      "seed": 196887718728076078614369991732674939571
+    },
+    {
+      "algorithms": {
+        "production": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.0026158000000577886,
+          "steps": 10
+        },
+        "rational_public": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.00474210000174935,
+          "steps": 10
+        }
+      },
+      "config": {
+        "boundary_payments": true,
+        "counts": {
+          "accounting_period": 1,
+          "duplicate_invoice": 1,
+          "fx_conversion": 1,
+          "payment_allocation": 1
+        },
+        "interaction": 2,
+        "invoices": 40,
+        "period_month": "2000-02",
+        "shuffle": true,
+        "timezone": "-12:00"
+      },
+      "documents": 95,
+      "episode_id": "ep-e5f3fd941fd4c956",
+      "financial_errors": [],
+      "financial_valid": true,
+      "generation_seconds": 0.003585499998735031,
+      "issues": 4,
+      "label": "jury-data",
+      "passed": true,
+      "records": 192,
+      "seed": 179098380119993449002872778266911651241
+    },
+    {
+      "algorithms": {
+        "production": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.005353500000637723,
+          "steps": 17
+        },
+        "rational_public": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.009762800000316929,
+          "steps": 17
+        }
+      },
+      "config": {
+        "boundary_payments": true,
+        "counts": {
+          "duplicate_invoice": 3
+        },
+        "invoices": 84,
+        "period_month": "2099-12",
+        "shuffle": false,
+        "timezone": "+05:45"
+      },
+      "documents": 199,
+      "episode_id": "ep-0200f12150f12435",
+      "financial_errors": [],
+      "financial_valid": true,
+      "generation_seconds": 0.006385699998645578,
+      "issues": 3,
+      "label": "jury-data",
+      "passed": true,
+      "records": 404,
+      "seed": 137431323871545343953811366371753055547
+    },
+    {
+      "algorithms": {
+        "production": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.011922699999558972,
+          "steps": 32
+        },
+        "rational_public": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.02015400000163936,
+          "steps": 32
+        }
+      },
+      "config": {
+        "boundary_payments": true,
+        "counts": {
+          "payment_allocation": 3
+        },
+        "invoices": 200,
+        "period_month": "2029-02",
+        "shuffle": true,
+        "timezone": "+14:00"
+      },
+      "documents": 473,
+      "episode_id": "ep-9d45e857f22e3efb",
+      "financial_errors": [],
+      "financial_valid": true,
+      "generation_seconds": 0.01490629999898374,
+      "issues": 3,
+      "label": "jury-data",
+      "passed": true,
+      "records": 946,
+      "seed": 302578167639486723287463828706774488839
+    },
+    {
+      "algorithms": {
+        "production": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.0024210000010498334,
+          "steps": 10
+        },
+        "rational_public": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.004508999998506624,
+          "steps": 10
+        }
+      },
+      "config": {
+        "boundary_payments": true,
+        "counts": {
+          "fx_conversion": 3
+        },
+        "invoices": 40,
+        "period_month": "2000-02",
+        "shuffle": false,
+        "timezone": "-12:00"
+      },
+      "documents": 95,
+      "episode_id": "ep-577d8bc12d00211d",
+      "financial_errors": [],
+      "financial_valid": true,
+      "generation_seconds": 0.0034998000010091346,
+      "issues": 3,
+      "label": "jury-data",
+      "passed": true,
+      "records": 190,
+      "seed": 162847895203273155760048426200244503217
+    },
+    {
+      "algorithms": {
+        "production": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.005071999999927357,
+          "steps": 16
+        },
+        "rational_public": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.009379099999932805,
+          "steps": 16
+        }
+      },
+      "config": {
+        "boundary_payments": true,
+        "counts": {
+          "accounting_period": 3
+        },
+        "invoices": 84,
+        "period_month": "2099-12",
+        "shuffle": true,
+        "timezone": "+05:45"
+      },
+      "documents": 199,
+      "episode_id": "ep-eaffd28d6dab75f1",
+      "financial_errors": [],
+      "financial_valid": true,
+      "generation_seconds": 0.009388800001033815,
+      "issues": 3,
+      "label": "jury-data",
+      "passed": true,
+      "records": 398,
+      "seed": 261323383406684264152554866723451183001
+    },
+    {
+      "algorithms": {
+        "production": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.011978399998042732,
+          "steps": 32
+        },
+        "rational_public": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.02040869999837014,
+          "steps": 32
+        }
+      },
+      "config": {
+        "boundary_payments": true,
+        "invoices": 200,
+        "period_month": "2029-02",
+        "recognition_world": 1,
+        "shuffle": false,
+        "timezone": "+14:00"
+      },
+      "documents": 473,
+      "episode_id": "ep-cca9ed8473b7ca14",
+      "financial_errors": [],
+      "financial_valid": true,
+      "generation_seconds": 0.01464510000005248,
+      "issues": 2,
+      "label": "jury-data",
+      "passed": true,
+      "records": 946,
+      "seed": 70340332273611462156115490084973552193
+    },
+    {
+      "algorithms": {
+        "production": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.0024877999967429787,
+          "steps": 10
+        },
+        "rational_public": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.004556600000796607,
+          "steps": 10
+        }
+      },
+      "config": {
+        "boundary_payments": true,
+        "invoices": 40,
+        "period_month": "2000-02",
+        "recognition_world": 2,
+        "shuffle": true,
+        "timezone": "-12:00"
+      },
+      "documents": 95,
+      "episode_id": "ep-4718c222342bd132",
+      "financial_errors": [],
+      "financial_valid": true,
+      "generation_seconds": 0.003542499998729909,
+      "issues": 2,
+      "label": "jury-data",
+      "passed": true,
+      "records": 190,
+      "seed": 245929935344114965567773182710205513030
+    },
+    {
+      "algorithms": {
+        "production": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.004957299999659881,
+          "steps": 16
+        },
+        "rational_public": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.009119900001678616,
+          "steps": 16
+        }
+      },
+      "config": {
+        "boundary_payments": true,
+        "invoices": 84,
+        "period_month": "2099-12",
+        "recognition_world": 1,
+        "shuffle": false,
+        "timezone": "+05:45"
+      },
+      "documents": 199,
+      "episode_id": "ep-fdd4d203b7401948",
+      "financial_errors": [],
+      "financial_valid": true,
+      "generation_seconds": 0.006190500000229804,
+      "issues": 2,
+      "label": "jury-data",
+      "passed": true,
+      "records": 398,
+      "seed": 283247384100270421063457399355459307076
+    },
+    {
+      "algorithms": {
+        "production": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.011258599999564467,
+          "steps": 32
+        },
+        "rational_public": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.02045709999947576,
+          "steps": 32
+        }
+      },
+      "config": {
+        "boundary_payments": true,
+        "invoices": 200,
+        "period_month": "2029-02",
+        "recognition_world": 2,
+        "shuffle": true,
+        "timezone": "+14:00"
+      },
+      "documents": 473,
+      "episode_id": "ep-d25cb12e1878a531",
+      "financial_errors": [],
+      "financial_valid": true,
+      "generation_seconds": 0.014112500000919681,
+      "issues": 2,
+      "label": "jury-data",
+      "passed": true,
+      "records": 946,
+      "seed": 247103559529181938070309595860579973555
+    },
+    {
+      "algorithms": {
+        "production": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.00251649999700021,
+          "steps": 10
+        },
+        "rational_public": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.0046392000003834255,
+          "steps": 10
+        }
+      },
+      "config": {
+        "boundary_payments": true,
+        "counts": {
+          "accounting_period": 1,
+          "duplicate_invoice": 1,
+          "fx_conversion": 3,
+          "payment_allocation": 2
+        },
+        "interaction": 0,
+        "invoices": 40,
+        "period_month": "2000-02",
+        "shuffle": false,
+        "timezone": "-12:00"
+      },
+      "documents": 95,
+      "episode_id": "ep-65f0106709d189a4",
+      "financial_errors": [],
+      "financial_valid": true,
+      "generation_seconds": 0.0036650999973062426,
+      "issues": 7,
+      "label": "jury-data",
+      "passed": true,
+      "records": 192,
+      "seed": 213840283378266576814298568587389151202
+    },
+    {
+      "algorithms": {
+        "production": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.0049262000029557385,
+          "steps": 16
+        },
+        "rational_public": {
+          "evidence_errors": [],
+          "f1": 1.0,
+          "passed": true,
+          "seconds": 0.009332699999504257,
+          "steps": 16
+        }
+      },
+      "config": {
+        "boundary_payments": true,
+        "counts": {
+          "accounting_period": 1,
+          "duplicate_invoice": 1,
+          "fx_conversion": 3,
+          "payment_allocation": 2
+        },
+        "interaction": 1,
+        "invoices": 84,
+        "period_month": "2099-12",
+        "shuffle": true,
+        "timezone": "+05:45"
+      },
+      "documents": 199,
+      "episode_id": "ep-8b1305a9cb6da548",
+      "financial_errors": [],
+      "financial_valid": true,
+      "generation_seconds": 0.006625900001381524,
+      "issues": 7,
+      "label": "jury-data",
+      "passed": true,
+      "records": 400,
+      "seed": 326982009449360335925179519103939916027
+    }
+  ],
+  "pair_obligations": 354,
+  "pair_obligations_covered": 354,
+  "passed": true,
+  "root": 728149011634,
+  "scope": "Supported configuration pair coverage; fixed half-even rounding is the only declared rule.",
+  "shared_implementation_risk": "The public rational investigator shares _inspect_books with the independent financial validator. Production reconciliation is a separate detector. Neither public policy sees truth/provenance."
+}

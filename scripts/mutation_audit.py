@@ -21,6 +21,16 @@ import time
 ROOT = Path(__file__).resolve().parents[1]
 COMMAND = ['-m', 'unittest', 'discover', '-s', 'tests', '-v']
 MUTATIONS = (
+    dict(id='interaction_fx_missing_mirror_provenance', file='auditforge/generator.py',
+         description='Record only the affected payable row while mutating both settlement sides.',
+         before="actual-expected, rows)", after="actual-expected)"),
+    dict(id='reverse_currency_exponent', file='auditforge/generator.py',
+         description='Reverse source and target currency exponent scaling.',
+         before="EXPONENTS[target] - EXPONENTS[source]", after="EXPONENTS[source] - EXPONENTS[target]"),
+    dict(id='counterfactual_book_uses_source_bit', file='auditforge/recognition_worlds.py',
+         description='Assign journal dates from the source decision and erase the intended counterfactual discrepancy.',
+         before="dates_by_bit[book_bit ^ index]", after="dates_by_bit[source_bit ^ index]"),
+
     dict(id='fx_rounding', file='auditforge/generator.py',
          description='Round FX conversions toward zero instead of half-even.',
          before='rounding=ROUND_HALF_EVEN))', after="rounding='ROUND_DOWN'))"),
@@ -78,6 +88,10 @@ MUTATIONS = (
 
 
 EXPECTED_DETECTION = {
+    'interaction_fx_missing_mirror_provenance': 'Causal replay must include both sides of every changed FX settlement.',
+    'reverse_currency_exponent': 'JPY conversion must scale zero-exponent source to two-exponent base money correctly.',
+    'counterfactual_book_uses_source_bit': 'Crossed source/book decisions must retain two independently provable period discrepancies.',
+
     'fx_rounding': 'Independent source-to-ledger conversion disagrees at a fractional minor unit.',
     'loose_amount_tolerance': 'An amount one minor unit beyond tolerance does not earn a TP.',
     'incorrect_true_positive': 'The evaluator cannot credit more matches than a complete correct answer contains.',

@@ -32,7 +32,7 @@ jobs:
             --mount type=bind,source="$GITHUB_WORKSPACE",target=/submission \
             -w /submission auditforge-evaluator:2.0.1 sh -ec '
             python -c "import sys; assert sys.version_info[:2] == (3, 11)"
-            python -m scripts.jury_gauntlet --seed 974103116573 --report-dir work/jury-ci
+            python -m scripts.ultimate_verify --seed 801973140685
             python -m scripts.world_comparison --output work/world-comparison.json
             python -m auditforge.shortcut_hunter --output work/shortcut-hunter.json
             python -m scripts.adversarial_logic

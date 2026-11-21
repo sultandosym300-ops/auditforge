@@ -86,3 +86,7 @@ npm run build
 Собранный сайт появится в `web/dist`. Веб-симулятор запускается в Web Worker. После сборки можно также запустить локальный сервер из корня командой `python -m auditforge.server`.
 
 Расширенный поиск закономерностей запускается командой python -m auditforge.shortcut_hunter. Итоги и ограничения — в [SHORTCUT_HUNTER_REPORT.md](SHORTCUT_HUNTER_REPORT.md). Контрольная версия 2.0 сохранена тегом auditforge-2.0-control.
+
+## Проверка инвариантов перед сдачей
+
+Единая команда python -m scripts.ultimate_verify запускает новый независимый экзамен, матрицу допустимых конфигураций и эксперимент выбора запросов по train/dev. [Результаты исследования](ULTIMATE_AUDIT_REPORT.md), [сравнение с 2.0.1](AUDITFORGE_201_VS_FINAL.md), [реестр свойств](AUDITFORGE_INVARIANT_REGISTRY.md) и [инструкция жюри](JURY_REPRODUCTION_GUIDE.md) описывают область проверенного. Рабочее ядро сохранено без изменений.
