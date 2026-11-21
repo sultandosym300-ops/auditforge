@@ -12,3 +12,7 @@ web/public/python-core.json
 .env.*
 /work/
 /reports/mutation-audit-logs/
+
+.vercel/
+.vercel
+.env*
