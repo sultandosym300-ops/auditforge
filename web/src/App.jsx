@@ -88,7 +88,7 @@ function FocusDialog({className,onClose,returnFocus,suspended=false,children}){
 
 function Workspace({t,lang,setLang,user,onLogout,onHome}){
   const dialogTrigger=useRef();const pageRef=useRef();
-  const [tab,setTab]=useState('episodes');const [tour,setTour]=useState(()=>localStorage.getItem('af-tour-v2')?null:0);
+  const [tab,setTab]=useState('episodes');const [tour,setTour]=useState(()=>sessionStorage.getItem('af-tour-session')?null:0);
   const [initial,setInitial]=useState(null);const [remaining,setRemaining]=useState(100);const [done,setDone]=useState(false);const [truncated,setTruncated]=useState(false);const [report,setReport]=useState(null);
   const [busy,setBusy]=useState(false);const [error,setError]=useState('');const [scenario,setScenario]=useState('mixed');const [seed,setSeed]=useState('');const [table,setTable]=useState('ledger');const [rows,setRows]=useState([]);const [cursor,setCursor]=useState(null);const [page,setPage]=useState(1);const [search,setSearch]=useState('');const [detail,setDetail]=useState(null);const [evidence,setEvidence]=useState([]);const [findings,setFindings]=useState([]);const [editing,setEditing]=useState(false);const [trajectory,setTrajectory]=useState([]);const [checks,setChecks]=useState(null);const [policy,setPolicy]=useState('reconciliation');const [calc,setCalc]=useState('');const [calcResult,setCalcResult]=useState('');
   useEffect(()=>{window.scrollTo(0,0);},[tab]);
@@ -112,7 +112,7 @@ function Workspace({t,lang,setLang,user,onLogout,onHome}){
   const filtered=rows.filter(r=>JSON.stringify(r).toLowerCase().includes(search.toLowerCase()));
   const episodeId=initial?.manifest.episode_id;
   function beginTour(){setDetail(null);setEditing(false);setTab('episodes');setTour(0);}
-  function closeTour(){setDetail(null);setEditing(false);setTour(null);setTab('episodes');localStorage.setItem('af-tour-v2','1');}
+  function closeTour(){setDetail(null);setEditing(false);setTour(null);setTab('episodes');sessionStorage.setItem('af-tour-session','1');}
   async function advanceTour(){
     if(busy)return;
     if(tour===0){
@@ -170,6 +170,6 @@ export default function App(){
   useEffect(()=>{detectBackend().then(value=>setUser(value.user));},[]);
   function enter(){setView(user?'workspace':'auth');window.scrollTo(0,0);}
   function home(){setView('landing');window.scrollTo(0,0);}
-  async function logout(){await api('logout');setUser(null);setView('landing');window.scrollTo(0,0);}
-  return view==='landing'?<Landing t={t} lang={lang} setLang={setLang} onEnter={enter}/>:view==='auth'?<Auth t={t} lang={lang} setLang={setLang} onBack={home} onSuccess={value=>{setUser(value);setView('workspace');}}/>:<Workspace t={t} lang={lang} setLang={setLang} user={user} onLogout={logout} onHome={home}/>;
+  async function logout(){await api('logout');sessionStorage.removeItem('af-tour-session');setUser(null);setView('landing');window.scrollTo(0,0);}
+  return view==='landing'?<Landing t={t} lang={lang} setLang={setLang} onEnter={enter}/>:view==='auth'?<Auth t={t} lang={lang} setLang={setLang} onBack={home} onSuccess={value=>{sessionStorage.removeItem('af-tour-session');setUser(value);setView('workspace');}}/>:<Workspace t={t} lang={lang} setLang={setLang} user={user} onLogout={logout} onHome={home}/>;
 }
