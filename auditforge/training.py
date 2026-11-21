@@ -157,14 +157,14 @@ class Trainer:
                     run_policy(session,initial,policy)
                 else:
                     investigate(session.step,initial,INITIAL_WEIGHTS if policy=='untrained' else self.weights)
-                rows.append(dict(policy=policy, index=index, steps=session.steps,
+                rows.append(dict(policy=policy, index=index, steps=session.steps, inspection_steps=session.steps-int(session.done_flags[0]),
                                  seconds=time.perf_counter()-started,
                                  **{k:session.report[k] for k in ('precision','recall','f1','reward')}))
         summary = []
         for policy in ('untrained','trained','random','reconciliation'):
             selected = [r for r in rows if r['policy']==policy]
             summary.append(dict(policy=policy, episodes=count,
-                                **{k:sum(r[k] for r in selected)/count for k in ('precision','recall','f1','reward','steps','seconds')}))
+                                **{k:sum(r[k] for r in selected)/count for k in ('precision','recall','f1','reward','steps','inspection_steps','seconds')}))
         return dict(seed=seed,count=count,results=summary,episodes=rows,
                     scope='Frozen holdout, no optimizer update. Learned skill is invoice-document acquisition for recognition errors.')
 

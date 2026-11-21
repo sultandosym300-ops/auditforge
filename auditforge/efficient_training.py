@@ -202,12 +202,12 @@ class EfficientTrainer:
                     run_policy(session,initial,policy)
                 else:
                     investigate(session.step,initial,INITIAL_WEIGHTS if policy=='untrained' else self.weights)
-                rows.append(dict(policy=policy,index=index,steps=session.steps,seconds=time.perf_counter()-started,
+                rows.append(dict(policy=policy,index=index,steps=session.steps,inspection_steps=max(0,session.steps-1),seconds=time.perf_counter()-started,
                                  **{k:session.report[k] for k in ('precision','recall','f1','reward')}))
         results=[]
         for policy in ('untrained','trained','random','reconciliation'):
             selected=[r for r in rows if r['policy']==policy]
-            results.append(dict(policy=policy,episodes=count,**{k:sum(r[k] for r in selected)/count for k in ('precision','recall','f1','reward','steps','seconds')}))
+            results.append(dict(policy=policy,episodes=count,**{k:sum(r[k] for r in selected)/count for k in ('precision','recall','f1','reward','steps','inspection_steps','seconds')}))
         return dict(seed=seed,count=count,results=results,episodes=rows,scope='Frozen holdout. Learned source-table acquisition, deterministic documentary decoding.')
 
     def checkpoint(self):

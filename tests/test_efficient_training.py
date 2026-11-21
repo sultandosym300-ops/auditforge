@@ -20,6 +20,12 @@ class EfficientTrainingTests(unittest.TestCase):
         self.assertLess(scores['trained']['steps'], 10)
         self.assertGreater(scores['trained']['reward'], scores['reconciliation']['reward'])
 
+    def test_holdout_reports_total_and_penalized_action_counts(self):
+        result = EfficientTrainer(61794, 'mixed').evaluate(2, 918732)
+        for row in result['episodes']:
+            self.assertEqual(row['inspection_steps'], row['steps'] - 1)
+            self.assertAlmostEqual(row['reward'], max(-1, min(1, 2*row['f1'] - 1 - .002*row['inspection_steps'])))
+
     def test_legacy_and_source_checkpoint_dispatch_resume(self):
         legacy = Trainer(17)
         legacy.train_episode()

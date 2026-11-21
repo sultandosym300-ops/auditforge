@@ -1,0 +1,2056 @@
+{
+  "control_sha": "1db02796f95e78b4520c528727c45240d64ee6c0",
+  "root": 601384905227,
+  "training_seeds": [
+    314159,
+    271828,
+    161803
+  ],
+  "training_episodes": 300,
+  "summary": {
+    "period": {
+      "baseline": {
+        "episodes": 150,
+        "precision": {
+          "mean": 0.8,
+          "std": 0.4,
+          "median": 1.0,
+          "p90": 1.0,
+          "minimum": 0,
+          "maximum": 1.0
+        },
+        "recall": {
+          "mean": 0.8,
+          "std": 0.4,
+          "median": 1.0,
+          "p90": 1.0,
+          "minimum": 0,
+          "maximum": 1.0
+        },
+        "f1": {
+          "mean": 1.0,
+          "std": 0.0,
+          "median": 1.0,
+          "p90": 1.0,
+          "minimum": 1,
+          "maximum": 1
+        },
+        "reward": {
+          "mean": 0.912,
+          "std": 0.0,
+          "median": 0.912,
+          "p90": 0.912,
+          "minimum": 0.912,
+          "maximum": 0.912
+        },
+        "steps": {
+          "mean": 45,
+          "std": 0.0,
+          "median": 45.0,
+          "p90": 45,
+          "minimum": 45,
+          "maximum": 45
+        },
+        "seconds": {
+          "mean": 0.0035552033327985555,
+          "std": 0.0009422934346360074,
+          "median": 0.00341159999879892,
+          "p90": 0.0035600999981397763,
+          "minimum": 0.0030680999989272095,
+          "maximum": 0.011430699996708427
+        },
+        "pooled": {
+          "tp": 240,
+          "fp": 0,
+          "fn": 0
+        },
+        "clean_false_findings": 0,
+        "complete_f1_episodes": 150
+      },
+      "candidate": {
+        "episodes": 150,
+        "precision": {
+          "mean": 0.8,
+          "std": 0.4,
+          "median": 1.0,
+          "p90": 1.0,
+          "minimum": 0,
+          "maximum": 1.0
+        },
+        "recall": {
+          "mean": 0.8,
+          "std": 0.4,
+          "median": 1.0,
+          "p90": 1.0,
+          "minimum": 0,
+          "maximum": 1.0
+        },
+        "f1": {
+          "mean": 1.0,
+          "std": 0.0,
+          "median": 1.0,
+          "p90": 1.0,
+          "minimum": 1,
+          "maximum": 1
+        },
+        "reward": {
+          "mean": 0.99,
+          "std": 0.0,
+          "median": 0.99,
+          "p90": 0.99,
+          "minimum": 0.99,
+          "maximum": 0.99
+        },
+        "steps": {
+          "mean": 6,
+          "std": 0.0,
+          "median": 6.0,
+          "p90": 6,
+          "minimum": 6,
+          "maximum": 6
+        },
+        "seconds": {
+          "mean": 0.0029416499999933877,
+          "std": 0.00021432960981489468,
+          "median": 0.002877050003007753,
+          "p90": 0.0031702000051154755,
+          "minimum": 0.002745699996012263,
+          "maximum": 0.004056400000990834
+        },
+        "pooled": {
+          "tp": 240,
+          "fp": 0,
+          "fn": 0
+        },
+        "clean_false_findings": 0,
+        "complete_f1_episodes": 150
+      },
+      "untrained": {
+        "episodes": 150,
+        "precision": {
+          "mean": 0,
+          "std": 0.0,
+          "median": 0.0,
+          "p90": 0,
+          "minimum": 0,
+          "maximum": 0
+        },
+        "recall": {
+          "mean": 0.0,
+          "std": 0.0,
+          "median": 0.0,
+          "p90": 0.0,
+          "minimum": 0,
+          "maximum": 0
+        },
+        "f1": {
+          "mean": 0.2,
+          "std": 0.4,
+          "median": 0.0,
+          "p90": 1,
+          "minimum": 0.0,
+          "maximum": 1
+        },
+        "reward": {
+          "mean": -0.6016,
+          "std": 0.7968,
+          "median": -1.0,
+          "p90": 0.992,
+          "minimum": -1,
+          "maximum": 0.992
+        },
+        "steps": {
+          "mean": 5,
+          "std": 0.0,
+          "median": 5.0,
+          "p90": 5,
+          "minimum": 5,
+          "maximum": 5
+        },
+        "seconds": {
+          "mean": 0.002322715999907814,
+          "std": 0.0006998246806152015,
+          "median": 0.0022110999962023925,
+          "p90": 0.002407899999525398,
+          "minimum": 0.0021055999968666583,
+          "maximum": 0.009230899995600339
+        },
+        "pooled": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 240
+        },
+        "clean_false_findings": 0,
+        "complete_f1_episodes": 30
+      },
+      "random": {
+        "episodes": 150,
+        "precision": {
+          "mean": 0,
+          "std": 0.0,
+          "median": 0.0,
+          "p90": 0,
+          "minimum": 0,
+          "maximum": 0
+        },
+        "recall": {
+          "mean": 0.0,
+          "std": 0.0,
+          "median": 0.0,
+          "p90": 0.0,
+          "minimum": 0,
+          "maximum": 0
+        },
+        "f1": {
+          "mean": 0.2,
+          "std": 0.4,
+          "median": 0.0,
+          "p90": 1,
+          "minimum": 0.0,
+          "maximum": 1
+        },
+        "reward": {
+          "mean": -0.6032,
+          "std": 0.7936,
+          "median": -1.0,
+          "p90": 0.984,
+          "minimum": -1,
+          "maximum": 0.984
+        },
+        "steps": {
+          "mean": 9,
+          "std": 0.0,
+          "median": 9.0,
+          "p90": 9,
+          "minimum": 9,
+          "maximum": 9
+        },
+        "seconds": {
+          "mean": 0.0035806333331856875,
+          "std": 0.00010272011850502522,
+          "median": 0.0035473000025376678,
+          "p90": 0.003726000002643559,
+          "minimum": 0.003391300000657793,
+          "maximum": 0.004040500003611669
+        },
+        "pooled": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 240
+        },
+        "clean_false_findings": 0,
+        "complete_f1_episodes": 30
+      },
+      "reconciliation": {
+        "episodes": 150,
+        "precision": {
+          "mean": 0.8,
+          "std": 0.4,
+          "median": 1.0,
+          "p90": 1.0,
+          "minimum": 0,
+          "maximum": 1.0
+        },
+        "recall": {
+          "mean": 0.8,
+          "std": 0.4,
+          "median": 1.0,
+          "p90": 1.0,
+          "minimum": 0,
+          "maximum": 1.0
+        },
+        "f1": {
+          "mean": 1.0,
+          "std": 0.0,
+          "median": 1.0,
+          "p90": 1.0,
+          "minimum": 1,
+          "maximum": 1
+        },
+        "reward": {
+          "mean": 0.982,
+          "std": 0.0,
+          "median": 0.982,
+          "p90": 0.982,
+          "minimum": 0.982,
+          "maximum": 0.982
+        },
+        "steps": {
+          "mean": 10,
+          "std": 0.0,
+          "median": 10.0,
+          "p90": 10,
+          "minimum": 10,
+          "maximum": 10
+        },
+        "seconds": {
+          "mean": 0.00428874733367896,
+          "std": 0.0007312508897863969,
+          "median": 0.004060249997564824,
+          "p90": 0.004756000002089422,
+          "minimum": 0.0038128999949549325,
+          "maximum": 0.01049780000175815
+        },
+        "pooled": {
+          "tp": 240,
+          "fp": 0,
+          "fn": 0
+        },
+        "clean_false_findings": 0,
+        "complete_f1_episodes": 150
+      }
+    },
+    "duplicate": {
+      "baseline": {
+        "episodes": 150,
+        "precision": {
+          "mean": 0.8,
+          "std": 0.4,
+          "median": 1.0,
+          "p90": 1.0,
+          "minimum": 0,
+          "maximum": 1.0
+        },
+        "recall": {
+          "mean": 0.8,
+          "std": 0.4,
+          "median": 1.0,
+          "p90": 1.0,
+          "minimum": 0,
+          "maximum": 1.0
+        },
+        "f1": {
+          "mean": 1.0,
+          "std": 0.0,
+          "median": 1.0,
+          "p90": 1.0,
+          "minimum": 1,
+          "maximum": 1
+        },
+        "reward": {
+          "mean": 0.9325066666666667,
+          "std": 0.021813985320329576,
+          "median": 0.923,
+          "p90": 0.964,
+          "minimum": 0.912,
+          "maximum": 0.97
+        },
+        "steps": {
+          "mean": 34.74666666666667,
+          "std": 10.906992660164804,
+          "median": 39.5,
+          "p90": 45,
+          "minimum": 16,
+          "maximum": 45
+        },
+        "seconds": {
+          "mean": 0.0032121779998609177,
+          "std": 0.00065632298748221,
+          "median": 0.003299649997643428,
+          "p90": 0.0035659000059240498,
+          "minimum": 0.0024711000005481765,
+          "maximum": 0.009583099999872502
+        },
+        "pooled": {
+          "tp": 240,
+          "fp": 0,
+          "fn": 0
+        },
+        "clean_false_findings": 0,
+        "complete_f1_episodes": 150
+      },
+      "candidate": {
+        "episodes": 150,
+        "precision": {
+          "mean": 0.8,
+          "std": 0.4,
+          "median": 1.0,
+          "p90": 1.0,
+          "minimum": 0,
+          "maximum": 1.0
+        },
+        "recall": {
+          "mean": 0.8,
+          "std": 0.4,
+          "median": 1.0,
+          "p90": 1.0,
+          "minimum": 0,
+          "maximum": 1.0
+        },
+        "f1": {
+          "mean": 1.0,
+          "std": 0.0,
+          "median": 1.0,
+          "p90": 1.0,
+          "minimum": 1,
+          "maximum": 1
+        },
+        "reward": {
+          "mean": 0.982,
+          "std": 0.0,
+          "median": 0.982,
+          "p90": 0.982,
+          "minimum": 0.982,
+          "maximum": 0.982
+        },
+        "steps": {
+          "mean": 10,
+          "std": 0.0,
+          "median": 10.0,
+          "p90": 10,
+          "minimum": 10,
+          "maximum": 10
+        },
+        "seconds": {
+          "mean": 0.004466778666392201,
+          "std": 0.00014604588371105743,
+          "median": 0.004449700001714518,
+          "p90": 0.004666399996494874,
+          "minimum": 0.00414440000167815,
+          "maximum": 0.005038200004491955
+        },
+        "pooled": {
+          "tp": 240,
+          "fp": 0,
+          "fn": 0
+        },
+        "clean_false_findings": 0,
+        "complete_f1_episodes": 150
+      },
+      "untrained": {
+        "episodes": 150,
+        "precision": {
+          "mean": 0,
+          "std": 0.0,
+          "median": 0.0,
+          "p90": 0,
+          "minimum": 0,
+          "maximum": 0
+        },
+        "recall": {
+          "mean": 0.0,
+          "std": 0.0,
+          "median": 0.0,
+          "p90": 0.0,
+          "minimum": 0,
+          "maximum": 0
+        },
+        "f1": {
+          "mean": 0.2,
+          "std": 0.4,
+          "median": 0.0,
+          "p90": 1,
+          "minimum": 0.0,
+          "maximum": 1
+        },
+        "reward": {
+          "mean": -0.6016,
+          "std": 0.7968,
+          "median": -1.0,
+          "p90": 0.992,
+          "minimum": -1,
+          "maximum": 0.992
+        },
+        "steps": {
+          "mean": 5,
+          "std": 0.0,
+          "median": 5.0,
+          "p90": 5,
+          "minimum": 5,
+          "maximum": 5
+        },
+        "seconds": {
+          "mean": 0.0022688526664084445,
+          "std": 6.538732499323781e-05,
+          "median": 0.0022623499971814454,
+          "p90": 0.0023416000040015206,
+          "minimum": 0.002130000000761356,
+          "maximum": 0.002656199998455122
+        },
+        "pooled": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 240
+        },
+        "clean_false_findings": 0,
+        "complete_f1_episodes": 30
+      },
+      "random": {
+        "episodes": 150,
+        "precision": {
+          "mean": 0,
+          "std": 0.0,
+          "median": 0.0,
+          "p90": 0,
+          "minimum": 0,
+          "maximum": 0
+        },
+        "recall": {
+          "mean": 0.0,
+          "std": 0.0,
+          "median": 0.0,
+          "p90": 0.0,
+          "minimum": 0,
+          "maximum": 0
+        },
+        "f1": {
+          "mean": 0.2,
+          "std": 0.4,
+          "median": 0.0,
+          "p90": 1,
+          "minimum": 0.0,
+          "maximum": 1
+        },
+        "reward": {
+          "mean": -0.6032,
+          "std": 0.7936,
+          "median": -1.0,
+          "p90": 0.984,
+          "minimum": -1,
+          "maximum": 0.984
+        },
+        "steps": {
+          "mean": 9,
+          "std": 0.0,
+          "median": 9.0,
+          "p90": 9,
+          "minimum": 9,
+          "maximum": 9
+        },
+        "seconds": {
+          "mean": 0.0036587006669530336,
+          "std": 0.00024356264404957722,
+          "median": 0.0036279999985708855,
+          "p90": 0.0037622999952873215,
+          "minimum": 0.003386199998203665,
+          "maximum": 0.005831300004501827
+        },
+        "pooled": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 240
+        },
+        "clean_false_findings": 0,
+        "complete_f1_episodes": 30
+      },
+      "reconciliation": {
+        "episodes": 150,
+        "precision": {
+          "mean": 0.8,
+          "std": 0.4,
+          "median": 1.0,
+          "p90": 1.0,
+          "minimum": 0,
+          "maximum": 1.0
+        },
+        "recall": {
+          "mean": 0.8,
+          "std": 0.4,
+          "median": 1.0,
+          "p90": 1.0,
+          "minimum": 0,
+          "maximum": 1.0
+        },
+        "f1": {
+          "mean": 1.0,
+          "std": 0.0,
+          "median": 1.0,
+          "p90": 1.0,
+          "minimum": 1,
+          "maximum": 1
+        },
+        "reward": {
+          "mean": 0.982,
+          "std": 0.0,
+          "median": 0.982,
+          "p90": 0.982,
+          "minimum": 0.982,
+          "maximum": 0.982
+        },
+        "steps": {
+          "mean": 10,
+          "std": 0.0,
+          "median": 10.0,
+          "p90": 10,
+          "minimum": 10,
+          "maximum": 10
+        },
+        "seconds": {
+          "mean": 0.00418002866654812,
+          "std": 0.0006325736952576518,
+          "median": 0.004080199996678857,
+          "p90": 0.004314599995268509,
+          "minimum": 0.003844899998512119,
+          "maximum": 0.011528100003488362
+        },
+        "pooled": {
+          "tp": 240,
+          "fp": 0,
+          "fn": 0
+        },
+        "clean_false_findings": 0,
+        "complete_f1_episodes": 150
+      }
+    },
+    "fx": {
+      "baseline": {
+        "episodes": 150,
+        "precision": {
+          "mean": 0,
+          "std": 0.0,
+          "median": 0.0,
+          "p90": 0,
+          "minimum": 0,
+          "maximum": 0
+        },
+        "recall": {
+          "mean": 0.0,
+          "std": 0.0,
+          "median": 0.0,
+          "p90": 0.0,
+          "minimum": 0,
+          "maximum": 0
+        },
+        "f1": {
+          "mean": 0.2,
+          "std": 0.4,
+          "median": 0.0,
+          "p90": 1,
+          "minimum": 0.0,
+          "maximum": 1
+        },
+        "reward": {
+          "mean": -0.6132933333333334,
+          "std": 0.773478657724669,
+          "median": -1.0,
+          "p90": 0.924,
+          "minimum": -1,
+          "maximum": 0.968
+        },
+        "steps": {
+          "mean": 34.16,
+          "std": 11.525091467460609,
+          "median": 39.0,
+          "p90": 45,
+          "minimum": 16,
+          "maximum": 45
+        },
+        "seconds": {
+          "mean": 0.0030512173332681415,
+          "std": 0.00037911455960570336,
+          "median": 0.0032267999995383434,
+          "p90": 0.003357100002176594,
+          "minimum": 0.0024092999956337735,
+          "maximum": 0.004564200004097074
+        },
+        "pooled": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 240
+        },
+        "clean_false_findings": 0,
+        "complete_f1_episodes": 30
+      },
+      "candidate": {
+        "episodes": 150,
+        "precision": {
+          "mean": 0.8,
+          "std": 0.4,
+          "median": 1.0,
+          "p90": 1.0,
+          "minimum": 0,
+          "maximum": 1.0
+        },
+        "recall": {
+          "mean": 0.8,
+          "std": 0.4,
+          "median": 1.0,
+          "p90": 1.0,
+          "minimum": 0,
+          "maximum": 1.0
+        },
+        "f1": {
+          "mean": 1.0,
+          "std": 0.0,
+          "median": 1.0,
+          "p90": 1.0,
+          "minimum": 1,
+          "maximum": 1
+        },
+        "reward": {
+          "mean": 0.982,
+          "std": 0.0,
+          "median": 0.982,
+          "p90": 0.982,
+          "minimum": 0.982,
+          "maximum": 0.982
+        },
+        "steps": {
+          "mean": 10,
+          "std": 0.0,
+          "median": 10.0,
+          "p90": 10,
+          "minimum": 10,
+          "maximum": 10
+        },
+        "seconds": {
+          "mean": 0.0045084426665562205,
+          "std": 0.0006388096174736133,
+          "median": 0.004431799996382324,
+          "p90": 0.0045993999956408516,
+          "minimum": 0.004214299995510373,
+          "maximum": 0.01214110000000801
+        },
+        "pooled": {
+          "tp": 240,
+          "fp": 0,
+          "fn": 0
+        },
+        "clean_false_findings": 0,
+        "complete_f1_episodes": 150
+      },
+      "untrained": {
+        "episodes": 150,
+        "precision": {
+          "mean": 0,
+          "std": 0.0,
+          "median": 0.0,
+          "p90": 0,
+          "minimum": 0,
+          "maximum": 0
+        },
+        "recall": {
+          "mean": 0.0,
+          "std": 0.0,
+          "median": 0.0,
+          "p90": 0.0,
+          "minimum": 0,
+          "maximum": 0
+        },
+        "f1": {
+          "mean": 0.2,
+          "std": 0.4,
+          "median": 0.0,
+          "p90": 1,
+          "minimum": 0.0,
+          "maximum": 1
+        },
+        "reward": {
+          "mean": -0.6016,
+          "std": 0.7968,
+          "median": -1.0,
+          "p90": 0.992,
+          "minimum": -1,
+          "maximum": 0.992
+        },
+        "steps": {
+          "mean": 5,
+          "std": 0.0,
+          "median": 5.0,
+          "p90": 5,
+          "minimum": 5,
+          "maximum": 5
+        },
+        "seconds": {
+          "mean": 0.0023869540001032873,
+          "std": 0.00044516417588866015,
+          "median": 0.0022415500025090296,
+          "p90": 0.0026998000030289404,
+          "minimum": 0.002120899996953085,
+          "maximum": 0.005018500000005588
+        },
+        "pooled": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 240
+        },
+        "clean_false_findings": 0,
+        "complete_f1_episodes": 30
+      },
+      "random": {
+        "episodes": 150,
+        "precision": {
+          "mean": 0,
+          "std": 0.0,
+          "median": 0.0,
+          "p90": 0,
+          "minimum": 0,
+          "maximum": 0
+        },
+        "recall": {
+          "mean": 0.0,
+          "std": 0.0,
+          "median": 0.0,
+          "p90": 0.0,
+          "minimum": 0,
+          "maximum": 0
+        },
+        "f1": {
+          "mean": 0.2,
+          "std": 0.4,
+          "median": 0.0,
+          "p90": 1,
+          "minimum": 0.0,
+          "maximum": 1
+        },
+        "reward": {
+          "mean": -0.6032,
+          "std": 0.7936,
+          "median": -1.0,
+          "p90": 0.984,
+          "minimum": -1,
+          "maximum": 0.984
+        },
+        "steps": {
+          "mean": 9,
+          "std": 0.0,
+          "median": 9.0,
+          "p90": 9,
+          "minimum": 9,
+          "maximum": 9
+        },
+        "seconds": {
+          "mean": 0.003774867333268048,
+          "std": 0.0003784337462570367,
+          "median": 0.003644899999926565,
+          "p90": 0.004161699995165691,
+          "minimum": 0.0033977999992202967,
+          "maximum": 0.0059775999980047345
+        },
+        "pooled": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 240
+        },
+        "clean_false_findings": 0,
+        "complete_f1_episodes": 30
+      },
+      "reconciliation": {
+        "episodes": 150,
+        "precision": {
+          "mean": 0.8,
+          "std": 0.4,
+          "median": 1.0,
+          "p90": 1.0,
+          "minimum": 0,
+          "maximum": 1.0
+        },
+        "recall": {
+          "mean": 0.8,
+          "std": 0.4,
+          "median": 1.0,
+          "p90": 1.0,
+          "minimum": 0,
+          "maximum": 1.0
+        },
+        "f1": {
+          "mean": 1.0,
+          "std": 0.0,
+          "median": 1.0,
+          "p90": 1.0,
+          "minimum": 1,
+          "maximum": 1
+        },
+        "reward": {
+          "mean": 0.982,
+          "std": 0.0,
+          "median": 0.982,
+          "p90": 0.982,
+          "minimum": 0.982,
+          "maximum": 0.982
+        },
+        "steps": {
+          "mean": 10,
+          "std": 0.0,
+          "median": 10.0,
+          "p90": 10,
+          "minimum": 10,
+          "maximum": 10
+        },
+        "seconds": {
+          "mean": 0.0042190373335809755,
+          "std": 0.0005049653396653314,
+          "median": 0.00407814999925904,
+          "p90": 0.004434499998751562,
+          "minimum": 0.0038457000046037138,
+          "maximum": 0.007781799999065697
+        },
+        "pooled": {
+          "tp": 240,
+          "fp": 0,
+          "fn": 0
+        },
+        "clean_false_findings": 0,
+        "complete_f1_episodes": 150
+      }
+    },
+    "allocation": {
+      "baseline": {
+        "episodes": 150,
+        "precision": {
+          "mean": 0,
+          "std": 0.0,
+          "median": 0.0,
+          "p90": 0,
+          "minimum": 0,
+          "maximum": 0
+        },
+        "recall": {
+          "mean": 0.0,
+          "std": 0.0,
+          "median": 0.0,
+          "p90": 0.0,
+          "minimum": 0,
+          "maximum": 0
+        },
+        "f1": {
+          "mean": 0.2,
+          "std": 0.4,
+          "median": 0.0,
+          "p90": 1,
+          "minimum": 0.0,
+          "maximum": 1
+        },
+        "reward": {
+          "mean": -0.6132933333333334,
+          "std": 0.7734813813459823,
+          "median": -1.0,
+          "p90": 0.924,
+          "minimum": -1,
+          "maximum": 0.97
+        },
+        "steps": {
+          "mean": 34.18,
+          "std": 11.51061539044141,
+          "median": 39.0,
+          "p90": 45,
+          "minimum": 16,
+          "maximum": 45
+        },
+        "seconds": {
+          "mean": 0.0030184639996150508,
+          "std": 0.0003316262415156951,
+          "median": 0.003090849997533951,
+          "p90": 0.003365600001416169,
+          "minimum": 0.002467300000716932,
+          "maximum": 0.003577199997380376
+        },
+        "pooled": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 240
+        },
+        "clean_false_findings": 0,
+        "complete_f1_episodes": 30
+      },
+      "candidate": {
+        "episodes": 150,
+        "precision": {
+          "mean": 0.8,
+          "std": 0.4,
+          "median": 1.0,
+          "p90": 1.0,
+          "minimum": 0,
+          "maximum": 1.0
+        },
+        "recall": {
+          "mean": 0.8,
+          "std": 0.4,
+          "median": 1.0,
+          "p90": 1.0,
+          "minimum": 0,
+          "maximum": 1.0
+        },
+        "f1": {
+          "mean": 1.0,
+          "std": 0.0,
+          "median": 1.0,
+          "p90": 1.0,
+          "minimum": 1,
+          "maximum": 1
+        },
+        "reward": {
+          "mean": 0.982,
+          "std": 0.0,
+          "median": 0.982,
+          "p90": 0.982,
+          "minimum": 0.982,
+          "maximum": 0.982
+        },
+        "steps": {
+          "mean": 10,
+          "std": 0.0,
+          "median": 10.0,
+          "p90": 10,
+          "minimum": 10,
+          "maximum": 10
+        },
+        "seconds": {
+          "mean": 0.004367748666894234,
+          "std": 0.000397676676987031,
+          "median": 0.004299050000554416,
+          "p90": 0.004551400001219008,
+          "minimum": 0.00411549999989802,
+          "maximum": 0.008803700002317782
+        },
+        "pooled": {
+          "tp": 240,
+          "fp": 0,
+          "fn": 0
+        },
+        "clean_false_findings": 0,
+        "complete_f1_episodes": 150
+      },
+      "untrained": {
+        "episodes": 150,
+        "precision": {
+          "mean": 0,
+          "std": 0.0,
+          "median": 0.0,
+          "p90": 0,
+          "minimum": 0,
+          "maximum": 0
+        },
+        "recall": {
+          "mean": 0.0,
+          "std": 0.0,
+          "median": 0.0,
+          "p90": 0.0,
+          "minimum": 0,
+          "maximum": 0
+        },
+        "f1": {
+          "mean": 0.2,
+          "std": 0.4,
+          "median": 0.0,
+          "p90": 1,
+          "minimum": 0.0,
+          "maximum": 1
+        },
+        "reward": {
+          "mean": -0.6016,
+          "std": 0.7968,
+          "median": -1.0,
+          "p90": 0.992,
+          "minimum": -1,
+          "maximum": 0.992
+        },
+        "steps": {
+          "mean": 5,
+          "std": 0.0,
+          "median": 5.0,
+          "p90": 5,
+          "minimum": 5,
+          "maximum": 5
+        },
+        "seconds": {
+          "mean": 0.0021741166666712766,
+          "std": 8.476872257580191e-05,
+          "median": 0.002165350000723265,
+          "p90": 0.0022471999982371926,
+          "minimum": 0.0020517000011750497,
+          "maximum": 0.0029304999989108182
+        },
+        "pooled": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 240
+        },
+        "clean_false_findings": 0,
+        "complete_f1_episodes": 30
+      },
+      "random": {
+        "episodes": 150,
+        "precision": {
+          "mean": 0,
+          "std": 0.0,
+          "median": 0.0,
+          "p90": 0,
+          "minimum": 0,
+          "maximum": 0
+        },
+        "recall": {
+          "mean": 0.0,
+          "std": 0.0,
+          "median": 0.0,
+          "p90": 0.0,
+          "minimum": 0,
+          "maximum": 0
+        },
+        "f1": {
+          "mean": 0.2,
+          "std": 0.4,
+          "median": 0.0,
+          "p90": 1,
+          "minimum": 0.0,
+          "maximum": 1
+        },
+        "reward": {
+          "mean": -0.6032,
+          "std": 0.7936,
+          "median": -1.0,
+          "p90": 0.984,
+          "minimum": -1,
+          "maximum": 0.984
+        },
+        "steps": {
+          "mean": 9,
+          "std": 0.0,
+          "median": 9.0,
+          "p90": 9,
+          "minimum": 9,
+          "maximum": 9
+        },
+        "seconds": {
+          "mean": 0.003590203333296813,
+          "std": 8.912565211788003e-05,
+          "median": 0.0035953500009782147,
+          "p90": 0.003675400002975948,
+          "minimum": 0.003329799998027738,
+          "maximum": 0.003966999996919185
+        },
+        "pooled": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 240
+        },
+        "clean_false_findings": 0,
+        "complete_f1_episodes": 30
+      },
+      "reconciliation": {
+        "episodes": 150,
+        "precision": {
+          "mean": 0.8,
+          "std": 0.4,
+          "median": 1.0,
+          "p90": 1.0,
+          "minimum": 0,
+          "maximum": 1.0
+        },
+        "recall": {
+          "mean": 0.8,
+          "std": 0.4,
+          "median": 1.0,
+          "p90": 1.0,
+          "minimum": 0,
+          "maximum": 1.0
+        },
+        "f1": {
+          "mean": 1.0,
+          "std": 0.0,
+          "median": 1.0,
+          "p90": 1.0,
+          "minimum": 1,
+          "maximum": 1
+        },
+        "reward": {
+          "mean": 0.982,
+          "std": 0.0,
+          "median": 0.982,
+          "p90": 0.982,
+          "minimum": 0.982,
+          "maximum": 0.982
+        },
+        "steps": {
+          "mean": 10,
+          "std": 0.0,
+          "median": 10.0,
+          "p90": 10,
+          "minimum": 10,
+          "maximum": 10
+        },
+        "seconds": {
+          "mean": 0.004046921999979532,
+          "std": 0.00013436967253209275,
+          "median": 0.0040140999990398996,
+          "p90": 0.004202299998723902,
+          "minimum": 0.003832300004432909,
+          "maximum": 0.0045412000035867095
+        },
+        "pooled": {
+          "tp": 240,
+          "fp": 0,
+          "fn": 0
+        },
+        "clean_false_findings": 0,
+        "complete_f1_episodes": 150
+      }
+    },
+    "mixed": {
+      "baseline": {
+        "episodes": 150,
+        "precision": {
+          "mean": 0.8,
+          "std": 0.4,
+          "median": 1.0,
+          "p90": 1.0,
+          "minimum": 0,
+          "maximum": 1.0
+        },
+        "recall": {
+          "mean": 0.4,
+          "std": 0.2,
+          "median": 0.5,
+          "p90": 0.5,
+          "minimum": 0,
+          "maximum": 0.5
+        },
+        "f1": {
+          "mean": 0.7333333333333333,
+          "std": 0.13333333333333336,
+          "median": 0.6666666666666666,
+          "p90": 1,
+          "minimum": 0.6666666666666666,
+          "maximum": 1
+        },
+        "reward": {
+          "mean": 0.39933333333333326,
+          "std": 0.268114635515814,
+          "median": 0.25733333333333325,
+          "p90": 0.922,
+          "minimum": 0.24533333333333326,
+          "maximum": 0.97
+        },
+        "steps": {
+          "mean": 34.666666666666664,
+          "std": 11.066867468057778,
+          "median": 39.0,
+          "p90": 45,
+          "minimum": 16,
+          "maximum": 45
+        },
+        "seconds": {
+          "mean": 0.003072438000138694,
+          "std": 0.00035853022741845817,
+          "median": 0.0031153000018093735,
+          "p90": 0.003478200000245124,
+          "minimum": 0.0024195999940275215,
+          "maximum": 0.0042277000029571354
+        },
+        "pooled": {
+          "tp": 240,
+          "fp": 0,
+          "fn": 240
+        },
+        "clean_false_findings": 0,
+        "complete_f1_episodes": 30
+      },
+      "candidate": {
+        "episodes": 150,
+        "precision": {
+          "mean": 0.8,
+          "std": 0.4,
+          "median": 1.0,
+          "p90": 1.0,
+          "minimum": 0,
+          "maximum": 1.0
+        },
+        "recall": {
+          "mean": 0.8,
+          "std": 0.4,
+          "median": 1.0,
+          "p90": 1.0,
+          "minimum": 0,
+          "maximum": 1.0
+        },
+        "f1": {
+          "mean": 1.0,
+          "std": 0.0,
+          "median": 1.0,
+          "p90": 1.0,
+          "minimum": 1,
+          "maximum": 1
+        },
+        "reward": {
+          "mean": 0.982,
+          "std": 0.0,
+          "median": 0.982,
+          "p90": 0.982,
+          "minimum": 0.982,
+          "maximum": 0.982
+        },
+        "steps": {
+          "mean": 10,
+          "std": 0.0,
+          "median": 10.0,
+          "p90": 10,
+          "minimum": 10,
+          "maximum": 10
+        },
+        "seconds": {
+          "mean": 0.004518179333002384,
+          "std": 0.0004948312149317188,
+          "median": 0.004455800000869203,
+          "p90": 0.004716299998108298,
+          "minimum": 0.004160500000580214,
+          "maximum": 0.009093900000152644
+        },
+        "pooled": {
+          "tp": 480,
+          "fp": 0,
+          "fn": 0
+        },
+        "clean_false_findings": 0,
+        "complete_f1_episodes": 150
+      },
+      "untrained": {
+        "episodes": 150,
+        "precision": {
+          "mean": 0,
+          "std": 0.0,
+          "median": 0.0,
+          "p90": 0,
+          "minimum": 0,
+          "maximum": 0
+        },
+        "recall": {
+          "mean": 0.0,
+          "std": 0.0,
+          "median": 0.0,
+          "p90": 0.0,
+          "minimum": 0,
+          "maximum": 0
+        },
+        "f1": {
+          "mean": 0.2,
+          "std": 0.4,
+          "median": 0.0,
+          "p90": 1,
+          "minimum": 0.0,
+          "maximum": 1
+        },
+        "reward": {
+          "mean": -0.6016,
+          "std": 0.7968,
+          "median": -1.0,
+          "p90": 0.992,
+          "minimum": -1,
+          "maximum": 0.992
+        },
+        "steps": {
+          "mean": 5,
+          "std": 0.0,
+          "median": 5.0,
+          "p90": 5,
+          "minimum": 5,
+          "maximum": 5
+        },
+        "seconds": {
+          "mean": 0.002272698667026513,
+          "std": 0.0006728444504919314,
+          "median": 0.002182050004194025,
+          "p90": 0.0023199999995995313,
+          "minimum": 0.002056299999821931,
+          "maximum": 0.010326600000553299
+        },
+        "pooled": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 480
+        },
+        "clean_false_findings": 0,
+        "complete_f1_episodes": 30
+      },
+      "random": {
+        "episodes": 150,
+        "precision": {
+          "mean": 0,
+          "std": 0.0,
+          "median": 0.0,
+          "p90": 0,
+          "minimum": 0,
+          "maximum": 0
+        },
+        "recall": {
+          "mean": 0.0,
+          "std": 0.0,
+          "median": 0.0,
+          "p90": 0.0,
+          "minimum": 0,
+          "maximum": 0
+        },
+        "f1": {
+          "mean": 0.2,
+          "std": 0.4,
+          "median": 0.0,
+          "p90": 1,
+          "minimum": 0.0,
+          "maximum": 1
+        },
+        "reward": {
+          "mean": -0.6032,
+          "std": 0.7936,
+          "median": -1.0,
+          "p90": 0.984,
+          "minimum": -1,
+          "maximum": 0.984
+        },
+        "steps": {
+          "mean": 9,
+          "std": 0.0,
+          "median": 9.0,
+          "p90": 9,
+          "minimum": 9,
+          "maximum": 9
+        },
+        "seconds": {
+          "mean": 0.003771558666533868,
+          "std": 0.0005990222065729288,
+          "median": 0.00361565000275732,
+          "p90": 0.004061799998453353,
+          "minimum": 0.0033907999968505464,
+          "maximum": 0.007777500002703164
+        },
+        "pooled": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 480
+        },
+        "clean_false_findings": 0,
+        "complete_f1_episodes": 30
+      },
+      "reconciliation": {
+        "episodes": 150,
+        "precision": {
+          "mean": 0.8,
+          "std": 0.4,
+          "median": 1.0,
+          "p90": 1.0,
+          "minimum": 0,
+          "maximum": 1.0
+        },
+        "recall": {
+          "mean": 0.8,
+          "std": 0.4,
+          "median": 1.0,
+          "p90": 1.0,
+          "minimum": 0,
+          "maximum": 1.0
+        },
+        "f1": {
+          "mean": 1.0,
+          "std": 0.0,
+          "median": 1.0,
+          "p90": 1.0,
+          "minimum": 1,
+          "maximum": 1
+        },
+        "reward": {
+          "mean": 0.982,
+          "std": 0.0,
+          "median": 0.982,
+          "p90": 0.982,
+          "minimum": 0.982,
+          "maximum": 0.982
+        },
+        "steps": {
+          "mean": 10,
+          "std": 0.0,
+          "median": 10.0,
+          "p90": 10,
+          "minimum": 10,
+          "maximum": 10
+        },
+        "seconds": {
+          "mean": 0.004535428000041672,
+          "std": 0.0006684246040809082,
+          "median": 0.004364950000308454,
+          "p90": 0.005007399995520245,
+          "minimum": 0.0038009000054444186,
+          "maximum": 0.008554000000003725
+        },
+        "pooled": {
+          "tp": 480,
+          "fp": 0,
+          "fn": 0
+        },
+        "clean_false_findings": 0,
+        "complete_f1_episodes": 150
+      }
+    },
+    "clean": {
+      "baseline": {
+        "episodes": 150,
+        "precision": {
+          "mean": 0,
+          "std": 0.0,
+          "median": 0.0,
+          "p90": 0,
+          "minimum": 0,
+          "maximum": 0
+        },
+        "recall": {
+          "mean": 0,
+          "std": 0.0,
+          "median": 0.0,
+          "p90": 0,
+          "minimum": 0,
+          "maximum": 0
+        },
+        "f1": {
+          "mean": 1,
+          "std": 0.0,
+          "median": 1.0,
+          "p90": 1,
+          "minimum": 1,
+          "maximum": 1
+        },
+        "reward": {
+          "mean": 0.93344,
+          "std": 0.022936573414527258,
+          "median": 0.924,
+          "p90": 0.966,
+          "minimum": 0.912,
+          "maximum": 0.972
+        },
+        "steps": {
+          "mean": 34.28,
+          "std": 11.468286707263644,
+          "median": 39.0,
+          "p90": 45,
+          "minimum": 15,
+          "maximum": 45
+        },
+        "seconds": {
+          "mean": 0.003253221333482846,
+          "std": 0.0004728700967008374,
+          "median": 0.0032553500022913795,
+          "p90": 0.0037894000051892363,
+          "minimum": 0.002404200000455603,
+          "maximum": 0.005070899998827372
+        },
+        "pooled": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "clean_false_findings": 0,
+        "complete_f1_episodes": 150
+      },
+      "candidate": {
+        "episodes": 150,
+        "precision": {
+          "mean": 0,
+          "std": 0.0,
+          "median": 0.0,
+          "p90": 0,
+          "minimum": 0,
+          "maximum": 0
+        },
+        "recall": {
+          "mean": 0,
+          "std": 0.0,
+          "median": 0.0,
+          "p90": 0,
+          "minimum": 0,
+          "maximum": 0
+        },
+        "f1": {
+          "mean": 1,
+          "std": 0.0,
+          "median": 1.0,
+          "p90": 1,
+          "minimum": 1,
+          "maximum": 1
+        },
+        "reward": {
+          "mean": 0.982,
+          "std": 0.0,
+          "median": 0.982,
+          "p90": 0.982,
+          "minimum": 0.982,
+          "maximum": 0.982
+        },
+        "steps": {
+          "mean": 10,
+          "std": 0.0,
+          "median": 10.0,
+          "p90": 10,
+          "minimum": 10,
+          "maximum": 10
+        },
+        "seconds": {
+          "mean": 0.004636758666698976,
+          "std": 0.0007070295462977163,
+          "median": 0.004472100001294166,
+          "p90": 0.005037099996116012,
+          "minimum": 0.004189799998130184,
+          "maximum": 0.01194499999837717
+        },
+        "pooled": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "clean_false_findings": 0,
+        "complete_f1_episodes": 150
+      },
+      "untrained": {
+        "episodes": 150,
+        "precision": {
+          "mean": 0,
+          "std": 0.0,
+          "median": 0.0,
+          "p90": 0,
+          "minimum": 0,
+          "maximum": 0
+        },
+        "recall": {
+          "mean": 0,
+          "std": 0.0,
+          "median": 0.0,
+          "p90": 0,
+          "minimum": 0,
+          "maximum": 0
+        },
+        "f1": {
+          "mean": 1,
+          "std": 0.0,
+          "median": 1.0,
+          "p90": 1,
+          "minimum": 1,
+          "maximum": 1
+        },
+        "reward": {
+          "mean": 0.992,
+          "std": 0.0,
+          "median": 0.992,
+          "p90": 0.992,
+          "minimum": 0.992,
+          "maximum": 0.992
+        },
+        "steps": {
+          "mean": 5,
+          "std": 0.0,
+          "median": 5.0,
+          "p90": 5,
+          "minimum": 5,
+          "maximum": 5
+        },
+        "seconds": {
+          "mean": 0.0022287166667714093,
+          "std": 0.00013715501558615986,
+          "median": 0.0021812499981024303,
+          "p90": 0.002361999999266118,
+          "minimum": 0.0020218000063323416,
+          "maximum": 0.0030783999973209575
+        },
+        "pooled": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "clean_false_findings": 0,
+        "complete_f1_episodes": 150
+      },
+      "random": {
+        "episodes": 150,
+        "precision": {
+          "mean": 0,
+          "std": 0.0,
+          "median": 0.0,
+          "p90": 0,
+          "minimum": 0,
+          "maximum": 0
+        },
+        "recall": {
+          "mean": 0,
+          "std": 0.0,
+          "median": 0.0,
+          "p90": 0,
+          "minimum": 0,
+          "maximum": 0
+        },
+        "f1": {
+          "mean": 1,
+          "std": 0.0,
+          "median": 1.0,
+          "p90": 1,
+          "minimum": 1,
+          "maximum": 1
+        },
+        "reward": {
+          "mean": 0.984,
+          "std": 0.0,
+          "median": 0.984,
+          "p90": 0.984,
+          "minimum": 0.984,
+          "maximum": 0.984
+        },
+        "steps": {
+          "mean": 9,
+          "std": 0.0,
+          "median": 9.0,
+          "p90": 9,
+          "minimum": 9,
+          "maximum": 9
+        },
+        "seconds": {
+          "mean": 0.0036769000001853178,
+          "std": 0.00020582806943666223,
+          "median": 0.0036144500008958858,
+          "p90": 0.003930899998522364,
+          "minimum": 0.003373699997609947,
+          "maximum": 0.004460500000277534
+        },
+        "pooled": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "clean_false_findings": 0,
+        "complete_f1_episodes": 150
+      },
+      "reconciliation": {
+        "episodes": 150,
+        "precision": {
+          "mean": 0,
+          "std": 0.0,
+          "median": 0.0,
+          "p90": 0,
+          "minimum": 0,
+          "maximum": 0
+        },
+        "recall": {
+          "mean": 0,
+          "std": 0.0,
+          "median": 0.0,
+          "p90": 0,
+          "minimum": 0,
+          "maximum": 0
+        },
+        "f1": {
+          "mean": 1,
+          "std": 0.0,
+          "median": 1.0,
+          "p90": 1,
+          "minimum": 1,
+          "maximum": 1
+        },
+        "reward": {
+          "mean": 0.982,
+          "std": 0.0,
+          "median": 0.982,
+          "p90": 0.982,
+          "minimum": 0.982,
+          "maximum": 0.982
+        },
+        "steps": {
+          "mean": 10,
+          "std": 0.0,
+          "median": 10.0,
+          "p90": 10,
+          "minimum": 10,
+          "maximum": 10
+        },
+        "seconds": {
+          "mean": 0.0043364386669418305,
+          "std": 0.000501296908882462,
+          "median": 0.004226850000122795,
+          "p90": 0.004772300002514385,
+          "minimum": 0.0038887999980943277,
+          "maximum": 0.008007100004761014
+        },
+        "pooled": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "clean_false_findings": 0,
+        "complete_f1_episodes": 150
+      }
+    },
+    "recognition": {
+      "baseline": {
+        "episodes": 150,
+        "precision": {
+          "mean": 0.5,
+          "std": 0.5,
+          "median": 0.5,
+          "p90": 1.0,
+          "minimum": 0,
+          "maximum": 1.0
+        },
+        "recall": {
+          "mean": 0.5,
+          "std": 0.5,
+          "median": 0.5,
+          "p90": 1.0,
+          "minimum": 0,
+          "maximum": 1.0
+        },
+        "f1": {
+          "mean": 1.0,
+          "std": 0.0,
+          "median": 1.0,
+          "p90": 1.0,
+          "minimum": 1,
+          "maximum": 1
+        },
+        "reward": {
+          "mean": 0.912,
+          "std": 0.0,
+          "median": 0.912,
+          "p90": 0.912,
+          "minimum": 0.912,
+          "maximum": 0.912
+        },
+        "steps": {
+          "mean": 45,
+          "std": 0.0,
+          "median": 45.0,
+          "p90": 45,
+          "minimum": 45,
+          "maximum": 45
+        },
+        "seconds": {
+          "mean": 0.0035881206665847763,
+          "std": 0.0006179789109837747,
+          "median": 0.0033745999971870333,
+          "p90": 0.004026000002340879,
+          "minimum": 0.003193100004864391,
+          "maximum": 0.007231900002807379
+        },
+        "pooled": {
+          "tp": 150,
+          "fp": 0,
+          "fn": 0
+        },
+        "clean_false_findings": 0,
+        "complete_f1_episodes": 150
+      },
+      "candidate": {
+        "episodes": 150,
+        "precision": {
+          "mean": 0.5,
+          "std": 0.5,
+          "median": 0.5,
+          "p90": 1.0,
+          "minimum": 0,
+          "maximum": 1.0
+        },
+        "recall": {
+          "mean": 0.5,
+          "std": 0.5,
+          "median": 0.5,
+          "p90": 1.0,
+          "minimum": 0,
+          "maximum": 1.0
+        },
+        "f1": {
+          "mean": 1.0,
+          "std": 0.0,
+          "median": 1.0,
+          "p90": 1.0,
+          "minimum": 1,
+          "maximum": 1
+        },
+        "reward": {
+          "mean": 0.99,
+          "std": 0.0,
+          "median": 0.99,
+          "p90": 0.99,
+          "minimum": 0.99,
+          "maximum": 0.99
+        },
+        "steps": {
+          "mean": 6,
+          "std": 0.0,
+          "median": 6.0,
+          "p90": 6,
+          "minimum": 6,
+          "maximum": 6
+        },
+        "seconds": {
+          "mean": 0.003172848666727077,
+          "std": 0.000794625454484856,
+          "median": 0.0029170999987400137,
+          "p90": 0.0035270000007585622,
+          "minimum": 0.0027109000002383254,
+          "maximum": 0.008255700005975086
+        },
+        "pooled": {
+          "tp": 150,
+          "fp": 0,
+          "fn": 0
+        },
+        "clean_false_findings": 0,
+        "complete_f1_episodes": 150
+      },
+      "untrained": {
+        "episodes": 150,
+        "precision": {
+          "mean": 0,
+          "std": 0.0,
+          "median": 0.0,
+          "p90": 0,
+          "minimum": 0,
+          "maximum": 0
+        },
+        "recall": {
+          "mean": 0.0,
+          "std": 0.0,
+          "median": 0.0,
+          "p90": 0.0,
+          "minimum": 0,
+          "maximum": 0
+        },
+        "f1": {
+          "mean": 0.5,
+          "std": 0.5,
+          "median": 0.5,
+          "p90": 1,
+          "minimum": 0.0,
+          "maximum": 1
+        },
+        "reward": {
+          "mean": -0.0040000000000000036,
+          "std": 0.996,
+          "median": -0.0040000000000000036,
+          "p90": 0.992,
+          "minimum": -1,
+          "maximum": 0.992
+        },
+        "steps": {
+          "mean": 5,
+          "std": 0.0,
+          "median": 5.0,
+          "p90": 5,
+          "minimum": 5,
+          "maximum": 5
+        },
+        "seconds": {
+          "mean": 0.0022819033335448086,
+          "std": 0.00024284466052894782,
+          "median": 0.0021929499998805113,
+          "p90": 0.002497000001312699,
+          "minimum": 0.0020549999971990474,
+          "maximum": 0.0037585000027320348
+        },
+        "pooled": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 150
+        },
+        "clean_false_findings": 0,
+        "complete_f1_episodes": 75
+      },
+      "random": {
+        "episodes": 150,
+        "precision": {
+          "mean": 0,
+          "std": 0.0,
+          "median": 0.0,
+          "p90": 0,
+          "minimum": 0,
+          "maximum": 0
+        },
+        "recall": {
+          "mean": 0.0,
+          "std": 0.0,
+          "median": 0.0,
+          "p90": 0.0,
+          "minimum": 0,
+          "maximum": 0
+        },
+        "f1": {
+          "mean": 0.5,
+          "std": 0.5,
+          "median": 0.5,
+          "p90": 1,
+          "minimum": 0.0,
+          "maximum": 1
+        },
+        "reward": {
+          "mean": -0.008000000000000007,
+          "std": 0.992,
+          "median": -0.008000000000000007,
+          "p90": 0.984,
+          "minimum": -1,
+          "maximum": 0.984
+        },
+        "steps": {
+          "mean": 9,
+          "std": 0.0,
+          "median": 9.0,
+          "p90": 9,
+          "minimum": 9,
+          "maximum": 9
+        },
+        "seconds": {
+          "mean": 0.003638739333158204,
+          "std": 0.000239353901867032,
+          "median": 0.0035616999994090293,
+          "p90": 0.003888700004608836,
+          "minimum": 0.003416800005652476,
+          "maximum": 0.005360900002415292
+        },
+        "pooled": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 150
+        },
+        "clean_false_findings": 0,
+        "complete_f1_episodes": 75
+      },
+      "reconciliation": {
+        "episodes": 150,
+        "precision": {
+          "mean": 0.5,
+          "std": 0.5,
+          "median": 0.5,
+          "p90": 1.0,
+          "minimum": 0,
+          "maximum": 1.0
+        },
+        "recall": {
+          "mean": 0.5,
+          "std": 0.5,
+          "median": 0.5,
+          "p90": 1.0,
+          "minimum": 0,
+          "maximum": 1.0
+        },
+        "f1": {
+          "mean": 1.0,
+          "std": 0.0,
+          "median": 1.0,
+          "p90": 1.0,
+          "minimum": 1,
+          "maximum": 1
+        },
+        "reward": {
+          "mean": 0.982,
+          "std": 0.0,
+          "median": 0.982,
+          "p90": 0.982,
+          "minimum": 0.982,
+          "maximum": 0.982
+        },
+        "steps": {
+          "mean": 10,
+          "std": 0.0,
+          "median": 10.0,
+          "p90": 10,
+          "minimum": 10,
+          "maximum": 10
+        },
+        "seconds": {
+          "mean": 0.0043397153338203985,
+          "std": 0.0004614166666720725,
+          "median": 0.004207199999655131,
+          "p90": 0.004874199999903794,
+          "minimum": 0.003900199997588061,
+          "maximum": 0.00665580000350019
+        },
+        "pooled": {
+          "tp": 150,
+          "fp": 0,
+          "fn": 0
+        },
+        "clean_false_findings": 0,
+        "complete_f1_episodes": 150
+      }
+    }
+  }
+}

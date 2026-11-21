@@ -1,7 +1,7 @@
 import React,{useEffect,useLayoutEffect,useRef,useState} from 'react';
 import {X,FileText,FlaskConical,ScanLine,ShieldCheck,Layers3} from 'lucide-react';
 
-export default function Tutorial({t,step,onNext,onClose,busy,selector}){
+export default function Tutorial({t,step,onNext,onClose,busy,selector,prefix='guide',total=5}){
   const panel=useRef();const [box,setBox]=useState(null);const [size,setSize]=useState({w:370,h:300});
   useLayoutEffect(()=>{
     let target;let raf;
@@ -16,7 +16,8 @@ export default function Tutorial({t,step,onNext,onClose,busy,selector}){
     target?.scrollIntoView({block:'center',behavior:'instant'});
     locate();window.addEventListener('resize',update);window.addEventListener('scroll',update,true);
     const observer=new ResizeObserver(update);if(target)observer.observe(target);
-    return()=>{cancelAnimationFrame(raf);observer.disconnect();window.removeEventListener('resize',update);window.removeEventListener('scroll',update,true);};
+    const mutation=new MutationObserver(update);mutation.observe(document.querySelector('.work-content')||document.body,{childList:true,subtree:true});
+    return()=>{cancelAnimationFrame(raf);observer.disconnect();mutation.disconnect();window.removeEventListener('resize',update);window.removeEventListener('scroll',update,true);};
   },[step,selector,busy]);
   useLayoutEffect(()=>{if(panel.current){const r=panel.current.getBoundingClientRect();setSize({w:r.width,h:r.height});}},[step,t]);
   useEffect(()=>{panel.current?.querySelector('button')?.focus({preventScroll:true});},[step]);
@@ -43,10 +44,10 @@ export default function Tutorial({t,step,onNext,onClose,busy,selector}){
       <svg className="tour-arrow" width="100%" height="100%" aria-hidden="true"><defs><marker id="tour-tip" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="none" stroke="#89d8f1" strokeWidth="1.5"/></marker></defs><path d={`M${anchor.x} ${anchor.y} Q${anchor.x+(target.x-anchor.x)*.7} ${anchor.y} ${target.x} ${target.y}`} fill="none" stroke="#89d8f1" strokeWidth="2" strokeDasharray="5 5" markerEnd="url(#tour-tip)"/></svg>
     </>:<div className="tour-shade full-shade"/>}
     <section ref={panel} className="guided-panel" style={{left,top}} role="dialog" aria-modal="true" aria-labelledby="tour-title">
-      <div className="tour-top"><span>{step+1} / 5</span><button className="icon-button" onClick={onClose} aria-label={t('close')}><X size={19}/></button></div>
-      <div className="guided-title"><Icon size={24}/><h2 id="tour-title">{t('guide'+step)}</h2></div>
-      <p>{t('guide'+step+'Body')}</p>
-      <div className="tour-bottom"><button className="text-button" onClick={onClose}>{t('tutorialSkip')}</button><button className="button primary" disabled={busy} onClick={onNext}>{busy?t('loading'):t('guide'+step+'Action')}</button></div>
+      <div className="tour-top"><span>{step+1} / {total}</span><button className="icon-button" onClick={onClose} aria-label={t('close')}><X size={19}/></button></div>
+      <div className="guided-title"><Icon size={24}/><h2 id="tour-title">{t(prefix+step)}</h2></div>
+      <p>{t(prefix+step+'Body')}</p>
+      <div className="tour-bottom"><button className="text-button" onClick={onClose}>{t('tutorialSkip')}</button><button className="button primary" disabled={busy} onClick={onNext}>{busy?t('loading'):t(prefix+step+'Action')}</button></div>
     </section>
   </div>;
 }
