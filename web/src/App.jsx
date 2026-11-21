@@ -7,11 +7,12 @@ import Scanner from './Scanner.jsx';
 import Disassembly from './Disassembly.jsx';
 import Finale from './Finale.jsx';
 import Tutorial from './Tutorial.jsx';
+import TrainingLab from './TrainingLab.jsx';
 import {dictionaries,issueTypes} from './i18n.js';
 import {api,detectBackend,getBackend,getTrajectory,download} from './api.js';
 gsap.registerPlugin(ScrollTrigger,useGSAP);
-const tabs=['episodes','records','documents','findings','trajectories','evaluation'];
-const iconByTab=[FlaskConical,Layers3,FolderOpen,ScanLine,BookOpen,ShieldCheck];
+const tabs=['episodes','records','documents','findings','trajectories','evaluation','trainingLab'];
+const iconByTab=[FlaskConical,Layers3,FolderOpen,ScanLine,BookOpen,ShieldCheck,FlaskConical];
 const br=text=>text.split('\n').map((s,i)=><React.Fragment key={i}>{i>0&&<br/>}{s}</React.Fragment>);
 const format=(n,currency='KZT',lang='ru')=>new Intl.NumberFormat(lang==='kk'?'kk-KZ':lang==='ru'?'ru-RU':'en-US',{style:'currency',currency,maximumFractionDigits:2}).format(Number(n)/10**(currency==='JPY'?0:2));
 
@@ -132,6 +133,7 @@ function Workspace({t,lang,setLang,user,onLogout,onHome}){
     <div className="work-content" ref={pageRef}><div className="work-context"><span>{t('training')}</span><span>{t(getBackend()==='browser'?'browserMode':'nativeMode')}</span></div>
       {error&&<div className="error-banner" role="alert">{error}<button className="icon-button" onClick={()=>setError('')} aria-label={t('close')}><X size={16}/></button></div>}
       {busy&&<div className="loading-strip" role="status"><span/>{t('loading')}</div>}
+      <div style={{display:tab==='trainingLab'?'block':'none'}}><TrainingLab lang={lang} hasEpisode={!!initial&&!done} onInvestigation={value=>{if(value.result){setRemaining(value.result[0].steps_remaining);setDone(value.result[2]||value.result[3]);setTruncated(value.result[3]);}setReport(value.report);setTrajectory(value.trajectory||[]);const submit=value.trajectory?.findLast(x=>x.action.tool==='submit');if(submit)setFindings(submit.action.findings.findings);setTab('findings');}}/></div>
       {tab==='episodes'&&<>
         <div className="work-heading"><div><h1>{t(initial?'episodes':'welcome')}</h1><p>{t(initial?'nextBody':'welcomeBody')}</p></div>{initial&&<div className="budget"><b>{remaining}</b><span>{t('remaining')}</span></div>}</div>
         <div className="episode-layout"><section className="episode-config"><div className="panel-title"><FlaskConical size={22}/><h2>{t(initial?'newEpisode':'createEpisode')}</h2></div><label>{t('difficulty')}<select value={scenario} onChange={e=>setScenario(e.target.value)}>{['mixed','recognition','clean','interact1','interact2'].map(k=><option key={k} value={k}>{t(k)}</option>)}</select></label>{scenario==='recognition'&&<p className="small-note">{t('recognitionHint')}</p>}<label>{t('seed')}<input type="number" min="0" max="4294967295" value={seed} onChange={e=>setSeed(e.target.value)} placeholder={t('optionalSeed')}/></label><button className="button primary full" onClick={tour===0?advanceTour:create} disabled={busy}><Plus size={18}/>{t('createEpisode')}</button>{getBackend()==='browser'&&<p className="small-note">{t('browserHint')}</p>}</section>

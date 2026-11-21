@@ -19,6 +19,7 @@ async function digestPassword(password,salt){
   const bits=await crypto.subtle.deriveBits({name:'PBKDF2',salt:new TextEncoder().encode(salt),iterations:210000,hash:'SHA-256'},key,256);
   return Array.from(new Uint8Array(bits),x=>x.toString(16).padStart(2,'0')).join('');
 }
+export async function trainingApi(path,payload={}){return rpc(path,payload);}
 export async function api(path,payload={}){
   if(backend==='python'){
     const response=await fetch('/api/'+path,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
