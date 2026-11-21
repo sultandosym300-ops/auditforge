@@ -58,9 +58,7 @@ def published_generator():
                                        cwd=ROOT, stderr=subprocess.DEVNULL)
     except (OSError, subprocess.CalledProcessError):
         from_git = False
-        data = (ROOT/"scripts/controls/generator_114.py").read_bytes().replace(b"
-", b"
-")
+        data = (ROOT/"scripts/controls/generator_114.py").read_bytes().replace(bytes([13,10]),bytes([10]))
         import hashlib
         if hashlib.sha256(data).hexdigest() != "69efd8453df2a7e9bf20648df530da0c9e6ffec8ae86b75ed7adf59ffd9132a1":
             raise RuntimeError("Frozen reference source has changed")
