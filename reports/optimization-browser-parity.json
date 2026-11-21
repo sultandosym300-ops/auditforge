@@ -1,0 +1,109 @@
+{
+  "passed": true,
+  "training_episodes": 100,
+  "max_weight_absolute_difference": 6.938893903907228e-18,
+  "numerical_tolerance": 1e-12,
+  "holdout_metric_differences": {
+    "untrained.f1": 0.0,
+    "untrained.precision": 0.0,
+    "untrained.recall": 0.0,
+    "untrained.reward": 0.0,
+    "untrained.steps": 0.0,
+    "trained.f1": 0.0,
+    "trained.precision": 0.0,
+    "trained.recall": 0.0,
+    "trained.reward": 2.220446049250313e-16,
+    "trained.steps": 0.0,
+    "random.f1": 0.0,
+    "random.precision": 0.0,
+    "random.recall": 0.0,
+    "random.reward": 0.0,
+    "random.steps": 0.0,
+    "reconciliation.f1": 0.0,
+    "reconciliation.precision": 0.0,
+    "reconciliation.recall": 0.0,
+    "reconciliation.reward": 0.0,
+    "reconciliation.steps": 0.0
+  },
+  "excluded_from_comparison": [
+    "seconds"
+  ],
+  "browser_results": {
+    "episodes": 100,
+    "weights": [
+      -0.04109646254265233,
+      0,
+      0.958903537457348,
+      0.958903537457348,
+      0.958903537457348,
+      0,
+      0.9205473959590543,
+      -1.0450152322577377,
+      0,
+      -0.04501523225773839,
+      -0.04501523225773839,
+      -0.04501523225773839,
+      0,
+      -0.042394830902548704,
+      -0.8994281473017057,
+      0,
+      0.10057185269829415,
+      0.10057185269829415,
+      0.10057185269829415,
+      0,
+      0.09504838656981628
+    ],
+    "holdout": [
+      {
+        "policy": "untrained",
+        "episodes": 12,
+        "precision": 0,
+        "recall": 0,
+        "f1": 0.25,
+        "reward": -0.502,
+        "steps": 5,
+        "seconds": 0.006608333250000283
+      },
+      {
+        "policy": "trained",
+        "episodes": 12,
+        "precision": 0.75,
+        "recall": 0.75,
+        "f1": 1,
+        "reward": 0.9899999999999999,
+        "steps": 6,
+        "seconds": 0.011116666749999856
+      },
+      {
+        "policy": "random",
+        "episodes": 12,
+        "precision": 0,
+        "recall": 0,
+        "f1": 0.25,
+        "reward": -0.504,
+        "steps": 9,
+        "seconds": 0.009399999999999853
+      },
+      {
+        "policy": "reconciliation",
+        "episodes": 12,
+        "precision": 0.75,
+        "recall": 0.75,
+        "f1": 1,
+        "reward": 0.9819999999999999,
+        "steps": 10,
+        "seconds": 0.0128416665833333
+      }
+    ],
+    "inference": {
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "reward": 0.988
+    },
+    "steps": 7
+  }
+}

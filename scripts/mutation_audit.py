@@ -21,6 +21,10 @@ import time
 ROOT = Path(__file__).resolve().parents[1]
 COMMAND = ['-m', 'unittest', 'discover', '-s', 'tests', '-v']
 MUTATIONS = (
+    dict(id='reverse_learned_acquisition_gradient', file='auditforge/efficient_training.py',
+         description='Reverse the policy gradient so terminal advantage discourages useful source acquisition.',
+         before='self.weights[gate*len(FEATURES)+j] += self.learning_rate*advantage*(action-p)*value',
+         after='self.weights[gate*len(FEATURES)+j] -= self.learning_rate*advantage*(action-p)*value'),
     dict(id='interaction_fx_missing_mirror_provenance', file='auditforge/generator.py',
          description='Record only the affected payable row while mutating both settlement sides.',
          before="actual-expected, rows)", after="actual-expected)"),
@@ -88,6 +92,7 @@ MUTATIONS = (
 
 
 EXPECTED_DETECTION = {
+    'reverse_learned_acquisition_gradient': 'Held-out acquisition accuracy and reward must improve after actual gradient updates.',
     'interaction_fx_missing_mirror_provenance': 'Causal replay must include both sides of every changed FX settlement.',
     'reverse_currency_exponent': 'JPY conversion must scale zero-exponent source to two-exponent base money correctly.',
     'counterfactual_book_uses_source_bit': 'Crossed source/book decisions must retain two independently provable period discrepancies.',

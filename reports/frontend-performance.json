@@ -1,0 +1,76 @@
+{
+  "scope": "Frontend delivery and bounded chart rendering, no GPU or cold-network latency improvement claimed",
+  "baseline": {
+    "entry_js_kb": 1190.97,
+    "entry_gzip_kb": 339.04,
+    "css_kb": 62.54,
+    "vite_build_seconds": 5.11
+  },
+  "candidate": {
+    "entry_js_kb": 645.55,
+    "entry_gzip_kb": 197.79,
+    "main_css_kb": 61.04,
+    "vite_build_seconds": 4.26,
+    "deferred_js_kb": {
+      "three": 516.97,
+      "Scanner": 5.35,
+      "EvidenceCore": 9.43,
+      "TrainingLab": 15.78
+    },
+    "deferred_css_kb": {
+      "TrainingLab": 1.5
+    }
+  },
+  "entry_change_percent": -45.8,
+  "initial_hero_js_estimate_kb": 1167.87,
+  "initial_hero_gzip_estimate_kb": 331.49,
+  "browser_checks": {
+    "initial_landing_excluded_chunks": [
+      "EvidenceCore",
+      "TrainingLab"
+    ],
+    "evidence_loaded_near_section": true,
+    "training_loaded_on_first_tab": true,
+    "training_agent_preserved_across_tabs": true,
+    "ui_training_completed_episodes_before_stop": 8,
+    "stop_no_later_updates": true,
+    "holdout_rows": 4,
+    "tabs": 7
+  },
+  "chart": {
+    "all_checkpoint_history_retained": true,
+    "max_displayed_polyline_points": 501,
+    "display_selection": "Per-bucket minimum and maximum reward in original order plus final sample",
+    "sampling_affects_training": false
+  },
+  "source_sha256": {
+    "web\\src\\App.jsx": "b69c761ea68bb04a2ce7c9abd917257f8f7a68e93c0c226ff5106e7e1a9cd313",
+    "web\\src\\Disassembly.jsx": "4fd61fc66727e8183a724826967b3445cf35dfd3bd2c372eaa0f6b832f406632",
+    "web\\src\\TrainingLab.jsx": "ea21b0446f1df8ab26ab5274f53936e31883c73cba8cbb4712bb04b0941c37ed"
+  },
+  "limitations": [
+    "Hero requires Three.js immediately, so initial total JS reduction is much smaller than entry-only reduction.",
+    "Summed lazy chunks are comparable to original application size; the change delays work rather than eliminating required code.",
+    "Single local build timings are not statistically controlled performance estimates.",
+    "Offscreen WebGL initialization is delayed by construction; GPU timing was not profiled."
+  ],
+  "final_validation": {
+    "entry_js_kb": 645.57,
+    "entry_gzip_kb": 197.8,
+    "native_pyodide_metric_tolerance": 1e-12,
+    "end_to_end": [
+      "create episode",
+      "inspect record and document",
+      "train",
+      "stop",
+      "continue",
+      "download",
+      "reload",
+      "restore",
+      "evaluate",
+      "run current episode",
+      "findings and trajectory",
+      "private fields absent"
+    ]
+  }
+}
