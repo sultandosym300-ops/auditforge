@@ -14,7 +14,7 @@ export default function TrainingLab({lang,onInvestigation,hasEpisode}){
  const stop=useRef(false),file=useRef();
  async function action(fn){setError('');setNotice('');try{await fn();}catch{setError(t('error'));}}
  function accept(cp){setCheckpoint(cp);setHistory(cp.history||[]);setScenario(cp.scenario);setSeed(cp.seed);setResult(null);}
- async function create(){await action(async()=>accept(await trainingApi('training_create',{seed:Number(seed),scenario})));}
+ async function create(){setRunning(true);await action(async()=>accept(await trainingApi('training_create',{seed:Number(seed),scenario})));setRunning(false);}
  async function train(){if(running)return;stop.current=false;setRunning(true);await action(async()=>{for(let i=0;i<Number(count)&&!stop.current;i++){const row=await trainingApi('training_step');setHistory(h=>[...h,row]);}const cp=await trainingApi('training_checkpoint');setCheckpoint(cp);localStorage.setItem('af-trained-agent',JSON.stringify({name,checkpoint:cp}));});setRunning(false);}
  async function save(){await action(async()=>{const cp=await trainingApi('training_checkpoint');const value={name,checkpoint:cp};localStorage.setItem('af-trained-agent',JSON.stringify(value));download('auditforge-agent.json',value);setNotice(t('saved'));});}
  async function importValue(value){const cp=await trainingApi('training_import',{checkpoint:value.checkpoint||value});accept(cp);setName(value.name||'Audit agent');}

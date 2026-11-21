@@ -8,7 +8,7 @@ function rpc(path,payload){
     worker.onmessage=({data})=>{const p=pending.get(data.id);if(p){clearTimeout(p.timer);pending.delete(data.id);data.error?p.reject(new Error(data.error)):p.resolve(data.result);}};
     worker.onerror=()=>{for(const p of pending.values()){clearTimeout(p.timer);p.reject(new Error('environment_error'));}pending.clear();worker.terminate();worker=null;};
   }
-  return new Promise((resolve,reject)=>{const id=++nextId;const timer=setTimeout(()=>{pending.delete(id);reject(new Error('environment_timeout'));},60000);pending.set(id,{resolve,reject,timer});worker.postMessage({id,path,payload});});
+  return new Promise((resolve,reject)=>{const id=++nextId;const timer=setTimeout(()=>{pending.delete(id);reject(new Error('environment_timeout'));},180000);pending.set(id,{resolve,reject,timer});worker.postMessage({id,path,payload});});
 }
 export async function detectBackend(){
   try{const response=await fetch('/api/me');if(response.headers.get('content-type')?.includes('application/json')){const value=await response.json();if(value.backend==='python'){backend='python';return value;}}}catch{}
