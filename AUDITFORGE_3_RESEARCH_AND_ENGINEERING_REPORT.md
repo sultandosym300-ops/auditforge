@@ -99,7 +99,7 @@ python -m scripts.ultimate_verify --seed 605198374621
 python -m scripts.optimization_benchmark --output work/v3-baseline-benchmark.json
 python -m scripts.v3_benchmark
 python -m scripts.v3_budget_probe
-python -m scripts.hypothesis_benchmark
+# Только в ветке research/auditforge-next: python -m scripts.hypothesis_benchmark
 python -m auditforge.shortcut_hunter --seed 821739504673 --output work/v3-shortcut-hunter.json
 npm --prefix web run build
 node scripts/check_worker_retry.mjs
@@ -119,3 +119,6 @@ node scripts/check_worker_retry.mjs
 
 Остаются ограничения: ручные финансовые признаки и арифметика; ограниченное пространство решений; процедурный синтетический мир; общий holdout для пяти checkpoints; отсутствие проверки переноса на внешние реальные данные; видимость локального браузерного вычисления владельцу браузера. Для недоверенной закрытой оценки нужен существующий изолированный broker, а не клиентский demo. Богатые модели и learned stopping — будущие проверяемые направления, не реализованные преимущества. Надёжность среды и доказуемость сравнения важнее добавления названия алгоритма.
 Дополнительная проверка пяти экспериментальных checkpoints на 25 контрфактических парах каждого: micro F1=1 и exact pair consistency=100% (`reports/hypothesis-counterfactual-experiment.json`). Это не отменяет два пропуска на основном holdout и решение не заменять V2. Исходники отклонённой модели, её тесты и скрипт сохранены только в ветке `research/auditforge-next`; воспроизводить этот опыт следует там. В рабочем релизе остаются измеренные отчёты, но экспериментальный формат модели недоступен.
+
+
+Проверка релизного дерева после исключения отклонённой модели: 132 Python-теста прошли. В исследовательском дереве до отделения — 140, включая восемь тестов кандидата. Локальный mutation-аудит обнаружил 20/20 намеренных дефектов, survivors/errors отсутствуют. Проверка экрана шириной 390 px: ширина документа 390 px, таблицы прокручиваются внутри своих панелей. Из production удалены неиспользуемые Scanner/EvidenceCore и зависимость Three.js; проверка установленных пакетов не обнаружила известных уязвимостей в этом запуске.
