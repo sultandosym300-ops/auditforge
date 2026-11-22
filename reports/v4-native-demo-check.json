@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "transport": "real loopback HTTP",
+  "business_type": "manufacturing",
+  "causal_payment_delta_minor": -100,
+  "active_episode_unchanged": true,
+  "preterminal_explanation_denied": true,
+  "postterminal_issues": 4,
+  "matcher_cases": 6,
+  "f1": 1.0,
+  "repeated_login_revoked": true,
+  "logout_revoked": true,
+  "protected_requests_after_logout_denied": true
+}

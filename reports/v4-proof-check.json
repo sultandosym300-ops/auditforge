@@ -19461,6 +19461,6 @@
     },
     "scope": "Fresh local demonstration fixtures; real matcher and public-action replay. This is separate from the active agent and is not an official hackathon score."
   },
-  "seconds": 1.8224632000055863,
+  "seconds": 2.656697800004622,
   "scope": "Native Python checks on fresh local synthetic fixtures. Docker isolation is a separate run; official jury score is unknown."
 }

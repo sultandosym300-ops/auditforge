@@ -140,10 +140,19 @@ def investigate(step, initial, weights, rng=None, log=None, threshold=.5):
 
 
 class EfficientTrainer:
-    def __init__(self, seed=20261121, scenario='period', learning_rate=.1):
+    def __init__(self, seed=20261121, scenario='period', learning_rate=.1, *, world_profile=None, business_type='logistics'):
         if type(seed) is not int or scenario not in SCENARIOS or type(learning_rate) not in (int,float) or not math.isfinite(learning_rate) or not 0 < learning_rate <= 2:
             raise ValueError('Invalid training configuration')
+        if world_profile not in (None, 'realistic_v1'):
+            raise ValueError('Unknown training world')
+        if world_profile is not None:
+            from .realistic import BUSINESS_TYPES
+            if business_type not in BUSINESS_TYPES or scenario == 'recognition':
+                raise ValueError('Unsupported business scenario')
+        elif business_type != 'logistics':
+            raise ValueError('Business type requires a realistic world')
         self.seed, self.scenario, self.learning_rate = seed, scenario, learning_rate
+        self.world_profile, self.business_type = world_profile, business_type
         self.weights = list(INITIAL_WEIGHTS)
         self.episodes = self.optimizer_steps = 0
         self.baseline = 0.
@@ -159,6 +168,8 @@ class EfficientTrainer:
         else:
             kind = dict(period='accounting_period', duplicate='duplicate_invoice', fx='fx_conversion', allocation='payment_allocation')[self.scenario]
             config.update(clean=index%5 == 0, counts={kind:2})
+        if self.world_profile is not None:
+            config.update(profile=self.world_profile, business_type=self.business_type)
         return config
 
     def train_episode(self):
@@ -211,17 +222,21 @@ class EfficientTrainer:
         return dict(seed=seed,count=count,results=results,episodes=rows,scope='Frozen holdout. Learned source-table acquisition, deterministic documentary decoding.')
 
     def checkpoint(self):
-        return dict(format='auditforge-source-acquisition-policy',version=2,environment=GENERATOR_VERSION,
+        result = dict(format='auditforge-source-acquisition-policy',version=2,environment=GENERATOR_VERSION,
                     architecture='three logistic source-table gates',algorithm='REINFORCE with moving reward baseline',
                     features=list(FEATURES),tables=list(TABLES),seed=self.seed,scenario=self.scenario,
                     learning_rate=self.learning_rate,weights=list(self.weights),episodes=self.episodes,
                     optimizer_steps=self.optimizer_steps,baseline=self.baseline,history=copy.deepcopy(self.history))
+        if self.world_profile is not None:
+            result.update(world_profile=self.world_profile, business_type=self.business_type)
+        return result
 
     @classmethod
     def from_checkpoint(cls,data):
         if not isinstance(data,dict) or data.get('format')!='auditforge-source-acquisition-policy' or data.get('version')!=2 or data.get('environment')!=GENERATOR_VERSION or data.get('features')!=list(FEATURES) or data.get('tables')!=list(TABLES) or data.get('algorithm')!='REINFORCE with moving reward baseline' or data.get('architecture')!='three logistic source-table gates':
             raise ValueError('Incompatible checkpoint')
-        result=cls(data.get('seed'),data.get('scenario'),data.get('learning_rate'))
+        result=cls(data.get('seed'),data.get('scenario'),data.get('learning_rate'),
+                   world_profile=data.get('world_profile'), business_type=data.get('business_type','logistics'))
         weights=data.get('weights')
         if not isinstance(weights,list) or len(weights)!=len(INITIAL_WEIGHTS) or any(type(w) not in (int,float) or not math.isfinite(w) or abs(w)>1000 for w in weights):
             raise ValueError('Invalid parameters')

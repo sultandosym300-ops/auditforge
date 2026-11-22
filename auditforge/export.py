@@ -17,6 +17,9 @@ def export_episode(episode, root):
     folder.mkdir(parents=True, exist_ok=True)
     for name in ('manifest','policy'):
         write_json(folder / (name+'.json'), public[name])
+    if 'business' in public:
+        write_json(folder/'business.json', public['business'])
+        write_json(root/'evaluator_private'/eid/'pristine_business.json', episode['pristine']['business'])
     for table in ('invoices','payments'):
         (folder/(table+'.jsonl')).write_text(''.join(json.dumps(r, sort_keys=True)+'\n' for r in public[table]), encoding='utf-8')
     for table in ('ledger','fx'):

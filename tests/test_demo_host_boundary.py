@@ -7,6 +7,23 @@ from auditforge.policies import run_policy
 
 
 class DemoHostBoundaryTests(unittest.TestCase):
+    def test_public_payment_scenario_propagates_without_mutating_the_episode(self):
+        with AuditEnv(mode='train') as env:
+            initial, _ = env.reset(771983, {'profile':'realistic_v1','business_type':'trade','clean':True})
+            before = env.evaluator_story()
+            event = next(e for e in before['business']['events'] if e['type']=='customer_receipt')
+            result = env.evaluator_receipt_scenario(event['event_id'], event['amount_minor']-100)
+            self.assertEqual(result['after']['cash_minor']-result['before']['cash_minor'], -100)
+            self.assertEqual(result['after']['receivable_minor']-result['before']['receivable_minor'], 100)
+            self.assertEqual(env.evaluator_story(), before)
+            self.assertIsNone(env.evaluator_report())
+            source = before['business']['source_documents'][0]
+            observation, _, _, _, _ = env.step({'tool':'get_document','doc_id':source['doc_id']})
+            self.assertEqual(observation['result'], source)
+            self.assertEqual(observation['steps_remaining'], 99)
+            observation, _, _, _, _ = env.step({'tool':'world_counterfactual','event_id':event['event_id'],'amount_minor':1})
+            self.assertEqual(observation['error'], 'invalid_request')
+
     def test_host_explanation_requires_terminal_open_demo(self):
         with AuditEnv(mode='train') as env:
             initial, _ = env.reset(771983)

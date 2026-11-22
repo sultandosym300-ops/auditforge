@@ -90,10 +90,26 @@ def public_story(public):
                 summary=dict(invoices=len(public['invoices']),payments=len(public['payments']),
                              ledger=len(public['ledger']),suppliers=len({r['entity_id'] for r in public['invoices']}),
                              currencies=sorted({r['currency'] for r in public['invoices']+public['payments']})),
-                chains=chains,scope='Public company history. Book balances may contain the controlled accounting errors; no hidden answer is consulted.')
+                chains=chains,source_records={table:copy.deepcopy(public[table]) for table in ('ledger','invoices','payments','fx')},scope='Public company history. Book balances may contain the controlled accounting errors; no hidden answer is consulted.')
     if business:
         result['business']=copy.deepcopy(business)
     return result
+
+
+def receipt_scenario(public, event_id, amount_minor):
+    """A public, immutable financial what-if, separate from official RL actions."""
+    from .realistic import change_customer_receipt
+    world = public.get('business')
+    if not isinstance(world, dict) or world.get('version') != 'realistic_v1':
+        raise ValueError('Create a realistic company first')
+    changed = change_customer_receipt(world, event_id, amount_minor)
+    def values(current):
+        event = next(e for e in current['events'] if e['event_id'] == event_id)
+        accounts = current['state']['accounts']
+        return dict(amount_minor=event['amount_minor'], cash_minor=accounts.get('cash', 0),
+                    receivable_minor=accounts.get('receivable', 0))
+    return dict(before=values(world), after=values(changed), business=changed,
+                scope='Public causal what-if. The active episode, labels and reward are unchanged.')
 
 
 def _session_for(episode):
@@ -236,6 +252,35 @@ def _calculation(episode, truth, mutation):
                 scope='Causal mutation stage, before subsequent interacting changes. Current book rows are shown separately.')
 
 
+def _assigned_findings(episode_id, truth, findings):
+    """Resolve support with the real matcher, then preserve its one-to-one rule."""
+    graph=[];eligible=[];seen=set()
+    for index,finding in enumerate(findings):
+        edges=[];supported=set()
+        for j,target in enumerate(truth):
+            payload=dict(episode_id=episode_id,findings=[finding])
+            if evaluate(episode_id,[target],payload,0)['tp']:
+                edges.append(j)
+                evidence=set(finding['evidence_ids'])
+                supported.update(frozenset(ids) for ids in target['evidence_sets'] if evidence.issuperset(ids))
+        graph.append(edges)
+        key=(finding['type'],tuple(sorted(finding['affected_ids'])),finding['currency'],finding['claimed_amount_minor'],frozenset(supported))
+        if key not in seen:
+            eligible.append(index);seen.add(key)
+    assigned={}
+    def augment(index,visited):
+        for target in graph[index]:
+            if target in visited:continue
+            visited.add(target)
+            if target not in assigned or augment(assigned[target],visited):
+                assigned[target]=index;return True
+        return False
+    for index in eligible:augment(index,set())
+    expected=evaluate(episode_id,truth,dict(episode_id=episode_id,findings=findings),0)['tp']
+    if len(assigned)!=expected:raise ValueError('Explainer assignment differs from evaluator')
+    return assigned,graph
+
+
 def explain_completed(session, *, demo=False):
     """Private evaluator view; explicit demo=True and terminal session are required."""
     if demo is not True or not getattr(session,'done',False) or getattr(session,'mode',None) not in ('train','demo'):
@@ -246,7 +291,8 @@ def explain_completed(session, *, demo=False):
     findings=payload.get('findings',[])
     issues=[]
     mutations={r['issue_id']:r for r in episode['provenance']}
-    for truth in episode['truth']:
+    assignment,support=_assigned_findings(public['manifest']['episode_id'],episode['truth'],findings)
+    for truth_index,truth in enumerate(episode['truth']):
         mutation=mutations.get(truth['issue_id'])
         if mutation is None:
             # A future profile must provide its own causal stage. Never invent it.
@@ -255,14 +301,12 @@ def explain_completed(session, *, demo=False):
             mutation={}
         else:
             calculation=_calculation(episode,truth,mutation)
-        scores=[]
-        for index,finding in enumerate(findings):
-            report=evaluate(public['manifest']['episode_id'],[truth],dict(episode_id=public['manifest']['episode_id'],findings=[finding]),0)
-            if report['tp']:
-                scores.append(index)
+        scores=[assignment[truth_index]] if truth_index in assignment else []
+        supported=[i for i,edges in enumerate(support) if truth_index in edges]
         expected_ids=set(truth['affected_ids'])
         candidates=[f for f in findings if set(f.get('affected_ids',[]))==expected_ids]
         if scores:reason='matched'
+        elif supported:reason='matching_conflict'
         elif not candidates:reason='missing_finding'
         elif not any(f['type']==truth['type'] for f in candidates):reason='wrong_type'
         elif not any(f['claimed_amount_minor']==truth['expected_amount_minor'] for f in candidates):reason='wrong_amount'
@@ -274,8 +318,13 @@ def explain_completed(session, *, demo=False):
                            before_rows=copy.deepcopy(mutation.get('before',[])),after_rows=copy.deepcopy(mutation.get('after',[])),
                            current_rows=[copy.deepcopy(records[i]) for i in truth['affected_ids'] if i in records],
                            evidence_records=[copy.deepcopy(records[i]) for i in evidence if i in records],
-                           calculation=calculation,matched=bool(scores),matched_finding_indices=scores,diagnosis=reason))
+                           calculation=calculation,matched=bool(scores),matched_finding_indices=scores,candidate_finding_indices=supported,diagnosis=reason))
+    if 'business' in public:
+        from .realistic_audit import audit_realistic
+        financial=audit_realistic(episode)
+    else:
+        financial=audit_episode(episode)
     result=dict(format='auditforge-completed-demo',version=PROOF_VERSION,episode_id=public['manifest']['episode_id'],
-                report=copy.deepcopy(session.report),submission=copy.deepcopy(payload),issues=issues,
+                report=copy.deepcopy(session.report),submission=copy.deepcopy(payload),issues=issues,financial=financial,
                 scope='Trusted explanation after termination. Hidden answers and causal before/after must never be sent through the agent-facing RL tools.')
     return result

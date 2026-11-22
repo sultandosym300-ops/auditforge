@@ -1,6 +1,7 @@
 import React,{useMemo,useRef,useState} from 'react';
 import {trainingApi,download,getBackend} from './api.js';
 import './training.css';
+import {v4Text} from './v4Copy.js';
 import {storeLocalAgent,saveAgent,restoreAgent,removeAgent} from './cloud.js';
 
 const copy={
@@ -14,15 +15,17 @@ const researchCopy={
  kk:{challenge:'Контрфактілік тест',challengeBody:'Жұп компаниялар бір тексерілетін фактімен ерекшеленеді. Анықтау, жалған сигналдың болмауы және дәлел тұрақтылығы бағаланады. Салмақ өзгермейді.',export:'JSON есепті жүктеу',inspection:'Submit-тен басқа оқу',consistency:'Жұптардың сәйкестігі',presence:'Қатенің барын анықтау',diagnostics:'Әрекеттер және дәлел диагностикасы',type:'Қате түрі',validation:'Деректерді тексеру',total:'Барлық әрекеттер (submit-пен)',trace:'Толық әрекет ізі',proof:'Дәлел диагностикасы',pairs:'жұп',cleanPair:'Қатесіз бақылау',dirtyPair:'Өзгертілген компания',noErrors:'Дәлел қателері табылмады'}
 };
 export default function TrainingLab({lang,onInvestigation,hasEpisode,controlsRef}){
+ const v=v4Text(lang);
  const t=key=>copy[lang]?.[key]||copy.en[key]||key;
  const r=key=>researchCopy[lang]?.[key]||researchCopy.en[key]||key;
  const [challenge,setChallenge]=useState(null);
+ const [worldProfile,setWorldProfile]=useState('compact'),[businessType,setBusinessType]=useState('logistics');
  const [name,setName]=useState('Audit agent'),[scenario,setScenario]=useState('period'),[seed,setSeed]=useState(314159),[count,setCount]=useState(100);
  const [checkpoint,setCheckpoint]=useState(null),[history,setHistory]=useState([]),[result,setResult]=useState(null),[running,setRunning]=useState(false),[error,setError]=useState(''),[notice,setNotice]=useState('');
  const stop=useRef(false),file=useRef();
  async function action(fn){setError('');setNotice('');try{await fn();return true;}catch(e){setError(t(['cloud_save_failed','cloud_load_failed','cloud_delete_failed'].includes(e.message)?e.message:'error'));return false;}}
- function accept(cp){setChallenge(null);setCheckpoint(cp);setHistory(cp.history||[]);setScenario(cp.scenario);setSeed(cp.seed);setResult(null);}
- async function create(){setRunning(true);const ok=await action(async()=>accept(await trainingApi('training_create',{seed:Number(seed),scenario})));setRunning(false);return ok;}
+ function accept(cp){setWorldProfile(cp.world_profile||'compact');setBusinessType(cp.business_type||'logistics');setChallenge(null);setCheckpoint(cp);setHistory(cp.history||[]);setScenario(cp.scenario);setSeed(cp.seed);setResult(null);}
+ async function create(options={}){setRunning(true);const world=options.world_profile||worldProfile;const kind=options.business_type||businessType;const selectedScenario=world==='realistic_v1'&&scenario==='recognition'?'mixed':scenario;const payload={seed:Number(seed),scenario:selectedScenario};if(world==='realistic_v1'){payload.world_profile=world;payload.business_type=kind;}const ok=await action(async()=>accept(await trainingApi('training_create',payload)));setRunning(false);return ok;}
  async function train(episodes=Number(count)){if(running)return;stop.current=false;setRunning(true);const ok=await action(async()=>{for(let i=0;i<episodes&&!stop.current;i++){const row=await trainingApi('training_step');setHistory(h=>[...h,row]);}const cp=await trainingApi('training_checkpoint');setCheckpoint(cp);storeLocalAgent({name,checkpoint:cp});});setRunning(false);return ok;}
  async function save(){await action(async()=>{const cp=await trainingApi('training_checkpoint');const value={name,checkpoint:cp};storeLocalAgent(value);download('auditforge-agent.json',value);setNotice(t('saved'));const status=await saveAgent(value);if(status.cloud)setNotice(t('cloudSaved'));});}
  async function importValue(value){const cp=await trainingApi('training_import',{checkpoint:value.checkpoint||value});accept(cp);setName(value.name||'Audit agent');}
@@ -53,10 +56,14 @@ export default function TrainingLab({lang,onInvestigation,hasEpisode,controlsRef
  },[history]);
  return <section className="training-lab">
  <div className="work-heading"><div><h1>{t('title')}</h1><p>{t(legacy?'scope':'scopeV2')}</p></div></div>
+ <details className="training-explanation" open><summary>{v.trainingExplain}</summary><p>{v.trainingInput}</p><p>{v.trainingDecision}</p><p>{v.trainingUpdate}</p><p>{v.trainingCompare}</p><p>{v.trainingReward}</p></details>
+ {worldProfile==='realistic_v1'&&<p className="small-note">{v.scopeBody}</p>}
  <p className="small-note">{t('local')}</p>
  <div className="training-layout"><aside className="training-settings">
  <label>{t('name')}<input value={name} maxLength={80} disabled={running} onChange={e=>setName(e.target.value)}/></label>
- <label>{t('scenario')}<select value={scenario} disabled={running||!!checkpoint} onChange={e=>setScenario(e.target.value)}>{['period','duplicate','fx','allocation','mixed','clean','recognition'].map(x=><option key={x} value={x}>{t(x)}</option>)}</select></label>
+ <label>{v.profile}<select className="training-world-select" value={worldProfile} disabled={running||!!checkpoint} onChange={e=>{setWorldProfile(e.target.value);if(e.target.value==='realistic_v1'&&scenario==='recognition')setScenario('mixed');}}><option value="compact">{v.compact}</option><option value="realistic_v1">{v.realistic}</option></select></label>
+ {worldProfile==='realistic_v1'&&<label>{v.businessType}<select className="training-business-select" value={businessType} disabled={running||!!checkpoint} onChange={e=>setBusinessType(e.target.value)}>{Object.entries(v.types).map(([key,name])=><option key={key} value={key}>{name}</option>)}</select></label>}
+ <label>{t('scenario')}<select value={scenario} disabled={running||!!checkpoint} onChange={e=>setScenario(e.target.value)}>{['period','duplicate','fx','allocation','mixed','clean','recognition'].filter(key=>worldProfile!=='realistic_v1'||key!=='recognition').map(x=><option key={x} value={x}>{t(x)}</option>)}</select></label>
  <label>{t('seed')}<input type="number" min="0" max="2147483647" value={seed} disabled={running||!!checkpoint} onChange={e=>setSeed(e.target.value)}/></label>
  <label>{t('episodes')}<input type="number" min="1" max="1000" value={count} disabled={running} onChange={e=>setCount(Math.max(1,Math.min(1000,Number(e.target.value)||1)))}/></label>
  <button className="button secondary training-create" disabled={running} onClick={create}>{t('create')}</button>

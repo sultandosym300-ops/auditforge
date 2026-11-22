@@ -12,7 +12,7 @@ const python={
 };
 const sandbox={
  URL,
- fetch:async()=>({json:async()=>({})}),
+ fetch:async()=>({ok:true,json:async()=>({}),text:async()=>''}),
  loadPyodide:async()=>{
   starts++;
   if(starts===1)throw Error('Transient runtime download failure');

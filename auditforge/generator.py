@@ -22,6 +22,11 @@ def generate(seed, config=None):
     if config is not None and not isinstance(config, dict):
         raise ValueError('config must be an object')
     config = dict(config or {})
+    if 'profile' in config:
+        if config['profile'] != 'realistic_v1':
+            raise ValueError('Unknown generator profile')
+        from .realistic import generate_realistic
+        return generate_realistic(seed, config)
     recognition_mode = 'recognition_world' in config
     if recognition_mode:
         from .recognition_worlds import build_world, recurrence_terms

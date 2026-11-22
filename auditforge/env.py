@@ -145,6 +145,9 @@ def _worker(connection):
             elif command == 'host_demo':
                 from .proof import explain_completed
                 response = explain_completed(session, demo=message.get('demo') is True)
+            elif command == 'host_counterfactual':
+                from .proof import receipt_scenario
+                response = receipt_scenario(session.public, message.get('event_id'), message.get('amount_minor'))
             else:
                 response = None
             connection.send_bytes(json.dumps(dict(ok=True, value=response), allow_nan=False).encode())
@@ -191,6 +194,10 @@ class AuditEnv:
     def evaluator_demo(self, *, demo=False):
         """Trusted explicit demonstration, rejected until terminal submission."""
         return self._call(dict(command='host_demo', demo=demo))
+
+    def evaluator_receipt_scenario(self, event_id, amount_minor):
+        """Trusted companion UI: change a copy of public facts, never the episode."""
+        return self._call(dict(command='host_counterfactual', event_id=event_id, amount_minor=amount_minor))
 
     def close(self):
         if self._process.is_alive():

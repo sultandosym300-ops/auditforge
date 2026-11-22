@@ -54,12 +54,38 @@ class ProofTests(unittest.TestCase):
             for issue in result['issues']:
                 self.assertEqual(set(issue['affected_ids']),set(r['row_id'] for r in issue['current_rows']))
 
+    def test_completed_realistic_world_checks_actual_financial_invariants(self):
+        for business in ('logistics','trade','manufacturing','it','services'):
+            session=Session()
+            initial,_=session.reset(92183,{'profile':'realistic_v1','business_type':business,'invoices':40},'train')
+            run_policy(session,initial,'reconciliation')
+            explanation=explain_completed(session,demo=True)
+            self.assertTrue(explanation['financial']['valid'],explanation['financial']['errors'])
+            self.assertTrue(all(i['calculation']['matches_declared_discrepancy'] for i in explanation['issues']))
+            story=public_story(session.public)
+            self.assertEqual(story['business']['profile'],business)
+            for forbidden in ('\"truth\"','\"provenance\"','\"expected_amount_minor\"','\"issue_id\"'):
+                self.assertNotIn(forbidden,json.dumps(story))
+
+    def test_explainer_does_not_count_one_finding_twice(self):
+        session=Session();session.reset(6318,{'invoices':40},'train')
+        copied=copy.deepcopy(session.episode['truth'][0]);copied['issue_id']='test-ambiguous-truth'
+        session.episode['truth'].append(copied)
+        provenance=copy.deepcopy(session.episode['provenance'][0]);provenance['issue_id']=copied['issue_id']
+        session.episode['provenance'].append(provenance)
+        payload=oracle(session.episode);payload['findings'].pop()
+        session.step({'tool':'submit','findings':payload})
+        explanation=explain_completed(session,demo=True)
+        self.assertEqual(sum(i['matched'] for i in explanation['issues']),session.report['tp'])
+        self.assertTrue(any(i['diagnosis']=='matching_conflict' for i in explanation['issues']))
+
     def test_public_story_uses_actual_records_and_contains_no_private_branch(self):
         ep = generate(193184, {'invoices':40,'interaction':1})
         before = copy.deepcopy(ep['public'])
         result = public_story(ep['public'])
         self.assertEqual(before, ep['public'])
         self.assertEqual(result['summary']['invoices'], 40)
+        self.assertEqual(result['source_records'],{k:ep['public'][k] for k in ('ledger','invoices','payments','fx')})
         self.assertEqual(len(result['chains']), 3)
         raw=json.dumps(result)
         for forbidden in ('"truth"','"provenance"','"expected_amount_minor"','"issue_id"'):

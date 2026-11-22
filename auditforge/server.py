@@ -38,6 +38,13 @@ class Handler(BaseHTTPRequestHandler):
         s=SESSIONS.get(token.value if token else '')
         if not s or time.monotonic()-s['created']>86400: return None
         return s
+    def retire_session(self):
+        cookie=SimpleCookie(self.headers.get('Cookie',''))
+        token=cookie.get('auditforge_session')
+        with LOCK:
+            previous=SESSIONS.pop(token.value,None) if token else None
+        if previous and previous.get('env'):
+            previous['env'].close()
     def do_GET(self):
         path=urlparse(self.path).path
         if path=='/api/me':
@@ -84,16 +91,16 @@ class Handler(BaseHTTPRequestHandler):
                         row=db.execute('SELECT salt,digest FROM accounts WHERE name=?',(name.casefold(),)).fetchone()
                         if not row or not hmac.compare_digest(hashlib.scrypt(password.encode(),salt=row[0],n=16384,r=8,p=1),row[1]): return self.json({'error':'wrong_password'},401)
                 user={'name':name,'guest':False}
-            old=self.session()
-            if old and old.get('env'): old['env'].close()
+            self.retire_session()
             token=secrets.token_urlsafe(32)
-            SESSIONS[token]=dict(user=user,created=time.monotonic(),env=None,log=[],initial=None)
+            with LOCK:
+                SESSIONS[token]=dict(user=user,created=time.monotonic(),env=None,log=[],initial=None)
             return self.json(dict(user=user,backend='python'),cookie='auditforge_session='+token+'; HttpOnly; SameSite=Strict; Path=/; Max-Age=86400')
         s=self.session()
         if not s: return self.json({'error':'sign_in_required'},401)
         try:
             if path=='/api/logout':
-                if s['env']: s['env'].close()
+                self.retire_session()
                 return self.json({'ok':True},cookie='auditforge_session=; HttpOnly; SameSite=Strict; Path=/; Max-Age=0')
             if path=='/api/reset':
                 if s['env']: s['env'].close()
@@ -107,6 +114,8 @@ class Handler(BaseHTTPRequestHandler):
             if not s['env']: return self.json({'error':'create_episode_first'},409)
             if path=='/api/world_story':
                 return self.json(s['env'].evaluator_story())
+            if path=='/api/world_counterfactual':
+                return self.json(s['env'].evaluator_receipt_scenario(payload.get('event_id'),payload.get('amount_minor')))
             if path=='/api/demo_explain':
                 return self.json(s['env'].evaluator_demo(demo=payload.get('demo') is True))
             if path=='/api/step':
