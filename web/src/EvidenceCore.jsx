@@ -95,6 +95,7 @@ export default function EvidenceCore({progressRef,paused=false,lang='ru',framing
     element.parentElement.addEventListener('pointermove',move);
     const resize=new ResizeObserver(()=>{const b=element.getBoundingClientRect();sized=b.width>0&&b.height>0;if(!sized)return;renderer.setSize(b.width,b.height);const halfW=framing==='portrait'?3.3:4.95,halfH=halfW*b.height/Math.max(1,b.width);camera.left=-halfW;camera.right=halfW;camera.top=halfH;camera.bottom=-halfH;camera.updateProjectionMatrix();lastP=-1;});resize.observe(element);
     const visibility=new IntersectionObserver(([entry])=>{visible=entry.isIntersecting;});visibility.observe(element);
+    const bounds=new THREE.Box3(),size=new THREE.Vector3(),center=new THREE.Vector3();
     function render(){
       frame=requestAnimationFrame(render);if(!visible||!sized)return;
       const p=Math.max(0,Math.min(1,progressRef.current));
@@ -102,7 +103,7 @@ export default function EvidenceCore({progressRef,paused=false,lang='ru',framing
       poseX=THREE.MathUtils.damp(poseX,reduced||paused?0:targetX,8,dt);
       poseY=THREE.MathUtils.damp(poseY,reduced||paused?0:targetY,8,dt);
       group.rotation.set(.08-poseY*.06,-.28+poseX*.09,-.055);
-      camera.zoom=framing==='portrait'?1.05:1.35-p*.35;camera.updateProjectionMatrix();
+
       layers.forEach((layer,i)=>{
         const order=i-1.5;
         // Keep the source in front throughout. Depth never crosses zero or reverses order.
@@ -111,6 +112,7 @@ export default function EvidenceCore({progressRef,paused=false,lang='ru',framing
         layer.rotation.z=order*p*-.025;
         layer.scale.setScalar(1);
       });
+      group.updateMatrixWorld(true);bounds.setFromObject(group);bounds.getSize(size);bounds.getCenter(center);const availableWidth=camera.right-camera.left,availableHeight=camera.top-camera.bottom;camera.zoom=Math.min(availableWidth/(size.x*1.22),availableHeight/(size.y*1.22));camera.position.set(center.x,center.y,18);camera.lookAt(center.x,center.y,0);camera.updateProjectionMatrix();
       if(!paused||lastP!==p){renderer.render(scene,camera);element.dataset.ready='true';lastP=p;}
     }
     render();

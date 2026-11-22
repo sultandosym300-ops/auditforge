@@ -10,7 +10,7 @@ import WorldExplorer,{PlatformIntro} from './WorldExplorer.jsx';
 import ProofCenter,{ErrorExplainer} from './ProofCenter.jsx';
 import {v4Text} from './v4Copy.js';
 const TrainingLab=lazy(()=>import('./TrainingLab.jsx'));
-const EvidenceCore=lazy(()=>import('./EvidenceCore.jsx'));
+const Scanner=lazy(()=>import('./Scanner.jsx'));
 import {cloudEnabled} from './cloud.js';
 import {dictionaries,issueTypes} from './i18n.js';
 import {api,detectBackend,getBackend,getTrajectory,download} from './api.js';
@@ -24,7 +24,7 @@ function Brand({onClick}){return <button className="brand" onClick={onClick} ari
 function Language({lang,setLang}){return <select className="language" aria-label="Language / Язык / Тіл" value={lang} onChange={e=>setLang(e.target.value)}><option value="ru">RU</option><option value="kk">ҚАЗ</option><option value="en">EN</option></select>;}
 
 function Landing({t,lang,setLang,onEnter}){
-  const scope=useRef();const heroProgress=useRef(.12);const video=useRef();const [paused,setPaused]=useState(()=>matchMedia('(prefers-reduced-motion: reduce)').matches);const [quote,setQuote]=useState(0);
+  const scope=useRef();const video=useRef();const [paused,setPaused]=useState(()=>matchMedia('(prefers-reduced-motion: reduce)').matches);const [quote,setQuote]=useState(0);
   useGSAP(()=>{
     const mm=gsap.matchMedia();
     mm.add('(prefers-reduced-motion: no-preference)',()=>{
@@ -40,7 +40,7 @@ function Landing({t,lang,setLang,onEnter}){
   return <main ref={scope} className="landing" data-paused={paused}>
     <header className="site-header"><div className="nav-inner"><Brand onClick={()=>window.scrollTo({top:0,behavior:'smooth'})}/><nav aria-label={t('overview')}><a href="#capabilities">{t('capabilities')}</a><a href="#workflow">{t('workflow')}</a></nav><div className="nav-actions"><Language lang={lang} setLang={setLang}/><button className="button small primary" onClick={onEnter}>{t('enter')}</button></div></div></header>
     <section className="hero">
-      <div className="hero-model"><Suspense fallback={<div className="model-loading"/>}><EvidenceCore progressRef={heroProgress} paused={paused} lang={lang} framing="portrait"/></Suspense></div>
+      <div className="hero-model"><Suspense fallback={<div className="model-loading"/>}><Scanner paused={paused}/></Suspense></div>
       <div className="hero-copy"><h1 className="max-w-6xl">{t('heroA')}<br/><span>{t('heroB')}</span></h1><p className="hero-sub">{t('heroSub')}</p><p className="hero-description">{t('heroBody')}</p><div className="hero-ctas"><button className="button primary" onClick={onEnter}>{t('start')}</button><a className="text-link" href="#capabilities">{t('explore')}<span className="link-plus">+</span></a></div></div>
       <div className="hero-bottom"><span className="model-hint"><ScanLine size={17}/>{t('modelHint')}</span><button className="motion-control" onClick={()=>setPaused(!paused)} aria-label={t(paused?'play':'pause')}>{paused?<Play size={15}/>:<Pause size={15}/>}</button></div>
     </section>
@@ -62,9 +62,9 @@ function Landing({t,lang,setLang,onEnter}){
 }
 
 function Auth({t,lang,setLang,onBack,onSuccess}){
-  const authProgress=useRef(.25);const [mode,setMode]=useState('register');const [busy,setBusy]=useState(false);const [error,setError]=useState('');
+  const [mode,setMode]=useState('register');const [busy,setBusy]=useState(false);const [error,setError]=useState('');
   async function sign(path,payload){setBusy(true);setError('');try{const result=await api(path,payload);onSuccess(result.user);}catch(e){setError(t(e.message==='email_confirmation_required'?'confirmEmail':e.message==='name_taken'?'nameTaken':'authError'));}finally{setBusy(false);}}
-  return <main className="auth-page"><header className="site-header"><div className="nav-inner"><Brand onClick={onBack}/><Language lang={lang} setLang={setLang}/></div></header><div className="auth-layout"><div className="auth-visual"><div className="auth-model"><Suspense fallback={null}><EvidenceCore progressRef={authProgress} lang={lang} framing="portrait"/></Suspense></div><div className="auth-visual-copy"><h2>{br(t('heroA')+'\n'+t('heroB'))}</h2><p>{t('fiction')}</p></div></div><section className="auth-form"><button className="back-link" onClick={onBack}><ChevronLeft size={16}/>{t('back')}</button><h1>{br(t('authTitle'))}</h1><p>{t('authBody')}</p><div className="segmented">{['register','login'].map(m=><button key={m} onClick={()=>{setMode(m);setError('');}} className={mode===m?'active':''}>{t(m)}</button>)}</div><form onSubmit={e=>{e.preventDefault();const f=new FormData(e.currentTarget);sign(mode,{name:f.get('name'),password:f.get('password')});}}><label>{cloudEnabled?'Email':t('username')}<input name="name" type={cloudEnabled?'email':'text'} autoComplete="username" required minLength={3} maxLength={254} placeholder={cloudEnabled?'name@example.com':'researcher'}/></label><label>{t('password')}<input name="password" type="password" autoComplete={mode==='register'?'new-password':'current-password'} required minLength={8} maxLength={128} placeholder={t('passwordHint')}/></label>{error&&<p className="error-message" role="alert">{error}</p>}<button className="button primary full" disabled={busy}>{busy?t('loading'):t(mode==='register'?'createAccount':'login')}</button></form><div className="auth-divider"/><button className="button secondary full" disabled={busy} onClick={()=>sign('guest',{})}>{t('guest')}</button><p className="auth-note">{t(cloudEnabled?'cloudProfile':getBackend()==='browser'?'localProfile':'localServer')}</p></section></div></main>;
+  return <main className="auth-page"><header className="site-header"><div className="nav-inner"><Brand onClick={onBack}/><Language lang={lang} setLang={setLang}/></div></header><div className="auth-layout"><section className="auth-form"><button className="back-link" onClick={onBack}><ChevronLeft size={16}/>{t('back')}</button><h1>{br(t('authTitle'))}</h1><p>{t('authBody')}</p><div className="segmented">{['register','login'].map(m=><button key={m} onClick={()=>{setMode(m);setError('');}} className={mode===m?'active':''}>{t(m)}</button>)}</div><form onSubmit={e=>{e.preventDefault();const f=new FormData(e.currentTarget);sign(mode,{name:f.get('name'),password:f.get('password')});}}><label>{cloudEnabled?'Email':t('username')}<input name="name" type={cloudEnabled?'email':'text'} autoComplete="username" required minLength={3} maxLength={254} placeholder={cloudEnabled?'name@example.com':'researcher'}/></label><label>{t('password')}<input name="password" type="password" autoComplete={mode==='register'?'new-password':'current-password'} required minLength={8} maxLength={128} placeholder={t('passwordHint')}/></label>{error&&<p className="error-message" role="alert">{error}</p>}<button className="button primary full" disabled={busy}>{busy?t('loading'):t(mode==='register'?'createAccount':'login')}</button></form><div className="auth-divider"/><button className="button secondary full" disabled={busy} onClick={()=>sign('guest',{})}>{t('guest')}</button><p className="auth-note">{t(cloudEnabled?'cloudProfile':getBackend()==='browser'?'localProfile':'localServer')}</p></section></div></main>;
 }
 
 function FocusDialog({className,onClose,returnFocus,suspended=false,children}){

@@ -30,3 +30,10 @@
 .platform-intro{padding-bottom:22px;margin-bottom:20px}.training-explanation{padding:14px 0;margin:14px 0 22px}.training-layout{margin-top:18px}
 .auth-model .scanner{height:100%;top:0;transform:none}
 @media(max-width:600px){.hero-description{display:none}.hero .hero-model{height:320px}.hero{padding-bottom:65px}.hero-ctas{margin-top:24px}.platform-intro{gap:16px;padding-bottom:20px}.training-explanation{margin-top:10px}}
+
+/* Each scene has one purpose: scanner in the hero, dossier only in the scroll story. */
+.hero-model>.scanner{position:absolute;inset:0;width:100%;height:100%}
+.auth-layout{display:block;min-height:calc(100svh - 80px);padding:45px 24px;background:#f5f6f8}
+.auth-form{max-width:550px;background:#fff;padding:40px 46px;border-radius:18px;margin:0 auto}
+.assembly-model{overflow:visible;padding-bottom:32px}.assembly-model .scanner{inset:0 0 32px;height:calc(100% - 32px)}.assembly-model-note{bottom:0;line-height:1.5}
+@media(max-width:760px){.auth-layout{padding:24px 16px;min-height:calc(100svh - 68px)}.auth-form{padding:28px 22px}.assembly-model{padding-bottom:0}.assembly-model .scanner{inset:0;width:100%;height:100%}}
