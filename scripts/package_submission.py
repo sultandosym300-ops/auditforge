@@ -82,7 +82,7 @@ def prepare_tree(destination, *, source=ROOT):
     (destination/'reports/submission-baselines.json').write_text(json.dumps(dict(generator_version=GENERATOR_VERSION,scope='Four trusted-host baseline adapters on the ten published train episodes. Oracle is evaluator-only, not a policy RPC.',runs=evaluations),indent=2)+'\n',encoding='utf8')
     inventory=sorted(p.relative_to(destination).as_posix() for p in destination.rglob('*') if p.is_file())+['submission-manifest.json']
     template=(destination/'SUBMISSION_MANIFEST.md').read_text(encoding='utf8')
-    (destination/'SUBMISSION_MANIFEST.md').write_text(template+'\n## Exact file inventory\n\n'+'\n'.join('- `'+name+'`' for name in sorted(inventory))+'\n',encoding='utf8')
+    (destination/'SUBMISSION_MANIFEST.md').write_text(template+'\n## Полный перечень файлов\n\n'+'\n'.join('- `'+name+'`' for name in sorted(inventory))+'\n',encoding='utf8')
     manifest=dict(format='auditforge-submission-manifest',version=1,generator_version=GENERATOR_VERSION,source=source_commit(source),
                   private_material='datasets/{train,dev}/evaluator_private is trusted-evaluator-only; never mount it into the policy container.',
                   files={p.relative_to(destination).as_posix():dict(bytes=p.stat().st_size,sha256=hashlib.sha256(p.read_bytes()).hexdigest()) for p in sorted(destination.rglob('*')) if p.is_file()})

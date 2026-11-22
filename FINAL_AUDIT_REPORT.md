@@ -1,89 +1,56 @@
-# Final engineering audit and submission record
+# Итоговый инженерный аудит AuditForge
 
-## Release identity and rollback
+**Хакатон Genesis · кейс FinTech.** Финальная подготовка выполняется в существующем проекте без новых функций и исследований. Основной репозиторий: https://github.com/sultandosym300-ops/auditforge. Сайт: https://auditforge-gilt.vercel.app.
 
-Baseline: AuditForge 4.0 commit `9703dd382ae512ae4955e5f0270da33b15cc83a6`. The existing `AuditForge-4.0.zip` is preserved locally and Git branch `backup/auditforge-4-stable` retains the source. Changes are on `audit/final-submission`; history, existing branches and tags are not rewritten. The canonical source workspace remains the existing project. The Desktop folder is a website export, not an alternative development checkout.
+## Версия и сохранность
 
-The final exact commit is recorded by `submission-manifest.json` inside the released ZIP and the GitHub release tag. A document cannot contain the hash of its own containing commit without changing that hash. Published CI evidence therefore records the exact source commit in a separately generated, hash-checked `web/public/release-evidence.json`. The CI URL, immutable source digest list, test date, generator/check versions, commands and configuration are available in Proof Center. A build with absent evidence explicitly says unverified; stale or mismatching evidence fails the build.
+Стабильная исходная версия — `b31d77593064931aa53fe1ae33be9a0cac7fe59d`; сохранена ветка `backup/pre-genesis-release`. Более ранняя стабильная 4.0 — `9703dd382ae512ae4955e5f0270da33b15cc83a6`. История сохраняется целиком, force push и переписывание коммитов не применяются. Новый репозиторий был пустым; существующий сайт и привязки сохранены.
 
-## Confirmed defects and fixes
+Итоговый коммит нельзя записать внутрь самого себя без изменения SHA. Поэтому точная версия указана в теге релиза, `submission-manifest.json` архива и отдельно созданном `release-evidence.json`. Именно эти материалы связывают GitHub Actions, архив и опубликованный сайт. Успех нового релиза подтверждается его собственным завершённым CI, а не историческим результатом.
 
-| Severity | Cause and reproduction | Fix | Regression / result |
+## Найденные ранее проблемы и исправления
+
+| Важность | Причина | Исправление | Регрессия |
 |---|---|---|---|
-| High | Extended contract IDs were present, but official tools could not discover the corresponding document IDs without trusted UI knowledge | Add bounded, public document links on invoices/payments/documents and neutral context roots on the realistic manifest | `tests/test_agent_only.py`; 20 independent companies, 210 additional source fetches, F1=1, FP=0, max47 actions |
-| High | The loopback HTTP server trusted any Host if Origin matched it, leaving a DNS-rebinding exposure | Require the actual local 127.0.0.1/localhost host and port before processing requests | Real HTTP `tests/test_http_host_security.py`: malicious matching Host/Origin rejected; normal loopback and existing demo pass |
-| Medium | UI assumed policy execution always returned a final tuple. A policy that exhausted the remaining budget while reading could return None with a terminal trajectory | Derive termination/truncation from the actual last trajectory item when no tuple exists, including trained-policy callback | Browser regression exhausts99 inspections then runs a policy; 100-step truncation must hide finished-episode controls |
-| Medium | Proof Center showed only historical CI; obsolete static verification-summary data had no current-source binding | Remove unused summary/state, add exact-commit successful-CI evidence generation and build-time canonical source hash validation | `scripts/check_release_evidence.mjs`: missing proof is unverified; stale and escaped source paths fail |
-| Medium | No complete, fail-closed submission validator existed | Validate regenerated20episode content, private/public separation, all recorded actions/observations/rewards, four guarded adapters, exact file hashes and safe ZIP paths | `tests/test_submission.py`: missing files, altered observations, leaked private fields, incomplete splits, empty trajectories, cache files, traversal and unauthorized oracle rejected |
-| Medium | New validator initially compared absent optional CSV fields against explicit exported null cells incorrectly | Reconstruct the exact union-column CSV representation; retain all row/value checks and reject ambiguous empty cells | Reproduced failure `Export does not reproduce seed/config`; corrected representation and rerun adversarial tests |
-| Medium | Existing Dockerfile omitted documents required to validate a complete submission inside a standalone image | Explicitly copy required source documentation and manifests; keep credentials, runtime and user files out of image | Clean-ZIP Docker build and image unit suite are CI release gates |
-| Low | Root documentation accumulated obsolete reports; hosting-tool metadata was tracked as product source | Relocate reports to docs/history, adjust relative links, untrack hosting metadata but preserve its local file and history | Git inventory, packaging exclusions, no force push or branch/tag deletion |
-| Low | Required third-party font/library notices were incomplete in the submission | Include pinned dependency inventory and upstream notices, including the bundled Manrope font OFL | `THIRD_PARTY_NOTICES.md`, `docs/licenses/` |
+| Высокая | Дополнительные исходные документы не обнаруживались через официальные инструменты без знания UI | Ограниченные нейтральные связи документов и политика подтверждения источников | `tests/test_agent_only.py`; ранее 20 независимых компаний, 210 дополнительных запросов, F1=1, FP=0, максимум 47 действий |
+| Высокая | Локальный сервер доверял произвольному Host при совпадающем Origin | Проверка реального localhost/127.0.0.1 и порта | Реальные HTTP-тесты `tests/test_http_host_security.py` |
+| Средняя | UI ожидал финальный tuple даже при исчерпании бюджета чтения | Терминальные флаги извлекаются из последнего реального шага | Браузерная проверка усечения на 100 действиях и скрытия завершённых контролов |
+| Средняя | Proof Center показывал только исторические проверки | Подтверждение успешного CI точного коммита и проверка хешей при сборке | Отсутствующие доказательства не считаются подтверждением; устаревшие хеши и выход за каталог отклоняются |
+| Средняя | Не было полного валидатора сдаваемого комплекта | Регенерация эпизодов, полный повтор траекторий, четыре адаптера, точный состав и безопасные пути ZIP | `tests/test_submission.py`: семь регрессий, включая отсутствие Git в контейнере |
+| Средняя | Упаковщик безусловно вызывал отсутствующий в Docker Git | Идентичность из существующего манифеста или явно переданного CI SHA | Проверка отсутствующего Git; образ остаётся без Git |
+| Средняя | Копии для мутаций не включали обязательные метаданные сдачи | В песочницу включены конфигурации, схемы, лицензии и документация | Базовый прогон 177 тестов проходит до применения намеренных дефектов |
+| Средняя | Runner не мог распаковать ZIP в созданный root каталог work | Распаковка перенесена в принадлежащий runner `$RUNNER_TEMP` | CI строит отдельный образ из распакованного ZIP и запускает submission_check и ultimate_verify без сети |
 
-No new confirmed matcher/reward mathematical defect was found. Existing independent small-graph exhaustive and metamorphic tests are retained. The official reward remains `clip(2*F1 - 1 - .002*inspection_steps, -1, 1)`; submit is an action and not a normal inspection. No truth/evidence minimum, budget, timeout or compact API was weakened to raise scores.
+При текущей подготовке меняются только русскоязычные материалы сдачи, название Genesis и адрес нового репозитория в генераторе доказательств. Контракт среды, финансовая логика, reward, агенты и обучение не изменяются.
 
-## Additional-source contribution and scope
+## Проверки и критерии
 
-`auditforge/agent_only.py` receives only an initial public observation and a step callable. It uses list_records/get_document and submits through the existing API. It obtains contract/acceptance documents for invoice/period claims and bank confirmations for settlement/FX claims. It compares actual document IDs, timestamps, currencies, amounts and exact-rational conversions before submitting. Original required evidence is retained; additional evidence stays within ten IDs.
+Предыдущая окончательная версия успешно прошла 177 unit-тестов, 20 проверок с намеренными дефектами, финансовые и контрактные проверки, чистую Docker-сборку ZIP, изоляцию и живой сценарий. Эти числа — исходный подтверждённый уровень. Для нового коммита CI запускается заново; финальный ответ и отдельное доказательство содержат фактический URL успешного запуска и точный SHA-256 нового ZIP.
 
-On20 unique companies across five businesses,40/200-invoice sizes and clean/dirty conditions, the corroborating policy obtained F1=1, no false positives, maximum47 actions and210 extra-source requests. Withheld or inconsistent sources cause unsupported findings to be declined. These are genuine source checks, not arbitrary existence tests. The unchanged reconciliation baseline can still solve the original four-error task; the new sources are not falsely declared mathematically necessary for it. Manufacturing, payroll, tax and other context modules do not gain invented anomaly labels. New sources are also selectable through the site's policy selector as “Corroborate linked sources”.
+`.github/workflows/verify.yml` выполняет две независимые группы: Python/Docker и сборку интерфейса. Архив формируется до изменения рабочих отчётов, строго проверяется, распаковывается в новый каталог, затем из него строится отдельный Docker-образ. Полный прогон работает с `--network none --cpus 2 --memory 4g`; cgroup подтверждает ограничения и пиковую память. Ограниченный агент отдельно проверяется на отсутствие сети и capabilities, непривилегированный UID, read-only, CPU/RAM/PID-лимиты и отсутствие монтирования проекта.
 
-## Independent RL study
+Обязательные материалы и веса критериев 25/25/25/15/10 перечислены в [карте соответствия](HACKATHON_COMPLIANCE.md). Локальная реконструкция критериев не является официальной оценкой жюри.
 
-`reports/final-policy-study.json` and its Markdown summary contain a fixed36-company panel on unseen manufacturing/IT/services businesses. Five training seeds each train300episodes on logistics/trade. Five budgets and nine policies yield8100 policy runs. Companies repeat across checkpoints; the independent-company count is36, not8100. Default hyperparameters were fixed before opening the panel. Source and fixture digests must remain unchanged, or the study exits nonzero.
+## Сохранённые результаты исследований
 
-| Action budget | Trained mean F1 | Reconciliation mean F1 |
-|---:|---:|---:|
-| 5 | .25 | .25 |
-| 10 | .603704 | .50 |
-| 20 | .75 | .75 |
-| 40 | 1.00 | 1.00 |
-| 100 | 1.00 | 1.00 |
+Новые исследования не проводятся. Сохраняются ранее выполненные проверки: 60 компаний и 120 наблюдаемых/исходных финансовых состояний, ноль ложных находок сверки, максимум 32 действия. Независимый аудит проверяет также промежуточные остатки, банковскую сверку, активы, зарплату и учебные налоги. Дополнительные документы доступны агенту через официальные действия, но не объявлены математически необходимыми для исходного четырёхтипового кейса.
 
-At budget100 the trained policy has reward=.963333, mean19.333333 actions and zero FP. The company-cluster bootstrap95% interval for its F1 difference at budget10 is [.037037,.185185]. However, a deterministic forced-source control matches EVERY non-timing trained result across all budgets. The budget10 advantage over a conservative full-source baseline is therefore an acquisition/partial-decoding implementation effect, not demonstrated superiority of learned weights. Zero financial features, randomized weights, independent uniform reward and actual decoder-disabled inference are reported separately. Production is not replaced by a worse experimental model.
+Исследование выбора источников: 36 независимых отложенных компаний, 5 seed обучения по 300 эпизодов, 5 бюджетов и 9 политик — 8 100 прогонов. Обучение на логистике/торговле, проверка на производстве/ИТ/услугах. На бюджете 10 F1 обученной политики .603704 против .50 у консервативной сверки; парный 95% интервал разницы по компаниям [.037037,.185185]. На 40 и 100 обе дают F1=1. Детерминированный контроль выбора источников повторяет обученную политику на всех бюджетах: преимущество обучаемых весов не доказано. При 100 действиях награда .963333, среднее 19.333333 действия, FP=0. Сырые данные и контрольные варианты сохранены в `reports/final-policy-study.json`.
 
-## Security and accounting audit
+## Комплект, репозиторий и лицензии
 
-Public/private separation, terminal-only demo permission, closed-evaluation rejection, session rotation/logout revocation, calculator restrictions, checkpoint finite-value validation, source discovery and financial export are exercised by regression and integration tests. The policy container remains read-only, unprivileged, without network, mounts or capabilities; the trusted broker supplies only observations. Browser execution is an open demo whose owner can inspect local memory; it is not the closed judging boundary.
+Упаковщик включает только необходимый код, данные, документацию, тесты, лицензии и воспроизводимые результаты. Проверяются 10+10 эпизодов, 30 публичных прогонов, семь обязательных полей траектории, четыре базовых адаптера и защита Oracle. Эталон находится только в evaluator_private. Манифест сверяет полный набор файлов, размер и SHA-256; путь архива, секреты, кэши и лишние файлы отклоняются.
 
-Financial checking independently replays both observed and pristine business worlds, including intermediate inventory, assets, payroll, financing, bank reconciliation and declared toy tax. Previous60-company/120-state tests and11 seeded state mutations are retained; source-corroboration adds20 fresh companies and negative controls. No IFRS or national-law compliance is claimed. Full local and constrained-container results are recorded in their JSON/CI artifacts rather than announced as official jury points.
+Исторические отчёты перенесены в `docs/history`; сохранены необходимые лицензии и атрибуция. Локальные служебные файлы, заполненный env, зависимости, окружения и кэши исключены из Git и ZIP. Оставшиеся локальные кэши не удалялись после отказа автоматической проверки; причина отказа не была указана. Они не являются частью сдачи. Исходное рабочее дерево и локальные привязки сайта сохраняются; Desktop — только экспорт сайта.
 
-The Python core has no third-party runtime dependencies. Frontend installation uses the pinned npm lockfile; the final installation/build is checked with a fresh dependency install. No custom linter/type checker is claimed where none is configured. Credentials, local env values and private keys are excluded. A Git path-history check found no tracked `.env.local`, PEM or key files in the examined history; this is not proof that all possible historical secret formats are absent.
+Python-ядро использует стандартную библиотеку. npm-зависимости зафиксированы lockfile. Linter/TypeScript checker отсутствует и не выдаётся за выполненный. Оригинальные юридические тексты лицензий сохранены без перевода. До публикации проверяются Git-история на известные форматы секретов, настройки видимости репозитория и хеши приложенных файлов.
 
-## Repository and artifact inventory
+## Сайт и доказательства
 
-Current entry points: English README, HACKATHON_COMPLIANCE, this report, SUBMISSION_MANIFEST, docs/DESIGN_NOTE and the live demo script. `auditforge/` contains executable core, `scripts/` reproducible checks and packaging, `tests/` regressions, `configs/` train/dev specs, `datasets/` published data, `trajectories/` public interactions, `web/` browser workbench, `supabase/` optional persistence migration, `reports/` measured results, `docs/history/` archived research and `docs/licenses/` upstream notices.
+Сборка проверяет канонические хеши исходников из доказательства успешного CI. Без него интерфейс явно не заявляет подтверждение; устаревший файл отклоняется. Proof Center показывает версию, CI, дату, seed, команды и конфигурацию. Браузер не выполняет Docker: контейнерные результаты получены во внешнем CI. Финальный сайт обязан возвращать доказательство того же коммита, что опубликованный релиз.
 
-Removed from product tracking: `.openai/hosting.json` (local file and site identity preserved), obsolete `web/public/verification-summary.json` and unused fetch/state. Historical root reports were relocated, not discarded. Local caches, browser profiles, temporary builds, work logs and old ZIPs remain outside Git and the submission. Automatic approval review rejected deletion of temporary browser profiles without a detailed reason; they were retained and excluded instead. No user data or credential files were deleted.
+Проверенный живой сценарий включает компанию, исходные документы, реальные действия сверки, находки, объяснения, шесть случаев matcher и обучение на десяти эпизодах. Дополнительные браузерные проверки охватывают пять бизнес-профилей, пересчёт оплаты без изменения активной компании, импорт/экспорт модели и ширину 390 px. При автоматизации необходимо дождаться снятия inert после обучения и заполнения формы после React-рендера. Холодная загрузка Python зависит от сети; офлайн-показ требует предварительно подготовленной сборки.
 
-The submission is curated from necessary files, not a copy of the workspace. It includes10train and10dev companies, evaluator-only truth/provenance in a separate directory, three public-policy trajectory sets, four baseline reports/adapters, required schemas, tests, licenses and design/demo notes. Oracle requires an explicit trusted-host flag and is absent from public observations/trajectories. The packager writes a complete machine hash manifest; SUBMISSION_MANIFEST.md describes the layout. Archive extraction rejects traversal, duplicate entries and symlinks before unpacking.
+## Оставшиеся ограничения
 
-## Reproduction and release gates
-
-```sh
-python -m unittest discover -s tests -q
-python -m scripts.final_agent_only
-python -m scripts.final_policy_study
-python -m scripts.v4_verify --full-core
-python -m scripts.package_submission --output work/submission/AuditForge-final.zip
-python -m scripts.submission_check --archive work/submission/AuditForge-final.zip
-npm --prefix web ci
-npm run build
-node scripts/check_release_evidence.mjs
-```
-
-CI builds the evaluator/policy images, validates the submission before generated research reports can dirty the source, runs core/accounting/reward/security checks without network under2CPU/4GiB, then extracts the generated ZIP into a fresh directory, builds its Docker image and runs its tests independently. A separate Node22 job installs the lockfile and builds the frontend. These gates require no private service keys. The heavier exploratory policy study is reproducible separately; the smaller study tests run with every unit suite.
-
-Final publishing is conditional on successful exact-commit CI. The same source commit is fast-forwarded to main, the staged Vercel build is promoted, the seven-stage live demo and additional-source/truncation regressions are run against the real site, and the verified ZIP is attached to the final GitHub release. The exact outcome, commit and archive SHA256 are recorded in the release asset manifest. No pending check is represented as a completed success in this report.
-
-## Remaining limitations
-
-Synthetic procedural companies are not real financial data. Learned scope is21 source-acquisition weights with deterministic financial decoding; a learned financial reasoning advantage was not established. Additional modules remain simplified context where explicitly documented. A human novice comprehension test was not conducted; browser E2E proves mechanics, not universal usability. Closed evaluation requires the broker/container. Current-cloud authenticated checkpoint persistence requires the user's Supabase configuration; guest/local flows are tested separately. Cold browser startup needs the locally bundled Pyodide assets; prepare the build before an offline demonstration. An official jury score and ranking are unknown.
-
-Final local regressions before the clean-container correction: 176 tests passed; an additional no-Git regression was then added. CI uploads the exact ZIP it extracted and tested in a clean Docker build. The final release uses that CI artifact rather than rebuilding a different ZIP; separately attached release-evidence.json binds its source and the deployed frontend to the successful exact-commit CI.
-
-Confirmed clean-container packaging defect: the first release CI failed immediately because package metadata unconditionally invoked the unavailable Git binary. The core image intentionally remains Git-free. Packaging now catches missing Git, uses existing manifest identity when unpacked, or accepts the explicit CI source SHA supplied by the trusted workflow. Seven submission tests including the missing-Git regression pass; the failed run is retained in GitHub history rather than hidden.
-
-Second confirmed CI fixture defect: mutation sandboxes copied only Python directories and omitted the newly required submission metadata. The baseline failed before any mutation was applied; this was not counted as a killed mutant. Sandboxes now include configs, schemas, licenses and required documentation. The isolated sandbox baseline passed177 tests. The final browser regression also passed100-action truncation/control closure and official-action corroboration with real extra-document requests.
-
-The next CI run exposed a runner ownership issue: the evaluator container created the mounted `work` directory as root, so the runner could not extract the archive there. ZIP extraction now uses the runner-owned temporary directory. The clean-archive gate also runs `ultimate_verify` inside the extracted submission, in addition to its strict manifest check; this exercises the documented full-core command against the actual delivery contents.
+Компании синтетические, налоговые и амортизационные правила учебные; соответствие реальным законам/IFRS не заявляется. Обучаются 21 вес выбора источников, а не универсальное финансовое рассуждение. Владелец браузера может исследовать локальную память; закрытое оценивание требует брокер/Docker. Проверка понимания интерфейса новичками и перенос на реальные финансовые организации не проводились. Облачный вход и сохранение требуют настроек Supabase пользователя. Победа, рейтинг и официальные баллы жюри неизвестны.

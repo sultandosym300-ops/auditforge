@@ -9,7 +9,7 @@ import urllib.request
 import os
 
 ROOT=Path(__file__).resolve().parents[1]
-REPO='sultandosym300-ops/geneziz'
+REPO='sultandosym300-ops/auditforge'
 
 def build(run_id,*,git_credential=False):
     sha=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip()
