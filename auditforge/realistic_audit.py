@@ -63,6 +63,11 @@ def _audit_public_world(episode):
         for d in docs.values():
             e=events[d['event_id']]
             require(d['doc_id'] in e['document_ids'] and d['amount_minor']==e['amount_minor'] and d['timestamp']==e['timestamp'],'Source document disagrees with event')
+        roots=public['manifest'].get('related_document_ids',[])
+        require(isinstance(roots,list) and len(roots)<=10 and set(roots)<=set(docs),'Invalid public source-document roots')
+        for d in all_docs.values():
+            links=d.get('related_document_ids',[])
+            require(isinstance(links,list) and len(links)<=50 and len(links)==len(set(links)) and set(links)<=set(all_docs),'Broken public source-document discovery link')
         checks.append('events_documents_journal_references')
         require(set(journal)==set(source_journal)|{k for e in events.values() if e['type'] in ACCOUNTS or e['type']=='goods_returned' for k in e['ledger_ids']},'Orphan consolidated posting')
         cutoff=datetime.fromisoformat(world['as_of']);start=datetime.fromisoformat(world['period_start'])

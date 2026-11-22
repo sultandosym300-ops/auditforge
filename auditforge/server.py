@@ -23,6 +23,11 @@ ATTEMPTS={}
 
 class Handler(BaseHTTPRequestHandler):
     def log_message(self, *args): pass
+    def valid_host(self):
+        # Binding a socket to loopback does not by itself prevent DNS rebinding.
+        host=self.headers.get('Host','').lower()
+        port=self.server.server_port
+        return host in {f'127.0.0.1:{port}',f'localhost:{port}'}
     def json(self, data, status=200, cookie=None):
         body=json.dumps(data,ensure_ascii=False).encode()
         self.send_response(status)
@@ -46,6 +51,7 @@ class Handler(BaseHTTPRequestHandler):
         if previous and previous.get('env'):
             previous['env'].close()
     def do_GET(self):
+        if not self.valid_host():return self.json({'error':'invalid_host'},403)
         path=urlparse(self.path).path
         if path=='/api/me':
             s=self.session()
@@ -62,6 +68,7 @@ class Handler(BaseHTTPRequestHandler):
         body=file.read_bytes()
         self.send_response(200); self.send_header('Content-Type',mimetypes.guess_type(str(file))[0] or 'application/octet-stream'); self.send_header('Content-Length',str(len(body))); self.send_header('X-Content-Type-Options','nosniff'); self.end_headers(); self.wfile.write(body)
     def do_POST(self):
+        if not self.valid_host():return self.json({'error':'invalid_host'},403)
         origin=self.headers.get('Origin')
         if origin and urlparse(origin).netloc!=self.headers.get('Host'): return self.json({'error':'invalid_origin'},403)
         try:
@@ -124,8 +131,11 @@ class Handler(BaseHTTPRequestHandler):
                 return self.json(dict(observation=result[0],reward=result[1],terminated=result[2],truncated=result[3],report=s['env'].evaluator_report() if result[2] or result[3] else None))
             if path=='/api/run':
                 policy=payload.get('policy','reconciliation')
-                if policy not in ('random','reconciliation','mark_all'): return self.json({'error':'unknown_policy'},400)
-                result=run_policy(s['env'],s['initial'],policy,s['log'])
+                if policy not in ('random','reconciliation','mark_all','corroboration'): return self.json({'error':'unknown_policy'},400)
+                if policy=='corroboration':
+                    from .agent_only import run_agent_only
+                    result=run_agent_only(s['env'].step,s['initial'],log=s['log'])['terminal']
+                else:result=run_policy(s['env'],s['initial'],policy,s['log'])
                 return self.json(dict(result=result,report=s['env'].evaluator_report(),trajectory=s['log']))
             return self.json({'error':'not_found'},404)
         except Exception:

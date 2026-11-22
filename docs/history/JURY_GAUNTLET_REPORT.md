@@ -61,6 +61,6 @@ Generator 1.1.4. Root seed `783061141199`. Python 3.11.1.
 | Inconsistent truth: the first discrepancy in each dirty company is overstated by one minor unit. | 81.25 | 81.25 |
 | Current AuditForge, unmodified. | 100 | 100 |
 
-Detailed inputs, episode IDs, measurements and individual outcomes are in [JURY_GAUNTLET_RESULTS.json](JURY_GAUNTLET_RESULTS.json). A fresh run with a new root seed changes the financial trials.
+Detailed inputs, episode IDs, measurements and individual outcomes are in [JURY_GAUNTLET_RESULTS.json](../../JURY_GAUNTLET_RESULTS.json). A fresh run with a new root seed changes the financial trials.
 
 The rubric is a local reconstruction. Container limits are checked separately by the release workflow.

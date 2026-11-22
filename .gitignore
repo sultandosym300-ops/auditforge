@@ -16,3 +16,10 @@ web/public/python-core.json
 .vercel/
 .vercel
 .env*
+
+/.openai/
+/.impeccable/
+/web/public/release-evidence.json
+.pytest_cache/
+.venv/
+venv/

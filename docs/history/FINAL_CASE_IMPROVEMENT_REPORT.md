@@ -27,7 +27,7 @@
 | Engineering & Explanation | 10/10 | Одна команда, версии, 10 train и 10 dev, траектории, профиль и описанные ограничения |
 | Итого | 100/100 | Симуляция по опубликованным категориям, официальный результат жюри неизвестен |
 
-Прошли 84 теста, 80 прогонов четырёх политик, 1 128 независимых финансовых проверок на двух новых локальных наборах и 10/10 мутаций. [Основные метрики](reports/verification.json) · [Финансовый аудит](reports/financial-audit.json) · [Дополнительный финансовый набор](reports/financial-holdout.json) · [Мутации](reports/mutation-audit.json) · [Docker CI](https://github.com/sultandosym300-ops/geneziz/actions/workflows/verify.yml)
+Прошли 84 теста, 80 прогонов четырёх политик, 1 128 независимых финансовых проверок на двух новых локальных наборах и 10/10 мутаций. [Основные метрики](../../reports/verification.json) · [Финансовый аудит](../../reports/financial-audit.json) · [Дополнительный финансовый набор](../../reports/financial-holdout.json) · [Мутации](../../reports/mutation-audit.json) · [Docker CI](https://github.com/sultandosym300-ops/geneziz/actions/workflows/verify.yml)
 
 ## Границы и воспроизведение
 

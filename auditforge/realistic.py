@@ -225,6 +225,36 @@ def generate_realistic(seed,config=None):
     simple('toy_tax_accrued',26,tax,'tax_expense','tax_payable',tax_base_minor=taxable,rate_basis_points=1000)
     simple('toy_tax_paid',27,tax//2,'tax_payable','cash')
     events.sort(key=lambda e:(e['timestamp'],e['event_id']))
+    # Public source discovery uses the existing get_document tool. These links
+    # are derived from business relations, never from injected issue labels.
+    event_index={e['event_id']:e for e in events}
+    for doc in documents:
+        e=event_index[doc['event_id']]
+        linked=set(e['document_ids'])
+        for eid in e['related_event_ids']:
+            linked.update(event_index[eid]['document_ids'])
+        if e.get('sale_event_id'):
+            linked.update(event_index[e['sale_event_id']]['document_ids'])
+        for related in events:
+            if e['event_id'] in related.get('related_event_ids',[]) or related.get('sale_event_id')==e['event_id']:
+                linked.update(related['document_ids'])
+            if e.get('asset_id') and related.get('asset_id')==e['asset_id']:
+                linked.update(related['document_ids'])
+        doc['related_document_ids']=sorted(linked-{doc['doc_id']})
+    root_types=('capital_contribution','loan_received','equipment_acquired','payroll_accrued',
+                'goods_received','raw_material_received','production_completed','software_prepaid',
+                'professional_insurance_prepaid','sale_delivered','toy_tax_accrued')
+    roots=[]
+    for kind in root_types:
+        found=next((d['doc_id'] for d in documents if d['type']==kind),None)
+        if found:roots.append(found)
+    for books in (public,pristine):
+        books['manifest']['related_document_ids']=roots[:10]
+        for inv in books['invoices']:
+            inv['related_document_ids']=[d['doc_id'] for d in documents
+                if d.get('invoice_id')==inv['invoice_id'] and d['type'] in ('supplier_contract','purchase_order','service_acceptance')]
+        for pay in books['payments']:
+            pay['related_document_ids']=[d['doc_id'] for d in documents if d.get('payment_id')==pay['payment_id']]
     for books,base_rows in ((public,observed_rows),(pristine,source_rows)):
         journal=copy.deepcopy(base_rows+context)
         book_events=copy.deepcopy(events)

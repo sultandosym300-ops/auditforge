@@ -2,6 +2,7 @@ import sys,json,secrets
 if '/app' not in sys.path: sys.path.insert(0,'/app')
 from auditforge.env import Session
 from auditforge.policies import run_policy
+from auditforge.agent_only import run_agent_only
 from auditforge.training import Trainer
 from auditforge.efficient_training import EfficientTrainer,load_trainer
 from auditforge.counterfactual import challenge
@@ -61,7 +62,7 @@ def request(path,payload):
   result=bridge.step(payload['action'])
   return dict(observation=result[0],reward=result[1],terminated=result[2],truncated=result[3],report=session.report if session.done else None)
  if path=='run':
-  result=run_policy(bridge,initial,payload.get('policy','reconciliation'))
+  result=run_agent_only(bridge.step,initial)['terminal'] if payload.get('policy')=='corroboration' else run_policy(bridge,initial,payload.get('policy','reconciliation'))
   return dict(result=result,report=session.report,trajectory=trajectory)
  if path=='trajectory':return trajectory
  raise ValueError('Unknown public request')

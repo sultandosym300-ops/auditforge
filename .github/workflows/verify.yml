@@ -32,21 +32,30 @@ jobs:
             --mount type=bind,source="$GITHUB_WORKSPACE",target=/submission \
             -w /submission auditforge-evaluator:2.0.1 sh -ec '
             python -c "import sys; assert sys.version_info[:2] == (3, 11)"
+            python -m scripts.package_submission --output work/submission/AuditForge-final.zip
+            python -m scripts.submission_check --archive work/submission/AuditForge-final.zip
             python -m scripts.ultimate_verify --seed 801973140685
+            python -m scripts.final_agent_only --output work/final-agent-only.json
+            python -m scripts.v4_world_check --output work/v4-world.json
+            python -m scripts.v4_proof_check --output work/v4-proof.json
+            python -m scripts.v4_native_demo_check --output work/v4-http.json
             python -m scripts.world_comparison --output work/world-comparison.json
             python -m auditforge.shortcut_hunter --output work/shortcut-hunter.json
             python -m scripts.adversarial_logic
             python -m scripts.generator_probe --output work/generator-probe.json
-            python -m scripts.optimization_benchmark --output work/optimization-ci.json
-            python -m scripts.v3_benchmark --output work/v3-ci.json
-            python -m scripts.v3_budget_probe
-            python -m scripts.v4_verify --skip-unit-tests --output work/v4-ci-summary.json
             python -m scripts.recognition_demo
             python -c "from pathlib import Path; p=Path(\"/sys/fs/cgroup\"); print({k:(p/k).read_text().strip() for k in (\"cpu.max\",\"memory.max\",\"memory.peak\")}); assert (p/\"memory.max\").read_text().strip()==str(4*1024**3); q,t=map(int,(p/\"cpu.max\").read_text().split()); assert q==2*t"
           '
       - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
         with:
           python-version: '3.11'
+      - name: Verify release evidence fails on stale source
+        run: node scripts/check_release_evidence.mjs
+      - name: Verify the submitted ZIP in a clean Docker build
+        run: |
+          python -m zipfile -e work/submission/AuditForge-final.zip work/ci-archive
+          docker build -t auditforge-submission:final work/ci-archive/AuditForge
+          docker run --rm --network none --cpus 2 --memory 4g auditforge-submission:final python -m unittest discover -s tests -q
       - name: Check worker retry after transient initialization failure
         run: node scripts/check_worker_retry.mjs
       - name: Confirm effective policy container boundary
@@ -54,3 +63,28 @@ jobs:
       - name: Reconcile through the isolated policy broker
         run: |
           python -m scripts.jury_broker
+
+      - name: Preserve the exact Docker-verified submission archive
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: auditforge-submission
+          path: work/submission/AuditForge-final.zip
+          if-no-files-found: error
+          retention-days: 30
+
+  frontend:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - run: npm --prefix web ci
+      - run: npm run build
+      - run: node scripts/check_release_evidence.mjs
+      - run: node scripts/check_worker_retry.mjs
