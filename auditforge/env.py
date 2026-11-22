@@ -107,7 +107,9 @@ class Session:
                     result = next((r for r in records if any(record_id == r[key] for key in keys)), None)
                     if result is None: raise ValueError('Record not found')
             elif tool == 'get_document':
-                result = next((d for table in ('invoices', 'payments') for d in self.public[table] if d['doc_id'] == action.get('doc_id')), None)
+                documents = [d for table in ('invoices', 'payments') for d in self.public[table]]
+                documents += self.public.get('business', {}).get('source_documents', [])
+                result = next((d for d in documents if d['doc_id'] == action.get('doc_id')), None)
                 if result is None: raise ValueError('Document not found')
             else:
                 raise ValueError('Unknown action')
@@ -137,6 +139,12 @@ def _worker(connection):
                 response = session.step(message['action'])
             elif command == 'report':
                 response = session.report if session.done else None
+            elif command == 'host_story':
+                from .proof import public_story
+                response = dict(public_story(session.public), business=session.public.get('business'))
+            elif command == 'host_demo':
+                from .proof import explain_completed
+                response = explain_completed(session, demo=message.get('demo') is True)
             else:
                 response = None
             connection.send_bytes(json.dumps(dict(ok=True, value=response), allow_nan=False).encode())
@@ -175,6 +183,14 @@ class AuditEnv:
     def evaluator_report(self):
         """Trusted host only. Never expose this method in the agent RPC broker."""
         return self._call(dict(command='report'))
+
+    def evaluator_story(self):
+        """Trusted website host: source facts only; not an agent RPC command."""
+        return self._call(dict(command='host_story'))
+
+    def evaluator_demo(self, *, demo=False):
+        """Trusted explicit demonstration, rejected until terminal submission."""
+        return self._call(dict(command='host_demo', demo=demo))
 
     def close(self):
         if self._process.is_alive():

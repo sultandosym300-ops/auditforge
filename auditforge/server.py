@@ -101,7 +101,14 @@ class Handler(BaseHTTPRequestHandler):
                 initial,_=s['env'].reset(payload.get('seed',secrets.randbelow(2**32)),payload.get('config',{}))
                 s['initial']=initial
                 return self.json(dict(observation=initial))
+            if path=='/api/proof_suite':
+                from .proof import proof_suite
+                return self.json(proof_suite(payload.get('seed',2026112204)))
             if not s['env']: return self.json({'error':'create_episode_first'},409)
+            if path=='/api/world_story':
+                return self.json(s['env'].evaluator_story())
+            if path=='/api/demo_explain':
+                return self.json(s['env'].evaluator_demo(demo=payload.get('demo') is True))
             if path=='/api/step':
                 action=payload.get('action'); result=s['env'].step(action)
                 s['log'].append(dict(episode_id=s['initial']['manifest']['episode_id'],step=len(s['log'])+1,action=action,observation=result[0],reward=result[1],terminated=result[2],truncated=result[3]))
