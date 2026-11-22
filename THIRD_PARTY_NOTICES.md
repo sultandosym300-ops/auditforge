@@ -8,6 +8,7 @@ Generated from the pinned lockfile; optional platform-specific binaries are list
 
 | Package | Version | Declared license |
 |---|---|---|
+| three | 0.180.0 | MIT |
 | @esbuild/aix-ppc64 | 0.25.12 | MIT |
 | @esbuild/android-arm | 0.25.12 | MIT |
 | @esbuild/android-arm64 | 0.25.12 | MIT |

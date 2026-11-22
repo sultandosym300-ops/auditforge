@@ -55,17 +55,17 @@ export default function TrainingLab({lang,onInvestigation,hasEpisode,controlsRef
    return selected.map(index=>`${history.length<2?0:index*900/(history.length-1)},${120-(history[index].reward+1)*55}`).join(' ');
  },[history]);
  return <section className="training-lab">
- <div className="work-heading"><div><h1>{t('title')}</h1><p>{t(legacy?'scope':'scopeV2')}</p></div></div>
- <details className="training-explanation" open><summary>{v.trainingExplain}</summary><p>{v.trainingInput}</p><p>{v.trainingDecision}</p><p>{v.trainingUpdate}</p><p>{v.trainingCompare}</p><p>{v.trainingReward}</p></details>
+ <div className="work-heading"><div><h1>{t('title')}</h1><p>{lang==='ru'?'Обучайте выбор документов и проверяйте результат.':lang==='kk'?'Құжат таңдауды үйретіп, нәтижені тексеріңіз.':'Train document selection. Verify the result.'}</p></div></div>
+ <details className="training-explanation"><summary>{v.trainingExplain}</summary><p>{t(legacy?'scope':'scopeV2')}</p><p>{t('local')}</p><p>{v.trainingInput}</p><p>{v.trainingDecision}</p><p>{v.trainingUpdate}</p><p>{v.trainingCompare}</p><p>{v.trainingReward}</p></details>
  {worldProfile==='realistic_v1'&&<p className="small-note">{v.scopeBody}</p>}
- <p className="small-note">{t('local')}</p>
+ 
  <div className="training-layout"><aside className="training-settings">
  <label>{t('name')}<input value={name} maxLength={80} disabled={running} onChange={e=>setName(e.target.value)}/></label>
  <label>{v.profile}<select className="training-world-select" value={worldProfile} disabled={running||!!checkpoint} onChange={e=>{setWorldProfile(e.target.value);if(e.target.value==='realistic_v1'&&scenario==='recognition')setScenario('mixed');}}><option value="compact">{v.compact}</option><option value="realistic_v1">{v.realistic}</option></select></label>
  {worldProfile==='realistic_v1'&&<label>{v.businessType}<select className="training-business-select" value={businessType} disabled={running||!!checkpoint} onChange={e=>setBusinessType(e.target.value)}>{Object.entries(v.types).map(([key,name])=><option key={key} value={key}>{name}</option>)}</select></label>}
  <label>{t('scenario')}<select value={scenario} disabled={running||!!checkpoint} onChange={e=>setScenario(e.target.value)}>{['period','duplicate','fx','allocation','mixed','clean','recognition'].filter(key=>worldProfile!=='realistic_v1'||key!=='recognition').map(x=><option key={x} value={x}>{t(x)}</option>)}</select></label>
- <label>{t('seed')}<input type="number" min="0" max="2147483647" value={seed} disabled={running||!!checkpoint} onChange={e=>setSeed(e.target.value)}/></label>
- <label>{t('episodes')}<input type="number" min="1" max="1000" value={count} disabled={running} onChange={e=>setCount(Math.max(1,Math.min(1000,Number(e.target.value)||1)))}/></label>
+ <details className="training-advanced"><summary>{lang==='ru'?'Параметры обучения':lang==='kk'?'Оқыту параметрлері':'Training settings'}</summary> <label>{t('seed')}<input type="number" min="0" max="2147483647" value={seed} disabled={running||!!checkpoint} onChange={e=>setSeed(e.target.value)}/></label>
+ <label>{t('episodes')}<input type="number" min="1" max="1000" value={count} disabled={running} onChange={e=>setCount(Math.max(1,Math.min(1000,Number(e.target.value)||1)))}/></label></details>
  <button className="button secondary training-create" disabled={running} onClick={create}>{t('create')}</button>
  <button className="button primary training-start" disabled={!checkpoint||running} onClick={()=>train()}>{t('start')}</button>
  <button className="button secondary" disabled={!running} onClick={()=>stop.current=true}>{t('stop')}</button>

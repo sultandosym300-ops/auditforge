@@ -1,17 +1,20 @@
-import React,{useRef,useState} from 'react';
+import React,{lazy,Suspense,useEffect,useRef,useState} from 'react';
 import {useGSAP} from '@gsap/react';
 import gsap from 'gsap';
 import {ScrollTrigger} from 'gsap/ScrollTrigger';
 import {FileText,GitCompareArrows,ScanLine,ShieldCheck,Mouse} from 'lucide-react';
+const EvidenceCore=lazy(()=>import('./EvidenceCore.jsx'));
 gsap.registerPlugin(ScrollTrigger,useGSAP);
 
 export default function Disassembly({t,lang,paused}){
+  const [modelReady,setModelReady]=useState(false);
   const root=useRef();const progress=useRef(0);const trigger=useRef();const [stage,setStage]=useState(0);
   const icons=[FileText,GitCompareArrows,ScanLine,ShieldCheck];
 
+  useEffect(()=>{const observer=new IntersectionObserver(([entry])=>{if(entry.isIntersecting){setModelReady(true);observer.disconnect();}},{rootMargin:'400px'});observer.observe(root.current);return()=>observer.disconnect();},[]);
   useGSAP(()=>{
     const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if(reduced){progress.current=.7;return;}
+    if(reduced){progress.current=0;return;}
     const value={p:0};
     const tween=gsap.to(value,{p:1,ease:'none',scrollTrigger:{trigger:root.current,start:'top top',end:'bottom bottom',scrub:.65,invalidateOnRefresh:true},onUpdate:()=>{
       progress.current=value.p;
@@ -38,7 +41,7 @@ export default function Disassembly({t,lang,paused}){
           <p key={'body'+stage}>{t('assembly'+stage+'Body')}</p>
           <div className="assembly-equation"><span>{t('assembly'+stage+'Label')}</span><strong>{['500.00 USD','500 × 490.60','245 300 KZT','4 700 KZT'][stage]}</strong><span>{t('assembly'+stage+'Note')}</span></div>
         </div>
-        <div className="assembly-model"><div className="evidence-flow">{icons.map((StepIcon,i)=><div className={'evidence-flow-row '+(stage===i?'active':'')} key={i}><StepIcon size={22}/><div><span>{t('assembly'+i)}</span><strong>{['500.00 USD','490.60 KZT / USD','245 300 KZT','4 700 KZT'][i]}</strong></div><span className="evidence-flow-index">0{i+1}</span></div>)}</div><span className="assembly-model-note">{t('conceptModel')}</span></div>
+        <div className="assembly-model">{modelReady&&<Suspense fallback={null}><EvidenceCore progressRef={progress} paused={paused} lang={lang}/></Suspense>}<span className="assembly-model-note">{t('conceptModel')}</span></div>
       </div>
       <div className="assembly-controls"><div className="assembly-tabs" role="tablist" aria-label={t('assemblyTitle')}>{icons.map((StepIcon,i)=><button key={i} role="tab" aria-selected={stage===i} className={stage===i?'active':''} onClick={()=>choose(i)}><StepIcon size={17}/><span>{t('assembly'+i)}</span></button>)}</div><div className="assembly-progress"><span className="assembly-progress-fill"/></div><p><Mouse size={14}/>{t('scrollDisassemble')}</p></div>
     </div>
