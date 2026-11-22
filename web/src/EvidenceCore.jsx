@@ -1,67 +1,66 @@
 import React,{useEffect,useRef} from 'react';
 import * as THREE from 'three';
 import {RoomEnvironment} from 'three/addons/environments/RoomEnvironment.js';
+import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
 
-// Financial source documents, never device mockups. Scroll reveals the evidence chain.
+const MODEL_PATHS={
+ magnifier:'/models/magnifying-glass.glb',
+ clipboard:'/models/clipboard.glb',
+ calculator:'/models/calculator.glb',
+ tray:'/models/document-tray.glb',
+ sealedProof:'/models/letter.glb'
+};
+
+const COPY={
+ ru:{brand:'AUDITFORGE',payment:'ПЛАТЁЖ',source:'Исходный документ',rate:'Курс на дату платежа',book:'Проводка в книге',proof:'Доказанное расхождение',verified:'ПРОВЕРЕНО'},
+ en:{brand:'AUDITFORGE',payment:'PAYMENT',source:'Source document',rate:'Rate on payment date',book:'Journal entry',proof:'Proven difference',verified:'VERIFIED'},
+ kk:{brand:'AUDITFORGE',payment:'ТӨЛЕМ',source:'Бастапқы құжат',rate:'Төлем күніндегі бағам',book:'Есеп кітабындағы жазба',proof:'Расталған айырма',verified:'ТЕКСЕРІЛДІ'}
+};
+
+const smooth=value=>value*value*(3-2*value);
+
 export default function EvidenceCore({progressRef,paused=false,lang='ru',hero=false}){
- const host=useRef();
+ const host=useRef(null);
  useEffect(()=>{
-  const element=host.current;let renderer;
-  try{renderer=new THREE.WebGLRenderer({alpha:true,antialias:true,powerPreference:'low-power'});}catch{return;}
-  renderer.setPixelRatio(Math.min(devicePixelRatio||1,2));renderer.outputColorSpace=THREE.SRGBColorSpace;
-  renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.15;renderer.setClearColor(0,0);element.appendChild(renderer.domElement);
-  const scene=new THREE.Scene(),camera=new THREE.OrthographicCamera(-5,5,4,-4,.1,60);camera.position.z=18;
+  const element=host.current;if(!element)return undefined;
+  let renderer;try{renderer=new THREE.WebGLRenderer({alpha:true,antialias:true,powerPreference:'high-performance'});}catch{return undefined;}
+  let alive=true,frame=0,visible=true,sized=false,ready=false;
+  const resources={geometry:[],materials:[],textures:[]};
+  const scene=new THREE.Scene(),camera=new THREE.PerspectiveCamera(hero?31:27,1,.05,100),root=new THREE.Group(),content=new THREE.Group();
+  root.add(content);scene.add(root);
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio||1,2));renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=hero?1.08:1.02;renderer.setClearColor(0x000000,0);element.appendChild(renderer.domElement);
   const pmrem=new THREE.PMREMGenerator(renderer),room=new RoomEnvironment(),environment=pmrem.fromScene(room,.04);scene.environment=environment.texture;room.dispose();pmrem.dispose();
-  scene.add(new THREE.HemisphereLight(0xe5f3ff,0x476078,2.6));const light=new THREE.DirectionalLight(0xffffff,3);light.position.set(-3,5,8);scene.add(light);
-  const group=new THREE.Group();scene.add(group);const geometry=[],materials=[],textures=[],sheets=[];
-  const titles={ru:['Платёж','Валютный курс','Проводка','Доказательство'],en:['Payment','Exchange rate','Journal entry','Evidence'],kk:['Төлем','Валюта бағамы','Өткізбе','Дәлел']}[lang]||['Payment','Exchange rate','Journal entry','Evidence'];
-  const subtitles={ru:['Исходный документ','Правило на дату платежа','Запись в учётной книге','Проверенное расхождение'],en:['Source document','Rule on payment date','Recorded book amount','Verified difference'],kk:['Бастапқы құжат','Төлем күніндегі ереже','Есеп кітабындағы жазба','Расталған айырма']}[lang]||[];
-  const values=['500.00','490.60','250 000','4 700'],units=['USD','KZT / USD','KZT','KZT'];
-  function material(options){const m=new THREE.MeshStandardMaterial(options);materials.push(m);return m;}
-  function mesh(g,m,parent){geometry.push(g);const o=new THREE.Mesh(g,m);parent.add(o);return o;}
-  function shape(w,h,r){const s=new THREE.Shape(),x=-w/2,y=-h/2;s.moveTo(x+r,y);s.lineTo(x+w-r,y);s.quadraticCurveTo(x+w,y,x+w,y+r);s.lineTo(x+w,y+h-r);s.quadraticCurveTo(x+w,y+h,x+w-r,y+h);s.lineTo(x+r,y+h);s.quadraticCurveTo(x,y+h,x,y+h-r);s.lineTo(x,y+r);s.quadraticCurveTo(x,y,x+r,y);return s;}
-  function faceTexture(index){
-   const canvas=document.createElement('canvas');canvas.width=1536;canvas.height=2048;const c=canvas.getContext('2d');c.scale(2,2);
-   c.fillStyle=index===3?'#e2f4ef':'#fafcfd';c.fillRect(0,0,768,1024);
-   c.fillStyle='#60788b';c.font='500 18px sans-serif';c.fillText('AUDITFORGE',58,76);c.textAlign='right';c.fillText(String(index+1).padStart(2,'0'),710,76);c.textAlign='left';
-   c.strokeStyle='#ccd8e0';c.lineWidth=1;c.beginPath();c.moveTo(58,108);c.lineTo(710,108);c.stroke();
-   c.fillStyle='#162e40';c.font='600 42px sans-serif';c.fillText(titles[index],58,196);c.font='22px sans-serif';c.fillStyle='#657f90';c.fillText(subtitles[index]||'',58,239);
-   c.fillStyle='#163548';c.font='500 89px sans-serif';c.fillText(values[index],54,395);c.font='24px sans-serif';c.fillStyle='#637d8b';c.fillText(units[index],58,438);
-   const labels=index===0?['PAY-0042','31 OCT 2026','USD → KZT']:index===1?['FX-USD-10','500 × 490.60','245 300 KZT']:index===2?['ROW-0084','245 300 KZT','250 000 KZT']:['PAY-0042 + FX-USD-10','ROW-0084','250 000 − 245 300'];
-   labels.forEach((value,i)=>{const y=555+i*99;c.fillStyle='#edf2f5';c.fillRect(56,y-28,656,62);c.fillStyle='#476578';c.font='24px sans-serif';c.fillText(value,76,y+12);});
-   if(index===3){c.strokeStyle='#397b6f';c.lineWidth=7;c.beginPath();c.arc(644,897,36,0,Math.PI*2);c.stroke();c.beginPath();c.moveTo(626,896);c.lineTo(641,911);c.lineTo(664,882);c.stroke();}
-   c.fillStyle='#7e949f';c.font='18px sans-serif';c.fillText('SYNTHETIC · DEMONSTRATION',58,948);
-   const t=new THREE.CanvasTexture(canvas);t.colorSpace=THREE.SRGBColorSpace;t.anisotropy=Math.min(8,renderer.capabilities.getMaxAnisotropy());textures.push(t);return t;
-  }
-  for(let i=0;i<(hero?1:4);i++){
-   const sheet=new THREE.Group();group.add(sheet);sheets.push(sheet);const outline=shape(2.8,3.75,.075);
-   const thickness=new THREE.ExtrudeGeometry(outline,{depth:.025,bevelEnabled:true,bevelSegments:2,bevelSize:.008,bevelThickness:.008,curveSegments:16});thickness.translate(0,0,-.025);
-   mesh(thickness,material({color:0xe5edf2,roughness:.8}),sheet);
-   const front=mesh(new THREE.ShapeGeometry(outline),(()=>{const m=new THREE.MeshBasicMaterial({map:faceTexture(hero?0:i)});materials.push(m);return m;})(),sheet);front.position.z=.012;
-   const uv=front.geometry.getAttribute('uv'),pos=front.geometry.getAttribute('position');for(let n=0;n<uv.count;n++)uv.setXY(n,(pos.getX(n)+1.4)/2.8,(pos.getY(n)+1.875)/3.75);uv.needsUpdate=true;
-  }
-  // A thin optical plane highlights a document row; it is a visual explanation of inspection.
-  let inspection;
-  if(hero){inspection=new THREE.Group();group.add(inspection);const glass=new THREE.MeshPhysicalMaterial({color:0xb9e4e9,transparent:true,opacity:.25,roughness:.12,metalness:0,side:THREE.DoubleSide});materials.push(glass);
-   mesh(new THREE.CircleGeometry(.93,96),glass,inspection);
-   const rimMaterial=material({color:0x527b8e,metalness:.75,roughness:.2});
-   mesh(new THREE.TorusGeometry(.96,.045,20,96),rimMaterial,inspection);
-   const outer=mesh(new THREE.TorusGeometry(1.045,.012,12,96),rimMaterial,inspection);outer.position.z=-.02;
+  scene.add(new THREE.HemisphereLight(0xf4faff,0x182b3c,1.8));const key=new THREE.DirectionalLight(0xffffff,2.8);key.position.set(-4,7,6);scene.add(key);const fill=new THREE.DirectionalLight(0x9fdceb,1.15);fill.position.set(5,2,2);scene.add(fill);const rim=new THREE.DirectionalLight(0x5d9ac0,.9);rim.position.set(2,3,-5);scene.add(rim);
 
+  function register(object){object.traverse(node=>{if(!node.isMesh)return;node.castShadow=false;node.receiveShadow=false;if(node.geometry)resources.geometry.push(node.geometry);const source=Array.isArray(node.material)?node.material:[node.material];node.material=source.map(material=>{const clone=material.clone();clone.envMapIntensity=1.15;resources.materials.push(clone);return clone;});if(node.material.length===1)node.material=node.material[0];});return object;}
+  function normalize(object,target){const box=new THREE.Box3().setFromObject(object),size=box.getSize(new THREE.Vector3()),center=box.getCenter(new THREE.Vector3());object.position.sub(center);object.scale.setScalar(target/Math.max(size.x,size.y,size.z));object.updateMatrixWorld(true);const normalizedBox=new THREE.Box3().setFromObject(object);object.position.y-=normalizedBox.min.y;return object;}
+  function makeDocumentTexture(type='payment'){
+   const text=COPY[lang]||COPY.en,canvas=document.createElement('canvas');canvas.width=1200;canvas.height=1600;const c=canvas.getContext('2d');c.fillStyle=type==='proof'?'#dcefeb':'#edf3f6';c.fillRect(0,0,canvas.width,canvas.height);c.fillStyle='#425f72';c.font='600 30px Arial';c.fillText(text.brand,84,100);c.textAlign='right';c.fillText(type==='payment'?'PAY-0042':'ROW-0084',1116,100);c.textAlign='left';c.strokeStyle='#a7bcc8';c.lineWidth=3;c.beginPath();c.moveTo(84,145);c.lineTo(1116,145);c.stroke();
+   const title=type==='rate'?text.rate:type==='book'?text.book:type==='proof'?text.proof:text.payment;c.fillStyle='#173548';c.font='700 54px Arial';c.fillText(title,84,276);c.fillStyle='#6b8290';c.font='32px Arial';c.fillText(type==='payment'?text.source:'Audit trail',84,332);const value=type==='rate'?'490.60':type==='book'?'250 000':type==='proof'?'4 700':'500.00',unit=type==='payment'?'USD':type==='rate'?'KZT / USD':'KZT';c.fillStyle='#12384c';c.font='600 132px Arial';c.fillText(value,78,610);c.fillStyle='#6c8391';c.font='36px Arial';c.fillText(unit,88,670);
+   const rows=type==='payment'?['31 OCT 2026','SOURCE AMOUNT 500.00','CURRENCY USD']:type==='rate'?['500 × 490.60','PAYMENT DATE RULE','EXPECTED 245 300']:type==='book'?['BOOK ROW 0084','RECORDED 250 000','EXPECTED 245 300']:['PAY-0042 + FX-USD-10','ROW-0084','DIFFERENCE 4 700'];rows.forEach((row,index)=>{const y=850+index*138;c.fillStyle='#e9eff2';c.fillRect(84,y-56,1032,92);c.fillStyle='#456274';c.font='500 32px Arial';c.fillText(row,118,y+4);});
+   if(type==='proof'){c.strokeStyle='#2d806f';c.lineWidth=12;c.beginPath();c.arc(1020,1410,74,0,Math.PI*2);c.stroke();c.beginPath();c.moveTo(977,1408);c.lineTo(1010,1440);c.lineTo(1066,1376);c.stroke();c.fillStyle='#2d806f';c.font='700 30px Arial';c.fillText(text.verified,82,1440);}
+   const texture=new THREE.CanvasTexture(canvas);texture.colorSpace=THREE.SRGBColorSpace;texture.anisotropy=Math.min(8,renderer.capabilities.getMaxAnisotropy());resources.textures.push(texture);return texture;
   }
-  let visible=true,sized=false,frame=0,targetX=0,targetY=0,poseX=0,poseY=0,lastTime=performance.now();const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const bounds=new THREE.Box3(),size=new THREE.Vector3(),center=new THREE.Vector3();
-  const resize=new ResizeObserver(()=>{const b=element.getBoundingClientRect();sized=b.width>0&&b.height>0;if(!sized)return;renderer.setSize(b.width,b.height);camera.left=-5;camera.right=5;camera.top=5*b.height/b.width;camera.bottom=-camera.top;camera.updateProjectionMatrix();});resize.observe(element);
-  const observer=new IntersectionObserver(([entry])=>visible=entry.isIntersecting);observer.observe(element);
-  function move(e){const b=element.getBoundingClientRect();targetX=(e.clientX-b.left)/b.width-.5;targetY=(e.clientY-b.top)/b.height-.5;}function leave(){targetX=targetY=0;}
-  element.addEventListener('pointermove',move);element.addEventListener('pointerleave',leave);
-  function render(){frame=requestAnimationFrame(render);if(!visible||!sized)return;const now=performance.now(),dt=Math.min((now-lastTime)/1000,.05);lastTime=now;const p=Math.max(0,Math.min(1,progressRef?.current||0));
-   poseX=THREE.MathUtils.damp(poseX,reduced||paused?0:targetX,7,dt);poseY=THREE.MathUtils.damp(poseY,reduced||paused?0:targetY,7,dt);group.rotation.set(.06-poseY*.09,-.16+poseX*.13,-.055);
-   sheets.forEach((sheet,i)=>{const order=i-1.5;sheet.position.set(hero?0:order*(.14+p*1.7),hero?0:-order*p*.15,hero?0:-i*(.12+p*.21));sheet.rotation.z=hero?0:order*p*-.025;});
-   if(inspection){inspection.position.set(.36+poseX*.35,.28+poseY*.9,.42);inspection.rotation.y=.02;}
-   group.updateMatrixWorld(true);bounds.setFromObject(group);bounds.getSize(size);bounds.getCenter(center);camera.zoom=Math.min((camera.right-camera.left)/(size.x*1.28),(camera.top-camera.bottom)/(size.y*1.28));camera.position.set(center.x,center.y,18);camera.lookAt(center.x,center.y,0);camera.updateProjectionMatrix();renderer.render(scene,camera);element.dataset.ready='true';element.dataset.scene=hero?'document-inspection':'financial-evidence';
+  function makeSheet(type,width=2.65,height=3.55){const group=new THREE.Group(),edgeGeometry=new THREE.BoxGeometry(width,.055,height);resources.geometry.push(edgeGeometry);const edgeMaterial=new THREE.MeshStandardMaterial({color:0xdfe8ed,roughness:.78,metalness:.02});resources.materials.push(edgeMaterial);const edge=new THREE.Mesh(edgeGeometry,edgeMaterial);edge.position.y=.014;group.add(edge);const faceGeometry=new THREE.PlaneGeometry(width*.985,height*.985);resources.geometry.push(faceGeometry);const faceMaterial=new THREE.MeshStandardMaterial({map:makeDocumentTexture(type),roughness:.88,metalness:0});resources.materials.push(faceMaterial);const face=new THREE.Mesh(faceGeometry,faceMaterial);face.rotation.x=-Math.PI/2;face.position.y=.05;group.add(face);return group;}
+  function setOpacity(object,opacity){object.visible=opacity>.015;object.traverse(node=>{if(!node.isMesh)return;const list=Array.isArray(node.material)?node.material:[node.material];list.forEach(material=>{material.transparent=opacity<.995||material.transparent;material.opacity=opacity;material.depthWrite=opacity>.72;});});}
+  async function loadModel(path,target){const gltf=await new GLTFLoader().loadAsync(path);return normalize(register(gltf.scene),target);}
+
+  const stages=[];
+  async function buildHero(){const paper=makeSheet('payment',3.15,4.2);paper.rotation.z=-.045;content.add(paper);const magnifier=await loadModel(MODEL_PATHS.magnifier,3.75);magnifier.rotation.set(.02,-.38,-.12);magnifier.position.set(.35,.11,.2);content.add(magnifier);const focusGeometry=new THREE.RingGeometry(.61,.66,96);resources.geometry.push(focusGeometry);const focusMaterial=new THREE.MeshBasicMaterial({color:0x63bfcd,transparent:true,opacity:.5,side:THREE.DoubleSide});resources.materials.push(focusMaterial);const focus=new THREE.Mesh(focusGeometry,focusMaterial);focus.rotation.x=-Math.PI/2;focus.position.set(-.38,.076,.34);content.add(focus);content.rotation.set(-.08,.05,-.04);content.userData.magnifier=magnifier;content.userData.focus=focus;}
+  async function buildStory(){
+   const specs=[{path:MODEL_PATHS.clipboard,target:3.55,position:[0,0,0],rotation:[0,.1,-.02]},{path:MODEL_PATHS.calculator,target:2.5,position:[.66,.04,.18],rotation:[0,-.28,.04]},{path:MODEL_PATHS.tray,target:3.05,position:[.48,0,.08],rotation:[0,-.22,0]},{path:MODEL_PATHS.sealedProof,target:2.35,position:[.28,.08,.1],rotation:[0,-.18,.02]}],loaded=await Promise.all(specs.map(spec=>loadModel(spec.path,spec.target)));
+   specs.forEach((spec,index)=>{const stage=new THREE.Group(),model=loaded[index];if(index===1){const sheet=makeSheet('rate',2.55,3.4);sheet.position.set(-.76,0,-.12);sheet.rotation.z=-.13;stage.add(sheet);}if(index===2){const left=makeSheet('book',2.15,2.9);left.position.set(-.78,.05,.12);left.rotation.z=-.08;stage.add(left);const right=makeSheet('rate',2,2.7);right.position.set(.55,.02,-.18);right.rotation.z=.08;stage.add(right);}if(index===3){const sheet=makeSheet('proof',2.9,3.85);sheet.position.set(-.5,0,-.06);sheet.rotation.z=-.035;stage.add(sheet);}model.position.add(new THREE.Vector3(...spec.position));model.rotation.set(...spec.rotation);stage.add(model);stage.userData.baseY=index===0?.03:0;content.add(stage);stages.push(stage);});
+  }
+  const loadPromise=(hero?buildHero():buildStory()).then(()=>{if(!alive)return;ready=true;element.dataset.ready='true';element.dataset.scene=hero?'forensic-magnifier':'audit-evidence-tools';}).catch(error=>{if(alive){element.dataset.error='model-load';console.error('3D asset load failed',error);}});
+  let targetX=0,targetY=0,poseX=0,poseY=0,lastTime=performance.now();const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function resizeScene(){const bounds=element.getBoundingClientRect();sized=bounds.width>0&&bounds.height>0;if(!sized)return;renderer.setSize(bounds.width,bounds.height,false);camera.aspect=bounds.width/bounds.height;camera.updateProjectionMatrix();}
+  const resize=new ResizeObserver(resizeScene);resize.observe(element);resizeScene();const observer=new IntersectionObserver(([entry])=>{visible=entry.isIntersecting;});observer.observe(element);function move(event){const bounds=element.getBoundingClientRect();targetX=(event.clientX-bounds.left)/bounds.width-.5;targetY=(event.clientY-bounds.top)/bounds.height-.5;}function leave(){targetX=0;targetY=0;}element.addEventListener('pointermove',move,{passive:true});element.addEventListener('pointerleave',leave);
+  function render(){frame=requestAnimationFrame(render);if(!visible||!sized)return;const now=performance.now(),dt=Math.min((now-lastTime)/1000,.05);lastTime=now;poseX=THREE.MathUtils.damp(poseX,reduced||paused?0:targetX,6.5,dt);poseY=THREE.MathUtils.damp(poseY,reduced||paused?0:targetY,6.5,dt);
+   if(hero){camera.position.set(0,5.5,8.6);camera.lookAt(0,.05,0);root.rotation.x=-poseY*.055;root.rotation.y=poseX*.12;if(content.userData.magnifier){content.userData.magnifier.position.x=.35+poseX*.3;content.userData.magnifier.position.z=.2+poseY*.28;content.userData.focus.position.x=-.38+poseX*.22;content.userData.focus.position.z=.34+poseY*.2;}}
+   else{camera.position.set(0,5.2,8.8);camera.lookAt(0,.15,0);root.rotation.x=-poseY*.04;root.rotation.y=poseX*.075;const p=Math.max(0,Math.min(.9999,progressRef?.current||0)),active=Math.min(3,Math.floor(p*4)),local=p*4-active,eased=smooth(Math.min(1,local*2.2));stages.forEach((stage,index)=>{const selected=index===active;stage.position.set(0,stage.userData.baseY+.08*(1-eased),0);stage.rotation.y=(1-eased)*-.08;stage.rotation.z=(1-eased)*.018;stage.scale.setScalar(.94+.06*eased);setOpacity(stage,selected?1:0);});}
+   if(ready)renderer.render(scene,camera);
   }render();
-  return()=>{cancelAnimationFrame(frame);resize.disconnect();observer.disconnect();element.removeEventListener('pointermove',move);element.removeEventListener('pointerleave',leave);geometry.forEach(g=>g.dispose());materials.forEach(m=>m.dispose());textures.forEach(t=>t.dispose());environment.dispose();renderer.dispose();renderer.domElement.remove();};
+  return()=>{alive=false;cancelAnimationFrame(frame);resize.disconnect();observer.disconnect();element.removeEventListener('pointermove',move);element.removeEventListener('pointerleave',leave);Promise.resolve(loadPromise).catch(()=>{});resources.geometry.forEach(item=>item.dispose());resources.materials.forEach(item=>item.dispose());resources.textures.forEach(item=>item.dispose());environment.dispose();renderer.dispose();renderer.domElement.remove();};
  },[hero,lang,paused,progressRef]);
- return <div className={'scanner evidence-core'+(hero?' document-inspection':'')} ref={host} role="img" aria-label={hero?(lang==='ru'?'Проверка строки платёжного документа':'Payment document inspection'):(lang==='ru'?'Связанные документы: платёж, курс, проводка и доказательство':'Connected financial evidence documents')}/>;
+ const label=hero?(lang==='ru'?'Лупа проверяет платёжный документ':'Magnifier inspecting a payment document'):(lang==='ru'?'Инструменты аудита: документ, расчёт, сверка и доказательство':'Audit tools: source, calculation, reconciliation and proof');return <div className={'scanner evidence-core'+(hero?' forensic-magnifier':' evidence-toolchain')} ref={host} role="img" aria-label={label}/>;
 }
