@@ -42,13 +42,17 @@ def selected_sources(root):
 
 
 def source_commit(root):
-    result=subprocess.run(['git','rev-parse','--show-toplevel'],cwd=root,capture_output=True,text=True)
-    if result.returncode==0 and Path(result.stdout.strip()).resolve()==root.resolve():
+    try:result=subprocess.run(['git','rev-parse','--show-toplevel'],cwd=root,capture_output=True,text=True)
+    except FileNotFoundError:result=None
+    if result is not None and result.returncode==0 and Path(result.stdout.strip()).resolve()==root.resolve():
         sha=subprocess.check_output(['git','rev-parse','HEAD'],cwd=root,text=True).strip()
         dirty=bool(subprocess.check_output(['git','status','--porcelain'],cwd=root,text=True).strip())
         return dict(commit=sha,dirty=dirty)
     prior=root/'submission-manifest.json'
     if prior.exists():return json.loads(prior.read_text(encoding='utf8')).get('source',dict(commit=None,dirty=None))
+    declared=os.environ.get('AUDITFORGE_SOURCE_COMMIT','')
+    if len(declared)==40 and all(c in '0123456789abcdef' for c in declared):
+        return dict(commit=declared,dirty=False,origin='explicit CI source identity')
     return dict(commit=None,dirty=None)
 
 

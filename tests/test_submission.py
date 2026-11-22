@@ -73,3 +73,13 @@ class SubmissionTests(unittest.TestCase):
 
 
 if __name__=='__main__':unittest.main()
+
+
+class NoGitPackagingTests(unittest.TestCase):
+    def test_packaging_metadata_does_not_require_git_binary(self):
+        from unittest.mock import patch
+        from scripts.package_submission import source_commit
+        with tempfile.TemporaryDirectory() as folder:
+            with patch('scripts.package_submission.subprocess.run',side_effect=FileNotFoundError):
+                with patch.dict('os.environ',{'AUDITFORGE_SOURCE_COMMIT':'a'*40}):
+                    self.assertEqual(source_commit(Path(folder))['commit'],'a'*40)

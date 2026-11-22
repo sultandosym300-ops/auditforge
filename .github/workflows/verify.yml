@@ -28,7 +28,7 @@ jobs:
           PY
       - name: Run independent jury offline with two CPUs and four GiB
         run: |
-          docker run --rm --network none --cpus 2 --memory 4g \
+          docker run --rm --network none --cpus 2 --memory 4g --env AUDITFORGE_SOURCE_COMMIT="$GITHUB_SHA" \
             --mount type=bind,source="$GITHUB_WORKSPACE",target=/submission \
             -w /submission auditforge-evaluator:2.0.1 sh -ec '
             python -c "import sys; assert sys.version_info[:2] == (3, 11)"

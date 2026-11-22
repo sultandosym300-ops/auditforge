@@ -215,3 +215,5 @@ AuditForge source is distributed under the [MIT License](LICENSE). Dependencies 
 Кратко по-русски: AuditForge — воспроизводимая среда для финансовых AI-аудиторов. Начните с гостевого режима и живой демонстрации. Обучается выбор документов; итог проверяется по доказательствам. Команды выше запускаются из корня проекта, а ограничения и подтверждённые результаты приведены в финальном отчёте.
 
 The final GitHub release includes the exact ZIP tested in a clean CI Docker build and a separate `release-evidence.json`. To display confirmed current-release CI in a website rebuilt from that ZIP, copy the evidence file to `web/public/release-evidence.json` before building. The build verifies source hashes and refuses stale evidence; missing evidence is explicitly unverified.
+
+`python -m auditforge.agent_runner --trusted-native` runs the bundled policy as trusted local code for development; it is not the isolated judging boundary. The default broker uses the separately confined Docker policy. Python `tracemalloc` profiles report Python allocations, not complete process RSS; cgroup memory measurements and CPU quotas are recorded separately in CI.
