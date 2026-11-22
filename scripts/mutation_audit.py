@@ -184,9 +184,15 @@ def main():
             raise RuntimeError('Mutation sandbox escaped project/work')
         template = sandbox/'template'
         template.mkdir()
-        for directory in ('auditforge', 'tests', 'scripts'):
+        for directory in ('auditforge', 'tests', 'scripts', 'configs', 'docs'):
             shutil.copytree(ROOT/directory, template/directory,
                             ignore=shutil.ignore_patterns('__pycache__', '*.pyc'))
+        # Submission tests validate the same required metadata in every sandbox.
+        # A missing fixture must not be mistaken for a successfully killed mutant.
+        for metadata in ROOT.glob('*.md'):
+            shutil.copy2(metadata, template/metadata.name)
+        for name in ('LICENSE','requirements.txt','pyproject.toml','Dockerfile','Dockerfile.policy','package.json','vercel.json'):
+            shutil.copy2(ROOT/name, template/name)
         baseline = run_tests(template, args.timeout)
         (log_dir/'baseline.log').write_text(baseline.pop('output'), encoding='utf-8')
         report['baseline'] = baseline
