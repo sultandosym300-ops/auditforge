@@ -53,9 +53,15 @@ jobs:
         run: node scripts/check_release_evidence.mjs
       - name: Verify the submitted ZIP in a clean Docker build
         run: |
-          python -m zipfile -e work/submission/AuditForge-final.zip work/ci-archive
-          docker build -t auditforge-submission:final work/ci-archive/AuditForge
-          docker run --rm --network none --cpus 2 --memory 4g auditforge-submission:final python -m unittest discover -s tests -q
+          python -m zipfile -e work/submission/AuditForge-final.zip "$RUNNER_TEMP/auditforge-archive"
+          docker build -t auditforge-submission:final "$RUNNER_TEMP/auditforge-archive/AuditForge"
+          docker run --rm --network none --cpus 2 --memory 4g \
+            --env AUDITFORGE_SOURCE_COMMIT="$GITHUB_SHA" \
+            --mount type=bind,source="$RUNNER_TEMP/auditforge-archive/AuditForge",target=/submission \
+            -w /submission auditforge-submission:final sh -ec '
+            python -m scripts.submission_check --root .
+            python -m scripts.ultimate_verify --seed 801973140685
+          '
       - name: Check worker retry after transient initialization failure
         run: node scripts/check_worker_retry.mjs
       - name: Confirm effective policy container boundary
