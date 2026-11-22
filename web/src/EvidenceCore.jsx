@@ -2,122 +2,66 @@ import React,{useEffect,useRef} from 'react';
 import * as THREE from 'three';
 import {RoomEnvironment} from 'three/addons/environments/RoomEnvironment.js';
 
-// An authored physical dossier: source, rule, book and conclusion are separate layers.
-export default function EvidenceCore({progressRef,paused=false,lang='ru',framing='wide'}){
-  const host=useRef();
-  useEffect(()=>{
-    const element=host.current;
-    let renderer;
-    try{renderer=new THREE.WebGLRenderer({alpha:true,antialias:true,powerPreference:'low-power'});}catch{return;}
-    renderer.setPixelRatio(Math.min(Math.max(devicePixelRatio,2),3));
-    renderer.outputColorSpace=THREE.SRGBColorSpace;
-    renderer.toneMapping=THREE.ACESFilmicToneMapping;
-    renderer.toneMappingExposure=1.15;
-    renderer.setClearColor(0,0);element.appendChild(renderer.domElement);
-    const scene=new THREE.Scene();
-    const camera=new THREE.OrthographicCamera(-5,5,3.5,-3.5,.1,60);camera.position.set(0,0,18);
-    const pmrem=new THREE.PMREMGenerator(renderer),room=new RoomEnvironment();
-    const environment=pmrem.fromScene(room,.04);scene.environment=environment.texture;
-    room.dispose();pmrem.dispose();
-    scene.add(new THREE.HemisphereLight(0xc9e9ff,0x182638,2));
-    const key=new THREE.DirectionalLight(0xe1f4ff,3);key.position.set(-4,6,8);scene.add(key);
-    const rim=new THREE.DirectionalLight(0x7ccbdc,2);rim.position.set(5,-1,4);scene.add(rim);
-    const group=new THREE.Group();scene.add(group);
-    const geometries=[],materials=[],textures=[];
-    function mat(props){const value=new THREE.MeshStandardMaterial(props);materials.push(value);return value;}
-    function mesh(geometry,material,parent){geometries.push(geometry);const value=new THREE.Mesh(geometry,material);parent.add(value);return value;}
-    function outline(width,height,radius){
-      const s=new THREE.Shape(),x=-width/2,y=-height/2;
-      s.moveTo(x+radius,y);s.lineTo(x+width-radius,y);s.quadraticCurveTo(x+width,y,x+width,y+radius);
-      s.lineTo(x+width,y+height-radius);s.quadraticCurveTo(x+width,y+height,x+width-radius,y+height);
-      s.lineTo(x+radius,y+height);s.quadraticCurveTo(x,y+height,x,y+height-radius);
-      s.lineTo(x,y+radius);s.quadraticCurveTo(x,y,x+radius,y);return s;
-    }
-    function plate(width,height,depth,radius,material,parent){
-      const geo=new THREE.ExtrudeGeometry(outline(width,height,radius),{depth,bevelEnabled:true,bevelSegments:4,steps:1,bevelSize:.025,bevelThickness:.025,curveSegments:12});
-      geo.translate(0,0,-depth/2);return mesh(geo,material,parent);
-    }
-    const metal=mat({color:0x8ca4b8,metalness:1,roughness:.26});
-    const graphite=mat({color:0x1b2e3e,metalness:.75,roughness:.3});
-    const inset=mat({color:0x07121c,metalness:.5,roughness:.26});
-    const accent=mat({color:0x9ed8d9,emissive:0x2b6f79,emissiveIntensity:.35,metalness:.6,roughness:.25});
-    const labels=lang==='kk'?['ТӨЛЕМ','ВАЛЮТА БАҒАМЫ','ӨТКІЗБЕ','ДӘЛЕЛ']:lang==='en'?['PAYMENT','EXCHANGE RATE','JOURNAL','EVIDENCE']:['ПЛАТЁЖ','ВАЛЮТНЫЙ КУРС','ПРОВОДКА','ДОКАЗАТЕЛЬСТВО'];
-    const amounts=['500.00','490.60','250 000','4 700'];
-    const currencies=['USD','KZT / USD','KZT','KZT'];
-    const subs=lang==='kk'?['Бастапқы құжат','Ресми ереже','Кітаптағы сома','Дәлелденген айырма']:lang==='en'?['Source document','Declared conversion rule','Recorded book amount','Verified difference']:['Исходный документ','Правило конвертации','Сумма в учётной книге','Доказанное расхождение'];
-    function texture(index){
-      const canvas=document.createElement('canvas');canvas.width=1800;canvas.height=2560;
-      const c=canvas.getContext('2d');c.scale(2,2);c.fillStyle=index===3?'#17373f':'#11202d';c.fillRect(0,0,900,1280);
-      const glow=c.createLinearGradient(0,0,900,1280);glow.addColorStop(0,'#ffffff09');glow.addColorStop(1,'#00000018');c.fillStyle=glow;c.fillRect(0,0,900,1280);
-      c.strokeStyle='#67879b55';c.lineWidth=2;c.strokeRect(40,40,820,1200);
-      c.fillStyle='#9bb9cb';c.font='500 24px sans-serif';c.fillText('AUDITFORGE',78,103);
-      c.font='22px monospace';c.textAlign='right';c.fillText('0'+(index+1)+' / 04',819,103);c.textAlign='left';
-      c.strokeStyle='#7898ac66';c.beginPath();c.moveTo(78,143);c.lineTo(822,143);c.stroke();
-      c.fillStyle='#d0e7ef';c.font='500 '+(index===3?34:38)+'px sans-serif';c.fillText(labels[index],78,230);
-      c.fillStyle='#a6c3d1';c.font='25px sans-serif';c.fillText(subs[index],78,278);
-      c.fillStyle=index===3?'#c6f4e3':'#f0f7fc';c.font='500 108px sans-serif';c.fillText(amounts[index],74,455);
-      c.fillStyle='#a7cad9';c.font='30px monospace';c.fillText(currencies[index],78,513);
-      c.strokeStyle='#9fc1d34d';c.beginPath();c.moveTo(78,560);c.lineTo(822,560);c.stroke();
-      const rowLabels=index===0?['PAYMENT ID','REPORT PERIOD','SOURCE AMOUNT','CURRENCY']:index===1?['CURRENCY PAIR','DECLARED RATE','CONVERTED AMOUNT','PRECISION']:index===2?['ACCOUNT','BOOK AMOUNT','EXPECTED','DIFFERENCE']:['PAYMENT','EXCHANGE RATE','JOURNAL ENTRY','RESULT'];
-      const values=[['PAY-0042','2026 / 10','500.00','USD'],['USD → KZT','490.60','245 300 KZT','DECIMAL'],['PAYABLE','250 000 KZT','245 300 KZT','4 700 KZT'],['PAY-0042','FX-USD-10','ROW-0084','VERIFIED']][index];
-      for(let i=0;i<4;i++){
-        const y=635+i*103;c.fillStyle='#88a7b9';c.font='21px monospace';c.fillText(rowLabels[i],78,y);
-        c.fillStyle='#d1e3ed';c.font='26px monospace';c.textAlign='right';c.fillText(values[i],820,y);c.textAlign='left';
-        c.strokeStyle='#63839a33';c.beginPath();c.moveTo(78,y+36);c.lineTo(822,y+36);c.stroke();
-      }
-      c.fillStyle='#8dc0c5';for(let i=0;i<66;i++){const w=i%3===0?4:2;c.fillRect(78+i*6,1092,w,49+(i%4)*5);}
-      c.font='21px monospace';c.fillStyle='#90afc0';c.fillText('SYNTHETIC / DEMONSTRATION',78,1200);
-      if(index===3){c.strokeStyle='#b7ead9';c.lineWidth=5;c.beginPath();c.arc(765,1118,38,0,Math.PI*2);c.stroke();c.beginPath();c.moveTo(745,1119);c.lineTo(760,1133);c.lineTo(787,1103);c.stroke();}
-      const tex=new THREE.CanvasTexture(canvas);tex.colorSpace=THREE.SRGBColorSpace;tex.anisotropy=renderer.capabilities.getMaxAnisotropy();textures.push(tex);return tex;
-    }
-    const layers=[];
-    for(let i=0;i<4;i++){
-      const layer=new THREE.Group();group.add(layer);layers.push(layer);
-      plate(2.68,3.8,.11,.15,metal,layer);
-      const shell=plate(2.6,3.72,.085,.13,graphite,layer);shell.position.z=.065;
-      const gasket=plate(2.46,3.55,.018,.1,inset,layer);gasket.position.z=.122;
-      const face=mesh(new THREE.ShapeGeometry(outline(2.36,3.43,.08)),mat({map:texture(i),roughness:.37,metalness:.15}),layer);
-      // ShapeGeometry UVs use world coordinates; map the full authored face into 0..1.
-      const uv=face.geometry.getAttribute('uv'),pos=face.geometry.getAttribute('position');
-      for(let v=0;v<uv.count;v++)uv.setXY(v,(pos.getX(v)+1.18)/2.36,(pos.getY(v)+1.715)/3.43);uv.needsUpdate=true;
-      face.position.z=.18;
-      for(const x of [-1.23,1.23])for(const y of [-1.77,1.77]){
-        const screw=mesh(new THREE.CylinderGeometry(.035,.035,.018,20),metal,layer);screw.rotation.x=Math.PI/2;screw.position.set(x,y,.132);
-        const slot=mesh(new THREE.BoxGeometry(.037,.006,.003),inset,layer);slot.position.set(x,y,.144);slot.rotation.z=.65;
-      }
-      for(let j=0;j<15;j++){const vent=mesh(new THREE.BoxGeometry(.035,.14,.018),inset,layer);vent.position.set(-.73+j*.105,-1.882,.02);}
-      const rail=plate(.032,2.7,.022,.015,accent,layer);rail.position.set(-1.325,.05,.035);
-      for(let j=0;j<5;j++){const contact=mesh(new THREE.BoxGeometry(.1,.02,.09),metal,layer);contact.position.set(-.4+j*.2,-1.92,-.015);}
-    }
-    let sized=false,visible=true,frame=0,targetX=0,targetY=0,poseX=0,poseY=0,lastP=-1,lastTime=performance.now();
-    const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
-    function move(e){const b=element.getBoundingClientRect();targetX=(e.clientX-b.left)/b.width-.5;targetY=(e.clientY-b.top)/b.height-.5;}
-    element.parentElement.addEventListener('pointermove',move);
-    const resize=new ResizeObserver(()=>{const b=element.getBoundingClientRect();sized=b.width>0&&b.height>0;if(!sized)return;renderer.setSize(b.width,b.height);const halfW=framing==='portrait'?3.3:4.95,halfH=halfW*b.height/Math.max(1,b.width);camera.left=-halfW;camera.right=halfW;camera.top=halfH;camera.bottom=-halfH;camera.updateProjectionMatrix();lastP=-1;});resize.observe(element);
-    const visibility=new IntersectionObserver(([entry])=>{visible=entry.isIntersecting;});visibility.observe(element);
-    const bounds=new THREE.Box3(),size=new THREE.Vector3(),center=new THREE.Vector3();
-    function render(){
-      frame=requestAnimationFrame(render);if(!visible||!sized)return;
-      const p=Math.max(0,Math.min(1,progressRef.current));
-      const now=performance.now(),dt=Math.min((now-lastTime)/1000,.05);lastTime=now;
-      poseX=THREE.MathUtils.damp(poseX,reduced||paused?0:targetX,8,dt);
-      poseY=THREE.MathUtils.damp(poseY,reduced||paused?0:targetY,8,dt);
-      group.rotation.set(.08-poseY*.06,-.28+poseX*.09,-.055);
+// Financial source documents, never device mockups. Scroll reveals the evidence chain.
+export default function EvidenceCore({progressRef,paused=false,lang='ru',hero=false}){
+ const host=useRef();
+ useEffect(()=>{
+  const element=host.current;let renderer;
+  try{renderer=new THREE.WebGLRenderer({alpha:true,antialias:true,powerPreference:'low-power'});}catch{return;}
+  renderer.setPixelRatio(Math.min(devicePixelRatio||1,2));renderer.outputColorSpace=THREE.SRGBColorSpace;
+  renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.15;renderer.setClearColor(0,0);element.appendChild(renderer.domElement);
+  const scene=new THREE.Scene(),camera=new THREE.OrthographicCamera(-5,5,4,-4,.1,60);camera.position.z=18;
+  const pmrem=new THREE.PMREMGenerator(renderer),room=new RoomEnvironment(),environment=pmrem.fromScene(room,.04);scene.environment=environment.texture;room.dispose();pmrem.dispose();
+  scene.add(new THREE.HemisphereLight(0xe5f3ff,0x476078,2.6));const light=new THREE.DirectionalLight(0xffffff,3);light.position.set(-3,5,8);scene.add(light);
+  const group=new THREE.Group();scene.add(group);const geometry=[],materials=[],textures=[],sheets=[];
+  const titles={ru:['Платёж','Валютный курс','Проводка','Доказательство'],en:['Payment','Exchange rate','Journal entry','Evidence'],kk:['Төлем','Валюта бағамы','Өткізбе','Дәлел']}[lang]||['Payment','Exchange rate','Journal entry','Evidence'];
+  const subtitles={ru:['Исходный документ','Правило на дату платежа','Запись в учётной книге','Проверенное расхождение'],en:['Source document','Rule on payment date','Recorded book amount','Verified difference'],kk:['Бастапқы құжат','Төлем күніндегі ереже','Есеп кітабындағы жазба','Расталған айырма']}[lang]||[];
+  const values=['500.00','490.60','250 000','4 700'],units=['USD','KZT / USD','KZT','KZT'];
+  function material(options){const m=new THREE.MeshStandardMaterial(options);materials.push(m);return m;}
+  function mesh(g,m,parent){geometry.push(g);const o=new THREE.Mesh(g,m);parent.add(o);return o;}
+  function shape(w,h,r){const s=new THREE.Shape(),x=-w/2,y=-h/2;s.moveTo(x+r,y);s.lineTo(x+w-r,y);s.quadraticCurveTo(x+w,y,x+w,y+r);s.lineTo(x+w,y+h-r);s.quadraticCurveTo(x+w,y+h,x+w-r,y+h);s.lineTo(x+r,y+h);s.quadraticCurveTo(x,y+h,x,y+h-r);s.lineTo(x,y+r);s.quadraticCurveTo(x,y,x+r,y);return s;}
+  function faceTexture(index){
+   const canvas=document.createElement('canvas');canvas.width=1536;canvas.height=2048;const c=canvas.getContext('2d');c.scale(2,2);
+   c.fillStyle=index===3?'#e2f4ef':'#fafcfd';c.fillRect(0,0,768,1024);
+   c.fillStyle='#60788b';c.font='500 18px sans-serif';c.fillText('AUDITFORGE',58,76);c.textAlign='right';c.fillText(String(index+1).padStart(2,'0'),710,76);c.textAlign='left';
+   c.strokeStyle='#ccd8e0';c.lineWidth=1;c.beginPath();c.moveTo(58,108);c.lineTo(710,108);c.stroke();
+   c.fillStyle='#162e40';c.font='600 42px sans-serif';c.fillText(titles[index],58,196);c.font='22px sans-serif';c.fillStyle='#657f90';c.fillText(subtitles[index]||'',58,239);
+   c.fillStyle='#163548';c.font='500 89px sans-serif';c.fillText(values[index],54,395);c.font='24px sans-serif';c.fillStyle='#637d8b';c.fillText(units[index],58,438);
+   const labels=index===0?['PAY-0042','31 OCT 2026','USD → KZT']:index===1?['FX-USD-10','500 × 490.60','245 300 KZT']:index===2?['ROW-0084','245 300 KZT','250 000 KZT']:['PAY-0042 + FX-USD-10','ROW-0084','250 000 − 245 300'];
+   labels.forEach((value,i)=>{const y=555+i*99;c.fillStyle='#edf2f5';c.fillRect(56,y-28,656,62);c.fillStyle='#476578';c.font='24px sans-serif';c.fillText(value,76,y+12);});
+   if(index===3){c.strokeStyle='#397b6f';c.lineWidth=7;c.beginPath();c.arc(644,897,36,0,Math.PI*2);c.stroke();c.beginPath();c.moveTo(626,896);c.lineTo(641,911);c.lineTo(664,882);c.stroke();}
+   c.fillStyle='#7e949f';c.font='18px sans-serif';c.fillText('SYNTHETIC · DEMONSTRATION',58,948);
+   const t=new THREE.CanvasTexture(canvas);t.colorSpace=THREE.SRGBColorSpace;t.anisotropy=Math.min(8,renderer.capabilities.getMaxAnisotropy());textures.push(t);return t;
+  }
+  for(let i=0;i<(hero?1:4);i++){
+   const sheet=new THREE.Group();group.add(sheet);sheets.push(sheet);const outline=shape(2.8,3.75,.075);
+   const thickness=new THREE.ExtrudeGeometry(outline,{depth:.025,bevelEnabled:true,bevelSegments:2,bevelSize:.008,bevelThickness:.008,curveSegments:16});thickness.translate(0,0,-.025);
+   mesh(thickness,material({color:0xe5edf2,roughness:.8}),sheet);
+   const front=mesh(new THREE.ShapeGeometry(outline),(()=>{const m=new THREE.MeshBasicMaterial({map:faceTexture(hero?0:i)});materials.push(m);return m;})(),sheet);front.position.z=.012;
+   const uv=front.geometry.getAttribute('uv'),pos=front.geometry.getAttribute('position');for(let n=0;n<uv.count;n++)uv.setXY(n,(pos.getX(n)+1.4)/2.8,(pos.getY(n)+1.875)/3.75);uv.needsUpdate=true;
+  }
+  // A thin optical plane highlights a document row; it is a visual explanation of inspection.
+  let inspection;
+  if(hero){inspection=new THREE.Group();group.add(inspection);const glass=new THREE.MeshPhysicalMaterial({color:0xb9e4e9,transparent:true,opacity:.25,roughness:.12,metalness:0,side:THREE.DoubleSide});materials.push(glass);
+   mesh(new THREE.CircleGeometry(.93,96),glass,inspection);
+   const rimMaterial=material({color:0x527b8e,metalness:.75,roughness:.2});
+   mesh(new THREE.TorusGeometry(.96,.045,20,96),rimMaterial,inspection);
+   const outer=mesh(new THREE.TorusGeometry(1.045,.012,12,96),rimMaterial,inspection);outer.position.z=-.02;
 
-      layers.forEach((layer,i)=>{
-        const order=i-1.5;
-        // Keep the source in front throughout. Depth never crosses zero or reverses order.
-        layer.position.set(order*(.14+p*1.64),-order*p*.15,-order*(.22+p*.22));
-        layer.rotation.y=-.035+order*p*.035;
-        layer.rotation.z=order*p*-.025;
-        layer.scale.setScalar(1);
-      });
-      group.updateMatrixWorld(true);bounds.setFromObject(group);bounds.getSize(size);bounds.getCenter(center);const availableWidth=camera.right-camera.left,availableHeight=camera.top-camera.bottom;camera.zoom=Math.min(availableWidth/(size.x*1.22),availableHeight/(size.y*1.22));camera.position.set(center.x,center.y,18);camera.lookAt(center.x,center.y,0);camera.updateProjectionMatrix();
-      if(!paused||lastP!==p){renderer.render(scene,camera);element.dataset.ready='true';lastP=p;}
-    }
-    render();
-    return()=>{cancelAnimationFrame(frame);resize.disconnect();visibility.disconnect();element.parentElement?.removeEventListener('pointermove',move);geometries.forEach(g=>g.dispose());materials.forEach(m=>m.dispose());textures.forEach(t=>t.dispose());environment.dispose();renderer.dispose();renderer.domElement.remove();};
-  },[progressRef,paused,lang,framing]);
-  const label=lang==='kk'?'Төлем, бағам, өткізбелер және дәлел қабаттары бар үш өлшемді досье':lang==='en'?'Exploded evidence dossier with payment, exchange rate, journal and verified finding layers':'Объёмное досье: платёж, валютный курс, проводка и доказанный вывод';
-  return <div className="scanner evidence-core" ref={host} role="img" aria-label={label}/>;
+  }
+  let visible=true,sized=false,frame=0,targetX=0,targetY=0,poseX=0,poseY=0,lastTime=performance.now();const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const bounds=new THREE.Box3(),size=new THREE.Vector3(),center=new THREE.Vector3();
+  const resize=new ResizeObserver(()=>{const b=element.getBoundingClientRect();sized=b.width>0&&b.height>0;if(!sized)return;renderer.setSize(b.width,b.height);camera.left=-5;camera.right=5;camera.top=5*b.height/b.width;camera.bottom=-camera.top;camera.updateProjectionMatrix();});resize.observe(element);
+  const observer=new IntersectionObserver(([entry])=>visible=entry.isIntersecting);observer.observe(element);
+  function move(e){const b=element.getBoundingClientRect();targetX=(e.clientX-b.left)/b.width-.5;targetY=(e.clientY-b.top)/b.height-.5;}function leave(){targetX=targetY=0;}
+  element.addEventListener('pointermove',move);element.addEventListener('pointerleave',leave);
+  function render(){frame=requestAnimationFrame(render);if(!visible||!sized)return;const now=performance.now(),dt=Math.min((now-lastTime)/1000,.05);lastTime=now;const p=Math.max(0,Math.min(1,progressRef?.current||0));
+   poseX=THREE.MathUtils.damp(poseX,reduced||paused?0:targetX,7,dt);poseY=THREE.MathUtils.damp(poseY,reduced||paused?0:targetY,7,dt);group.rotation.set(.06-poseY*.09,-.16+poseX*.13,-.055);
+   sheets.forEach((sheet,i)=>{const order=i-1.5;sheet.position.set(hero?0:order*(.14+p*1.7),hero?0:-order*p*.15,hero?0:-i*(.12+p*.21));sheet.rotation.z=hero?0:order*p*-.025;});
+   if(inspection){inspection.position.set(.36+poseX*.35,.28+poseY*.9,.42);inspection.rotation.y=.02;}
+   group.updateMatrixWorld(true);bounds.setFromObject(group);bounds.getSize(size);bounds.getCenter(center);camera.zoom=Math.min((camera.right-camera.left)/(size.x*1.28),(camera.top-camera.bottom)/(size.y*1.28));camera.position.set(center.x,center.y,18);camera.lookAt(center.x,center.y,0);camera.updateProjectionMatrix();renderer.render(scene,camera);element.dataset.ready='true';element.dataset.scene=hero?'document-inspection':'financial-evidence';
+  }render();
+  return()=>{cancelAnimationFrame(frame);resize.disconnect();observer.disconnect();element.removeEventListener('pointermove',move);element.removeEventListener('pointerleave',leave);geometry.forEach(g=>g.dispose());materials.forEach(m=>m.dispose());textures.forEach(t=>t.dispose());environment.dispose();renderer.dispose();renderer.domElement.remove();};
+ },[hero,lang,paused,progressRef]);
+ return <div className={'scanner evidence-core'+(hero?' document-inspection':'')} ref={host} role="img" aria-label={hero?(lang==='ru'?'Проверка строки платёжного документа':'Payment document inspection'):(lang==='ru'?'Связанные документы: платёж, курс, проводка и доказательство':'Connected financial evidence documents')}/>;
 }

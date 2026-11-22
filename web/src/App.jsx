@@ -40,7 +40,7 @@ function Landing({t,lang,setLang,onEnter}){
   return <main ref={scope} className="landing" data-paused={paused}>
     <header className="site-header"><div className="nav-inner"><Brand onClick={()=>window.scrollTo({top:0,behavior:'smooth'})}/><nav aria-label={t('overview')}><a href="#capabilities">{t('capabilities')}</a><a href="#workflow">{t('workflow')}</a></nav><div className="nav-actions"><Language lang={lang} setLang={setLang}/><button className="button small primary" onClick={onEnter}>{t('enter')}</button></div></div></header>
     <section className="hero">
-      <div className="hero-model"><Suspense fallback={<div className="model-loading"/>}><Scanner paused={paused}/></Suspense></div>
+      <div className="hero-model"><Suspense fallback={<div className="model-loading"/>}><Scanner paused={paused} lang={lang}/></Suspense></div>
       <div className="hero-copy"><h1 className="max-w-6xl">{t('heroA')}<br/><span>{t('heroB')}</span></h1><p className="hero-sub">{t('heroSub')}</p><p className="hero-description">{t('heroBody')}</p><div className="hero-ctas"><button className="button primary" onClick={onEnter}>{t('start')}</button><a className="text-link" href="#capabilities">{t('explore')}<span className="link-plus">+</span></a></div></div>
       <div className="hero-bottom"><span className="model-hint"><ScanLine size={17}/>{t('modelHint')}</span><button className="motion-control" onClick={()=>setPaused(!paused)} aria-label={t(paused?'play':'pause')}>{paused?<Play size={15}/>:<Pause size={15}/>}</button></div>
     </section>
