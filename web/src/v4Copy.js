@@ -24,4 +24,3 @@ Object.assign(v4Copy.kk,{whatIfTitle:'Төлем компанияны қалай
 Object.assign(v4Copy.ru,{otherProcesses:'Другие процессы этого бизнеса',otherProcessBody:'Это ещё одна операция из созданной истории. Откройте её документ и проводки, чтобы проверить связь.',eventAmount:'Сумма события',quantity:'Количество'});
 Object.assign(v4Copy.en,{otherProcesses:'Other processes in this business',otherProcessBody:'This is another operation from the generated history. Open its document and postings to verify the link.',eventAmount:'Event amount',quantity:'Quantity'});
 Object.assign(v4Copy.kk,{otherProcesses:'Осы бизнестің басқа процестері',otherProcessBody:'Бұл — жасалған тарихтағы тағы бір операция. Байланысты тексеру үшін құжаты мен өткізбе жазбаларын ашыңыз.',eventAmount:'Оқиға сомасы',quantity:'Саны'});
-
