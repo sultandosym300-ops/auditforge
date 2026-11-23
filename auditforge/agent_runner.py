@@ -32,17 +32,18 @@ def send_line(process, value, deadline):
 
 
 def container_command(container_name, policy='reconciliation'):
-    if policy not in ('reconciliation','sequential'):raise ValueError('Unknown isolated policy')
+    if policy not in ('reconciliation','sequential','document'):raise ValueError('Unknown isolated policy')
     return ['docker', 'run', '--rm', '--name', container_name, '-i',
             '--network', 'none', '--read-only', '--cap-drop', 'ALL',
             '--security-opt', 'no-new-privileges', '--memory', '512m',
             '--cpus', '1', '--pids-limit', '64', '--user', '65534:65534',
-            'auditforge-policy:1.0' if policy=='reconciliation' else 'auditforge-sequential-policy:1.0']
+            {'reconciliation':'auditforge-policy:1.0','sequential':'auditforge-sequential-policy:1.0',
+             'document':'auditforge-document-policy:2.2.0'}[policy]]
 
 
-def run(seed, isolated=True, config=None, *, policy='reconciliation', weights=None, budget=10):
+def run(seed, isolated=True, config=None, *, policy='reconciliation', weights=None, budget=10, architecture='linear'):
     container_name = 'auditforge-policy-' + uuid.uuid4().hex
-    if policy=='sequential' and not isolated:raise ValueError('Sequential broker requires the isolated image')
+    if policy in ('sequential','document') and not isolated:raise ValueError('Learned policy broker requires the isolated image')
     command = (container_command(container_name,policy) if isolated
                else [sys.executable, str(Path(__file__).with_name('policy_agent.py'))])
     if policy=='sequential':
@@ -54,6 +55,18 @@ def run(seed, isolated=True, config=None, *, policy='reconciliation', weights=No
         # Only public model weights and budget enter the policy container.
         command[-1:-1]=['--env','AUDITFORGE_POLICY_WEIGHTS='+json.dumps(weights),
                         '--env','AUDITFORGE_POLICY_BUDGET='+str(budget)]
+    elif policy=='document':
+        from .document_policy import Network
+        if type(budget) is not int or not 2<=budget<=100:
+            raise ValueError('Invalid isolated document budget')
+        # Strict construction rejects booleans, nonfinite values, dimensions and
+        # arbitrary architectures before starting any evaluator/container process.
+        model=Network(architecture,parameters=weights)
+        if weights is None:
+            raise ValueError('Explicit isolated document parameters required')
+        command[-1:-1]=['--env','AUDITFORGE_POLICY_WEIGHTS='+json.dumps(model.parameters),
+                        '--env','AUDITFORGE_POLICY_BUDGET='+str(budget),
+                        '--env','AUDITFORGE_POLICY_ARCHITECTURE='+architecture]
     with AuditEnv(mode='evaluation') as env, tempfile.TemporaryDirectory() as cwd:
         started=time.monotonic()
         initial,_=env.reset(seed,config)
