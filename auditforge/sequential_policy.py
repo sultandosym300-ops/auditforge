@@ -3,7 +3,7 @@ import itertools
 import math
 import random
 
-from .efficient_training import decode
+from .documentary_decode import decode
 
 FEATURES = ('bias', 'manual', 'cutoff', 'cross_border', 'supplier_change',
             'manual_cutoff', 'observed_issue_rate', 'budget_fraction',
@@ -117,9 +117,14 @@ def investigate(step, initial, *, policy='learned', budget=10, weights=None,
                 decisions.append(dict(features=effective,probabilities=probabilities,chosen=chosen))
             if chosen==len(available):break
             candidate=available[chosen]
-            result=act(dict(tool='get_document',doc_id=candidate['next']),
-                       dict(policy=policy,case_id=candidate['case_id'],remaining_budget=remaining,
-                            estimated_yield=estimated_yield(candidate,completed,positive),remaining_cost=candidate['left']))
+            reason=dict(policy=policy,case_id=candidate['case_id'],remaining_budget=remaining,
+                        remaining_cost=candidate['left'])
+            if policy in ('learned','untrained','random_weights','zero_features','no_financial_rules'):
+                reason.update(selected_probability=probabilities[chosen],features=effective[chosen],
+                              learned_score=sum(w*x for w,x in zip(active_weights,effective[chosen])))
+            elif policy in ('budget_aware','greedy','heuristic_search'):
+                reason['estimated_yield']=estimated_yield(candidate,completed,positive)
+            result=act(dict(tool='get_document',doc_id=candidate['next']),reason)
             document=result[0]['result'];candidate['left']-=1
             if 'records' in document:
                 recovered=decode(document['records']) if financial_rules and policy!='no_financial_rules' else []
@@ -131,6 +136,3 @@ def investigate(step, initial, *, policy='learned', budget=10, weights=None,
     unique={ (f['type'],tuple(f['affected_ids'])):f for f in findings }
     terminal=act(dict(tool='submit', findings=dict(episode_id=initial['manifest']['episode_id'], findings=list(unique.values())[:30])), 'Submit documentary findings; reserve one action for termination')
     return dict(terminal=terminal, decisions=decisions, trajectory=trajectory, findings=list(unique.values()))
-
-
-from .sequential_training import SequentialTrainer

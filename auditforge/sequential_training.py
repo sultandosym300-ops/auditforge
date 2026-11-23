@@ -11,12 +11,15 @@ from .training import episode_seed
 
 
 class SequentialTrainer:
-    def __init__(self, seed=314159, budget=10, algorithm='reinforce', learning_rate=.03):
+    def __init__(self, seed=314159, budget=10, algorithm='reinforce', learning_rate=.03, *, family='procurement'):
         from .sequential_policy import INITIAL_WEIGHTS
         if (type(seed) is not int or not 0<=seed<2**128 or type(budget) is not int or not 2<=budget<=100
                 or algorithm not in ('reinforce','actor_critic')
                 or type(learning_rate) not in (int,float) or not math.isfinite(learning_rate) or not 0<learning_rate<=.5):
             raise ValueError('Invalid sequential training settings')
+        from .investigation_world import FAMILIES
+        if family not in FAMILIES:raise ValueError('Unknown financial family')
+        self.family=family
         self.seed,self.budget,self.algorithm,self.learning_rate=seed,budget,algorithm,learning_rate
         self.weights=list(INITIAL_WEIGHTS);self.critic=[0.]*len(self.weights)
         self.episodes=0;self.baseline=0.;self.history=[]
@@ -28,7 +31,7 @@ class SequentialTrainer:
     def train_episode(self):
         from .env import Session
         from .sequential_policy import investigate, FEATURES
-        session=Session();initial,_=session.reset(episode_seed(self.seed,'sequential-train',self.episodes),self.config(self.episodes),'train')
+        session=Session();initial,_=session.reset(episode_seed(self.seed,'sequential-train',self.episodes),self.config(self.episodes,self.family),'train')
         rng=random.Random(episode_seed(self.seed,'sequential-actions',self.episodes));rng.training=True
         started=time.perf_counter();previous=list(self.weights)
         result=investigate(session.step,initial,weights=self.weights,budget=self.budget,rng=rng)
@@ -36,7 +39,7 @@ class SequentialTrainer:
         reference_reward=self.baseline
         if self.algorithm=='reinforce':
             reference=Session()
-            reference_initial,_=reference.reset(episode_seed(self.seed,'sequential-train',self.episodes),self.config(self.episodes),'train')
+            reference_initial,_=reference.reset(episode_seed(self.seed,'sequential-train',self.episodes),self.config(self.episodes,self.family),'train')
             reference_reward=investigate(reference.step,reference_initial,weights=self.weights,budget=self.budget)['terminal'][1]
         states=[[statistics.mean(xs[j] for xs in row['features']) for j in range(len(FEATURES))] for row in decisions]
         # Read all advantages from the frozen pre-update critic (one on-policy trajectory).
@@ -73,11 +76,12 @@ class SequentialTrainer:
         if log is not None:log.extend(result['trajectory'])
         return result['terminal']
 
-    def evaluate(self,count=12,seed=70193,*,policies=None,family='procurement'):
+    def evaluate(self,count=12,seed=70193,*,policies=None,family=None):
         from .env import Session
         from .sequential_policy import investigate
         if type(count) is not int or not 1<=count<=200 or type(seed) is not int:
             raise ValueError('Invalid evaluation configuration')
+        family=self.family if family is None else family
         policies=policies or ('learned','untrained','random_valid','reconciliation','budget_aware','greedy','heuristic_search','fixed_source')
         rows=[]
         for i in range(count):
@@ -93,20 +97,22 @@ class SequentialTrainer:
 
     def checkpoint(self):
         from .sequential_policy import FEATURES
-        return dict(format='auditforge-sequential-policy',version=4,environment=GENERATOR_VERSION,
+        result=dict(format='auditforge-sequential-policy',version=4,environment=GENERATOR_VERSION,
                     algorithm=self.algorithm,architecture='linear softmax query policy with explicit stop',
                     baseline_method='same-company frozen greedy rollout' if self.algorithm=='reinforce' else 'one-step TD linear state critic',
                     world_profile='investigation_v1',scenario='mixed',features=list(FEATURES),
                     seed=self.seed,budget=self.budget,learning_rate=self.learning_rate,
                     weights=list(self.weights),critic=list(self.critic),episodes=self.episodes,
                     optimizer_steps=self.episodes,baseline=self.baseline,history=copy.deepcopy(self.history))
+        if self.family!='procurement':result['family']=self.family
+        return result
 
     @classmethod
     def from_checkpoint(cls,data):
         from .sequential_policy import FEATURES
         if not isinstance(data,dict) or len(json.dumps(data,allow_nan=False))>10000000:
             raise ValueError('Invalid checkpoint object')
-        model=cls(data.get('seed'),data.get('budget'),data.get('algorithm'),data.get('learning_rate'))
+        model=cls(data.get('seed'),data.get('budget'),data.get('algorithm'),data.get('learning_rate'),family=data.get('family','procurement'))
         expected=model.checkpoint()
         if set(data)!=set(expected) or any(data.get(key)!=expected[key] for key in
                 ('format','version','environment','architecture','baseline_method','world_profile','scenario','features')):

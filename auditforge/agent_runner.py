@@ -31,18 +31,29 @@ def send_line(process, value, deadline):
         raise error
 
 
-def container_command(container_name):
+def container_command(container_name, policy='reconciliation'):
+    if policy not in ('reconciliation','sequential'):raise ValueError('Unknown isolated policy')
     return ['docker', 'run', '--rm', '--name', container_name, '-i',
             '--network', 'none', '--read-only', '--cap-drop', 'ALL',
             '--security-opt', 'no-new-privileges', '--memory', '512m',
             '--cpus', '1', '--pids-limit', '64', '--user', '65534:65534',
-            'auditforge-policy:1.0']
+            'auditforge-policy:1.0' if policy=='reconciliation' else 'auditforge-sequential-policy:1.0']
 
 
-def run(seed, isolated=True, config=None):
+def run(seed, isolated=True, config=None, *, policy='reconciliation', weights=None, budget=10):
     container_name = 'auditforge-policy-' + uuid.uuid4().hex
-    command = (container_command(container_name) if isolated
+    if policy=='sequential' and not isolated:raise ValueError('Sequential broker requires the isolated image')
+    command = (container_command(container_name,policy) if isolated
                else [sys.executable, str(Path(__file__).with_name('policy_agent.py'))])
+    if policy=='sequential':
+        from .sequential_policy import FEATURES
+        import math
+        if (not isinstance(weights,list) or len(weights)!=len(FEATURES)
+                or any(type(w) not in (int,float) or not math.isfinite(w) or abs(w)>30 for w in weights)
+                or type(budget) is not int or not 2<=budget<=100):raise ValueError('Invalid isolated policy parameters')
+        # Only public model weights and budget enter the policy container.
+        command[-1:-1]=['--env','AUDITFORGE_POLICY_WEIGHTS='+json.dumps(weights),
+                        '--env','AUDITFORGE_POLICY_BUDGET='+str(budget)]
     with AuditEnv(mode='evaluation') as env, tempfile.TemporaryDirectory() as cwd:
         started=time.monotonic()
         initial,_=env.reset(seed,config)

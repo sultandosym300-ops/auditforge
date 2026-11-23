@@ -50,8 +50,8 @@ def evaluate(episode_id, truth, payload, inspection_steps):
         return
     path = folder / 'auditforge/generator.py'
     before, after = {
-        'A': ('def generate(seed, config=None):',
-              'def generate(seed, config=None):\n    seed = 1'),
+        'A': ('def generate(seed, config=None, *, _quote_seed=None):',
+              'def generate(seed, config=None, *, _quote_seed=None):\n    seed = 1'),
         'B': ('wrong = rng.choice(candidates)', "wrong = str(Decimal(true_rate) + Decimal(7))"),
         'D': ('    return dict(public=public, truth=truth, provenance=provenance, pristine=pristine)',
               "    if truth:\n        truth[0]['expected_amount_minor'] += 1\n"

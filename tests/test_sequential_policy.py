@@ -3,10 +3,19 @@ import unittest
 from unittest.mock import patch
 
 from auditforge.env import Session
-from auditforge.sequential_policy import POLICIES, investigate, SequentialTrainer
+from auditforge.sequential_policy import POLICIES, investigate
+from auditforge.sequential_training import SequentialTrainer
 
 
 class SequentialPolicyTests(unittest.TestCase):
+    def test_does_not_start_a_chain_that_cannot_finish_before_submit(self):
+        session=Session()
+        initial,_=session.reset(991,dict(profile='investigation_v1'),'train')
+        costly=next(item for item in initial['manifest']['investigations'] if item['query_cost']>1)
+        initial['manifest']['investigations']=[costly]
+        investigate(session.step,initial,policy='budget_aware',budget=2)
+        self.assertEqual(session.steps,1)
+
     def test_self_critical_baseline_uses_a_second_frozen_public_rollout(self):
         from auditforge import sequential_policy
         calls=[]

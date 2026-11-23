@@ -32,7 +32,11 @@ def build(run_id,*,git_credential=False):
     for name in ('web/prepare.mjs','web/package.json','web/package-lock.json','scripts/prepare_release_evidence.mjs','scripts/build.mjs','web/public/python-worker.js','web/public/python-bridge.py'):
         source[name]=hashlib.sha256((ROOT/name).read_bytes().replace(b'\r\n',b'\n')).hexdigest()
     reports=[]
-    for name,command in [('final-agent-only.json','python -m scripts.final_agent_only'),('final-policy-study.json','python -m scripts.final_policy_study')]:
+    for name,command in [('final-agent-only.json','python -m scripts.final_agent_only'),('final-policy-study.json','python -m scripts.final_policy_study'),
+                         ('final-sequential-v2-summary.json','python -m scripts.sequential_benchmark --protocol configs/sequential-study-v2.json'),
+                         ('final-sequential-adversarial.json','python -m scripts.sequential_adversarial'),
+                         ('final-sequential-browser-parity.json','Real browser checkpoint compared with native training'),
+                         ('final-sequential-batch-financial-audit.json','python -m scripts.sequential_batch_check --audit-only')]:
         file=ROOT/'reports'/name
         if file.exists():
             data=json.loads(file.read_text(encoding='utf8'))

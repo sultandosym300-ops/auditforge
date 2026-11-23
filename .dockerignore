@@ -9,6 +9,11 @@ datasets
 reports
 trajectories
 web
+!web/
+web/*
+!web/public/
+web/public/*
+!web/public/python-bridge.py
 work
 **/__pycache__
 .env

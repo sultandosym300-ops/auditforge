@@ -14,7 +14,8 @@ from pathlib import Path
 
 from auditforge.env import Session
 from auditforge.generator import generate
-from auditforge.sequential_policy import investigate, SequentialTrainer
+from auditforge.sequential_policy import investigate
+from auditforge.sequential_training import SequentialTrainer
 from auditforge.training import episode_seed
 from scripts.final_policy_study import immutable_fixture
 

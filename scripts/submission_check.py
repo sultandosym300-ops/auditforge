@@ -17,6 +17,9 @@ from scripts.run_baselines import POLICIES, evaluate_baseline
 
 MAX_BYTES = 1_000_000_000
 REQUIRED = ('README.md','LICENSE','requirements.txt','pyproject.toml','Dockerfile','Dockerfile.policy',
+            'Dockerfile.sequential-policy','AUDITFORGE_FINAL_INDEPENDENT_AUDIT.md',
+            'AUDITFORGE_RL_BENCHMARK.md','AUDITFORGE_ADVERSARIAL_REPORT.md',
+            'AUDITFORGE_GENESIS_COMPLIANCE.md','AUDITFORGE_JURY_DEMO.md','AUDITFORGE_LIMITATIONS.md',
             'docs/public.schema.json','docs/findings.schema.json','docs/DESIGN_NOTE.md',
             'HACKATHON_COMPLIANCE.md','SUBMISSION_MANIFEST.md','JURY_LIVE_DEMO_SCRIPT.md',
             'FINAL_AUDIT_REPORT.md','THIRD_PARTY_NOTICES.md',

@@ -19,8 +19,17 @@ import time
 
 
 ROOT = Path(__file__).resolve().parents[1]
-COMMAND = ['-m', 'unittest', 'discover', '-s', 'tests', '-v']
+COMMAND = ['-m', 'unittest', 'discover', '-s', 'tests', '-v', '-f']
 MUTATIONS = (
+    dict(id='sequential_negative_validation_f1',file='auditforge/sequential_training.py',
+         description='Accept a negative validation F1 during checkpoint import.',
+         before="low=0 if key=='validation_f1' else -1",after='low=-1'),
+    dict(id='sequential_boolean_episode_counter',file='auditforge/sequential_training.py',
+         description='Accept a boolean instead of an integer history episode counter.',
+         before="type(row.get('episode')) is not int",after='False'),
+    dict(id='sequential_unfinishable_chain',file='auditforge/sequential_policy.py',
+         description='Spend budget on a chain that cannot finish before submit.',
+         before="c['left']<=remaining-1",after="c['left']<=remaining"),
     dict(id='reverse_learned_acquisition_gradient', file='auditforge/efficient_training.py',
          description='Reverse the policy gradient so terminal advantage discourages useful source acquisition.',
          before='self.weights[gate*len(FEATURES)+j] += self.learning_rate*advantage*(action-p)*value',
@@ -92,6 +101,9 @@ MUTATIONS = (
 
 
 EXPECTED_DETECTION = {
+    'sequential_negative_validation_f1':'Checkpoint F1 must remain in [0,1].',
+    'sequential_boolean_episode_counter':'JSON booleans are not integer optimizer counters.',
+    'sequential_unfinishable_chain':'Reserve enough actions to complete a documentary chain and submit.',
     'reverse_learned_acquisition_gradient': 'Held-out acquisition accuracy and reward must improve after actual gradient updates.',
     'interaction_fx_missing_mirror_provenance': 'Causal replay must include both sides of every changed FX settlement.',
     'reverse_currency_exponent': 'JPY conversion must scale zero-exponent source to two-exponent base money correctly.',
@@ -187,11 +199,13 @@ def main():
         for directory in ('auditforge', 'tests', 'scripts', 'configs', 'docs'):
             shutil.copytree(ROOT/directory, template/directory,
                             ignore=shutil.ignore_patterns('__pycache__', '*.pyc'))
+        (template/'web/public').mkdir(parents=True)
+        shutil.copy2(ROOT/'web/public/python-bridge.py',template/'web/public/python-bridge.py')
         # Submission tests validate the same required metadata in every sandbox.
         # A missing fixture must not be mistaken for a successfully killed mutant.
         for metadata in ROOT.glob('*.md'):
             shutil.copy2(metadata, template/metadata.name)
-        for name in ('LICENSE','requirements.txt','pyproject.toml','Dockerfile','Dockerfile.policy','package.json','vercel.json'):
+        for name in ('LICENSE','requirements.txt','pyproject.toml','Dockerfile','Dockerfile.policy','Dockerfile.sequential-policy','package.json','vercel.json'):
             shutil.copy2(ROOT/name, template/name)
         baseline = run_tests(template, args.timeout)
         (log_dir/'baseline.log').write_text(baseline.pop('output'), encoding='utf-8')

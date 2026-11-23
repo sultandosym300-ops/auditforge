@@ -16,7 +16,10 @@ from scripts.submission_check import check_directory, forbidden
 
 ROOT=Path(__file__).resolve().parents[1]
 ROOT_FILES={'README.md','LICENSE','requirements.txt','pyproject.toml','Dockerfile','Dockerfile.policy',
-            'package.json','vercel.json','.gitignore','.vercelignore',
+            'Dockerfile.sequential-policy','AUDITFORGE_FINAL_INDEPENDENT_AUDIT.md',
+            'AUDITFORGE_RL_BENCHMARK.md','AUDITFORGE_ADVERSARIAL_REPORT.md',
+            'AUDITFORGE_GENESIS_COMPLIANCE.md','AUDITFORGE_JURY_DEMO.md','AUDITFORGE_LIMITATIONS.md',
+            'package.json','vercel.json','.gitignore','.vercelignore','.dockerignore',
             'HACKATHON_COMPLIANCE.md','SUBMISSION_MANIFEST.md','FINAL_AUDIT_REPORT.md',
             'JURY_LIVE_DEMO_SCRIPT.md','AUDITFORGE_4_REALISM_AND_PROOF_REPORT.md','THIRD_PARTY_NOTICES.md'}
 REPORT_PREFIXES=('v4-','final-','submission-')

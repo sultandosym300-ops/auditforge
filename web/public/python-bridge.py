@@ -31,8 +31,21 @@ def request(path,payload):
   if initial is None: raise ValueError('Create a company first')
   return receipt_scenario(session.public,payload.get('event_id'),payload.get('amount_minor'))
  if path=='training_create':
-  trainer=EfficientTrainer(payload.get('seed',20261121),payload.get('scenario','period'),world_profile=payload.get('world_profile'),business_type=payload.get('business_type','logistics'))
+  if payload.get('world_profile')=='investigation_v1':
+   from auditforge.sequential_training import SequentialTrainer
+   trainer=SequentialTrainer(payload.get('seed',314159),payload.get('budget',10),payload.get('algorithm','reinforce'),family=payload.get('family','procurement'))
+  else:
+   trainer=EfficientTrainer(payload.get('seed',20261121),payload.get('scenario','period'),world_profile=payload.get('world_profile'),business_type=payload.get('business_type','logistics'))
   return trainer.checkpoint()
+ if path=='training_demo':
+  from auditforge.sequential_policy import investigate
+  if trainer is None or trainer.checkpoint().get('world_profile')!='investigation_v1':raise ValueError('Create a sequential agent')
+  runs=[]
+  for policy in ('random_valid','reconciliation','budget_aware','learned'):
+   demo=Session();observed,_=demo.reset(202611230017,dict(profile='investigation_v1',family=trainer.family),'evaluation')
+   result=investigate(demo.step,observed,policy=policy,budget=trainer.budget,weights=trainer.weights)
+   runs.append(dict(policy=policy,report=demo.report,steps=demo.steps,trajectory=result['trajectory']))
+  return dict(seed=202611230017,budget=trainer.budget,runs=runs)
  if path=='training_import':
   trainer=load_trainer(payload['checkpoint'])
   return trainer.checkpoint()

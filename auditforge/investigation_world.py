@@ -15,7 +15,7 @@ import random
 from .generator import TYPES, generate
 
 VERSION = 'investigation_v1'
-FAMILIES = ('procurement', 'closing_transfer')
+FAMILIES = ('procurement', 'closing_transfer', 'batch_transfer')
 
 
 def identity(*values):
@@ -51,6 +51,9 @@ def generate_investigation(seed, config):
             # still sharing the original economic-book generator, not real-bank transfer.
             base = dict(invoices=40, timezone='+05:00', recognition_world=labels.randrange(4))
         case = generate(int(identity(seed, number, 'case'), 16), base, _quote_seed=identity(seed, 'quotes'))
+        if family=='batch_transfer':
+            from .batch_settlement import consolidate
+            case=consolidate(case)
         canonical = {row['row_id']:'fx-'+identity(seed, row['date'], row['source_currency'], row['target_currency']) for row in case['public']['fx']}
         for books in (case['public'], case['pristine']):
             for row in books['fx']:

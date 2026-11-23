@@ -1,0 +1,11 @@
+{
+  "protocol": "sequential-batch-transfer-v1",
+  "created_utc": "2026-11-23",
+  "root": 912708453169,
+  "companies": 16,
+  "family": "batch_transfer",
+  "budgets": [6, 10, 16, 100],
+  "bootstrap_replicates": 2000,
+  "models": "V2 validation-selected checkpoints; no training or selection on this panel",
+  "scope": "Counterfactual consolidation of positive same-date/currency payments into multi-obligation settlements. Shared financial generator; not an independent bank distribution."
+}
