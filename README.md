@@ -36,7 +36,7 @@ python -m scripts.sequential_adversarial --output work/sequential-adversarial.js
 
 Зафиксированные результаты и checkpoint находятся в `reports/final-sequential-*`.
 Независимый reference evaluator и новые регрессии увеличивают полный набор
-до 213 тестов; проверяются 23 намеренных дефекта. `ultimate_verify` включает
+до 214 тестов; проверяются 23 намеренных дефекта. `ultimate_verify` включает
 mutation testing: отдельный повтор мутаций после него не нужен.
 Новый закрытый агент: `Dockerfile.sequential-policy`, образ
 `auditforge-sequential-policy:1.0`; после сборки — `python -m scripts.sequential_container`.

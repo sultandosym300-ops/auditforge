@@ -45,11 +45,11 @@ def selected_sources(root):
 
 
 def source_commit(root):
-    try:result=subprocess.run(['git','rev-parse','--show-toplevel'],cwd=root,capture_output=True,text=True)
+    try:result=subprocess.run(['git','rev-parse','--show-toplevel'],cwd=root,capture_output=True,text=True,encoding='utf8')
     except FileNotFoundError:result=None
     if result is not None and result.returncode==0 and Path(result.stdout.strip()).resolve()==root.resolve():
-        sha=subprocess.check_output(['git','rev-parse','HEAD'],cwd=root,text=True).strip()
-        dirty=bool(subprocess.check_output(['git','status','--porcelain'],cwd=root,text=True).strip())
+        sha=subprocess.check_output(['git','rev-parse','HEAD'],cwd=root,text=True,encoding='utf8').strip()
+        dirty=bool(subprocess.check_output(['git','status','--porcelain'],cwd=root,text=True,encoding='utf8').strip())
         return dict(commit=sha,dirty=dirty)
     prior=root/'submission-manifest.json'
     if prior.exists():return json.loads(prior.read_text(encoding='utf8')).get('source',dict(commit=None,dirty=None))
