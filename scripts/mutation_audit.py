@@ -205,7 +205,7 @@ def main():
         # A missing fixture must not be mistaken for a successfully killed mutant.
         for metadata in ROOT.glob('*.md'):
             shutil.copy2(metadata, template/metadata.name)
-        for name in ('LICENSE','requirements.txt','pyproject.toml','Dockerfile','Dockerfile.policy','Dockerfile.sequential-policy','package.json','vercel.json'):
+        for name in ('LICENSE','requirements.txt','pyproject.toml','Dockerfile','Dockerfile.policy','Dockerfile.sequential-policy','Dockerfile.document-policy','package.json','vercel.json'):
             shutil.copy2(ROOT/name, template/name)
         baseline = run_tests(template, args.timeout)
         (log_dir/'baseline.log').write_text(baseline.pop('output'), encoding='utf-8')
