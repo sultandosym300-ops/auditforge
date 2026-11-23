@@ -9,4 +9,5 @@ for(const name of ['__init__.py','generator.py','recognition_worlds.py','matcher
 files['env.py']=fs.readFileSync('../auditforge/env.py','utf8').replace('import multiprocessing\n','').split('\ndef _worker(')[0];
 files['documentary_decode.py']=fs.readFileSync('../auditforge/documentary_decode.py','utf8');
 files['batch_settlement.py']=fs.readFileSync('../auditforge/batch_settlement.py','utf8');
+for(const name of ['document_world.py','independent_world.py','document_policy.py','document_training.py'])files[name]=fs.readFileSync('../auditforge/'+name,'utf8');
 fs.writeFileSync('public/python-core.json',JSON.stringify(files));

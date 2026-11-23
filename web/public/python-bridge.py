@@ -31,13 +31,27 @@ def request(path,payload):
   if initial is None: raise ValueError('Create a company first')
   return receipt_scenario(session.public,payload.get('event_id'),payload.get('amount_minor'))
  if path=='training_create':
-  if payload.get('world_profile')=='investigation_v1':
+  if payload.get('world_profile')=='investigation_v2':
+   from auditforge.document_training import DocumentTrainer
+   trainer=DocumentTrainer(payload.get('seed',1202201),payload.get('budget',20),payload.get('algorithm','reinforce'),
+        family=payload.get('family','procurement'),architecture=payload.get('architecture','linear'),
+        entropy=payload.get('entropy',0.01),normalize_advantage=payload.get('normalize_advantage',False))
+   trainer.fit_blind(16)
+  elif payload.get('world_profile')=='investigation_v1':
    from auditforge.sequential_training import SequentialTrainer
    trainer=SequentialTrainer(payload.get('seed',314159),payload.get('budget',10),payload.get('algorithm','reinforce'),family=payload.get('family','procurement'))
   else:
    trainer=EfficientTrainer(payload.get('seed',20261121),payload.get('scenario','period'),world_profile=payload.get('world_profile'),business_type=payload.get('business_type','logistics'))
   return trainer.checkpoint()
  if path=='training_demo':
+  if trainer is not None and trainer.checkpoint().get('world_profile')=='investigation_v2':
+   from auditforge.document_policy import investigate
+   runs=[]
+   for policy in ('random_valid','blind_statistical','budget_aware','learned'):
+    demo=Session();observed,_=demo.reset(22022003,dict(profile='investigation_v2',family=trainer.family),'evaluation')
+    result=investigate(demo.step,observed,policy=policy,budget=trainer.budget,model=trainer.network,blind_statistics=trainer.blind_statistics)
+    runs.append(dict(policy=policy,category=result['category'],report=demo.report,steps=demo.steps,trajectory=result['trajectory']))
+   return dict(seed=22022003,budget=trainer.budget,runs=runs)
   from auditforge.sequential_policy import investigate
   if trainer is None or trainer.checkpoint().get('world_profile')!='investigation_v1':raise ValueError('Create a sequential agent')
   runs=[]

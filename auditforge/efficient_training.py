@@ -227,6 +227,9 @@ def _validate_loaded_history(model):
 
 
 def load_trainer(data):
+    if isinstance(data,dict) and data.get('format')=='auditforge-document-policy':
+        from .document_training import DocumentTrainer
+        return DocumentTrainer.from_checkpoint(data)
     if isinstance(data,dict) and data.get('format')=='auditforge-sequential-policy':
         from .sequential_training import SequentialTrainer
         return SequentialTrainer.from_checkpoint(data)
