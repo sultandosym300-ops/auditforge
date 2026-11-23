@@ -1,0 +1,34 @@
+{
+  "version": "auditforge-document-study-2.2-v1",
+  "frozen_before_test": true,
+  "families": ["procurement", "service_milestone"],
+  "training_seeds": [1202201, 1202202, 1202203],
+  "train_episodes": 150,
+  "checkpoint_episodes": [50, 100, 150],
+  "validation_root": 22022001,
+  "validation_companies": 16,
+  "test_root": 22022002,
+  "test_companies": 48,
+  "demo_seed": 22022003,
+  "budgets": [10, 20, 40, 100],
+  "selection_budget": 20,
+  "candidates": [
+    {"name": "linear_reinforce", "architecture": "linear", "algorithm": "reinforce", "learning_rate": 0.03, "entropy": 0.0, "normalize_advantage": false},
+    {"name": "linear_actor_critic", "architecture": "linear", "algorithm": "actor_critic", "learning_rate": 0.03, "entropy": 0.0, "normalize_advantage": false},
+    {"name": "linear_normalized_entropy", "architecture": "linear", "algorithm": "reinforce", "learning_rate": 0.03, "entropy": 0.01, "normalize_advantage": true},
+    {"name": "mlp_normalized_entropy", "architecture": "mlp", "hidden": 8, "algorithm": "reinforce", "learning_rate": 0.03, "entropy": 0.01, "normalize_advantage": true}
+  ],
+  "selection": "For each training family select candidate and checkpoint episode by mean validation reward across three training seeds at budget20; ties choose simpler architecture then earlier checkpoint. Freeze all selected checkpoints before test. Retain all candidates and validations.",
+  "blind_baseline_training": "Fit public-document risk statistics using the same training company roots, no truth/provenance/reward labels; do not fit during test. Preserve a separate online-only blind strategy.",
+  "baseline_groups": {
+    "generator_blind": ["blind_statistical", "blind_online", "reconciliation", "fixed_source", "random_valid"],
+    "oracle_knowledge": ["budget_aware", "greedy", "heuristic_search"],
+    "learned_and_controls": ["learned", "untrained", "random_weights", "no_document_features"]
+  },
+  "inference_information": "Only public reset/step observations, prior training checkpoints and declared unit action cost. No truth, provenance, evaluator report or generator imports in policy modules.",
+  "metrics": ["macro_f1", "micro_f1", "precision", "recall", "reward", "tp", "fp", "fn", "steps", "clean_reward", "clean_fp", "seconds"],
+  "bootstrap": {"unit": "independent test company; average checkpoint replicates within company first", "paired": true, "resamples": 2000, "seed": 22022004, "confidence": 0.95},
+  "practical_threshold": {"reward_delta": 0.02, "f1_delta": 0.01, "rule": "Both paired95% lower confidence bounds positive, practical mean thresholds met versus strongest generator-blind baseline and untrained. Report oracle comparisons separately. No global superiority claim unless both transfer directions support it."},
+  "stopping": "One preregistered four-candidate study. Any subsequent change after test requires new roots and a separately retained protocol; no unbounded tuning.",
+  "ppo": "Not preregistered: first establish gradient correctness and whether these compact candidates improve. Do not label unimplemented PPO as tested."
+}
