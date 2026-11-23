@@ -19,11 +19,12 @@ export default function SequentialLab({lang,onBack,initialCheckpoint=null}){
  const [seed,setSeed]=useState(initialCheckpoint?.seed??314159),[budget,setBudget]=useState(initialCheckpoint?.budget??10),[algorithm,setAlgorithm]=useState(initialCheckpoint?.algorithm??'reinforce'),[count,setCount]=useState(100);
  const [family,setFamily]=useState(initialCheckpoint?.family??'procurement');
  const [checkpoint,setCheckpoint]=useState(initialCheckpoint),[history,setHistory]=useState(initialCheckpoint?.history??[]),[running,setRunning]=useState(false),[error,setError]=useState('');
+ const [training,setTraining]=useState(false);
  const [validation,setValidation]=useState(null),[test,setTest]=useState(null),[demo,setDemo]=useState(null);
  const stop=useRef(false),file=useRef(null);
  async function perform(task){setRunning(true);setError('');try{await task();}catch{setError(t('error'));}finally{setRunning(false);}}
  function accept(cp){if(cp.format!=='auditforge-sequential-policy')throw Error();setCheckpoint(cp);setSeed(cp.seed);setBudget(cp.budget);setAlgorithm(cp.algorithm);setFamily(cp.family||'procurement');setHistory(cp.history);setValidation(null);setTest(null);setDemo(null);}
- async function train(){stop.current=false;setTest(null);setDemo(null);await perform(async()=>{for(let i=0;i<count&&!stop.current;i++){const row=await trainingApi('training_step');setHistory(items=>[...items,row]);}setCheckpoint(await trainingApi('training_checkpoint'));});}
+ async function train(){stop.current=false;setValidation(null);setTest(null);setDemo(null);setTraining(true);await perform(async()=>{for(let i=0;i<count&&!stop.current;i++){const row=await trainingApi('training_step');setHistory(items=>[...items,row]);}setCheckpoint(await trainingApi('training_checkpoint'));});setTraining(false);}
  const points=key=>history.map((row,index)=>Number.isFinite(row[key])?`${index*900/Math.max(1,history.length-1)},${120-(row[key]+1)*55}`:null).filter(Boolean).join(' ');
  return <section className="training-lab sequential-lab">
  <button className="text-button" disabled={running} onClick={onBack}>← {t('back')}</button>
@@ -36,7 +37,7 @@ export default function SequentialLab({lang,onBack,initialCheckpoint=null}){
  <label>{t('count')}<input type="number" min="1" max="1000" value={count} disabled={running} onChange={e=>setCount(Math.max(1,Math.min(1000,Number(e.target.value)||1)))}/></label>
  <button className="button secondary sequential-create" disabled={running} onClick={()=>perform(async()=>accept(await trainingApi('training_create',{world_profile:'investigation_v1',seed,budget,algorithm,family})))}>{t('create')}</button>
  <button className="button primary sequential-train" disabled={running||!checkpoint} onClick={train}>{t('train')}</button>
- <button className="button secondary" disabled={!running} onClick={()=>stop.current=true}>{t('stop')}</button>
+ <button className="button secondary" disabled={!training} onClick={()=>stop.current=true}>{t('stop')}</button>
  <button className="button secondary" disabled={running||!checkpoint} onClick={()=>perform(async()=>download('auditforge-sequential-checkpoint.json',await trainingApi('training_checkpoint')))}>{t('save')}</button>
  <button className="button secondary" disabled={running} onClick={()=>file.current.click()}>{t('load')}</button>
  <input hidden type="file" accept="application/json,.json" ref={file} onChange={event=>{const value=event.target.files?.[0];if(value)perform(async()=>{if(value.size>10000000)throw Error();const parsed=JSON.parse(await value.text());if(parsed.format!=='auditforge-sequential-policy')throw Error();accept(await trainingApi('training_import',{checkpoint:parsed}));});event.target.value='';}}/>
