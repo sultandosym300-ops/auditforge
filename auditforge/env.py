@@ -85,6 +85,7 @@ class Session:
                 if table not in ('ledger', 'invoices', 'payments', 'fx'):
                     raise ValueError('Unknown public table')
                 records = self.public[table]
+                document_world = self.public['manifest'].get('profile') == 'investigation_v2'
                 if tool == 'list_records':
                     limit = action.get('limit', 50)
                     cursor = action.get('cursor')
@@ -93,6 +94,10 @@ class Session:
                     offset = int(cursor or '0')
                     if offset > len(records):
                         raise ValueError('Invalid cursor')
+                    # In v2 a source action cannot recover a complete table.
+                    # One raw row is no more than one individually acquired source.
+                    if document_world:
+                        limit = 1
                     result = dict(records=records[offset:offset+limit], next_cursor=str(offset+limit) if offset+limit < len(records) else None)
                 else:
                     record_id = action.get('id')
@@ -107,7 +112,7 @@ class Session:
                     result = next((r for r in records if any(record_id == r[key] for key in keys)), None)
                     if result is None: raise ValueError('Record not found')
             elif tool == 'get_document':
-                documents = [d for table in ('invoices', 'payments') for d in self.public[table]]
+                documents = [] if self.public['manifest'].get('profile') == 'investigation_v2' else [d for table in ('invoices', 'payments') for d in self.public[table]]
                 documents += self.public.get('business', {}).get('source_documents', [])
                 result = next((d for d in documents if d['doc_id'] == action.get('doc_id')), None)
                 if result is None: raise ValueError('Document not found')

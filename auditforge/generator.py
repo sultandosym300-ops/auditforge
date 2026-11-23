@@ -23,6 +23,9 @@ def generate(seed, config=None, *, _quote_seed=None):
         raise ValueError('config must be an object')
     config = dict(config or {})
     if 'profile' in config:
+        if config['profile'] == 'investigation_v2':
+            from .document_world import generate_document_world
+            return generate_document_world(seed, config)
         if config['profile'] == 'investigation_v1':
             from .investigation_world import generate_investigation
             return generate_investigation(seed, config)
