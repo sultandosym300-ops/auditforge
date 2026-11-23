@@ -80,9 +80,17 @@ def run_panel(spec,models,root,count,family,output):
 
 def main():
     parser=argparse.ArgumentParser();parser.add_argument('--output',type=Path,default=ROOT/'work/sequential-study')
+    parser.add_argument('--protocol',type=Path,default=ROOT/'configs/sequential-study.json')
     args=parser.parse_args();args.output.mkdir(parents=True,exist_ok=True)
-    protocol=(ROOT/'configs/sequential-study.json').read_bytes();spec=json.loads(protocol)
+    if (args.output/'selection.json').exists():raise ValueError('Preserve completed experiments; use a new output directory')
+    protocol=args.protocol.read_bytes();spec=json.loads(protocol)
     save(args.output/'protocol.json',dict(specification=spec,sha256=hashlib.sha256(protocol).hexdigest()))
+    snapshot=args.output/'source';snapshot.mkdir(exist_ok=True)
+    hashes={}
+    for file in sorted((ROOT/'auditforge').glob('*.py')):
+        content=file.read_bytes().replace(b'\r\n',b'\n');(snapshot/file.name).write_bytes(content)
+        hashes[file.name]=hashlib.sha256(content).hexdigest()
+    save(args.output/'source-sha256.json',hashes)
     candidates=[];all_models=[]
     for candidate_id,settings in enumerate(spec['candidates']):
         models=[];validation=[]

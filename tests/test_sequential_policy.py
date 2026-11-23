@@ -1,11 +1,24 @@
 import copy
 import unittest
+from unittest.mock import patch
 
 from auditforge.env import Session
 from auditforge.sequential_policy import POLICIES, investigate, SequentialTrainer
 
 
 class SequentialPolicyTests(unittest.TestCase):
+    def test_self_critical_baseline_uses_a_second_frozen_public_rollout(self):
+        from auditforge import sequential_policy
+        calls=[]
+        original=sequential_policy.investigate
+        def record(step, initial, **options):
+            calls.append((copy.deepcopy(initial),copy.deepcopy(options.get('weights'))))
+            return original(step,initial,**options)
+        with patch.object(sequential_policy,'investigate',side_effect=record):
+            SequentialTrainer(seed=81,budget=8).train_episode()
+        self.assertEqual(len(calls),2)
+        self.assertEqual(calls[0],calls[1])
+
     def test_equal_budget_and_no_unsupported_claims(self):
         for policy in POLICIES:
             session = Session()

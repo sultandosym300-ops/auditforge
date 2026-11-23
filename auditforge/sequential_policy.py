@@ -7,7 +7,8 @@ from .efficient_training import decode
 
 FEATURES = ('bias', 'manual', 'cutoff', 'cross_border', 'supplier_change',
             'manual_cutoff', 'observed_issue_rate', 'budget_fraction',
-            'remaining_cost', 'started', 'stop')
+            'remaining_cost', 'started', 'inverse_cost', 'manual_per_cost',
+            'cutoff_per_cost', 'cross_border_per_cost', 'supplier_change_per_cost', 'stop')
 INITIAL_WEIGHTS = [0.] * (len(FEATURES)-1) + [-2.]
 POLICIES = ('random_valid', 'fixed_source', 'budget_aware', 'greedy',
             'heuristic_search', 'reconciliation', 'learned', 'untrained',
@@ -27,7 +28,10 @@ def vector(candidate, remaining, completed, positive, *, stop=False):
             candidate['cross_border'], candidate['supplier_change'],
             candidate['manual_entries']*candidate['cutoff_pressure'],
             positive/max(1, completed), remaining/100,
-            candidate['left']/3, float(candidate['left']<candidate['query_cost']), 0.]
+            candidate['left']/3, float(candidate['left']<candidate['query_cost']),
+            1/candidate['left'],candidate['manual_entries']/candidate['left'],
+            candidate['cutoff_pressure']/candidate['left'],candidate['cross_border']/candidate['left'],
+            candidate['supplier_change']/candidate['left'],0.]
 
 
 def estimated_yield(candidate, completed, positive):

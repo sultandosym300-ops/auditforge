@@ -33,12 +33,17 @@ class SequentialTrainer:
         started=time.perf_counter();previous=list(self.weights)
         result=investigate(session.step,initial,weights=self.weights,budget=self.budget,rng=rng)
         reward=result['terminal'][1];decisions=result['decisions']
+        reference_reward=self.baseline
+        if self.algorithm=='reinforce':
+            reference=Session()
+            reference_initial,_=reference.reset(episode_seed(self.seed,'sequential-train',self.episodes),self.config(self.episodes),'train')
+            reference_reward=investigate(reference.step,reference_initial,weights=self.weights,budget=self.budget)['terminal'][1]
         states=[[statistics.mean(xs[j] for xs in row['features']) for j in range(len(FEATURES))] for row in decisions]
         # Read all advantages from the frozen pre-update critic (one on-policy trajectory).
         values=[sum(w*x for w,x in zip(self.critic,state)) for state in states]
         for i,row in enumerate(decisions):
             if self.algorithm=='reinforce':
-                advantage=reward-self.baseline
+                advantage=reward-reference_reward
             else:
                 target=values[i+1] if i+1<len(values) else reward
                 advantage=target-values[i]
@@ -88,8 +93,9 @@ class SequentialTrainer:
 
     def checkpoint(self):
         from .sequential_policy import FEATURES
-        return dict(format='auditforge-sequential-policy',version=3,environment=GENERATOR_VERSION,
+        return dict(format='auditforge-sequential-policy',version=4,environment=GENERATOR_VERSION,
                     algorithm=self.algorithm,architecture='linear softmax query policy with explicit stop',
+                    baseline_method='same-company frozen greedy rollout' if self.algorithm=='reinforce' else 'one-step TD linear state critic',
                     world_profile='investigation_v1',scenario='mixed',features=list(FEATURES),
                     seed=self.seed,budget=self.budget,learning_rate=self.learning_rate,
                     weights=list(self.weights),critic=list(self.critic),episodes=self.episodes,
@@ -103,7 +109,7 @@ class SequentialTrainer:
         model=cls(data.get('seed'),data.get('budget'),data.get('algorithm'),data.get('learning_rate'))
         expected=model.checkpoint()
         if set(data)!=set(expected) or any(data.get(key)!=expected[key] for key in
-                ('format','version','environment','architecture','world_profile','scenario','features')):
+                ('format','version','environment','architecture','baseline_method','world_profile','scenario','features')):
             raise ValueError('Incompatible checkpoint')
         for key in ('weights','critic'):
             values=data.get(key)

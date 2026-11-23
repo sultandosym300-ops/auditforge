@@ -1,0 +1,22 @@
+{
+  "protocol": "sequential-investigation-study-v2",
+  "created_utc": "2026-11-23",
+  "training_seeds": [142857, 173205, 223606],
+  "training_episodes": 200,
+  "candidates": [
+    {"algorithm": "reinforce", "learning_rate": 0.1},
+    {"algorithm": "actor_critic", "learning_rate": 0.03}
+  ],
+  "training_budget": 10,
+  "validation_root": 591760284133,
+  "validation_companies": 16,
+  "test_root": 684317925023,
+  "test_companies": 48,
+  "transfer_root": 794216830153,
+  "transfer_companies": 16,
+  "budgets": [6, 10, 16, 100],
+  "bootstrap_replicates": 2000,
+  "selection": "mean validation reward across all three training seeds; no test-based selection",
+  "demo_seed": 202611230017,
+  "limitations": "Second preregistered panel after a negative first study. V1 test is development evidence for V2, never a V2 holdout. Shared financial generator; transfer changes period-injection mechanism only."
+}
