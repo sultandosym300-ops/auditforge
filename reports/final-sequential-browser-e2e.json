@@ -1,0 +1,29 @@
+{
+  "date": "2026-11-23",
+  "environment": "Real Chromium via Playwright CLI; local production build, actual Pyodide Web Worker",
+  "checks": {
+    "guest_onboarding": true,
+    "profile_selection": true,
+    "create_sequential_model": true,
+    "train_25_episodes": true,
+    "real_validation_point": true,
+    "validation_eight_companies_eight_policies": true,
+    "separate_test_twelve_companies_eight_policies": true,
+    "four_policy_demo_with_documents": true,
+    "export_checkpoint": true,
+    "import_checkpoint_preserves_25_episode_history": true,
+    "russian_kazakh_english": true,
+    "mobile_390px_no_horizontal_overflow": true,
+    "final_batch_family_create_and_train_two_episodes": true,
+    "no_application_alerts": true,
+    "new_training_clears_stale_validation": true,
+    "stop_control_only_enabled_for_training": true
+  },
+  "parity_artifact": "reports/final-sequential-browser-parity.json",
+  "screenshots": "Local verification screenshots retained in ignored .playwright-cli",
+  "limitations": [
+    "Local static server returned the expected 404 for /api/me during native-backend detection; browser fallback then worked. No other application errors were observed.",
+    "Browser execution is an open demonstration, not evaluator isolation.",
+    "These are observed local flows, not a claim of exhaustive usability or browser compatibility testing."
+  ]
+}

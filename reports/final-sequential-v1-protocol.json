@@ -1,0 +1,48 @@
+{
+  "specification": {
+    "protocol": "sequential-investigation-study-v1",
+    "created_utc": "2026-11-23",
+    "training_seeds": [
+      314159,
+      271828,
+      161803
+    ],
+    "training_episodes": 150,
+    "candidates": [
+      {
+        "algorithm": "reinforce",
+        "learning_rate": 0.03
+      },
+      {
+        "algorithm": "reinforce",
+        "learning_rate": 0.1
+      },
+      {
+        "algorithm": "actor_critic",
+        "learning_rate": 0.03
+      },
+      {
+        "algorithm": "actor_critic",
+        "learning_rate": 0.1
+      }
+    ],
+    "training_budget": 10,
+    "validation_root": 719368205111,
+    "validation_companies": 16,
+    "test_root": 836215790451,
+    "test_companies": 48,
+    "transfer_root": 935170682491,
+    "transfer_companies": 16,
+    "budgets": [
+      6,
+      10,
+      16,
+      100
+    ],
+    "bootstrap_replicates": 2000,
+    "selection": "mean validation reward across all three training seeds; no test-based selection",
+    "demo_seed": 202611230017,
+    "limitations": "Synthetic departments share the existing economic-book generator. Transfer changes the period-injection mechanism, not the entire financial generator. No claim of real-bank generalization."
+  },
+  "sha256": "388f1390e86539657d3aedb30a2cc5581768689d63368c1f233ff4d5e831cf16"
+}

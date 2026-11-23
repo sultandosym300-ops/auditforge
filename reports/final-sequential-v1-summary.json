@@ -1,0 +1,1680 @@
+{
+  "protocol_sha256": "388f1390e86539657d3aedb30a2cc5581768689d63368c1f233ff4d5e831cf16",
+  "selection": {
+    "candidate": 0,
+    "settings": {
+      "algorithm": "reinforce",
+      "learning_rate": 0.03
+    },
+    "validation_reward": 0.9090661838161838,
+    "per_seed": [
+      0.9182232905982906,
+      0.9185982905982906,
+      0.8903769702519703
+    ]
+  },
+  "test": {
+    "summary": {
+      "6": {
+        "learned": {
+          "runs": 144,
+          "independent_companies": 48,
+          "reward": 0.4800970273706342,
+          "f1": 0.744562402574206,
+          "steps": 5.930555555555555,
+          "precision": 0.625,
+          "recall": 0.38349131578298246,
+          "fp": 0,
+          "fn": 350
+        },
+        "untrained": {
+          "runs": 144,
+          "independent_companies": 48,
+          "reward": 0.3992149302471856,
+          "f1": 0.7040449651235928,
+          "steps": 5.833333333333333,
+          "precision": 0.625,
+          "recall": 0.33296420015170014,
+          "fp": 0,
+          "fn": 381
+        },
+        "random_weights": {
+          "runs": 144,
+          "independent_companies": 48,
+          "reward": 0.08265257482169246,
+          "f1": 0.5442429540775129,
+          "steps": 4.604166666666667,
+          "precision": 0.5208333333333334,
+          "recall": 0.18539857133607132,
+          "fp": 0,
+          "fn": 576
+        },
+        "fixed_source": {
+          "runs": 144,
+          "independent_companies": 48,
+          "reward": 0.3992149302471856,
+          "f1": 0.7040449651235928,
+          "steps": 5.833333333333333,
+          "precision": 0.625,
+          "recall": 0.33296420015170014,
+          "fp": 0,
+          "fn": 381
+        },
+        "random_valid": {
+          "runs": 144,
+          "independent_companies": 48,
+          "reward": 0.1359805053620843,
+          "f1": 0.5711569193477088,
+          "steps": 5.145833333333333,
+          "precision": 0.4791666666666667,
+          "recall": 0.22086790524290525,
+          "fp": 0,
+          "fn": 528
+        },
+        "reconciliation": {
+          "runs": 144,
+          "independent_companies": 48,
+          "reward": -0.4195833333333333,
+          "f1": 0.2916666666666667,
+          "steps": 6,
+          "precision": 0,
+          "recall": 0.0,
+          "fp": 0,
+          "fn": 756
+        },
+        "budget_aware": {
+          "runs": 144,
+          "independent_companies": 48,
+          "reward": 0.49754728078851446,
+          "f1": 0.7530653070609239,
+          "steps": 5.708333333333333,
+          "precision": 0.625,
+          "recall": 0.3942632598882599,
+          "fp": 0,
+          "fn": 330
+        },
+        "greedy": {
+          "runs": 144,
+          "independent_companies": 48,
+          "reward": 0.4929122258279951,
+          "f1": 0.7507269462473308,
+          "steps": 5.583333333333333,
+          "precision": 0.6458333333333334,
+          "recall": 0.3829965751840752,
+          "fp": 0,
+          "fn": 351
+        },
+        "heuristic_search": {
+          "runs": 144,
+          "independent_companies": 48,
+          "reward": 0.507403914884565,
+          "f1": 0.7580769574422825,
+          "steps": 5.895833333333333,
+          "precision": 0.6041666666666666,
+          "recall": 0.403832856957857,
+          "fp": 0,
+          "fn": 315
+        },
+        "zero_features": {
+          "runs": 144,
+          "independent_companies": 48,
+          "reward": 0.3992149302471856,
+          "f1": 0.7040449651235928,
+          "steps": 5.833333333333333,
+          "precision": 0.625,
+          "recall": 0.33296420015170014,
+          "fp": 0,
+          "fn": 381
+        },
+        "no_financial_rules": {
+          "runs": 144,
+          "independent_companies": 48,
+          "reward": -0.4195277777777778,
+          "f1": 0.2916666666666667,
+          "steps": 5.930555555555555,
+          "precision": 0,
+          "recall": 0.0,
+          "fp": 0,
+          "fn": 756
+        },
+        "no_source_selection": {
+          "runs": 144,
+          "independent_companies": 48,
+          "reward": 0.3992149302471856,
+          "f1": 0.7040449651235928,
+          "steps": 5.833333333333333,
+          "precision": 0.625,
+          "recall": 0.33296420015170014,
+          "fp": 0,
+          "fn": 381
+        }
+      },
+      "10": {
+        "learned": {
+          "runs": 144,
+          "independent_companies": 48,
+          "reward": 0.7541852111214856,
+          "f1": 0.8852176055607428,
+          "steps": 9.472222222222221,
+          "precision": 0.6666666666666666,
+          "recall": 0.5525527327610661,
+          "fp": 0,
+          "fn": 160
+        },
+        "untrained": {
+          "runs": 144,
+          "independent_companies": 48,
+          "reward": 0.7563105863441036,
+          "f1": 0.8864677931720518,
+          "steps": 9.5,
+          "precision": 0.6875,
+          "recall": 0.5490237771487771,
+          "fp": 0,
+          "fn": 162
+        },
+        "random_weights": {
+          "runs": 144,
+          "independent_companies": 48,
+          "reward": 0.11961982081099727,
+          "f1": 0.5636224104054987,
+          "steps": 5.479166666666667,
+          "precision": 0.5625,
+          "recall": 0.1993701321826322,
+          "fp": 0,
+          "fn": 564
+        },
+        "fixed_source": {
+          "runs": 144,
+          "independent_companies": 48,
+          "reward": 0.7563105863441036,
+          "f1": 0.8864677931720518,
+          "steps": 9.5,
+          "precision": 0.6875,
+          "recall": 0.5490237771487771,
+          "fp": 0,
+          "fn": 162
+        },
+        "random_valid": {
+          "runs": 144,
+          "independent_companies": 48,
+          "reward": 0.43443597156484154,
+          "f1": 0.7224471524490874,
+          "steps": 6.895833333333333,
+          "precision": 0.5833333333333334,
+          "recall": 0.3680202320827321,
+          "fp": 0,
+          "fn": 408
+        },
+        "reconciliation": {
+          "runs": 144,
+          "independent_companies": 48,
+          "reward": -0.42191666666666666,
+          "f1": 0.2916666666666667,
+          "steps": 10,
+          "precision": 0,
+          "recall": 0.0,
+          "fp": 0,
+          "fn": 756
+        },
+        "budget_aware": {
+          "runs": 144,
+          "independent_companies": 48,
+          "reward": 0.8199960170405217,
+          "f1": 0.9179771751869275,
+          "steps": 9.145833333333334,
+          "precision": 0.6875,
+          "recall": 0.5942015160765161,
+          "fp": 0,
+          "fn": 120
+        },
+        "greedy": {
+          "runs": 144,
+          "independent_companies": 48,
+          "reward": 0.814816948875621,
+          "f1": 0.9154293077711438,
+          "steps": 9.1875,
+          "precision": 0.6875,
+          "recall": 0.5886341667591668,
+          "fp": 0,
+          "fn": 129
+        },
+        "heuristic_search": {
+          "runs": 144,
+          "independent_companies": 48,
+          "reward": 0.7520624945087019,
+          "f1": 0.8839687472543509,
+          "steps": 9.458333333333334,
+          "precision": 0.6458333333333334,
+          "recall": 0.5595845127095127,
+          "fp": 0,
+          "fn": 144
+        },
+        "zero_features": {
+          "runs": 144,
+          "independent_companies": 48,
+          "reward": 0.7563105863441036,
+          "f1": 0.8864677931720518,
+          "steps": 9.5,
+          "precision": 0.6875,
+          "recall": 0.5490237771487771,
+          "fp": 0,
+          "fn": 162
+        },
+        "no_financial_rules": {
+          "runs": 144,
+          "independent_companies": 48,
+          "reward": -0.42155555555555557,
+          "f1": 0.2916666666666667,
+          "steps": 9.472222222222221,
+          "precision": 0,
+          "recall": 0.0,
+          "fp": 0,
+          "fn": 756
+        },
+        "no_source_selection": {
+          "runs": 144,
+          "independent_companies": 48,
+          "reward": 0.7563105863441036,
+          "f1": 0.8864677931720518,
+          "steps": 9.5,
+          "precision": 0.6875,
+          "recall": 0.5490237771487771,
+          "fp": 0,
+          "fn": 162
+        }
+      },
+      "16": {
+        "learned": {
+          "runs": 144,
+          "independent_companies": 48,
+          "reward": 0.9470555555555555,
+          "f1": 0.9854166666666667,
+          "steps": 12.88888888888889,
+          "precision": 0.7083333333333334,
+          "recall": 0.6875,
+          "fp": 0,
+          "fn": 12
+        },
+        "untrained": {
+          "runs": 144,
+          "independent_companies": 48,
+          "reward": 0.9432537878787879,
+          "f1": 0.9835227272727273,
+          "steps": 12.895833333333334,
+          "precision": 0.7083333333333334,
+          "recall": 0.6840277777777778,
+          "fp": 0,
+          "fn": 18
+        },
+        "random_weights": {
+          "runs": 144,
+          "independent_companies": 48,
+          "reward": 0.11158572990190636,
+          "f1": 0.5598345316176199,
+          "steps": 5.770833333333333,
+          "precision": 0.5416666666666666,
+          "recall": 0.19728679884929884,
+          "fp": 0,
+          "fn": 567
+        },
+        "fixed_source": {
+          "runs": 144,
+          "independent_companies": 48,
+          "reward": 0.9432537878787879,
+          "f1": 0.9835227272727273,
+          "steps": 12.895833333333334,
+          "precision": 0.7083333333333334,
+          "recall": 0.6840277777777778,
+          "fp": 0,
+          "fn": 18
+        },
+        "random_valid": {
+          "runs": 144,
+          "independent_companies": 48,
+          "reward": 0.5534324807745861,
+          "f1": 0.7834245737206263,
+          "steps": 8.041666666666666,
+          "precision": 0.625,
+          "recall": 0.4377126924001924,
+          "fp": 0,
+          "fn": 312
+        },
+        "reconciliation": {
+          "runs": 144,
+          "independent_companies": 48,
+          "reward": -0.42541666666666667,
+          "f1": 0.2916666666666667,
+          "steps": 16,
+          "precision": 0,
+          "recall": 0.0,
+          "fp": 0,
+          "fn": 756
+        },
+        "budget_aware": {
+          "runs": 144,
+          "independent_companies": 48,
+          "reward": 0.9470833333333333,
+          "f1": 0.9854166666666667,
+          "steps": 12.875,
+          "precision": 0.7083333333333334,
+          "recall": 0.6875,
+          "fp": 0,
+          "fn": 12
+        },
+        "greedy": {
+          "runs": 144,
+          "independent_companies": 48,
+          "reward": 0.9432954545454545,
+          "f1": 0.9835227272727273,
+          "steps": 12.875,
+          "precision": 0.7083333333333334,
+          "recall": 0.6840277777777778,
+          "fp": 0,
+          "fn": 18
+        },
+        "heuristic_search": {
+          "runs": 144,
+          "independent_companies": 48,
+          "reward": 0.9470416666666667,
+          "f1": 0.9854166666666667,
+          "steps": 12.895833333333334,
+          "precision": 0.7083333333333334,
+          "recall": 0.6875,
+          "fp": 0,
+          "fn": 12
+        },
+        "zero_features": {
+          "runs": 144,
+          "independent_companies": 48,
+          "reward": 0.9432537878787879,
+          "f1": 0.9835227272727273,
+          "steps": 12.895833333333334,
+          "precision": 0.7083333333333334,
+          "recall": 0.6840277777777778,
+          "fp": 0,
+          "fn": 18
+        },
+        "no_financial_rules": {
+          "runs": 144,
+          "independent_companies": 48,
+          "reward": -0.42383333333333334,
+          "f1": 0.2916666666666667,
+          "steps": 12.88888888888889,
+          "precision": 0,
+          "recall": 0.0,
+          "fp": 0,
+          "fn": 756
+        },
+        "no_source_selection": {
+          "runs": 144,
+          "independent_companies": 48,
+          "reward": 0.9432537878787879,
+          "f1": 0.9835227272727273,
+          "steps": 12.895833333333334,
+          "precision": 0.7083333333333334,
+          "recall": 0.6840277777777778,
+          "fp": 0,
+          "fn": 18
+        }
+      },
+      "100": {
+        "learned": {
+          "runs": 144,
+          "independent_companies": 48,
+          "reward": 0.97575,
+          "f1": 1.0,
+          "steps": 13.125,
+          "precision": 0.7083333333333334,
+          "recall": 0.7083333333333334,
+          "fp": 0,
+          "fn": 0
+        },
+        "untrained": {
+          "runs": 144,
+          "independent_companies": 48,
+          "reward": 0.97575,
+          "f1": 1.0,
+          "steps": 13.125,
+          "precision": 0.7083333333333334,
+          "recall": 0.7083333333333334,
+          "fp": 0,
+          "fn": 0
+        },
+        "random_weights": {
+          "runs": 144,
+          "independent_companies": 48,
+          "reward": -0.1301615043453279,
+          "f1": 0.4364609144940027,
+          "steps": 3.0416666666666665,
+          "precision": 0.3125,
+          "recall": 0.10066808191808191,
+          "fp": 0,
+          "fn": 639
+        },
+        "fixed_source": {
+          "runs": 144,
+          "independent_companies": 48,
+          "reward": 0.97575,
+          "f1": 1.0,
+          "steps": 13.125,
+          "precision": 0.7083333333333334,
+          "recall": 0.7083333333333334,
+          "fp": 0,
+          "fn": 0
+        },
+        "random_valid": {
+          "runs": 144,
+          "independent_companies": 48,
+          "reward": 0.5488453595624648,
+          "f1": 0.781151846447899,
+          "steps": 8.0625,
+          "precision": 0.625,
+          "recall": 0.4342404701779702,
+          "fp": 0,
+          "fn": 318
+        },
+        "reconciliation": {
+          "runs": 144,
+          "independent_companies": 48,
+          "reward": 0.9259583333333333,
+          "f1": 1.0,
+          "steps": 38.020833333333336,
+          "precision": 0.7083333333333334,
+          "recall": 0.7083333333333334,
+          "fp": 0,
+          "fn": 0
+        },
+        "budget_aware": {
+          "runs": 144,
+          "independent_companies": 48,
+          "reward": 0.97575,
+          "f1": 1.0,
+          "steps": 13.125,
+          "precision": 0.7083333333333334,
+          "recall": 0.7083333333333334,
+          "fp": 0,
+          "fn": 0
+        },
+        "greedy": {
+          "runs": 144,
+          "independent_companies": 48,
+          "reward": 0.97575,
+          "f1": 1.0,
+          "steps": 13.125,
+          "precision": 0.7083333333333334,
+          "recall": 0.7083333333333334,
+          "fp": 0,
+          "fn": 0
+        },
+        "heuristic_search": {
+          "runs": 144,
+          "independent_companies": 48,
+          "reward": 0.97575,
+          "f1": 1.0,
+          "steps": 13.125,
+          "precision": 0.7083333333333334,
+          "recall": 0.7083333333333334,
+          "fp": 0,
+          "fn": 0
+        },
+        "zero_features": {
+          "runs": 144,
+          "independent_companies": 48,
+          "reward": 0.97575,
+          "f1": 1.0,
+          "steps": 13.125,
+          "precision": 0.7083333333333334,
+          "recall": 0.7083333333333334,
+          "fp": 0,
+          "fn": 0
+        },
+        "no_financial_rules": {
+          "runs": 144,
+          "independent_companies": 48,
+          "reward": -0.4239583333333333,
+          "f1": 0.2916666666666667,
+          "steps": 13.125,
+          "precision": 0,
+          "recall": 0.0,
+          "fp": 0,
+          "fn": 756
+        },
+        "no_source_selection": {
+          "runs": 144,
+          "independent_companies": 48,
+          "reward": 0.97575,
+          "f1": 1.0,
+          "steps": 13.125,
+          "precision": 0.7083333333333334,
+          "recall": 0.7083333333333334,
+          "fp": 0,
+          "fn": 0
+        }
+      }
+    },
+    "paired": [
+      {
+        "budget": 6,
+        "left": "learned",
+        "right": "budget_aware",
+        "companies": 48,
+        "difference": -0.017450253417880285,
+        "bootstrap_95": [
+          -0.1377366576693258,
+          0.11713841071296652
+        ],
+        "unit": "independent synthetic company; checkpoint variation averaged within company"
+      },
+      {
+        "budget": 6,
+        "left": "learned",
+        "right": "greedy",
+        "companies": 48,
+        "difference": -0.012815198457360922,
+        "bootstrap_95": [
+          -0.1504687854762674,
+          0.13086757662789095
+        ],
+        "unit": "independent synthetic company; checkpoint variation averaged within company"
+      },
+      {
+        "budget": 6,
+        "left": "learned",
+        "right": "heuristic_search",
+        "companies": 48,
+        "difference": -0.027306887513930858,
+        "bootstrap_95": [
+          -0.14227145190741683,
+          0.09675635902338689
+        ],
+        "unit": "independent synthetic company; checkpoint variation averaged within company"
+      },
+      {
+        "budget": 6,
+        "left": "learned",
+        "right": "fixed_source",
+        "companies": 48,
+        "difference": 0.0808820971234486,
+        "bootstrap_95": [
+          -0.057131759904850705,
+          0.22856053783955702
+        ],
+        "unit": "independent synthetic company; checkpoint variation averaged within company"
+      },
+      {
+        "budget": 6,
+        "left": "learned",
+        "right": "untrained",
+        "companies": 48,
+        "difference": 0.0808820971234486,
+        "bootstrap_95": [
+          -0.057131759904850705,
+          0.22856053783955702
+        ],
+        "unit": "independent synthetic company; checkpoint variation averaged within company"
+      },
+      {
+        "budget": 6,
+        "left": "learned",
+        "right": "reconciliation",
+        "companies": 48,
+        "difference": 0.8996803607039675,
+        "bootstrap_95": [
+          0.6987295073443164,
+          1.0959243813127972
+        ],
+        "unit": "independent synthetic company; checkpoint variation averaged within company"
+      },
+      {
+        "budget": 10,
+        "left": "learned",
+        "right": "budget_aware",
+        "companies": 48,
+        "difference": -0.06581080591903604,
+        "bootstrap_95": [
+          -0.12813804974408688,
+          -0.004843319801782121
+        ],
+        "unit": "independent synthetic company; checkpoint variation averaged within company"
+      },
+      {
+        "budget": 10,
+        "left": "learned",
+        "right": "greedy",
+        "companies": 48,
+        "difference": -0.06063173775413533,
+        "bootstrap_95": [
+          -0.13009599280688366,
+          0.004012443882799924
+        ],
+        "unit": "independent synthetic company; checkpoint variation averaged within company"
+      },
+      {
+        "budget": 10,
+        "left": "learned",
+        "right": "heuristic_search",
+        "companies": 48,
+        "difference": 0.0021227166127837003,
+        "bootstrap_95": [
+          -0.06946515458035066,
+          0.0814478470016396
+        ],
+        "unit": "independent synthetic company; checkpoint variation averaged within company"
+      },
+      {
+        "budget": 10,
+        "left": "learned",
+        "right": "fixed_source",
+        "companies": 48,
+        "difference": -0.002125375222618005,
+        "bootstrap_95": [
+          -0.12803027655050694,
+          0.11407002831065627
+        ],
+        "unit": "independent synthetic company; checkpoint variation averaged within company"
+      },
+      {
+        "budget": 10,
+        "left": "learned",
+        "right": "untrained",
+        "companies": 48,
+        "difference": -0.002125375222618005,
+        "bootstrap_95": [
+          -0.12803027655050694,
+          0.11407002831065627
+        ],
+        "unit": "independent synthetic company; checkpoint variation averaged within company"
+      },
+      {
+        "budget": 10,
+        "left": "learned",
+        "right": "reconciliation",
+        "companies": 48,
+        "difference": 1.1761018777881522,
+        "bootstrap_95": [
+          0.9350702720482132,
+          1.40787981000481
+        ],
+        "unit": "independent synthetic company; checkpoint variation averaged within company"
+      },
+      {
+        "budget": 16,
+        "left": "learned",
+        "right": "budget_aware",
+        "companies": 48,
+        "difference": -2.777777777777703e-05,
+        "bootstrap_95": [
+          -8.33333333333311e-05,
+          0.0
+        ],
+        "unit": "independent synthetic company; checkpoint variation averaged within company"
+      },
+      {
+        "budget": 16,
+        "left": "learned",
+        "right": "greedy",
+        "companies": 48,
+        "difference": 0.003760101010101012,
+        "bootstrap_95": [
+          -8.33333333333311e-05,
+          0.011363636363636367
+        ],
+        "unit": "independent synthetic company; checkpoint variation averaged within company"
+      },
+      {
+        "budget": 16,
+        "left": "learned",
+        "right": "heuristic_search",
+        "companies": 48,
+        "difference": 1.3888888888889672e-05,
+        "bootstrap_95": [
+          0.0,
+          4.166666666666902e-05
+        ],
+        "unit": "independent synthetic company; checkpoint variation averaged within company"
+      },
+      {
+        "budget": 16,
+        "left": "learned",
+        "right": "fixed_source",
+        "companies": 48,
+        "difference": 0.003801767676767679,
+        "bootstrap_95": [
+          0.0,
+          0.011391414141414147
+        ],
+        "unit": "independent synthetic company; checkpoint variation averaged within company"
+      },
+      {
+        "budget": 16,
+        "left": "learned",
+        "right": "untrained",
+        "companies": 48,
+        "difference": 0.003801767676767679,
+        "bootstrap_95": [
+          0.0,
+          0.011391414141414147
+        ],
+        "unit": "independent synthetic company; checkpoint variation averaged within company"
+      },
+      {
+        "budget": 16,
+        "left": "learned",
+        "right": "reconciliation",
+        "companies": 48,
+        "difference": 1.3724722222222223,
+        "bootstrap_95": [
+          1.1145833333333333,
+          1.60775
+        ],
+        "unit": "independent synthetic company; checkpoint variation averaged within company"
+      },
+      {
+        "budget": 100,
+        "left": "learned",
+        "right": "budget_aware",
+        "companies": 48,
+        "difference": 0.0,
+        "bootstrap_95": [
+          0.0,
+          0.0
+        ],
+        "unit": "independent synthetic company; checkpoint variation averaged within company"
+      },
+      {
+        "budget": 100,
+        "left": "learned",
+        "right": "greedy",
+        "companies": 48,
+        "difference": 0.0,
+        "bootstrap_95": [
+          0.0,
+          0.0
+        ],
+        "unit": "independent synthetic company; checkpoint variation averaged within company"
+      },
+      {
+        "budget": 100,
+        "left": "learned",
+        "right": "heuristic_search",
+        "companies": 48,
+        "difference": 0.0,
+        "bootstrap_95": [
+          0.0,
+          0.0
+        ],
+        "unit": "independent synthetic company; checkpoint variation averaged within company"
+      },
+      {
+        "budget": 100,
+        "left": "learned",
+        "right": "fixed_source",
+        "companies": 48,
+        "difference": 0.0,
+        "bootstrap_95": [
+          0.0,
+          0.0
+        ],
+        "unit": "independent synthetic company; checkpoint variation averaged within company"
+      },
+      {
+        "budget": 100,
+        "left": "learned",
+        "right": "untrained",
+        "companies": 48,
+        "difference": 0.0,
+        "bootstrap_95": [
+          0.0,
+          0.0
+        ],
+        "unit": "independent synthetic company; checkpoint variation averaged within company"
+      },
+      {
+        "budget": 100,
+        "left": "learned",
+        "right": "reconciliation",
+        "companies": 48,
+        "difference": 0.0497916666666666,
+        "bootstrap_95": [
+          0.04858333333333326,
+          0.050999999999999934
+        ],
+        "unit": "independent synthetic company; checkpoint variation averaged within company"
+      }
+    ],
+    "independent_companies": 48,
+    "runs": 6912
+  },
+  "transfer": {
+    "summary": {
+      "6": {
+        "learned": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": 0.30720634920634915,
+          "f1": 0.6579365079365079,
+          "steps": 5.854166666666667,
+          "precision": 0.6458333333333334,
+          "recall": 0.31631944444444443,
+          "fp": 0,
+          "fn": 140
+        },
+        "untrained": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": 0.48323214285714283,
+          "f1": 0.7464285714285714,
+          "steps": 5.8125,
+          "precision": 0.75,
+          "recall": 0.3854166666666667,
+          "fp": 0,
+          "fn": 126
+        },
+        "random_weights": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": -0.009916666666666685,
+          "f1": 0.4979166666666667,
+          "steps": 4.8125,
+          "precision": 0.5,
+          "recall": 0.17083333333333334,
+          "fp": 0,
+          "fn": 192
+        },
+        "fixed_source": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": 0.48323214285714283,
+          "f1": 0.7464285714285714,
+          "steps": 5.8125,
+          "precision": 0.75,
+          "recall": 0.3854166666666667,
+          "fp": 0,
+          "fn": 126
+        },
+        "random_valid": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": 0.20659523809523805,
+          "f1": 0.606547619047619,
+          "steps": 5,
+          "precision": 0.5625,
+          "recall": 0.2791666666666667,
+          "fp": 0,
+          "fn": 156
+        },
+        "reconciliation": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": -0.5025,
+          "f1": 0.25,
+          "steps": 6,
+          "precision": 0,
+          "recall": 0.0,
+          "fp": 0,
+          "fn": 240
+        },
+        "budget_aware": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": 0.4959642857142857,
+          "f1": 0.7522321428571428,
+          "steps": 5.5625,
+          "precision": 0.6875,
+          "recall": 0.41875,
+          "fp": 0,
+          "fn": 108
+        },
+        "greedy": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": 0.5616904761904762,
+          "f1": 0.784970238095238,
+          "steps": 5.375,
+          "precision": 0.6875,
+          "recall": 0.465625,
+          "fp": 0,
+          "fn": 96
+        },
+        "heuristic_search": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": 0.36530952380952375,
+          "f1": 0.6869047619047619,
+          "steps": 5.875,
+          "precision": 0.625,
+          "recall": 0.3541666666666667,
+          "fp": 0,
+          "fn": 126
+        },
+        "zero_features": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": 0.48323214285714283,
+          "f1": 0.7464285714285714,
+          "steps": 5.8125,
+          "precision": 0.75,
+          "recall": 0.3854166666666667,
+          "fp": 0,
+          "fn": 126
+        },
+        "no_financial_rules": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": -0.502375,
+          "f1": 0.25,
+          "steps": 5.854166666666667,
+          "precision": 0,
+          "recall": 0.0,
+          "fp": 0,
+          "fn": 240
+        },
+        "no_source_selection": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": 0.48323214285714283,
+          "f1": 0.7464285714285714,
+          "steps": 5.8125,
+          "precision": 0.75,
+          "recall": 0.3854166666666667,
+          "fp": 0,
+          "fn": 126
+        }
+      },
+      "10": {
+        "learned": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": 0.7018895502645502,
+          "f1": 0.8595072751322751,
+          "steps": 9.75,
+          "precision": 0.7291666666666666,
+          "recall": 0.5409722222222222,
+          "fp": 0,
+          "fn": 68
+        },
+        "untrained": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": 0.8707718253968254,
+          "f1": 0.9439484126984127,
+          "steps": 9.5625,
+          "precision": 0.75,
+          "recall": 0.65625,
+          "fp": 0,
+          "fn": 42
+        },
+        "random_weights": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": 0.07041666666666664,
+          "f1": 0.5395833333333333,
+          "steps": 6,
+          "precision": 0.5625,
+          "recall": 0.20208333333333334,
+          "fp": 0,
+          "fn": 186
+        },
+        "fixed_source": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": 0.8707718253968254,
+          "f1": 0.9439484126984127,
+          "steps": 9.5625,
+          "precision": 0.75,
+          "recall": 0.65625,
+          "fp": 0,
+          "fn": 42
+        },
+        "random_valid": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": 0.3798035714285714,
+          "f1": 0.6950892857142857,
+          "steps": 6.9375,
+          "precision": 0.625,
+          "recall": 0.36666666666666664,
+          "fp": 0,
+          "fn": 126
+        },
+        "reconciliation": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": -0.5045,
+          "f1": 0.25,
+          "steps": 10,
+          "precision": 0,
+          "recall": 0.0,
+          "fp": 0,
+          "fn": 240
+        },
+        "budget_aware": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": 0.8292301587301587,
+          "f1": 0.9231150793650793,
+          "steps": 9.5,
+          "precision": 0.75,
+          "recall": 0.625,
+          "fp": 0,
+          "fn": 48
+        },
+        "greedy": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": 0.8198095238095238,
+          "f1": 0.9181547619047619,
+          "steps": 9.25,
+          "precision": 0.75,
+          "recall": 0.621875,
+          "fp": 0,
+          "fn": 42
+        },
+        "heuristic_search": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": 0.786938492063492,
+          "f1": 0.902281746031746,
+          "steps": 9.8125,
+          "precision": 0.75,
+          "recall": 0.59375,
+          "fp": 0,
+          "fn": 54
+        },
+        "zero_features": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": 0.8707718253968254,
+          "f1": 0.9439484126984127,
+          "steps": 9.5625,
+          "precision": 0.75,
+          "recall": 0.65625,
+          "fp": 0,
+          "fn": 42
+        },
+        "no_financial_rules": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": -0.5044166666666666,
+          "f1": 0.25,
+          "steps": 9.75,
+          "precision": 0,
+          "recall": 0.0,
+          "fp": 0,
+          "fn": 240
+        },
+        "no_source_selection": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": 0.8707718253968254,
+          "f1": 0.9439484126984127,
+          "steps": 9.5625,
+          "precision": 0.75,
+          "recall": 0.65625,
+          "fp": 0,
+          "fn": 42
+        }
+      },
+      "16": {
+        "learned": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": 0.97625,
+          "f1": 1.0,
+          "steps": 12.875,
+          "precision": 0.75,
+          "recall": 0.75,
+          "fp": 0,
+          "fn": 0
+        },
+        "untrained": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": 0.97625,
+          "f1": 1.0,
+          "steps": 12.875,
+          "precision": 0.75,
+          "recall": 0.75,
+          "fp": 0,
+          "fn": 0
+        },
+        "random_weights": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": 0.07029166666666664,
+          "f1": 0.5395833333333333,
+          "steps": 6.0625,
+          "precision": 0.5625,
+          "recall": 0.20208333333333334,
+          "fp": 0,
+          "fn": 186
+        },
+        "fixed_source": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": 0.97625,
+          "f1": 1.0,
+          "steps": 12.875,
+          "precision": 0.75,
+          "recall": 0.75,
+          "fp": 0,
+          "fn": 0
+        },
+        "random_valid": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": 0.4848214285714285,
+          "f1": 0.7486607142857142,
+          "steps": 7.5,
+          "precision": 0.6875,
+          "recall": 0.41354166666666664,
+          "fp": 0,
+          "fn": 114
+        },
+        "reconciliation": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": -0.5075000000000001,
+          "f1": 0.25,
+          "steps": 16,
+          "precision": 0,
+          "recall": 0.0,
+          "fp": 0,
+          "fn": 240
+        },
+        "budget_aware": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": 0.97625,
+          "f1": 1.0,
+          "steps": 12.875,
+          "precision": 0.75,
+          "recall": 0.75,
+          "fp": 0,
+          "fn": 0
+        },
+        "greedy": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": 0.97625,
+          "f1": 1.0,
+          "steps": 12.875,
+          "precision": 0.75,
+          "recall": 0.75,
+          "fp": 0,
+          "fn": 0
+        },
+        "heuristic_search": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": 0.97625,
+          "f1": 1.0,
+          "steps": 12.875,
+          "precision": 0.75,
+          "recall": 0.75,
+          "fp": 0,
+          "fn": 0
+        },
+        "zero_features": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": 0.97625,
+          "f1": 1.0,
+          "steps": 12.875,
+          "precision": 0.75,
+          "recall": 0.75,
+          "fp": 0,
+          "fn": 0
+        },
+        "no_financial_rules": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": -0.505875,
+          "f1": 0.25,
+          "steps": 12.875,
+          "precision": 0,
+          "recall": 0.0,
+          "fp": 0,
+          "fn": 240
+        },
+        "no_source_selection": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": 0.97625,
+          "f1": 1.0,
+          "steps": 12.875,
+          "precision": 0.75,
+          "recall": 0.75,
+          "fp": 0,
+          "fn": 0
+        }
+      },
+      "100": {
+        "learned": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": 0.97625,
+          "f1": 1.0,
+          "steps": 12.875,
+          "precision": 0.75,
+          "recall": 0.75,
+          "fp": 0,
+          "fn": 0
+        },
+        "untrained": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": 0.97625,
+          "f1": 1.0,
+          "steps": 12.875,
+          "precision": 0.75,
+          "recall": 0.75,
+          "fp": 0,
+          "fn": 0
+        },
+        "random_weights": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": -0.37725000000000003,
+          "f1": 0.3125,
+          "steps": 3.1875,
+          "precision": 0.125,
+          "recall": 0.04375,
+          "fp": 0,
+          "fn": 228
+        },
+        "fixed_source": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": 0.97625,
+          "f1": 1.0,
+          "steps": 12.875,
+          "precision": 0.75,
+          "recall": 0.75,
+          "fp": 0,
+          "fn": 0
+        },
+        "random_valid": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": 0.4848214285714285,
+          "f1": 0.7486607142857142,
+          "steps": 7.5,
+          "precision": 0.6875,
+          "recall": 0.41354166666666664,
+          "fp": 0,
+          "fn": 114
+        },
+        "reconciliation": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": 0.926,
+          "f1": 1.0,
+          "steps": 38,
+          "precision": 0.75,
+          "recall": 0.75,
+          "fp": 0,
+          "fn": 0
+        },
+        "budget_aware": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": 0.97625,
+          "f1": 1.0,
+          "steps": 12.875,
+          "precision": 0.75,
+          "recall": 0.75,
+          "fp": 0,
+          "fn": 0
+        },
+        "greedy": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": 0.97625,
+          "f1": 1.0,
+          "steps": 12.875,
+          "precision": 0.75,
+          "recall": 0.75,
+          "fp": 0,
+          "fn": 0
+        },
+        "heuristic_search": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": 0.97625,
+          "f1": 1.0,
+          "steps": 12.875,
+          "precision": 0.75,
+          "recall": 0.75,
+          "fp": 0,
+          "fn": 0
+        },
+        "zero_features": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": 0.97625,
+          "f1": 1.0,
+          "steps": 12.875,
+          "precision": 0.75,
+          "recall": 0.75,
+          "fp": 0,
+          "fn": 0
+        },
+        "no_financial_rules": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": -0.505875,
+          "f1": 0.25,
+          "steps": 12.875,
+          "precision": 0,
+          "recall": 0.0,
+          "fp": 0,
+          "fn": 240
+        },
+        "no_source_selection": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": 0.97625,
+          "f1": 1.0,
+          "steps": 12.875,
+          "precision": 0.75,
+          "recall": 0.75,
+          "fp": 0,
+          "fn": 0
+        }
+      }
+    },
+    "paired": [
+      {
+        "budget": 6,
+        "left": "learned",
+        "right": "budget_aware",
+        "companies": 16,
+        "difference": -0.1887579365079365,
+        "bootstrap_95": [
+          -0.35812301587301587,
+          -0.0442718253968254
+        ],
+        "unit": "independent synthetic company; checkpoint variation averaged within company"
+      },
+      {
+        "budget": 6,
+        "left": "learned",
+        "right": "greedy",
+        "companies": 16,
+        "difference": -0.254484126984127,
+        "bootstrap_95": [
+          -0.5148630952380953,
+          0.039922619047619026
+        ],
+        "unit": "independent synthetic company; checkpoint variation averaged within company"
+      },
+      {
+        "budget": 6,
+        "left": "learned",
+        "right": "heuristic_search",
+        "companies": 16,
+        "difference": -0.058103174603174615,
+        "bootstrap_95": [
+          -0.15829166666666666,
+          0.04258730158730157
+        ],
+        "unit": "independent synthetic company; checkpoint variation averaged within company"
+      },
+      {
+        "budget": 6,
+        "left": "learned",
+        "right": "fixed_source",
+        "companies": 16,
+        "difference": -0.17602579365079365,
+        "bootstrap_95": [
+          -0.38977182539682537,
+          -0.0022559523809523897
+        ],
+        "unit": "independent synthetic company; checkpoint variation averaged within company"
+      },
+      {
+        "budget": 6,
+        "left": "learned",
+        "right": "untrained",
+        "companies": 16,
+        "difference": -0.17602579365079365,
+        "bootstrap_95": [
+          -0.38977182539682537,
+          -0.0022559523809523897
+        ],
+        "unit": "independent synthetic company; checkpoint variation averaged within company"
+      },
+      {
+        "budget": 6,
+        "left": "learned",
+        "right": "reconciliation",
+        "companies": 16,
+        "difference": 0.8097063492063492,
+        "bootstrap_95": [
+          0.5014940476190476,
+          1.108938492063492
+        ],
+        "unit": "independent synthetic company; checkpoint variation averaged within company"
+      },
+      {
+        "budget": 10,
+        "left": "learned",
+        "right": "budget_aware",
+        "companies": 16,
+        "difference": -0.12734060846560846,
+        "bootstrap_95": [
+          -0.23828769841269842,
+          -0.03377314814814815
+        ],
+        "unit": "independent synthetic company; checkpoint variation averaged within company"
+      },
+      {
+        "budget": 10,
+        "left": "learned",
+        "right": "greedy",
+        "companies": 16,
+        "difference": -0.11791997354497356,
+        "bootstrap_95": [
+          -0.2678412698412699,
+          0.03283333333333334
+        ],
+        "unit": "independent synthetic company; checkpoint variation averaged within company"
+      },
+      {
+        "budget": 10,
+        "left": "learned",
+        "right": "heuristic_search",
+        "companies": 16,
+        "difference": -0.08504894179894179,
+        "bootstrap_95": [
+          -0.19050198412698413,
+          0.010335978835978837
+        ],
+        "unit": "independent synthetic company; checkpoint variation averaged within company"
+      },
+      {
+        "budget": 10,
+        "left": "learned",
+        "right": "fixed_source",
+        "companies": 16,
+        "difference": -0.16888227513227513,
+        "bootstrap_95": [
+          -0.33889219576719576,
+          -0.03656944444444445
+        ],
+        "unit": "independent synthetic company; checkpoint variation averaged within company"
+      },
+      {
+        "budget": 10,
+        "left": "learned",
+        "right": "untrained",
+        "companies": 16,
+        "difference": -0.16888227513227513,
+        "bootstrap_95": [
+          -0.33889219576719576,
+          -0.03656944444444445
+        ],
+        "unit": "independent synthetic company; checkpoint variation averaged within company"
+      },
+      {
+        "budget": 10,
+        "left": "learned",
+        "right": "reconciliation",
+        "companies": 16,
+        "difference": 1.2063895502645503,
+        "bootstrap_95": [
+          0.8083333333333333,
+          1.5515019841269841
+        ],
+        "unit": "independent synthetic company; checkpoint variation averaged within company"
+      },
+      {
+        "budget": 16,
+        "left": "learned",
+        "right": "budget_aware",
+        "companies": 16,
+        "difference": 0.0,
+        "bootstrap_95": [
+          0.0,
+          0.0
+        ],
+        "unit": "independent synthetic company; checkpoint variation averaged within company"
+      },
+      {
+        "budget": 16,
+        "left": "learned",
+        "right": "greedy",
+        "companies": 16,
+        "difference": 0.0,
+        "bootstrap_95": [
+          0.0,
+          0.0
+        ],
+        "unit": "independent synthetic company; checkpoint variation averaged within company"
+      },
+      {
+        "budget": 16,
+        "left": "learned",
+        "right": "heuristic_search",
+        "companies": 16,
+        "difference": 0.0,
+        "bootstrap_95": [
+          0.0,
+          0.0
+        ],
+        "unit": "independent synthetic company; checkpoint variation averaged within company"
+      },
+      {
+        "budget": 16,
+        "left": "learned",
+        "right": "fixed_source",
+        "companies": 16,
+        "difference": 0.0,
+        "bootstrap_95": [
+          0.0,
+          0.0
+        ],
+        "unit": "independent synthetic company; checkpoint variation averaged within company"
+      },
+      {
+        "budget": 16,
+        "left": "learned",
+        "right": "untrained",
+        "companies": 16,
+        "difference": 0.0,
+        "bootstrap_95": [
+          0.0,
+          0.0
+        ],
+        "unit": "independent synthetic company; checkpoint variation averaged within company"
+      },
+      {
+        "budget": 16,
+        "left": "learned",
+        "right": "reconciliation",
+        "companies": 16,
+        "difference": 1.48375,
+        "bootstrap_95": [
+          0.99225,
+          1.8535
+        ],
+        "unit": "independent synthetic company; checkpoint variation averaged within company"
+      },
+      {
+        "budget": 100,
+        "left": "learned",
+        "right": "budget_aware",
+        "companies": 16,
+        "difference": 0.0,
+        "bootstrap_95": [
+          0.0,
+          0.0
+        ],
+        "unit": "independent synthetic company; checkpoint variation averaged within company"
+      },
+      {
+        "budget": 100,
+        "left": "learned",
+        "right": "greedy",
+        "companies": 16,
+        "difference": 0.0,
+        "bootstrap_95": [
+          0.0,
+          0.0
+        ],
+        "unit": "independent synthetic company; checkpoint variation averaged within company"
+      },
+      {
+        "budget": 100,
+        "left": "learned",
+        "right": "heuristic_search",
+        "companies": 16,
+        "difference": 0.0,
+        "bootstrap_95": [
+          0.0,
+          0.0
+        ],
+        "unit": "independent synthetic company; checkpoint variation averaged within company"
+      },
+      {
+        "budget": 100,
+        "left": "learned",
+        "right": "fixed_source",
+        "companies": 16,
+        "difference": 0.0,
+        "bootstrap_95": [
+          0.0,
+          0.0
+        ],
+        "unit": "independent synthetic company; checkpoint variation averaged within company"
+      },
+      {
+        "budget": 100,
+        "left": "learned",
+        "right": "untrained",
+        "companies": 16,
+        "difference": 0.0,
+        "bootstrap_95": [
+          0.0,
+          0.0
+        ],
+        "unit": "independent synthetic company; checkpoint variation averaged within company"
+      },
+      {
+        "budget": 100,
+        "left": "learned",
+        "right": "reconciliation",
+        "companies": 16,
+        "difference": 0.050249999999999934,
+        "bootstrap_95": [
+          0.04862499999999993,
+          0.051874999999999935
+        ],
+        "unit": "independent synthetic company; checkpoint variation averaged within company"
+      }
+    ],
+    "independent_companies": 16,
+    "runs": 2304
+  }
+}

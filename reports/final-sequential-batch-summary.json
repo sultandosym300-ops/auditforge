@@ -1,0 +1,964 @@
+{
+  "specification": {
+    "protocol": "sequential-batch-transfer-v1",
+    "created_utc": "2026-11-23",
+    "root": 912708453169,
+    "companies": 16,
+    "family": "batch_transfer",
+    "budgets": [
+      6,
+      10,
+      16,
+      100
+    ],
+    "bootstrap_replicates": 2000,
+    "models": "V2 validation-selected checkpoints; no training or selection on this panel",
+    "scope": "Counterfactual consolidation of positive same-date/currency payments into multi-obligation settlements. Shared financial generator; not an independent bank distribution."
+  },
+  "financial": [
+    {
+      "company": 0,
+      "valid": true,
+      "truth_count": 0,
+      "multi_obligation_payments": 58,
+      "refund_documents": 30
+    },
+    {
+      "company": 1,
+      "valid": true,
+      "truth_count": 11,
+      "multi_obligation_payments": 54,
+      "refund_documents": 30
+    },
+    {
+      "company": 2,
+      "valid": true,
+      "truth_count": 0,
+      "multi_obligation_payments": 63,
+      "refund_documents": 30
+    },
+    {
+      "company": 3,
+      "valid": true,
+      "truth_count": 1,
+      "multi_obligation_payments": 57,
+      "refund_documents": 30
+    },
+    {
+      "company": 4,
+      "valid": true,
+      "truth_count": 6,
+      "multi_obligation_payments": 63,
+      "refund_documents": 30
+    },
+    {
+      "company": 5,
+      "valid": true,
+      "truth_count": 0,
+      "multi_obligation_payments": 53,
+      "refund_documents": 30
+    },
+    {
+      "company": 6,
+      "valid": true,
+      "truth_count": 17,
+      "multi_obligation_payments": 58,
+      "refund_documents": 30
+    },
+    {
+      "company": 7,
+      "valid": true,
+      "truth_count": 7,
+      "multi_obligation_payments": 54,
+      "refund_documents": 30
+    },
+    {
+      "company": 8,
+      "valid": true,
+      "truth_count": 0,
+      "multi_obligation_payments": 56,
+      "refund_documents": 30
+    },
+    {
+      "company": 9,
+      "valid": true,
+      "truth_count": 6,
+      "multi_obligation_payments": 52,
+      "refund_documents": 30
+    },
+    {
+      "company": 10,
+      "valid": true,
+      "truth_count": 0,
+      "multi_obligation_payments": 63,
+      "refund_documents": 30
+    },
+    {
+      "company": 11,
+      "valid": true,
+      "truth_count": 6,
+      "multi_obligation_payments": 52,
+      "refund_documents": 30
+    },
+    {
+      "company": 12,
+      "valid": true,
+      "truth_count": 0,
+      "multi_obligation_payments": 64,
+      "refund_documents": 30
+    },
+    {
+      "company": 13,
+      "valid": true,
+      "truth_count": 0,
+      "multi_obligation_payments": 47,
+      "refund_documents": 30
+    },
+    {
+      "company": 14,
+      "valid": true,
+      "truth_count": 14,
+      "multi_obligation_payments": 57,
+      "refund_documents": 30
+    },
+    {
+      "company": 15,
+      "valid": true,
+      "truth_count": 0,
+      "multi_obligation_payments": 56,
+      "refund_documents": 30
+    }
+  ],
+  "results": {
+    "summary": {
+      "6": {
+        "learned": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": 0.41098445608971923,
+          "f1": 0.7101172280448597,
+          "steps": 5.9375,
+          "precision": 0.4375,
+          "recall": 0.15410406586877173,
+          "fp": 0,
+          "fn": 155
+        },
+        "untrained": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": 0.41645670995670997,
+          "f1": 0.7127908549783549,
+          "steps": 5.875,
+          "precision": 0.4375,
+          "recall": 0.14728163992869875,
+          "fp": 0,
+          "fn": 135
+        },
+        "random_weights": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": 0.4159940476190476,
+          "f1": 0.7113095238095238,
+          "steps": 4.3125,
+          "precision": 0.5,
+          "recall": 0.15377514642220524,
+          "fp": 0,
+          "fn": 159
+        },
+        "fixed_source": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": 0.41645670995670997,
+          "f1": 0.7127908549783549,
+          "steps": 5.875,
+          "precision": 0.4375,
+          "recall": 0.14728163992869875,
+          "fp": 0,
+          "fn": 135
+        },
+        "random_valid": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": 0.351532059314954,
+          "f1": 0.679328529657477,
+          "steps": 5.125,
+          "precision": 0.375,
+          "recall": 0.136005538579068,
+          "fp": 0,
+          "fn": 150
+        },
+        "reconciliation": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": -0.0050000000000000044,
+          "f1": 0.5,
+          "steps": 6,
+          "precision": 0,
+          "recall": 0.0,
+          "fp": 0,
+          "fn": 204
+        },
+        "budget_aware": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": 0.5556004273504274,
+          "f1": 0.7824252136752137,
+          "steps": 5.625,
+          "precision": 0.5,
+          "recall": 0.22696237585943468,
+          "fp": 0,
+          "fn": 132
+        },
+        "greedy": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": 0.4925043265912831,
+          "f1": 0.7502521632956416,
+          "steps": 5.25,
+          "precision": 0.4375,
+          "recall": 0.2045534122740005,
+          "fp": 0,
+          "fn": 138
+        },
+        "heuristic_search": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": 0.5078353174603174,
+          "f1": 0.7587301587301587,
+          "steps": 5.8125,
+          "precision": 0.5,
+          "recall": 0.1909775273745862,
+          "fp": 0,
+          "fn": 141
+        },
+        "zero_features": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": 0.41645670995670997,
+          "f1": 0.7127908549783549,
+          "steps": 5.875,
+          "precision": 0.4375,
+          "recall": 0.14728163992869875,
+          "fp": 0,
+          "fn": 135
+        },
+        "no_financial_rules": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": -0.004875000000000004,
+          "f1": 0.5,
+          "steps": 5.9375,
+          "precision": 0,
+          "recall": 0.0,
+          "fp": 0,
+          "fn": 204
+        },
+        "no_source_selection": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": 0.41645670995670997,
+          "f1": 0.7127908549783549,
+          "steps": 5.875,
+          "precision": 0.4375,
+          "recall": 0.14728163992869875,
+          "fp": 0,
+          "fn": 135
+        }
+      },
+      "10": {
+        "learned": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": 0.6231722618435724,
+          "f1": 0.8201277975884529,
+          "steps": 9.916666666666666,
+          "precision": 0.4583333333333333,
+          "recall": 0.2585333375774552,
+          "fp": 0,
+          "fn": 96
+        },
+        "untrained": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": 0.794502377008956,
+          "f1": 0.905938688504478,
+          "steps": 9.6875,
+          "precision": 0.5,
+          "recall": 0.34639992360580596,
+          "fp": 0,
+          "fn": 75
+        },
+        "random_weights": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": 0.41699634502923977,
+          "f1": 0.7128106725146198,
+          "steps": 5.3125,
+          "precision": 0.5,
+          "recall": 0.15535077667430608,
+          "fp": 0,
+          "fn": 159
+        },
+        "fixed_source": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": 0.794502377008956,
+          "f1": 0.905938688504478,
+          "steps": 9.6875,
+          "precision": 0.5,
+          "recall": 0.34639992360580596,
+          "fp": 0,
+          "fn": 75
+        },
+        "random_valid": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": 0.6087551353874884,
+          "f1": 0.8110025676937441,
+          "steps": 7.625,
+          "precision": 0.5,
+          "recall": 0.24356219760631526,
+          "fp": 0,
+          "fn": 117
+        },
+        "reconciliation": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": -0.009000000000000008,
+          "f1": 0.5,
+          "steps": 10,
+          "precision": 0,
+          "recall": 0.0,
+          "fp": 0,
+          "fn": 204
+        },
+        "budget_aware": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": 0.782982790114369,
+          "f1": 0.8999913950571845,
+          "steps": 9.5,
+          "precision": 0.5,
+          "recall": 0.348588298955946,
+          "fp": 0,
+          "fn": 72
+        },
+        "greedy": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": 0.8074710491414212,
+          "f1": 0.9120480245707105,
+          "steps": 9.3125,
+          "precision": 0.5,
+          "recall": 0.364869811560988,
+          "fp": 0,
+          "fn": 60
+        },
+        "heuristic_search": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": 0.7410661234477024,
+          "f1": 0.8791580617238512,
+          "steps": 9.625,
+          "precision": 0.5,
+          "recall": 0.317338298955946,
+          "fp": 0,
+          "fn": 81
+        },
+        "zero_features": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": 0.794502377008956,
+          "f1": 0.905938688504478,
+          "steps": 9.6875,
+          "precision": 0.5,
+          "recall": 0.34639992360580596,
+          "fp": 0,
+          "fn": 75
+        },
+        "no_financial_rules": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": -0.00895833333333334,
+          "f1": 0.5,
+          "steps": 9.916666666666666,
+          "precision": 0,
+          "recall": 0.0,
+          "fp": 0,
+          "fn": 204
+        },
+        "no_source_selection": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": 0.794502377008956,
+          "f1": 0.905938688504478,
+          "steps": 9.6875,
+          "precision": 0.5,
+          "recall": 0.34639992360580596,
+          "fp": 0,
+          "fn": 75
+        }
+      },
+      "16": {
+        "learned": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": 0.9744583333333333,
+          "f1": 1.0,
+          "steps": 13.770833333333334,
+          "precision": 0.5,
+          "recall": 0.5,
+          "fp": 0,
+          "fn": 0
+        },
+        "untrained": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": 0.974625,
+          "f1": 1.0,
+          "steps": 13.6875,
+          "precision": 0.5,
+          "recall": 0.5,
+          "fp": 0,
+          "fn": 0
+        },
+        "random_weights": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": 0.41624634502923974,
+          "f1": 0.7128106725146198,
+          "steps": 5.6875,
+          "precision": 0.5,
+          "recall": 0.15535077667430608,
+          "fp": 0,
+          "fn": 159
+        },
+        "fixed_source": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": 0.974625,
+          "f1": 1.0,
+          "steps": 13.6875,
+          "precision": 0.5,
+          "recall": 0.5,
+          "fp": 0,
+          "fn": 0
+        },
+        "random_valid": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": 0.6291646825396825,
+          "f1": 0.8225198412698412,
+          "steps": 8.9375,
+          "precision": 0.5,
+          "recall": 0.26270849248790423,
+          "fp": 0,
+          "fn": 102
+        },
+        "reconciliation": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": -0.015000000000000013,
+          "f1": 0.5,
+          "steps": 16,
+          "precision": 0,
+          "recall": 0.0,
+          "fp": 0,
+          "fn": 204
+        },
+        "budget_aware": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": 0.974625,
+          "f1": 1.0,
+          "steps": 13.6875,
+          "precision": 0.5,
+          "recall": 0.5,
+          "fp": 0,
+          "fn": 0
+        },
+        "greedy": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": 0.974625,
+          "f1": 1.0,
+          "steps": 13.6875,
+          "precision": 0.5,
+          "recall": 0.5,
+          "fp": 0,
+          "fn": 0
+        },
+        "heuristic_search": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": 0.974625,
+          "f1": 1.0,
+          "steps": 13.6875,
+          "precision": 0.5,
+          "recall": 0.5,
+          "fp": 0,
+          "fn": 0
+        },
+        "zero_features": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": 0.974625,
+          "f1": 1.0,
+          "steps": 13.6875,
+          "precision": 0.5,
+          "recall": 0.5,
+          "fp": 0,
+          "fn": 0
+        },
+        "no_financial_rules": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": -0.012500000000000011,
+          "f1": 0.5,
+          "steps": 13.770833333333334,
+          "precision": 0,
+          "recall": 0.0,
+          "fp": 0,
+          "fn": 204
+        },
+        "no_source_selection": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": 0.974625,
+          "f1": 1.0,
+          "steps": 13.6875,
+          "precision": 0.5,
+          "recall": 0.5,
+          "fp": 0,
+          "fn": 0
+        }
+      },
+      "100": {
+        "learned": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": 0.97425,
+          "f1": 1.0,
+          "steps": 13.875,
+          "precision": 0.5,
+          "recall": 0.5,
+          "fp": 0,
+          "fn": 0
+        },
+        "untrained": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": 0.97425,
+          "f1": 1.0,
+          "steps": 13.875,
+          "precision": 0.5,
+          "recall": 0.5,
+          "fp": 0,
+          "fn": 0
+        },
+        "random_weights": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": 0.32563721804511275,
+          "f1": 0.6649436090225563,
+          "steps": 3.1875,
+          "precision": 0.375,
+          "recall": 0.1255888719124013,
+          "fp": 0,
+          "fn": 171
+        },
+        "fixed_source": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": 0.97425,
+          "f1": 1.0,
+          "steps": 13.875,
+          "precision": 0.5,
+          "recall": 0.5,
+          "fp": 0,
+          "fn": 0
+        },
+        "random_valid": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": 0.6291646825396825,
+          "f1": 0.8225198412698412,
+          "steps": 8.9375,
+          "precision": 0.5,
+          "recall": 0.26270849248790423,
+          "fp": 0,
+          "fn": 102
+        },
+        "reconciliation": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": 0.9286249999999999,
+          "f1": 1.0,
+          "steps": 36.6875,
+          "precision": 0.5,
+          "recall": 0.5,
+          "fp": 0,
+          "fn": 0
+        },
+        "budget_aware": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": 0.97425,
+          "f1": 1.0,
+          "steps": 13.875,
+          "precision": 0.5,
+          "recall": 0.5,
+          "fp": 0,
+          "fn": 0
+        },
+        "greedy": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": 0.97425,
+          "f1": 1.0,
+          "steps": 13.875,
+          "precision": 0.5,
+          "recall": 0.5,
+          "fp": 0,
+          "fn": 0
+        },
+        "heuristic_search": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": 0.97425,
+          "f1": 1.0,
+          "steps": 13.875,
+          "precision": 0.5,
+          "recall": 0.5,
+          "fp": 0,
+          "fn": 0
+        },
+        "zero_features": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": 0.97425,
+          "f1": 1.0,
+          "steps": 13.875,
+          "precision": 0.5,
+          "recall": 0.5,
+          "fp": 0,
+          "fn": 0
+        },
+        "no_financial_rules": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": -0.012500000000000011,
+          "f1": 0.5,
+          "steps": 13.875,
+          "precision": 0,
+          "recall": 0.0,
+          "fp": 0,
+          "fn": 204
+        },
+        "no_source_selection": {
+          "runs": 48,
+          "independent_companies": 16,
+          "reward": 0.97425,
+          "f1": 1.0,
+          "steps": 13.875,
+          "precision": 0.5,
+          "recall": 0.5,
+          "fp": 0,
+          "fn": 0
+        }
+      }
+    },
+    "paired": [
+      {
+        "budget": 6,
+        "left": "learned",
+        "right": "budget_aware",
+        "companies": 16,
+        "difference": -0.1446159712607081,
+        "bootstrap_95": [
+          -0.3429778454975823,
+          0.017756401736664894
+        ],
+        "unit": "independent synthetic company; checkpoint variation averaged within company"
+      },
+      {
+        "budget": 6,
+        "left": "learned",
+        "right": "greedy",
+        "companies": 16,
+        "difference": -0.08151987050156387,
+        "bootstrap_95": [
+          -0.3175087288654222,
+          0.14719624985786312
+        ],
+        "unit": "independent synthetic company; checkpoint variation averaged within company"
+      },
+      {
+        "budget": 6,
+        "left": "learned",
+        "right": "heuristic_search",
+        "companies": 16,
+        "difference": -0.0968508613705982,
+        "bootstrap_95": [
+          -0.21961694324194322,
+          0.01783630477709426
+        ],
+        "unit": "independent synthetic company; checkpoint variation averaged within company"
+      },
+      {
+        "budget": 6,
+        "left": "learned",
+        "right": "fixed_source",
+        "companies": 16,
+        "difference": -0.005472253866990708,
+        "bootstrap_95": [
+          -0.1978036030733399,
+          0.21929166666666666
+        ],
+        "unit": "independent synthetic company; checkpoint variation averaged within company"
+      },
+      {
+        "budget": 6,
+        "left": "learned",
+        "right": "untrained",
+        "companies": 16,
+        "difference": -0.005472253866990708,
+        "bootstrap_95": [
+          -0.1978036030733399,
+          0.21929166666666666
+        ],
+        "unit": "independent synthetic company; checkpoint variation averaged within company"
+      },
+      {
+        "budget": 6,
+        "left": "learned",
+        "right": "reconciliation",
+        "companies": 16,
+        "difference": 0.41598445608971923,
+        "bootstrap_95": [
+          0.20635557644110275,
+          0.6355679982785246
+        ],
+        "unit": "independent synthetic company; checkpoint variation averaged within company"
+      },
+      {
+        "budget": 10,
+        "left": "learned",
+        "right": "budget_aware",
+        "companies": 16,
+        "difference": -0.15981052827079656,
+        "bootstrap_95": [
+          -0.36052899723733056,
+          -0.00516666666666666
+        ],
+        "unit": "independent synthetic company; checkpoint variation averaged within company"
+      },
+      {
+        "budget": 10,
+        "left": "learned",
+        "right": "greedy",
+        "companies": 16,
+        "difference": -0.1842987872978487,
+        "bootstrap_95": [
+          -0.38275757575757574,
+          -0.023629498253559658
+        ],
+        "unit": "independent synthetic company; checkpoint variation averaged within company"
+      },
+      {
+        "budget": 10,
+        "left": "learned",
+        "right": "heuristic_search",
+        "companies": 16,
+        "difference": -0.1178938616041299,
+        "bootstrap_95": [
+          -0.32008986859373856,
+          0.036299382716049405
+        ],
+        "unit": "independent synthetic company; checkpoint variation averaged within company"
+      },
+      {
+        "budget": 10,
+        "left": "learned",
+        "right": "fixed_source",
+        "companies": 16,
+        "difference": -0.1713301151653835,
+        "bootstrap_95": [
+          -0.35304849330236326,
+          -0.04608333333333335
+        ],
+        "unit": "independent synthetic company; checkpoint variation averaged within company"
+      },
+      {
+        "budget": 10,
+        "left": "learned",
+        "right": "untrained",
+        "companies": 16,
+        "difference": -0.1713301151653835,
+        "bootstrap_95": [
+          -0.35304849330236326,
+          -0.04608333333333335
+        ],
+        "unit": "independent synthetic company; checkpoint variation averaged within company"
+      },
+      {
+        "budget": 10,
+        "left": "learned",
+        "right": "reconciliation",
+        "companies": 16,
+        "difference": 0.6321722618435724,
+        "bootstrap_95": [
+          0.2967253086419753,
+          0.9635376134682121
+        ],
+        "unit": "independent synthetic company; checkpoint variation averaged within company"
+      },
+      {
+        "budget": 16,
+        "left": "learned",
+        "right": "budget_aware",
+        "companies": 16,
+        "difference": -0.00016666666666666913,
+        "bootstrap_95": [
+          -0.0005000000000000074,
+          0.0
+        ],
+        "unit": "independent synthetic company; checkpoint variation averaged within company"
+      },
+      {
+        "budget": 16,
+        "left": "learned",
+        "right": "greedy",
+        "companies": 16,
+        "difference": -0.00016666666666666913,
+        "bootstrap_95": [
+          -0.0005000000000000074,
+          0.0
+        ],
+        "unit": "independent synthetic company; checkpoint variation averaged within company"
+      },
+      {
+        "budget": 16,
+        "left": "learned",
+        "right": "heuristic_search",
+        "companies": 16,
+        "difference": -0.00016666666666666913,
+        "bootstrap_95": [
+          -0.0005000000000000074,
+          0.0
+        ],
+        "unit": "independent synthetic company; checkpoint variation averaged within company"
+      },
+      {
+        "budget": 16,
+        "left": "learned",
+        "right": "fixed_source",
+        "companies": 16,
+        "difference": -0.00016666666666666913,
+        "bootstrap_95": [
+          -0.0005000000000000074,
+          0.0
+        ],
+        "unit": "independent synthetic company; checkpoint variation averaged within company"
+      },
+      {
+        "budget": 16,
+        "left": "learned",
+        "right": "untrained",
+        "companies": 16,
+        "difference": -0.00016666666666666913,
+        "bootstrap_95": [
+          -0.0005000000000000074,
+          0.0
+        ],
+        "unit": "independent synthetic company; checkpoint variation averaged within company"
+      },
+      {
+        "budget": 16,
+        "left": "learned",
+        "right": "reconciliation",
+        "companies": 16,
+        "difference": 0.9894583333333333,
+        "bootstrap_95": [
+          0.49695833333333334,
+          1.4819583333333333
+        ],
+        "unit": "independent synthetic company; checkpoint variation averaged within company"
+      },
+      {
+        "budget": 100,
+        "left": "learned",
+        "right": "budget_aware",
+        "companies": 16,
+        "difference": 0.0,
+        "bootstrap_95": [
+          0.0,
+          0.0
+        ],
+        "unit": "independent synthetic company; checkpoint variation averaged within company"
+      },
+      {
+        "budget": 100,
+        "left": "learned",
+        "right": "greedy",
+        "companies": 16,
+        "difference": 0.0,
+        "bootstrap_95": [
+          0.0,
+          0.0
+        ],
+        "unit": "independent synthetic company; checkpoint variation averaged within company"
+      },
+      {
+        "budget": 100,
+        "left": "learned",
+        "right": "heuristic_search",
+        "companies": 16,
+        "difference": 0.0,
+        "bootstrap_95": [
+          0.0,
+          0.0
+        ],
+        "unit": "independent synthetic company; checkpoint variation averaged within company"
+      },
+      {
+        "budget": 100,
+        "left": "learned",
+        "right": "fixed_source",
+        "companies": 16,
+        "difference": 0.0,
+        "bootstrap_95": [
+          0.0,
+          0.0
+        ],
+        "unit": "independent synthetic company; checkpoint variation averaged within company"
+      },
+      {
+        "budget": 100,
+        "left": "learned",
+        "right": "untrained",
+        "companies": 16,
+        "difference": 0.0,
+        "bootstrap_95": [
+          0.0,
+          0.0
+        ],
+        "unit": "independent synthetic company; checkpoint variation averaged within company"
+      },
+      {
+        "budget": 100,
+        "left": "learned",
+        "right": "reconciliation",
+        "companies": 16,
+        "difference": 0.04562500000000004,
+        "bootstrap_95": [
+          0.04375000000000004,
+          0.04750000000000004
+        ],
+        "unit": "independent synthetic company; checkpoint variation averaged within company"
+      }
+    ],
+    "independent_companies": 16,
+    "runs": 2304
+  }
+}

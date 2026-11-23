@@ -1,0 +1,58 @@
+{
+  "chosen": 0,
+  "candidates": [
+    {
+      "candidate": 0,
+      "settings": {
+        "algorithm": "reinforce",
+        "learning_rate": 0.03
+      },
+      "validation_reward": 0.9090661838161838,
+      "per_seed": [
+        0.9182232905982906,
+        0.9185982905982906,
+        0.8903769702519703
+      ]
+    },
+    {
+      "candidate": 1,
+      "settings": {
+        "algorithm": "reinforce",
+        "learning_rate": 0.1
+      },
+      "validation_reward": 0.8775761099151279,
+      "per_seed": [
+        0.7981944444444444,
+        0.8898899572649572,
+        0.944643928035982
+      ]
+    },
+    {
+      "candidate": 2,
+      "settings": {
+        "algorithm": "actor_critic",
+        "learning_rate": 0.03
+      },
+      "validation_reward": 0.8575609859489169,
+      "per_seed": [
+        0.8180115856365856,
+        0.8883382331270262,
+        0.866333139083139
+      ]
+    },
+    {
+      "candidate": 3,
+      "settings": {
+        "algorithm": "actor_critic",
+        "learning_rate": 0.1
+      },
+      "validation_reward": 0.7964641846021157,
+      "per_seed": [
+        0.746362012987013,
+        0.7643382331270262,
+        0.8786923076923077
+      ]
+    }
+  ],
+  "criterion": "mean validation reward across all three training seeds; no test-based selection"
+}

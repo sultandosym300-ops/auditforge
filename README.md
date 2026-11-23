@@ -4,6 +4,43 @@
 
 [Открыть сайт](https://auditforge-gilt.vercel.app) · [Соответствие кейсу](HACKATHON_COMPLIANCE.md) · [Итоговый аудит](FINAL_AUDIT_REPORT.md) · [Сценарий показа](JURY_LIVE_DEMO_SCRIPT.md)
 
+## Исследовательское продолжение 2.1.0
+
+Создано 23 ноября 2026, отдельно от исходной сдачи Genesis. Старый релиз
+`genesis-2026-fintech-final` и его архив сохраняются. Стандартный генератор
+остаётся версии 2.0.1; добавлен необязательный `investigation_v1`.
+
+Новый режим Training Lab обучает порядок запросов и остановку при бюджете
+6/10/16/100 действий, показывает реальные train/validation, отдельные тесты,
+сильные baseline и документы каждого решения. REINFORCE/self-critical и
+Actor-Critic используют общий финансовый decoder; арифметика не обучается.
+
+**Превосходство RL не подтверждено.** В двух заранее разделённых исследованиях
+сохранено 18 432 оценочных запуска на двух панелях по 48 test + 16 transfer
+компаний. Повторы трёх checkpoint не считаются независимыми компаниями.
+В V2 при бюджете 10 выбранный по validation Actor-Critic получил reward
+0.693436 против 0.874305 у поиска гипотез. Отрицательные результаты сохранены.
+
+[Новый аудит](AUDITFORGE_FINAL_INDEPENDENT_AUDIT.md) ·
+[Исследование RL](AUDITFORGE_RL_BENCHMARK.md) ·
+[Атакующие проверки](AUDITFORGE_ADVERSARIAL_REPORT.md) ·
+[Матрица кейса](AUDITFORGE_GENESIS_COMPLIANCE.md) ·
+[Демонстрация](AUDITFORGE_JURY_DEMO.md) ·
+[Ограничения](AUDITFORGE_LIMITATIONS.md)
+
+```sh
+python -m scripts.sequential_demo --output work/sequential-demo.json
+python -m scripts.sequential_acceptance
+python -m scripts.sequential_adversarial --output work/sequential-adversarial.json
+```
+
+Зафиксированные результаты и checkpoint находятся в `reports/final-sequential-*`.
+Независимый reference evaluator и новые регрессии увеличивают полный набор
+до 213 тестов; проверяются 23 намеренных дефекта. `ultimate_verify` включает
+mutation testing: отдельный повтор мутаций после него не нужен.
+Новый закрытый агент: `Dockerfile.sequential-policy`, образ
+`auditforge-sequential-policy:1.0`; после сборки — `python -m scripts.sequential_container`.
+
 ## Для жюри
 
 - Python 3.11; ядро не требует сторонних Python-пакетов, GPU или платных API.
@@ -144,7 +181,7 @@ node scripts/check_release_evidence.mjs
 
 CI выполняет регрессионные, бухгалтерские, matcher/reward, контрактные и защитные проверки, сборку сайта, проверку комплекта, распаковку ZIP, чистую сборку Docker и полный прогон без сети с ограничениями 2 CPU/4 GiB. Ошибка любого обязательного этапа даёт ненулевой код. Распаковка использует принадлежащий runner каталог `$RUNNER_TEMP`, устраняющий прежнюю проблему прав.
 
-Полный набор может идти дольше минуты: ограничение 60 секунд относится к отдельному эпизоду. `tracemalloc` измеряет выделения Python, а не RSS; реальные ограничения и пиковая память контейнера записываются через cgroup. Исторические исследования сохранены в `docs/history`; новые исследования для этого релиза не проводятся. Отдельный linter/TypeScript checker не настроен и не заявляется выполненным.
+Полный набор может идти дольше минуты: ограничение 60 секунд относится к отдельному эпизоду. `tracemalloc` измеряет выделения Python, а не RSS; реальные ограничения и пиковая память контейнера записываются через cgroup. Исторические исследования сохранены в `docs/history`; новые исследования отдельного продолжения находятся в `reports/final-sequential-*`. Отдельный linter/TypeScript checker не настроен и не заявляется выполненным.
 
 ## Подтверждённые результаты и ограничения
 

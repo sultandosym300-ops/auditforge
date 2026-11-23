@@ -1,0 +1,32 @@
+{
+  "chosen": 1,
+  "candidates": [
+    {
+      "candidate": 0,
+      "settings": {
+        "algorithm": "reinforce",
+        "learning_rate": 0.1
+      },
+      "validation_reward": 0.8096111111111111,
+      "per_seed": [
+        0.8150416666666667,
+        0.786125,
+        0.8276666666666667
+      ]
+    },
+    {
+      "candidate": 1,
+      "settings": {
+        "algorithm": "actor_critic",
+        "learning_rate": 0.03
+      },
+      "validation_reward": 0.8856580687830687,
+      "per_seed": [
+        0.9154861111111111,
+        0.9342857142857143,
+        0.807202380952381
+      ]
+    }
+  ],
+  "criterion": "mean validation reward across all three training seeds; no test-based selection"
+}

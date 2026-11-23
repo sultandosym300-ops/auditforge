@@ -1,0 +1,138 @@
+{
+  "passed": true,
+  "companies": [
+    {
+      "company": 0,
+      "valid": true,
+      "independent_rational_valid": true,
+      "truth_count": 0,
+      "multi_obligation_payments": 58,
+      "refund_documents": 30
+    },
+    {
+      "company": 1,
+      "valid": true,
+      "independent_rational_valid": true,
+      "truth_count": 11,
+      "multi_obligation_payments": 54,
+      "refund_documents": 30
+    },
+    {
+      "company": 2,
+      "valid": true,
+      "independent_rational_valid": true,
+      "truth_count": 0,
+      "multi_obligation_payments": 63,
+      "refund_documents": 30
+    },
+    {
+      "company": 3,
+      "valid": true,
+      "independent_rational_valid": true,
+      "truth_count": 1,
+      "multi_obligation_payments": 57,
+      "refund_documents": 30
+    },
+    {
+      "company": 4,
+      "valid": true,
+      "independent_rational_valid": true,
+      "truth_count": 6,
+      "multi_obligation_payments": 63,
+      "refund_documents": 30
+    },
+    {
+      "company": 5,
+      "valid": true,
+      "independent_rational_valid": true,
+      "truth_count": 0,
+      "multi_obligation_payments": 53,
+      "refund_documents": 30
+    },
+    {
+      "company": 6,
+      "valid": true,
+      "independent_rational_valid": true,
+      "truth_count": 17,
+      "multi_obligation_payments": 58,
+      "refund_documents": 30
+    },
+    {
+      "company": 7,
+      "valid": true,
+      "independent_rational_valid": true,
+      "truth_count": 7,
+      "multi_obligation_payments": 54,
+      "refund_documents": 30
+    },
+    {
+      "company": 8,
+      "valid": true,
+      "independent_rational_valid": true,
+      "truth_count": 0,
+      "multi_obligation_payments": 56,
+      "refund_documents": 30
+    },
+    {
+      "company": 9,
+      "valid": true,
+      "independent_rational_valid": true,
+      "truth_count": 6,
+      "multi_obligation_payments": 52,
+      "refund_documents": 30
+    },
+    {
+      "company": 10,
+      "valid": true,
+      "independent_rational_valid": true,
+      "truth_count": 0,
+      "multi_obligation_payments": 63,
+      "refund_documents": 30
+    },
+    {
+      "company": 11,
+      "valid": true,
+      "independent_rational_valid": true,
+      "truth_count": 6,
+      "multi_obligation_payments": 52,
+      "refund_documents": 30
+    },
+    {
+      "company": 12,
+      "valid": true,
+      "independent_rational_valid": true,
+      "truth_count": 0,
+      "multi_obligation_payments": 64,
+      "refund_documents": 30
+    },
+    {
+      "company": 13,
+      "valid": true,
+      "independent_rational_valid": true,
+      "truth_count": 0,
+      "multi_obligation_payments": 47,
+      "refund_documents": 30
+    },
+    {
+      "company": 14,
+      "valid": true,
+      "independent_rational_valid": true,
+      "truth_count": 14,
+      "multi_obligation_payments": 57,
+      "refund_documents": 30
+    },
+    {
+      "company": 15,
+      "valid": true,
+      "independent_rational_valid": true,
+      "truth_count": 0,
+      "multi_obligation_payments": 56,
+      "refund_documents": 30
+    }
+  ],
+  "source_sha256": {
+    "batch_settlement.py": "74ab091ec43acd6ef5e2c4f347d401e73848b9111d9dd3f7cb70cfe0efac4887",
+    "investigation_world.py": "325672c393686ff2500c2b1b16a210da860ed7fef0ce87258f5387f090904c71",
+    "financial_audit.py": "560f9e0047cd0f11dbe961ceb564f429816d9baaef3f2393751cc7986b09154d"
+  }
+}

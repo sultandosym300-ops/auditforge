@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "episodes": 25,
+  "seed": 314159,
+  "budget": 10,
+  "algorithm": "reinforce",
+  "max_weight_difference": 1.1102230246251565e-16,
+  "metrics_equal": true,
+  "scope": "Real browser-exported checkpoint compared with native CPU training. Timing fields intentionally differ."
+}
