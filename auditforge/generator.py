@@ -16,13 +16,16 @@ def converted(amount, source, target, rate):
     return int((Decimal(amount) * Decimal(rate) * Decimal(10) ** (EXPONENTS[target] - EXPONENTS[source])).quantize(Decimal(1), rounding=ROUND_HALF_EVEN))
 
 
-def generate(seed, config=None):
+def generate(seed, config=None, *, _quote_seed=None):
     if type(seed) is not int:
         raise ValueError('seed must be an integer')
     if config is not None and not isinstance(config, dict):
         raise ValueError('config must be an object')
     config = dict(config or {})
     if 'profile' in config:
+        if config['profile'] == 'investigation_v1':
+            from .investigation_world import generate_investigation
+            return generate_investigation(seed, config)
         if config['profile'] != 'realistic_v1':
             raise ValueError('Unknown generator profile')
         from .realistic import generate_realistic
@@ -69,7 +72,7 @@ def generate(seed, config=None):
         return prefix + '-' + format(rng.getrandbits(60), '015x')
     fx = []
     rates = {}
-    quote_rng = random.Random('quote-history:' + str(seed) + json.dumps(config, sort_keys=True))
+    quote_rng = random.Random('quote-history:' + str(seed) + json.dumps(config, sort_keys=True) if _quote_seed is None else 'shared-quote-history:' + str(_quote_seed))
     # A company's declared quote history is the source of conversion values.
     # Its independent stream avoids changing identifiers when a quote is sampled.
     quote_levels = {currency: Decimal(base) * Decimal(quote_rng.randrange(9500, 10501)) / 10000
