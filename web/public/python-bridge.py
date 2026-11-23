@@ -32,6 +32,8 @@ def request(path,payload):
   return receipt_scenario(session.public,payload.get('event_id'),payload.get('amount_minor'))
  if path=='training_create':
   if payload.get('world_profile')=='investigation_v2':
+   if payload.get('algorithm')=='actor_critic' and payload.get('normalize_advantage'):
+    raise ValueError('Advantage normalization is supported for REINFORCE only')
    from auditforge.document_training import DocumentTrainer
    trainer=DocumentTrainer(payload.get('seed',1202201),payload.get('budget',20),payload.get('algorithm','reinforce'),
         family=payload.get('family','procurement'),architecture=payload.get('architecture','linear'),

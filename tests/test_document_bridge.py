@@ -5,6 +5,13 @@ import unittest
 
 
 class DocumentBridgeTests(unittest.TestCase):
+    def test_unimplemented_normalized_actor_critic_is_not_advertised_as_working(self):
+        scope = {}
+        exec((Path(__file__).resolve().parents[1] / 'web/public/python-bridge.py').read_text(encoding='utf8'), scope)
+        with self.assertRaises(ValueError):
+            scope['request']('training_create', dict(world_profile='investigation_v2',
+                             algorithm='actor_critic', normalize_advantage=True))
+
     def test_new_world_training_import_validation_and_document_trace(self):
         scope = {}
         exec((Path(__file__).resolve().parents[1] / 'web/public/python-bridge.py').read_text(encoding='utf8'), scope)
