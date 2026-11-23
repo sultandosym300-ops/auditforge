@@ -15,6 +15,7 @@ const extra={
 extra.ru.uninformed='Без предварительных знаний';extra.en.uninformed='Uninformed';extra.kk.uninformed='Алдын ала білімсіз';
 extra.ru.untrained_same_architecture='Необученная архитектура';extra.en.untrained_same_architecture='Untrained architecture';extra.kk.untrained_same_architecture='Оқытылмаған архитектура';
 extra.ru.ablation='Проверка без компонента';extra.en.ablation='Ablation';extra.kk.ablation='Компонентсіз тексеру';
+extra.ru.updates="Обновлений";extra.en.updates="Updates";extra.kk.updates="Жаңартулар";
 const policyCategory=row=>row.category||(['budget_aware','greedy','heuristic_search'].includes(row.policy)?'oracle_knowledge':row.policy==='learned'?'learned':'generator_blind');
 function Results({result,title,t}){
  if(!result)return null;
@@ -54,7 +55,7 @@ export default function SequentialLab({lang,onBack,initialCheckpoint=null,worldP
  <button className="button secondary" disabled={running} onClick={()=>file.current.click()}>{t('load')}</button>
  <input hidden type="file" accept="application/json,.json" ref={file} onChange={event=>{const value=event.target.files?.[0];if(value)perform(async()=>{if(value.size>10000000)throw Error();const parsed=JSON.parse(await value.text());if(parsed.format!==format)throw Error();accept(await trainingApi('training_import',{checkpoint:parsed}));});event.target.value='';}}/>
  </aside><div className="training-main">
- {error&&<p role="alert">{error}</p>}<p role="status">{t('complete')}: {history.length}{history.length?` · reward ${history.at(-1).reward.toFixed(3)} · F1 ${history.at(-1).f1.toFixed(3)} · Δθ ${history.at(-1).weight_change.toFixed(5)}`:''}</p>
+ {error&&<p role="alert">{error}</p>}<p role="status">{t('complete')}: {history.length}{history.length?` · reward ${history.at(-1).reward.toFixed(3)} · F1 ${history.at(-1).f1.toFixed(3)} · ${t("updates")}: ${history.at(-1).optimizer_steps} · Δθ ${history.at(-1).weight_change.toFixed(5)}`:''}</p>
  <section className="training-chart"><h2>{t('history')}</h2>{history.length?<><svg viewBox="0 0 900 140" role="img" aria-label="Train reward; validation reward"><polyline points={points('reward')} fill="none" stroke="#88d6d6" strokeWidth="2"/><polyline points={points('validation_reward')} fill="none" stroke="#f6c77c" strokeWidth="3"/>{history.map((row,i)=>Number.isFinite(row.validation_reward)&&<circle key={i} cx={i*900/Math.max(1,history.length-1)} cy={120-(row.validation_reward+1)*55} r="4" fill="#f6c77c"/>)}</svg><p>Train: cyan · Validation: amber · −1 … +1</p></>:<p>{t('empty')}</p>}</section>
  <div className="training-actions">
  <button className="button secondary sequential-validation" disabled={running||!checkpoint} onClick={()=>perform(async()=>setValidation(await trainingApi('training_evaluate',{count:8,seed:70193})))}>{t('validation')}</button>

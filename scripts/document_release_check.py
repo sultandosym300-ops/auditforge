@@ -46,7 +46,13 @@ def check():
                             runs+=1
     for name in ('FINAL_AUDIT','RL_STUDY','GENERATOR_BLIND_BENCHMARK','TRANSFER_REPORT','ADVERSARIAL_REPORT','JURY_DEMO','LIMITATIONS'):
         assert (ROOT/f'AUDITFORGE_2_2_{name}.md').is_file()
+    from scripts.document_adaptive_probe import run as train_probe
+    expected_probe=json.loads((folder/'document-2.2-adaptive-probe.json').read_text(encoding='utf8'))
+    fresh_probe=train_probe()
+    assert max(abs(a-b) for a,b in zip(expected_probe['parameters'],fresh_probe['parameters']))<1e-12
+    assert fresh_probe['test']['summary']==expected_probe['test']['summary']
     return dict(passed=True,reproduced_runs=runs,independent_test_companies=96,
+                adaptive_probe_training_reproduced=True,
                 protocol_sha256=summary['protocol_sha256'],official_score=None)
 
 

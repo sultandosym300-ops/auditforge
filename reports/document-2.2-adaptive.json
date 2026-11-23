@@ -1,0 +1,3700 @@
+{
+  "models": [
+    {
+      "training_family": "procurement",
+      "replicate": 0,
+      "result": {
+        "format": "auditforge-adaptive-source-pairs-v1",
+        "root_seed": 202622071,
+        "independent_base_companies": 8,
+        "counterfactual_worlds": 16,
+        "rows": [
+          {
+            "family": "procurement",
+            "index": 0,
+            "seed": 88907964002331687868588557402458370052,
+            "worlds": [
+              {
+                "world": "A",
+                "initial_sha256": "185ee115ec7b82174fd374fc0a9248154dead0d454dce33619a1ee6c0b82be3b",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-53c38f605d86361a0e5d9ec8"
+                },
+                "first_observation_sha256": "42e47b2531b439a680c52f5e19f5a6a365124f5e8af914ab9b2487291d31b21c",
+                "optimal_next_documents": [
+                  "invoice-doc-db9dbffa10527c8d1fd0f08b"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "journal-doc-d5a05c941a8db4eae544877c",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "allocation-f4c779bc54f654777060fd37",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "allocation-f4c779bc54f654777060fd37",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              },
+              {
+                "world": "B",
+                "initial_sha256": "185ee115ec7b82174fd374fc0a9248154dead0d454dce33619a1ee6c0b82be3b",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-53c38f605d86361a0e5d9ec8"
+                },
+                "first_observation_sha256": "6f649a3ba1a562ba054bf1d7c2d3218a141957c3e32720f2210f69274177d515",
+                "optimal_next_documents": [
+                  "invoice-doc-0afbb683ea184f22bda0bb56"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "journal-doc-d5a05c941a8db4eae544877c",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "allocation-f4c779bc54f654777060fd37",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "allocation-f4c779bc54f654777060fd37",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              }
+            ],
+            "changed_optimal_actions": true,
+            "learned_switched": false
+          },
+          {
+            "family": "procurement",
+            "index": 1,
+            "seed": 218109248604963420955213056187770285651,
+            "worlds": [
+              {
+                "world": "A",
+                "initial_sha256": "1d62cde47b8dad103d479958e1237ac9df8aab60c73a9c9f8152227b49df7f61",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-0e37a951b48cf6c508f77312"
+                },
+                "first_observation_sha256": "8951b0684a3ff29cec5432f3437ba0941c6fa0d8919e5550c87a0cf403ee0938",
+                "optimal_next_documents": [
+                  "invoice-doc-cca11760b69476504c9e84c2"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "journal-doc-7b9aea3198d1e40a12e045ce",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "payment-doc-7641e08ea65486205338aaa5",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "payment-doc-7641e08ea65486205338aaa5",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              },
+              {
+                "world": "B",
+                "initial_sha256": "1d62cde47b8dad103d479958e1237ac9df8aab60c73a9c9f8152227b49df7f61",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-0e37a951b48cf6c508f77312"
+                },
+                "first_observation_sha256": "051922c567c199d24b457e1798832178fc8875cf5fb8d86e258231a9cd593d88",
+                "optimal_next_documents": [
+                  "invoice-doc-eab71b34856f611cc4df4e5f"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "journal-doc-7b9aea3198d1e40a12e045ce",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "payment-doc-7641e08ea65486205338aaa5",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "payment-doc-7641e08ea65486205338aaa5",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              }
+            ],
+            "changed_optimal_actions": true,
+            "learned_switched": false
+          },
+          {
+            "family": "procurement",
+            "index": 2,
+            "seed": 255049746131908336364019607645511748948,
+            "worlds": [
+              {
+                "world": "A",
+                "initial_sha256": "a01913ea6577f5dd0376f1423452158a61743122d950a6d59baee3b5e24ff2a4",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-8bbf8e3a60990bade39ad565"
+                },
+                "first_observation_sha256": "4194c0033b5f2c8a084d239c1bb250bc574ccb92e4f37ca1c90cabeec25b4a3e",
+                "optimal_next_documents": [
+                  "invoice-doc-bb720c2d31aef63ec68cb223"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "journal-doc-c0860ecfba7846d65655a617",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "payment-doc-80ef01128c94dcc225d13b36",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "payment-doc-80ef01128c94dcc225d13b36",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              },
+              {
+                "world": "B",
+                "initial_sha256": "a01913ea6577f5dd0376f1423452158a61743122d950a6d59baee3b5e24ff2a4",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-8bbf8e3a60990bade39ad565"
+                },
+                "first_observation_sha256": "466f4bf562ac5b61cfccec2e5af2bbff4a4fb2e5a39bb725d7c8df844f822ca9",
+                "optimal_next_documents": [
+                  "invoice-doc-45b37c5c69f9e44d00c16905"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "journal-doc-c0860ecfba7846d65655a617",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "payment-doc-80ef01128c94dcc225d13b36",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "payment-doc-80ef01128c94dcc225d13b36",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              }
+            ],
+            "changed_optimal_actions": true,
+            "learned_switched": false
+          },
+          {
+            "family": "procurement",
+            "index": 3,
+            "seed": 333684469859230056301358075537403802320,
+            "worlds": [
+              {
+                "world": "A",
+                "initial_sha256": "7409e6c2f2466f6a0609dee40dceb1c9132b0b8ad304179dd21c051cec7d3409",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-9c2ea0c1c963b362830a123e"
+                },
+                "first_observation_sha256": "038444cbaf6da4e62b3bf6af09100870f3d49540abe63387aaded062f027e15b",
+                "optimal_next_documents": [
+                  "invoice-doc-02cf01b1b37e9002c06d4aa2"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "journal-doc-9e21d7377168c58cb02e9347",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "journal-doc-9e21d7377168c58cb02e9347",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "journal-doc-9e21d7377168c58cb02e9347",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              },
+              {
+                "world": "B",
+                "initial_sha256": "7409e6c2f2466f6a0609dee40dceb1c9132b0b8ad304179dd21c051cec7d3409",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-9c2ea0c1c963b362830a123e"
+                },
+                "first_observation_sha256": "d92a2072f718f7afff86261e99d41a112e524c7cccd69241dab8b7ad4393c5aa",
+                "optimal_next_documents": [
+                  "invoice-doc-af79a08668f38021e712bc50"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "journal-doc-9e21d7377168c58cb02e9347",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "journal-doc-9e21d7377168c58cb02e9347",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "journal-doc-9e21d7377168c58cb02e9347",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              }
+            ],
+            "changed_optimal_actions": true,
+            "learned_switched": false
+          },
+          {
+            "family": "service_milestone",
+            "index": 0,
+            "seed": 289524404569530306687326648176106741738,
+            "worlds": [
+              {
+                "world": "A",
+                "initial_sha256": "beb9fee6df0b238eeea839e2f0af14616ce4e13c2d68a26000dd2977d16d1a6f",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-6c9f00cbee3e7da808b988a6"
+                },
+                "first_observation_sha256": "2e0421850c2eb83d83ec4966b08084c2fce2b08ccc52929d38e345d900d71c5d",
+                "optimal_next_documents": [
+                  "invoice-doc-205c530d45c6820992c17fbe"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "journal-doc-0a00f1b9e8a1eae28ce65883",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "invoice-doc-45347cfc1e9b79e4cc27bf4e",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "invoice-doc-45347cfc1e9b79e4cc27bf4e",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              },
+              {
+                "world": "B",
+                "initial_sha256": "beb9fee6df0b238eeea839e2f0af14616ce4e13c2d68a26000dd2977d16d1a6f",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-6c9f00cbee3e7da808b988a6"
+                },
+                "first_observation_sha256": "182243e9354900c78d97c1859bf753021b6eba9cc6510c9ec12d235ea39da399",
+                "optimal_next_documents": [
+                  "invoice-doc-653162916d194063547c9c50"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "journal-doc-0a00f1b9e8a1eae28ce65883",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "invoice-doc-45347cfc1e9b79e4cc27bf4e",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "invoice-doc-45347cfc1e9b79e4cc27bf4e",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              }
+            ],
+            "changed_optimal_actions": true,
+            "learned_switched": false
+          },
+          {
+            "family": "service_milestone",
+            "index": 1,
+            "seed": 288700407272901658366475341479701456730,
+            "worlds": [
+              {
+                "world": "A",
+                "initial_sha256": "78a3b09808973f80af90e4dd913f7560604a0e8c7f609d159cf0ebd3b3e282e3",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-3528103c4fd2a70236622909"
+                },
+                "first_observation_sha256": "d7fa683f7c36151b7d690f543ca6c2443e215eccaaddf7792efd73bdc705b5ff",
+                "optimal_next_documents": [
+                  "invoice-doc-de6f30d00c18c72d20a1ba8e"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "journal-doc-11f1fce4cb18b0753d4f2af8",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "journal-doc-549710c5a62da4c31cad3f9f",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "journal-doc-549710c5a62da4c31cad3f9f",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              },
+              {
+                "world": "B",
+                "initial_sha256": "78a3b09808973f80af90e4dd913f7560604a0e8c7f609d159cf0ebd3b3e282e3",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-3528103c4fd2a70236622909"
+                },
+                "first_observation_sha256": "92b447a26b20740baa06d69a6b7feffc049d20208b0fec719dfcca1ab04831e9",
+                "optimal_next_documents": [
+                  "invoice-doc-c867aa88eb1c6422dd2b3e2e"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "journal-doc-11f1fce4cb18b0753d4f2af8",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "journal-doc-549710c5a62da4c31cad3f9f",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "journal-doc-549710c5a62da4c31cad3f9f",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              }
+            ],
+            "changed_optimal_actions": true,
+            "learned_switched": false
+          },
+          {
+            "family": "service_milestone",
+            "index": 2,
+            "seed": 217214207870796008736542203847435440649,
+            "worlds": [
+              {
+                "world": "A",
+                "initial_sha256": "da0f65ee3bf6ab84e38433333227dd9ef85b3b41764df87a3dba74eaf2942ff7",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-362c8642088be4aae0fced0e"
+                },
+                "first_observation_sha256": "7f0d54de23e3b7d040c9980d999301593fd90eabc023062efb7b1db651b45a58",
+                "optimal_next_documents": [
+                  "invoice-doc-16b1d937851d4cffdcd7ab86"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "journal-doc-74f206701b64db2ab4540729",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "contract-5517b625db4e5ffe7dd7a278",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "contract-5517b625db4e5ffe7dd7a278",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              },
+              {
+                "world": "B",
+                "initial_sha256": "da0f65ee3bf6ab84e38433333227dd9ef85b3b41764df87a3dba74eaf2942ff7",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-362c8642088be4aae0fced0e"
+                },
+                "first_observation_sha256": "5bad028d5a5586d8ab442494215f43222411480347d639cc80b2b53a6b3dd839",
+                "optimal_next_documents": [
+                  "invoice-doc-e7f38b0e9dbcfcc8d07d5337"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "journal-doc-74f206701b64db2ab4540729",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "contract-5517b625db4e5ffe7dd7a278",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "contract-5517b625db4e5ffe7dd7a278",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              }
+            ],
+            "changed_optimal_actions": true,
+            "learned_switched": false
+          },
+          {
+            "family": "service_milestone",
+            "index": 3,
+            "seed": 86657532282265276630434128969667112139,
+            "worlds": [
+              {
+                "world": "A",
+                "initial_sha256": "9f3d792cbe53420874b16e1cf05600ae1779d13a76c1b3164ad1b0ccc9f3024e",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-79f91d3993ac23e5a706ff34"
+                },
+                "first_observation_sha256": "38b1389bef6cdbdcbe6be71d0c838cadcbd94c3950a29d9ada1d845090ad2f5e",
+                "optimal_next_documents": [
+                  "invoice-doc-bc8822056d349d0971b77d36"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "journal-doc-47410acfebf5553e47082b2a",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "bank-db17284bb0e3480cd3e0ded2",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "bank-db17284bb0e3480cd3e0ded2",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              },
+              {
+                "world": "B",
+                "initial_sha256": "9f3d792cbe53420874b16e1cf05600ae1779d13a76c1b3164ad1b0ccc9f3024e",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-79f91d3993ac23e5a706ff34"
+                },
+                "first_observation_sha256": "5e7fc9a7570a11fd6002b4ed1289ebaab190d2efa47e539f5802c432a4e8aa4a",
+                "optimal_next_documents": [
+                  "invoice-doc-2b3f917ae5b38ded53458888"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "journal-doc-47410acfebf5553e47082b2a",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "bank-db17284bb0e3480cd3e0ded2",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "bank-db17284bb0e3480cd3e0ded2",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              }
+            ],
+            "changed_optimal_actions": true,
+            "learned_switched": false
+          }
+        ],
+        "summary": {
+          "learned": {
+            "optimal_fraction": 0.0,
+            "reward": -1.0,
+            "f1": 0.0
+          },
+          "untrained": {
+            "optimal_fraction": 0.0,
+            "reward": -1.0,
+            "f1": 0.0
+          },
+          "fixed": {
+            "optimal_fraction": 0.0,
+            "reward": -1.0,
+            "f1": 0.0
+          }
+        },
+        "switched_pairs": 0,
+        "different_optimal_pairs": 8,
+        "scope": "Controlled reference-following decision after one common actual source query, three-action horizon; not an end-to-end training benchmark or a currency-generalization proof."
+      }
+    },
+    {
+      "training_family": "procurement",
+      "replicate": 1,
+      "result": {
+        "format": "auditforge-adaptive-source-pairs-v1",
+        "root_seed": 202622071,
+        "independent_base_companies": 8,
+        "counterfactual_worlds": 16,
+        "rows": [
+          {
+            "family": "procurement",
+            "index": 0,
+            "seed": 88907964002331687868588557402458370052,
+            "worlds": [
+              {
+                "world": "A",
+                "initial_sha256": "185ee115ec7b82174fd374fc0a9248154dead0d454dce33619a1ee6c0b82be3b",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-53c38f605d86361a0e5d9ec8"
+                },
+                "first_observation_sha256": "42e47b2531b439a680c52f5e19f5a6a365124f5e8af914ab9b2487291d31b21c",
+                "optimal_next_documents": [
+                  "invoice-doc-db9dbffa10527c8d1fd0f08b"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "journal-doc-419e71ca1e99422139363d4f",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "allocation-f4c779bc54f654777060fd37",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "allocation-f4c779bc54f654777060fd37",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              },
+              {
+                "world": "B",
+                "initial_sha256": "185ee115ec7b82174fd374fc0a9248154dead0d454dce33619a1ee6c0b82be3b",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-53c38f605d86361a0e5d9ec8"
+                },
+                "first_observation_sha256": "6f649a3ba1a562ba054bf1d7c2d3218a141957c3e32720f2210f69274177d515",
+                "optimal_next_documents": [
+                  "invoice-doc-0afbb683ea184f22bda0bb56"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "journal-doc-419e71ca1e99422139363d4f",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "allocation-f4c779bc54f654777060fd37",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "allocation-f4c779bc54f654777060fd37",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              }
+            ],
+            "changed_optimal_actions": true,
+            "learned_switched": false
+          },
+          {
+            "family": "procurement",
+            "index": 1,
+            "seed": 218109248604963420955213056187770285651,
+            "worlds": [
+              {
+                "world": "A",
+                "initial_sha256": "1d62cde47b8dad103d479958e1237ac9df8aab60c73a9c9f8152227b49df7f61",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-0e37a951b48cf6c508f77312"
+                },
+                "first_observation_sha256": "8951b0684a3ff29cec5432f3437ba0941c6fa0d8919e5550c87a0cf403ee0938",
+                "optimal_next_documents": [
+                  "invoice-doc-cca11760b69476504c9e84c2"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "journal-doc-8cedf506891ef1664302e414",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "payment-doc-7641e08ea65486205338aaa5",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "payment-doc-7641e08ea65486205338aaa5",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              },
+              {
+                "world": "B",
+                "initial_sha256": "1d62cde47b8dad103d479958e1237ac9df8aab60c73a9c9f8152227b49df7f61",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-0e37a951b48cf6c508f77312"
+                },
+                "first_observation_sha256": "051922c567c199d24b457e1798832178fc8875cf5fb8d86e258231a9cd593d88",
+                "optimal_next_documents": [
+                  "invoice-doc-eab71b34856f611cc4df4e5f"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "journal-doc-8cedf506891ef1664302e414",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "payment-doc-7641e08ea65486205338aaa5",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "payment-doc-7641e08ea65486205338aaa5",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              }
+            ],
+            "changed_optimal_actions": true,
+            "learned_switched": false
+          },
+          {
+            "family": "procurement",
+            "index": 2,
+            "seed": 255049746131908336364019607645511748948,
+            "worlds": [
+              {
+                "world": "A",
+                "initial_sha256": "a01913ea6577f5dd0376f1423452158a61743122d950a6d59baee3b5e24ff2a4",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-8bbf8e3a60990bade39ad565"
+                },
+                "first_observation_sha256": "4194c0033b5f2c8a084d239c1bb250bc574ccb92e4f37ca1c90cabeec25b4a3e",
+                "optimal_next_documents": [
+                  "invoice-doc-bb720c2d31aef63ec68cb223"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "journal-doc-ef999589ea9f8bb076fa3bd5",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "payment-doc-80ef01128c94dcc225d13b36",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "payment-doc-80ef01128c94dcc225d13b36",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              },
+              {
+                "world": "B",
+                "initial_sha256": "a01913ea6577f5dd0376f1423452158a61743122d950a6d59baee3b5e24ff2a4",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-8bbf8e3a60990bade39ad565"
+                },
+                "first_observation_sha256": "466f4bf562ac5b61cfccec2e5af2bbff4a4fb2e5a39bb725d7c8df844f822ca9",
+                "optimal_next_documents": [
+                  "invoice-doc-45b37c5c69f9e44d00c16905"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "journal-doc-ef999589ea9f8bb076fa3bd5",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "payment-doc-80ef01128c94dcc225d13b36",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "payment-doc-80ef01128c94dcc225d13b36",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              }
+            ],
+            "changed_optimal_actions": true,
+            "learned_switched": false
+          },
+          {
+            "family": "procurement",
+            "index": 3,
+            "seed": 333684469859230056301358075537403802320,
+            "worlds": [
+              {
+                "world": "A",
+                "initial_sha256": "7409e6c2f2466f6a0609dee40dceb1c9132b0b8ad304179dd21c051cec7d3409",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-9c2ea0c1c963b362830a123e"
+                },
+                "first_observation_sha256": "038444cbaf6da4e62b3bf6af09100870f3d49540abe63387aaded062f027e15b",
+                "optimal_next_documents": [
+                  "invoice-doc-02cf01b1b37e9002c06d4aa2"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "journal-doc-e7d7188d3f01b48e5c9e0b41",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "journal-doc-9e21d7377168c58cb02e9347",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "journal-doc-9e21d7377168c58cb02e9347",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              },
+              {
+                "world": "B",
+                "initial_sha256": "7409e6c2f2466f6a0609dee40dceb1c9132b0b8ad304179dd21c051cec7d3409",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-9c2ea0c1c963b362830a123e"
+                },
+                "first_observation_sha256": "d92a2072f718f7afff86261e99d41a112e524c7cccd69241dab8b7ad4393c5aa",
+                "optimal_next_documents": [
+                  "invoice-doc-af79a08668f38021e712bc50"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "journal-doc-e7d7188d3f01b48e5c9e0b41",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "journal-doc-9e21d7377168c58cb02e9347",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "journal-doc-9e21d7377168c58cb02e9347",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              }
+            ],
+            "changed_optimal_actions": true,
+            "learned_switched": false
+          },
+          {
+            "family": "service_milestone",
+            "index": 0,
+            "seed": 289524404569530306687326648176106741738,
+            "worlds": [
+              {
+                "world": "A",
+                "initial_sha256": "beb9fee6df0b238eeea839e2f0af14616ce4e13c2d68a26000dd2977d16d1a6f",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-6c9f00cbee3e7da808b988a6"
+                },
+                "first_observation_sha256": "2e0421850c2eb83d83ec4966b08084c2fce2b08ccc52929d38e345d900d71c5d",
+                "optimal_next_documents": [
+                  "invoice-doc-205c530d45c6820992c17fbe"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "journal-doc-41d5ab5abc15e734ff323730",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "invoice-doc-45347cfc1e9b79e4cc27bf4e",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "invoice-doc-45347cfc1e9b79e4cc27bf4e",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              },
+              {
+                "world": "B",
+                "initial_sha256": "beb9fee6df0b238eeea839e2f0af14616ce4e13c2d68a26000dd2977d16d1a6f",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-6c9f00cbee3e7da808b988a6"
+                },
+                "first_observation_sha256": "182243e9354900c78d97c1859bf753021b6eba9cc6510c9ec12d235ea39da399",
+                "optimal_next_documents": [
+                  "invoice-doc-653162916d194063547c9c50"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "journal-doc-41d5ab5abc15e734ff323730",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "invoice-doc-45347cfc1e9b79e4cc27bf4e",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "invoice-doc-45347cfc1e9b79e4cc27bf4e",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              }
+            ],
+            "changed_optimal_actions": true,
+            "learned_switched": false
+          },
+          {
+            "family": "service_milestone",
+            "index": 1,
+            "seed": 288700407272901658366475341479701456730,
+            "worlds": [
+              {
+                "world": "A",
+                "initial_sha256": "78a3b09808973f80af90e4dd913f7560604a0e8c7f609d159cf0ebd3b3e282e3",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-3528103c4fd2a70236622909"
+                },
+                "first_observation_sha256": "d7fa683f7c36151b7d690f543ca6c2443e215eccaaddf7792efd73bdc705b5ff",
+                "optimal_next_documents": [
+                  "invoice-doc-de6f30d00c18c72d20a1ba8e"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "journal-doc-549710c5a62da4c31cad3f9f",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "journal-doc-549710c5a62da4c31cad3f9f",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "journal-doc-549710c5a62da4c31cad3f9f",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              },
+              {
+                "world": "B",
+                "initial_sha256": "78a3b09808973f80af90e4dd913f7560604a0e8c7f609d159cf0ebd3b3e282e3",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-3528103c4fd2a70236622909"
+                },
+                "first_observation_sha256": "92b447a26b20740baa06d69a6b7feffc049d20208b0fec719dfcca1ab04831e9",
+                "optimal_next_documents": [
+                  "invoice-doc-c867aa88eb1c6422dd2b3e2e"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "journal-doc-549710c5a62da4c31cad3f9f",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "journal-doc-549710c5a62da4c31cad3f9f",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "journal-doc-549710c5a62da4c31cad3f9f",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              }
+            ],
+            "changed_optimal_actions": true,
+            "learned_switched": false
+          },
+          {
+            "family": "service_milestone",
+            "index": 2,
+            "seed": 217214207870796008736542203847435440649,
+            "worlds": [
+              {
+                "world": "A",
+                "initial_sha256": "da0f65ee3bf6ab84e38433333227dd9ef85b3b41764df87a3dba74eaf2942ff7",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-362c8642088be4aae0fced0e"
+                },
+                "first_observation_sha256": "7f0d54de23e3b7d040c9980d999301593fd90eabc023062efb7b1db651b45a58",
+                "optimal_next_documents": [
+                  "invoice-doc-16b1d937851d4cffdcd7ab86"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "journal-doc-17430a33afe14e07dcc697a9",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "contract-5517b625db4e5ffe7dd7a278",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "contract-5517b625db4e5ffe7dd7a278",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              },
+              {
+                "world": "B",
+                "initial_sha256": "da0f65ee3bf6ab84e38433333227dd9ef85b3b41764df87a3dba74eaf2942ff7",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-362c8642088be4aae0fced0e"
+                },
+                "first_observation_sha256": "5bad028d5a5586d8ab442494215f43222411480347d639cc80b2b53a6b3dd839",
+                "optimal_next_documents": [
+                  "invoice-doc-e7f38b0e9dbcfcc8d07d5337"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "journal-doc-17430a33afe14e07dcc697a9",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "contract-5517b625db4e5ffe7dd7a278",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "contract-5517b625db4e5ffe7dd7a278",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              }
+            ],
+            "changed_optimal_actions": true,
+            "learned_switched": false
+          },
+          {
+            "family": "service_milestone",
+            "index": 3,
+            "seed": 86657532282265276630434128969667112139,
+            "worlds": [
+              {
+                "world": "A",
+                "initial_sha256": "9f3d792cbe53420874b16e1cf05600ae1779d13a76c1b3164ad1b0ccc9f3024e",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-79f91d3993ac23e5a706ff34"
+                },
+                "first_observation_sha256": "38b1389bef6cdbdcbe6be71d0c838cadcbd94c3950a29d9ada1d845090ad2f5e",
+                "optimal_next_documents": [
+                  "invoice-doc-bc8822056d349d0971b77d36"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "journal-doc-162134845ef7d9a6d82349ae",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "bank-db17284bb0e3480cd3e0ded2",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "bank-db17284bb0e3480cd3e0ded2",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              },
+              {
+                "world": "B",
+                "initial_sha256": "9f3d792cbe53420874b16e1cf05600ae1779d13a76c1b3164ad1b0ccc9f3024e",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-79f91d3993ac23e5a706ff34"
+                },
+                "first_observation_sha256": "5e7fc9a7570a11fd6002b4ed1289ebaab190d2efa47e539f5802c432a4e8aa4a",
+                "optimal_next_documents": [
+                  "invoice-doc-2b3f917ae5b38ded53458888"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "journal-doc-162134845ef7d9a6d82349ae",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "bank-db17284bb0e3480cd3e0ded2",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "bank-db17284bb0e3480cd3e0ded2",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              }
+            ],
+            "changed_optimal_actions": true,
+            "learned_switched": false
+          }
+        ],
+        "summary": {
+          "learned": {
+            "optimal_fraction": 0.0,
+            "reward": -1.0,
+            "f1": 0.0
+          },
+          "untrained": {
+            "optimal_fraction": 0.0,
+            "reward": -1.0,
+            "f1": 0.0
+          },
+          "fixed": {
+            "optimal_fraction": 0.0,
+            "reward": -1.0,
+            "f1": 0.0
+          }
+        },
+        "switched_pairs": 0,
+        "different_optimal_pairs": 8,
+        "scope": "Controlled reference-following decision after one common actual source query, three-action horizon; not an end-to-end training benchmark or a currency-generalization proof."
+      }
+    },
+    {
+      "training_family": "procurement",
+      "replicate": 2,
+      "result": {
+        "format": "auditforge-adaptive-source-pairs-v1",
+        "root_seed": 202622071,
+        "independent_base_companies": 8,
+        "counterfactual_worlds": 16,
+        "rows": [
+          {
+            "family": "procurement",
+            "index": 0,
+            "seed": 88907964002331687868588557402458370052,
+            "worlds": [
+              {
+                "world": "A",
+                "initial_sha256": "185ee115ec7b82174fd374fc0a9248154dead0d454dce33619a1ee6c0b82be3b",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-53c38f605d86361a0e5d9ec8"
+                },
+                "first_observation_sha256": "42e47b2531b439a680c52f5e19f5a6a365124f5e8af914ab9b2487291d31b21c",
+                "optimal_next_documents": [
+                  "invoice-doc-db9dbffa10527c8d1fd0f08b"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "journal-doc-419e71ca1e99422139363d4f",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "allocation-f4c779bc54f654777060fd37",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "allocation-f4c779bc54f654777060fd37",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              },
+              {
+                "world": "B",
+                "initial_sha256": "185ee115ec7b82174fd374fc0a9248154dead0d454dce33619a1ee6c0b82be3b",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-53c38f605d86361a0e5d9ec8"
+                },
+                "first_observation_sha256": "6f649a3ba1a562ba054bf1d7c2d3218a141957c3e32720f2210f69274177d515",
+                "optimal_next_documents": [
+                  "invoice-doc-0afbb683ea184f22bda0bb56"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "journal-doc-419e71ca1e99422139363d4f",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "allocation-f4c779bc54f654777060fd37",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "allocation-f4c779bc54f654777060fd37",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              }
+            ],
+            "changed_optimal_actions": true,
+            "learned_switched": false
+          },
+          {
+            "family": "procurement",
+            "index": 1,
+            "seed": 218109248604963420955213056187770285651,
+            "worlds": [
+              {
+                "world": "A",
+                "initial_sha256": "1d62cde47b8dad103d479958e1237ac9df8aab60c73a9c9f8152227b49df7f61",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-0e37a951b48cf6c508f77312"
+                },
+                "first_observation_sha256": "8951b0684a3ff29cec5432f3437ba0941c6fa0d8919e5550c87a0cf403ee0938",
+                "optimal_next_documents": [
+                  "invoice-doc-cca11760b69476504c9e84c2"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "journal-doc-8cedf506891ef1664302e414",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "payment-doc-7641e08ea65486205338aaa5",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "payment-doc-7641e08ea65486205338aaa5",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              },
+              {
+                "world": "B",
+                "initial_sha256": "1d62cde47b8dad103d479958e1237ac9df8aab60c73a9c9f8152227b49df7f61",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-0e37a951b48cf6c508f77312"
+                },
+                "first_observation_sha256": "051922c567c199d24b457e1798832178fc8875cf5fb8d86e258231a9cd593d88",
+                "optimal_next_documents": [
+                  "invoice-doc-eab71b34856f611cc4df4e5f"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "journal-doc-8cedf506891ef1664302e414",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "payment-doc-7641e08ea65486205338aaa5",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "payment-doc-7641e08ea65486205338aaa5",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              }
+            ],
+            "changed_optimal_actions": true,
+            "learned_switched": false
+          },
+          {
+            "family": "procurement",
+            "index": 2,
+            "seed": 255049746131908336364019607645511748948,
+            "worlds": [
+              {
+                "world": "A",
+                "initial_sha256": "a01913ea6577f5dd0376f1423452158a61743122d950a6d59baee3b5e24ff2a4",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-8bbf8e3a60990bade39ad565"
+                },
+                "first_observation_sha256": "4194c0033b5f2c8a084d239c1bb250bc574ccb92e4f37ca1c90cabeec25b4a3e",
+                "optimal_next_documents": [
+                  "invoice-doc-bb720c2d31aef63ec68cb223"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "journal-doc-ef999589ea9f8bb076fa3bd5",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "payment-doc-80ef01128c94dcc225d13b36",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "payment-doc-80ef01128c94dcc225d13b36",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              },
+              {
+                "world": "B",
+                "initial_sha256": "a01913ea6577f5dd0376f1423452158a61743122d950a6d59baee3b5e24ff2a4",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-8bbf8e3a60990bade39ad565"
+                },
+                "first_observation_sha256": "466f4bf562ac5b61cfccec2e5af2bbff4a4fb2e5a39bb725d7c8df844f822ca9",
+                "optimal_next_documents": [
+                  "invoice-doc-45b37c5c69f9e44d00c16905"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "journal-doc-ef999589ea9f8bb076fa3bd5",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "payment-doc-80ef01128c94dcc225d13b36",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "payment-doc-80ef01128c94dcc225d13b36",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              }
+            ],
+            "changed_optimal_actions": true,
+            "learned_switched": false
+          },
+          {
+            "family": "procurement",
+            "index": 3,
+            "seed": 333684469859230056301358075537403802320,
+            "worlds": [
+              {
+                "world": "A",
+                "initial_sha256": "7409e6c2f2466f6a0609dee40dceb1c9132b0b8ad304179dd21c051cec7d3409",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-9c2ea0c1c963b362830a123e"
+                },
+                "first_observation_sha256": "038444cbaf6da4e62b3bf6af09100870f3d49540abe63387aaded062f027e15b",
+                "optimal_next_documents": [
+                  "invoice-doc-02cf01b1b37e9002c06d4aa2"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "journal-doc-e7d7188d3f01b48e5c9e0b41",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "journal-doc-9e21d7377168c58cb02e9347",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "journal-doc-9e21d7377168c58cb02e9347",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              },
+              {
+                "world": "B",
+                "initial_sha256": "7409e6c2f2466f6a0609dee40dceb1c9132b0b8ad304179dd21c051cec7d3409",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-9c2ea0c1c963b362830a123e"
+                },
+                "first_observation_sha256": "d92a2072f718f7afff86261e99d41a112e524c7cccd69241dab8b7ad4393c5aa",
+                "optimal_next_documents": [
+                  "invoice-doc-af79a08668f38021e712bc50"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "journal-doc-e7d7188d3f01b48e5c9e0b41",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "journal-doc-9e21d7377168c58cb02e9347",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "journal-doc-9e21d7377168c58cb02e9347",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              }
+            ],
+            "changed_optimal_actions": true,
+            "learned_switched": false
+          },
+          {
+            "family": "service_milestone",
+            "index": 0,
+            "seed": 289524404569530306687326648176106741738,
+            "worlds": [
+              {
+                "world": "A",
+                "initial_sha256": "beb9fee6df0b238eeea839e2f0af14616ce4e13c2d68a26000dd2977d16d1a6f",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-6c9f00cbee3e7da808b988a6"
+                },
+                "first_observation_sha256": "2e0421850c2eb83d83ec4966b08084c2fce2b08ccc52929d38e345d900d71c5d",
+                "optimal_next_documents": [
+                  "invoice-doc-205c530d45c6820992c17fbe"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "journal-doc-41d5ab5abc15e734ff323730",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "invoice-doc-45347cfc1e9b79e4cc27bf4e",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "invoice-doc-45347cfc1e9b79e4cc27bf4e",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              },
+              {
+                "world": "B",
+                "initial_sha256": "beb9fee6df0b238eeea839e2f0af14616ce4e13c2d68a26000dd2977d16d1a6f",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-6c9f00cbee3e7da808b988a6"
+                },
+                "first_observation_sha256": "182243e9354900c78d97c1859bf753021b6eba9cc6510c9ec12d235ea39da399",
+                "optimal_next_documents": [
+                  "invoice-doc-653162916d194063547c9c50"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "journal-doc-41d5ab5abc15e734ff323730",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "invoice-doc-45347cfc1e9b79e4cc27bf4e",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "invoice-doc-45347cfc1e9b79e4cc27bf4e",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              }
+            ],
+            "changed_optimal_actions": true,
+            "learned_switched": false
+          },
+          {
+            "family": "service_milestone",
+            "index": 1,
+            "seed": 288700407272901658366475341479701456730,
+            "worlds": [
+              {
+                "world": "A",
+                "initial_sha256": "78a3b09808973f80af90e4dd913f7560604a0e8c7f609d159cf0ebd3b3e282e3",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-3528103c4fd2a70236622909"
+                },
+                "first_observation_sha256": "d7fa683f7c36151b7d690f543ca6c2443e215eccaaddf7792efd73bdc705b5ff",
+                "optimal_next_documents": [
+                  "invoice-doc-de6f30d00c18c72d20a1ba8e"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "journal-doc-549710c5a62da4c31cad3f9f",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "journal-doc-549710c5a62da4c31cad3f9f",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "journal-doc-549710c5a62da4c31cad3f9f",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              },
+              {
+                "world": "B",
+                "initial_sha256": "78a3b09808973f80af90e4dd913f7560604a0e8c7f609d159cf0ebd3b3e282e3",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-3528103c4fd2a70236622909"
+                },
+                "first_observation_sha256": "92b447a26b20740baa06d69a6b7feffc049d20208b0fec719dfcca1ab04831e9",
+                "optimal_next_documents": [
+                  "invoice-doc-c867aa88eb1c6422dd2b3e2e"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "journal-doc-549710c5a62da4c31cad3f9f",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "journal-doc-549710c5a62da4c31cad3f9f",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "journal-doc-549710c5a62da4c31cad3f9f",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              }
+            ],
+            "changed_optimal_actions": true,
+            "learned_switched": false
+          },
+          {
+            "family": "service_milestone",
+            "index": 2,
+            "seed": 217214207870796008736542203847435440649,
+            "worlds": [
+              {
+                "world": "A",
+                "initial_sha256": "da0f65ee3bf6ab84e38433333227dd9ef85b3b41764df87a3dba74eaf2942ff7",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-362c8642088be4aae0fced0e"
+                },
+                "first_observation_sha256": "7f0d54de23e3b7d040c9980d999301593fd90eabc023062efb7b1db651b45a58",
+                "optimal_next_documents": [
+                  "invoice-doc-16b1d937851d4cffdcd7ab86"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "journal-doc-17430a33afe14e07dcc697a9",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "contract-5517b625db4e5ffe7dd7a278",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "contract-5517b625db4e5ffe7dd7a278",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              },
+              {
+                "world": "B",
+                "initial_sha256": "da0f65ee3bf6ab84e38433333227dd9ef85b3b41764df87a3dba74eaf2942ff7",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-362c8642088be4aae0fced0e"
+                },
+                "first_observation_sha256": "5bad028d5a5586d8ab442494215f43222411480347d639cc80b2b53a6b3dd839",
+                "optimal_next_documents": [
+                  "invoice-doc-e7f38b0e9dbcfcc8d07d5337"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "journal-doc-17430a33afe14e07dcc697a9",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "contract-5517b625db4e5ffe7dd7a278",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "contract-5517b625db4e5ffe7dd7a278",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              }
+            ],
+            "changed_optimal_actions": true,
+            "learned_switched": false
+          },
+          {
+            "family": "service_milestone",
+            "index": 3,
+            "seed": 86657532282265276630434128969667112139,
+            "worlds": [
+              {
+                "world": "A",
+                "initial_sha256": "9f3d792cbe53420874b16e1cf05600ae1779d13a76c1b3164ad1b0ccc9f3024e",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-79f91d3993ac23e5a706ff34"
+                },
+                "first_observation_sha256": "38b1389bef6cdbdcbe6be71d0c838cadcbd94c3950a29d9ada1d845090ad2f5e",
+                "optimal_next_documents": [
+                  "invoice-doc-bc8822056d349d0971b77d36"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "journal-doc-162134845ef7d9a6d82349ae",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "bank-db17284bb0e3480cd3e0ded2",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "bank-db17284bb0e3480cd3e0ded2",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              },
+              {
+                "world": "B",
+                "initial_sha256": "9f3d792cbe53420874b16e1cf05600ae1779d13a76c1b3164ad1b0ccc9f3024e",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-79f91d3993ac23e5a706ff34"
+                },
+                "first_observation_sha256": "5e7fc9a7570a11fd6002b4ed1289ebaab190d2efa47e539f5802c432a4e8aa4a",
+                "optimal_next_documents": [
+                  "invoice-doc-2b3f917ae5b38ded53458888"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "journal-doc-162134845ef7d9a6d82349ae",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "bank-db17284bb0e3480cd3e0ded2",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "bank-db17284bb0e3480cd3e0ded2",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              }
+            ],
+            "changed_optimal_actions": true,
+            "learned_switched": false
+          }
+        ],
+        "summary": {
+          "learned": {
+            "optimal_fraction": 0.0,
+            "reward": -1.0,
+            "f1": 0.0
+          },
+          "untrained": {
+            "optimal_fraction": 0.0,
+            "reward": -1.0,
+            "f1": 0.0
+          },
+          "fixed": {
+            "optimal_fraction": 0.0,
+            "reward": -1.0,
+            "f1": 0.0
+          }
+        },
+        "switched_pairs": 0,
+        "different_optimal_pairs": 8,
+        "scope": "Controlled reference-following decision after one common actual source query, three-action horizon; not an end-to-end training benchmark or a currency-generalization proof."
+      }
+    },
+    {
+      "training_family": "service_milestone",
+      "replicate": 0,
+      "result": {
+        "format": "auditforge-adaptive-source-pairs-v1",
+        "root_seed": 202622071,
+        "independent_base_companies": 8,
+        "counterfactual_worlds": 16,
+        "rows": [
+          {
+            "family": "procurement",
+            "index": 0,
+            "seed": 88907964002331687868588557402458370052,
+            "worlds": [
+              {
+                "world": "A",
+                "initial_sha256": "185ee115ec7b82174fd374fc0a9248154dead0d454dce33619a1ee6c0b82be3b",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-53c38f605d86361a0e5d9ec8"
+                },
+                "first_observation_sha256": "42e47b2531b439a680c52f5e19f5a6a365124f5e8af914ab9b2487291d31b21c",
+                "optimal_next_documents": [
+                  "invoice-doc-db9dbffa10527c8d1fd0f08b"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "journal-doc-419e71ca1e99422139363d4f",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "allocation-f4c779bc54f654777060fd37",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "allocation-f4c779bc54f654777060fd37",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              },
+              {
+                "world": "B",
+                "initial_sha256": "185ee115ec7b82174fd374fc0a9248154dead0d454dce33619a1ee6c0b82be3b",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-53c38f605d86361a0e5d9ec8"
+                },
+                "first_observation_sha256": "6f649a3ba1a562ba054bf1d7c2d3218a141957c3e32720f2210f69274177d515",
+                "optimal_next_documents": [
+                  "invoice-doc-0afbb683ea184f22bda0bb56"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "journal-doc-419e71ca1e99422139363d4f",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "allocation-f4c779bc54f654777060fd37",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "allocation-f4c779bc54f654777060fd37",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              }
+            ],
+            "changed_optimal_actions": true,
+            "learned_switched": false
+          },
+          {
+            "family": "procurement",
+            "index": 1,
+            "seed": 218109248604963420955213056187770285651,
+            "worlds": [
+              {
+                "world": "A",
+                "initial_sha256": "1d62cde47b8dad103d479958e1237ac9df8aab60c73a9c9f8152227b49df7f61",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-0e37a951b48cf6c508f77312"
+                },
+                "first_observation_sha256": "8951b0684a3ff29cec5432f3437ba0941c6fa0d8919e5550c87a0cf403ee0938",
+                "optimal_next_documents": [
+                  "invoice-doc-cca11760b69476504c9e84c2"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "journal-doc-8cedf506891ef1664302e414",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "payment-doc-7641e08ea65486205338aaa5",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "payment-doc-7641e08ea65486205338aaa5",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              },
+              {
+                "world": "B",
+                "initial_sha256": "1d62cde47b8dad103d479958e1237ac9df8aab60c73a9c9f8152227b49df7f61",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-0e37a951b48cf6c508f77312"
+                },
+                "first_observation_sha256": "051922c567c199d24b457e1798832178fc8875cf5fb8d86e258231a9cd593d88",
+                "optimal_next_documents": [
+                  "invoice-doc-eab71b34856f611cc4df4e5f"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "journal-doc-8cedf506891ef1664302e414",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "payment-doc-7641e08ea65486205338aaa5",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "payment-doc-7641e08ea65486205338aaa5",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              }
+            ],
+            "changed_optimal_actions": true,
+            "learned_switched": false
+          },
+          {
+            "family": "procurement",
+            "index": 2,
+            "seed": 255049746131908336364019607645511748948,
+            "worlds": [
+              {
+                "world": "A",
+                "initial_sha256": "a01913ea6577f5dd0376f1423452158a61743122d950a6d59baee3b5e24ff2a4",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-8bbf8e3a60990bade39ad565"
+                },
+                "first_observation_sha256": "4194c0033b5f2c8a084d239c1bb250bc574ccb92e4f37ca1c90cabeec25b4a3e",
+                "optimal_next_documents": [
+                  "invoice-doc-bb720c2d31aef63ec68cb223"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "journal-doc-ef999589ea9f8bb076fa3bd5",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "payment-doc-80ef01128c94dcc225d13b36",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "payment-doc-80ef01128c94dcc225d13b36",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              },
+              {
+                "world": "B",
+                "initial_sha256": "a01913ea6577f5dd0376f1423452158a61743122d950a6d59baee3b5e24ff2a4",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-8bbf8e3a60990bade39ad565"
+                },
+                "first_observation_sha256": "466f4bf562ac5b61cfccec2e5af2bbff4a4fb2e5a39bb725d7c8df844f822ca9",
+                "optimal_next_documents": [
+                  "invoice-doc-45b37c5c69f9e44d00c16905"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "journal-doc-ef999589ea9f8bb076fa3bd5",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "payment-doc-80ef01128c94dcc225d13b36",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "payment-doc-80ef01128c94dcc225d13b36",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              }
+            ],
+            "changed_optimal_actions": true,
+            "learned_switched": false
+          },
+          {
+            "family": "procurement",
+            "index": 3,
+            "seed": 333684469859230056301358075537403802320,
+            "worlds": [
+              {
+                "world": "A",
+                "initial_sha256": "7409e6c2f2466f6a0609dee40dceb1c9132b0b8ad304179dd21c051cec7d3409",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-9c2ea0c1c963b362830a123e"
+                },
+                "first_observation_sha256": "038444cbaf6da4e62b3bf6af09100870f3d49540abe63387aaded062f027e15b",
+                "optimal_next_documents": [
+                  "invoice-doc-02cf01b1b37e9002c06d4aa2"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "journal-doc-e7d7188d3f01b48e5c9e0b41",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "journal-doc-9e21d7377168c58cb02e9347",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "journal-doc-9e21d7377168c58cb02e9347",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              },
+              {
+                "world": "B",
+                "initial_sha256": "7409e6c2f2466f6a0609dee40dceb1c9132b0b8ad304179dd21c051cec7d3409",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-9c2ea0c1c963b362830a123e"
+                },
+                "first_observation_sha256": "d92a2072f718f7afff86261e99d41a112e524c7cccd69241dab8b7ad4393c5aa",
+                "optimal_next_documents": [
+                  "invoice-doc-af79a08668f38021e712bc50"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "journal-doc-e7d7188d3f01b48e5c9e0b41",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "journal-doc-9e21d7377168c58cb02e9347",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "journal-doc-9e21d7377168c58cb02e9347",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              }
+            ],
+            "changed_optimal_actions": true,
+            "learned_switched": false
+          },
+          {
+            "family": "service_milestone",
+            "index": 0,
+            "seed": 289524404569530306687326648176106741738,
+            "worlds": [
+              {
+                "world": "A",
+                "initial_sha256": "beb9fee6df0b238eeea839e2f0af14616ce4e13c2d68a26000dd2977d16d1a6f",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-6c9f00cbee3e7da808b988a6"
+                },
+                "first_observation_sha256": "2e0421850c2eb83d83ec4966b08084c2fce2b08ccc52929d38e345d900d71c5d",
+                "optimal_next_documents": [
+                  "invoice-doc-205c530d45c6820992c17fbe"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "journal-doc-41d5ab5abc15e734ff323730",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "invoice-doc-45347cfc1e9b79e4cc27bf4e",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "invoice-doc-45347cfc1e9b79e4cc27bf4e",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              },
+              {
+                "world": "B",
+                "initial_sha256": "beb9fee6df0b238eeea839e2f0af14616ce4e13c2d68a26000dd2977d16d1a6f",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-6c9f00cbee3e7da808b988a6"
+                },
+                "first_observation_sha256": "182243e9354900c78d97c1859bf753021b6eba9cc6510c9ec12d235ea39da399",
+                "optimal_next_documents": [
+                  "invoice-doc-653162916d194063547c9c50"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "journal-doc-41d5ab5abc15e734ff323730",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "invoice-doc-45347cfc1e9b79e4cc27bf4e",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "invoice-doc-45347cfc1e9b79e4cc27bf4e",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              }
+            ],
+            "changed_optimal_actions": true,
+            "learned_switched": false
+          },
+          {
+            "family": "service_milestone",
+            "index": 1,
+            "seed": 288700407272901658366475341479701456730,
+            "worlds": [
+              {
+                "world": "A",
+                "initial_sha256": "78a3b09808973f80af90e4dd913f7560604a0e8c7f609d159cf0ebd3b3e282e3",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-3528103c4fd2a70236622909"
+                },
+                "first_observation_sha256": "d7fa683f7c36151b7d690f543ca6c2443e215eccaaddf7792efd73bdc705b5ff",
+                "optimal_next_documents": [
+                  "invoice-doc-de6f30d00c18c72d20a1ba8e"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "journal-doc-549710c5a62da4c31cad3f9f",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "journal-doc-549710c5a62da4c31cad3f9f",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "journal-doc-549710c5a62da4c31cad3f9f",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              },
+              {
+                "world": "B",
+                "initial_sha256": "78a3b09808973f80af90e4dd913f7560604a0e8c7f609d159cf0ebd3b3e282e3",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-3528103c4fd2a70236622909"
+                },
+                "first_observation_sha256": "92b447a26b20740baa06d69a6b7feffc049d20208b0fec719dfcca1ab04831e9",
+                "optimal_next_documents": [
+                  "invoice-doc-c867aa88eb1c6422dd2b3e2e"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "journal-doc-549710c5a62da4c31cad3f9f",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "journal-doc-549710c5a62da4c31cad3f9f",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "journal-doc-549710c5a62da4c31cad3f9f",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              }
+            ],
+            "changed_optimal_actions": true,
+            "learned_switched": false
+          },
+          {
+            "family": "service_milestone",
+            "index": 2,
+            "seed": 217214207870796008736542203847435440649,
+            "worlds": [
+              {
+                "world": "A",
+                "initial_sha256": "da0f65ee3bf6ab84e38433333227dd9ef85b3b41764df87a3dba74eaf2942ff7",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-362c8642088be4aae0fced0e"
+                },
+                "first_observation_sha256": "7f0d54de23e3b7d040c9980d999301593fd90eabc023062efb7b1db651b45a58",
+                "optimal_next_documents": [
+                  "invoice-doc-16b1d937851d4cffdcd7ab86"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "journal-doc-17430a33afe14e07dcc697a9",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "contract-5517b625db4e5ffe7dd7a278",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "contract-5517b625db4e5ffe7dd7a278",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              },
+              {
+                "world": "B",
+                "initial_sha256": "da0f65ee3bf6ab84e38433333227dd9ef85b3b41764df87a3dba74eaf2942ff7",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-362c8642088be4aae0fced0e"
+                },
+                "first_observation_sha256": "5bad028d5a5586d8ab442494215f43222411480347d639cc80b2b53a6b3dd839",
+                "optimal_next_documents": [
+                  "invoice-doc-e7f38b0e9dbcfcc8d07d5337"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "journal-doc-17430a33afe14e07dcc697a9",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "contract-5517b625db4e5ffe7dd7a278",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "contract-5517b625db4e5ffe7dd7a278",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              }
+            ],
+            "changed_optimal_actions": true,
+            "learned_switched": false
+          },
+          {
+            "family": "service_milestone",
+            "index": 3,
+            "seed": 86657532282265276630434128969667112139,
+            "worlds": [
+              {
+                "world": "A",
+                "initial_sha256": "9f3d792cbe53420874b16e1cf05600ae1779d13a76c1b3164ad1b0ccc9f3024e",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-79f91d3993ac23e5a706ff34"
+                },
+                "first_observation_sha256": "38b1389bef6cdbdcbe6be71d0c838cadcbd94c3950a29d9ada1d845090ad2f5e",
+                "optimal_next_documents": [
+                  "invoice-doc-bc8822056d349d0971b77d36"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "journal-doc-162134845ef7d9a6d82349ae",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "bank-db17284bb0e3480cd3e0ded2",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "bank-db17284bb0e3480cd3e0ded2",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              },
+              {
+                "world": "B",
+                "initial_sha256": "9f3d792cbe53420874b16e1cf05600ae1779d13a76c1b3164ad1b0ccc9f3024e",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-79f91d3993ac23e5a706ff34"
+                },
+                "first_observation_sha256": "5e7fc9a7570a11fd6002b4ed1289ebaab190d2efa47e539f5802c432a4e8aa4a",
+                "optimal_next_documents": [
+                  "invoice-doc-2b3f917ae5b38ded53458888"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "journal-doc-162134845ef7d9a6d82349ae",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "bank-db17284bb0e3480cd3e0ded2",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "bank-db17284bb0e3480cd3e0ded2",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              }
+            ],
+            "changed_optimal_actions": true,
+            "learned_switched": false
+          }
+        ],
+        "summary": {
+          "learned": {
+            "optimal_fraction": 0.0,
+            "reward": -1.0,
+            "f1": 0.0
+          },
+          "untrained": {
+            "optimal_fraction": 0.0,
+            "reward": -1.0,
+            "f1": 0.0
+          },
+          "fixed": {
+            "optimal_fraction": 0.0,
+            "reward": -1.0,
+            "f1": 0.0
+          }
+        },
+        "switched_pairs": 0,
+        "different_optimal_pairs": 8,
+        "scope": "Controlled reference-following decision after one common actual source query, three-action horizon; not an end-to-end training benchmark or a currency-generalization proof."
+      }
+    },
+    {
+      "training_family": "service_milestone",
+      "replicate": 1,
+      "result": {
+        "format": "auditforge-adaptive-source-pairs-v1",
+        "root_seed": 202622071,
+        "independent_base_companies": 8,
+        "counterfactual_worlds": 16,
+        "rows": [
+          {
+            "family": "procurement",
+            "index": 0,
+            "seed": 88907964002331687868588557402458370052,
+            "worlds": [
+              {
+                "world": "A",
+                "initial_sha256": "185ee115ec7b82174fd374fc0a9248154dead0d454dce33619a1ee6c0b82be3b",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-53c38f605d86361a0e5d9ec8"
+                },
+                "first_observation_sha256": "42e47b2531b439a680c52f5e19f5a6a365124f5e8af914ab9b2487291d31b21c",
+                "optimal_next_documents": [
+                  "invoice-doc-db9dbffa10527c8d1fd0f08b"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "payment-doc-f49f0d688103d19e51442b0a",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "allocation-f4c779bc54f654777060fd37",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "allocation-f4c779bc54f654777060fd37",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              },
+              {
+                "world": "B",
+                "initial_sha256": "185ee115ec7b82174fd374fc0a9248154dead0d454dce33619a1ee6c0b82be3b",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-53c38f605d86361a0e5d9ec8"
+                },
+                "first_observation_sha256": "6f649a3ba1a562ba054bf1d7c2d3218a141957c3e32720f2210f69274177d515",
+                "optimal_next_documents": [
+                  "invoice-doc-0afbb683ea184f22bda0bb56"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "payment-doc-f49f0d688103d19e51442b0a",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "allocation-f4c779bc54f654777060fd37",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "allocation-f4c779bc54f654777060fd37",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              }
+            ],
+            "changed_optimal_actions": true,
+            "learned_switched": false
+          },
+          {
+            "family": "procurement",
+            "index": 1,
+            "seed": 218109248604963420955213056187770285651,
+            "worlds": [
+              {
+                "world": "A",
+                "initial_sha256": "1d62cde47b8dad103d479958e1237ac9df8aab60c73a9c9f8152227b49df7f61",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-0e37a951b48cf6c508f77312"
+                },
+                "first_observation_sha256": "8951b0684a3ff29cec5432f3437ba0941c6fa0d8919e5550c87a0cf403ee0938",
+                "optimal_next_documents": [
+                  "invoice-doc-cca11760b69476504c9e84c2"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "payment-doc-7bc74f9485b43bc14b511e11",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "payment-doc-7641e08ea65486205338aaa5",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "payment-doc-7641e08ea65486205338aaa5",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              },
+              {
+                "world": "B",
+                "initial_sha256": "1d62cde47b8dad103d479958e1237ac9df8aab60c73a9c9f8152227b49df7f61",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-0e37a951b48cf6c508f77312"
+                },
+                "first_observation_sha256": "051922c567c199d24b457e1798832178fc8875cf5fb8d86e258231a9cd593d88",
+                "optimal_next_documents": [
+                  "invoice-doc-eab71b34856f611cc4df4e5f"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "payment-doc-7bc74f9485b43bc14b511e11",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "payment-doc-7641e08ea65486205338aaa5",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "payment-doc-7641e08ea65486205338aaa5",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              }
+            ],
+            "changed_optimal_actions": true,
+            "learned_switched": false
+          },
+          {
+            "family": "procurement",
+            "index": 2,
+            "seed": 255049746131908336364019607645511748948,
+            "worlds": [
+              {
+                "world": "A",
+                "initial_sha256": "a01913ea6577f5dd0376f1423452158a61743122d950a6d59baee3b5e24ff2a4",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-8bbf8e3a60990bade39ad565"
+                },
+                "first_observation_sha256": "4194c0033b5f2c8a084d239c1bb250bc574ccb92e4f37ca1c90cabeec25b4a3e",
+                "optimal_next_documents": [
+                  "invoice-doc-bb720c2d31aef63ec68cb223"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "payment-doc-36585c6d302e40313125272c",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "payment-doc-80ef01128c94dcc225d13b36",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "payment-doc-80ef01128c94dcc225d13b36",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              },
+              {
+                "world": "B",
+                "initial_sha256": "a01913ea6577f5dd0376f1423452158a61743122d950a6d59baee3b5e24ff2a4",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-8bbf8e3a60990bade39ad565"
+                },
+                "first_observation_sha256": "466f4bf562ac5b61cfccec2e5af2bbff4a4fb2e5a39bb725d7c8df844f822ca9",
+                "optimal_next_documents": [
+                  "invoice-doc-45b37c5c69f9e44d00c16905"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "payment-doc-36585c6d302e40313125272c",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "payment-doc-80ef01128c94dcc225d13b36",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "payment-doc-80ef01128c94dcc225d13b36",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              }
+            ],
+            "changed_optimal_actions": true,
+            "learned_switched": false
+          },
+          {
+            "family": "procurement",
+            "index": 3,
+            "seed": 333684469859230056301358075537403802320,
+            "worlds": [
+              {
+                "world": "A",
+                "initial_sha256": "7409e6c2f2466f6a0609dee40dceb1c9132b0b8ad304179dd21c051cec7d3409",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-9c2ea0c1c963b362830a123e"
+                },
+                "first_observation_sha256": "038444cbaf6da4e62b3bf6af09100870f3d49540abe63387aaded062f027e15b",
+                "optimal_next_documents": [
+                  "invoice-doc-02cf01b1b37e9002c06d4aa2"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "payment-doc-db608fc852f189272a5ae793",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "journal-doc-9e21d7377168c58cb02e9347",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "journal-doc-9e21d7377168c58cb02e9347",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              },
+              {
+                "world": "B",
+                "initial_sha256": "7409e6c2f2466f6a0609dee40dceb1c9132b0b8ad304179dd21c051cec7d3409",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-9c2ea0c1c963b362830a123e"
+                },
+                "first_observation_sha256": "d92a2072f718f7afff86261e99d41a112e524c7cccd69241dab8b7ad4393c5aa",
+                "optimal_next_documents": [
+                  "invoice-doc-af79a08668f38021e712bc50"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "payment-doc-db608fc852f189272a5ae793",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "journal-doc-9e21d7377168c58cb02e9347",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "journal-doc-9e21d7377168c58cb02e9347",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              }
+            ],
+            "changed_optimal_actions": true,
+            "learned_switched": false
+          },
+          {
+            "family": "service_milestone",
+            "index": 0,
+            "seed": 289524404569530306687326648176106741738,
+            "worlds": [
+              {
+                "world": "A",
+                "initial_sha256": "beb9fee6df0b238eeea839e2f0af14616ce4e13c2d68a26000dd2977d16d1a6f",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-6c9f00cbee3e7da808b988a6"
+                },
+                "first_observation_sha256": "2e0421850c2eb83d83ec4966b08084c2fce2b08ccc52929d38e345d900d71c5d",
+                "optimal_next_documents": [
+                  "invoice-doc-205c530d45c6820992c17fbe"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "payment-doc-0fa079e518a4937609080cc2",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "invoice-doc-45347cfc1e9b79e4cc27bf4e",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "invoice-doc-45347cfc1e9b79e4cc27bf4e",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              },
+              {
+                "world": "B",
+                "initial_sha256": "beb9fee6df0b238eeea839e2f0af14616ce4e13c2d68a26000dd2977d16d1a6f",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-6c9f00cbee3e7da808b988a6"
+                },
+                "first_observation_sha256": "182243e9354900c78d97c1859bf753021b6eba9cc6510c9ec12d235ea39da399",
+                "optimal_next_documents": [
+                  "invoice-doc-653162916d194063547c9c50"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "payment-doc-0fa079e518a4937609080cc2",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "invoice-doc-45347cfc1e9b79e4cc27bf4e",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "invoice-doc-45347cfc1e9b79e4cc27bf4e",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              }
+            ],
+            "changed_optimal_actions": true,
+            "learned_switched": false
+          },
+          {
+            "family": "service_milestone",
+            "index": 1,
+            "seed": 288700407272901658366475341479701456730,
+            "worlds": [
+              {
+                "world": "A",
+                "initial_sha256": "78a3b09808973f80af90e4dd913f7560604a0e8c7f609d159cf0ebd3b3e282e3",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-3528103c4fd2a70236622909"
+                },
+                "first_observation_sha256": "d7fa683f7c36151b7d690f543ca6c2443e215eccaaddf7792efd73bdc705b5ff",
+                "optimal_next_documents": [
+                  "invoice-doc-de6f30d00c18c72d20a1ba8e"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "payment-doc-ca7426f5e66cab14fed09a84",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "journal-doc-549710c5a62da4c31cad3f9f",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "journal-doc-549710c5a62da4c31cad3f9f",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              },
+              {
+                "world": "B",
+                "initial_sha256": "78a3b09808973f80af90e4dd913f7560604a0e8c7f609d159cf0ebd3b3e282e3",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-3528103c4fd2a70236622909"
+                },
+                "first_observation_sha256": "92b447a26b20740baa06d69a6b7feffc049d20208b0fec719dfcca1ab04831e9",
+                "optimal_next_documents": [
+                  "invoice-doc-c867aa88eb1c6422dd2b3e2e"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "payment-doc-ca7426f5e66cab14fed09a84",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "journal-doc-549710c5a62da4c31cad3f9f",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "journal-doc-549710c5a62da4c31cad3f9f",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              }
+            ],
+            "changed_optimal_actions": true,
+            "learned_switched": false
+          },
+          {
+            "family": "service_milestone",
+            "index": 2,
+            "seed": 217214207870796008736542203847435440649,
+            "worlds": [
+              {
+                "world": "A",
+                "initial_sha256": "da0f65ee3bf6ab84e38433333227dd9ef85b3b41764df87a3dba74eaf2942ff7",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-362c8642088be4aae0fced0e"
+                },
+                "first_observation_sha256": "7f0d54de23e3b7d040c9980d999301593fd90eabc023062efb7b1db651b45a58",
+                "optimal_next_documents": [
+                  "invoice-doc-16b1d937851d4cffdcd7ab86"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "payment-doc-49e6d564205d143f50d9fd0d",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "contract-5517b625db4e5ffe7dd7a278",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "contract-5517b625db4e5ffe7dd7a278",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              },
+              {
+                "world": "B",
+                "initial_sha256": "da0f65ee3bf6ab84e38433333227dd9ef85b3b41764df87a3dba74eaf2942ff7",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-362c8642088be4aae0fced0e"
+                },
+                "first_observation_sha256": "5bad028d5a5586d8ab442494215f43222411480347d639cc80b2b53a6b3dd839",
+                "optimal_next_documents": [
+                  "invoice-doc-e7f38b0e9dbcfcc8d07d5337"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "payment-doc-49e6d564205d143f50d9fd0d",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "contract-5517b625db4e5ffe7dd7a278",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "contract-5517b625db4e5ffe7dd7a278",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              }
+            ],
+            "changed_optimal_actions": true,
+            "learned_switched": false
+          },
+          {
+            "family": "service_milestone",
+            "index": 3,
+            "seed": 86657532282265276630434128969667112139,
+            "worlds": [
+              {
+                "world": "A",
+                "initial_sha256": "9f3d792cbe53420874b16e1cf05600ae1779d13a76c1b3164ad1b0ccc9f3024e",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-79f91d3993ac23e5a706ff34"
+                },
+                "first_observation_sha256": "38b1389bef6cdbdcbe6be71d0c838cadcbd94c3950a29d9ada1d845090ad2f5e",
+                "optimal_next_documents": [
+                  "invoice-doc-bc8822056d349d0971b77d36"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "payment-doc-d4dcf03e13d54adbe9fda1be",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "bank-db17284bb0e3480cd3e0ded2",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "bank-db17284bb0e3480cd3e0ded2",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              },
+              {
+                "world": "B",
+                "initial_sha256": "9f3d792cbe53420874b16e1cf05600ae1779d13a76c1b3164ad1b0ccc9f3024e",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-79f91d3993ac23e5a706ff34"
+                },
+                "first_observation_sha256": "5e7fc9a7570a11fd6002b4ed1289ebaab190d2efa47e539f5802c432a4e8aa4a",
+                "optimal_next_documents": [
+                  "invoice-doc-2b3f917ae5b38ded53458888"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "payment-doc-d4dcf03e13d54adbe9fda1be",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "bank-db17284bb0e3480cd3e0ded2",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "bank-db17284bb0e3480cd3e0ded2",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              }
+            ],
+            "changed_optimal_actions": true,
+            "learned_switched": false
+          }
+        ],
+        "summary": {
+          "learned": {
+            "optimal_fraction": 0.0,
+            "reward": -1.0,
+            "f1": 0.0
+          },
+          "untrained": {
+            "optimal_fraction": 0.0,
+            "reward": -1.0,
+            "f1": 0.0
+          },
+          "fixed": {
+            "optimal_fraction": 0.0,
+            "reward": -1.0,
+            "f1": 0.0
+          }
+        },
+        "switched_pairs": 0,
+        "different_optimal_pairs": 8,
+        "scope": "Controlled reference-following decision after one common actual source query, three-action horizon; not an end-to-end training benchmark or a currency-generalization proof."
+      }
+    },
+    {
+      "training_family": "service_milestone",
+      "replicate": 2,
+      "result": {
+        "format": "auditforge-adaptive-source-pairs-v1",
+        "root_seed": 202622071,
+        "independent_base_companies": 8,
+        "counterfactual_worlds": 16,
+        "rows": [
+          {
+            "family": "procurement",
+            "index": 0,
+            "seed": 88907964002331687868588557402458370052,
+            "worlds": [
+              {
+                "world": "A",
+                "initial_sha256": "185ee115ec7b82174fd374fc0a9248154dead0d454dce33619a1ee6c0b82be3b",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-53c38f605d86361a0e5d9ec8"
+                },
+                "first_observation_sha256": "42e47b2531b439a680c52f5e19f5a6a365124f5e8af914ab9b2487291d31b21c",
+                "optimal_next_documents": [
+                  "invoice-doc-db9dbffa10527c8d1fd0f08b"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "payment-doc-f49f0d688103d19e51442b0a",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "allocation-f4c779bc54f654777060fd37",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "allocation-f4c779bc54f654777060fd37",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              },
+              {
+                "world": "B",
+                "initial_sha256": "185ee115ec7b82174fd374fc0a9248154dead0d454dce33619a1ee6c0b82be3b",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-53c38f605d86361a0e5d9ec8"
+                },
+                "first_observation_sha256": "6f649a3ba1a562ba054bf1d7c2d3218a141957c3e32720f2210f69274177d515",
+                "optimal_next_documents": [
+                  "invoice-doc-0afbb683ea184f22bda0bb56"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "payment-doc-f49f0d688103d19e51442b0a",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "allocation-f4c779bc54f654777060fd37",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "allocation-f4c779bc54f654777060fd37",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              }
+            ],
+            "changed_optimal_actions": true,
+            "learned_switched": false
+          },
+          {
+            "family": "procurement",
+            "index": 1,
+            "seed": 218109248604963420955213056187770285651,
+            "worlds": [
+              {
+                "world": "A",
+                "initial_sha256": "1d62cde47b8dad103d479958e1237ac9df8aab60c73a9c9f8152227b49df7f61",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-0e37a951b48cf6c508f77312"
+                },
+                "first_observation_sha256": "8951b0684a3ff29cec5432f3437ba0941c6fa0d8919e5550c87a0cf403ee0938",
+                "optimal_next_documents": [
+                  "invoice-doc-cca11760b69476504c9e84c2"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "payment-doc-7bc74f9485b43bc14b511e11",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "payment-doc-7641e08ea65486205338aaa5",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "payment-doc-7641e08ea65486205338aaa5",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              },
+              {
+                "world": "B",
+                "initial_sha256": "1d62cde47b8dad103d479958e1237ac9df8aab60c73a9c9f8152227b49df7f61",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-0e37a951b48cf6c508f77312"
+                },
+                "first_observation_sha256": "051922c567c199d24b457e1798832178fc8875cf5fb8d86e258231a9cd593d88",
+                "optimal_next_documents": [
+                  "invoice-doc-eab71b34856f611cc4df4e5f"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "payment-doc-7bc74f9485b43bc14b511e11",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "payment-doc-7641e08ea65486205338aaa5",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "payment-doc-7641e08ea65486205338aaa5",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              }
+            ],
+            "changed_optimal_actions": true,
+            "learned_switched": false
+          },
+          {
+            "family": "procurement",
+            "index": 2,
+            "seed": 255049746131908336364019607645511748948,
+            "worlds": [
+              {
+                "world": "A",
+                "initial_sha256": "a01913ea6577f5dd0376f1423452158a61743122d950a6d59baee3b5e24ff2a4",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-8bbf8e3a60990bade39ad565"
+                },
+                "first_observation_sha256": "4194c0033b5f2c8a084d239c1bb250bc574ccb92e4f37ca1c90cabeec25b4a3e",
+                "optimal_next_documents": [
+                  "invoice-doc-bb720c2d31aef63ec68cb223"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "payment-doc-36585c6d302e40313125272c",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "payment-doc-80ef01128c94dcc225d13b36",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "payment-doc-80ef01128c94dcc225d13b36",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              },
+              {
+                "world": "B",
+                "initial_sha256": "a01913ea6577f5dd0376f1423452158a61743122d950a6d59baee3b5e24ff2a4",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-8bbf8e3a60990bade39ad565"
+                },
+                "first_observation_sha256": "466f4bf562ac5b61cfccec2e5af2bbff4a4fb2e5a39bb725d7c8df844f822ca9",
+                "optimal_next_documents": [
+                  "invoice-doc-45b37c5c69f9e44d00c16905"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "payment-doc-36585c6d302e40313125272c",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "payment-doc-80ef01128c94dcc225d13b36",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "payment-doc-80ef01128c94dcc225d13b36",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              }
+            ],
+            "changed_optimal_actions": true,
+            "learned_switched": false
+          },
+          {
+            "family": "procurement",
+            "index": 3,
+            "seed": 333684469859230056301358075537403802320,
+            "worlds": [
+              {
+                "world": "A",
+                "initial_sha256": "7409e6c2f2466f6a0609dee40dceb1c9132b0b8ad304179dd21c051cec7d3409",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-9c2ea0c1c963b362830a123e"
+                },
+                "first_observation_sha256": "038444cbaf6da4e62b3bf6af09100870f3d49540abe63387aaded062f027e15b",
+                "optimal_next_documents": [
+                  "invoice-doc-02cf01b1b37e9002c06d4aa2"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "payment-doc-db608fc852f189272a5ae793",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "journal-doc-9e21d7377168c58cb02e9347",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "journal-doc-9e21d7377168c58cb02e9347",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              },
+              {
+                "world": "B",
+                "initial_sha256": "7409e6c2f2466f6a0609dee40dceb1c9132b0b8ad304179dd21c051cec7d3409",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-9c2ea0c1c963b362830a123e"
+                },
+                "first_observation_sha256": "d92a2072f718f7afff86261e99d41a112e524c7cccd69241dab8b7ad4393c5aa",
+                "optimal_next_documents": [
+                  "invoice-doc-af79a08668f38021e712bc50"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "payment-doc-db608fc852f189272a5ae793",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "journal-doc-9e21d7377168c58cb02e9347",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "journal-doc-9e21d7377168c58cb02e9347",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              }
+            ],
+            "changed_optimal_actions": true,
+            "learned_switched": false
+          },
+          {
+            "family": "service_milestone",
+            "index": 0,
+            "seed": 289524404569530306687326648176106741738,
+            "worlds": [
+              {
+                "world": "A",
+                "initial_sha256": "beb9fee6df0b238eeea839e2f0af14616ce4e13c2d68a26000dd2977d16d1a6f",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-6c9f00cbee3e7da808b988a6"
+                },
+                "first_observation_sha256": "2e0421850c2eb83d83ec4966b08084c2fce2b08ccc52929d38e345d900d71c5d",
+                "optimal_next_documents": [
+                  "invoice-doc-205c530d45c6820992c17fbe"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "payment-doc-0fa079e518a4937609080cc2",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "invoice-doc-45347cfc1e9b79e4cc27bf4e",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "invoice-doc-45347cfc1e9b79e4cc27bf4e",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              },
+              {
+                "world": "B",
+                "initial_sha256": "beb9fee6df0b238eeea839e2f0af14616ce4e13c2d68a26000dd2977d16d1a6f",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-6c9f00cbee3e7da808b988a6"
+                },
+                "first_observation_sha256": "182243e9354900c78d97c1859bf753021b6eba9cc6510c9ec12d235ea39da399",
+                "optimal_next_documents": [
+                  "invoice-doc-653162916d194063547c9c50"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "payment-doc-0fa079e518a4937609080cc2",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "invoice-doc-45347cfc1e9b79e4cc27bf4e",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "invoice-doc-45347cfc1e9b79e4cc27bf4e",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              }
+            ],
+            "changed_optimal_actions": true,
+            "learned_switched": false
+          },
+          {
+            "family": "service_milestone",
+            "index": 1,
+            "seed": 288700407272901658366475341479701456730,
+            "worlds": [
+              {
+                "world": "A",
+                "initial_sha256": "78a3b09808973f80af90e4dd913f7560604a0e8c7f609d159cf0ebd3b3e282e3",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-3528103c4fd2a70236622909"
+                },
+                "first_observation_sha256": "d7fa683f7c36151b7d690f543ca6c2443e215eccaaddf7792efd73bdc705b5ff",
+                "optimal_next_documents": [
+                  "invoice-doc-de6f30d00c18c72d20a1ba8e"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "payment-doc-ca7426f5e66cab14fed09a84",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "journal-doc-549710c5a62da4c31cad3f9f",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "journal-doc-549710c5a62da4c31cad3f9f",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              },
+              {
+                "world": "B",
+                "initial_sha256": "78a3b09808973f80af90e4dd913f7560604a0e8c7f609d159cf0ebd3b3e282e3",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-3528103c4fd2a70236622909"
+                },
+                "first_observation_sha256": "92b447a26b20740baa06d69a6b7feffc049d20208b0fec719dfcca1ab04831e9",
+                "optimal_next_documents": [
+                  "invoice-doc-c867aa88eb1c6422dd2b3e2e"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "payment-doc-ca7426f5e66cab14fed09a84",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "journal-doc-549710c5a62da4c31cad3f9f",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "journal-doc-549710c5a62da4c31cad3f9f",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              }
+            ],
+            "changed_optimal_actions": true,
+            "learned_switched": false
+          },
+          {
+            "family": "service_milestone",
+            "index": 2,
+            "seed": 217214207870796008736542203847435440649,
+            "worlds": [
+              {
+                "world": "A",
+                "initial_sha256": "da0f65ee3bf6ab84e38433333227dd9ef85b3b41764df87a3dba74eaf2942ff7",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-362c8642088be4aae0fced0e"
+                },
+                "first_observation_sha256": "7f0d54de23e3b7d040c9980d999301593fd90eabc023062efb7b1db651b45a58",
+                "optimal_next_documents": [
+                  "invoice-doc-16b1d937851d4cffdcd7ab86"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "payment-doc-49e6d564205d143f50d9fd0d",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "contract-5517b625db4e5ffe7dd7a278",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "contract-5517b625db4e5ffe7dd7a278",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              },
+              {
+                "world": "B",
+                "initial_sha256": "da0f65ee3bf6ab84e38433333227dd9ef85b3b41764df87a3dba74eaf2942ff7",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-362c8642088be4aae0fced0e"
+                },
+                "first_observation_sha256": "5bad028d5a5586d8ab442494215f43222411480347d639cc80b2b53a6b3dd839",
+                "optimal_next_documents": [
+                  "invoice-doc-e7f38b0e9dbcfcc8d07d5337"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "payment-doc-49e6d564205d143f50d9fd0d",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "contract-5517b625db4e5ffe7dd7a278",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "contract-5517b625db4e5ffe7dd7a278",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              }
+            ],
+            "changed_optimal_actions": true,
+            "learned_switched": false
+          },
+          {
+            "family": "service_milestone",
+            "index": 3,
+            "seed": 86657532282265276630434128969667112139,
+            "worlds": [
+              {
+                "world": "A",
+                "initial_sha256": "9f3d792cbe53420874b16e1cf05600ae1779d13a76c1b3164ad1b0ccc9f3024e",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-79f91d3993ac23e5a706ff34"
+                },
+                "first_observation_sha256": "38b1389bef6cdbdcbe6be71d0c838cadcbd94c3950a29d9ada1d845090ad2f5e",
+                "optimal_next_documents": [
+                  "invoice-doc-bc8822056d349d0971b77d36"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "payment-doc-d4dcf03e13d54adbe9fda1be",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "bank-db17284bb0e3480cd3e0ded2",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "bank-db17284bb0e3480cd3e0ded2",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              },
+              {
+                "world": "B",
+                "initial_sha256": "9f3d792cbe53420874b16e1cf05600ae1779d13a76c1b3164ad1b0ccc9f3024e",
+                "first_action": {
+                  "tool": "get_document",
+                  "doc_id": "journal-doc-79f91d3993ac23e5a706ff34"
+                },
+                "first_observation_sha256": "5e7fc9a7570a11fd6002b4ed1289ebaab190d2efa47e539f5802c432a4e8aa4a",
+                "optimal_next_documents": [
+                  "invoice-doc-2b3f917ae5b38ded53458888"
+                ],
+                "outcomes": {
+                  "learned": {
+                    "document_id": "payment-doc-d4dcf03e13d54adbe9fda1be",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "untrained": {
+                    "document_id": "bank-db17284bb0e3480cd3e0ded2",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  },
+                  "fixed": {
+                    "document_id": "bank-db17284bb0e3480cd3e0ded2",
+                    "optimal": false,
+                    "f1": 0.0,
+                    "reward": -1.0
+                  }
+                }
+              }
+            ],
+            "changed_optimal_actions": true,
+            "learned_switched": false
+          }
+        ],
+        "summary": {
+          "learned": {
+            "optimal_fraction": 0.0,
+            "reward": -1.0,
+            "f1": 0.0
+          },
+          "untrained": {
+            "optimal_fraction": 0.0,
+            "reward": -1.0,
+            "f1": 0.0
+          },
+          "fixed": {
+            "optimal_fraction": 0.0,
+            "reward": -1.0,
+            "f1": 0.0
+          }
+        },
+        "switched_pairs": 0,
+        "different_optimal_pairs": 8,
+        "scope": "Controlled reference-following decision after one common actual source query, three-action horizon; not an end-to-end training benchmark or a currency-generalization proof."
+      }
+    }
+  ]
+}

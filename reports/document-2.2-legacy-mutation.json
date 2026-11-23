@@ -1,0 +1,388 @@
+{
+  "scope": "Local business/accounting/contract mutation testing; not official grading.",
+  "created_utc": "2026-11-23T13:49:41.624692+00:00",
+  "python": "3.11.1 (tags/v3.11.1:a7a450f, Dec  6 2022, 19:58:39) [MSC v.1934 64 bit (AMD64)]",
+  "command": [
+    "python",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-v",
+    "-f"
+  ],
+  "source_hashes": {
+    "auditforge\\__init__.py": "ca1bf04c2acfdf1451ae7041274cafd00c229f446c2843bb38830b2e698eb441",
+    "auditforge\\agent_only.py": "f9534959cc687203b2a4e98bc8252f20dd46728d8f123d5b4d5a6ca304fee5c1",
+    "auditforge\\agent_runner.py": "978a91d43d6989a7cf9d238e05cdb338c4527ce81f5e0f5bff50257883bcd842",
+    "auditforge\\batch_settlement.py": "0824ba67049c6e1a0364d564f5a6f16025f4e008bfe2706e09ec99d5189b7f23",
+    "auditforge\\counterfactual.py": "bd5afc8055e432d21ba4c8fccdc9b92c590c723833e91b5680af940a7144a958",
+    "auditforge\\document_agent.py": "714a8b02c3688af7fe023e918788fdd688cfeafe4a42d02b868025e8afc9300a",
+    "auditforge\\document_policy.py": "83aff4e09b6af91ba578fb8acd3bf60a7c7b8de1ebd8af7094570da842c66b60",
+    "auditforge\\document_training.py": "a8fe256ea48c18d884cc4f6fd8b5c3e70a11c815f322dca01e53819711e8680c",
+    "auditforge\\document_world.py": "0d6f714ed538c1985e3fd960230a54155f6a8d66e881c953073cd7fe96209913",
+    "auditforge\\documentary_decode.py": "a27f70ced8f362ae24c39f0cd449d1af9889b7a59dce10203f4001ba6daaee5f",
+    "auditforge\\efficient_training.py": "3aaa0db1febecead184194d993aef7cd3bfeedc0a072cbfd8cac245a7e11f02a",
+    "auditforge\\env.py": "2a54be9e098458cc5c9bc02baa8a77cb85d36a60c438b74b02e88647f1d7561f",
+    "auditforge\\export.py": "8c9e68116203fa016458bf9643c18d624cf573dcec474827048748d08028f80e",
+    "auditforge\\financial_audit.py": "f47a9de44a9fd6d390d8e791688da535e9bc722412260d0e485732f8771a0abc",
+    "auditforge\\generator.py": "527f57928c92ec0ada8c2aa6e144e4bf2d9d26a6e069cd98afe210972c27e65d",
+    "auditforge\\independent_world.py": "c0eacd59477424eab7be0f486dd487472166f1ebedb5bd25317390d10cc264ad",
+    "auditforge\\investigation_world.py": "14738b98b30fd7b009ca9fc7f29b8ff304d975637f45b703fe889b9ae67529c8",
+    "auditforge\\matcher.py": "e9747b0c15c814f6beaa7fbba436a263280ee48c6972655e6f30f63c30f973e5",
+    "auditforge\\metamorphic.py": "a65b000e8e7a7732c3372eaa6cb49906e9ecc5cd9662057e2e3199e259f35247",
+    "auditforge\\policies.py": "2b1f5434e5f3ba3d6c47cc4696c021956794873d2fb9f17e506d06a698d125a1",
+    "auditforge\\policy_agent.py": "7cc83158dd1df75499331ac4add57c4af4ec6dcd1226131ee11d225cd1570548",
+    "auditforge\\proof.py": "a88292ce2e7ae440fdc219161f575a325629d7f51d9c5cec57ea42ebdd7b7d78",
+    "auditforge\\realistic.py": "aae18d88851ad09a3f1e28f62377a3f35a3a3e4dd3876f357f19c4ab384a5c42",
+    "auditforge\\realistic_audit.py": "f02e4873c944158ded6f6db70ffbc57f1304e084f205dab791ddebbe82acf4ed",
+    "auditforge\\recognition_worlds.py": "5c2f7ac16da8b96d20d1c1161f172f5f9e54c6475ac63fad40d6ccc94e9fc58c",
+    "auditforge\\reconcile.py": "1364cca546b3480fc139126ed723e19b7030cec4d00b1f8f30238f49a594ce2e",
+    "auditforge\\reference_evaluator.py": "364cd51571242bad7fb3ba0a26fdfd7b9263da553e8ef0d2391df4ae96093c19",
+    "auditforge\\sequential_agent.py": "d72285a4b392e83d6cd5a37cf01491060cf5c1e89266f8f14bace7f86e204293",
+    "auditforge\\sequential_policy.py": "c7a9beb7d4583853cd8b1291f6ac75e77948db7d6abc98ed32e24a9ae4fc52dd",
+    "auditforge\\sequential_training.py": "892285870f30806b1957db74993c1aaa5953f89f73c53476bf3c81ce61317652",
+    "auditforge\\server.py": "818ea506144c5481c3fe1eb330cac4debf706fcc8491ab66e10f2e5cc9377158",
+    "auditforge\\shortcut.py": "a322a608f0ea562d4b9c754b0c61bd252c7aadd9d86e4d6d9e1d3e4e3be82bad",
+    "auditforge\\shortcut_hunter.py": "f4ee1090e997979fe61724cf65f860b7ba0e35cb3ccd70b8f4593b0bb66ff327",
+    "auditforge\\training.py": "376e0dff3974775bc96b5f8d7eed5c2d6a79cf0494e3a4663df70c96b4990c53",
+    "auditforge\\verify.py": "f9a9113b9cb0729f3c78af26c039af0ceaa34e98e9f3f9e50812a18146d86bfe"
+  },
+  "baseline": {
+    "status": "passed",
+    "returncode": 0,
+    "tests_run": 243,
+    "failing_tests": [],
+    "elapsed_seconds": 59.906
+  },
+  "mutations": [
+    {
+      "status": "killed",
+      "returncode": 1,
+      "tests_run": 184,
+      "failing_tests": [
+        "test_checkpoint_rejects_negative_validation_f1 (test_sequential_adversarial.SequentialAdversarialTests.test_checkpoint_rejects_negative_validation_f1)"
+      ],
+      "elapsed_seconds": 31.328,
+      "log": "document-2.2-legacy-mutation-logs\\sequential_negative_validation_f1.log",
+      "id": "sequential_negative_validation_f1",
+      "file": "auditforge/sequential_training.py",
+      "description": "Accept a negative validation F1 during checkpoint import.",
+      "expected_detection": "Checkpoint F1 must remain in [0,1]."
+    },
+    {
+      "status": "killed",
+      "returncode": 1,
+      "tests_run": 183,
+      "failing_tests": [
+        "test_checkpoint_rejects_boolean_history_counters (test_sequential_adversarial.SequentialAdversarialTests.test_checkpoint_rejects_boolean_history_counters) (field='episode')"
+      ],
+      "elapsed_seconds": 30.719,
+      "log": "document-2.2-legacy-mutation-logs\\sequential_boolean_episode_counter.log",
+      "id": "sequential_boolean_episode_counter",
+      "file": "auditforge/sequential_training.py",
+      "description": "Accept a boolean instead of an integer history episode counter.",
+      "expected_detection": "JSON booleans are not integer optimizer counters."
+    },
+    {
+      "status": "killed",
+      "returncode": 1,
+      "tests_run": 185,
+      "failing_tests": [
+        "test_clean_companies_do_not_require_false_accusations (test_sequential_adversarial.SequentialAdversarialTests.test_clean_companies_do_not_require_false_accusations)"
+      ],
+      "elapsed_seconds": 32.265,
+      "log": "document-2.2-legacy-mutation-logs\\sequential_unfinishable_chain.log",
+      "id": "sequential_unfinishable_chain",
+      "file": "auditforge/sequential_policy.py",
+      "description": "Spend budget on a chain that cannot finish before submit.",
+      "expected_detection": "Reserve enough actions to complete a documentary chain and submit."
+    },
+    {
+      "status": "killed",
+      "returncode": 1,
+      "tests_run": 43,
+      "failing_tests": [
+        "test_challenge_freezes_checkpoint_and_separates_weak_baseline (test_counterfactual.CounterfactualTests.test_challenge_freezes_checkpoint_and_separates_weak_baseline)"
+      ],
+      "elapsed_seconds": 9.672,
+      "log": "document-2.2-legacy-mutation-logs\\reverse_learned_acquisition_gradient.log",
+      "id": "reverse_learned_acquisition_gradient",
+      "file": "auditforge/efficient_training.py",
+      "description": "Reverse the policy gradient so terminal advantage discourages useful source acquisition.",
+      "expected_detection": "Held-out acquisition accuracy and reward must improve after actual gradient updates."
+    },
+    {
+      "status": "killed",
+      "returncode": 1,
+      "tests_run": 1,
+      "failing_tests": [
+        "test_identical_sources_support_clean_and_corrupted_counterparts (test_adversarial_logic.AdversarialLogicTests.test_identical_sources_support_clean_and_corrupted_counterparts)"
+      ],
+      "elapsed_seconds": 1.219,
+      "log": "document-2.2-legacy-mutation-logs\\interaction_fx_missing_mirror_provenance.log",
+      "id": "interaction_fx_missing_mirror_provenance",
+      "file": "auditforge/generator.py",
+      "description": "Record only the affected payable row while mutating both settlement sides.",
+      "expected_detection": "Causal replay must include both sides of every changed FX settlement."
+    },
+    {
+      "status": "killed",
+      "returncode": 1,
+      "tests_run": 1,
+      "failing_tests": [
+        "test_identical_sources_support_clean_and_corrupted_counterparts (test_adversarial_logic.AdversarialLogicTests.test_identical_sources_support_clean_and_corrupted_counterparts)"
+      ],
+      "elapsed_seconds": 1.11,
+      "log": "document-2.2-legacy-mutation-logs\\reverse_currency_exponent.log",
+      "id": "reverse_currency_exponent",
+      "file": "auditforge/generator.py",
+      "description": "Reverse source and target currency exponent scaling.",
+      "expected_detection": "JPY conversion must scale zero-exponent source to two-exponent base money correctly."
+    },
+    {
+      "status": "killed",
+      "returncode": 1,
+      "tests_run": 43,
+      "failing_tests": [
+        "test_challenge_freezes_checkpoint_and_separates_weak_baseline (test_counterfactual.CounterfactualTests.test_challenge_freezes_checkpoint_and_separates_weak_baseline)"
+      ],
+      "elapsed_seconds": 9.656,
+      "log": "document-2.2-legacy-mutation-logs\\counterfactual_book_uses_source_bit.log",
+      "id": "counterfactual_book_uses_source_bit",
+      "file": "auditforge/recognition_worlds.py",
+      "description": "Assign journal dates from the source decision and erase the intended counterfactual discrepancy.",
+      "expected_detection": "Crossed source/book decisions must retain two independently provable period discrepancies."
+    },
+    {
+      "status": "killed",
+      "returncode": 1,
+      "tests_run": 1,
+      "failing_tests": [
+        "test_identical_sources_support_clean_and_corrupted_counterparts (test_adversarial_logic.AdversarialLogicTests.test_identical_sources_support_clean_and_corrupted_counterparts)"
+      ],
+      "elapsed_seconds": 1.172,
+      "log": "document-2.2-legacy-mutation-logs\\fx_rounding.log",
+      "id": "fx_rounding",
+      "file": "auditforge/generator.py",
+      "description": "Round FX conversions toward zero instead of half-even.",
+      "expected_detection": "Independent source-to-ledger conversion disagrees at a fractional minor unit."
+    },
+    {
+      "status": "killed",
+      "returncode": 1,
+      "tests_run": 54,
+      "failing_tests": [
+        "test_reference_judge_rejects_foreign_partial_and_duplicated_claims (test_document_adversarial.DocumentAdversarialTests.test_reference_judge_rejects_foreign_partial_and_duplicated_claims)"
+      ],
+      "elapsed_seconds": 13.625,
+      "log": "document-2.2-legacy-mutation-logs\\loose_amount_tolerance.log",
+      "id": "loose_amount_tolerance",
+      "file": "auditforge/matcher.py",
+      "description": "Accept a one-minor-unit amount error.",
+      "expected_detection": "An amount one minor unit beyond tolerance does not earn a TP."
+    },
+    {
+      "status": "killed",
+      "returncode": 1,
+      "tests_run": 1,
+      "failing_tests": [
+        "test_identical_sources_support_clean_and_corrupted_counterparts (test_adversarial_logic.AdversarialLogicTests.test_identical_sources_support_clean_and_corrupted_counterparts)"
+      ],
+      "elapsed_seconds": 1.203,
+      "log": "document-2.2-legacy-mutation-logs\\incorrect_true_positive.log",
+      "id": "incorrect_true_positive",
+      "file": "auditforge/matcher.py",
+      "description": "Inflate the true-positive count by one.",
+      "expected_detection": "The evaluator cannot credit more matches than a complete correct answer contains."
+    },
+    {
+      "status": "killed",
+      "returncode": 1,
+      "tests_run": 1,
+      "failing_tests": [
+        "test_identical_sources_support_clean_and_corrupted_counterparts (test_adversarial_logic.AdversarialLogicTests.test_identical_sources_support_clean_and_corrupted_counterparts)"
+      ],
+      "elapsed_seconds": 1.218,
+      "log": "document-2.2-legacy-mutation-logs\\repeated_finding_double_count.log",
+      "id": "repeated_finding_double_count",
+      "file": "auditforge/matcher.py",
+      "description": "Count every matching submission, including repeated findings.",
+      "expected_detection": "Repeating an otherwise correct finding adds a false positive."
+    },
+    {
+      "status": "killed",
+      "returncode": 1,
+      "tests_run": 31,
+      "failing_tests": [
+        "test_14_no_leak (test_contract.ContractTests.test_14_no_leak)"
+      ],
+      "elapsed_seconds": 7.562,
+      "log": "document-2.2-legacy-mutation-logs\\truth_in_observation.log",
+      "id": "truth_in_observation",
+      "file": "auditforge/env.py",
+      "description": "Include evaluator truth in the reset observation.",
+      "expected_detection": "Initial public observation contains a forbidden evaluator field."
+    },
+    {
+      "status": "killed",
+      "returncode": 1,
+      "tests_run": 1,
+      "failing_tests": [
+        "test_identical_sources_support_clean_and_corrupted_counterparts (test_adversarial_logic.AdversarialLogicTests.test_identical_sources_support_clean_and_corrupted_counterparts)"
+      ],
+      "elapsed_seconds": 1.219,
+      "log": "document-2.2-legacy-mutation-logs\\inclusive_period_end.log",
+      "id": "inclusive_period_end",
+      "file": "auditforge/reconcile.py",
+      "description": "Include the exclusive period end in the reporting window.",
+      "expected_detection": "An entry at the exclusive closing boundary is outside the period."
+    },
+    {
+      "status": "killed",
+      "returncode": 1,
+      "tests_run": 39,
+      "failing_tests": [
+        "test_deterministic_and_independently_recoverable (test_core.CoreTests.test_deterministic_and_independently_recoverable)"
+      ],
+      "elapsed_seconds": 8.593,
+      "log": "document-2.2-legacy-mutation-logs\\nondeterministic_generation.log",
+      "id": "nondeterministic_generation",
+      "file": "auditforge/generator.py",
+      "description": "Ignore the supplied seed when initializing generation.",
+      "expected_detection": "Identical inputs must yield byte-equivalent financial episodes."
+    },
+    {
+      "status": "killed",
+      "returncode": 1,
+      "tests_run": 35,
+      "failing_tests": [
+        "test_18_truncate (test_contract.ContractTests.test_18_truncate)"
+      ],
+      "elapsed_seconds": 7.328,
+      "log": "document-2.2-legacy-mutation-logs\\allow_101_steps.log",
+      "id": "allow_101_steps",
+      "file": "auditforge/env.py",
+      "description": "Delay action-budget exhaustion until action 101.",
+      "expected_detection": "The hundredth inspection truncates the episode."
+    },
+    {
+      "status": "killed",
+      "returncode": 1,
+      "tests_run": 1,
+      "failing_tests": [
+        "test_identical_sources_support_clean_and_corrupted_counterparts (test_adversarial_logic.AdversarialLogicTests.test_identical_sources_support_clean_and_corrupted_counterparts)"
+      ],
+      "elapsed_seconds": 1.188,
+      "log": "document-2.2-legacy-mutation-logs\\wrong_evidence_id.log",
+      "id": "wrong_evidence_id",
+      "file": "auditforge/generator.py",
+      "description": "Publish an invoice identifier where a document evidence ID is required.",
+      "expected_detection": "Every required evidence ID resolves to a sufficient public source."
+    },
+    {
+      "status": "killed",
+      "returncode": 1,
+      "tests_run": 1,
+      "failing_tests": [
+        "test_identical_sources_support_clean_and_corrupted_counterparts (test_adversarial_logic.AdversarialLogicTests.test_identical_sources_support_clean_and_corrupted_counterparts)"
+      ],
+      "elapsed_seconds": 1.218,
+      "log": "document-2.2-legacy-mutation-logs\\omitted_false_negative.log",
+      "id": "omitted_false_negative",
+      "file": "auditforge/matcher.py",
+      "description": "Drop unmatched truth entries from the false-negative count.",
+      "expected_detection": "An omitted true issue contributes exactly one FN."
+    },
+    {
+      "status": "killed",
+      "returncode": 1,
+      "tests_run": 1,
+      "failing_tests": [
+        "test_identical_sources_support_clean_and_corrupted_counterparts (test_adversarial_logic.AdversarialLogicTests.test_identical_sources_support_clean_and_corrupted_counterparts)"
+      ],
+      "elapsed_seconds": 1.219,
+      "log": "document-2.2-legacy-mutation-logs\\empty_truth_penalty.log",
+      "id": "empty_truth_penalty",
+      "file": "auditforge/matcher.py",
+      "description": "Give an empty correct submission zero F1 on a clean company.",
+      "expected_detection": "A clean company with no submitted findings earns F1=1."
+    },
+    {
+      "status": "killed",
+      "returncode": 1,
+      "tests_run": 1,
+      "failing_tests": [
+        "test_identical_sources_support_clean_and_corrupted_counterparts (test_adversarial_logic.AdversarialLogicTests.test_identical_sources_support_clean_and_corrupted_counterparts)"
+      ],
+      "elapsed_seconds": 1.109,
+      "log": "document-2.2-legacy-mutation-logs\\cursor_skips_record.log",
+      "id": "cursor_skips_record",
+      "file": "auditforge/env.py",
+      "description": "Skip one source record between every two consecutive pages.",
+      "expected_detection": "Concatenated pages equal the full ordered source table."
+    },
+    {
+      "status": "killed",
+      "returncode": 1,
+      "tests_run": 16,
+      "failing_tests": [
+        "test_evidence_ablation_on_asymmetric_interactions (test_case_improvements.CaseImprovements.test_evidence_ablation_on_asymmetric_interactions)"
+      ],
+      "elapsed_seconds": 6.297,
+      "log": "document-2.2-legacy-mutation-logs\\incomplete_evidence.log",
+      "id": "incomplete_evidence",
+      "file": "auditforge/matcher.py",
+      "description": "Accept a single overlapping item from a mandatory evidence set.",
+      "expected_detection": "Removing a necessary item from a finding eliminates its TP."
+    },
+    {
+      "status": "killed",
+      "returncode": 1,
+      "tests_run": 14,
+      "failing_tests": [
+        "test_timeout_has_terminal_reward_and_frozen_flags (test_boundaries.BoundaryTests.test_timeout_has_terminal_reward_and_frozen_flags)"
+      ],
+      "elapsed_seconds": 6.031,
+      "log": "document-2.2-legacy-mutation-logs\\repeat_submit.log",
+      "id": "repeat_submit",
+      "file": "auditforge/env.py",
+      "description": "Allow submit after an episode already terminated.",
+      "expected_detection": "A second submit cannot produce new terminal reward."
+    },
+    {
+      "status": "killed",
+      "returncode": 1,
+      "tests_run": 1,
+      "failing_tests": [
+        "test_identical_sources_support_clean_and_corrupted_counterparts (test_adversarial_logic.AdversarialLogicTests.test_identical_sources_support_clean_and_corrupted_counterparts)"
+      ],
+      "elapsed_seconds": 1.235,
+      "log": "document-2.2-legacy-mutation-logs\\unbalanced_clean_entry.log",
+      "id": "unbalanced_clean_entry",
+      "file": "auditforge/generator.py",
+      "description": "Understate the invoice liability by one minor unit.",
+      "expected_detection": "Independent bookkeeping rejects unequal debits and credits in the pristine journal."
+    },
+    {
+      "status": "killed",
+      "returncode": 1,
+      "tests_run": 14,
+      "failing_tests": [
+        "test_timeout_has_terminal_reward_and_frozen_flags (test_boundaries.BoundaryTests.test_timeout_has_terminal_reward_and_frozen_flags)"
+      ],
+      "elapsed_seconds": 6.75,
+      "log": "document-2.2-legacy-mutation-logs\\incorrect_clean_handling.log",
+      "id": "incorrect_clean_handling",
+      "file": "auditforge/generator.py",
+      "description": "Inject discrepancies even when clean generation was requested.",
+      "expected_detection": "A clean configuration produces zero discrepancies."
+    }
+  ],
+  "source_unchanged": true,
+  "killed": 23,
+  "survivors": [],
+  "errors": [],
+  "passed": true
+}

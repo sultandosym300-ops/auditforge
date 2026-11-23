@@ -4,7 +4,43 @@
 
 [Открыть сайт](https://auditforge-gilt.vercel.app) · [Соответствие кейсу](HACKATHON_COMPLIANCE.md) · [Итоговый аудит](FINAL_AUDIT_REPORT.md) · [Сценарий показа](JURY_LIVE_DEMO_SCRIPT.md)
 
-## Исследовательское продолжение 2.1.0
+## Документальное расследование 2.2.0
+
+Необязательный `investigation_v2` открывает отдельные источники вместо полного
+пакета отдела. Два семейства самостоятельно создают экономические события,
+проводки и причинные ошибки: закупки и сервисные этапы. Девять типов источников
+связаны ссылками; полное приобретение укладывается в 100 официальных действий.
+
+В Training Lab доступны старые и новые миры, linear/MLP, REINFORCE/Actor-Critic,
+реальные графики, импорт/экспорт и сравнение явно обозначенных generator-blind,
+generator-aware и обученных стратегий. Презентация и 3D сохранены.
+
+**Научная цель не достигнута:** основной RL уступает лучшему blind при бюджете20
+во всех четырёх направлениях. Сохранены 27 648 запусков на 96 независимых test-компаниях,
+все кандидаты, validation и отрицательные результаты. Специализированный
+reference-following probe после отдельного обучения решает 32/32 контрольных мира,
+но получает заданный первый запрос и не подменяет основное исследование.
+
+[Аудит 2.2](AUDITFORGE_2_2_FINAL_AUDIT.md) · [RL](AUDITFORGE_2_2_RL_STUDY.md) ·
+[Blind benchmark](AUDITFORGE_2_2_GENERATOR_BLIND_BENCHMARK.md) ·
+[Перенос](AUDITFORGE_2_2_TRANSFER_REPORT.md) · [Атаки](AUDITFORGE_2_2_ADVERSARIAL_REPORT.md) ·
+[Показ](AUDITFORGE_2_2_JURY_DEMO.md) · [Ограничения](AUDITFORGE_2_2_LIMITATIONS.md)
+
+```sh
+python -m scripts.document_demo --output work/document-demo.json
+python -m scripts.document_release_check
+python -m scripts.document_adversarial --count 8
+python -m scripts.document_mutation
+```
+
+Полное повторное исследование: `python -m scripts.document_benchmark --output work/new-document-study`.
+Графики уже приложены в `docs/figures/`; повторный рендер требует локального
+Matplotlib, который не нужен для ядра, официальных тестов или сайта.
+Контейнер: `Dockerfile.document-policy`, проверка `python -m scripts.document_container`.
+Сырые JSON/CSV и checkpoint: `reports/document-2.2-*`. Всего 244 теста;
+23 прежние и 6 новые мутации выявлены. Окончательный внешний CI указывается в Release.
+
+## Историческое исследовательское продолжение 2.1.0
 
 Создано 23 ноября 2026, отдельно от исходной сдачи Genesis. Старый релиз
 `genesis-2026-fintech-final` и его архив сохраняются. Стандартный генератор

@@ -1,0 +1,3240 @@
+{
+  "protocol": {
+    "purpose": "Post-primary-study diagnostic of architectural reference-following capacity; not evidence of end-to-end RL superiority",
+    "reason": "All six primary selected checkpoints failed the predeclared counterfactual reference-following probe; retain that negative result unchanged",
+    "training_family": "procurement",
+    "training_root": 22022301,
+    "training_episodes": 400,
+    "policy_seed": 22022302,
+    "architecture": "linear",
+    "learning_rate": 0.1,
+    "entropy": 0.01,
+    "test_root": 22022303,
+    "test_pairs_per_family": 8,
+    "first_query": "Trusted host supplies the same initial journal query to every competitor; policy learns only the next document/STOP",
+    "reward": "Unchanged official terminal financial reward after three actions; no supervised action labels",
+    "selection": "No hyperparameter or checkpoint selection; evaluate final400 once on new roots",
+    "scope_limit": "Controlled period-reference task with forced first query. Does not repair or replace the primary end-to-end model or its failed adaptive results."
+  },
+  "parameters": [
+    -0.0028570953487249487,
+    -0.15376872381135495,
+    2.800401867599885,
+    -0.47983351304112815,
+    -0.5846568835351411,
+    -0.8783127065163845,
+    -0.05519646591872423,
+    -0.03769864212926596,
+    -0.15512204251365236,
+    -0.45866998548296073,
+    0.17528013763218225,
+    4.735563693574111,
+    0.0,
+    0.0,
+    1.402241101057458,
+    0.0,
+    1.402241101057458,
+    -0.0019047302324835195,
+    -1.9971429046512765
+  ],
+  "history": [
+    {
+      "episode": 1,
+      "reward": -1,
+      "f1": 0.0
+    },
+    {
+      "episode": 2,
+      "reward": -1,
+      "f1": 0.0
+    },
+    {
+      "episode": 3,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 4,
+      "reward": -1,
+      "f1": 0.0
+    },
+    {
+      "episode": 5,
+      "reward": -1,
+      "f1": 0.0
+    },
+    {
+      "episode": 6,
+      "reward": -1,
+      "f1": 0.0
+    },
+    {
+      "episode": 7,
+      "reward": -1,
+      "f1": 0.0
+    },
+    {
+      "episode": 8,
+      "reward": -1,
+      "f1": 0.0
+    },
+    {
+      "episode": 9,
+      "reward": -1,
+      "f1": 0.0
+    },
+    {
+      "episode": 10,
+      "reward": -1,
+      "f1": 0.0
+    },
+    {
+      "episode": 11,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 12,
+      "reward": -1,
+      "f1": 0.0
+    },
+    {
+      "episode": 13,
+      "reward": -1,
+      "f1": 0.0
+    },
+    {
+      "episode": 14,
+      "reward": -1,
+      "f1": 0.0
+    },
+    {
+      "episode": 15,
+      "reward": -1,
+      "f1": 0.0
+    },
+    {
+      "episode": 16,
+      "reward": -1,
+      "f1": 0.0
+    },
+    {
+      "episode": 17,
+      "reward": -1,
+      "f1": 0.0
+    },
+    {
+      "episode": 18,
+      "reward": -1,
+      "f1": 0.0
+    },
+    {
+      "episode": 19,
+      "reward": -1,
+      "f1": 0.0
+    },
+    {
+      "episode": 20,
+      "reward": -1,
+      "f1": 0.0
+    },
+    {
+      "episode": 21,
+      "reward": -1,
+      "f1": 0.0
+    },
+    {
+      "episode": 22,
+      "reward": -1,
+      "f1": 0.0
+    },
+    {
+      "episode": 23,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 24,
+      "reward": -1,
+      "f1": 0.0
+    },
+    {
+      "episode": 25,
+      "reward": -1,
+      "f1": 0.0
+    },
+    {
+      "episode": 26,
+      "reward": -1,
+      "f1": 0.0
+    },
+    {
+      "episode": 27,
+      "reward": -1,
+      "f1": 0.0
+    },
+    {
+      "episode": 28,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 29,
+      "reward": -1,
+      "f1": 0.0
+    },
+    {
+      "episode": 30,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 31,
+      "reward": -1,
+      "f1": 0.0
+    },
+    {
+      "episode": 32,
+      "reward": -1,
+      "f1": 0.0
+    },
+    {
+      "episode": 33,
+      "reward": -1,
+      "f1": 0.0
+    },
+    {
+      "episode": 34,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 35,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 36,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 37,
+      "reward": -1,
+      "f1": 0.0
+    },
+    {
+      "episode": 38,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 39,
+      "reward": -1,
+      "f1": 0.0
+    },
+    {
+      "episode": 40,
+      "reward": -1,
+      "f1": 0.0
+    },
+    {
+      "episode": 41,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 42,
+      "reward": -1,
+      "f1": 0.0
+    },
+    {
+      "episode": 43,
+      "reward": -1,
+      "f1": 0.0
+    },
+    {
+      "episode": 44,
+      "reward": -1,
+      "f1": 0.0
+    },
+    {
+      "episode": 45,
+      "reward": -1,
+      "f1": 0.0
+    },
+    {
+      "episode": 46,
+      "reward": -1,
+      "f1": 0.0
+    },
+    {
+      "episode": 47,
+      "reward": -1,
+      "f1": 0.0
+    },
+    {
+      "episode": 48,
+      "reward": -1,
+      "f1": 0.0
+    },
+    {
+      "episode": 49,
+      "reward": -1,
+      "f1": 0.0
+    },
+    {
+      "episode": 50,
+      "reward": -1,
+      "f1": 0.0
+    },
+    {
+      "episode": 51,
+      "reward": -1,
+      "f1": 0.0
+    },
+    {
+      "episode": 52,
+      "reward": -1,
+      "f1": 0.0
+    },
+    {
+      "episode": 53,
+      "reward": -1,
+      "f1": 0.0
+    },
+    {
+      "episode": 54,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 55,
+      "reward": -1,
+      "f1": 0.0
+    },
+    {
+      "episode": 56,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 57,
+      "reward": -1,
+      "f1": 0.0
+    },
+    {
+      "episode": 58,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 59,
+      "reward": -1,
+      "f1": 0.0
+    },
+    {
+      "episode": 60,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 61,
+      "reward": -1,
+      "f1": 0.0
+    },
+    {
+      "episode": 62,
+      "reward": -1,
+      "f1": 0.0
+    },
+    {
+      "episode": 63,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 64,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 65,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 66,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 67,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 68,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 69,
+      "reward": -1,
+      "f1": 0.0
+    },
+    {
+      "episode": 70,
+      "reward": -1,
+      "f1": 0.0
+    },
+    {
+      "episode": 71,
+      "reward": -1,
+      "f1": 0.0
+    },
+    {
+      "episode": 72,
+      "reward": -1,
+      "f1": 0.0
+    },
+    {
+      "episode": 73,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 74,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 75,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 76,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 77,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 78,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 79,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 80,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 81,
+      "reward": -1,
+      "f1": 0.0
+    },
+    {
+      "episode": 82,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 83,
+      "reward": -1,
+      "f1": 0.0
+    },
+    {
+      "episode": 84,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 85,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 86,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 87,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 88,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 89,
+      "reward": -1,
+      "f1": 0.0
+    },
+    {
+      "episode": 90,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 91,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 92,
+      "reward": -1,
+      "f1": 0.0
+    },
+    {
+      "episode": 93,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 94,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 95,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 96,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 97,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 98,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 99,
+      "reward": -1,
+      "f1": 0.0
+    },
+    {
+      "episode": 100,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 101,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 102,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 103,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 104,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 105,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 106,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 107,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 108,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 109,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 110,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 111,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 112,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 113,
+      "reward": -1,
+      "f1": 0.0
+    },
+    {
+      "episode": 114,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 115,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 116,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 117,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 118,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 119,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 120,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 121,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 122,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 123,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 124,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 125,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 126,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 127,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 128,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 129,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 130,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 131,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 132,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 133,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 134,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 135,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 136,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 137,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 138,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 139,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 140,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 141,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 142,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 143,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 144,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 145,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 146,
+      "reward": -1,
+      "f1": 0.0
+    },
+    {
+      "episode": 147,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 148,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 149,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 150,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 151,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 152,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 153,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 154,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 155,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 156,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 157,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 158,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 159,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 160,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 161,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 162,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 163,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 164,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 165,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 166,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 167,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 168,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 169,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 170,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 171,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 172,
+      "reward": -1,
+      "f1": 0.0
+    },
+    {
+      "episode": 173,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 174,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 175,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 176,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 177,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 178,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 179,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 180,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 181,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 182,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 183,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 184,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 185,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 186,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 187,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 188,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 189,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 190,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 191,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 192,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 193,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 194,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 195,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 196,
+      "reward": -1,
+      "f1": 0.0
+    },
+    {
+      "episode": 197,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 198,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 199,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 200,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 201,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 202,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 203,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 204,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 205,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 206,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 207,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 208,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 209,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 210,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 211,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 212,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 213,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 214,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 215,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 216,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 217,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 218,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 219,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 220,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 221,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 222,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 223,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 224,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 225,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 226,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 227,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 228,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 229,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 230,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 231,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 232,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 233,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 234,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 235,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 236,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 237,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 238,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 239,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 240,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 241,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 242,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 243,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 244,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 245,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 246,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 247,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 248,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 249,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 250,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 251,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 252,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 253,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 254,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 255,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 256,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 257,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 258,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 259,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 260,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 261,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 262,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 263,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 264,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 265,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 266,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 267,
+      "reward": -1,
+      "f1": 0.0
+    },
+    {
+      "episode": 268,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 269,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 270,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 271,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 272,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 273,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 274,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 275,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 276,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 277,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 278,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 279,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 280,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 281,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 282,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 283,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 284,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 285,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 286,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 287,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 288,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 289,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 290,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 291,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 292,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 293,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 294,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 295,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 296,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 297,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 298,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 299,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 300,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 301,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 302,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 303,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 304,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 305,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 306,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 307,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 308,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 309,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 310,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 311,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 312,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 313,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 314,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 315,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 316,
+      "reward": -1,
+      "f1": 0.0
+    },
+    {
+      "episode": 317,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 318,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 319,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 320,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 321,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 322,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 323,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 324,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 325,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 326,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 327,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 328,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 329,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 330,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 331,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 332,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 333,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 334,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 335,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 336,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 337,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 338,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 339,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 340,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 341,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 342,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 343,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 344,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 345,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 346,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 347,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 348,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 349,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 350,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 351,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 352,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 353,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 354,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 355,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 356,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 357,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 358,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 359,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 360,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 361,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 362,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 363,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 364,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 365,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 366,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 367,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 368,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 369,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 370,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 371,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 372,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 373,
+      "reward": -1,
+      "f1": 0.0
+    },
+    {
+      "episode": 374,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 375,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 376,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 377,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 378,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 379,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 380,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 381,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 382,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 383,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 384,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 385,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 386,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 387,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 388,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 389,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 390,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 391,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 392,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 393,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 394,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 395,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 396,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 397,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 398,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 399,
+      "reward": 0.996,
+      "f1": 1.0
+    },
+    {
+      "episode": 400,
+      "reward": 0.996,
+      "f1": 1.0
+    }
+  ],
+  "test": {
+    "format": "auditforge-adaptive-source-pairs-v1",
+    "root_seed": 22022303,
+    "independent_base_companies": 16,
+    "counterfactual_worlds": 32,
+    "rows": [
+      {
+        "family": "procurement",
+        "index": 0,
+        "seed": 90707653342108587890127240913320680,
+        "worlds": [
+          {
+            "world": "A",
+            "initial_sha256": "b2868841b986b53bf1e7978ca831504c874e64b4f89404cc58b1bed7a55881ff",
+            "first_action": {
+              "tool": "get_document",
+              "doc_id": "journal-doc-2bb7b1d903942d049529e8de"
+            },
+            "first_observation_sha256": "a1c2a09cc55b8b24549cb96b22608b5bd936db9e991eeb9c047872b1975968c7",
+            "optimal_next_documents": [
+              "invoice-doc-644894c96d6bb2c4f7df9c3b"
+            ],
+            "outcomes": {
+              "learned": {
+                "document_id": "invoice-doc-644894c96d6bb2c4f7df9c3b",
+                "optimal": true,
+                "f1": 1.0,
+                "reward": 0.996
+              },
+              "untrained": {
+                "document_id": "journal-doc-628a9ae227c7da36574a844e",
+                "optimal": false,
+                "f1": 0.0,
+                "reward": -1.0
+              },
+              "fixed": {
+                "document_id": "journal-doc-628a9ae227c7da36574a844e",
+                "optimal": false,
+                "f1": 0.0,
+                "reward": -1.0
+              }
+            }
+          },
+          {
+            "world": "B",
+            "initial_sha256": "b2868841b986b53bf1e7978ca831504c874e64b4f89404cc58b1bed7a55881ff",
+            "first_action": {
+              "tool": "get_document",
+              "doc_id": "journal-doc-2bb7b1d903942d049529e8de"
+            },
+            "first_observation_sha256": "a1dce91c9144d221b0c5998681cfe9f72f368b558efe60aebba436eacf1460f7",
+            "optimal_next_documents": [
+              "invoice-doc-f7a628899304d5c2cac79ddf"
+            ],
+            "outcomes": {
+              "learned": {
+                "document_id": "invoice-doc-f7a628899304d5c2cac79ddf",
+                "optimal": true,
+                "f1": 1.0,
+                "reward": 0.996
+              },
+              "untrained": {
+                "document_id": "journal-doc-628a9ae227c7da36574a844e",
+                "optimal": false,
+                "f1": 0.0,
+                "reward": -1.0
+              },
+              "fixed": {
+                "document_id": "journal-doc-628a9ae227c7da36574a844e",
+                "optimal": false,
+                "f1": 0.0,
+                "reward": -1.0
+              }
+            }
+          }
+        ],
+        "changed_optimal_actions": true,
+        "learned_switched": true
+      },
+      {
+        "family": "procurement",
+        "index": 1,
+        "seed": 143213717831815521192998558743032342286,
+        "worlds": [
+          {
+            "world": "A",
+            "initial_sha256": "b0598df4861c568a48e38761fc5a94725722a11c598c821e08a36a0f7ce9785f",
+            "first_action": {
+              "tool": "get_document",
+              "doc_id": "journal-doc-b3cf36ea36a3d9762718f65a"
+            },
+            "first_observation_sha256": "581bbc547289fbc308a3d9adb50ae38910a628c045935653a0585999413154f2",
+            "optimal_next_documents": [
+              "invoice-doc-069baa29217a4f6d31b9f8a3"
+            ],
+            "outcomes": {
+              "learned": {
+                "document_id": "invoice-doc-069baa29217a4f6d31b9f8a3",
+                "optimal": true,
+                "f1": 1.0,
+                "reward": 0.996
+              },
+              "untrained": {
+                "document_id": "journal-doc-75798254ae63065127f8bd07",
+                "optimal": false,
+                "f1": 0.0,
+                "reward": -1.0
+              },
+              "fixed": {
+                "document_id": "journal-doc-75798254ae63065127f8bd07",
+                "optimal": false,
+                "f1": 0.0,
+                "reward": -1.0
+              }
+            }
+          },
+          {
+            "world": "B",
+            "initial_sha256": "b0598df4861c568a48e38761fc5a94725722a11c598c821e08a36a0f7ce9785f",
+            "first_action": {
+              "tool": "get_document",
+              "doc_id": "journal-doc-b3cf36ea36a3d9762718f65a"
+            },
+            "first_observation_sha256": "63567ff48ba0d60a0a2ddb5cf2a369a4853f27e658cfadccf63d2be217586ad1",
+            "optimal_next_documents": [
+              "invoice-doc-26c8956f6aa2bd65361b6831"
+            ],
+            "outcomes": {
+              "learned": {
+                "document_id": "invoice-doc-26c8956f6aa2bd65361b6831",
+                "optimal": true,
+                "f1": 1.0,
+                "reward": 0.996
+              },
+              "untrained": {
+                "document_id": "journal-doc-75798254ae63065127f8bd07",
+                "optimal": false,
+                "f1": 0.0,
+                "reward": -1.0
+              },
+              "fixed": {
+                "document_id": "journal-doc-75798254ae63065127f8bd07",
+                "optimal": false,
+                "f1": 0.0,
+                "reward": -1.0
+              }
+            }
+          }
+        ],
+        "changed_optimal_actions": true,
+        "learned_switched": true
+      },
+      {
+        "family": "procurement",
+        "index": 2,
+        "seed": 111537402405353092687438708846332200955,
+        "worlds": [
+          {
+            "world": "A",
+            "initial_sha256": "99ff317b53bd3515e40bee45371ca7ed4323636ed248e2a815c5ece0f73d0b8b",
+            "first_action": {
+              "tool": "get_document",
+              "doc_id": "journal-doc-ee37bae06a399ade725bbd2d"
+            },
+            "first_observation_sha256": "0ff2b276eb8f36a8558a8ad5abb4cbe26fefdd1ef3d7d86d760399f90ad5f1e3",
+            "optimal_next_documents": [
+              "invoice-doc-049134d6f5ff550add24be35"
+            ],
+            "outcomes": {
+              "learned": {
+                "document_id": "invoice-doc-049134d6f5ff550add24be35",
+                "optimal": true,
+                "f1": 1.0,
+                "reward": 0.996
+              },
+              "untrained": {
+                "document_id": "bank-700f99f2772065f4af0ce360",
+                "optimal": false,
+                "f1": 0.0,
+                "reward": -1.0
+              },
+              "fixed": {
+                "document_id": "bank-700f99f2772065f4af0ce360",
+                "optimal": false,
+                "f1": 0.0,
+                "reward": -1.0
+              }
+            }
+          },
+          {
+            "world": "B",
+            "initial_sha256": "99ff317b53bd3515e40bee45371ca7ed4323636ed248e2a815c5ece0f73d0b8b",
+            "first_action": {
+              "tool": "get_document",
+              "doc_id": "journal-doc-ee37bae06a399ade725bbd2d"
+            },
+            "first_observation_sha256": "754f5b0f571098c8b92a1af03ad9682566f9fb8a701f7b7c49d925b71af2e97a",
+            "optimal_next_documents": [
+              "invoice-doc-9c2ade4a8283fbb469347e14"
+            ],
+            "outcomes": {
+              "learned": {
+                "document_id": "invoice-doc-9c2ade4a8283fbb469347e14",
+                "optimal": true,
+                "f1": 1.0,
+                "reward": 0.996
+              },
+              "untrained": {
+                "document_id": "bank-700f99f2772065f4af0ce360",
+                "optimal": false,
+                "f1": 0.0,
+                "reward": -1.0
+              },
+              "fixed": {
+                "document_id": "bank-700f99f2772065f4af0ce360",
+                "optimal": false,
+                "f1": 0.0,
+                "reward": -1.0
+              }
+            }
+          }
+        ],
+        "changed_optimal_actions": true,
+        "learned_switched": true
+      },
+      {
+        "family": "procurement",
+        "index": 3,
+        "seed": 137345823947321253979673147638765873439,
+        "worlds": [
+          {
+            "world": "A",
+            "initial_sha256": "f0560dccc90dc47e369ec497bed3b3fbaf17750b1c52f9b5bfaf7aa1c6f0a879",
+            "first_action": {
+              "tool": "get_document",
+              "doc_id": "journal-doc-fa78b2a482f5fa032d55413b"
+            },
+            "first_observation_sha256": "cc7eb881a35313cacbbd5b10bb5d1a24ac1074accd5a2fc2b392eade14c0f895",
+            "optimal_next_documents": [
+              "invoice-doc-ae038f3ebb26889b23dc9881"
+            ],
+            "outcomes": {
+              "learned": {
+                "document_id": "invoice-doc-ae038f3ebb26889b23dc9881",
+                "optimal": true,
+                "f1": 1.0,
+                "reward": 0.996
+              },
+              "untrained": {
+                "document_id": "invoice-doc-67346cdbb1df4292e09be58e",
+                "optimal": false,
+                "f1": 0.0,
+                "reward": -1.0
+              },
+              "fixed": {
+                "document_id": "invoice-doc-67346cdbb1df4292e09be58e",
+                "optimal": false,
+                "f1": 0.0,
+                "reward": -1.0
+              }
+            }
+          },
+          {
+            "world": "B",
+            "initial_sha256": "f0560dccc90dc47e369ec497bed3b3fbaf17750b1c52f9b5bfaf7aa1c6f0a879",
+            "first_action": {
+              "tool": "get_document",
+              "doc_id": "journal-doc-fa78b2a482f5fa032d55413b"
+            },
+            "first_observation_sha256": "a960ded6784cee3eb476188712754f5a8f71c617213775398656c8ef1fc27b7c",
+            "optimal_next_documents": [
+              "invoice-doc-67346cdbb1df4292e09be58e"
+            ],
+            "outcomes": {
+              "learned": {
+                "document_id": "invoice-doc-67346cdbb1df4292e09be58e",
+                "optimal": true,
+                "f1": 1.0,
+                "reward": 0.996
+              },
+              "untrained": {
+                "document_id": "invoice-doc-67346cdbb1df4292e09be58e",
+                "optimal": true,
+                "f1": 1.0,
+                "reward": 0.996
+              },
+              "fixed": {
+                "document_id": "invoice-doc-67346cdbb1df4292e09be58e",
+                "optimal": true,
+                "f1": 1.0,
+                "reward": 0.996
+              }
+            }
+          }
+        ],
+        "changed_optimal_actions": true,
+        "learned_switched": true
+      },
+      {
+        "family": "procurement",
+        "index": 4,
+        "seed": 301718125065630209503581319545574835947,
+        "worlds": [
+          {
+            "world": "A",
+            "initial_sha256": "5bc4bc41e097eb732fe1489d0078445f4461eb4c65d5c286f64e95b4083c6558",
+            "first_action": {
+              "tool": "get_document",
+              "doc_id": "journal-doc-fddab0fe8c32a48d17e313d4"
+            },
+            "first_observation_sha256": "b3077f5f18357a940f8f34a147a5c01f6c493ef99d62b5b2c7a3c6d357825687",
+            "optimal_next_documents": [
+              "invoice-doc-f6f560aa7a072c2cc693cc74"
+            ],
+            "outcomes": {
+              "learned": {
+                "document_id": "invoice-doc-f6f560aa7a072c2cc693cc74",
+                "optimal": true,
+                "f1": 1.0,
+                "reward": 0.996
+              },
+              "untrained": {
+                "document_id": "invoice-doc-8eed51799b964d99fa5e4085",
+                "optimal": false,
+                "f1": 0.0,
+                "reward": -1.0
+              },
+              "fixed": {
+                "document_id": "invoice-doc-8eed51799b964d99fa5e4085",
+                "optimal": false,
+                "f1": 0.0,
+                "reward": -1.0
+              }
+            }
+          },
+          {
+            "world": "B",
+            "initial_sha256": "5bc4bc41e097eb732fe1489d0078445f4461eb4c65d5c286f64e95b4083c6558",
+            "first_action": {
+              "tool": "get_document",
+              "doc_id": "journal-doc-fddab0fe8c32a48d17e313d4"
+            },
+            "first_observation_sha256": "5f68af5eb33f6411a7bd24abef58317e547b1fc729eabc75f72e407f1bd11b04",
+            "optimal_next_documents": [
+              "invoice-doc-45115d66f1c632a6d5b780e4"
+            ],
+            "outcomes": {
+              "learned": {
+                "document_id": "invoice-doc-45115d66f1c632a6d5b780e4",
+                "optimal": true,
+                "f1": 1.0,
+                "reward": 0.996
+              },
+              "untrained": {
+                "document_id": "invoice-doc-8eed51799b964d99fa5e4085",
+                "optimal": false,
+                "f1": 0.0,
+                "reward": -1.0
+              },
+              "fixed": {
+                "document_id": "invoice-doc-8eed51799b964d99fa5e4085",
+                "optimal": false,
+                "f1": 0.0,
+                "reward": -1.0
+              }
+            }
+          }
+        ],
+        "changed_optimal_actions": true,
+        "learned_switched": true
+      },
+      {
+        "family": "procurement",
+        "index": 5,
+        "seed": 161401808068558388379940644008938475324,
+        "worlds": [
+          {
+            "world": "A",
+            "initial_sha256": "3902693ad035130b31e39ed9b498fc65a0ccca5000a9240564fb71b59bdfe977",
+            "first_action": {
+              "tool": "get_document",
+              "doc_id": "journal-doc-777c09013a83fd2bc588d361"
+            },
+            "first_observation_sha256": "8f2053444a1d74ec0328cbb4eec118b661ddd2f2d5900c8146b21a751474af13",
+            "optimal_next_documents": [
+              "invoice-doc-ad51160f912201c3c85cd405"
+            ],
+            "outcomes": {
+              "learned": {
+                "document_id": "invoice-doc-ad51160f912201c3c85cd405",
+                "optimal": true,
+                "f1": 1.0,
+                "reward": 0.996
+              },
+              "untrained": {
+                "document_id": "payment-doc-a008a540d06a3028409f65c9",
+                "optimal": false,
+                "f1": 0.0,
+                "reward": -1.0
+              },
+              "fixed": {
+                "document_id": "payment-doc-a008a540d06a3028409f65c9",
+                "optimal": false,
+                "f1": 0.0,
+                "reward": -1.0
+              }
+            }
+          },
+          {
+            "world": "B",
+            "initial_sha256": "3902693ad035130b31e39ed9b498fc65a0ccca5000a9240564fb71b59bdfe977",
+            "first_action": {
+              "tool": "get_document",
+              "doc_id": "journal-doc-777c09013a83fd2bc588d361"
+            },
+            "first_observation_sha256": "c8cc820e7a5d3f2ceac6bea9fd356db20660812f69bd86fd9d849a0ce0fa397f",
+            "optimal_next_documents": [
+              "invoice-doc-7194dcab4600a00179245ecf"
+            ],
+            "outcomes": {
+              "learned": {
+                "document_id": "invoice-doc-7194dcab4600a00179245ecf",
+                "optimal": true,
+                "f1": 1.0,
+                "reward": 0.996
+              },
+              "untrained": {
+                "document_id": "payment-doc-a008a540d06a3028409f65c9",
+                "optimal": false,
+                "f1": 0.0,
+                "reward": -1.0
+              },
+              "fixed": {
+                "document_id": "payment-doc-a008a540d06a3028409f65c9",
+                "optimal": false,
+                "f1": 0.0,
+                "reward": -1.0
+              }
+            }
+          }
+        ],
+        "changed_optimal_actions": true,
+        "learned_switched": true
+      },
+      {
+        "family": "procurement",
+        "index": 6,
+        "seed": 141911872027247867810191735346394661589,
+        "worlds": [
+          {
+            "world": "A",
+            "initial_sha256": "adc3d4530f03c825e15a5209dd2633c31f652be0180f3bc75892e390db585f51",
+            "first_action": {
+              "tool": "get_document",
+              "doc_id": "journal-doc-e51e1f2366b428d46d016c79"
+            },
+            "first_observation_sha256": "08ee6b45d012b2b48714c68fdf84063c0072d193c7cf94dfef4225162368fcc3",
+            "optimal_next_documents": [
+              "invoice-doc-d09646a8678185afb7bee28a"
+            ],
+            "outcomes": {
+              "learned": {
+                "document_id": "invoice-doc-d09646a8678185afb7bee28a",
+                "optimal": true,
+                "f1": 1.0,
+                "reward": 0.996
+              },
+              "untrained": {
+                "document_id": "bank-80514d2e5c9fdc077d4a094e",
+                "optimal": false,
+                "f1": 0.0,
+                "reward": -1.0
+              },
+              "fixed": {
+                "document_id": "bank-80514d2e5c9fdc077d4a094e",
+                "optimal": false,
+                "f1": 0.0,
+                "reward": -1.0
+              }
+            }
+          },
+          {
+            "world": "B",
+            "initial_sha256": "adc3d4530f03c825e15a5209dd2633c31f652be0180f3bc75892e390db585f51",
+            "first_action": {
+              "tool": "get_document",
+              "doc_id": "journal-doc-e51e1f2366b428d46d016c79"
+            },
+            "first_observation_sha256": "618c5d4180171704f121c1d3a9d5a35b56976233630b076377fe2dd4503492c4",
+            "optimal_next_documents": [
+              "invoice-doc-60b7fa036845736ea946bbbb"
+            ],
+            "outcomes": {
+              "learned": {
+                "document_id": "invoice-doc-60b7fa036845736ea946bbbb",
+                "optimal": true,
+                "f1": 1.0,
+                "reward": 0.996
+              },
+              "untrained": {
+                "document_id": "bank-80514d2e5c9fdc077d4a094e",
+                "optimal": false,
+                "f1": 0.0,
+                "reward": -1.0
+              },
+              "fixed": {
+                "document_id": "bank-80514d2e5c9fdc077d4a094e",
+                "optimal": false,
+                "f1": 0.0,
+                "reward": -1.0
+              }
+            }
+          }
+        ],
+        "changed_optimal_actions": true,
+        "learned_switched": true
+      },
+      {
+        "family": "procurement",
+        "index": 7,
+        "seed": 34130257525606431521416852814572511066,
+        "worlds": [
+          {
+            "world": "A",
+            "initial_sha256": "abefc3505e22740014884e9259e3f0eb98b7a772ff84fa24725f70eeb3abfab2",
+            "first_action": {
+              "tool": "get_document",
+              "doc_id": "journal-doc-3d40a7df445f22c0e2405035"
+            },
+            "first_observation_sha256": "7c581d3baedc3309ecaba433e14a23c53f13274e96f5211d0a62e31b5a48ba42",
+            "optimal_next_documents": [
+              "invoice-doc-5b1899e84065ab2e954c884a"
+            ],
+            "outcomes": {
+              "learned": {
+                "document_id": "invoice-doc-5b1899e84065ab2e954c884a",
+                "optimal": true,
+                "f1": 1.0,
+                "reward": 0.996
+              },
+              "untrained": {
+                "document_id": "journal-doc-b08315888ed60cd3881795b6",
+                "optimal": false,
+                "f1": 0.0,
+                "reward": -1.0
+              },
+              "fixed": {
+                "document_id": "journal-doc-b08315888ed60cd3881795b6",
+                "optimal": false,
+                "f1": 0.0,
+                "reward": -1.0
+              }
+            }
+          },
+          {
+            "world": "B",
+            "initial_sha256": "abefc3505e22740014884e9259e3f0eb98b7a772ff84fa24725f70eeb3abfab2",
+            "first_action": {
+              "tool": "get_document",
+              "doc_id": "journal-doc-3d40a7df445f22c0e2405035"
+            },
+            "first_observation_sha256": "0c4e862bb106a7f2bc3494a92f4ff7167156ff27a06d3b29749876a9afa06d9e",
+            "optimal_next_documents": [
+              "invoice-doc-60a6fae2a34fae7f245c9247"
+            ],
+            "outcomes": {
+              "learned": {
+                "document_id": "invoice-doc-60a6fae2a34fae7f245c9247",
+                "optimal": true,
+                "f1": 1.0,
+                "reward": 0.996
+              },
+              "untrained": {
+                "document_id": "journal-doc-b08315888ed60cd3881795b6",
+                "optimal": false,
+                "f1": 0.0,
+                "reward": -1.0
+              },
+              "fixed": {
+                "document_id": "journal-doc-b08315888ed60cd3881795b6",
+                "optimal": false,
+                "f1": 0.0,
+                "reward": -1.0
+              }
+            }
+          }
+        ],
+        "changed_optimal_actions": true,
+        "learned_switched": true
+      },
+      {
+        "family": "service_milestone",
+        "index": 0,
+        "seed": 210573753345437136443176958654740075997,
+        "worlds": [
+          {
+            "world": "A",
+            "initial_sha256": "7a0c14923846904bee083b49c58fa46b8c48e46c870c04f23f92fe07f17ef1cb",
+            "first_action": {
+              "tool": "get_document",
+              "doc_id": "journal-doc-9ce19a37961fff08aa7bdcc3"
+            },
+            "first_observation_sha256": "07a11db8dfad8f9a9975f17dcfa88c4f9dff975072b29af8118f8edcf505210e",
+            "optimal_next_documents": [
+              "invoice-doc-59607b525bbf19b249b462ae"
+            ],
+            "outcomes": {
+              "learned": {
+                "document_id": "invoice-doc-59607b525bbf19b249b462ae",
+                "optimal": true,
+                "f1": 1.0,
+                "reward": 0.996
+              },
+              "untrained": {
+                "document_id": "payment-doc-eb750a1f5322fa3978faf5ea",
+                "optimal": false,
+                "f1": 0.0,
+                "reward": -1.0
+              },
+              "fixed": {
+                "document_id": "payment-doc-eb750a1f5322fa3978faf5ea",
+                "optimal": false,
+                "f1": 0.0,
+                "reward": -1.0
+              }
+            }
+          },
+          {
+            "world": "B",
+            "initial_sha256": "7a0c14923846904bee083b49c58fa46b8c48e46c870c04f23f92fe07f17ef1cb",
+            "first_action": {
+              "tool": "get_document",
+              "doc_id": "journal-doc-9ce19a37961fff08aa7bdcc3"
+            },
+            "first_observation_sha256": "b467b1a7e832ab3c5ae5511be26bfbde6477ff558a99f2d9ababbc63eae07d00",
+            "optimal_next_documents": [
+              "invoice-doc-a287c88ca70a237b024185cb"
+            ],
+            "outcomes": {
+              "learned": {
+                "document_id": "invoice-doc-a287c88ca70a237b024185cb",
+                "optimal": true,
+                "f1": 1.0,
+                "reward": 0.996
+              },
+              "untrained": {
+                "document_id": "payment-doc-eb750a1f5322fa3978faf5ea",
+                "optimal": false,
+                "f1": 0.0,
+                "reward": -1.0
+              },
+              "fixed": {
+                "document_id": "payment-doc-eb750a1f5322fa3978faf5ea",
+                "optimal": false,
+                "f1": 0.0,
+                "reward": -1.0
+              }
+            }
+          }
+        ],
+        "changed_optimal_actions": true,
+        "learned_switched": true
+      },
+      {
+        "family": "service_milestone",
+        "index": 1,
+        "seed": 201234505810633308499597258667021076185,
+        "worlds": [
+          {
+            "world": "A",
+            "initial_sha256": "d414d383d58f9557d9a41349376974ad94304b0afd367b7dd04f25c5a049902b",
+            "first_action": {
+              "tool": "get_document",
+              "doc_id": "journal-doc-4047c35aa90ad5822580d5f1"
+            },
+            "first_observation_sha256": "e4c453d5e2ac61aa00ddee466184aa374bf66dd0c8d469c08859a62c318f2704",
+            "optimal_next_documents": [
+              "invoice-doc-e514ce66d3761ca53fa566b2"
+            ],
+            "outcomes": {
+              "learned": {
+                "document_id": "invoice-doc-e514ce66d3761ca53fa566b2",
+                "optimal": true,
+                "f1": 1.0,
+                "reward": 0.996
+              },
+              "untrained": {
+                "document_id": "allocation-ddf22e495d59f01429326e84",
+                "optimal": false,
+                "f1": 0.0,
+                "reward": -1.0
+              },
+              "fixed": {
+                "document_id": "allocation-ddf22e495d59f01429326e84",
+                "optimal": false,
+                "f1": 0.0,
+                "reward": -1.0
+              }
+            }
+          },
+          {
+            "world": "B",
+            "initial_sha256": "d414d383d58f9557d9a41349376974ad94304b0afd367b7dd04f25c5a049902b",
+            "first_action": {
+              "tool": "get_document",
+              "doc_id": "journal-doc-4047c35aa90ad5822580d5f1"
+            },
+            "first_observation_sha256": "315bd2e99416e0f416a616b4e2330e748fd61f23c215df625f55623ed7f3181e",
+            "optimal_next_documents": [
+              "invoice-doc-d13120e62ad74673318aab08"
+            ],
+            "outcomes": {
+              "learned": {
+                "document_id": "invoice-doc-d13120e62ad74673318aab08",
+                "optimal": true,
+                "f1": 1.0,
+                "reward": 0.996
+              },
+              "untrained": {
+                "document_id": "allocation-ddf22e495d59f01429326e84",
+                "optimal": false,
+                "f1": 0.0,
+                "reward": -1.0
+              },
+              "fixed": {
+                "document_id": "allocation-ddf22e495d59f01429326e84",
+                "optimal": false,
+                "f1": 0.0,
+                "reward": -1.0
+              }
+            }
+          }
+        ],
+        "changed_optimal_actions": true,
+        "learned_switched": true
+      },
+      {
+        "family": "service_milestone",
+        "index": 2,
+        "seed": 91476511380340355178334473307056449795,
+        "worlds": [
+          {
+            "world": "A",
+            "initial_sha256": "512068626ee902c026d4505f68d6da191a9903b373cfb1830049ed03b5bf05c2",
+            "first_action": {
+              "tool": "get_document",
+              "doc_id": "journal-doc-a0b1f7ab4ca337113cd6cb05"
+            },
+            "first_observation_sha256": "74ce008ce4cb71068fbecccc4e5898995b03c7cc6c55f69fd3d97471220ae860",
+            "optimal_next_documents": [
+              "invoice-doc-7160d5b630368f5c8065b17c"
+            ],
+            "outcomes": {
+              "learned": {
+                "document_id": "invoice-doc-7160d5b630368f5c8065b17c",
+                "optimal": true,
+                "f1": 1.0,
+                "reward": 0.996
+              },
+              "untrained": {
+                "document_id": "payment-doc-910e2fbaf8539d4725523299",
+                "optimal": false,
+                "f1": 0.0,
+                "reward": -1.0
+              },
+              "fixed": {
+                "document_id": "payment-doc-910e2fbaf8539d4725523299",
+                "optimal": false,
+                "f1": 0.0,
+                "reward": -1.0
+              }
+            }
+          },
+          {
+            "world": "B",
+            "initial_sha256": "512068626ee902c026d4505f68d6da191a9903b373cfb1830049ed03b5bf05c2",
+            "first_action": {
+              "tool": "get_document",
+              "doc_id": "journal-doc-a0b1f7ab4ca337113cd6cb05"
+            },
+            "first_observation_sha256": "12313619284ee437f1fc1319f75f33f2ca6b47055802b93ffe2c7a8316e64d57",
+            "optimal_next_documents": [
+              "invoice-doc-04886b967e0446d987b10507"
+            ],
+            "outcomes": {
+              "learned": {
+                "document_id": "invoice-doc-04886b967e0446d987b10507",
+                "optimal": true,
+                "f1": 1.0,
+                "reward": 0.996
+              },
+              "untrained": {
+                "document_id": "payment-doc-910e2fbaf8539d4725523299",
+                "optimal": false,
+                "f1": 0.0,
+                "reward": -1.0
+              },
+              "fixed": {
+                "document_id": "payment-doc-910e2fbaf8539d4725523299",
+                "optimal": false,
+                "f1": 0.0,
+                "reward": -1.0
+              }
+            }
+          }
+        ],
+        "changed_optimal_actions": true,
+        "learned_switched": true
+      },
+      {
+        "family": "service_milestone",
+        "index": 3,
+        "seed": 329215217267812870999312557563905711857,
+        "worlds": [
+          {
+            "world": "A",
+            "initial_sha256": "3c2e0b12f232755644aaf441badd3c89a3d66109e0b693a99314c02b244fc142",
+            "first_action": {
+              "tool": "get_document",
+              "doc_id": "journal-doc-e43dac73255ac8761592936e"
+            },
+            "first_observation_sha256": "a9803fc0ec8c1bf5423dc37e9a9dedcd9ed31b3640311c0c0bd024a32d647d60",
+            "optimal_next_documents": [
+              "invoice-doc-7d8e89c2e65dd825d1b01337"
+            ],
+            "outcomes": {
+              "learned": {
+                "document_id": "invoice-doc-7d8e89c2e65dd825d1b01337",
+                "optimal": true,
+                "f1": 1.0,
+                "reward": 0.996
+              },
+              "untrained": {
+                "document_id": "journal-doc-49f49abce253509bd3aeffa8",
+                "optimal": false,
+                "f1": 0.0,
+                "reward": -1.0
+              },
+              "fixed": {
+                "document_id": "journal-doc-49f49abce253509bd3aeffa8",
+                "optimal": false,
+                "f1": 0.0,
+                "reward": -1.0
+              }
+            }
+          },
+          {
+            "world": "B",
+            "initial_sha256": "3c2e0b12f232755644aaf441badd3c89a3d66109e0b693a99314c02b244fc142",
+            "first_action": {
+              "tool": "get_document",
+              "doc_id": "journal-doc-e43dac73255ac8761592936e"
+            },
+            "first_observation_sha256": "cc9707520714522e7691bc232af588904f3d448da9af95e5c33d05eca105e5cc",
+            "optimal_next_documents": [
+              "invoice-doc-1359902d740a101773f0b5e9"
+            ],
+            "outcomes": {
+              "learned": {
+                "document_id": "invoice-doc-1359902d740a101773f0b5e9",
+                "optimal": true,
+                "f1": 1.0,
+                "reward": 0.996
+              },
+              "untrained": {
+                "document_id": "journal-doc-49f49abce253509bd3aeffa8",
+                "optimal": false,
+                "f1": 0.0,
+                "reward": -1.0
+              },
+              "fixed": {
+                "document_id": "journal-doc-49f49abce253509bd3aeffa8",
+                "optimal": false,
+                "f1": 0.0,
+                "reward": -1.0
+              }
+            }
+          }
+        ],
+        "changed_optimal_actions": true,
+        "learned_switched": true
+      },
+      {
+        "family": "service_milestone",
+        "index": 4,
+        "seed": 21700141734262011332281189920380548875,
+        "worlds": [
+          {
+            "world": "A",
+            "initial_sha256": "6b52bd99e098bc0e93b3d6ed113a07580dc7a923cf3dfc53de7a5a0cbd382b8a",
+            "first_action": {
+              "tool": "get_document",
+              "doc_id": "journal-doc-2880a6fef8f39ad14c48e825"
+            },
+            "first_observation_sha256": "6f35e115219bef3b1afeb1a84c87ff7e281caf84d3499b2ffce65f3716edc6a1",
+            "optimal_next_documents": [
+              "invoice-doc-2fb01e481f07b06e8913618e"
+            ],
+            "outcomes": {
+              "learned": {
+                "document_id": "invoice-doc-2fb01e481f07b06e8913618e",
+                "optimal": true,
+                "f1": 1.0,
+                "reward": 0.996
+              },
+              "untrained": {
+                "document_id": "invoice-doc-764f795a7d006454d8a43f44",
+                "optimal": false,
+                "f1": 0.0,
+                "reward": -1.0
+              },
+              "fixed": {
+                "document_id": "invoice-doc-764f795a7d006454d8a43f44",
+                "optimal": false,
+                "f1": 0.0,
+                "reward": -1.0
+              }
+            }
+          },
+          {
+            "world": "B",
+            "initial_sha256": "6b52bd99e098bc0e93b3d6ed113a07580dc7a923cf3dfc53de7a5a0cbd382b8a",
+            "first_action": {
+              "tool": "get_document",
+              "doc_id": "journal-doc-2880a6fef8f39ad14c48e825"
+            },
+            "first_observation_sha256": "2c9b4aef312a0a561c019c6106eba78fb88d3d4364d3f76e82b2157c5844f01e",
+            "optimal_next_documents": [
+              "invoice-doc-8c298eac5b8c8f459370ec7b"
+            ],
+            "outcomes": {
+              "learned": {
+                "document_id": "invoice-doc-8c298eac5b8c8f459370ec7b",
+                "optimal": true,
+                "f1": 1.0,
+                "reward": 0.996
+              },
+              "untrained": {
+                "document_id": "invoice-doc-764f795a7d006454d8a43f44",
+                "optimal": false,
+                "f1": 0.0,
+                "reward": -1.0
+              },
+              "fixed": {
+                "document_id": "invoice-doc-764f795a7d006454d8a43f44",
+                "optimal": false,
+                "f1": 0.0,
+                "reward": -1.0
+              }
+            }
+          }
+        ],
+        "changed_optimal_actions": true,
+        "learned_switched": true
+      },
+      {
+        "family": "service_milestone",
+        "index": 5,
+        "seed": 94498736039315949028837365841554622783,
+        "worlds": [
+          {
+            "world": "A",
+            "initial_sha256": "15dacfc2960b24fa99d797d4717a2d70387f6a670b1ecd66d1b987fad1890e23",
+            "first_action": {
+              "tool": "get_document",
+              "doc_id": "journal-doc-4f7443ed2ad17800c7f875b0"
+            },
+            "first_observation_sha256": "6fd3073aed2bf24a2ffbeae2523e1be00046ed31da4750b416d6d3a416209d6b",
+            "optimal_next_documents": [
+              "invoice-doc-42d1d65ba794a4bb62f50ebb"
+            ],
+            "outcomes": {
+              "learned": {
+                "document_id": "invoice-doc-42d1d65ba794a4bb62f50ebb",
+                "optimal": true,
+                "f1": 1.0,
+                "reward": 0.996
+              },
+              "untrained": {
+                "document_id": "allocation-69534f5980daf47c22b9fd83",
+                "optimal": false,
+                "f1": 0.0,
+                "reward": -1.0
+              },
+              "fixed": {
+                "document_id": "allocation-69534f5980daf47c22b9fd83",
+                "optimal": false,
+                "f1": 0.0,
+                "reward": -1.0
+              }
+            }
+          },
+          {
+            "world": "B",
+            "initial_sha256": "15dacfc2960b24fa99d797d4717a2d70387f6a670b1ecd66d1b987fad1890e23",
+            "first_action": {
+              "tool": "get_document",
+              "doc_id": "journal-doc-4f7443ed2ad17800c7f875b0"
+            },
+            "first_observation_sha256": "da1fc49ade7c7767a7f22f323369baaa39f1327ab9b264428cffd4519659b6c5",
+            "optimal_next_documents": [
+              "invoice-doc-6d75e15ccadb6c8d6246db1e"
+            ],
+            "outcomes": {
+              "learned": {
+                "document_id": "invoice-doc-6d75e15ccadb6c8d6246db1e",
+                "optimal": true,
+                "f1": 1.0,
+                "reward": 0.996
+              },
+              "untrained": {
+                "document_id": "allocation-69534f5980daf47c22b9fd83",
+                "optimal": false,
+                "f1": 0.0,
+                "reward": -1.0
+              },
+              "fixed": {
+                "document_id": "allocation-69534f5980daf47c22b9fd83",
+                "optimal": false,
+                "f1": 0.0,
+                "reward": -1.0
+              }
+            }
+          }
+        ],
+        "changed_optimal_actions": true,
+        "learned_switched": true
+      },
+      {
+        "family": "service_milestone",
+        "index": 6,
+        "seed": 288001366507874032496492607136673014750,
+        "worlds": [
+          {
+            "world": "A",
+            "initial_sha256": "847eb14ff70d9555eec323f7077b32ac95de76c78337e358594cb1ccb7a844c1",
+            "first_action": {
+              "tool": "get_document",
+              "doc_id": "journal-doc-9cd45c8fd17748fed2c6a655"
+            },
+            "first_observation_sha256": "a47fbefa517e22de094330a67c32a18bec60c0217aa593a03b5dd4302171c386",
+            "optimal_next_documents": [
+              "invoice-doc-938987032b49c913257c2fe3"
+            ],
+            "outcomes": {
+              "learned": {
+                "document_id": "invoice-doc-938987032b49c913257c2fe3",
+                "optimal": true,
+                "f1": 1.0,
+                "reward": 0.996
+              },
+              "untrained": {
+                "document_id": "journal-doc-a6946c260b7c00f8a7088060",
+                "optimal": false,
+                "f1": 0.0,
+                "reward": -1.0
+              },
+              "fixed": {
+                "document_id": "journal-doc-a6946c260b7c00f8a7088060",
+                "optimal": false,
+                "f1": 0.0,
+                "reward": -1.0
+              }
+            }
+          },
+          {
+            "world": "B",
+            "initial_sha256": "847eb14ff70d9555eec323f7077b32ac95de76c78337e358594cb1ccb7a844c1",
+            "first_action": {
+              "tool": "get_document",
+              "doc_id": "journal-doc-9cd45c8fd17748fed2c6a655"
+            },
+            "first_observation_sha256": "6e03c4d3d242fa2c2ab9a01527fda7600a41fb2ad284beb0a036be91e4441fe0",
+            "optimal_next_documents": [
+              "invoice-doc-4e5416a74c2059832d21b940"
+            ],
+            "outcomes": {
+              "learned": {
+                "document_id": "invoice-doc-4e5416a74c2059832d21b940",
+                "optimal": true,
+                "f1": 1.0,
+                "reward": 0.996
+              },
+              "untrained": {
+                "document_id": "journal-doc-a6946c260b7c00f8a7088060",
+                "optimal": false,
+                "f1": 0.0,
+                "reward": -1.0
+              },
+              "fixed": {
+                "document_id": "journal-doc-a6946c260b7c00f8a7088060",
+                "optimal": false,
+                "f1": 0.0,
+                "reward": -1.0
+              }
+            }
+          }
+        ],
+        "changed_optimal_actions": true,
+        "learned_switched": true
+      },
+      {
+        "family": "service_milestone",
+        "index": 7,
+        "seed": 858108018096662933996101896973193888,
+        "worlds": [
+          {
+            "world": "A",
+            "initial_sha256": "9e276d0b2f2672dbc397e22de83d14fb8f16558a2afb94a0df1ef3bf64972a80",
+            "first_action": {
+              "tool": "get_document",
+              "doc_id": "journal-doc-8a9323d4a8106fe5d03421f3"
+            },
+            "first_observation_sha256": "3c6434131f98eb7ede84d24c623517d46e61044f8af9fe7a7b4d116530a6855a",
+            "optimal_next_documents": [
+              "invoice-doc-fe1de7448615ab953d7fec5c"
+            ],
+            "outcomes": {
+              "learned": {
+                "document_id": "invoice-doc-fe1de7448615ab953d7fec5c",
+                "optimal": true,
+                "f1": 1.0,
+                "reward": 0.996
+              },
+              "untrained": {
+                "document_id": "invoice-doc-1deb3ff749f69d2322da4076",
+                "optimal": false,
+                "f1": 0.0,
+                "reward": -1.0
+              },
+              "fixed": {
+                "document_id": "invoice-doc-1deb3ff749f69d2322da4076",
+                "optimal": false,
+                "f1": 0.0,
+                "reward": -1.0
+              }
+            }
+          },
+          {
+            "world": "B",
+            "initial_sha256": "9e276d0b2f2672dbc397e22de83d14fb8f16558a2afb94a0df1ef3bf64972a80",
+            "first_action": {
+              "tool": "get_document",
+              "doc_id": "journal-doc-8a9323d4a8106fe5d03421f3"
+            },
+            "first_observation_sha256": "e8ee191096f51c6c75abdd13af574b7bb5a40dbe5b7632240f707ef57f8a9867",
+            "optimal_next_documents": [
+              "invoice-doc-28ddc940384b0de79cbceb90"
+            ],
+            "outcomes": {
+              "learned": {
+                "document_id": "invoice-doc-28ddc940384b0de79cbceb90",
+                "optimal": true,
+                "f1": 1.0,
+                "reward": 0.996
+              },
+              "untrained": {
+                "document_id": "invoice-doc-1deb3ff749f69d2322da4076",
+                "optimal": false,
+                "f1": 0.0,
+                "reward": -1.0
+              },
+              "fixed": {
+                "document_id": "invoice-doc-1deb3ff749f69d2322da4076",
+                "optimal": false,
+                "f1": 0.0,
+                "reward": -1.0
+              }
+            }
+          }
+        ],
+        "changed_optimal_actions": true,
+        "learned_switched": true
+      }
+    ],
+    "summary": {
+      "learned": {
+        "optimal_fraction": 1.0,
+        "reward": 0.9959999999999996,
+        "f1": 1.0
+      },
+      "untrained": {
+        "optimal_fraction": 0.03125,
+        "reward": -0.9376249999999999,
+        "f1": 0.03125
+      },
+      "fixed": {
+        "optimal_fraction": 0.03125,
+        "reward": -0.9376249999999999,
+        "f1": 0.03125
+      }
+    },
+    "switched_pairs": 16,
+    "different_optimal_pairs": 16,
+    "scope": "Controlled reference-following decision after one common actual source query, three-action horizon; not an end-to-end training benchmark or a currency-generalization proof."
+  },
+  "primary_study_unchanged": true,
+  "scope": "Controlled period-reference task with forced first query. Does not repair or replace the primary end-to-end model or its failed adaptive results."
+}

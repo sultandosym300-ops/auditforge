@@ -1,0 +1,21 @@
+{
+  "real_browser": true,
+  "url": "http://127.0.0.1:8871/",
+  "profile": "investigation_v2",
+  "family": "service_milestone",
+  "architecture": "mlp",
+  "episodes": 25,
+  "optimizer_steps": 6,
+  "validation_companies": 8,
+  "demo_policies": 4,
+  "export_import": true,
+  "stale_validation_cleared": true,
+  "languages": [
+    "ru",
+    "kk",
+    "en"
+  ],
+  "mobile_width": 390,
+  "document_scroll_width": 390,
+  "presentation_source_untouched": true
+}

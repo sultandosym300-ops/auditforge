@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "reproduced_runs": 384,
+  "independent_test_companies": 96,
+  "adaptive_probe_training_reproduced": true,
+  "protocol_sha256": "9675f3347539f51fcdfccd123f9e7fe3207f195e7ea2244a593c097341eaacba",
+  "official_score": null
+}

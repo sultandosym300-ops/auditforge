@@ -1,0 +1,14 @@
+{
+  "procurement": {
+    "candidate": 1,
+    "episode": 100,
+    "reward": -0.3487738095238096,
+    "architecture": "linear"
+  },
+  "service_milestone": {
+    "candidate": 0,
+    "episode": 100,
+    "reward": -0.019986111111111125,
+    "architecture": "linear"
+  }
+}

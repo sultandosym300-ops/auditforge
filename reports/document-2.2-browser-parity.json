@@ -1,0 +1,7 @@
+{
+  "architecture": "mlp",
+  "episodes": 25,
+  "optimizer_steps": 6,
+  "max_parameter_difference": 4.85722573273506e-17,
+  "passed": true
+}
