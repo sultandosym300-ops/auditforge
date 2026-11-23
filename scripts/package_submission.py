@@ -22,7 +22,11 @@ ROOT_FILES={'README.md','LICENSE','requirements.txt','pyproject.toml','Dockerfil
             'package.json','vercel.json','.gitignore','.vercelignore','.dockerignore',
             'HACKATHON_COMPLIANCE.md','SUBMISSION_MANIFEST.md','FINAL_AUDIT_REPORT.md',
             'JURY_LIVE_DEMO_SCRIPT.md','AUDITFORGE_4_REALISM_AND_PROOF_REPORT.md','THIRD_PARTY_NOTICES.md'}
-REPORT_PREFIXES=('v4-','final-','submission-')
+ROOT_FILES.update({'Dockerfile.document-policy', 'AUDITFORGE_2_2_FINAL_AUDIT.md',
+ 'AUDITFORGE_2_2_RL_STUDY.md','AUDITFORGE_2_2_GENERATOR_BLIND_BENCHMARK.md',
+ 'AUDITFORGE_2_2_TRANSFER_REPORT.md','AUDITFORGE_2_2_ADVERSARIAL_REPORT.md',
+ 'AUDITFORGE_2_2_JURY_DEMO.md','AUDITFORGE_2_2_LIMITATIONS.md'})
+REPORT_PREFIXES=('v4-','final-','submission-','document-2.2-')
 
 
 def selected_sources(root):

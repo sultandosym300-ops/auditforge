@@ -24,3 +24,5 @@ web/public/python-core.json
 .venv/
 venv/
 .playwright-cli/
+
+/reports/document-2.2-legacy-mutation-logs/

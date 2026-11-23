@@ -8,6 +8,7 @@ COPY docs /app/docs
 COPY web/public/python-bridge.py /app/web/public/python-bridge.py
 COPY README.md LICENSE requirements.txt pyproject.toml Dockerfile Dockerfile.policy HACKATHON_COMPLIANCE.md SUBMISSION_MANIFEST.md JURY_LIVE_DEMO_SCRIPT.md FINAL_AUDIT_REPORT.md THIRD_PARTY_NOTICES.md /app/
 COPY Dockerfile.sequential-policy AUDITFORGE_FINAL_INDEPENDENT_AUDIT.md AUDITFORGE_RL_BENCHMARK.md AUDITFORGE_ADVERSARIAL_REPORT.md AUDITFORGE_GENESIS_COMPLIANCE.md AUDITFORGE_JURY_DEMO.md AUDITFORGE_LIMITATIONS.md /app/
+COPY Dockerfile.document-policy AUDITFORGE_2_2_*.md /app/
 RUN mkdir -p /app/web/public
 ENV PYTHONDONTWRITEBYTECODE=1
 CMD ["python", "-m", "auditforge.verify"]

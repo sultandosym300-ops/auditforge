@@ -1,0 +1,17 @@
+{
+  "purpose": "Post-primary-study diagnostic of architectural reference-following capacity; not evidence of end-to-end RL superiority",
+  "reason": "All six primary selected checkpoints failed the predeclared counterfactual reference-following probe; retain that negative result unchanged",
+  "training_family": "procurement",
+  "training_root": 22022301,
+  "training_episodes": 400,
+  "policy_seed": 22022302,
+  "architecture": "linear",
+  "learning_rate": 0.1,
+  "entropy": 0.01,
+  "test_root": 22022303,
+  "test_pairs_per_family": 8,
+  "first_query": "Trusted host supplies the same initial journal query to every competitor; policy learns only the next document/STOP",
+  "reward": "Unchanged official terminal financial reward after three actions; no supervised action labels",
+  "selection": "No hyperparameter or checkpoint selection; evaluate final400 once on new roots",
+  "scope_limit": "Controlled period-reference task with forced first query. Does not repair or replace the primary end-to-end model or its failed adaptive results."
+}

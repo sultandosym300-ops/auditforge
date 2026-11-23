@@ -18,12 +18,13 @@ jobs:
           docker build -t auditforge-evaluator:2.0.1 .
           docker build -f Dockerfile.policy -t auditforge-policy:1.0 .
           docker build -f Dockerfile.sequential-policy -t auditforge-sequential-policy:1.0 .
+          docker build -f Dockerfile.document-policy -t auditforge-document-policy:2.2.0 .
           python3 - <<'PY'
           import os, subprocess
           files = subprocess.check_output(['git', 'ls-files', '-z']).split(b'\0')
           tracked = sum(os.stat(f).st_size for f in files if f)
           images = sum(int(subprocess.check_output(['docker', 'image', 'inspect', '--format', '{{.Size}}', tag]))
-                       for tag in ('auditforge-evaluator:2.0.1', 'auditforge-policy:1.0', 'auditforge-sequential-policy:1.0'))
+                       for tag in ('auditforge-evaluator:2.0.1', 'auditforge-policy:1.0', 'auditforge-sequential-policy:1.0', 'auditforge-document-policy:2.2.0'))
           print(f'Tracked bytes: {tracked}. Image bytes including shared layers twice: {images}.')
           assert tracked + images < 1_000_000_000
           PY
@@ -48,6 +49,9 @@ jobs:
             python -m scripts.sequential_adversarial --output work/sequential-adversarial-ci.json
             python -m scripts.sequential_acceptance
             python -m scripts.sequential_demo --output work/sequential-demo-ci.json
+            python -m scripts.document_adversarial --output work/document-adversarial-ci.json
+            python -m scripts.document_mutation --output work/document-mutation-ci.json
+            python -m scripts.document_release_check --output work/document-release-ci.json
             python -c "from pathlib import Path; p=Path(\"/sys/fs/cgroup\"); print({k:(p/k).read_text().strip() for k in (\"cpu.max\",\"memory.max\",\"memory.peak\")}); assert (p/\"memory.max\").read_text().strip()==str(4*1024**3); q,t=map(int,(p/\"cpu.max\").read_text().split()); assert q==2*t"
           '
       - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
@@ -67,6 +71,8 @@ jobs:
             python -m scripts.ultimate_verify --seed 801973140685
             python -m scripts.sequential_acceptance
             python -m scripts.sequential_adversarial --count 2 --output work/sequential-archive-audit.json
+            python -m scripts.document_adversarial --count 2 --output work/document-archive-audit.json
+            python -m scripts.document_release_check --output work/document-archive-release.json
           '
       - name: Check worker retry after transient initialization failure
         run: node scripts/check_worker_retry.mjs
@@ -76,6 +82,7 @@ jobs:
         run: |
           python -m scripts.jury_broker
           python -m scripts.sequential_container
+          python -m scripts.document_container
 
       - name: Preserve fresh engineering checks
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
@@ -85,6 +92,9 @@ jobs:
             work/ultimate-legacy/JURY_GAUNTLET_RESULTS.json
             work/sequential-adversarial-ci.json
             work/sequential-demo-ci.json
+            work/document-adversarial-ci.json
+            work/document-mutation-ci.json
+            work/document-release-ci.json
           if-no-files-found: error
 
       - name: Preserve the exact Docker-verified submission archive
